@@ -2,9 +2,8 @@ import React from "react";
 import {Composition} from "remotion";
 import {NewsVideo} from "./NewsVideo";
 import {defaultStory, stories} from "./data";
-import {generatedStory} from "./generated-story";
 
-const studioStory = generatedStory ?? defaultStory;
+const studioStory = defaultStory;
 
 export const RemotionRoot = () => {
   return (

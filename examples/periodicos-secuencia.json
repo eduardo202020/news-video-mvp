@@ -16,6 +16,13 @@
       "narrator_name": "Fedepico",
       "gestures_dir": "../remotion-app/public/assets/gestures/fedepico",
       "text": "Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real."
+    },
+    {
+      "cover": "../remotion-app/public/assets/covers/aja.png",
+      "newspaper_name": "Aja",
+      "narrator_name": "Magaly",
+      "gestures_dir": "../remotion-app/public/assets/gestures/magaly",
+      "text": "Cerramos con la portada de Aja para completar la secuencia de diarios con un cambio fluido entre estilos y enfoques."
     }
   ]
 }

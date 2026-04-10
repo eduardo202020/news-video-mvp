@@ -4,10 +4,10 @@ export const generatedStory = {
   "coverSrc": "assets/generated/periodicos_secuencia/covers/cover_00.png",
   "backgroundSrc": "assets/generated/periodicos_secuencia/background.jpg",
   "audioSrc": "assets/generated/periodicos_secuencia/audio.wav",
-  "durationInFrames": 398,
+  "durationInFrames": 595,
   "fps": 30,
   "narratorName": "Magaly",
-  "text": "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario. Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real.",
+  "text": "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario. Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real. Cerramos con la portada de Aja para completar la secuencia de diarios con un cambio fluido entre estilos y enfoques.",
   "gestures": [],
   "segments": [
     {
@@ -35,6 +35,19 @@ export const generatedStory = {
         "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_03.png",
         "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_04.png",
         "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_05.png"
+      ]
+    },
+    {
+      "newspaperName": "Aja",
+      "coverSrc": "assets/generated/periodicos_secuencia/covers/cover_02.png",
+      "text": "Cerramos con la portada de Aja para completar la secuencia de diarios con un cambio fluido entre estilos y enfoques.",
+      "narratorName": "Magaly",
+      "gestures": [
+        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_00.png",
+        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_01.png",
+        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_02.png",
+        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_03.png",
+        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_04.png"
       ]
     }
   ]
