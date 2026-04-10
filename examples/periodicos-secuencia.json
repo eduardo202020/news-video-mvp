@@ -1,0 +1,21 @@
+{
+  "render_mode": "sequence",
+  "background": "../remotion-app/public/assets/backgrounds/calle.jpg",
+  "output": "../output/periodicos_secuencia.mp4",
+  "stories": [
+    {
+      "cover": "../remotion-app/public/assets/covers/trome.png",
+      "newspaper_name": "Trome",
+      "narrator_name": "Magaly",
+      "gestures_dir": "../remotion-app/public/assets/gestures/magaly",
+      "text": "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario."
+    },
+    {
+      "cover": "../remotion-app/public/assets/covers/ojo.png",
+      "newspaper_name": "Ojo",
+      "narrator_name": "Fedepico",
+      "gestures_dir": "../remotion-app/public/assets/gestures/fedepico",
+      "text": "Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real."
+    }
+  ]
+}

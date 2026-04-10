@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: news-video-mvp
+Version: 0.1.0
+Summary: MVP para generar videos verticales de noticias con portada, narrador por gestos y TTS.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: imageio-ffmpeg>=0.5.1
+Requires-Dist: moviepy>=2.1.2
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: Pillow>=10.4.0
+Requires-Dist: pyttsx3>=2.98
+Provides-Extra: kokoro
+Requires-Dist: kokoro-onnx>=0.4.9; extra == "kokoro"
+Requires-Dist: soundfile>=0.13.1; extra == "kokoro"
+
+# News Video MVP
+
+MVP local para generar un video vertical tipo TikTok con:
+
+- fondo urbano estatico,
+- portada de periodico en la parte superior,
+- narrador con gestos que cambian cada 2 segundos,
+- audio TTS,
+- subtitulos simples sincronizados por segmentos.
+
+## Flujo
+
+1. Coloca una imagen de fondo urbano.
+2. Coloca una portada de periodico.
+3. Coloca varias poses del narrador en `input/narrator_gestures/`.
+4. Escribe el texto narrado.
+5. Ejecuta el render.
+
+## Instalacion
+
+```powershell
+cd C:\Users\pc\Documents\proyectos\news-video-mvp
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -e .
+```
+
+Opcional para Kokoro TTS:
+
+```powershell
+pip install -e .[kokoro]
+```
+
+## Estructura esperada
+
+```text
+input/
+  street_corner.jpg
+  newspaper_cover.jpg
+  narrator_gestures/
+    talk_01.png
+    talk_02.png
+    talk_03.png
+output/
+assets/
+```
+
+## Uso rapido
+
+Con TTS del sistema:
+
+```powershell
+news-video-mvp `
+  --background .\input\street_corner.jpg `
+  --cover .\input\newspaper_cover.jpg `
+  --gestures-dir .\input\narrator_gestures `
+  --text "Resumen narrado de la noticia..." `
+  --output .\output\noticia_tiktok.mp4
+```
+
+Con audio ya generado:
+
+```powershell
+news-video-mvp `
+  --background .\input\street_corner.jpg `
+  --cover .\input\newspaper_cover.jpg `
+  --gestures-dir .\input\narrator_gestures `
+  --text "Resumen narrado de la noticia..." `
+  --audio-file .\output\narracion.wav `
+  --output .\output\noticia_tiktok.mp4
+```
+
+Con Kokoro si esta instalado y configurado:
+
+```powershell
+news-video-mvp `
+  --background .\input\street_corner.jpg `
+  --cover .\input\newspaper_cover.jpg `
+  --gestures-dir .\input\narrator_gestures `
+  --text "Resumen narrado de la noticia..." `
+  --tts-provider kokoro `
+  --output .\output\noticia_tiktok.mp4
+```
+
+## Notas del MVP
+
+- El cambio de gesto ocurre cada 2 segundos.
+- La sincronizacion del narrador se logra haciendo que la secuencia de poses tenga la misma duracion que el audio.
+- Los subtitulos se generan en bloques cortos estimados a partir de la duracion del audio.
+- El layout esta optimizado para formato 1080x1920.
+- Si no tienes `ffmpeg` en el sistema, `moviepy` usara el binario que trae `imageio-ffmpeg`.
+
+## Siguientes mejoras
+
+- Lip sync real con un avatar talking-head.
+- Plantillas por seccion de noticia.
+- Integracion directa con Kokoro o MeloTTS mas avanzada.
+- Export de metadata para publicacion automatica.

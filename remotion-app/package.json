@@ -1,0 +1,23 @@
+{
+  "name": "remotion-app",
+  "version": "1.0.0",
+  "description": "Remotion MVP para videos verticales de noticias",
+  "scripts": {
+    "dev": "npx remotion studio src/index.jsx",
+    "dev:latest": "npx remotion studio src/index.jsx",
+    "clean:generated": "powershell -NoProfile -Command \"if (Test-Path .\\public\\assets\\generated) { Get-ChildItem .\\public\\assets\\generated -Directory | Remove-Item -Recurse -Force }\"",
+    "render:trome": "npx remotion render src/index.jsx NewsVideo-trome ..\\output\\remotion-trome.mp4",
+    "render:comercio": "npx remotion render src/index.jsx NewsVideo-comercio ..\\output\\remotion-comercio.mp4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@remotion/cli": "^4.0.271",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "remotion": "^4.0.271",
+    "zod": "^4.3.6"
+  }
+}

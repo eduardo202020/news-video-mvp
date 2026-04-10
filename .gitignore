@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+*.wav
+*.mp4
+output/*
+!output/.gitkeep
+remotion-app/node_modules/
+remotion-app/public/assets/generated/

@@ -1,0 +1,2 @@
+[console_scripts]
+news-video-mvp = news_video_mvp.cli:main

@@ -1,0 +1,1 @@
+"""News Video MVP package."""
