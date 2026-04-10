@@ -7,14 +7,15 @@ export const stories = {
     audioSrc: "assets/audio/comercio_real_v2.wav",
     durationInFrames: 486,
     fps: 30,
-    narratorName: "Magaly",
+    narratorName: "Cuy-01",
     text: "Portada de El Comercio. La noticia principal resume el cierre de campañas rumbo a Palacio con mítines en Lima y un despliegue de seguridad en todo el país. Este video presenta la recta final electoral con un tono institucional, claro y breve.",
     gestures: [
-      "assets/gestures/magaly/mascaly-01.png",
-      "assets/gestures/magaly/mascaly-02.png",
-      "assets/gestures/magaly/mascaly-03.png",
-      "assets/gestures/magaly/mascaly-04.png",
-      "assets/gestures/magaly/mascaly-05.png"
+      "assets/gestures/cuy/01/cuy-01.png",
+      "assets/gestures/cuy/01/cuy-02.png",
+      "assets/gestures/cuy/01/cuy-03.png",
+      "assets/gestures/cuy/01/cuy-04.png",
+      "assets/gestures/cuy/01/cuy-05.png",
+      "assets/gestures/cuy/01/cuy-06.png"
     ]
   },
   trome: {
@@ -25,14 +26,15 @@ export const stories = {
     audioSrc: "assets/audio/trome_es.wav",
     durationInFrames: 201,
     fps: 30,
-    narratorName: "Magaly",
+    narratorName: "Cuy-01",
     text: "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario.",
     gestures: [
-      "assets/gestures/magaly/mascaly-01.png",
-      "assets/gestures/magaly/mascaly-02.png",
-      "assets/gestures/magaly/mascaly-03.png",
-      "assets/gestures/magaly/mascaly-04.png",
-      "assets/gestures/magaly/mascaly-05.png"
+      "assets/gestures/cuy/01/cuy-01.png",
+      "assets/gestures/cuy/01/cuy-02.png",
+      "assets/gestures/cuy/01/cuy-03.png",
+      "assets/gestures/cuy/01/cuy-04.png",
+      "assets/gestures/cuy/01/cuy-05.png",
+      "assets/gestures/cuy/01/cuy-06.png"
     ]
   },
   ojo: {
@@ -43,33 +45,33 @@ export const stories = {
     audioSrc: "assets/audio/ojo_es.wav",
     durationInFrames: 197,
     fps: 30,
-    narratorName: "Fedepico",
+    narratorName: "Cuy-02",
     text: "Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real.",
     gestures: [
-      "assets/gestures/fedepico/fedepico-01.png",
-      "assets/gestures/fedepico/fedepico-02.png",
-      "assets/gestures/fedepico/fedepico-03.png",
-      "assets/gestures/fedepico/fedepico-04.png",
-      "assets/gestures/fedepico/fedepico-05.png",
-      "assets/gestures/fedepico/fedepico-06.png"
+      "assets/gestures/cuy/02/cuyo-01.png",
+      "assets/gestures/cuy/02/cuyo-02.png",
+      "assets/gestures/cuy/02/cuyo-03.png",
+      "assets/gestures/cuy/02/cuyo-04.png",
+      "assets/gestures/cuy/02/cuyo-05.png",
+      "assets/gestures/cuy/02/cuyo-06.png"
     ]
   },
-  aja: {
-    id: "aja",
-    newspaperName: "Aja",
-    coverSrc: "assets/covers/aja.png",
+  libero: {
+    id: "libero",
+    newspaperName: "Libero",
+    coverSrc: "assets/covers/líbero.jpg",
     backgroundSrc: "assets/backgrounds/calle.jpg",
-    audioSrc: "assets/audio/aja_es.wav",
-    durationInFrames: 197,
+    audioSrc: "assets/audio/libero_es.wav",
+    durationInFrames: 196,
     fps: 30,
-    narratorName: "Magaly",
-    text: "Cerramos con la portada de Aja para completar la secuencia de diarios con un cambio fluido entre estilos y enfoques.",
+    narratorName: "Cuy-Depor",
+    text: "Cerramos con la portada de Libero junto al cuy deportivo para darle un cierre mas futbolero y energico a la secuencia.",
     gestures: [
-      "assets/gestures/magaly/mascaly-01.png",
-      "assets/gestures/magaly/mascaly-02.png",
-      "assets/gestures/magaly/mascaly-03.png",
-      "assets/gestures/magaly/mascaly-04.png",
-      "assets/gestures/magaly/mascaly-05.png"
+      "assets/gestures/cuy/depor/cuydepor-01.png",
+      "assets/gestures/cuy/depor/cuydepor-02.png",
+      "assets/gestures/cuy/depor/cuydepor-03.png",
+      "assets/gestures/cuy/depor/cuydepor-05.png",
+      "assets/gestures/cuy/depor/cuydepor-06.png"
     ]
   },
   periodicosSecuenciaDemo: {
@@ -78,56 +80,58 @@ export const stories = {
     coverSrc: "assets/covers/trome.png",
     backgroundSrc: "assets/backgrounds/calle.jpg",
     audioSrc: "assets/audio/periodicos_secuencia_es.wav",
-    durationInFrames: 596,
+    durationInFrames: 594,
     fps: 30,
-    narratorName: "Magaly",
-    text: "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario. Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real. Cerramos con la portada de Aja para completar la secuencia de diarios con un cambio fluido entre estilos y enfoques.",
+    narratorName: "Cuy-01",
+    text: "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario. Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real. Cerramos con la portada de Libero junto al cuy deportivo para darle un cierre mas futbolero y energico a la secuencia.",
     gestures: [
-      "assets/gestures/magaly/mascaly-01.png",
-      "assets/gestures/magaly/mascaly-02.png",
-      "assets/gestures/magaly/mascaly-03.png",
-      "assets/gestures/magaly/mascaly-04.png",
-      "assets/gestures/magaly/mascaly-05.png"
+      "assets/gestures/cuy/01/cuy-01.png",
+      "assets/gestures/cuy/01/cuy-02.png",
+      "assets/gestures/cuy/01/cuy-03.png",
+      "assets/gestures/cuy/01/cuy-04.png",
+      "assets/gestures/cuy/01/cuy-05.png",
+      "assets/gestures/cuy/01/cuy-06.png"
     ],
     segments: [
       {
         newspaperName: "Trome",
         coverSrc: "assets/covers/trome.png",
         text: "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario.",
-        narratorName: "Magaly",
+        narratorName: "Cuy-01",
         gestures: [
-          "assets/gestures/magaly/mascaly-01.png",
-          "assets/gestures/magaly/mascaly-02.png",
-          "assets/gestures/magaly/mascaly-03.png",
-          "assets/gestures/magaly/mascaly-04.png",
-          "assets/gestures/magaly/mascaly-05.png"
+          "assets/gestures/cuy/01/cuy-01.png",
+          "assets/gestures/cuy/01/cuy-02.png",
+          "assets/gestures/cuy/01/cuy-03.png",
+          "assets/gestures/cuy/01/cuy-04.png",
+          "assets/gestures/cuy/01/cuy-05.png",
+          "assets/gestures/cuy/01/cuy-06.png"
         ]
       },
       {
         newspaperName: "Ojo",
         coverSrc: "assets/covers/ojo.png",
         text: "Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real.",
-        narratorName: "Fedepico",
+        narratorName: "Cuy-02",
         gestures: [
-          "assets/gestures/fedepico/fedepico-01.png",
-          "assets/gestures/fedepico/fedepico-02.png",
-          "assets/gestures/fedepico/fedepico-03.png",
-          "assets/gestures/fedepico/fedepico-04.png",
-          "assets/gestures/fedepico/fedepico-05.png",
-          "assets/gestures/fedepico/fedepico-06.png"
+          "assets/gestures/cuy/02/cuyo-01.png",
+          "assets/gestures/cuy/02/cuyo-02.png",
+          "assets/gestures/cuy/02/cuyo-03.png",
+          "assets/gestures/cuy/02/cuyo-04.png",
+          "assets/gestures/cuy/02/cuyo-05.png",
+          "assets/gestures/cuy/02/cuyo-06.png"
         ]
       },
       {
-        newspaperName: "Aja",
-        coverSrc: "assets/covers/aja.png",
-        text: "Cerramos con la portada de Aja para completar la secuencia de diarios con un cambio fluido entre estilos y enfoques.",
-        narratorName: "Magaly",
+        newspaperName: "Libero",
+        coverSrc: "assets/covers/líbero.jpg",
+        text: "Cerramos con la portada de Libero junto al cuy deportivo para darle un cierre mas futbolero y energico a la secuencia.",
+        narratorName: "Cuy-Depor",
         gestures: [
-          "assets/gestures/magaly/mascaly-01.png",
-          "assets/gestures/magaly/mascaly-02.png",
-          "assets/gestures/magaly/mascaly-03.png",
-          "assets/gestures/magaly/mascaly-04.png",
-          "assets/gestures/magaly/mascaly-05.png"
+          "assets/gestures/cuy/depor/cuydepor-01.png",
+          "assets/gestures/cuy/depor/cuydepor-02.png",
+          "assets/gestures/cuy/depor/cuydepor-03.png",
+          "assets/gestures/cuy/depor/cuydepor-05.png",
+          "assets/gestures/cuy/depor/cuydepor-06.png"
         ]
       }
     ]

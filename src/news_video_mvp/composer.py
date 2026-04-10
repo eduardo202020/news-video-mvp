@@ -121,7 +121,7 @@ def render_video_sequence(
         "audioSrc": _to_static_path(audio_asset, public_dir),
         "durationInFrames": duration_in_frames,
         "fps": spec.fps,
-        "narratorName": spec.narrator_name,
+        "narratorName": segment_props[0]["narratorName"],
         "text": " ".join(segment.text for segment in segments),
         "gestures": [_to_static_path(path, public_dir) for path in gesture_assets],
         "segments": segment_props,

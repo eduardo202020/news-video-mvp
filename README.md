@@ -1,42 +1,46 @@
 # News Video MVP
 
-MVP local para generar un video vertical tipo TikTok con:
+Proyecto local para producir videos verticales de portadas de periodicos con este flujo:
 
-- fondo urbano estatico,
-- portada de periodico en la parte superior,
-- narrador con gestos que cambian cada 2 segundos,
-- audio TTS,
-- subtitulos simples sincronizados por segmentos.
+- Python arma la historia, genera o reutiliza audio y sincroniza assets.
+- Remotion renderiza la pieza final en `1080 x 1920`.
+- Remotion Studio sirve como espacio de revision visual antes del render final.
 
-Ahora, en modo simple:
+## Arquitectura
 
-- la voz del TTS del sistema intenta salir en espanol por defecto,
-- si no pasas `--cover`, se usa automaticamente la primera portada encontrada en `input/periodicos/`.
+### Backend de orquestacion
 
-## Flujo
+- `src/news_video_mvp/cli.py`
+  Toma parametros, lee `--story-config` y dispara el pipeline.
+- `src/news_video_mvp/tts.py`
+  Genera audio TTS en espanol usando el proveedor configurado.
+- `src/news_video_mvp/composer.py`
+  Copia assets hacia `remotion-app/public/assets/generated/`, genera `generated-story.js` y llama a Remotion.
 
-1. Coloca una imagen de fondo urbano.
-2. Coloca una portada de periodico.
-3. Coloca varias poses del narrador en `input/narrator_gestures/`.
-4. Escribe el texto narrado.
-5. Ejecuta el render.
+### Frontend de video
 
-## Instalacion
+- `remotion-app/src/Root.jsx`
+  Registra composiciones para Studio y render.
+- `remotion-app/src/data.js`
+  Historias demo estables para revisar layout en Studio.
+- `remotion-app/src/generated-story.js`
+  Ultima historia generada por la CLI.
+- `remotion-app/src/NewsVideo.jsx`
+  Componente principal del video.
+- `remotion-app/src/video/`
+  Modulos visuales del template:
+  - `CoverStage.jsx`
+  - `NarratorStage.jsx`
+  - `CaptionBar.jsx`
+  - `constants.js`
+  - `layouts.js`
+  - `helpers.js`
 
-```powershell
-cd C:\Users\pc\Documents\proyectos\news-video-mvp
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -e .
-```
+## Proceso de trabajo
 
-Opcional para Kokoro TTS:
+### 1. Preparar assets
 
-```powershell
-pip install -e .[kokoro]
-```
-
-## Estructura esperada
+Assets tipicos del proyecto:
 
 ```text
 input/
@@ -45,17 +49,23 @@ input/
     aja.png
     ojo.png
     trome.png
-  narrator_gestures/
-    mascaly01.png
-    mascaly-02.png
-    mascaly-03.png
-output/
-assets/
 ```
 
-## Uso rapido
+Assets usados por Studio y demos:
 
-Con TTS del sistema:
+```text
+remotion-app/public/assets/
+  backgrounds/
+  covers/
+  gestures/
+  audio/
+  fondo-musical/
+  generated/
+```
+
+### 2. Generar una historia
+
+Historia simple:
 
 ```powershell
 news-video-mvp `
@@ -65,54 +75,96 @@ news-video-mvp `
   --output .\output\noticia_tiktok.mp4
 ```
 
-Con audio ya generado:
-
-```powershell
-news-video-mvp `
-  --background .\input\calle.jpg `
-  --gestures-dir .\input\narrator_gestures `
-  --text "Resumen narrado de la noticia..." `
-  --audio-file .\output\narracion.wav `
-  --output .\output\noticia_tiktok.mp4
-```
-
-Con Kokoro si esta instalado y configurado:
-
-```powershell
-news-video-mvp `
-  --background .\input\calle.jpg `
-  --gestures-dir .\input\narrator_gestures `
-  --text "Resumen narrado de la noticia..." `
-  --tts-provider kokoro `
-  --output .\output\noticia_tiktok.mp4
-```
-
-## Secuencia de periodicos en un solo video
-
-Tambien puedes recorrer varias portadas dentro de un solo video con transicion tipo cambio de pagina:
+Historia secuencial:
 
 ```powershell
 news-video-mvp --story-config .\examples\periodicos-secuencia.json
 ```
 
-En ese modo:
+Cuando corre la CLI:
 
-- cada item de `stories` aporta su propia portada y texto,
-- la CLI genera un audio por segmento y luego los concatena,
-- Remotion muestra el paso de un periodico al siguiente con una transicion de pagina.
+1. selecciona portadas y gestos
+2. genera o copia el audio
+3. sincroniza assets en `remotion-app/public/assets/generated/`
+4. escribe `remotion-app/src/generated-story.js`
+5. renderiza el MP4 con Remotion
 
-## Notas del MVP
+### 3. Revisar visualmente en Studio
 
-- El cambio de gesto ocurre cada 2 segundos.
-- La sincronizacion del narrador se logra haciendo que la secuencia de poses tenga la misma duracion que el audio.
-- Los subtitulos se generan en bloques cortos estimados a partir de la duracion del audio.
-- El layout esta optimizado para formato 1080x1920.
-- La plantilla visual esta pensada para usar `calle.jpg` como fondo y `mascaly` como presentadora en primer plano.
-- Si no tienes `ffmpeg` en el sistema, `moviepy` usara el binario que trae `imageio-ffmpeg`.
+```powershell
+cd .\remotion-app
+npm run dev
+```
 
-## Siguientes mejoras
+Uso recomendado en Studio:
 
-- Lip sync real con un avatar talking-head.
-- Plantillas por seccion de noticia.
-- Integracion directa con Kokoro o MeloTTS mas avanzada.
-- Export de metadata para publicacion automatica.
+1. `NewsVideo`
+   Vista principal de trabajo, basada en `src/data.js`.
+2. `NewsVideo-periodicos-secuencia-demo`
+   Demo estable con varios diarios.
+3. `NewsVideo-trome`, `NewsVideo-ojo`, `NewsVideo-aja`
+   Revisiones puntuales por diario.
+
+### 4. Ajustar layout
+
+La parte visual se toca principalmente aqui:
+
+- `remotion-app/src/NewsVideo.jsx`
+- `remotion-app/src/video/CoverStage.jsx`
+- `remotion-app/src/video/NarratorStage.jsx`
+- `remotion-app/src/video/CaptionBar.jsx`
+- `remotion-app/src/video/layouts.js`
+
+### 5. Render final
+
+La ruta normal es volver a correr la CLI:
+
+```powershell
+python -m news_video_mvp.cli --story-config .\examples\periodicos-secuencia.json
+```
+
+Tambien puedes hacer renders directos desde Remotion:
+
+```powershell
+cd .\remotion-app
+npm run render:trome
+```
+
+## Instalacion
+
+### Python
+
+```powershell
+cd C:\Users\pc\Documents\proyectos\news-video-mvp
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -e .
+```
+
+Opcional para Kokoro:
+
+```powershell
+pip install -e .[kokoro]
+```
+
+### Remotion
+
+```powershell
+cd .\remotion-app
+npm install
+```
+
+## Convenciones actuales
+
+- formato vertical TikTok: `1080 x 1920`
+- audio principal en espanol
+- fondo musical suave en `public/assets/fondo-musical/`
+- subtitulos por bloques con resaltado progresivo
+- cambio de narrador por segmento si la historia lo define
+- transicion tipo cambio de pagina entre periodicos
+
+## Notas
+
+- Si `npm run dev` muestra un estado viejo, reinicia Studio.
+- Si el audio o assets no aparecen en Studio, revisa primero rutas en `src/data.js`.
+- Si el fondo musical no suena, valida que el archivo en `public/assets/fondo-musical/` sea un audio real y no un placeholder.

@@ -6,23 +6,23 @@
     {
       "cover": "../remotion-app/public/assets/covers/trome.png",
       "newspaper_name": "Trome",
-      "narrator_name": "Magaly",
-      "gestures_dir": "../remotion-app/public/assets/gestures/magaly",
+      "narrator_name": "Cuy-01",
+      "gestures_dir": "../remotion-app/public/assets/gestures/cuy/01",
       "text": "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario."
     },
     {
       "cover": "../remotion-app/public/assets/covers/ojo.png",
       "newspaper_name": "Ojo",
-      "narrator_name": "Fedepico",
-      "gestures_dir": "../remotion-app/public/assets/gestures/fedepico",
+      "narrator_name": "Cuy-02",
+      "gestures_dir": "../remotion-app/public/assets/gestures/cuy/02",
       "text": "Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real."
     },
     {
-      "cover": "../remotion-app/public/assets/covers/aja.png",
-      "newspaper_name": "Aja",
-      "narrator_name": "Magaly",
-      "gestures_dir": "../remotion-app/public/assets/gestures/magaly",
-      "text": "Cerramos con la portada de Aja para completar la secuencia de diarios con un cambio fluido entre estilos y enfoques."
+      "cover": "../remotion-app/public/assets/covers/líbero.jpg",
+      "newspaper_name": "Libero",
+      "narrator_name": "Cuy-Depor",
+      "gestures_dir": "../remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Cerramos con la portada de Libero junto al cuy deportivo para darle un cierre mas futbolero y energico a la secuencia."
     }
   ]
 }
