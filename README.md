@@ -46,7 +46,6 @@ Assets tipicos del proyecto:
 input/
   calle.jpg
   periodicos/
-    aja.png
     ojo.png
     trome.png
 ```
@@ -89,6 +88,12 @@ Cuando corre la CLI:
 4. escribe `remotion-app/src/generated-story.js`
 5. renderiza el MP4 con Remotion
 
+Secuencia demo actual:
+
+1. `Trome` con `Cuy-01`
+2. `Ojo` con `Cuy-02`
+3. `Libero` con `Cuy-Depor`
+
 ### 3. Revisar visualmente en Studio
 
 ```powershell
@@ -102,7 +107,7 @@ Uso recomendado en Studio:
    Vista principal de trabajo, basada en `src/data.js`.
 2. `NewsVideo-periodicos-secuencia-demo`
    Demo estable con varios diarios.
-3. `NewsVideo-trome`, `NewsVideo-ojo`, `NewsVideo-aja`
+3. `NewsVideo-trome`, `NewsVideo-ojo`, `NewsVideo-libero`
    Revisiones puntuales por diario.
 
 ### 4. Ajustar layout
@@ -162,9 +167,17 @@ npm install
 - subtitulos por bloques con resaltado progresivo
 - cambio de narrador por segmento si la historia lo define
 - transicion tipo cambio de pagina entre periodicos
+- presentadores actuales:
+  - `Cuy-01` en `public/assets/gestures/cuy/01`
+  - `Cuy-02` en `public/assets/gestures/cuy/02`
+  - `Cuy-Depor` en `public/assets/gestures/cuy/depor`
+- ultima secuencia editorial base:
+  - `Trome -> Ojo -> Libero`
 
 ## Notas
 
 - Si `npm run dev` muestra un estado viejo, reinicia Studio.
 - Si el audio o assets no aparecen en Studio, revisa primero rutas en `src/data.js`.
 - Si el fondo musical no suena, valida que el archivo en `public/assets/fondo-musical/` sea un audio real y no un placeholder.
+- `src/data.js` es la fuente estable para Studio.
+- `src/generated-story.js` representa la ultima corrida generada por Python y puede diferir si todavia no volviste a correr la CLI.

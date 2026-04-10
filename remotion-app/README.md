@@ -81,6 +81,7 @@ Presentadores actuales:
 
 - `Cuy-01` -> `public/assets/gestures/cuy/01`
 - `Cuy-02` -> `public/assets/gestures/cuy/02`
+- `Cuy-Depor` -> `public/assets/gestures/cuy/depor`
 
 ## Flujo recomendado
 
@@ -90,6 +91,12 @@ Presentadores actuales:
 4. Ajusta layout en `src/video/` o `src/NewsVideo.jsx`.
 5. Cuando el layout este listo, vuelve a renderizar desde Python o desde Remotion.
 
+Secuencia estable actual en Studio:
+
+1. `Trome` con `Cuy-01`
+2. `Ojo` con `Cuy-02`
+3. `Libero` con `Cuy-Depor`
+
 ## Composiciones importantes
 
 - `NewsVideo`
@@ -98,7 +105,7 @@ Presentadores actuales:
   Demo con varios periodicos.
 - `NewsVideo-trome`
 - `NewsVideo-ojo`
-- `NewsVideo-aja`
+- `NewsVideo-libero`
 
 ## Notas practicas
 
@@ -106,3 +113,5 @@ Presentadores actuales:
 - Si Studio no refleja cambios, reinicia `npm run dev`.
 - Si falta audio, revisa primero la ruta dentro de `data.js`.
 - Si el fondo musical no suena, revisa el archivo dentro de `public/assets/fondo-musical/`.
+- `src/data.js` se usa para previsualizacion estable.
+- `src/generated-story.js` se actualiza cuando corres `python -m news_video_mvp.cli --story-config .\examples\periodicos-secuencia.json`.
