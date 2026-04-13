@@ -66,8 +66,62 @@ def render_video_sequence(
     spec: VideoSpec | None = None,
 ) -> Path:
     spec = spec or VideoSpec()
+    props, remotion_dir = compose_video_props(
+        background_path=background_path,
+        gesture_paths=gesture_paths,
+        segments=segments,
+        audio_path=audio_path,
+        output_stem=output_path.stem,
+        spec=spec,
+    )
     output_path = output_path.resolve()
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    if not segments:
+        raise VideoRenderError("Debes proporcionar al menos un segmento para el video.")
+
+    with TemporaryDirectory() as tmp_dir:
+        props_path = Path(tmp_dir) / "remotion-props.json"
+        props_path.write_text(json.dumps(props, ensure_ascii=False), encoding="utf-8")
+
+        command = [
+            *_resolve_remotion_command_prefix(),
+            "remotion",
+            "render",
+            "src/index.jsx",
+            spec.composition_id,
+            str(output_path),
+            "--props",
+            str(props_path),
+        ]
+        completed = subprocess.run(
+            command,
+            cwd=remotion_dir,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+
+    if completed.returncode != 0:
+        stderr = completed.stderr.strip()
+        stdout = completed.stdout.strip()
+        details = stderr or stdout or "Sin detalles del proceso."
+        raise VideoRenderError(f"Fallo el render de Remotion: {details}")
+
+    if not output_path.exists():
+        raise VideoRenderError("Remotion termino sin generar el archivo de salida.")
+
+    return output_path
+
+
+def compose_video_props(
+    background_path: Path,
+    gesture_paths: list[Path],
+    segments: list[VideoSegment],
+    audio_path: Path,
+    output_stem: str,
+    spec: VideoSpec | None = None,
+) -> tuple[dict, Path]:
+    spec = spec or VideoSpec()
     if not segments:
         raise VideoRenderError("Debes proporcionar al menos un segmento para el video.")
 
@@ -77,7 +131,7 @@ def render_video_sequence(
     generated_dir = public_dir / "assets" / "generated"
     generated_dir.mkdir(parents=True, exist_ok=True)
 
-    story_id = output_path.stem
+    story_id = output_stem
     story_assets_dir = generated_dir / story_id
     if story_assets_dir.exists():
         shutil.rmtree(story_assets_dir)
@@ -127,39 +181,7 @@ def render_video_sequence(
         "segments": segment_props,
     }
     _write_generated_story_module(remotion_dir=remotion_dir, props=props)
-
-    with TemporaryDirectory() as tmp_dir:
-        props_path = Path(tmp_dir) / "remotion-props.json"
-        props_path.write_text(json.dumps(props, ensure_ascii=False), encoding="utf-8")
-
-        command = [
-            *_resolve_remotion_command_prefix(),
-            "remotion",
-            "render",
-            "src/index.jsx",
-            spec.composition_id,
-            str(output_path),
-            "--props",
-            str(props_path),
-        ]
-        completed = subprocess.run(
-            command,
-            cwd=remotion_dir,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-
-    if completed.returncode != 0:
-        stderr = completed.stderr.strip()
-        stdout = completed.stdout.strip()
-        details = stderr or stdout or "Sin detalles del proceso."
-        raise VideoRenderError(f"Fallo el render de Remotion: {details}")
-
-    if not output_path.exists():
-        raise VideoRenderError("Remotion termino sin generar el archivo de salida.")
-
-    return output_path
+    return props, remotion_dir
 
 
 def _copy_asset(source: Path, target_without_suffix: Path) -> Path:

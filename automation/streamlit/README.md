@@ -1,62 +1,110 @@
 # Streamlit Review App
 
-Streamlit encaja bien como capa de supervision para este proyecto.
+App de Streamlit para operar y revisar el pipeline declarativo desde una UI local.
 
-No reemplaza los pipelines declarativos:
+Este documento se enfoca en uso practico.
 
-- los pipelines siguen viviendo en `job-manifest` y `story-manifest`
-- Streamlit actua como panel para ver estado, corregir datos y aprobar etapas
+Para contexto de arquitectura:
 
-## Casos de uso ideales
+- flujo general: [README.md](../../README.md)
+- capa declarativa: [../README.md](../README.md)
+- pipeline tecnico: [../architecture/pipeline.md](../architecture/pipeline.md)
 
-- listar jobs por fecha y estado
-- visualizar la portada de un job
-- mostrar OCR extraido y titulares candidatos
-- editar el borrador del narrador
-- aprobar o rechazar el guion
-- disparar `build-story-manifest`
-- previsualizar assets del video antes del render
+## Preparacion recomendada
 
-## Flujo recomendado
+Antes de abrir Streamlit, lo mas comodo es preparar el entorno con:
 
-1. pipeline crea o actualiza `job-manifest`
-2. Streamlit lo lee
-3. tu corriges o apruebas
-4. Streamlit escribe de vuelta al manifiesto
-5. el pipeline continua
+```powershell
+.\scripts\bootstrap.ps1
+```
 
-## Siguiente paso sugerido
+## Que hace
 
-Crear una app con estas vistas:
+La app en `automation/streamlit/app.py` permite:
 
-- `Jobs`
-- `OCR Review`
-- `Script Review`
-- `Compose Preview`
-- `Publish Queue`
-
-## Estado actual
-
-Ya existe una primera app en `automation/streamlit/app.py`.
-
-Permite:
-
-- listar jobs desde `data/jobs/`
-- ver estado, OCR y portada
-- revisar `headline_candidates`
-- editar `approved_text`
-- guardar cambios
-- aprobar el guion
+- ver metricas por estado y fuente
+- filtrar jobs por fuente, estado y texto
+- revisar una bandeja de jobs
+- ver portada, OCR, titulares, guion, audio, subtitulos y preview
+- editar y aprobar guiones
+- ejecutar etapas del pipeline desde botones
+- preparar publicacion declarativa
+- revisar el timeline de eventos del job
 
 ## Como abrirla
 
+Desde la raiz del repo y con `.venv` activado:
+
 ```powershell
-cd .\
 streamlit run .\automation\streamlit\app.py
 ```
 
-Si todavia no tienes Streamlit:
+Alternativa:
+
+```powershell
+.\scripts\dev-streamlit.ps1
+```
+
+Si todavia no tienes Streamlit instalado:
 
 ```powershell
 pip install -r .\automation\streamlit\requirements.txt
 ```
+
+## Requisito minimo
+
+La app necesita al menos un `job-manifest` en `data/jobs/`.
+
+Si no existe ninguno, veras el mensaje:
+
+```text
+No se encontraron jobs en data/jobs/.
+```
+
+Puedes crear uno con:
+
+```powershell
+news-video-mvp-automation init-job `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --date 2026-04-13 `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --video-template .\automation\templates\video\vertical-news.json `
+  --front-page-image .\remotion-app\public\assets\covers\ojo.png
+```
+
+## Flujo recomendado desde la UI
+
+1. abrir Streamlit
+2. seleccionar un job
+3. ejecutar `Extract + Classify`
+4. ejecutar `Generate Draft`
+5. revisar y aprobar el guion
+6. ejecutar `Voice + Subtitle`
+7. ejecutar `Build Story Manifest`
+8. ejecutar `Compose Job para Preview`
+9. abrir `npm run dev` y revisar `NewsVideo-generated`
+10. preparar o confirmar la publicacion
+
+## Relacion con Remotion
+
+La app no renderiza video final por si sola.
+
+Cuando ejecutas `compose-job` desde la UI:
+
+- sincroniza assets en `remotion-app/public/assets/generated/`
+- actualiza `remotion-app/src/generated-story.js`
+
+Luego revisas el resultado en Remotion Studio:
+
+```powershell
+cd .\remotion-app
+npm run dev
+```
+
+Composicion recomendada:
+
+- `NewsVideo-generated`
+
+## Nota
+
+La app usa las mismas funciones del pipeline que la CLI, asi que UI y terminal comparten la misma logica.

@@ -1,2 +1,3 @@
 [console_scripts]
 news-video-mvp = news_video_mvp.cli:main
+news-video-mvp-automation = news_video_mvp.automation_cli:main

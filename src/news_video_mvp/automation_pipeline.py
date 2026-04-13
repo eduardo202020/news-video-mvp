@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 from urllib.request import urlretrieve
 
 from .automation_models import SourceConfig, VideoTemplate, VoiceProfile, read_json, write_json
+from .composer import VideoSegment, VideoSpec, compose_video_props
 from .project import get_project_dir
 from .subtitles import build_subtitle_segments
 from .tts import prepare_audio
@@ -612,3 +613,153 @@ def build_story_manifest_from_job(
     )
     write_json(job_manifest_path, job)
     return written
+
+
+def compose_job_for_preview(
+    *,
+    job_manifest_path: Path,
+    story_manifest_path: Path | None = None,
+    video_template_path: Path,
+) -> Path:
+    project_dir = get_project_dir()
+    job = read_json(job_manifest_path)
+    video_template = VideoTemplate.load(video_template_path)
+    resolved_story_manifest = story_manifest_path
+    if resolved_story_manifest is None:
+        story_manifest_value = job.get("video", {}).get("story_manifest_path")
+        if not story_manifest_value:
+            raise ValueError(
+                "El job no tiene `video.story_manifest_path`. Genera primero el story-manifest o pasalo por `--story-manifest`."
+            )
+        resolved_story_manifest = project_dir / story_manifest_value
+
+    story = read_json(resolved_story_manifest)
+    background = project_dir / story["background"]
+    segments: list[VideoSegment] = []
+    fallback_gesture_paths: list[Path] = []
+
+    for index, segment in enumerate(story.get("segments", [])):
+        gestures_dir = project_dir / segment["gestures_dir"]
+        gesture_paths = sorted(
+            path
+            for path in gestures_dir.iterdir()
+            if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"}
+        )
+        if not gesture_paths:
+            raise ValueError(f"No se encontraron gestos en: {gestures_dir}")
+        if index == 0:
+            fallback_gesture_paths = gesture_paths
+        segments.append(
+            VideoSegment(
+                newspaper_name=segment["newspaper_name"],
+                cover_path=project_dir / segment["cover"],
+                text=segment["text"],
+                narrator_name=segment.get("narrator_name"),
+                gesture_paths=gesture_paths,
+            )
+        )
+
+    audio_path_value = story["segments"][0].get("audio_file") or job.get("voice", {}).get("audio_path")
+    if not audio_path_value:
+        raise ValueError(
+            "No se encontro audio para la previsualizacion. Ejecuta `voice-job` antes de `compose-job`."
+        )
+    audio_path = project_dir / audio_path_value
+
+    compose_video_props(
+        background_path=background,
+        gesture_paths=fallback_gesture_paths,
+        segments=segments,
+        audio_path=audio_path,
+        output_stem=story["story_id"],
+        spec=VideoSpec(
+            fps=30,
+            composition_id=video_template.composition_id,
+        ),
+    )
+
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["status"] = "composed"
+    job["video"]["story_manifest_path"] = resolved_story_manifest.resolve().relative_to(project_dir).as_posix()
+    job["video"]["preview_composition_id"] = video_template.composition_id
+    job["audit"]["updated_at"] = timestamp
+    job["audit"].setdefault("events", []).append(
+        {
+            "stage": "compose_preview",
+            "status": "completed",
+            "timestamp": timestamp,
+            "details": "Assets sincronizados y generated-story.js actualizado para previsualizacion en Remotion.",
+        }
+    )
+    write_json(job_manifest_path, job)
+    return resolved_story_manifest
+
+
+def _apply_template(template: str, values: dict[str, str]) -> str:
+    result = template
+    for key, value in values.items():
+        result = result.replace(f"{{{key}}}", value)
+    return result
+
+
+def publish_job(
+    *,
+    job_manifest_path: Path,
+    publishing_profile_path: Path,
+    confirm: bool = False,
+    platform_post_id: str | None = None,
+    post_url: str | None = None,
+) -> Path:
+    job = read_json(job_manifest_path)
+    profile = read_json(publishing_profile_path)
+    headline_candidates = job.get("extraction", {}).get("headline_candidates", [])
+    headline = headline_candidates[0] if headline_candidates else _format_source_name(job["source_id"])
+    approved_text = job.get("script", {}).get("approved_text") or job.get("script", {}).get("draft", "")
+    if not approved_text.strip():
+        raise ValueError("No hay texto aprobado o draft para preparar la publicacion.")
+
+    source_name = _format_source_name(job["source_id"])
+    script_excerpt = approved_text.strip()[:160].rstrip()
+    publish_title = _apply_template(
+        profile.get("title_template", "{source_name}: {headline}"),
+        {"source_name": source_name, "headline": headline},
+    )
+    publish_description = _apply_template(
+        profile.get("description_template", "{script_excerpt}"),
+        {"script_excerpt": script_excerpt, "source_name": source_name, "headline": headline},
+    )
+
+    require_confirmation = bool(profile.get("require_human_confirmation", True))
+    if platform_post_id or post_url:
+        publication_status = "published"
+    elif require_confirmation and not confirm:
+        publication_status = "ready_for_review"
+    else:
+        publication_status = "queued"
+
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["publication"] = {
+        **job.get("publication", {}),
+        "profile_id": profile["profile_id"],
+        "platform": profile.get("platform"),
+        "visibility": profile.get("visibility", "private"),
+        "title": publish_title,
+        "description": publish_description,
+        "hashtags": profile.get("hashtags", []),
+        "status": publication_status,
+        "post_url": post_url,
+        "platform_post_id": platform_post_id,
+        "require_human_confirmation": require_confirmation,
+    }
+    if publication_status in {"queued", "published"}:
+        job["status"] = publication_status
+    job["audit"]["updated_at"] = timestamp
+    job["audit"].setdefault("events", []).append(
+        {
+            "stage": "publish",
+            "status": publication_status,
+            "timestamp": timestamp,
+            "details": "Metadata de publicacion preparada." if publication_status != "published" else "Publicacion registrada en el job.",
+        }
+    )
+    return write_json(job_manifest_path, job)

@@ -7,10 +7,12 @@ import sys
 from .automation_pipeline import (
     approve_script_for_job,
     build_story_manifest_from_job,
+    compose_job_for_preview,
     create_job_manifest,
     extract_and_classify_job,
     generate_script_from_job,
     generate_voice_and_subtitles_for_job,
+    publish_job,
 )
 from .tts import TTSGenerationError
 
@@ -77,6 +79,24 @@ def build_parser() -> argparse.ArgumentParser:
     voice_job.add_argument("--subtitle-policy", type=Path, required=True)
     voice_job.add_argument("--audio-file", type=Path)
     voice_job.add_argument("--force", action="store_true")
+
+    compose_job = subparsers.add_parser(
+        "compose-job",
+        help="Sincroniza assets y actualiza generated-story.js para previsualizacion en Remotion.",
+    )
+    compose_job.add_argument("--job-manifest", type=Path, required=True)
+    compose_job.add_argument("--video-template", type=Path, required=True)
+    compose_job.add_argument("--story-manifest", type=Path)
+
+    publish_job_parser = subparsers.add_parser(
+        "publish-job",
+        help="Prepara o registra la publicacion declarativa del job.",
+    )
+    publish_job_parser.add_argument("--job-manifest", type=Path, required=True)
+    publish_job_parser.add_argument("--publishing-profile", type=Path, required=True)
+    publish_job_parser.add_argument("--confirm", action="store_true")
+    publish_job_parser.add_argument("--platform-post-id")
+    publish_job_parser.add_argument("--post-url")
 
     build_story = subparsers.add_parser(
         "build-story-manifest",
@@ -159,6 +179,26 @@ def main() -> None:
                 subtitle_policy_path=args.subtitle_policy,
                 audio_file=args.audio_file,
                 force=args.force,
+            )
+            print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "compose-job":
+            manifest_path = compose_job_for_preview(
+                job_manifest_path=args.job_manifest,
+                story_manifest_path=args.story_manifest,
+                video_template_path=args.video_template,
+            )
+            print(f"Story manifest compuesto para preview: {manifest_path}")
+            return
+
+        if args.command == "publish-job":
+            manifest_path = publish_job(
+                job_manifest_path=args.job_manifest,
+                publishing_profile_path=args.publishing_profile,
+                confirm=args.confirm,
+                platform_post_id=args.platform_post_id,
+                post_url=args.post_url,
             )
             print(f"Job manifest actualizado en: {manifest_path}")
             return

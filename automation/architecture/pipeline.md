@@ -207,6 +207,8 @@ Ya existen bases para:
 - `generate-script`
 - `approve-script`
 - `voice-job`
+- `compose-job`
+- `publish-job`
 - `build-story-manifest`
 
 `extract-job` hoy espera OCR externo o texto sidecar y aplica clasificacion heuristica.

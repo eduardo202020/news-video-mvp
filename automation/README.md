@@ -1,13 +1,31 @@
 # Automation Layer
 
-Esta carpeta define la capa declarativa para automatizar el proyecto de punta a punta.
+Esta carpeta concentra la capa declarativa de automatizacion del proyecto.
 
-Objetivo:
+El `README.md` principal explica el flujo operativo completo:
 
-- describir fuentes, reglas, voces y publicaciones sin hardcodear logica
-- separar cada etapa del pipeline con contratos claros
-- permitir aprobacion humana en puntos especificos
-- dejar trazabilidad completa por job
+- entorno virtual
+- instalacion
+- CLI clasica
+- CLI de automatizacion
+- Streamlit
+- preview con Remotion
+
+Este documento queda como referencia tecnica de la capa `automation/`.
+
+La preparacion del entorno y el flujo operativo general viven en:
+
+- [README.md](../README.md)
+
+## Objetivo
+
+La idea es separar configuracion y ejecucion:
+
+- fuentes en `automation/sources/`
+- reglas en `automation/rules/`
+- templates en `automation/templates/`
+- estados y trazabilidad en `job-manifest`
+- contrato entre editorial y render en `story-manifest`
 
 ## Estructura
 
@@ -28,6 +46,9 @@ automation/
       libero.json
       ojo.json
       trome.json
+  streamlit/
+    app.py
+    README.md
   templates/
     publishing/
       tiktok.json
@@ -41,121 +62,124 @@ automation/
       cuy-depor.json
 ```
 
-## Pipeline objetivo
+## Contratos principales
 
-1. `ingest`
-   Descubre o descarga portadas y metadata de fuentes.
-2. `extract`
-   Ejecuta OCR, limpia bloques y clasifica noticia vs publicidad.
-3. `select`
-   Decide si la portada entra al flujo editorial.
-4. `script`
-   Genera el speech del narrador.
-5. `review`
-   Espera aprobacion humana cuando el modo del job lo requiera.
-6. `voice`
-   Genera audio y timestamps.
-7. `subtitle`
-   Construye subtitulos sincronizados.
-8. `compose`
-   Arma el manifiesto final del video.
-9. `render`
-   Produce assets y video.
-10. `publish`
-    Publica y registra resultado.
+### Source config
 
-## Comandos disponibles
+Describe como descubrir o leer una fuente.
 
-Inicializar un job declarativo:
+Ejemplos:
 
-```powershell
-news-video-mvp-automation init-job `
-  --source-config .\automation\sources\diarios\ojo.json `
-  --date 2026-04-13 `
-  --voice-profile .\automation\templates\voices\cuy-02.json `
-  --video-template .\automation\templates\video\vertical-news.json `
-  --front-page-image .\remotion-app\public\assets\covers\ojo.png
-```
+- `automation/sources/diarios/ojo.json`
+- `automation/sources/diarios/libero.json`
 
-Construir el `story-manifest` desde un job ya editado o aprobado:
+Campos tipicos:
 
-```powershell
-news-video-mvp-automation build-story-manifest `
-  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
-  --voice-profile .\automation\templates\voices\cuy-02.json `
-  --video-template .\automation\templates\video\vertical-news.json
-```
+- `source_id`
+- `display_name`
+- `base_url`
+- `discovery`
+- `selectors`
+- `storage`
+- `ocr_hints`
+- `schedule`
 
-Extraer OCR y clasificar la portada:
+### Job manifest
 
-```powershell
-news-video-mvp-automation extract-job `
-  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
-  --editorial-policy .\automation\rules\editorial-policy.json `
-  --ocr-text-file .\data\ocr\ojo-2026-04-13.txt `
-  --ocr-confidence 0.82
-```
+Representa el estado operativo de una portada o job editorial.
 
-Generar el borrador del narrador:
+Template:
 
-```powershell
-news-video-mvp-automation generate-script `
-  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
-  --script-template .\automation\templates\scripts\default-anchor.json
-```
+- `automation/jobs/templates/job-manifest.json`
 
-Aprobar el guion:
+Responsabilidades:
 
-```powershell
-news-video-mvp-automation approve-script `
-  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
-  --review-notes "Ajustado tono y aprobado para locucion"
-```
+- guardar input assets
+- guardar OCR y clasificacion
+- guardar draft y aprobacion
+- guardar audio, subtitulos y preview
+- guardar metadata de publicacion
+- guardar auditoria de etapas
 
-Generar voz y subtitulos:
+### Story manifest
 
-```powershell
-news-video-mvp-automation voice-job `
-  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
-  --voice-profile .\automation\templates\voices\cuy-02.json `
-  --subtitle-policy .\automation\rules\subtitle-policy.json
-```
+Es el contrato entre la capa editorial y la capa de video.
 
-Nota:
+Template:
 
-- `init-job` no renderiza video
-- `extract-job` no renderiza video
-- `generate-script` no renderiza video
-- `approve-script` no renderiza video
-- `voice-job` no renderiza video
-- `build-story-manifest` tampoco renderiza
-- ambos comandos estan pensados para ser rapidos y compatibles con tu flujo usando `npm run dev`
+- `automation/jobs/templates/story-manifest.json`
 
-## Modo de aprobacion
+Responsabilidades:
 
-El job debe definir uno de estos modos:
+- definir segmentos
+- indicar fondo, musica y narrador
+- declarar archivos de audio y subtitulos
+- servir de entrada para la composicion visual
 
-- `manual`
-- `semi_auto`
-- `full_auto`
+## Reglas y templates
 
-Punto recomendado de aprobacion:
+### Rules
 
-- despues de `script`
-- opcionalmente despues de `compose`
+- `automation/rules/editorial-policy.json`
+  Reglas heuristicas para clasificar noticia vs publicidad.
+- `automation/rules/subtitle-policy.json`
+  Politica de subtitulos legibles para video vertical.
 
-## Estado minimo de un job
+### Templates
 
-- `discovered`
-- `scraped`
-- `extracted`
-- `classified`
-- `scripted`
-- `review_pending`
-- `approved`
-- `voiced`
-- `subtitled`
-- `composed`
-- `rendered`
-- `published`
-- `failed`
+- `automation/templates/scripts/default-anchor.json`
+  Plantilla base para speech del narrador.
+- `automation/templates/video/vertical-news.json`
+  Template principal del video vertical.
+- `automation/templates/voices/*.json`
+  Perfiles de voz y narrador.
+- `automation/templates/publishing/tiktok.json`
+  Perfil declarativo de publicacion.
+
+## Etapas ya implementadas
+
+Estas etapas ya existen en `src/news_video_mvp/automation_pipeline.py` y se exponen por CLI y Streamlit:
+
+- `init-job`
+- `extract-job`
+- `generate-script`
+- `approve-script`
+- `voice-job`
+- `build-story-manifest`
+- `compose-job`
+- `publish-job`
+
+## Estado actual
+
+Hoy la automatizacion ya permite:
+
+- crear jobs declarativos
+- cargar OCR externo o sidecar
+- clasificar portada como noticia o publicidad
+- generar draft del narrador
+- aprobar texto final
+- generar audio y subtitulos
+- construir `story-manifest`
+- preparar preview para `NewsVideo-generated`
+- preparar metadata declarativa de publicacion
+
+## Limites actuales
+
+- `extract-job` todavia no hace OCR directo; espera OCR externo o sidecar `.txt`
+- `publish-job` aun no llama una API real de plataforma
+- el timing de subtitulos sigue siendo segmentado por texto, no por alineacion palabra a palabra
+
+## Siguiente evolucion natural
+
+Las siguientes mejoras encajan bien sobre esta base:
+
+1. OCR real desde libreria o servicio
+2. aprobacion y creacion de jobs desde Streamlit
+3. alineacion real audio-subtitulo
+4. integracion con una API real de publicacion
+
+## Documentacion relacionada
+
+- [README.md](../README.md)
+- [architecture/pipeline.md](./architecture/pipeline.md)
+- [streamlit/README.md](./streamlit/README.md)

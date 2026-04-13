@@ -1,98 +1,171 @@
 # News Video MVP
 
-Proyecto local para producir videos verticales de portadas de periodicos con este flujo:
+Proyecto local para producir videos verticales de noticias a partir de portadas de periodicos.
 
-- Python arma la historia, genera o reutiliza audio y sincroniza assets.
-- Remotion renderiza la pieza final en `1080 x 1920`.
-- Remotion Studio sirve como espacio de revision visual antes del render final.
+Hoy el repo ya soporta dos formas de trabajo:
+
+- flujo clasico para generar videos con Python + Remotion
+- flujo declarativo para automatizar etapas con `job-manifest`, `story-manifest` y una app de Streamlit
 
 ## Arquitectura
 
 ### Backend de orquestacion
 
 - `src/news_video_mvp/cli.py`
-  Toma parametros, lee `--story-config` y dispara el pipeline.
+  CLI clasica para render simple o secuencial.
 - `src/news_video_mvp/project.py`
-  Defaults del proyecto y resolucion de recursos base.
+  Defaults del proyecto y resolucion de rutas base.
 - `src/news_video_mvp/story_config.py`
-  Modelo declarativo de historias y resolucion de rutas del JSON.
+  Carga y resolucion de historias JSON.
 - `src/news_video_mvp/pipeline.py`
   Casos de uso de render simple, batch y secuencial.
-- `src/news_video_mvp/tts.py`
-  Genera audio TTS en espanol usando el proveedor configurado.
 - `src/news_video_mvp/composer.py`
-  Copia assets hacia `remotion-app/public/assets/generated/`, genera `generated-story.js` y llama a Remotion.
+  Sincroniza assets con Remotion, genera `generated-story.js` y puede renderizar el video final.
+- `src/news_video_mvp/tts.py`
+  Generacion o copia de audio TTS.
+- `src/news_video_mvp/subtitles.py`
+  Segmentacion base de subtitulos.
 
 ### Capa declarativa de automatizacion
 
 - `automation/`
-  Define fuentes, reglas editoriales, perfiles de voz, templates de video, perfiles de publicacion y manifests de jobs.
-- `automation/architecture/pipeline.md`
-  Describe el pipeline objetivo desde ingesta hasta publicacion.
-- `automation/jobs/templates/`
-  Contratos base para jobs y story manifests.
+  Fuentes, reglas, templates, manifests y documentacion del pipeline.
+- `src/news_video_mvp/automation_cli.py`
+  CLI de automatizacion por etapas.
+- `src/news_video_mvp/automation_pipeline.py`
+  Logica de `init-job`, `extract-job`, `generate-script`, `approve-script`, `voice-job`, `build-story-manifest`, `compose-job` y `publish-job`.
+- `automation/streamlit/app.py`
+  Panel operativo para revisar jobs, ejecutar etapas y monitorear el pipeline.
 
 ### Frontend de video
 
 - `remotion-app/src/Root.jsx`
   Registra composiciones para Studio y render.
-- `remotion-app/src/data.js`
-  Historias demo estables para revisar layout en Studio.
-- `remotion-app/src/story/`
-  Capa declarativa para defaults, historias demo y normalizacion de props.
 - `remotion-app/src/generated-story.js`
-  Ultima historia generada por la CLI.
-- `remotion-app/src/NewsVideo.jsx`
-  Componente principal del video, ahora mas fino y centrado en animacion/render.
+  Ultima historia preparada para preview o render.
+- `remotion-app/src/story/`
+  Defaults, historias demo y normalizacion de props.
 - `remotion-app/src/video/`
-  Modulos visuales del template:
-  - `CoverStage.jsx`
-  - `NarratorStage.jsx`
-  - `CaptionBar.jsx`
-  - `constants.js`
-  - `layouts.js`
-  - `helpers.js`
-  - `timeline.js`
+  Componentes visuales y timeline declarativo.
 
-## Proceso de trabajo
-
-### 0. Diseñar el pipeline declarativo
-
-Antes de automatizar scraping o publicacion, la base recomendada ahora es:
-
-1. definir la fuente en `automation/sources/`
-2. definir reglas en `automation/rules/`
-3. definir template de guion, voz, video y publicacion en `automation/templates/`
-4. usar un `job-manifest` como contrato entre etapas
-5. generar un `story-manifest` antes de renderizar
-
-### 1. Preparar assets
-
-Assets tipicos del proyecto:
+## Estructura importante
 
 ```text
-input/
-  calle.jpg
-  periodicos/
-    ojo.png
-    trome.png
+automation/
+  architecture/
+  rules/
+  sources/
+  streamlit/
+  templates/
+data/
+  jobs/
+examples/
+output/
+remotion-app/
+src/
 ```
 
-Assets usados por Studio y demos:
+## Preparar el entorno local
 
-```text
-remotion-app/public/assets/
-  backgrounds/
-  covers/
-  gestures/
-  audio/
-  fondo-musical/
-  generated/
+### Opcion recomendada: bootstrap automatico
+
+Desde la raiz del repo:
+
+```powershell
+.\scripts\bootstrap.ps1
 ```
 
-### 2. Generar una historia
+Si quieres instalar tambien el extra de Kokoro:
 
-Historia simple:
+```powershell
+.\scripts\bootstrap.ps1 -WithKokoro
+```
+
+Esto hace:
+
+- crea `.venv` si no existe
+- actualiza `pip`
+- instala dependencias Python del proyecto
+- instala dependencias de Streamlit
+- ejecuta `npm install` en `remotion-app`
+
+Despues puedes activar el entorno con:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### Opcion manual
+
+### 1. Crear el entorno virtual
+
+Desde la raiz del repo:
+
+```powershell
+python -m venv .venv
+```
+
+### 2. Activar el entorno
+
+Si estas en la raiz del repo:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Si estas dentro de `remotion-app`:
+
+```powershell
+& ..\.venv\Scripts\Activate.ps1
+```
+
+### 3. Instalar dependencias Python
+
+```powershell
+pip install -e .
+pip install -r .\automation\streamlit\requirements.txt
+```
+
+Opcional para Kokoro:
+
+```powershell
+pip install -e .[kokoro]
+```
+
+### 4. Instalar dependencias de Remotion
+
+```powershell
+cd .\remotion-app
+npm install
+cd ..
+```
+
+## Scripts de desarrollo
+
+Para levantar Streamlit y Remotion Studio sin escribir varios comandos:
+
+```powershell
+.\scripts\dev.ps1
+```
+
+Tambien puedes abrir cada servicio por separado:
+
+```powershell
+.\scripts\dev-streamlit.ps1
+.\scripts\dev-remotion.ps1
+```
+
+Script de bootstrap:
+
+```powershell
+.\scripts\bootstrap.ps1
+```
+
+## Comandos principales
+
+### CLI clasica
+
+Render simple:
 
 ```powershell
 news-video-mvp `
@@ -102,110 +175,238 @@ news-video-mvp `
   --output .\output\noticia_tiktok.mp4
 ```
 
-Historia secuencial:
+Render secuencial:
 
 ```powershell
 news-video-mvp --story-config .\examples\periodicos-secuencia.json
 ```
 
-Cuando corre la CLI:
+### CLI de automatizacion
 
-1. selecciona portadas y gestos
-2. genera o copia el audio
-3. sincroniza assets en `remotion-app/public/assets/generated/`
-4. escribe `remotion-app/src/generated-story.js`
-5. renderiza el MP4 con Remotion
+Inicializar un job:
 
-Secuencia demo actual:
+```powershell
+news-video-mvp-automation init-job `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --date 2026-04-13 `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --video-template .\automation\templates\video\vertical-news.json `
+  --front-page-image .\remotion-app\public\assets\covers\ojo.png
+```
 
-1. `Trome` con `Cuy-01`
-2. `Ojo` con `Cuy-02`
-3. `Libero` con `Cuy-Depor`
+Extraer OCR y clasificar:
 
-### 3. Revisar visualmente en Studio
+```powershell
+news-video-mvp-automation extract-job `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --editorial-policy .\automation\rules\editorial-policy.json `
+  --ocr-text "OJO. Crisis en el gobierno. Congreso exige respuestas inmediatas."
+```
+
+Generar draft:
+
+```powershell
+news-video-mvp-automation generate-script `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --script-template .\automation\templates\scripts\default-anchor.json
+```
+
+Aprobar guion:
+
+```powershell
+news-video-mvp-automation approve-script `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --review-notes "Aprobado para locucion"
+```
+
+Generar voz y subtitulos:
+
+```powershell
+news-video-mvp-automation voice-job `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --subtitle-policy .\automation\rules\subtitle-policy.json
+```
+
+Construir story manifest:
+
+```powershell
+news-video-mvp-automation build-story-manifest `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --video-template .\automation\templates\video\vertical-news.json
+```
+
+Preparar preview en Remotion sin render final:
+
+```powershell
+news-video-mvp-automation compose-job `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --video-template .\automation\templates\video\vertical-news.json
+```
+
+Preparar publicacion:
+
+```powershell
+news-video-mvp-automation publish-job `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --publishing-profile .\automation\templates\publishing\tiktok.json `
+  --confirm
+```
+
+## Flujo recomendado de trabajo
+
+### Flujo 1: Preview rapido con Streamlit + Remotion
+
+1. activa `.venv`
+2. abre Streamlit
+3. crea o carga un job
+4. ejecuta etapas hasta `compose-job`
+5. abre Remotion Studio con `npm run dev`
+6. revisa `NewsVideo-generated`
+
+Abrir Streamlit:
+
+```powershell
+streamlit run .\automation\streamlit\app.py
+```
+
+Abrir Remotion Studio:
 
 ```powershell
 cd .\remotion-app
 npm run dev
 ```
 
+Alternativa rapida:
+
+```powershell
+.\scripts\dev.ps1
+```
+
 Uso recomendado en Studio:
 
-1. `NewsVideo`
-   Vista principal de trabajo, basada en `src/data.js`.
-2. `NewsVideo-periodicos-secuencia-demo`
-   Demo estable con varios diarios.
-3. `NewsVideo-trome`, `NewsVideo-ojo`, `NewsVideo-libero`
-   Revisiones puntuales por diario.
+1. `NewsVideo-generated`
+   Ultima historia preparada por el pipeline declarativo.
+2. `NewsVideo`
+   Composicion base de trabajo.
+3. demos fijas como `NewsVideo-periodicos-secuencia-demo`
 
-### 4. Ajustar layout
+### Flujo 2: Render final tradicional
 
-La parte visual se toca principalmente aqui:
+1. prepara assets o story config
+2. corre la CLI clasica
+3. revisa salida en `output/`
+
+### Flujo 3: Pipeline declarativo completo
+
+1. `init-job`
+2. `extract-job`
+3. `generate-script`
+4. `approve-script`
+5. `voice-job`
+6. `build-story-manifest`
+7. `compose-job`
+8. revisar en `npm run dev`
+9. `publish-job`
+10. opcionalmente render final
+
+## Como usar Streamlit
+
+La app de Streamlit sirve como panel operativo. No reemplaza el pipeline; lo controla.
+
+Hoy permite:
+
+- ver metricas por estado y fuente
+- filtrar jobs
+- revisar OCR, titulares, guion, audio, subtitulos y preview
+- ejecutar etapas del pipeline desde botones
+- editar y aprobar guiones
+- preparar publicacion declarativa
+- inspeccionar el timeline de eventos del job
+
+Si al abrirla aparece:
+
+```text
+No se encontraron jobs en data/jobs/.
+```
+
+todavia no existe ningun `job-manifest`. Crea uno primero con `init-job`.
+
+## Ejemplo minimo para poblar Streamlit
+
+```powershell
+news-video-mvp-automation init-job `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --date 2026-04-13 `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --video-template .\automation\templates\video\vertical-news.json `
+  --front-page-image .\remotion-app\public\assets\covers\ojo.png
+```
+
+Luego recarga Streamlit y el job aparecera en el panel.
+
+## Flujo de preview sin render pesado
+
+Si quieres iterar rapido, el camino recomendado es:
+
+1. llegar hasta `compose-job`
+2. abrir `npm run dev`
+3. revisar `NewsVideo-generated`
+
+Eso actualiza:
+
+- `remotion-app/public/assets/generated/`
+- `remotion-app/src/generated-story.js`
+
+sin lanzar `remotion render`.
+
+## Donde tocar cada cosa
+
+### Plantillas declarativas
+
+- fuentes: `automation/sources/`
+- reglas: `automation/rules/`
+- guion: `automation/templates/scripts/`
+- voces: `automation/templates/voices/`
+- video: `automation/templates/video/`
+- publicacion: `automation/templates/publishing/`
+
+### UI de operaciones
+
+- `automation/streamlit/app.py`
+
+### Layout de video
 
 - `remotion-app/src/NewsVideo.jsx`
 - `remotion-app/src/video/CoverStage.jsx`
 - `remotion-app/src/video/NarratorStage.jsx`
 - `remotion-app/src/video/CaptionBar.jsx`
-- `remotion-app/src/video/layouts.js`
-
-### 5. Render final
-
-La ruta normal es volver a correr la CLI:
-
-```powershell
-python -m news_video_mvp.cli --story-config .\examples\periodicos-secuencia.json
-```
-
-Tambien puedes hacer renders directos desde Remotion:
-
-```powershell
-cd .\remotion-app
-npm run render:trome
-```
-
-## Instalacion
-
-### Python
-
-```powershell
-cd C:\Users\pc\Documents\proyectos\news-video-mvp
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -e .
-```
-
-Opcional para Kokoro:
-
-```powershell
-pip install -e .[kokoro]
-```
-
-### Remotion
-
-```powershell
-cd .\remotion-app
-npm install
-```
+- `remotion-app/src/video/constants.js`
 
 ## Convenciones actuales
 
-- formato vertical TikTok: `1080 x 1920`
+- formato vertical: `1080 x 1920`
+- subtitulos maximo 2 lineas
 - audio principal en espanol
 - fondo musical suave en `public/assets/fondo-musical/`
-- subtitulos por bloques con resaltado progresivo
-- cambio de narrador por segmento si la historia lo define
-- transicion tipo cambio de pagina entre periodicos
-- presentadores actuales:
-  - `Cuy-01` en `public/assets/gestures/cuy/01`
-  - `Cuy-02` en `public/assets/gestures/cuy/02`
-  - `Cuy-Depor` en `public/assets/gestures/cuy/depor`
-- ultima secuencia editorial base:
-  - `Trome -> Ojo -> Libero`
+- narradores actuales:
+  - `Cuy-01`
+  - `Cuy-02`
+  - `Cuy-Depor`
 
-## Notas
+## Troubleshooting
 
-- Si `npm run dev` muestra un estado viejo, reinicia Studio.
-- Si el audio o assets no aparecen en Studio, revisa primero rutas en `src/data.js`.
-- Si el fondo musical no suena, valida que el archivo en `public/assets/fondo-musical/` sea un audio real y no un placeholder.
-- `src/data.js` es la fuente estable para Studio.
-- `src/generated-story.js` representa la ultima corrida generada por Python y puede diferir si todavia no volviste a correr la CLI.
+- si PowerShell no encuentra `Activate.ps1`, revisa desde que carpeta estas ejecutando el comando
+- si Streamlit no muestra jobs, primero crea uno con `init-job`
+- si `compose-job` falla, revisa que el job tenga audio y `story-manifest`
+- si `npm run dev` muestra un estado viejo, reinicia Studio
+- si el audio o assets no aparecen en Studio, revisa `remotion-app/src/generated-story.js`
+- si el fondo musical no suena, valida el archivo dentro de `public/assets/fondo-musical/`
+
+## Documentacion relacionada
+
+- [automation/README.md](./automation/README.md)
+- [automation/architecture/pipeline.md](./automation/architecture/pipeline.md)
+- [automation/streamlit/README.md](./automation/streamlit/README.md)
+- [remotion-app/README.md](./remotion-app/README.md)
