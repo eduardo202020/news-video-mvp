@@ -197,3 +197,17 @@ Y luego crea orquestadores chicos:
 - `build_story_manifest`
 - `render_story`
 - `publish_video`
+
+## Estado actual en el repo
+
+Ya existen bases para:
+
+- `init-job`
+- `extract-job`
+- `generate-script`
+- `approve-script`
+- `voice-job`
+- `build-story-manifest`
+
+`extract-job` hoy espera OCR externo o texto sidecar y aplica clasificacion heuristica.
+Mas adelante se puede reemplazar esa entrada por OCR directo desde una libreria o servicio.

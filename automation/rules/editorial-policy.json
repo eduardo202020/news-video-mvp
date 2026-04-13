@@ -15,5 +15,49 @@
   "minimum_requirements": {
     "min_ocr_confidence": 0.65,
     "min_headline_candidates": 1
+  },
+  "heuristics": {
+    "ad_keywords": [
+      "s/.",
+      "oferta",
+      "gratis",
+      "descuento",
+      "2x1",
+      "delivery",
+      "promocion",
+      "promo",
+      "compra",
+      "llama ya"
+    ],
+    "news_keywords": [
+      "gobierno",
+      "congreso",
+      "seleccion",
+      "crisis",
+      "fiscal",
+      "ministro",
+      "presidente",
+      "liga 1",
+      "universitario",
+      "alianza",
+      "sporting cristal",
+      "peru"
+    ],
+    "priority_keywords": {
+      "high": [
+        "urgente",
+        "crisis",
+        "escandalo",
+        "final",
+        "clasico",
+        "seleccion"
+      ],
+      "medium": [
+        "debate",
+        "congreso",
+        "fiscal",
+        "liga 1"
+      ]
+    }
   }
 }

@@ -64,6 +64,73 @@ automation/
 10. `publish`
     Publica y registra resultado.
 
+## Comandos disponibles
+
+Inicializar un job declarativo:
+
+```powershell
+news-video-mvp-automation init-job `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --date 2026-04-13 `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --video-template .\automation\templates\video\vertical-news.json `
+  --front-page-image .\remotion-app\public\assets\covers\ojo.png
+```
+
+Construir el `story-manifest` desde un job ya editado o aprobado:
+
+```powershell
+news-video-mvp-automation build-story-manifest `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --video-template .\automation\templates\video\vertical-news.json
+```
+
+Extraer OCR y clasificar la portada:
+
+```powershell
+news-video-mvp-automation extract-job `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --editorial-policy .\automation\rules\editorial-policy.json `
+  --ocr-text-file .\data\ocr\ojo-2026-04-13.txt `
+  --ocr-confidence 0.82
+```
+
+Generar el borrador del narrador:
+
+```powershell
+news-video-mvp-automation generate-script `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --script-template .\automation\templates\scripts\default-anchor.json
+```
+
+Aprobar el guion:
+
+```powershell
+news-video-mvp-automation approve-script `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --review-notes "Ajustado tono y aprobado para locucion"
+```
+
+Generar voz y subtitulos:
+
+```powershell
+news-video-mvp-automation voice-job `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --subtitle-policy .\automation\rules\subtitle-policy.json
+```
+
+Nota:
+
+- `init-job` no renderiza video
+- `extract-job` no renderiza video
+- `generate-script` no renderiza video
+- `approve-script` no renderiza video
+- `voice-job` no renderiza video
+- `build-story-manifest` tampoco renderiza
+- ambos comandos estan pensados para ser rapidos y compatibles con tu flujo usando `npm run dev`
+
 ## Modo de aprobacion
 
 El job debe definir uno de estos modos:
