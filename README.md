@@ -12,6 +12,12 @@ Proyecto local para producir videos verticales de portadas de periodicos con est
 
 - `src/news_video_mvp/cli.py`
   Toma parametros, lee `--story-config` y dispara el pipeline.
+- `src/news_video_mvp/project.py`
+  Defaults del proyecto y resolucion de recursos base.
+- `src/news_video_mvp/story_config.py`
+  Modelo declarativo de historias y resolucion de rutas del JSON.
+- `src/news_video_mvp/pipeline.py`
+  Casos de uso de render simple, batch y secuencial.
 - `src/news_video_mvp/tts.py`
   Genera audio TTS en espanol usando el proveedor configurado.
 - `src/news_video_mvp/composer.py`
@@ -23,10 +29,12 @@ Proyecto local para producir videos verticales de portadas de periodicos con est
   Registra composiciones para Studio y render.
 - `remotion-app/src/data.js`
   Historias demo estables para revisar layout en Studio.
+- `remotion-app/src/story/`
+  Capa declarativa para defaults, historias demo y normalizacion de props.
 - `remotion-app/src/generated-story.js`
   Ultima historia generada por la CLI.
 - `remotion-app/src/NewsVideo.jsx`
-  Componente principal del video.
+  Componente principal del video, ahora mas fino y centrado en animacion/render.
 - `remotion-app/src/video/`
   Modulos visuales del template:
   - `CoverStage.jsx`
@@ -35,6 +43,7 @@ Proyecto local para producir videos verticales de portadas de periodicos con est
   - `constants.js`
   - `layouts.js`
   - `helpers.js`
+  - `timeline.js`
 
 ## Proceso de trabajo
 

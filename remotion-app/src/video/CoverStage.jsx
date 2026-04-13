@@ -46,7 +46,7 @@ export const CoverStage = ({
     <div
       style={{
         position: "absolute",
-        top: 0,
+        top: -42,
         left: "50%",
         width: CARD_WIDTH,
         marginLeft: -(CARD_WIDTH / 2),

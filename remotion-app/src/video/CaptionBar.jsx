@@ -2,6 +2,9 @@ import React from "react";
 import {SUBTITLE_SIDE, SUBTITLE_TOP} from "./constants";
 
 export const CaptionBar = ({captionWords, subtitleFontSize, subtitleLineHeight}) => {
+  const verticalPadding = 40;
+  const maxCaptionHeight = Math.ceil(subtitleFontSize * subtitleLineHeight * 2 + verticalPadding);
+
   return (
     <div
       style={{
@@ -26,6 +29,8 @@ export const CaptionBar = ({captionWords, subtitleFontSize, subtitleLineHeight})
           fontWeight: 700,
           lineHeight: subtitleLineHeight,
           textAlign: "center",
+          maxHeight: maxCaptionHeight,
+          overflow: "hidden",
           boxShadow: "0 14px 30px rgba(0,0,0,0.16)",
           backdropFilter: "blur(8px)",
           letterSpacing: 0.15

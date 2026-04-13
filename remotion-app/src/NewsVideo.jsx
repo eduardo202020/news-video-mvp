@@ -10,17 +10,12 @@ import {
   useCurrentFrame,
   useVideoConfig
 } from "remotion";
-import {getCaptionStateForFrame} from "./utils";
+import {DEFAULT_MUSIC_SRC, DEFAULT_MUSIC_VOLUME} from "./story/defaults.js";
+import {normalizeStory} from "./story/normalize.js";
 import {CaptionBar} from "./video/CaptionBar";
 import {CoverStage} from "./video/CoverStage";
-import {
-  DEFAULT_MUSIC_SRC,
-  DEFAULT_MUSIC_VOLUME,
-  PAGE_TURN_FRAMES,
-  SEGMENT_GAP_FRAMES
-} from "./video/constants";
-import {buildSegments, buildWordHighlights} from "./video/helpers";
 import {NarratorStage} from "./video/NarratorStage";
+import {resolveTimeline} from "./video/timeline.js";
 
 const {fontFamily: subtitleFontFamily} = loadBarlowSemiCondensed("normal", {
   weights: ["700"],
@@ -41,7 +36,26 @@ export const NewsVideo = ({
 }) => {
   const frame = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
-  const sequence = buildSegments({segments, newspaperName, coverSrc, text});
+  const story = normalizeStory({
+    newspaperName,
+    coverSrc,
+    backgroundSrc,
+    audioSrc,
+    musicSrc,
+    musicVolume,
+    narratorName,
+    text,
+    gestures,
+    segments,
+    fps,
+    durationInFrames
+  });
+  const timeline = resolveTimeline({
+    frame,
+    fps,
+    durationInFrames,
+    story
+  });
 
   const cardEntrance = spring({
     fps,
@@ -87,54 +101,10 @@ export const NewsVideo = ({
     }
   );
 
-  const segmentDuration = Math.max(
-    1,
-    Math.floor((durationInFrames - PAGE_TURN_FRAMES * Math.max(sequence.length - 1, 0)) / sequence.length)
-  );
-  const totalSegmentBlock = segmentDuration + PAGE_TURN_FRAMES;
-  const activeIndex = Math.min(
-    sequence.length - 1,
-    Math.floor(frame / Math.max(1, totalSegmentBlock - SEGMENT_GAP_FRAMES))
-  );
-  const currentSegment = sequence[activeIndex];
-  const nextSegment = sequence[Math.min(sequence.length - 1, activeIndex + 1)];
-  const localBlockStart = activeIndex * Math.max(1, totalSegmentBlock - SEGMENT_GAP_FRAMES);
-  const segmentFrame = frame - localBlockStart;
-  const isTransitioning =
-    activeIndex < sequence.length - 1 && segmentFrame >= segmentDuration - PAGE_TURN_FRAMES;
-
-  const transitionProgress = isTransitioning
-    ? interpolate(
-        segmentFrame,
-        [segmentDuration - PAGE_TURN_FRAMES, segmentDuration],
-        [0, 1],
-        {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp"
-        }
-      )
-    : 0;
-
-  const captionState = getCaptionStateForFrame({
-    text: currentSegment.text,
-    frame: Math.max(0, segmentFrame),
-    durationInFrames: isTransitioning ? segmentDuration : Math.max(1, segmentDuration - SEGMENT_GAP_FRAMES)
-  });
-
-  const caption = captionState.text;
-  const activeGestures = currentSegment.gestures?.length ? currentSegment.gestures : gestures;
-  const gestureIndex = Math.floor(frame / fps) % activeGestures.length;
-  const activeNarratorName = currentSegment.narratorName ?? narratorName;
-  const subtitleLength = caption.length;
-  const subtitleFontSize =
-    subtitleLength > 120 ? 47 : subtitleLength > 90 ? 52 : subtitleLength > 65 ? 57 : 62;
-  const subtitleLineHeight = subtitleLength > 120 ? 1.08 : 1.12;
-  const captionWords = buildWordHighlights(caption, captionState.progress);
-
   const narratorSegmentProgress = interpolate(
-    segmentFrame,
-    [0, 12, Math.max(18, segmentDuration - 14), segmentDuration],
-    [0, 1, 1, activeIndex < sequence.length - 1 ? 0.88 : 1],
+    timeline.segmentFrame,
+    [0, 12, Math.max(18, timeline.segmentDuration - 14), timeline.segmentDuration],
+    [0, 1, 1, timeline.activeIndex < timeline.sequence.length - 1 ? 0.88 : 1],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp"
@@ -164,7 +134,7 @@ export const NewsVideo = ({
       extrapolateRight: "clamp"
     }
   );
-  const bedVolume = (musicVolume ?? DEFAULT_MUSIC_VOLUME) * musicFade;
+  const bedVolume = (story.musicVolume ?? DEFAULT_MUSIC_VOLUME) * musicFade;
 
   return (
     <AbsoluteFill
@@ -173,12 +143,12 @@ export const NewsVideo = ({
         fontFamily: `"${subtitleFontFamily}", Arial, sans-serif`
       }}
     >
-      <Audio src={staticFile(audioSrc)} />
-      <Audio src={staticFile(musicSrc ?? DEFAULT_MUSIC_SRC)} volume={bedVolume} loop />
+      <Audio src={staticFile(story.audioSrc)} />
+      <Audio src={staticFile(story.musicSrc ?? DEFAULT_MUSIC_SRC)} volume={bedVolume} loop />
 
       <AbsoluteFill>
         <Img
-          src={staticFile(backgroundSrc)}
+          src={staticFile(story.backgroundSrc)}
           style={{
             width: "142%",
             height: "100%",
@@ -208,23 +178,23 @@ export const NewsVideo = ({
       </AbsoluteFill>
 
       <CoverStage
-        currentSegment={currentSegment}
-        nextSegment={nextSegment}
-        isTransitioning={isTransitioning}
-        transitionProgress={transitionProgress}
+        currentSegment={timeline.currentSegment}
+        nextSegment={timeline.nextSegment}
+        isTransitioning={timeline.isTransitioning}
+        transitionProgress={timeline.transitionProgress}
         cardTranslateY={cardTranslateY}
         coverFloatY={coverFloatY}
       />
 
       <CaptionBar
-        captionWords={captionWords}
-        subtitleFontSize={subtitleFontSize}
-        subtitleLineHeight={subtitleLineHeight}
+        captionWords={timeline.captionWords}
+        subtitleFontSize={timeline.subtitleFontSize}
+        subtitleLineHeight={timeline.subtitleLineHeight}
       />
 
       <NarratorStage
-        gestureSrc={activeGestures[gestureIndex]}
-        narratorVariant={activeNarratorName}
+        gestureSrc={timeline.activeGestureSrc}
+        narratorVariant={timeline.activeNarratorName}
         narratorTranslateY={narratorTranslateY}
         narratorScale={narratorScale}
         narratorSegmentTranslateX={narratorSegmentTranslateX}

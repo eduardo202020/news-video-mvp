@@ -44,6 +44,17 @@ public/assets/
 Es la fuente estable para Studio.
 Sirve para revisar layout, motion y posicionamiento sin depender del pipeline generado en ese momento.
 
+### `src/story/`
+
+Contiene la capa declarativa del proyecto:
+
+- `defaults.js`
+  Spec base del video y defaults de audio.
+- `demo-stories.js`
+  Historias demo estables.
+- `normalize.js`
+  Normalizacion de props para Studio y renders generados.
+
 ### `src/generated-story.js`
 
 Es la historia que escribe Python cuando corre la CLI.
@@ -51,7 +62,7 @@ Sirve como snapshot de la ultima corrida automatica.
 
 ### `src/NewsVideo.jsx`
 
-Orquesta el video:
+Orquesta el video ya normalizado:
 
 - audio principal
 - musica de fondo
@@ -59,6 +70,8 @@ Orquesta el video:
 - subtitulos
 - cambio de narrador
 - transicion entre portadas
+
+La logica de timeline y seleccion de segmento vive en `src/video/timeline.js`.
 
 ### `src/video/`
 
@@ -101,6 +114,8 @@ Secuencia estable actual en Studio:
 
 - `NewsVideo`
   Composicion principal de trabajo.
+- `NewsVideo-generated`
+  Ultima historia generada por Python, ya normalizada para Studio.
 - `NewsVideo-periodicos-secuencia-demo`
   Demo con varios periodicos.
 - `NewsVideo-trome`

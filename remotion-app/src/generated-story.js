@@ -1,54 +1,54 @@
 export const generatedStory = {
-  "id": "periodicos_secuencia",
-  "newspaperName": "Trome",
-  "coverSrc": "assets/generated/periodicos_secuencia/covers/cover_00.png",
-  "backgroundSrc": "assets/generated/periodicos_secuencia/background.jpg",
-  "audioSrc": "assets/generated/periodicos_secuencia/audio.wav",
-  "durationInFrames": 594,
+  "id": "periodicos_secuencia_prueba",
+  "newspaperName": "Libero",
+  "coverSrc": "assets/generated/periodicos_secuencia_prueba/covers/cover_00.jpg",
+  "backgroundSrc": "assets/generated/periodicos_secuencia_prueba/background.jpg",
+  "audioSrc": "assets/generated/periodicos_secuencia_prueba/audio.wav",
+  "durationInFrames": 701,
   "fps": 30,
-  "narratorName": "Cuy-01",
-  "text": "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario. Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real. Cerramos con la portada de Libero junto al cuy deportivo para darle un cierre mas futbolero y energico a la secuencia.",
+  "narratorName": "Cuy-Depor",
+  "text": "Arrancamos con Libero y una apertura deportiva para probar que la secuencia acepta un nuevo punto de entrada sin depender del orden anterior. Luego pasamos a Ojo con un texto distinto, manteniendo el cambio de narrador y la transicion entre portadas dentro del mismo video. Cerramos con Trome para confirmar que el pipeline sigue funcionando aunque cambiemos tanto el copy como la posicion de cada periodico en la historia.",
   "gestures": [],
   "segments": [
     {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/periodicos_secuencia/covers/cover_00.png",
-      "text": "Abrimos con la portada de Trome. El resumen entra con ritmo y prepara el cambio hacia el siguiente diario.",
-      "narratorName": "Cuy-01",
+      "newspaperName": "Libero",
+      "coverSrc": "assets/generated/periodicos_secuencia_prueba/covers/cover_00.jpg",
+      "text": "Arrancamos con Libero y una apertura deportiva para probar que la secuencia acepta un nuevo punto de entrada sin depender del orden anterior.",
+      "narratorName": "Cuy-Depor",
       "gestures": [
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_00/gesture_00.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_00/gesture_01.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_00/gesture_02.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_00/gesture_03.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_00/gesture_04.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_00/gesture_05.png"
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_00/gesture_00.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_00/gesture_01.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_00/gesture_02.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_00/gesture_03.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_00/gesture_04.png"
       ]
     },
     {
       "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/periodicos_secuencia/covers/cover_01.png",
-      "text": "Ahora pasamos a Ojo con un efecto de cambio de pagina para que el recorrido entre periodicos se sienta fluido y real.",
+      "coverSrc": "assets/generated/periodicos_secuencia_prueba/covers/cover_01.png",
+      "text": "Luego pasamos a Ojo con un texto distinto, manteniendo el cambio de narrador y la transicion entre portadas dentro del mismo video.",
       "narratorName": "Cuy-02",
       "gestures": [
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_00.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_01.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_02.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_03.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_04.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_01/gesture_05.png"
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_01/gesture_00.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_01/gesture_01.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_01/gesture_02.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_01/gesture_03.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_01/gesture_04.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_01/gesture_05.png"
       ]
     },
     {
-      "newspaperName": "Libero",
-      "coverSrc": "assets/generated/periodicos_secuencia/covers/cover_02.jpg",
-      "text": "Cerramos con la portada de Libero junto al cuy deportivo para darle un cierre mas futbolero y energico a la secuencia.",
-      "narratorName": "Cuy-Depor",
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/periodicos_secuencia_prueba/covers/cover_02.png",
+      "text": "Cerramos con Trome para confirmar que el pipeline sigue funcionando aunque cambiemos tanto el copy como la posicion de cada periodico en la historia.",
+      "narratorName": "Cuy-01",
       "gestures": [
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_00.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_01.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_02.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_03.png",
-        "assets/generated/periodicos_secuencia/segment_gestures/segment_02/gesture_04.png"
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_02/gesture_00.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_02/gesture_01.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_02/gesture_02.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_02/gesture_03.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_02/gesture_04.png",
+        "assets/generated/periodicos_secuencia_prueba/segment_gestures/segment_02/gesture_05.png"
       ]
     }
   ]

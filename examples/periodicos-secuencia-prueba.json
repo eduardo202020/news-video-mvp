@@ -1,0 +1,28 @@
+{
+  "render_mode": "sequence",
+  "background": "../remotion-app/public/assets/backgrounds/calle.jpg",
+  "output": "../output/periodicos_secuencia_prueba.mp4",
+  "stories": [
+    {
+      "cover": "../remotion-app/public/assets/covers/líbero.jpg",
+      "newspaper_name": "Libero",
+      "narrator_name": "Cuy-Depor",
+      "gestures_dir": "../remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Arrancamos con Libero y una apertura deportiva para probar que la secuencia acepta un nuevo punto de entrada sin depender del orden anterior."
+    },
+    {
+      "cover": "../remotion-app/public/assets/covers/ojo.png",
+      "newspaper_name": "Ojo",
+      "narrator_name": "Cuy-02",
+      "gestures_dir": "../remotion-app/public/assets/gestures/cuy/02",
+      "text": "Luego pasamos a Ojo con un texto distinto, manteniendo el cambio de narrador y la transicion entre portadas dentro del mismo video."
+    },
+    {
+      "cover": "../remotion-app/public/assets/covers/trome.png",
+      "newspaper_name": "Trome",
+      "narrator_name": "Cuy-01",
+      "gestures_dir": "../remotion-app/public/assets/gestures/cuy/01",
+      "text": "Cerramos con Trome para confirmar que el pipeline sigue funcionando aunque cambiemos tanto el copy como la posicion de cada periodico en la historia."
+    }
+  ]
+}
