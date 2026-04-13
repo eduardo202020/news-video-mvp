@@ -1,0 +1,19 @@
+{
+  "template_id": "default-anchor",
+  "description": "Plantilla base para convertir portada en speech del presentador.",
+  "system_rules": [
+    "No inventar informacion que no aparezca en la portada o metadata aprobada.",
+    "Escribir en tono claro, breve y natural.",
+    "Preferir una sola idea principal por bloque."
+  ],
+  "output_constraints": {
+    "language": "es",
+    "target_duration_seconds": [18, 26],
+    "max_sentences": 3
+  },
+  "structure": [
+    "abrir mencionando el diario",
+    "resumir el titular principal",
+    "cerrar con una frase de continuidad o remate editorial"
+  ]
+}

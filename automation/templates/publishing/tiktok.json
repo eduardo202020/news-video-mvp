@@ -1,0 +1,14 @@
+{
+  "profile_id": "tiktok",
+  "platform": "tiktok",
+  "visibility": "private",
+  "title_template": "{source_name}: {headline}",
+  "description_template": "{script_excerpt}",
+  "hashtags": [
+    "#noticias",
+    "#portadas",
+    "#periodicos",
+    "#actualidad"
+  ],
+  "require_human_confirmation": true
+}

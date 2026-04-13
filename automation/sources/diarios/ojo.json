@@ -1,0 +1,23 @@
+{
+  "source_id": "ojo",
+  "display_name": "Ojo",
+  "base_url": "https://example.com/ojo",
+  "discovery": {
+    "type": "html",
+    "front_page_url_pattern": "https://example.com/ojo/{date}"
+  },
+  "selectors": {
+    "front_page_image": ".frontpage img",
+    "article_blocks": ".cover-headline, .cover-subheadline"
+  },
+  "storage": {
+    "folder_pattern": "data/raw/ojo/{date}/"
+  },
+  "ocr_hints": {
+    "language": "spa"
+  },
+  "schedule": {
+    "timezone": "America/Lima",
+    "run_after": "05:30"
+  }
+}

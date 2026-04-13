@@ -23,6 +23,15 @@ Proyecto local para producir videos verticales de portadas de periodicos con est
 - `src/news_video_mvp/composer.py`
   Copia assets hacia `remotion-app/public/assets/generated/`, genera `generated-story.js` y llama a Remotion.
 
+### Capa declarativa de automatizacion
+
+- `automation/`
+  Define fuentes, reglas editoriales, perfiles de voz, templates de video, perfiles de publicacion y manifests de jobs.
+- `automation/architecture/pipeline.md`
+  Describe el pipeline objetivo desde ingesta hasta publicacion.
+- `automation/jobs/templates/`
+  Contratos base para jobs y story manifests.
+
 ### Frontend de video
 
 - `remotion-app/src/Root.jsx`
@@ -46,6 +55,16 @@ Proyecto local para producir videos verticales de portadas de periodicos con est
   - `timeline.js`
 
 ## Proceso de trabajo
+
+### 0. Diseñar el pipeline declarativo
+
+Antes de automatizar scraping o publicacion, la base recomendada ahora es:
+
+1. definir la fuente en `automation/sources/`
+2. definir reglas en `automation/rules/`
+3. definir template de guion, voz, video y publicacion en `automation/templates/`
+4. usar un `job-manifest` como contrato entre etapas
+5. generar un `story-manifest` antes de renderizar
 
 ### 1. Preparar assets
 

@@ -1,0 +1,19 @@
+{
+  "policy_id": "frontpage-editorial-default",
+  "description": "Reglas base para decidir si una portada entra al pipeline.",
+  "reject_if": [
+    "ocr_confidence_below_threshold",
+    "headline_area_missing",
+    "image_is_mostly_advertising",
+    "content_is_duplicate_for_same_source_and_date"
+  ],
+  "classify_as_ad_if": [
+    "brand_logo_dominates_main_block",
+    "price_or_promotion_language_detected",
+    "headline_not_news_like"
+  ],
+  "minimum_requirements": {
+    "min_ocr_confidence": 0.65,
+    "min_headline_candidates": 1
+  }
+}

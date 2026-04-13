@@ -1,0 +1,14 @@
+{
+  "template_id": "vertical-news",
+  "description": "Template principal de video vertical de noticias.",
+  "composition_id": "NewsVideo-generated",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "subtitle_policy_id": "default-2-lines",
+  "default_background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "default_music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  }
+}

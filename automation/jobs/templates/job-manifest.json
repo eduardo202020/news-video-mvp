@@ -1,0 +1,54 @@
+{
+  "job_id": "2026-04-13-libero-frontpage-001",
+  "source_id": "libero",
+  "date": "2026-04-13",
+  "approval_mode": "semi_auto",
+  "status": "review_pending",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-13/2026-04-13-libero-frontpage-001/input/front-page.jpg",
+    "source_url": "https://example.com/libero/2026-04-13"
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": true,
+    "priority": "high",
+    "reason": "main_headline_detected"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "draft": "",
+    "approved_text": "",
+    "review_notes": ""
+  },
+  "voice": {
+    "profile_id": "cuy-depor",
+    "provider": "system",
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-13T12:00:00",
+    "updated_at": "2026-04-13T12:00:00",
+    "events": []
+  }
+}

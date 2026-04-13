@@ -1,0 +1,22 @@
+{
+  "story_id": "2026-04-13-libero-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-13-libero-frontpage-001.mp4",
+  "segments": [
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-13/2026-04-13-libero-frontpage-001/input/front-page.jpg",
+      "narrator_name": "Cuy-Depor",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Texto aprobado para el narrador.",
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

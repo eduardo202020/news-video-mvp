@@ -1,0 +1,8 @@
+{
+  "profile_id": "cuy-depor",
+  "display_name": "Cuy-Depor",
+  "tts_provider": "system",
+  "tts_voice": "auto",
+  "narrator_name": "Cuy-Depor",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor"
+}
