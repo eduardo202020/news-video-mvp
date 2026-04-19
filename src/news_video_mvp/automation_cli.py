@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+import json
 from pathlib import Path
 import sys
 
@@ -17,6 +18,7 @@ from .automation_pipeline import (
     extract_and_classify_job,
     generate_script_from_job,
     generate_voice_and_subtitles_for_job,
+    import_cover_page_selection_batch,
     import_cover_page_selection_for_job,
     import_script_for_job,
     list_available_voicebox_profiles,
@@ -173,6 +175,15 @@ def build_parser() -> argparse.ArgumentParser:
     import_cover.add_argument("--selection-file", type=Path)
     import_cover.add_argument("--provider", default="chatgpt_plus_manual")
     import_cover.add_argument("--force", action="store_true")
+
+    import_cover_batch = subparsers.add_parser(
+        "import-cover-pages-batch",
+        help="Importa manualmente paginas referenciadas para varios jobs desde un unico JSON.",
+    )
+    import_cover_batch.add_argument("--selection-text")
+    import_cover_batch.add_argument("--selection-file", type=Path)
+    import_cover_batch.add_argument("--provider", default="chatgpt_plus_manual")
+    import_cover_batch.add_argument("--force", action="store_true")
 
     scrape_selected = subparsers.add_parser(
         "scrape-selected-pages",
@@ -402,6 +413,16 @@ def main() -> None:
                 force=args.force,
             )
             print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "import-cover-pages-batch":
+            results = import_cover_page_selection_batch(
+                selection_text=args.selection_text,
+                selection_file=args.selection_file,
+                provider=args.provider,
+                force=args.force,
+            )
+            print(json.dumps(results, ensure_ascii=False, indent=2))
             return
 
         if args.command == "scrape-selected-pages":

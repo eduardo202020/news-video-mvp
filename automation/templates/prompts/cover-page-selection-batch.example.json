@@ -1,0 +1,32 @@
+{
+  "notes": "Seleccion manual desde ChatGPT para varias portadas.",
+  "jobs": [
+    {
+      "job_manifest_path": "data/jobs/2026-04-19/2026-04-19-ojo-frontpage-001/job-manifest.json",
+      "job_id": "2026-04-19-ojo-frontpage-001",
+      "newspaper_name": "Ojo",
+      "notes": "Paginas detectadas visualmente desde la portada.",
+      "items": [
+        {
+          "headline": "Choque politico en el Congreso",
+          "page_number": 3,
+          "confidence": 0.94,
+          "evidence_line": "PAG 3"
+        },
+        {
+          "headline": "Cronologia del caso",
+          "page_number": 5,
+          "confidence": 0.88,
+          "evidence_line": "p. 5"
+        }
+      ]
+    },
+    {
+      "job_manifest_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/job-manifest.json",
+      "job_id": "2026-04-19-trome-frontpage-001",
+      "newspaper_name": "Trome",
+      "notes": "No se observaron referencias claras de paginas.",
+      "items": []
+    }
+  ]
+}

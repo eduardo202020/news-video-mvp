@@ -13,6 +13,11 @@ El `README.md` principal explica el flujo operativo completo:
 
 Este documento queda como referencia tecnica de la capa `automation/`.
 
+Tambien incluye templates para flujos manuales con ChatGPT, por ejemplo seleccion de paginas desde varias portadas:
+
+- [templates/prompts/cover-page-selection-batch.md](./templates/prompts/cover-page-selection-batch.md)
+- [templates/prompts/cover-page-selection-batch.example.json](./templates/prompts/cover-page-selection-batch.example.json)
+
 La preparacion del entorno y el flujo operativo general viven en:
 
 - [README.md](../README.md)
@@ -135,6 +140,8 @@ Responsabilidades:
   Perfiles de voz y narrador.
 - `automation/templates/publishing/tiktok.json`
   Perfil declarativo de publicacion.
+- `automation/templates/prompts/cover-page-selection-batch.md`
+  Prompt reutilizable para seleccionar paginas desde varias portadas.
 
 ## Etapas ya implementadas
 
@@ -146,6 +153,10 @@ Estas etapas ya existen en `src/news_video_mvp/automation_pipeline.py` y se expo
 - `archive-source`
 - `archive-all-sources`
 - `extract-job`
+- `analyze-cover-pages`
+- `import-cover-pages`
+- `import-cover-pages-batch`
+- `scrape-selected-pages`
 - `prepare-script-package`
 - `generate-script`
 - `import-script`
@@ -166,6 +177,8 @@ Hoy la automatizacion ya permite:
 - limpiar automaticamente carpetas con mas de 7 dias por fuente
 - cargar OCR externo o sidecar
 - clasificar portada como noticia o publicidad
+- importar seleccion manual de paginas por job o por lote
+- descargar solo las paginas elegidas desde portada
 - preparar un paquete para ChatGPT con imagenes y contexto del job
 - generar draft del narrador
 - importar un speech escrito externamente

@@ -325,6 +325,34 @@ news-video-mvp-automation import-script `
   --approve
 ```
 
+Importar paginas seleccionadas manualmente para un job:
+
+```powershell
+news-video-mvp-automation import-cover-pages `
+  --job-manifest .\data\jobs\2026-04-19\2026-04-19-ojo-frontpage-001\job-manifest.json `
+  --selection-file .\data\ocr-imports\2026-04-19-ojo\manual-selection.json `
+  --provider chatgpt_plus_manual `
+  --force
+```
+
+Importar paginas seleccionadas manualmente para varios jobs a la vez:
+
+```powershell
+news-video-mvp-automation import-cover-pages-batch `
+  --selection-file .\data\ocr-imports\2026-04-19\cover-selections-batch.json `
+  --provider chatgpt_plus_manual `
+  --force
+```
+
+Descargar solo las paginas seleccionadas de un job:
+
+```powershell
+news-video-mvp-automation scrape-selected-pages `
+  --job-manifest .\data\jobs\2026-04-19\2026-04-19-ojo-frontpage-001\job-manifest.json `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --force
+```
+
 Aprobar guion:
 
 ```powershell
@@ -400,6 +428,28 @@ news-video-mvp-automation publish-job `
 ```
 
 ## Flujo recomendado de trabajo
+
+### Flujo manual recomendado para varias portadas
+
+1. descubre o descarga solo la portada de cada periodico y crea un job por periodico
+2. abre [cover-page-selection-batch.md](./automation/templates/prompts/cover-page-selection-batch.md)
+3. reemplaza `{{PORTADAS}}` por una lista como esta:
+
+```text
+- portada 1
+  newspaper_name: Ojo
+  job_id: 2026-04-19-ojo-frontpage-001
+  job_manifest_path: data/jobs/2026-04-19/2026-04-19-ojo-frontpage-001/job-manifest.json
+- portada 2
+  newspaper_name: Trome
+  job_id: 2026-04-19-trome-frontpage-001
+  job_manifest_path: data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/job-manifest.json
+```
+
+4. sube todas las portadas al mismo chat y pega el prompt
+5. guarda la respuesta JSON usando como referencia [cover-page-selection-batch.example.json](./automation/templates/prompts/cover-page-selection-batch.example.json)
+6. importa el lote con `import-cover-pages-batch`
+7. para cada job, ejecuta `scrape-selected-pages`
 
 ### Flujo 1: Preview rapido con Streamlit + Remotion
 

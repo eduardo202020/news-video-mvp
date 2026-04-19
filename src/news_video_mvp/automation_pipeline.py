@@ -1074,6 +1074,69 @@ def _parse_manual_page_selection_payload(text: str) -> tuple[list[dict[str, obje
     return candidates, notes
 
 
+def _parse_batch_manual_page_selection_payload(text: str) -> tuple[list[dict[str, object]], str]:
+    stripped = text.strip()
+    if not stripped:
+        raise ValueError("La seleccion batch de paginas esta vacia.")
+
+    try:
+        payload = json.loads(stripped)
+    except json.JSONDecodeError as exc:
+        raise ValueError("La seleccion batch debe ser JSON valido.") from exc
+
+    batch_notes = ""
+    raw_entries: object
+    if isinstance(payload, dict):
+        if isinstance(payload.get("notes"), str):
+            batch_notes = payload["notes"].strip()
+        raw_entries = (
+            payload.get("jobs")
+            or payload.get("selections")
+            or payload.get("entries")
+            or payload.get("items")
+            or []
+        )
+    elif isinstance(payload, list):
+        raw_entries = payload
+    else:
+        raise ValueError("La seleccion batch debe ser una lista JSON o un objeto con `jobs`.")
+
+    if not isinstance(raw_entries, list) or not raw_entries:
+        raise ValueError("La seleccion batch debe incluir una lista no vacia en `jobs` o similar.")
+
+    entries: list[dict[str, object]] = []
+    for raw_entry in raw_entries:
+        if not isinstance(raw_entry, dict):
+            continue
+        job_manifest_path = str(
+            raw_entry.get("job_manifest_path")
+            or raw_entry.get("job_manifest")
+            or raw_entry.get("manifest_path")
+            or ""
+        ).strip()
+        if not job_manifest_path:
+            raise ValueError(
+                "Cada entrada batch debe incluir `job_manifest_path`, `job_manifest` o `manifest_path`."
+            )
+        items_payload = {
+            "notes": str(raw_entry.get("notes") or "").strip(),
+            "items": raw_entry.get("items") or raw_entry.get("candidates") or raw_entry.get("pages") or [],
+        }
+        entries.append(
+            {
+                "job_manifest_path": job_manifest_path,
+                "job_id": str(raw_entry.get("job_id") or "").strip(),
+                "newspaper_name": str(raw_entry.get("newspaper_name") or "").strip(),
+                "provider": str(raw_entry.get("provider") or "").strip(),
+                "selection_payload": json.dumps(items_payload, ensure_ascii=False),
+            }
+        )
+
+    if not entries:
+        raise ValueError("No se encontraron entradas validas en la seleccion batch.")
+    return entries, batch_notes
+
+
 def extract_and_classify_job(
     *,
     job_manifest_path: Path,
@@ -1275,6 +1338,52 @@ def import_cover_page_selection_for_job(
         }
     )
     return write_json(job_manifest_path, job)
+
+
+def import_cover_page_selection_batch(
+    *,
+    selection_text: str | None = None,
+    selection_file: Path | None = None,
+    provider: str = "chatgpt_plus_manual",
+    force: bool = False,
+) -> list[dict[str, object]]:
+    project_dir = get_project_dir()
+    if selection_file is not None:
+        if not selection_file.exists():
+            raise FileNotFoundError(f"No existe el archivo de seleccion batch: {selection_file}")
+        raw_selection = selection_file.read_text(encoding="utf-8")
+    elif selection_text is not None:
+        raw_selection = selection_text
+    else:
+        raise ValueError("Debes proporcionar `--selection-text` o `--selection-file`.")
+
+    entries, batch_notes = _parse_batch_manual_page_selection_payload(raw_selection)
+    results: list[dict[str, object]] = []
+    for entry in entries:
+        manifest_value = Path(str(entry["job_manifest_path"]))
+        manifest_path = (
+            manifest_value
+            if manifest_value.is_absolute()
+            else (project_dir / manifest_value).resolve()
+        )
+        resolved_provider = str(entry.get("provider") or provider)
+        import_cover_page_selection_for_job(
+            job_manifest_path=manifest_path,
+            selection_text=str(entry["selection_payload"]),
+            provider=resolved_provider,
+            force=force,
+        )
+        results.append(
+            {
+                "job_manifest_path": manifest_path.resolve().relative_to(project_dir).as_posix(),
+                "job_id": entry.get("job_id") or "",
+                "newspaper_name": entry.get("newspaper_name") or "",
+                "provider": resolved_provider,
+                "status": "imported",
+                "batch_notes": batch_notes,
+            }
+        )
+    return results
 
 
 def scrape_selected_pages_for_job(
