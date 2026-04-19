@@ -290,6 +290,14 @@ Listar perfiles locales de Voicebox:
 news-video-mvp-automation list-voicebox-profiles
 ```
 
+Transcribir un audio del job con Voicebox:
+
+```powershell
+news-video-mvp-automation transcribe-job `
+  --job-manifest .\data\jobs\2026-04-18\2026-04-18-voicebox-test\job-manifest.json `
+  --voice-profile .\automation\templates\voices\voicebox-local.json
+```
+
 Usar Voicebox local para la voz:
 
 ```powershell
@@ -305,6 +313,7 @@ Notas para Voicebox:
 - por defecto se usa `http://localhost:17493`
 - cambia `tts_voice` en [voicebox-local.json](C:/Users/pc/Documents/proyectos/news-video-mvp/automation/templates/voices/voicebox-local.json:1) por el `profile_id` real de tu voz clonada
 - si tu instancia usa otra URL, ajusta `provider_settings.api_url` o la variable `VOICEBOX_API_URL`
+- `transcribe-job` usa el audio del job por defecto, o uno externo con `--audio-file`
 
 Construir story manifest:
 

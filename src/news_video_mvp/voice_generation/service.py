@@ -64,6 +64,58 @@ def list_voicebox_profiles(provider_settings: dict[str, object] | None = None) -
     return [profile for profile in response if isinstance(profile, dict)]
 
 
+def transcribe_with_voicebox(
+    *,
+    audio_path: Path,
+    provider_settings: dict[str, object] | None = None,
+) -> dict[str, object]:
+    if not audio_path.exists():
+        raise TTSGenerationError(f"No existe el archivo de audio para transcribir: {audio_path}")
+
+    api_url = _get_voicebox_api_url(provider_settings)
+    boundary = f"----CodexVoicebox{int(time.time() * 1000)}"
+    file_name = audio_path.name
+    file_bytes = audio_path.read_bytes()
+    body_prefix = (
+        f"--{boundary}\r\n"
+        f'Content-Disposition: form-data; name="file"; filename="{file_name}"\r\n'
+        f"Content-Type: audio/wav\r\n\r\n"
+    ).encode("utf-8")
+    body_suffix = f"\r\n--{boundary}--\r\n".encode("utf-8")
+    body = body_prefix + file_bytes + body_suffix
+
+    request = Request(
+        urljoin(api_url + "/", "transcribe"),
+        data=body,
+        headers={
+            "Accept": "application/json",
+            "Content-Type": f"multipart/form-data; boundary={boundary}",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(request, timeout=300) as response:
+            raw = response.read().decode("utf-8")
+    except HTTPError as exc:
+        details = exc.read().decode("utf-8", errors="ignore").strip()
+        raise TTSGenerationError(
+            f"Voicebox respondio con error HTTP {exc.code} en `/transcribe`: {details or exc.reason}"
+        ) from exc
+    except URLError as exc:
+        raise TTSGenerationError(
+            f"No se pudo conectar con Voicebox en {api_url}. Verifica que la app o backend este corriendo."
+        ) from exc
+
+    try:
+        payload = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise TTSGenerationError("Voicebox devolvio una respuesta no JSON en `/transcribe`.") from exc
+
+    if not isinstance(payload, dict):
+        raise TTSGenerationError("Voicebox devolvio un formato inesperado para `/transcribe`.")
+    return payload
+
+
 def _copy_voicebox_audio(audio_reference: str, output_path: Path, api_url: str) -> Path:
     output_path.parent.mkdir(parents=True, exist_ok=True)
 

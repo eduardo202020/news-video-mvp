@@ -11,7 +11,7 @@ from .project import get_project_dir
 from .scraping import build_input_assets, ingest_supporting_pages, stage_front_page_asset
 from .script_generation import import_generated_script, prepare_chatgpt_script_package
 from .subtitles import build_subtitle_segments
-from .voice_generation import generate_voice_track, list_voicebox_profiles
+from .voice_generation import generate_voice_track, list_voicebox_profiles, transcribe_with_voicebox
 
 
 def get_automation_dir(project_dir: Path | None = None) -> Path:
@@ -118,6 +118,13 @@ def create_job_manifest(
             "policy_id": subtitle_policy_id,
             "segments_path": None,
         },
+        "transcription": {
+            "provider": None,
+            "text": "",
+            "duration_seconds": None,
+            "source_audio_path": None,
+            "output_path": None,
+        },
         "video": {
             "template_id": video_template.template_id,
             "story_manifest_path": None,
@@ -204,6 +211,85 @@ def list_available_voicebox_profiles(*, voice_profile_path: Path | None = None) 
     if voice_profile_path is not None:
         provider_settings = VoiceProfile.load(voice_profile_path).provider_settings
     return list_voicebox_profiles(provider_settings)
+
+
+def _resolve_audio_for_transcription(*, job: dict, audio_file: Path | None) -> Path:
+    if audio_file is not None:
+        if not audio_file.exists():
+            raise FileNotFoundError(f"No existe el archivo de audio: {audio_file}")
+        return audio_file
+
+    audio_path_value = job.get("voice", {}).get("audio_path")
+    if not audio_path_value:
+        raise ValueError(
+            "El job no tiene `voice.audio_path`. Ejecuta `voice-job` antes o pasa `--audio-file`."
+        )
+
+    resolved = get_project_dir() / audio_path_value
+    if not resolved.exists():
+        raise FileNotFoundError(f"No existe el audio referenciado en el job: {resolved}")
+    return resolved
+
+
+def transcribe_job_audio(
+    *,
+    job_manifest_path: Path,
+    voice_profile_path: Path,
+    audio_file: Path | None = None,
+    force: bool = False,
+) -> Path:
+    project_dir = get_project_dir()
+    job = read_json(job_manifest_path)
+    voice = VoiceProfile.load(voice_profile_path)
+    current_text = job.get("transcription", {}).get("text", "").strip()
+    if current_text and not force:
+        raise ValueError(
+            "El job ya tiene una transcripcion guardada. Usa `--force` si quieres regenerarla."
+        )
+
+    resolved_audio = _resolve_audio_for_transcription(job=job, audio_file=audio_file)
+    transcription = transcribe_with_voicebox(
+        audio_path=resolved_audio,
+        provider_settings=voice.provider_settings,
+    )
+    transcription_text = str(transcription.get("text", "")).strip()
+    if not transcription_text:
+        raise ValueError("Voicebox no devolvio texto en la transcripcion.")
+
+    duration = transcription.get("duration")
+    output_path = job_manifest_path.parent / "output" / "transcription.json"
+    write_json(
+        output_path,
+        {
+            "provider": "voicebox_local",
+            "text": transcription_text,
+            "duration_seconds": duration,
+            "source_audio_path": resolved_audio.resolve().relative_to(project_dir).as_posix()
+            if resolved_audio.is_relative_to(project_dir.resolve())
+            else str(resolved_audio.resolve()),
+        },
+    )
+
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["transcription"] = {
+        "provider": "voicebox_local",
+        "text": transcription_text,
+        "duration_seconds": duration,
+        "source_audio_path": resolved_audio.resolve().relative_to(project_dir).as_posix()
+        if resolved_audio.is_relative_to(project_dir.resolve())
+        else str(resolved_audio.resolve()),
+        "output_path": output_path.resolve().relative_to(project_dir).as_posix(),
+    }
+    job["audit"]["updated_at"] = timestamp
+    job["audit"].setdefault("events", []).append(
+        {
+            "stage": "transcribe",
+            "status": "completed",
+            "timestamp": timestamp,
+            "details": "Audio transcrito con Voicebox.",
+        }
+    )
+    return write_json(job_manifest_path, job)
 
 
 def _resolve_repo_path(path_value: str | None) -> Path | None:
@@ -507,6 +593,20 @@ def _get_wav_duration_seconds(audio_path: Path) -> float:
         return frame_count / frame_rate
 
 
+def _select_subtitle_source_text(*, job: dict, subtitle_policy: dict) -> tuple[str, str]:
+    strategy = str(subtitle_policy.get("timing_strategy", "text_weighted_fallback"))
+    transcription_text = str(job.get("transcription", {}).get("text", "")).strip()
+    approved_text = str(job.get("script", {}).get("approved_text", "")).strip()
+
+    if "aligned_preferred" in strategy and transcription_text:
+        return transcription_text, "transcription"
+    if approved_text:
+        return approved_text, "approved_script"
+    if transcription_text:
+        return transcription_text, "transcription"
+    return "", "missing"
+
+
 def generate_voice_and_subtitles_for_job(
     *,
     job_manifest_path: Path,
@@ -548,13 +648,23 @@ def generate_voice_and_subtitles_for_job(
         provider_settings=voice.provider_settings,
     )
     total_duration = _get_wav_duration_seconds(audio_path)
+    subtitle_text, subtitle_text_source = _select_subtitle_source_text(
+        job=job,
+        subtitle_policy=subtitle_policy,
+    )
+    if not subtitle_text:
+        raise ValueError(
+            "No se encontro texto para subtitulos. Genera o importa un guion, o ejecuta `transcribe-job`."
+        )
     segments = build_subtitle_segments(
-        approved_text,
+        subtitle_text,
         total_duration=total_duration,
         max_chars=int(subtitle_policy.get("max_chars_per_block", 72)),
     )
     subtitle_payload = {
         "policy_id": subtitle_policy["policy_id"],
+        "text_source": subtitle_text_source,
+        "text": subtitle_text,
         "audio_duration_seconds": round(total_duration, 3),
         "segments": [
             {

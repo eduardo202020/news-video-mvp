@@ -17,6 +17,7 @@ from .automation_pipeline import (
     prepare_script_package_for_job,
     publish_job,
     scrape_pages_for_job,
+    transcribe_job_audio,
 )
 from .tts import TTSGenerationError
 
@@ -119,6 +120,15 @@ def build_parser() -> argparse.ArgumentParser:
         help="Lista los perfiles disponibles en la instancia local de Voicebox.",
     )
     list_voicebox.add_argument("--voice-profile", type=Path)
+
+    transcribe_job = subparsers.add_parser(
+        "transcribe-job",
+        help="Transcribe un audio del job usando Voicebox local.",
+    )
+    transcribe_job.add_argument("--job-manifest", type=Path, required=True)
+    transcribe_job.add_argument("--voice-profile", type=Path, required=True)
+    transcribe_job.add_argument("--audio-file", type=Path)
+    transcribe_job.add_argument("--force", action="store_true")
 
     compose_job = subparsers.add_parser(
         "compose-job",
@@ -266,6 +276,16 @@ def main() -> None:
                 name = profile.get("name") or profile.get("display_name") or "sin-nombre"
                 language = profile.get("language") or "n/a"
                 print(f"{profile_id}\t{name}\t{language}")
+            return
+
+        if args.command == "transcribe-job":
+            manifest_path = transcribe_job_audio(
+                job_manifest_path=args.job_manifest,
+                voice_profile_path=args.voice_profile,
+                audio_file=args.audio_file,
+                force=args.force,
+            )
+            print(f"Job manifest actualizado en: {manifest_path}")
             return
 
         if args.command == "compose-job":

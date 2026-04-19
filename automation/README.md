@@ -147,6 +147,7 @@ Estas etapas ya existen en `src/news_video_mvp/automation_pipeline.py` y se expo
 - `import-script`
 - `approve-script`
 - `voice-job`
+- `transcribe-job`
 - `build-story-manifest`
 - `compose-job`
 - `publish-job`
@@ -162,6 +163,7 @@ Hoy la automatizacion ya permite:
 - generar draft del narrador
 - importar un speech escrito externamente
 - sintetizar voz local con Voicebox via REST API local
+- transcribir audio local con Voicebox via `POST /transcribe`
 - aprobar texto final
 - generar audio y subtitulos
 - construir `story-manifest`
