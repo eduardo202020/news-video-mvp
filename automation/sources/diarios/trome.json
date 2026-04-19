@@ -1,14 +1,22 @@
 {
   "source_id": "trome",
   "display_name": "Trome",
-  "base_url": "https://example.com/trome",
+  "base_url": "https://t.prcdn.co/img",
   "discovery": {
-    "type": "html",
-    "front_page_url_pattern": "https://example.com/trome/{date}"
+    "type": "prcdn_image_sequence",
+    "base_image_url": "https://t.prcdn.co/img",
+    "file_code": "eag8",
+    "suffix": "00000000001001",
+    "page_start": 1,
+    "page_end": 60,
+    "scale_start": 46,
+    "scale_end": 300,
+    "stop_after_missing_page": true,
+    "missing_pages_tolerance": 2
   },
   "selectors": {
-    "front_page_image": ".frontpage img",
-    "article_blocks": ".cover-headline, .cover-subheadline"
+    "front_page_image": null,
+    "article_blocks": null
   },
   "storage": {
     "folder_pattern": "data/raw/trome/{date}/"

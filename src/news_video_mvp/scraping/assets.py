@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 import shutil
 from urllib.parse import urlparse
-from urllib.request import urlretrieve
+from urllib.request import Request, urlopen
 
 from ..automation_models import read_json, write_json
 from ..project import get_project_dir
@@ -13,6 +13,21 @@ from ..project import get_project_dir
 def infer_extension_from_url(url: str, default: str = ".jpg") -> str:
     suffix = Path(urlparse(url).path).suffix.lower()
     return suffix or default
+
+
+def _download_asset_with_headers(*, source_url: str, destination: Path) -> None:
+    request = Request(
+        source_url,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+            )
+        },
+    )
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with urlopen(request, timeout=60) as response:
+        destination.write_bytes(response.read())
 
 
 def _stage_local_or_remote_asset(
@@ -34,8 +49,7 @@ def _stage_local_or_remote_asset(
 
     if download and source_url:
         destination = destination_dir / f"{destination_name}{infer_extension_from_url(source_url, default_extension)}"
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        urlretrieve(source_url, destination)
+        _download_asset_with_headers(source_url=source_url, destination=destination)
         return destination
 
     return None

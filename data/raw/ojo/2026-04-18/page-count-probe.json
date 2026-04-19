@@ -1,0 +1,117 @@
+{
+  "source_id": "ojo",
+  "display_name": "Ojo",
+  "job_date": "2026-04-18",
+  "page_count": 20,
+  "first_page": 1,
+  "last_page": 20,
+  "max_probe_pages": 24,
+  "scale_range": {
+    "start": 46,
+    "end": 300
+  },
+  "valid_pages": [
+    {
+      "page_number": 1,
+      "scale": 300,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=1&scale=300"
+    },
+    {
+      "page_number": 2,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=2&scale=83"
+    },
+    {
+      "page_number": 3,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=3&scale=83"
+    },
+    {
+      "page_number": 4,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=4&scale=83"
+    },
+    {
+      "page_number": 5,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=5&scale=83"
+    },
+    {
+      "page_number": 6,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=6&scale=83"
+    },
+    {
+      "page_number": 7,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=7&scale=83"
+    },
+    {
+      "page_number": 8,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=8&scale=83"
+    },
+    {
+      "page_number": 9,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=9&scale=83"
+    },
+    {
+      "page_number": 10,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=10&scale=83"
+    },
+    {
+      "page_number": 11,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=11&scale=83"
+    },
+    {
+      "page_number": 12,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=12&scale=83"
+    },
+    {
+      "page_number": 13,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=13&scale=83"
+    },
+    {
+      "page_number": 14,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=14&scale=83"
+    },
+    {
+      "page_number": 15,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=15&scale=83"
+    },
+    {
+      "page_number": 16,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=16&scale=83"
+    },
+    {
+      "page_number": 17,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=17&scale=83"
+    },
+    {
+      "page_number": 18,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=18&scale=83"
+    },
+    {
+      "page_number": 19,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=19&scale=83"
+    },
+    {
+      "page_number": 20,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=20&scale=83"
+    }
+  ],
+  "probe_type": "prcdn_image_sequence",
+  "saved_at": "2026-04-18T23:52:24"
+}

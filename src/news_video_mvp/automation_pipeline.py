@@ -8,7 +8,18 @@ import wave
 from .automation_models import SourceConfig, VideoTemplate, VoiceProfile, read_json, write_json
 from .composer import VideoSegment, VideoSpec, compose_video_props
 from .project import get_project_dir
-from .scraping import build_input_assets, ingest_supporting_pages, stage_front_page_asset
+from .scraping import (
+    archive_all_sources,
+    archive_source_scrape,
+    build_input_assets,
+    build_source_url,
+    discover_source_assets,
+    ingest_supporting_pages,
+    probe_prcdn_page_count,
+    prune_source_storage,
+    resolve_source_storage_dir,
+    stage_front_page_asset,
+)
 from .script_generation import import_generated_script, prepare_chatgpt_script_package
 from .subtitles import build_subtitle_segments
 from .voice_generation import generate_voice_track, list_voicebox_profiles, transcribe_with_voicebox
@@ -24,13 +35,6 @@ def get_jobs_root(project_dir: Path | None = None) -> Path:
 
 def build_job_id(*, job_date: str, source_id: str, suffix: str = "frontpage-001") -> str:
     return f"{job_date}-{source_id}-{suffix}"
-
-
-def build_source_url(source: SourceConfig, *, job_date: str) -> str:
-    pattern = source.discovery.get("front_page_url_pattern")
-    if not pattern:
-        return source.base_url
-    return str(pattern).format(date=job_date)
 
 
 def ensure_job_scaffold(job_dir: Path) -> None:
@@ -169,6 +173,200 @@ def scrape_pages_for_job(
         job_manifest_path=job_manifest_path,
         page_urls=page_urls,
         page_images=page_images,
+    )
+
+
+def discover_source_for_date(
+    *,
+    source_config_path: Path,
+    job_date: str,
+    source_url: str | None = None,
+    max_supporting_pages: int = 3,
+) -> dict[str, object]:
+    source = SourceConfig.load(source_config_path)
+    return discover_source_assets(
+        source=source,
+        job_date=job_date,
+        source_url=source_url,
+        max_supporting_pages=max_supporting_pages,
+    )
+
+
+def probe_source_page_count_for_date(
+    *,
+    source_config_path: Path,
+    job_date: str,
+    max_probe_pages: int | None = None,
+) -> dict[str, object]:
+    project_dir = get_project_dir()
+    source = SourceConfig.load(source_config_path)
+    if str(source.discovery.get("type", "")).strip() != "prcdn_image_sequence":
+        raise ValueError(
+            "El conteo de paginas automatico solo esta soportado por ahora para fuentes `prcdn_image_sequence`."
+        )
+
+    probe = probe_prcdn_page_count(
+        source=source,
+        job_date=job_date,
+        max_probe_pages=max_probe_pages,
+    )
+    storage_dir = resolve_source_storage_dir(source=source, job_date=job_date, project_dir=project_dir)
+    storage_dir.mkdir(parents=True, exist_ok=True)
+    probe_path = storage_dir / "page-count-probe.json"
+    payload = {
+        **probe,
+        "saved_at": datetime.now().isoformat(timespec="seconds"),
+    }
+    write_json(probe_path, payload)
+
+    scrape_manifest_path = storage_dir / "scrape-manifest.json"
+    if scrape_manifest_path.exists():
+        scrape_manifest = read_json(scrape_manifest_path)
+        scrape_manifest["page_count_probe"] = {
+            "page_count": probe["page_count"],
+            "first_page": probe["first_page"],
+            "last_page": probe["last_page"],
+            "max_probe_pages": probe["max_probe_pages"],
+            "probe_path": probe_path.resolve().relative_to(project_dir).as_posix(),
+        }
+        write_json(scrape_manifest_path, scrape_manifest)
+
+    return {
+        **payload,
+        "probe_path": probe_path.resolve().relative_to(project_dir).as_posix(),
+    }
+
+
+def scrape_source_into_job(
+    *,
+    job_manifest_path: Path,
+    source_config_path: Path,
+    source_url: str | None = None,
+    max_supporting_pages: int = 3,
+    force: bool = False,
+) -> Path:
+    project_dir = get_project_dir()
+    job = read_json(job_manifest_path)
+    source = SourceConfig.load(source_config_path)
+    current_front_page = job.get("input_assets", {}).get("front_page_image")
+    current_pages = job.get("input_assets", {}).get("pages", [])
+    if (current_front_page or current_pages) and not force:
+        raise ValueError(
+            "El job ya tiene assets de entrada. Usa `--force` si quieres re-scrapear la fuente."
+        )
+
+    discovery = discover_source_assets(
+        source=source,
+        job_date=str(job.get("date")),
+        source_url=source_url,
+        max_supporting_pages=max_supporting_pages,
+    )
+    if discovery.get("status") == "no_publication_for_date":
+        timestamp = datetime.now().isoformat(timespec="seconds")
+        job["status"] = "skipped"
+        job["audit"]["updated_at"] = timestamp
+        job["audit"].setdefault("events", []).append(
+            {
+                "stage": "scrape_source",
+                "status": "skipped",
+                "timestamp": timestamp,
+                "details": "La fuente no tiene edicion publicada para la fecha solicitada.",
+            }
+        )
+        return write_json(job_manifest_path, job)
+
+    job_dir = job_manifest_path.parent
+    ensure_job_scaffold(job_dir)
+    front_page_asset = stage_front_page_asset(
+        job_dir=job_dir,
+        front_page_image=None,
+        front_page_url=str(discovery.get("front_page_url") or ""),
+        download_front_page=True,
+    )
+    if front_page_asset is None:
+        raise ValueError("No se pudo descubrir una portada descargable para la fuente.")
+
+    page_urls = [
+        str(page.get("source_url"))
+        for page in discovery.get("supporting_pages", [])
+        if page.get("source_url")
+    ]
+    input_assets = build_input_assets(
+        project_dir=project_dir,
+        source_config_path=source_config_path,
+        source_url=str(discovery.get("source_url") or source.base_url),
+        front_page_url=str(discovery.get("front_page_url") or discovery.get("source_url") or source.base_url),
+        front_page_asset=front_page_asset,
+        supporting_pages=[],
+    )
+    job["input_assets"] = input_assets
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["status"] = "scraped"
+    job["audit"]["updated_at"] = timestamp
+    job["audit"].setdefault("events", []).append(
+        {
+            "stage": "scrape_source",
+            "status": "completed",
+            "timestamp": timestamp,
+            "details": (
+                "Fuente analizada desde HTML; portada descubierta y "
+                f"{len(page_urls)} paginas de apoyo detectadas."
+            ),
+        }
+    )
+    write_json(job_manifest_path, job)
+
+    if page_urls:
+        return ingest_supporting_pages(
+            job_manifest_path=job_manifest_path,
+            page_urls=page_urls,
+            page_images=[],
+        )
+    return write_json(job_manifest_path, job)
+
+
+def archive_source_for_date(
+    *,
+    source_config_path: Path,
+    job_date: str,
+    source_url: str | None = None,
+    max_supporting_pages: int = 3,
+    retention_days: int = 7,
+) -> dict[str, object]:
+    manifest_path = archive_source_scrape(
+        source_config_path=source_config_path,
+        job_date=job_date,
+        source_url=source_url,
+        max_supporting_pages=max_supporting_pages,
+    )
+    deleted = prune_source_storage(
+        source_config_path=source_config_path,
+        retention_days=retention_days,
+    )
+    manifest = read_json(manifest_path)
+    result_status = "archived"
+    if manifest.get("status") == "no_publication_for_date":
+        result_status = "skipped_no_publication"
+    return {
+        "status": result_status,
+        "manifest_path": manifest_path.resolve().relative_to(get_project_dir()).as_posix(),
+        "reason": manifest.get("status"),
+        "deleted_folders": [path.name for path in deleted],
+    }
+
+
+def archive_all_sources_for_date(
+    *,
+    sources_dir: Path,
+    job_date: str,
+    max_supporting_pages: int = 3,
+    retention_days: int = 7,
+) -> list[dict[str, object]]:
+    return archive_all_sources(
+        sources_dir=sources_dir,
+        job_date=job_date,
+        max_supporting_pages=max_supporting_pages,
+        retention_days=retention_days,
     )
 
 

@@ -1,0 +1,35 @@
+{
+  "source_id": "ojo",
+  "display_name": "Ojo",
+  "date": "2026-04-18",
+  "issue_date": "2026-04-18",
+  "source_url": "https://t.prcdn.co/img",
+  "discovery_type": "prcdn_image_sequence",
+  "headline_candidates": [],
+  "pages": [
+    {
+      "role": "front_page",
+      "label": "Portada",
+      "page_number": 1,
+      "scale": 300,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=1&scale=300",
+      "local_path": "data/raw/ojo/2026-04-18/front-page.jpg"
+    },
+    {
+      "role": "supporting_page",
+      "label": "Pagina 2",
+      "page_number": 2,
+      "scale": 83,
+      "source_url": "https://t.prcdn.co/img?file=eags2026041800000000001001&page=2&scale=83",
+      "local_path": "data/raw/ojo/2026-04-18/page-02.jpg"
+    }
+  ],
+  "archived_at": "2026-04-19T00:22:26",
+  "page_count_probe": {
+    "page_count": 20,
+    "first_page": 1,
+    "last_page": 20,
+    "max_probe_pages": 24,
+    "probe_path": "data/raw/ojo/2026-04-18/page-count-probe.json"
+  }
+}

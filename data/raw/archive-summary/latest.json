@@ -1,0 +1,66 @@
+{
+  "date": "2026-04-18",
+  "generated_at": "2026-04-19T00:22:31",
+  "sources_dir": "automation/sources/diarios",
+  "counts": {
+    "archived": 4,
+    "skipped_no_publication": 1,
+    "skipped": 1
+  },
+  "grouped_sources": {
+    "archived": [
+      "correo",
+      "elcomercio",
+      "ojo",
+      "trome"
+    ],
+    "skipped_no_publication": [
+      "gestion"
+    ],
+    "skipped": [
+      "libero"
+    ]
+  },
+  "results": [
+    {
+      "source_id": "correo",
+      "status": "archived",
+      "manifest_path": "data/raw/correo/2026-04-18/scrape-manifest.json",
+      "reason": null,
+      "deleted_folders": []
+    },
+    {
+      "source_id": "elcomercio",
+      "status": "archived",
+      "manifest_path": "data/raw/elcomercio/2026-04-18/scrape-manifest.json",
+      "reason": null,
+      "deleted_folders": []
+    },
+    {
+      "source_id": "gestion",
+      "status": "skipped_no_publication",
+      "manifest_path": "data/raw/gestion/2026-04-18/scrape-manifest.json",
+      "reason": "no_publication_for_date",
+      "deleted_folders": []
+    },
+    {
+      "source_id": "libero",
+      "status": "skipped",
+      "reason": "source_config_placeholder"
+    },
+    {
+      "source_id": "ojo",
+      "status": "archived",
+      "manifest_path": "data/raw/ojo/2026-04-18/scrape-manifest.json",
+      "reason": null,
+      "deleted_folders": []
+    },
+    {
+      "source_id": "trome",
+      "status": "archived",
+      "manifest_path": "data/raw/trome/2026-04-18/scrape-manifest.json",
+      "reason": null,
+      "deleted_folders": []
+    }
+  ]
+}

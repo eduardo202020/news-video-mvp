@@ -1,0 +1,18 @@
+{
+  "source_id": "gestion",
+  "display_name": "Gestion",
+  "job_date": "2026-04-18",
+  "issue_date": null,
+  "page_count": 0,
+  "first_page": null,
+  "last_page": null,
+  "max_probe_pages": 30,
+  "scale_range": {
+    "start": 46,
+    "end": 300
+  },
+  "valid_pages": [],
+  "probe_type": "prcdn_image_sequence",
+  "status": "no_publication_for_date",
+  "saved_at": "2026-04-19T00:03:05"
+}

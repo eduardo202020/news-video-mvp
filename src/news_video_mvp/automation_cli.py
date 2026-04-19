@@ -1,25 +1,59 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from pathlib import Path
 import sys
 
 from .automation_pipeline import (
     approve_script_for_job,
+    archive_all_sources_for_date,
+    archive_source_for_date,
     build_story_manifest_from_job,
     compose_job_for_preview,
     create_job_manifest,
+    discover_source_for_date,
     extract_and_classify_job,
     generate_script_from_job,
     generate_voice_and_subtitles_for_job,
     import_script_for_job,
     list_available_voicebox_profiles,
+    probe_source_page_count_for_date,
     prepare_script_package_for_job,
     publish_job,
     scrape_pages_for_job,
+    scrape_source_into_job,
     transcribe_job_audio,
 )
 from .tts import TTSGenerationError
+
+
+def _print_archive_summary(results: list[dict[str, object]]) -> None:
+    counts = Counter(str(item.get("status") or "unknown") for item in results)
+    grouped_sources: dict[str, list[str]] = {}
+    for item in results:
+        status = str(item.get("status") or "unknown")
+        source_id = str(item.get("source_id") or "unknown")
+        grouped_sources.setdefault(status, []).append(source_id)
+    ordered_statuses = [
+        "archived",
+        "skipped_no_publication",
+        "skipped",
+        "unknown",
+    ]
+    summary_parts = [
+        f"{counts[status]} {status}"
+        for status in ordered_statuses
+        if counts.get(status, 0)
+    ]
+    if not summary_parts:
+        return
+    print("Resumen:", " / ".join(summary_parts))
+    for status in ordered_statuses:
+        source_ids = grouped_sources.get(status, [])
+        if not source_ids:
+            continue
+        print(f"{status}: {', '.join(source_ids)}")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -58,6 +92,52 @@ def build_parser() -> argparse.ArgumentParser:
     scrape_pages.add_argument("--job-manifest", type=Path, required=True)
     scrape_pages.add_argument("--page-url", action="append", default=[])
     scrape_pages.add_argument("--page-image", type=Path, action="append", default=[])
+
+    discover_source = subparsers.add_parser(
+        "discover-source",
+        help="Inspecciona una fuente HTML y devuelve portada, paginas detectadas y titulares base.",
+    )
+    discover_source.add_argument("--source-config", type=Path, required=True)
+    discover_source.add_argument("--date", required=True, dest="job_date")
+    discover_source.add_argument("--source-url")
+    discover_source.add_argument("--max-supporting-pages", type=int, default=3)
+
+    probe_page_count = subparsers.add_parser(
+        "probe-page-count",
+        help="Calcula el total real de paginas disponibles para una fuente y fecha, y lo guarda por fecha.",
+    )
+    probe_page_count.add_argument("--source-config", type=Path, required=True)
+    probe_page_count.add_argument("--date", required=True, dest="job_date")
+    probe_page_count.add_argument("--max-probe-pages", type=int)
+
+    scrape_source_job = subparsers.add_parser(
+        "scrape-source-job",
+        help="Descubre y descarga portada/paginas desde la fuente configurada directamente al job.",
+    )
+    scrape_source_job.add_argument("--job-manifest", type=Path, required=True)
+    scrape_source_job.add_argument("--source-config", type=Path, required=True)
+    scrape_source_job.add_argument("--source-url")
+    scrape_source_job.add_argument("--max-supporting-pages", type=int, default=3)
+    scrape_source_job.add_argument("--force", action="store_true")
+
+    archive_source = subparsers.add_parser(
+        "archive-source",
+        help="Scrapea una fuente y guarda sus imagenes por fecha en data/raw/ con retention.",
+    )
+    archive_source.add_argument("--source-config", type=Path, required=True)
+    archive_source.add_argument("--date", required=True, dest="job_date")
+    archive_source.add_argument("--source-url")
+    archive_source.add_argument("--max-supporting-pages", type=int, default=3)
+    archive_source.add_argument("--retention-days", type=int, default=7)
+
+    archive_all = subparsers.add_parser(
+        "archive-all-sources",
+        help="Scrapea todos los periodicos configurados y limpia carpetas antiguas.",
+    )
+    archive_all.add_argument("--sources-dir", type=Path, default=Path("automation/sources/diarios"))
+    archive_all.add_argument("--date", required=True, dest="job_date")
+    archive_all.add_argument("--max-supporting-pages", type=int, default=3)
+    archive_all.add_argument("--retention-days", type=int, default=7)
 
     extract_job = subparsers.add_parser(
         "extract-job",
@@ -192,6 +272,59 @@ def main() -> None:
                 page_images=args.page_image,
             )
             print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "discover-source":
+            payload = discover_source_for_date(
+                source_config_path=args.source_config,
+                job_date=args.job_date,
+                source_url=args.source_url,
+                max_supporting_pages=args.max_supporting_pages,
+            )
+            print(payload)
+            return
+
+        if args.command == "probe-page-count":
+            payload = probe_source_page_count_for_date(
+                source_config_path=args.source_config,
+                job_date=args.job_date,
+                max_probe_pages=args.max_probe_pages,
+            )
+            print(payload)
+            return
+
+        if args.command == "scrape-source-job":
+            manifest_path = scrape_source_into_job(
+                job_manifest_path=args.job_manifest,
+                source_config_path=args.source_config,
+                source_url=args.source_url,
+                max_supporting_pages=args.max_supporting_pages,
+                force=args.force,
+            )
+            print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "archive-source":
+            result = archive_source_for_date(
+                source_config_path=args.source_config,
+                job_date=args.job_date,
+                source_url=args.source_url,
+                max_supporting_pages=args.max_supporting_pages,
+                retention_days=args.retention_days,
+            )
+            print(result)
+            return
+
+        if args.command == "archive-all-sources":
+            results = archive_all_sources_for_date(
+                sources_dir=args.sources_dir,
+                job_date=args.job_date,
+                max_supporting_pages=args.max_supporting_pages,
+                retention_days=args.retention_days,
+            )
+            for item in results:
+                print(item)
+            _print_archive_summary(results)
             return
 
         if args.command == "build-story-manifest":

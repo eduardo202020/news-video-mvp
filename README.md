@@ -226,6 +226,64 @@ news-video-mvp-automation scrape-pages `
   --page-image .\input\pagina-3.jpg
 ```
 
+Descubrir portada y paginas desde una fuente HTML:
+
+```powershell
+news-video-mvp-automation discover-source `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --date 2026-04-18 `
+  --source-url "https://tu-fuente-real.example/portada"
+```
+
+Descubrir portadas/paginas desde el patron `t.prcdn.co`:
+
+```powershell
+news-video-mvp-automation discover-source `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --date 2026-04-18
+```
+
+En fuentes `prcdn`, el scraper ahora intenta el mayor `scale` disponible por pagina dentro del rango configurado.
+Hoy la configuracion base usa `scale_start=46` y `scale_end=300` para priorizar la mejor resolucion posible para OCR/analisis.
+
+Scrapear la fuente directamente a un job:
+
+```powershell
+news-video-mvp-automation scrape-source-job `
+  --job-manifest .\data\jobs\2026-04-18\2026-04-18-ojo-frontpage-001\job-manifest.json `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --source-url "https://tu-fuente-real.example/portada" `
+  --force
+```
+
+Archivar una fuente por fecha en `data/raw`:
+
+```powershell
+news-video-mvp-automation archive-source `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --date 2026-04-18 `
+  --max-supporting-pages 3 `
+  --retention-days 7
+```
+
+Archivar todos los periodicos configurados:
+
+```powershell
+news-video-mvp-automation archive-all-sources `
+  --sources-dir .\automation\sources\diarios `
+  --date 2026-04-18 `
+  --max-supporting-pages 3 `
+  --retention-days 7
+```
+
+Esto genera carpetas como:
+
+- `data/raw/ojo/2026-04-18/`
+- `data/raw/trome/2026-04-18/`
+- `data/raw/elcomercio/2026-04-18/`
+
+y conserva solo hasta una semana de antiguedad por fuente.
+
 Extraer OCR y clasificar:
 
 ```powershell

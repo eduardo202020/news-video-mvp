@@ -1,11 +1,11 @@
 {
-  "source_id": "ojo",
-  "display_name": "Ojo",
+  "source_id": "gestion",
+  "display_name": "Gestion",
   "base_url": "https://t.prcdn.co/img",
   "discovery": {
     "type": "prcdn_image_sequence",
     "base_image_url": "https://t.prcdn.co/img",
-    "file_code": "eags",
+    "file_code": "eag6",
     "suffix": "00000000001001",
     "page_start": 1,
     "page_end": 60,
@@ -19,13 +19,15 @@
     "article_blocks": null
   },
   "storage": {
-    "folder_pattern": "data/raw/ojo/{date}/"
+    "folder_pattern": "data/raw/gestion/{date}/"
   },
   "ocr_hints": {
     "language": "spa"
   },
   "schedule": {
     "timezone": "America/Lima",
-    "run_after": "05:30"
+    "run_after": "05:30",
+    "publication_days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+    "fallback_to_previous_publication_day": false
   }
 }

@@ -141,6 +141,10 @@ Responsabilidades:
 Estas etapas ya existen en `src/news_video_mvp/automation_pipeline.py` y se exponen por CLI y Streamlit:
 
 - `init-job`
+- `discover-source`
+- `scrape-source-job`
+- `archive-source`
+- `archive-all-sources`
 - `extract-job`
 - `prepare-script-package`
 - `generate-script`
@@ -157,6 +161,9 @@ Estas etapas ya existen en `src/news_video_mvp/automation_pipeline.py` y se expo
 Hoy la automatizacion ya permite:
 
 - crear jobs declarativos
+- descubrir portada/paginas desde una fuente HTML configurada
+- archivar periodicos por fecha en `data/raw/<source>/<date>/`
+- limpiar automaticamente carpetas con mas de 7 dias por fuente
 - cargar OCR externo o sidecar
 - clasificar portada como noticia o publicidad
 - preparar un paquete para ChatGPT con imagenes y contexto del job

@@ -1,0 +1,28 @@
+{
+  "source_id": "elcomercio",
+  "display_name": "El Comercio",
+  "date": "2026-04-18",
+  "issue_date": "2026-04-18",
+  "source_url": "https://t.prcdn.co/img",
+  "discovery_type": "prcdn_image_sequence",
+  "headline_candidates": [],
+  "pages": [
+    {
+      "role": "front_page",
+      "label": "Portada",
+      "page_number": 1,
+      "scale": 207,
+      "source_url": "https://t.prcdn.co/img?file=eaaj2026041800000000001001&page=1&scale=207",
+      "local_path": "data/raw/elcomercio/2026-04-18/front-page.jpg"
+    },
+    {
+      "role": "supporting_page",
+      "label": "Pagina 2",
+      "page_number": 2,
+      "scale": 55,
+      "source_url": "https://t.prcdn.co/img?file=eaaj2026041800000000001001&page=2&scale=55",
+      "local_path": "data/raw/elcomercio/2026-04-18/page-02.jpg"
+    }
+  ],
+  "archived_at": "2026-04-19T00:22:21"
+}
