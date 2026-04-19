@@ -53,6 +53,8 @@ class VoiceProfile:
     tts_provider: str
     tts_voice: str
     gestures_dir: str
+    language: str
+    provider_settings: dict[str, Any]
 
     @classmethod
     def load(cls, path: Path) -> "VoiceProfile":
@@ -64,6 +66,8 @@ class VoiceProfile:
             tts_provider=data["tts_provider"],
             tts_voice=data["tts_voice"],
             gestures_dir=data["gestures_dir"],
+            language=data.get("language", "es"),
+            provider_settings=data.get("provider_settings", {}),
         )
 
 

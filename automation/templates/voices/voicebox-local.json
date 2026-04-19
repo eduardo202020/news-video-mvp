@@ -1,0 +1,13 @@
+{
+  "profile_id": "voicebox-local",
+  "display_name": "Voicebox Local",
+  "tts_provider": "voicebox_local",
+  "tts_voice": "1e633b5c-3963-4582-a2af-47e9dd71aa35",
+  "narrator_name": "Voicebox Narrator",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+  "language": "es",
+  "provider_settings": {
+    "api_url": "http://localhost:17493",
+    "model_size": "1.7B"
+  }
+}

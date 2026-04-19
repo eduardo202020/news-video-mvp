@@ -3,16 +3,15 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 import re
-import shutil
 import wave
-from urllib.parse import urlparse
-from urllib.request import urlretrieve
 
 from .automation_models import SourceConfig, VideoTemplate, VoiceProfile, read_json, write_json
 from .composer import VideoSegment, VideoSpec, compose_video_props
 from .project import get_project_dir
+from .scraping import build_input_assets, ingest_supporting_pages, stage_front_page_asset
+from .script_generation import import_generated_script, prepare_chatgpt_script_package
 from .subtitles import build_subtitle_segments
-from .tts import prepare_audio
+from .voice_generation import generate_voice_track, list_voicebox_profiles
 
 
 def get_automation_dir(project_dir: Path | None = None) -> Path:
@@ -39,33 +38,6 @@ def ensure_job_scaffold(job_dir: Path) -> None:
         (job_dir / name).mkdir(parents=True, exist_ok=True)
 
 
-def infer_extension_from_url(url: str, default: str = ".jpg") -> str:
-    suffix = Path(urlparse(url).path).suffix.lower()
-    return suffix or default
-
-
-def stage_front_page_asset(
-    *,
-    job_dir: Path,
-    front_page_image: Path | None,
-    front_page_url: str | None,
-    download_front_page: bool,
-) -> Path | None:
-    if front_page_image is not None:
-        if not front_page_image.exists():
-            raise FileNotFoundError(f"No existe la portada local: {front_page_image}")
-        destination = job_dir / "input" / f"front-page{front_page_image.suffix.lower()}"
-        shutil.copy2(front_page_image, destination)
-        return destination
-
-    if download_front_page and front_page_url:
-        destination = job_dir / "input" / f"front-page{infer_extension_from_url(front_page_url)}"
-        urlretrieve(front_page_url, destination)
-        return destination
-
-    return None
-
-
 def create_job_manifest(
     *,
     source_config_path: Path,
@@ -79,6 +51,8 @@ def create_job_manifest(
     front_page_image: Path | None = None,
     front_page_url: str | None = None,
     download_front_page: bool = False,
+    supporting_page_urls: list[str] | None = None,
+    supporting_page_images: list[Path] | None = None,
     job_id: str | None = None,
 ) -> Path:
     project_dir = get_project_dir()
@@ -96,6 +70,7 @@ def create_job_manifest(
         front_page_url=resolved_front_page_url,
         download_front_page=download_front_page,
     )
+    supporting_pages: list[dict[str, str | int | None]] = []
 
     timestamp = datetime.now().isoformat(timespec="seconds")
     manifest = {
@@ -104,13 +79,14 @@ def create_job_manifest(
         "date": job_date,
         "approval_mode": approval_mode,
         "status": "scraped" if staged_front_page else "discovered",
-        "input_assets": {
-            "front_page_image": staged_front_page.relative_to(project_dir).as_posix()
-            if staged_front_page
-            else None,
-            "source_url": resolved_front_page_url,
-            "source_config": source_config_path.resolve().relative_to(project_dir).as_posix(),
-        },
+        "input_assets": build_input_assets(
+            project_dir=project_dir,
+            source_config_path=source_config_path,
+            source_url=resolved_front_page_url,
+            front_page_url=resolved_front_page_url,
+            front_page_asset=staged_front_page,
+            supporting_pages=supporting_pages,
+        ),
         "extraction": {
             "ocr_blocks": [],
             "headline_candidates": [],
@@ -124,6 +100,8 @@ def create_job_manifest(
         },
         "script": {
             "template_id": script_template_id,
+            "provider": "manual_or_external_ai",
+            "model": None,
             "draft": "",
             "approved_text": "",
             "review_notes": "",
@@ -132,6 +110,7 @@ def create_job_manifest(
             "profile_id": voice.profile_id,
             "provider": voice.tts_provider,
             "tts_voice": voice.tts_voice,
+            "external_provider": None,
             "audio_path": None,
             "timestamps_path": None,
         },
@@ -163,7 +142,68 @@ def create_job_manifest(
             ],
         },
     }
-    return write_json(job_dir / "job-manifest.json", manifest)
+    manifest_path = write_json(job_dir / "job-manifest.json", manifest)
+    if supporting_page_urls or supporting_page_images:
+        return ingest_supporting_pages(
+            job_manifest_path=manifest_path,
+            page_urls=supporting_page_urls,
+            page_images=supporting_page_images,
+        )
+    return manifest_path
+
+
+def scrape_pages_for_job(
+    *,
+    job_manifest_path: Path,
+    page_urls: list[str] | None = None,
+    page_images: list[Path] | None = None,
+) -> Path:
+    return ingest_supporting_pages(
+        job_manifest_path=job_manifest_path,
+        page_urls=page_urls,
+        page_images=page_images,
+    )
+
+
+def prepare_script_package_for_job(
+    *,
+    job_manifest_path: Path,
+    script_template_path: Path,
+    output_dir: Path | None = None,
+    force: bool = False,
+) -> Path:
+    return prepare_chatgpt_script_package(
+        job_manifest_path=job_manifest_path,
+        script_template_path=script_template_path,
+        output_dir=output_dir,
+        force=force,
+    )
+
+
+def import_script_for_job(
+    *,
+    job_manifest_path: Path,
+    generated_text: str | None = None,
+    generated_text_file: Path | None = None,
+    provider: str = "chatgpt_plus_manual",
+    model: str | None = None,
+    approve: bool = False,
+) -> Path:
+    return import_generated_script(
+        job_manifest_path=job_manifest_path,
+        generated_text=generated_text,
+        generated_text_file=generated_text_file,
+        provider=provider,
+        model=model,
+        approve=approve,
+    )
+
+
+def list_available_voicebox_profiles(*, voice_profile_path: Path | None = None) -> list[dict[str, object]]:
+    provider_settings: dict[str, object] | None = None
+    if voice_profile_path is not None:
+        provider_settings = VoiceProfile.load(voice_profile_path).provider_settings
+    return list_voicebox_profiles(provider_settings)
 
 
 def _resolve_repo_path(path_value: str | None) -> Path | None:
@@ -498,12 +538,14 @@ def generate_voice_and_subtitles_for_job(
     audio_path = output_dir / "narration.wav"
     subtitle_segments_path = output_dir / "subtitle-segments.json"
 
-    prepare_audio(
+    generate_voice_track(
         text=approved_text,
         provider=voice.tts_provider,
         output_path=audio_path,
         audio_file=audio_file,
         voice=voice.tts_voice,
+        language=voice.language,
+        provider_settings=voice.provider_settings,
     )
     total_duration = _get_wav_duration_seconds(audio_path)
     segments = build_subtitle_segments(
@@ -531,6 +573,8 @@ def generate_voice_and_subtitles_for_job(
         "profile_id": voice.profile_id,
         "provider": voice.tts_provider,
         "tts_voice": voice.tts_voice,
+        "language": voice.language,
+        "provider_settings": voice.provider_settings,
         "audio_path": audio_path.resolve().relative_to(project_dir).as_posix(),
         "timestamps_path": None,
     }

@@ -142,7 +142,9 @@ Estas etapas ya existen en `src/news_video_mvp/automation_pipeline.py` y se expo
 
 - `init-job`
 - `extract-job`
+- `prepare-script-package`
 - `generate-script`
+- `import-script`
 - `approve-script`
 - `voice-job`
 - `build-story-manifest`
@@ -156,7 +158,10 @@ Hoy la automatizacion ya permite:
 - crear jobs declarativos
 - cargar OCR externo o sidecar
 - clasificar portada como noticia o publicidad
+- preparar un paquete para ChatGPT con imagenes y contexto del job
 - generar draft del narrador
+- importar un speech escrito externamente
+- sintetizar voz local con Voicebox via REST API local
 - aprobar texto final
 - generar audio y subtitulos
 - construir `story-manifest`
@@ -182,4 +187,5 @@ Las siguientes mejoras encajan bien sobre esta base:
 
 - [README.md](../README.md)
 - [architecture/pipeline.md](./architecture/pipeline.md)
+- [architecture/modularization.md](./architecture/modularization.md)
 - [streamlit/README.md](./streamlit/README.md)

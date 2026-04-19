@@ -7,6 +7,15 @@ Hoy el repo ya soporta dos formas de trabajo:
 - flujo clasico para generar videos con Python + Remotion
 - flujo declarativo para automatizar etapas con `job-manifest`, `story-manifest` y una app de Streamlit
 
+Ademas, la base ya empezo a separarse en modulos de dominio para evolucionar hacia:
+
+- `scraping/`
+- `script_generation/`
+- `voice_generation/`
+- `subtitles/`
+- `video_composition/`
+- `orchestration/`
+
 ## Arquitectura
 
 ### Backend de orquestacion
@@ -194,6 +203,29 @@ news-video-mvp-automation init-job `
   --front-page-image .\remotion-app\public\assets\covers\ojo.png
 ```
 
+Inicializar un job incluyendo paginas adicionales:
+
+```powershell
+news-video-mvp-automation init-job `
+  --source-config .\automation\sources\diarios\ojo.json `
+  --date 2026-04-13 `
+  --voice-profile .\automation\templates\voices\cuy-02.json `
+  --video-template .\automation\templates\video\vertical-news.json `
+  --front-page-url "https://sitio/portada.jpg" `
+  --download-front-page `
+  --supporting-page-url "https://sitio/pagina-2.jpg" `
+  --supporting-page-url "https://sitio/pagina-3.jpg"
+```
+
+Adjuntar paginas a un job existente:
+
+```powershell
+news-video-mvp-automation scrape-pages `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --page-url "https://sitio/pagina-2.jpg" `
+  --page-image .\input\pagina-3.jpg
+```
+
 Extraer OCR y clasificar:
 
 ```powershell
@@ -209,6 +241,30 @@ Generar draft:
 news-video-mvp-automation generate-script `
   --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
   --script-template .\automation\templates\scripts\default-anchor.json
+```
+
+Preparar paquete para generar el speech manualmente en ChatGPT:
+
+```powershell
+news-video-mvp-automation prepare-script-package `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --script-template .\automation\templates\scripts\default-anchor.json
+```
+
+Eso genera en `review/script-package/`:
+
+- `script-request.json`
+- `chatgpt-prompt.md`
+- `images-to-upload.txt`
+
+Importar el speech generado por ChatGPT:
+
+```powershell
+news-video-mvp-automation import-script `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --generated-text-file .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\review\mi-speech.txt `
+  --provider chatgpt_plus_manual `
+  --approve
 ```
 
 Aprobar guion:
@@ -227,6 +283,28 @@ news-video-mvp-automation voice-job `
   --voice-profile .\automation\templates\voices\cuy-02.json `
   --subtitle-policy .\automation\rules\subtitle-policy.json
 ```
+
+Listar perfiles locales de Voicebox:
+
+```powershell
+news-video-mvp-automation list-voicebox-profiles
+```
+
+Usar Voicebox local para la voz:
+
+```powershell
+news-video-mvp-automation voice-job `
+  --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
+  --voice-profile .\automation\templates\voices\voicebox-local.json `
+  --subtitle-policy .\automation\rules\subtitle-policy.json
+```
+
+Notas para Voicebox:
+
+- instala y abre Voicebox local antes de ejecutar `voice-job`
+- por defecto se usa `http://localhost:17493`
+- cambia `tts_voice` en [voicebox-local.json](C:/Users/pc/Documents/proyectos/news-video-mvp/automation/templates/voices/voicebox-local.json:1) por el `profile_id` real de tu voz clonada
+- si tu instancia usa otra URL, ajusta `provider_settings.api_url` o la variable `VOICEBOX_API_URL`
 
 Construir story manifest:
 

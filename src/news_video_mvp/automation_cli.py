@@ -12,7 +12,11 @@ from .automation_pipeline import (
     extract_and_classify_job,
     generate_script_from_job,
     generate_voice_and_subtitles_for_job,
+    import_script_for_job,
+    list_available_voicebox_profiles,
+    prepare_script_package_for_job,
     publish_job,
+    scrape_pages_for_job,
 )
 from .tts import TTSGenerationError
 
@@ -42,7 +46,17 @@ def build_parser() -> argparse.ArgumentParser:
     init_job.add_argument("--front-page-image", type=Path)
     init_job.add_argument("--front-page-url")
     init_job.add_argument("--download-front-page", action="store_true")
+    init_job.add_argument("--supporting-page-url", action="append", default=[])
+    init_job.add_argument("--supporting-page-image", type=Path, action="append", default=[])
     init_job.add_argument("--job-id")
+
+    scrape_pages = subparsers.add_parser(
+        "scrape-pages",
+        help="Adjunta paginas o recortes adicionales al job desde URLs o archivos locales.",
+    )
+    scrape_pages.add_argument("--job-manifest", type=Path, required=True)
+    scrape_pages.add_argument("--page-url", action="append", default=[])
+    scrape_pages.add_argument("--page-image", type=Path, action="append", default=[])
 
     extract_job = subparsers.add_parser(
         "extract-job",
@@ -54,6 +68,15 @@ def build_parser() -> argparse.ArgumentParser:
     extract_job.add_argument("--ocr-text")
     extract_job.add_argument("--ocr-confidence", type=float)
 
+    prepare_script = subparsers.add_parser(
+        "prepare-script-package",
+        help="Prepara un paquete con prompt y contexto para generar el speech manualmente en ChatGPT.",
+    )
+    prepare_script.add_argument("--job-manifest", type=Path, required=True)
+    prepare_script.add_argument("--script-template", type=Path, required=True)
+    prepare_script.add_argument("--output-dir", type=Path)
+    prepare_script.add_argument("--force", action="store_true")
+
     generate_script = subparsers.add_parser(
         "generate-script",
         help="Genera un borrador de speech del narrador desde los titulares extraidos.",
@@ -61,6 +84,17 @@ def build_parser() -> argparse.ArgumentParser:
     generate_script.add_argument("--job-manifest", type=Path, required=True)
     generate_script.add_argument("--script-template", type=Path, required=True)
     generate_script.add_argument("--force", action="store_true")
+
+    import_script = subparsers.add_parser(
+        "import-script",
+        help="Importa al job el speech generado externamente y opcionalmente lo aprueba.",
+    )
+    import_script.add_argument("--job-manifest", type=Path, required=True)
+    import_script.add_argument("--generated-text")
+    import_script.add_argument("--generated-text-file", type=Path)
+    import_script.add_argument("--provider", default="chatgpt_plus_manual")
+    import_script.add_argument("--model")
+    import_script.add_argument("--approve", action="store_true")
 
     approve_script = subparsers.add_parser(
         "approve-script",
@@ -79,6 +113,12 @@ def build_parser() -> argparse.ArgumentParser:
     voice_job.add_argument("--subtitle-policy", type=Path, required=True)
     voice_job.add_argument("--audio-file", type=Path)
     voice_job.add_argument("--force", action="store_true")
+
+    list_voicebox = subparsers.add_parser(
+        "list-voicebox-profiles",
+        help="Lista los perfiles disponibles en la instancia local de Voicebox.",
+    )
+    list_voicebox.add_argument("--voice-profile", type=Path)
 
     compose_job = subparsers.add_parser(
         "compose-job",
@@ -128,9 +168,20 @@ def main() -> None:
                 front_page_image=args.front_page_image,
                 front_page_url=args.front_page_url,
                 download_front_page=args.download_front_page,
+                supporting_page_urls=args.supporting_page_url,
+                supporting_page_images=args.supporting_page_image,
                 job_id=args.job_id,
             )
             print(f"Job manifest creado en: {manifest_path}")
+            return
+
+        if args.command == "scrape-pages":
+            manifest_path = scrape_pages_for_job(
+                job_manifest_path=args.job_manifest,
+                page_urls=args.page_url,
+                page_images=args.page_image,
+            )
+            print(f"Job manifest actualizado en: {manifest_path}")
             return
 
         if args.command == "build-story-manifest":
@@ -154,11 +205,33 @@ def main() -> None:
             print(f"Job manifest actualizado en: {manifest_path}")
             return
 
+        if args.command == "prepare-script-package":
+            package_dir = prepare_script_package_for_job(
+                job_manifest_path=args.job_manifest,
+                script_template_path=args.script_template,
+                output_dir=args.output_dir,
+                force=args.force,
+            )
+            print(f"Paquete de speech preparado en: {package_dir}")
+            return
+
         if args.command == "generate-script":
             manifest_path = generate_script_from_job(
                 job_manifest_path=args.job_manifest,
                 script_template_path=args.script_template,
                 force=args.force,
+            )
+            print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "import-script":
+            manifest_path = import_script_for_job(
+                job_manifest_path=args.job_manifest,
+                generated_text=args.generated_text,
+                generated_text_file=args.generated_text_file,
+                provider=args.provider,
+                model=args.model,
+                approve=args.approve,
             )
             print(f"Job manifest actualizado en: {manifest_path}")
             return
@@ -181,6 +254,18 @@ def main() -> None:
                 force=args.force,
             )
             print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "list-voicebox-profiles":
+            profiles = list_available_voicebox_profiles(voice_profile_path=args.voice_profile)
+            if not profiles:
+                print("No se encontraron perfiles en Voicebox.")
+                return
+            for profile in profiles:
+                profile_id = profile.get("id") or profile.get("profile_id") or "sin-id"
+                name = profile.get("name") or profile.get("display_name") or "sin-nombre"
+                language = profile.get("language") or "n/a"
+                print(f"{profile_id}\t{name}\t{language}")
             return
 
         if args.command == "compose-job":
