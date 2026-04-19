@@ -71,6 +71,23 @@ def stage_front_page_asset(
     )
 
 
+def stage_supporting_page_asset(
+    *,
+    job_dir: Path,
+    page_number: int,
+    page_image: Path | None,
+    page_url: str | None,
+    download_page: bool,
+) -> Path | None:
+    return _stage_local_or_remote_asset(
+        destination_dir=job_dir / "input" / "pages",
+        destination_name=f"page-{page_number:02d}",
+        source_image=page_image,
+        source_url=page_url,
+        download=download_page,
+    )
+
+
 def _build_page_asset_record(
     *,
     asset_path: Path,

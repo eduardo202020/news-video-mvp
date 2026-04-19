@@ -6,6 +6,7 @@ from pathlib import Path
 import sys
 
 from .automation_pipeline import (
+    analyze_cover_page_references_for_job,
     approve_script_for_job,
     archive_all_sources_for_date,
     archive_source_for_date,
@@ -16,15 +17,18 @@ from .automation_pipeline import (
     extract_and_classify_job,
     generate_script_from_job,
     generate_voice_and_subtitles_for_job,
+    import_cover_page_selection_for_job,
     import_script_for_job,
     list_available_voicebox_profiles,
     probe_source_page_count_for_date,
     prepare_script_package_for_job,
     publish_job,
+    scrape_selected_pages_for_job,
     scrape_pages_for_job,
     scrape_source_into_job,
     transcribe_job_audio,
 )
+from .ocr import PaddleOCRError
 from .tts import TTSGenerationError
 
 
@@ -145,9 +149,38 @@ def build_parser() -> argparse.ArgumentParser:
     )
     extract_job.add_argument("--job-manifest", type=Path, required=True)
     extract_job.add_argument("--editorial-policy", type=Path, required=True)
+    extract_job.add_argument("--ocr-engine", choices=["manual", "paddleocr"], default="manual")
+    extract_job.add_argument("--ocr-scope", choices=["front_page", "all_pages"], default="front_page")
+    extract_job.add_argument("--ocr-dir", type=Path)
     extract_job.add_argument("--ocr-text-file", type=Path)
     extract_job.add_argument("--ocr-text")
     extract_job.add_argument("--ocr-confidence", type=float)
+
+    analyze_cover = subparsers.add_parser(
+        "analyze-cover-pages",
+        help="Analiza el OCR de portada y sugiere paginas candidatas antes de descargarlas.",
+    )
+    analyze_cover.add_argument("--job-manifest", type=Path, required=True)
+    analyze_cover.add_argument("--max-candidates", type=int, default=6)
+    analyze_cover.add_argument("--force", action="store_true")
+
+    import_cover = subparsers.add_parser(
+        "import-cover-pages",
+        help="Importa manualmente paginas referenciadas en portada, por ejemplo desde ChatGPT.",
+    )
+    import_cover.add_argument("--job-manifest", type=Path, required=True)
+    import_cover.add_argument("--selection-text")
+    import_cover.add_argument("--selection-file", type=Path)
+    import_cover.add_argument("--provider", default="chatgpt_plus_manual")
+    import_cover.add_argument("--force", action="store_true")
+
+    scrape_selected = subparsers.add_parser(
+        "scrape-selected-pages",
+        help="Descarga solo las paginas seleccionadas desde el analisis de portada.",
+    )
+    scrape_selected.add_argument("--job-manifest", type=Path, required=True)
+    scrape_selected.add_argument("--source-config", type=Path, required=True)
+    scrape_selected.add_argument("--force", action="store_true")
 
     prepare_script = subparsers.add_parser(
         "prepare-script-package",
@@ -341,9 +374,41 @@ def main() -> None:
             manifest_path = extract_and_classify_job(
                 job_manifest_path=args.job_manifest,
                 editorial_policy_path=args.editorial_policy,
+                ocr_engine=args.ocr_engine,
+                ocr_scope=args.ocr_scope,
+                ocr_dir=args.ocr_dir,
                 ocr_text=args.ocr_text,
                 ocr_text_file=args.ocr_text_file,
                 ocr_confidence=args.ocr_confidence,
+            )
+            print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "analyze-cover-pages":
+            manifest_path = analyze_cover_page_references_for_job(
+                job_manifest_path=args.job_manifest,
+                max_candidates=args.max_candidates,
+                force=args.force,
+            )
+            print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "import-cover-pages":
+            manifest_path = import_cover_page_selection_for_job(
+                job_manifest_path=args.job_manifest,
+                selection_text=args.selection_text,
+                selection_file=args.selection_file,
+                provider=args.provider,
+                force=args.force,
+            )
+            print(f"Job manifest actualizado en: {manifest_path}")
+            return
+
+        if args.command == "scrape-selected-pages":
+            manifest_path = scrape_selected_pages_for_job(
+                job_manifest_path=args.job_manifest,
+                source_config_path=args.source_config,
+                force=args.force,
             )
             print(f"Job manifest actualizado en: {manifest_path}")
             return
@@ -442,7 +507,7 @@ def main() -> None:
             return
 
         parser.error(f"Comando no soportado: {args.command}")
-    except (FileNotFoundError, ValueError, TTSGenerationError) as exc:
+    except (FileNotFoundError, ValueError, TTSGenerationError, PaddleOCRError) as exc:
         print(f"Error: {exc}", file=sys.stderr)
         raise SystemExit(1) from exc
 

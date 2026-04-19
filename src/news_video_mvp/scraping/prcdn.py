@@ -186,6 +186,51 @@ def discover_prcdn_assets(
     }
 
 
+def resolve_prcdn_pages(
+    *,
+    source: SourceConfig,
+    job_date: str,
+    page_numbers: list[int],
+) -> dict[str, object]:
+    settings = _load_prcdn_settings(source)
+    issue_date = resolve_publication_date(source=source, job_date=job_date)
+    if issue_date is None:
+        return {
+            "source_url": settings.base_image_url,
+            "issue_date": None,
+            "pages": [],
+            "discovery_type": "prcdn_image_sequence",
+            "status": "no_publication_for_date",
+        }
+
+    resolved_pages: list[dict[str, object]] = []
+    for page_number in sorted(dict.fromkeys(page_numbers)):
+        best_scale, best_url = _find_best_scale_for_page(
+            settings=settings,
+            job_date=issue_date,
+            page=page_number,
+        )
+        if best_scale is None or best_url is None:
+            continue
+        resolved_pages.append(
+            {
+                "role": "front_page" if page_number == settings.page_start else "supporting_page",
+                "label": "Portada" if page_number == settings.page_start else f"Pagina {page_number}",
+                "page_number": page_number,
+                "source_url": best_url,
+                "scale": best_scale,
+            }
+        )
+
+    return {
+        "source_url": settings.base_image_url,
+        "issue_date": issue_date,
+        "pages": resolved_pages,
+        "discovery_type": "prcdn_image_sequence",
+        "status": "ok",
+    }
+
+
 def probe_prcdn_page_count(
     *,
     source: SourceConfig,

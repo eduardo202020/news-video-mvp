@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 from datetime import datetime
+import json
 from pathlib import Path
 import re
 import wave
 
 from .automation_models import SourceConfig, VideoTemplate, VoiceProfile, read_json, write_json
 from .composer import VideoSegment, VideoSpec, compose_video_props
+from .ocr import PaddleOCRError, extract_text_with_paddleocr
 from .project import get_project_dir
 from .scraping import (
     archive_all_sources,
@@ -17,8 +19,11 @@ from .scraping import (
     ingest_supporting_pages,
     probe_prcdn_page_count,
     prune_source_storage,
+    resolve_publication_date,
+    resolve_prcdn_pages,
     resolve_source_storage_dir,
     stage_front_page_asset,
+    stage_supporting_page_asset,
 )
 from .script_generation import import_generated_script, prepare_chatgpt_script_package
 from .subtitles import build_subtitle_segments
@@ -40,6 +45,66 @@ def build_job_id(*, job_date: str, source_id: str, suffix: str = "frontpage-001"
 def ensure_job_scaffold(job_dir: Path) -> None:
     for name in ("input", "work", "output", "review"):
         (job_dir / name).mkdir(parents=True, exist_ok=True)
+
+
+def _build_source_state(
+    *,
+    source: SourceConfig,
+    requested_date: str,
+    issue_date: str | None,
+    publication_status: str,
+    discovery_type: str | None = None,
+    front_page_url: str | None = None,
+    discovered_pages_count: int = 0,
+    summary_path: str | None = None,
+    probe_path: str | None = None,
+) -> dict[str, object]:
+    return {
+        "source_id": source.source_id,
+        "source_config_path": source.path.resolve().relative_to(get_project_dir()).as_posix(),
+        "requested_date": requested_date,
+        "issue_date": issue_date,
+        "publication_status": publication_status,
+        "discovery_type": discovery_type,
+        "front_page_url": front_page_url,
+        "discovered_pages_count": discovered_pages_count,
+        "archive_summary_path": summary_path,
+        "page_count_probe_path": probe_path,
+    }
+
+
+def _default_page_selection() -> dict[str, object]:
+    return {
+        "strategy": "cover_first",
+        "provider": None,
+        "status": "not_started",
+        "selected_page_numbers": [],
+        "candidates": [],
+        "notes": "",
+    }
+
+
+def _resolve_source_artifact_paths(
+    *,
+    source: SourceConfig,
+    requested_date: str,
+    project_dir: Path,
+) -> dict[str, str | None]:
+    storage_dir = resolve_source_storage_dir(
+        source=source,
+        job_date=requested_date,
+        project_dir=project_dir,
+    )
+    probe_path = storage_dir / "page-count-probe.json"
+    summary_path = project_dir / "data" / "raw" / "archive-summary" / f"{requested_date}.json"
+    return {
+        "probe_path": probe_path.resolve().relative_to(project_dir).as_posix()
+        if probe_path.exists()
+        else None,
+        "summary_path": summary_path.resolve().relative_to(project_dir).as_posix()
+        if summary_path.exists()
+        else None,
+    }
 
 
 def create_job_manifest(
@@ -66,8 +131,17 @@ def create_job_manifest(
     resolved_job_id = job_id or build_job_id(job_date=job_date, source_id=source.source_id)
     job_dir = get_jobs_root(project_dir) / job_date / resolved_job_id
     ensure_job_scaffold(job_dir)
+    artifact_paths = _resolve_source_artifact_paths(
+        source=source,
+        requested_date=job_date,
+        project_dir=project_dir,
+    )
 
-    resolved_front_page_url = front_page_url or build_source_url(source, job_date=job_date)
+    issue_date = resolve_publication_date(source=source, job_date=job_date)
+    publication_status = "available" if issue_date is not None else "no_publication_for_date"
+    resolved_front_page_url = front_page_url or (
+        build_source_url(source, job_date=job_date) if issue_date is not None else None
+    )
     staged_front_page = stage_front_page_asset(
         job_dir=job_dir,
         front_page_image=front_page_image,
@@ -81,12 +155,27 @@ def create_job_manifest(
         "job_id": resolved_job_id,
         "source_id": source.source_id,
         "date": job_date,
+        "source": _build_source_state(
+            source=source,
+            requested_date=job_date,
+            issue_date=issue_date,
+            publication_status=publication_status,
+            front_page_url=resolved_front_page_url,
+            summary_path=artifact_paths["summary_path"],
+            probe_path=artifact_paths["probe_path"],
+        ),
         "approval_mode": approval_mode,
-        "status": "scraped" if staged_front_page else "discovered",
+        "status": (
+            "scraped"
+            if staged_front_page
+            else "skipped_no_publication"
+            if publication_status == "no_publication_for_date"
+            else "discovered"
+        ),
         "input_assets": build_input_assets(
             project_dir=project_dir,
             source_config_path=source_config_path,
-            source_url=resolved_front_page_url,
+            source_url=resolved_front_page_url or source.base_url,
             front_page_url=resolved_front_page_url,
             front_page_asset=staged_front_page,
             supporting_pages=supporting_pages,
@@ -102,6 +191,7 @@ def create_job_manifest(
             "priority": None,
             "reason": None,
         },
+        "page_selection": _default_page_selection(),
         "script": {
             "template_id": script_template_id,
             "provider": "manual_or_external_ai",
@@ -146,9 +236,13 @@ def create_job_manifest(
             "events": [
                 {
                     "stage": "discover",
-                    "status": "completed",
+                    "status": "skipped" if publication_status == "no_publication_for_date" else "completed",
                     "timestamp": timestamp,
-                    "details": "Job creado desde source config declarativo.",
+                    "details": (
+                        "Job creado sin edicion publicada para la fecha solicitada."
+                        if publication_status == "no_publication_for_date"
+                        else "Job creado desde source config declarativo."
+                    ),
                 }
             ],
         },
@@ -248,6 +342,11 @@ def scrape_source_into_job(
     project_dir = get_project_dir()
     job = read_json(job_manifest_path)
     source = SourceConfig.load(source_config_path)
+    artifact_paths = _resolve_source_artifact_paths(
+        source=source,
+        requested_date=str(job.get("date")),
+        project_dir=project_dir,
+    )
     current_front_page = job.get("input_assets", {}).get("front_page_image")
     current_pages = job.get("input_assets", {}).get("pages", [])
     if (current_front_page or current_pages) and not force:
@@ -261,9 +360,23 @@ def scrape_source_into_job(
         source_url=source_url,
         max_supporting_pages=max_supporting_pages,
     )
+    discovered_pages = list(discovery.get("pages", []))
+    issue_date = discovery.get("issue_date")
+    discovery_type = str(discovery.get("discovery_type") or source.discovery.get("type") or "unknown")
     if discovery.get("status") == "no_publication_for_date":
         timestamp = datetime.now().isoformat(timespec="seconds")
         job["status"] = "skipped"
+        job["source"] = _build_source_state(
+            source=source,
+            requested_date=str(job.get("date")),
+            issue_date=None,
+            publication_status="no_publication_for_date",
+            discovery_type=discovery_type,
+            front_page_url=None,
+            discovered_pages_count=0,
+            summary_path=artifact_paths["summary_path"],
+            probe_path=artifact_paths["probe_path"],
+        )
         job["audit"]["updated_at"] = timestamp
         job["audit"].setdefault("events", []).append(
             {
@@ -300,6 +413,17 @@ def scrape_source_into_job(
         supporting_pages=[],
     )
     job["input_assets"] = input_assets
+    job["source"] = _build_source_state(
+        source=source,
+        requested_date=str(job.get("date")),
+        issue_date=str(issue_date) if issue_date else None,
+        publication_status="available",
+        discovery_type=discovery_type,
+        front_page_url=str(discovery.get("front_page_url") or ""),
+        discovered_pages_count=len(discovered_pages),
+        summary_path=artifact_paths["summary_path"],
+        probe_path=artifact_paths["probe_path"],
+    )
     timestamp = datetime.now().isoformat(timespec="seconds")
     job["status"] = "scraped"
     job["audit"]["updated_at"] = timestamp
@@ -500,32 +624,269 @@ def _normalize_text_lines(text: str) -> list[str]:
     return [line.strip() for line in text.splitlines() if line.strip()]
 
 
+def _to_project_relative(path: Path, *, project_dir: Path) -> str:
+    return path.resolve().relative_to(project_dir).as_posix()
+
+
+def _build_ocr_source_entry(
+    *,
+    source_kind: str,
+    text: str,
+    project_dir: Path,
+    ocr_text_path: Path | None = None,
+    asset_path: Path | None = None,
+    role: str | None = None,
+    label: str | None = None,
+    page_number: int | None = None,
+) -> dict[str, object]:
+    return {
+        "source_kind": source_kind,
+        "role": role,
+        "label": label,
+        "page_number": page_number,
+        "asset_path": _to_project_relative(asset_path, project_dir=project_dir) if asset_path else None,
+        "ocr_text_path": _to_project_relative(ocr_text_path, project_dir=project_dir)
+        if ocr_text_path and ocr_text_path.exists()
+        else None,
+        "character_count": len(text),
+        "line_count": len(_normalize_text_lines(text)),
+    }
+
+
+def _build_job_asset_ocr_candidates(*, job: dict) -> list[dict[str, object]]:
+    candidates: list[dict[str, object]] = []
+    front_page_value = job.get("input_assets", {}).get("front_page_image")
+    front_page = _resolve_repo_path(front_page_value)
+    if front_page is not None and front_page.exists():
+        candidates.append(
+            {
+                "role": "front_page",
+                "label": "Portada",
+                "page_number": 1,
+                "asset_path": front_page,
+            }
+        )
+
+    for page in job.get("input_assets", {}).get("pages", []):
+        local_path_value = page.get("local_path")
+        if not local_path_value:
+            continue
+        asset_path = _resolve_repo_path(str(local_path_value))
+        if asset_path is None or not asset_path.exists():
+            continue
+        role = str(page.get("role") or "supporting_page")
+        if role == "front_page" and any(item.get("role") == "front_page" for item in candidates):
+            continue
+        candidates.append(
+            {
+                "role": role,
+                "label": str(page.get("label") or "Pagina"),
+                "page_number": int(page["page_number"]) if page.get("page_number") is not None else None,
+                "asset_path": asset_path,
+            }
+        )
+    return candidates
+
+
+def _load_ocr_sources_with_paddleocr(
+    *,
+    job: dict,
+    project_dir: Path,
+    ocr_scope: str,
+) -> list[dict[str, object]]:
+    ocr_sources: list[dict[str, object]] = []
+    for candidate in _build_job_asset_ocr_candidates(job=job):
+        if ocr_scope == "front_page" and str(candidate.get("role")) != "front_page":
+            continue
+        asset_path = Path(candidate["asset_path"])
+        ocr_result = extract_text_with_paddleocr(image_path=asset_path, lang="es")
+        text = str(ocr_result.get("text") or "").strip()
+        if not text:
+            continue
+        ocr_sources.append(
+            {
+                **_build_ocr_source_entry(
+                    source_kind="paddleocr",
+                    text=text,
+                    project_dir=project_dir,
+                    ocr_text_path=None,
+                    asset_path=asset_path,
+                    role=str(candidate.get("role") or "ocr"),
+                    label=str(candidate.get("label") or "OCR"),
+                    page_number=int(candidate["page_number"]) if candidate.get("page_number") is not None else None,
+                ),
+                "ocr_engine": "paddleocr",
+                "ocr_lines": list(ocr_result.get("lines") or []),
+                "ocr_item_count": len(ocr_result.get("items") or []),
+            }
+        )
+    return ocr_sources
+
+
+def _load_ocr_sources_from_directory(
+    *,
+    ocr_dir: Path,
+    job: dict,
+    project_dir: Path,
+) -> list[dict[str, object]]:
+    if not ocr_dir.exists():
+        raise FileNotFoundError(f"No existe el directorio OCR: {ocr_dir}")
+    if not ocr_dir.is_dir():
+        raise ValueError(f"`--ocr-dir` debe ser una carpeta: {ocr_dir}")
+
+    ocr_sources: list[dict[str, object]] = []
+    for candidate in _build_job_asset_ocr_candidates(job=job):
+        asset_path = candidate["asset_path"]
+        stem = Path(asset_path).stem
+        ocr_text_path = ocr_dir / f"{stem}.txt"
+        if not ocr_text_path.exists():
+            continue
+        text = ocr_text_path.read_text(encoding="utf-8")
+        ocr_sources.append(
+            _build_ocr_source_entry(
+                source_kind="ocr_dir_file",
+                text=text,
+                project_dir=project_dir,
+                ocr_text_path=ocr_text_path,
+                asset_path=asset_path,
+                role=str(candidate.get("role") or "ocr"),
+                label=str(candidate.get("label") or "OCR"),
+                page_number=int(candidate["page_number"]) if candidate.get("page_number") is not None else None,
+            )
+        )
+    return ocr_sources
+
+
 def _load_ocr_text(
     *,
     job_manifest_path: Path,
+    ocr_engine: str,
+    ocr_scope: str,
+    ocr_dir: Path | None,
     ocr_text: str | None,
     ocr_text_file: Path | None,
-) -> tuple[str, Path | None]:
+) -> tuple[str, Path | None, list[dict[str, object]]]:
+    project_dir = get_project_dir()
+    work_dir = job_manifest_path.parent / "work" / "ocr"
+    work_dir.mkdir(parents=True, exist_ok=True)
+    job = read_json(job_manifest_path)
+
+    if ocr_engine == "paddleocr":
+        ocr_sources = _load_ocr_sources_with_paddleocr(
+            job=job,
+            project_dir=project_dir,
+            ocr_scope=ocr_scope,
+        )
+        if not ocr_sources:
+            raise ValueError("PaddleOCR no devolvio texto util para los assets seleccionados.")
+        combined_parts = []
+        for source in ocr_sources:
+            label = source.get("label") or source.get("role") or "OCR"
+            ocr_lines = list(source.get("ocr_lines") or [])
+            text = "\n".join(ocr_lines).strip()
+            if text:
+                combined_parts.append(f"[{label}]\n{text}")
+        combined_text = "\n\n".join(part for part in combined_parts if part.strip()).strip()
+        combined_file = work_dir / "combined-paddleocr.txt"
+        combined_file.write_text(combined_text, encoding="utf-8")
+        return combined_text, combined_file, ocr_sources
+
     if ocr_text_file is not None:
         if not ocr_text_file.exists():
             raise FileNotFoundError(f"No existe el archivo OCR: {ocr_text_file}")
-        return ocr_text_file.read_text(encoding="utf-8"), ocr_text_file
+        text = ocr_text_file.read_text(encoding="utf-8")
+        return text, ocr_text_file, [
+            _build_ocr_source_entry(
+                source_kind="external_file",
+                text=text,
+                project_dir=project_dir,
+                ocr_text_path=ocr_text_file,
+            )
+        ]
 
     if ocr_text is not None:
-        work_file = job_manifest_path.with_name("ocr-text.txt")
+        work_file = work_dir / "inline-ocr.txt"
         work_file.write_text(ocr_text, encoding="utf-8")
-        return ocr_text, work_file
+        return ocr_text, work_file, [
+            _build_ocr_source_entry(
+                source_kind="inline_text",
+                text=ocr_text,
+                project_dir=project_dir,
+                ocr_text_path=work_file,
+            )
+        ]
 
-    job = read_json(job_manifest_path)
-    front_page = _resolve_repo_path(job["input_assets"].get("front_page_image"))
-    if front_page is None:
-        raise ValueError("El job no tiene `input_assets.front_page_image`.")
-    sidecar = front_page.with_suffix(".txt")
-    if sidecar.exists():
-        return sidecar.read_text(encoding="utf-8"), sidecar
+    if ocr_dir is not None:
+        ocr_sources = _load_ocr_sources_from_directory(
+            ocr_dir=ocr_dir,
+            job=job,
+            project_dir=project_dir,
+        )
+        if not ocr_sources:
+            raise ValueError(
+                "No se encontraron archivos OCR en `--ocr-dir` que coincidan con los assets del job."
+            )
+        combined_parts: list[str] = []
+        for source in ocr_sources:
+            label = source.get("label") or source.get("role") or "OCR"
+            text_path = source.get("ocr_text_path")
+            text = ""
+            if text_path:
+                resolved_text_path = _resolve_repo_path(str(text_path))
+                if resolved_text_path and resolved_text_path.exists():
+                    text = resolved_text_path.read_text(encoding="utf-8")
+            if text:
+                combined_parts.append(f"[{label}]\n{text.strip()}")
+        combined_text = "\n\n".join(part for part in combined_parts if part.strip()).strip()
+        combined_file = work_dir / "combined-ocr.txt"
+        combined_file.write_text(combined_text, encoding="utf-8")
+        return combined_text, combined_file, ocr_sources
+
+    ocr_sources: list[dict[str, object]] = []
+
+    for candidate in _build_job_asset_ocr_candidates(job=job):
+        asset_path = candidate["asset_path"]
+        sidecar = Path(asset_path).with_suffix(".txt")
+        if not sidecar.exists():
+            continue
+        page_text = sidecar.read_text(encoding="utf-8")
+        ocr_sources.append(
+            _build_ocr_source_entry(
+                source_kind="sidecar_file",
+                text=page_text,
+                project_dir=project_dir,
+                ocr_text_path=sidecar,
+                asset_path=asset_path,
+                role=str(candidate.get("role") or "ocr"),
+                label=str(candidate.get("label") or "OCR"),
+                page_number=int(candidate["page_number"]) if candidate.get("page_number") is not None else None,
+            )
+        )
+
+    if ocr_sources:
+        combined_parts: list[str] = []
+        for source in ocr_sources:
+            label = source.get("label") or source.get("role") or "OCR"
+            text_path = source.get("ocr_text_path")
+            text = ""
+            if text_path:
+                resolved_text_path = _resolve_repo_path(str(text_path))
+                if resolved_text_path and resolved_text_path.exists():
+                    text = resolved_text_path.read_text(encoding="utf-8")
+            if text:
+                combined_parts.append(f"[{label}]\n{text.strip()}")
+        combined_text = "\n\n".join(part for part in combined_parts if part.strip()).strip()
+        if len(ocr_sources) == 1:
+            only_source = ocr_sources[0]
+            only_path = _resolve_repo_path(str(only_source.get("ocr_text_path")))
+            return combined_text, only_path, ocr_sources
+
+        combined_file = work_dir / "combined-ocr.txt"
+        combined_file.write_text(combined_text, encoding="utf-8")
+        return combined_text, combined_file, ocr_sources
 
     raise ValueError(
-        "No se encontro texto OCR. Pasa `--ocr-text`, `--ocr-text-file` o crea un sidecar `.txt` junto a la portada."
+        "No se encontro texto OCR. Pasa `--ocr-text`, `--ocr-text-file` o crea sidecars `.txt` junto a la portada o paginas de apoyo."
     )
 
 
@@ -557,10 +918,169 @@ def _count_matches(text: str, keywords: list[str]) -> int:
     return sum(1 for keyword in keywords if keyword.casefold() in lowered)
 
 
+_PAGE_REF_PATTERN = re.compile(
+    r"(?i)\b(?:p[aá]g(?:ina)?s?\.?|pp?\.?)\s*(\d{1,3})(?:\s*[-/]\s*(\d{1,3}))?"
+)
+_INLINE_PAGE_SUFFIX_PATTERN = re.compile(r"(?i)^(.*?)(?:[\s:;-]+)(\d{1,3})\s*$")
+
+
+def _clean_cover_headline(text: str) -> str:
+    cleaned = " ".join(text.replace("|", " ").split()).strip(" -:;,.")
+    return cleaned
+
+
+def _is_probable_headline(text: str) -> bool:
+    cleaned = _clean_cover_headline(text)
+    if len(cleaned) < 12:
+        return False
+    if re.fullmatch(r"\d+", cleaned):
+        return False
+    return True
+
+
+def _extract_page_candidates_from_cover(lines: list[str]) -> list[dict[str, object]]:
+    candidates: list[dict[str, object]] = []
+
+    for index, raw_line in enumerate(lines):
+        line = " ".join(raw_line.split()).strip()
+        if not line:
+            continue
+
+        explicit_matches = list(_PAGE_REF_PATTERN.finditer(line))
+        if explicit_matches:
+            for match in explicit_matches:
+                page_texts = [group for group in match.groups() if group]
+                for page_text in page_texts:
+                    page_number = int(page_text)
+                    if page_number <= 1:
+                        continue
+                    headline_text = _clean_cover_headline(line[: match.start()] or line)
+                    if not _is_probable_headline(headline_text):
+                        previous_line = lines[index - 1] if index > 0 else ""
+                        next_line = lines[index + 1] if index + 1 < len(lines) else ""
+                        for alternative in (previous_line, next_line):
+                            if _is_probable_headline(alternative):
+                                headline_text = _clean_cover_headline(alternative)
+                                break
+                    if not _is_probable_headline(headline_text):
+                        headline_text = f"Referencia de portada a pagina {page_number}"
+                    candidates.append(
+                        {
+                            "headline": headline_text,
+                            "page_number": page_number,
+                            "evidence_line": line,
+                            "line_index": index,
+                            "method": "local_regex_explicit",
+                            "confidence": 0.9,
+                        }
+                    )
+            continue
+
+        inline_match = _INLINE_PAGE_SUFFIX_PATTERN.match(line)
+        if not inline_match:
+            continue
+        headline_text = _clean_cover_headline(inline_match.group(1))
+        if not _is_probable_headline(headline_text):
+            continue
+        page_number = int(inline_match.group(2))
+        if page_number <= 1:
+            continue
+        candidates.append(
+            {
+                "headline": headline_text,
+                "page_number": page_number,
+                "evidence_line": line,
+                "line_index": index,
+                "method": "local_regex_inline",
+                "confidence": 0.6,
+            }
+        )
+
+    deduped: list[dict[str, object]] = []
+    seen_pairs: set[tuple[str, int]] = set()
+    for candidate in candidates:
+        key = (str(candidate["headline"]).casefold(), int(candidate["page_number"]))
+        if key in seen_pairs:
+            continue
+        seen_pairs.add(key)
+        deduped.append(candidate)
+    return deduped
+
+
+def _parse_manual_page_selection_payload(text: str) -> tuple[list[dict[str, object]], str]:
+    stripped = text.strip()
+    if not stripped:
+        raise ValueError("La seleccion manual de paginas esta vacia.")
+
+    try:
+        payload = json.loads(stripped)
+    except json.JSONDecodeError:
+        payload = None
+
+    candidates: list[dict[str, object]] = []
+    if isinstance(payload, dict):
+        if isinstance(payload.get("notes"), str):
+            notes = payload["notes"].strip()
+        else:
+            notes = ""
+        raw_items = payload.get("items") or payload.get("candidates") or payload.get("pages") or []
+        if not isinstance(raw_items, list):
+            raise ValueError("El JSON manual debe incluir una lista en `items`, `candidates` o `pages`.")
+        for item in raw_items:
+            if not isinstance(item, dict):
+                continue
+            page_number = int(item.get("page_number"))
+            if page_number <= 1:
+                continue
+            headline = _clean_cover_headline(str(item.get("headline") or f"Pagina {page_number}"))
+            candidates.append(
+                {
+                    "headline": headline,
+                    "page_number": page_number,
+                    "evidence_line": str(item.get("evidence_line") or headline),
+                    "line_index": None,
+                    "method": "manual_import",
+                    "confidence": float(item.get("confidence", 1.0)),
+                }
+            )
+        return candidates, notes
+
+    notes = ""
+    for raw_line in stripped.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        match = _PAGE_REF_PATTERN.search(line)
+        if not match:
+            continue
+        page_number = int(match.group(1))
+        if page_number <= 1:
+            continue
+        headline = _clean_cover_headline(line[: match.start()] or line)
+        if not _is_probable_headline(headline):
+            headline = f"Pagina {page_number}"
+        candidates.append(
+            {
+                "headline": headline,
+                "page_number": page_number,
+                "evidence_line": line,
+                "line_index": None,
+                "method": "manual_import",
+                "confidence": 1.0,
+            }
+        )
+    if not candidates:
+        raise ValueError("No se encontraron referencias de pagina en la seleccion manual.")
+    return candidates, notes
+
+
 def extract_and_classify_job(
     *,
     job_manifest_path: Path,
     editorial_policy_path: Path,
+    ocr_engine: str = "manual",
+    ocr_scope: str = "front_page",
+    ocr_dir: Path | None = None,
     ocr_text: str | None = None,
     ocr_text_file: Path | None = None,
     ocr_confidence: float | None = None,
@@ -568,8 +1088,11 @@ def extract_and_classify_job(
     project_dir = get_project_dir()
     job = read_json(job_manifest_path)
     policy = read_json(editorial_policy_path)
-    raw_text, ocr_file_path = _load_ocr_text(
+    raw_text, ocr_file_path, ocr_sources = _load_ocr_text(
         job_manifest_path=job_manifest_path,
+        ocr_engine=ocr_engine,
+        ocr_scope=ocr_scope,
+        ocr_dir=ocr_dir,
         ocr_text=ocr_text,
         ocr_text_file=ocr_text_file,
     )
@@ -616,6 +1139,9 @@ def extract_and_classify_job(
     elif is_news:
         priority = "medium"
 
+    ocr_roles_used = [str(source.get("role") or source.get("source_kind") or "ocr") for source in ocr_sources]
+    unique_ocr_roles_used = list(dict.fromkeys(ocr_roles_used))
+
     job["extraction"] = {
         "ocr_blocks": blocks,
         "headline_candidates": headline_candidates,
@@ -626,6 +1152,10 @@ def extract_and_classify_job(
             if ocr_file_path and ocr_file_path.exists()
             else None
         ),
+        "ocr_sources": ocr_sources,
+        "ocr_source_roles": unique_ocr_roles_used,
+        "ocr_engine": ocr_engine,
+        "ocr_scope": ocr_scope,
     }
     job["classification"] = {
         "is_news": is_news,
@@ -640,7 +1170,218 @@ def extract_and_classify_job(
             "stage": "extract_classify",
             "status": "completed",
             "timestamp": timestamp,
-            "details": f"Extraidos {len(blocks)} bloques OCR y {len(headline_candidates)} titulares candidatos.",
+            "details": (
+                f"Extraidos {len(blocks)} bloques OCR, {len(headline_candidates)} titulares candidatos "
+                f"y {len(ocr_sources)} fuente(s) OCR."
+            ),
+        }
+    )
+    return write_json(job_manifest_path, job)
+
+
+def analyze_cover_page_references_for_job(
+    *,
+    job_manifest_path: Path,
+    max_candidates: int = 6,
+    force: bool = False,
+) -> Path:
+    job = read_json(job_manifest_path)
+    extraction = job.get("extraction", {})
+    current_candidates = list(job.get("page_selection", {}).get("candidates", []))
+    if current_candidates and not force:
+        raise ValueError(
+            "El job ya tiene `page_selection.candidates`. Usa `--force` si quieres recalcularlas."
+        )
+
+    ocr_blocks = extraction.get("ocr_blocks", [])
+    lines = [str(block.get("text") or "").strip() for block in ocr_blocks if str(block.get("text") or "").strip()]
+    if not lines:
+        raise ValueError(
+            "El job no tiene `extraction.ocr_blocks`. Ejecuta `extract-job` antes de analizar referencias de portada."
+        )
+
+    candidates = _extract_page_candidates_from_cover(lines)[:max_candidates]
+    page_numbers = sorted(dict.fromkeys(int(candidate["page_number"]) for candidate in candidates))
+    status = "suggested" if candidates else "needs_manual_review"
+    notes = (
+        "Referencias detectadas automaticamente desde OCR de portada."
+        if candidates
+        else "El OCR local no encontro referencias claras de pagina. Usa importacion manual."
+    )
+
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["page_selection"] = {
+        "strategy": "cover_first",
+        "provider": "local_ocr_regex",
+        "status": status,
+        "selected_page_numbers": page_numbers,
+        "candidates": candidates,
+        "notes": notes,
+    }
+    job["audit"]["updated_at"] = timestamp
+    job["audit"].setdefault("events", []).append(
+        {
+            "stage": "cover_page_selection",
+            "status": "completed" if candidates else "needs_manual_review",
+            "timestamp": timestamp,
+            "details": f"Se detectaron {len(page_numbers)} pagina(s) candidata(s) desde la portada.",
+        }
+    )
+    return write_json(job_manifest_path, job)
+
+
+def import_cover_page_selection_for_job(
+    *,
+    job_manifest_path: Path,
+    selection_text: str | None = None,
+    selection_file: Path | None = None,
+    provider: str = "chatgpt_plus_manual",
+    force: bool = False,
+) -> Path:
+    job = read_json(job_manifest_path)
+    current_candidates = list(job.get("page_selection", {}).get("candidates", []))
+    if current_candidates and not force:
+        raise ValueError(
+            "El job ya tiene una seleccion de paginas. Usa `--force` si quieres reemplazarla."
+        )
+
+    if selection_file is not None:
+        if not selection_file.exists():
+            raise FileNotFoundError(f"No existe el archivo de seleccion: {selection_file}")
+        raw_selection = selection_file.read_text(encoding="utf-8")
+    elif selection_text is not None:
+        raw_selection = selection_text
+    else:
+        raise ValueError("Debes proporcionar `--selection-text` o `--selection-file`.")
+
+    candidates, notes = _parse_manual_page_selection_payload(raw_selection)
+    page_numbers = sorted(dict.fromkeys(int(candidate["page_number"]) for candidate in candidates))
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["page_selection"] = {
+        "strategy": "cover_first",
+        "provider": provider,
+        "status": "approved_manual",
+        "selected_page_numbers": page_numbers,
+        "candidates": candidates,
+        "notes": notes or "Selección importada manualmente.",
+    }
+    job["audit"]["updated_at"] = timestamp
+    job["audit"].setdefault("events", []).append(
+        {
+            "stage": "cover_page_selection_import",
+            "status": "completed",
+            "timestamp": timestamp,
+            "details": f"Se importaron {len(page_numbers)} pagina(s) desde seleccion manual.",
+        }
+    )
+    return write_json(job_manifest_path, job)
+
+
+def scrape_selected_pages_for_job(
+    *,
+    job_manifest_path: Path,
+    source_config_path: Path,
+    force: bool = False,
+) -> Path:
+    project_dir = get_project_dir()
+    job = read_json(job_manifest_path)
+    source = SourceConfig.load(source_config_path)
+    page_selection = job.get("page_selection", {})
+    selected_page_numbers = [
+        int(page_number)
+        for page_number in page_selection.get("selected_page_numbers", [])
+        if int(page_number) > 1
+    ]
+    if not selected_page_numbers:
+        raise ValueError(
+            "El job no tiene `page_selection.selected_page_numbers`. Analiza o importa primero las referencias de portada."
+        )
+
+    existing_pages = [
+        page
+        for page in job.get("input_assets", {}).get("pages", [])
+        if int(page.get("page_number") or 0) > 1
+    ]
+    if existing_pages and not force:
+        raise ValueError(
+            "El job ya tiene paginas de apoyo descargadas. Usa `--force` si quieres reemplazarlas."
+        )
+
+    if existing_pages and force:
+        for page in existing_pages:
+            local_path_value = page.get("local_path")
+            local_path = _resolve_repo_path(str(local_path_value)) if local_path_value else None
+            if local_path and local_path.exists():
+                local_path.unlink()
+
+    if str(source.discovery.get("type", "")).strip() != "prcdn_image_sequence":
+        raise ValueError(
+            "La descarga selectiva de paginas esta soportada por ahora solo para fuentes `prcdn_image_sequence`."
+        )
+
+    resolved = resolve_prcdn_pages(
+        source=source,
+        job_date=str(job.get("date")),
+        page_numbers=selected_page_numbers,
+    )
+    if resolved.get("status") == "no_publication_for_date":
+        raise ValueError("La fuente no tiene edicion publicada para la fecha solicitada.")
+
+    job_dir = job_manifest_path.parent
+    selected_pages = []
+    for page in resolved.get("pages", []):
+        page_number = int(page.get("page_number") or 0)
+        if page_number <= 1:
+            continue
+        page_url = str(page.get("source_url") or "")
+        if not page_url:
+            continue
+        staged = stage_supporting_page_asset(
+            job_dir=job_dir,
+            page_number=page_number,
+            page_image=None,
+            page_url=page_url,
+            download_page=True,
+        )
+        if staged is None:
+            continue
+        selected_pages.append(
+            {
+                "role": "supporting_page",
+                "label": str(page.get("label") or f"Pagina {page_number}"),
+                "page_number": page_number,
+                "source_url": page_url,
+                "local_path": staged.resolve().relative_to(project_dir).as_posix(),
+            }
+        )
+
+    input_assets = dict(job.get("input_assets", {}))
+    front_page_entry = next(
+        (
+            page
+            for page in input_assets.get("pages", [])
+            if int(page.get("page_number") or 0) == 1
+        ),
+        None,
+    )
+    pages = [front_page_entry] if front_page_entry else []
+    pages.extend(selected_pages)
+    input_assets["pages"] = pages
+    job["input_assets"] = input_assets
+
+    page_selection["downloaded_page_numbers"] = [page["page_number"] for page in selected_pages]
+    page_selection["status"] = "downloaded" if selected_pages else page_selection.get("status", "suggested")
+    job["page_selection"] = page_selection
+
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["status"] = "scraped"
+    job["audit"]["updated_at"] = timestamp
+    job["audit"].setdefault("events", []).append(
+        {
+            "stage": "scrape_selected_pages",
+            "status": "completed",
+            "timestamp": timestamp,
+            "details": f"Se descargaron {len(selected_pages)} pagina(s) seleccionadas desde la portada.",
         }
     )
     return write_json(job_manifest_path, job)

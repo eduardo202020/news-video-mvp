@@ -21,6 +21,10 @@ kokoro = [
   "kokoro-onnx>=0.4.9",
   "soundfile>=0.13.1",
 ]
+paddleocr = [
+  "paddlepaddle==3.2.0",
+  "paddleocr>=3.4.1",
+]
 
 [project.scripts]
 news-video-mvp = "news_video_mvp.cli:main"
