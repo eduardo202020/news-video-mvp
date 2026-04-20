@@ -10,13 +10,38 @@
         {
           "headline": "Choque politico en el Congreso",
           "story_type": "politica",
+          "cover_region": {
+            "x": 0.14,
+            "y": 0.28,
+            "width": 0.42,
+            "height": 0.22
+          },
           "page_number": 3,
           "confidence": 0.94,
           "evidence_line": "PAG 3"
         },
         {
+          "headline": "Choque politico en el Congreso",
+          "story_type": "politica",
+          "cover_region": {
+            "x": 0.14,
+            "y": 0.28,
+            "width": 0.42,
+            "height": 0.22
+          },
+          "page_number": 4,
+          "confidence": 0.93,
+          "evidence_line": "PAGS 3-4"
+        },
+        {
           "headline": "Cronologia del caso",
           "story_type": "actualidad",
+          "cover_region": {
+            "x": 0.22,
+            "y": 0.56,
+            "width": 0.46,
+            "height": 0.18
+          },
           "page_number": 5,
           "confidence": 0.88,
           "evidence_line": "p. 5"

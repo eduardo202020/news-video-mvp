@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import Counter
+import copy
 from datetime import datetime
 import json
 import os
@@ -10,6 +11,7 @@ import sys
 
 import streamlit as st
 import streamlit.components.v1 as components
+from PIL import Image
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[2]
@@ -58,6 +60,16 @@ def write_json(path: Path, payload: dict) -> None:
 
 def rel(path: Path) -> str:
     return path.resolve().relative_to(PROJECT_DIR).as_posix()
+
+
+def get_image_dimensions(path: Path) -> tuple[int, int] | None:
+    if not path.exists():
+        return None
+    try:
+        with Image.open(path) as image:
+            return image.size
+    except Exception:
+        return None
 
 
 def discover_jobs() -> list[Path]:
@@ -159,13 +171,22 @@ def create_daily_jobs_batch(
     return results
 
 
-def download_selected_pages_batch(*, jobs: list[dict], force: bool = True) -> list[dict[str, object]]:
+def download_selected_pages_batch(
+    *,
+    jobs: list[dict],
+    force: bool = True,
+    selected_page_numbers_override: dict[str, list[int]] | None = None,
+) -> list[dict[str, object]]:
     results: list[dict[str, object]] = []
     for job in jobs:
         page_selection = job.get("page_selection", {})
+        job_id = str(job.get("job_id") or "")
         selected_page_numbers = [
             int(page_number)
-            for page_number in page_selection.get("selected_page_numbers", [])
+            for page_number in (
+                (selected_page_numbers_override or {}).get(job_id)
+                or page_selection.get("selected_page_numbers", [])
+            )
             if int(page_number) > 1
         ]
         if not selected_page_numbers:
@@ -220,10 +241,11 @@ def download_selected_pages_batch(*, jobs: list[dict], force: bool = True) -> li
             )
             continue
 
+        should_force_scrape = force or bool(current_pages)
         scrape_selected_pages_for_job(
             job_manifest_path=manifest_path,
             source_config_path=source_config_path,
-            force=force,
+            force=should_force_scrape,
         )
         refreshed_job = read_json(manifest_path)
         downloaded_page_numbers = list(
@@ -244,7 +266,7 @@ def download_selected_pages_batch(*, jobs: list[dict], force: bool = True) -> li
                 "selected_page_numbers": selected_page_numbers,
                 "downloaded_page_numbers": downloaded_page_numbers,
                 "downloaded_pages": downloaded_pages,
-                "status": "downloaded",
+                "status": "downloaded" if not current_pages else "refreshed",
             }
         )
     return results
@@ -348,12 +370,16 @@ def build_cover_batch_metadata(jobs: list[dict]) -> str:
         manifest_path = job.get("_path")
         if not isinstance(manifest_path, Path):
             continue
+        front_page_path = PROJECT_DIR / str(job.get("input_assets", {}).get("front_page_image"))
+        dimensions = get_image_dimensions(front_page_path)
         lines.extend(
             [
                 f"- portada {index}",
                 f"  newspaper_name: {job.get('source_id', 'sin-source')}",
                 f"  job_id: {job.get('job_id', 'sin-id')}",
                 f"  job_manifest_path: {rel(manifest_path)}",
+                f"  cover_image_path: {job.get('input_assets', {}).get('front_page_image')}",
+                f"  cover_dimensions: {dimensions[0]}x{dimensions[1]}" if dimensions else "  cover_dimensions: unknown",
                 "",
             ]
         )
@@ -399,6 +425,133 @@ def build_cover_batch_prompt(jobs: list[dict]) -> str:
     return prefix + body
 
 
+def build_story_groups_from_candidates(candidates: list[dict]) -> list[dict]:
+    grouped: dict[tuple[str, str, str], dict] = {}
+    for candidate in candidates:
+        headline = " ".join(str(candidate.get("headline") or "").split()).strip()
+        if not headline:
+            continue
+        story_type = str(candidate.get("story_type") or "actualidad").strip() or "actualidad"
+        cover_region = candidate.get("cover_region")
+        region_key = json.dumps(cover_region, sort_keys=True, ensure_ascii=False) if cover_region else "null"
+        key = (headline.casefold(), story_type, region_key)
+        story = grouped.get(key)
+        if story is None:
+            story = {
+                "headline": headline,
+                "story_type": story_type,
+                "cover_region": cover_region,
+                "page_numbers": [],
+                "evidence_lines": [],
+                "confidence": 0.0,
+            }
+            grouped[key] = story
+
+        page_number = int(candidate.get("page_number") or 0)
+        if page_number > 1 and page_number not in story["page_numbers"]:
+            story["page_numbers"].append(page_number)
+
+        evidence_line = " ".join(str(candidate.get("evidence_line") or "").split()).strip()
+        if evidence_line and evidence_line not in story["evidence_lines"]:
+            story["evidence_lines"].append(evidence_line)
+
+        try:
+            confidence = float(candidate.get("confidence", 0.0))
+        except (TypeError, ValueError):
+            confidence = 0.0
+        story["confidence"] = round(max(float(story["confidence"]), confidence), 4)
+
+    stories = list(grouped.values())
+    stories.sort(
+        key=lambda item: (
+            min(item.get("page_numbers") or [999]),
+            str(item.get("headline") or "").casefold(),
+        )
+    )
+    return stories
+
+
+def get_cover_stories(job: dict) -> list[dict]:
+    page_selection = job.get("page_selection", {})
+    stories = list(page_selection.get("stories", []))
+    if stories:
+        return stories
+    return build_story_groups_from_candidates(list(page_selection.get("candidates", [])))
+
+
+def story_matches_editorial_filters(
+    story: dict,
+    *,
+    excluded_story_types: set[str],
+    excluded_keywords: list[str],
+    exclude_supplements: bool,
+) -> bool:
+    story_type = str(story.get("story_type") or "actualidad").strip().lower()
+    if story_type in excluded_story_types:
+        return False
+
+    headline = str(story.get("headline") or "")
+    evidence = str(story.get("evidence") or " ".join(story.get("evidence_lines", [])) or "")
+    combined = f"{headline} {evidence}".casefold()
+
+    if exclude_supplements:
+        supplement_markers = ["luces", "dominical", "dt", "somos", "magazin", "magacín", "magacin"]
+        if any(marker in combined for marker in supplement_markers):
+            return False
+
+    if excluded_keywords and any(keyword in combined for keyword in excluded_keywords):
+        return False
+
+    return True
+
+
+def build_editorially_filtered_job(
+    job: dict,
+    *,
+    excluded_story_types: set[str],
+    excluded_keywords: list[str],
+    exclude_supplements: bool,
+) -> dict:
+    filtered_job = copy.deepcopy(job)
+    page_selection = dict(filtered_job.get("page_selection", {}))
+    original_stories = get_cover_stories(job)
+    filtered_stories = [
+        story
+        for story in original_stories
+        if story_matches_editorial_filters(
+            story,
+            excluded_story_types=excluded_story_types,
+            excluded_keywords=excluded_keywords,
+            exclude_supplements=exclude_supplements,
+        )
+    ]
+
+    allowed_pages = {
+        int(page_number)
+        for story in filtered_stories
+        for page_number in story.get("page_numbers", [])
+        if int(page_number) > 1
+    }
+
+    original_candidates = list(page_selection.get("candidates", []))
+    filtered_candidates = [
+        candidate
+        for candidate in original_candidates
+        if int(candidate.get("page_number") or 0) in allowed_pages
+    ]
+
+    page_selection["stories"] = filtered_stories
+    page_selection["candidates"] = filtered_candidates
+    page_selection["selected_page_numbers"] = sorted(allowed_pages)
+    page_selection["editorial_filter"] = {
+        "excluded_story_types": sorted(excluded_story_types),
+        "excluded_keywords": excluded_keywords,
+        "exclude_supplements": exclude_supplements,
+    }
+    filtered_job["page_selection"] = page_selection
+    return filtered_job
+
+
 def build_detailed_news_metadata(jobs: list[dict]) -> str:
     lines: list[str] = []
     index = 1
@@ -409,6 +562,7 @@ def build_detailed_news_metadata(jobs: list[dict]) -> str:
         page_selection = job.get("page_selection", {})
         selection_notes = str(page_selection.get("notes") or "").strip()
         selected_candidates = list(page_selection.get("candidates", []))
+        selected_stories = list(page_selection.get("stories", [])) or build_story_groups_from_candidates(selected_candidates)
         ocr_blocks = list(job.get("extraction", {}).get("ocr_blocks", []))
         pages = [
             page
@@ -430,7 +584,18 @@ def build_detailed_news_metadata(jobs: list[dict]) -> str:
                 lines.append(f"  - {headline}")
         if selection_notes:
             lines.append(f"  selection_notes: {selection_notes}")
-        if selected_candidates:
+        if selected_stories:
+            lines.append("  stories_detected_from_cover:")
+            for story in selected_stories[:8]:
+                lines.append(
+                    "  - "
+                    f"story_type: {story.get('story_type') or 'actualidad'} | "
+                    f"page_numbers: {story.get('page_numbers') or []} | "
+                    f"headline_hint: {story.get('headline') or ''} | "
+                    f"evidence: {story.get('evidence') or ''} | "
+                    f"cover_region: {story.get('cover_region') or ''}"
+                )
+        elif selected_candidates:
             lines.append("  page_hints_from_cover:")
             for candidate in selected_candidates[:8]:
                 lines.append(
@@ -438,7 +603,8 @@ def build_detailed_news_metadata(jobs: list[dict]) -> str:
                     f"story_type: {candidate.get('story_type') or 'actualidad'} | "
                     f"page_number: {int(candidate.get('page_number') or 0)} | "
                     f"headline_hint: {candidate.get('headline') or ''} | "
-                    f"evidence_line: {candidate.get('evidence_line') or ''}"
+                    f"evidence_line: {candidate.get('evidence_line') or ''} | "
+                    f"cover_region: {candidate.get('cover_region') or ''}"
                 )
         if ocr_blocks:
             lines.append("  ocr_context:")
@@ -472,13 +638,14 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
     lines = [
         f"Se adjuntan exactamente {page_count} paginas internas, agrupadas en {newspaper_count} periodico(s).",
         "Cada grupo de imagenes corresponde a un diario y a las paginas seleccionadas desde su portada.",
-        "Debes usar solo la informacion visible en esas paginas adjuntas.",
+        "Estas paginas internas no se mostraran en el video final; se usan solo para entender mejor cada noticia de la portada.",
+        "El resultado debe servir para narrar sobre la portada, con textos muy breves y faciles de convertir en voz en off.",
         "",
         "Rol:",
-        "Actua como analista editorial y redactor de resúmenes detallados de noticias de prensa escrita.",
+        "Actua como editor periodistico que resume noticias para voice-over breve de TikTok.",
         "",
         "Objetivo:",
-        "Para cada periodico, identifica las noticias principales que fueron ampliadas en las paginas adjuntas y redacta un resumen breve y util para luego convertirlo en speech de TikTok.",
+        "Para cada periodico, toma las noticias ya detectadas desde portada, usa las paginas internas solo como contexto, y devuelve un micro-script por noticia.",
         "",
         "Reglas:",
         "- No inventes hechos, nombres, cifras o citas que no aparezcan en las imagenes.",
@@ -486,10 +653,12 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "- Mantén separados los resultados por periodico.",
         "- Si un periodico trae varias noticias relevantes, devuelve varias entradas en `stories`.",
         "- Escribe en espanol claro y natural.",
-        "- Cada `summary` debe ser breve: idealmente 2 oraciones cortas o un maximo de 320 caracteres.",
-        "- `key_facts` debe tener entre 2 y 4 puntos cortos, no parrafos.",
-        "- Usa los titulares detectados, hints de portada y OCR previo solo como contexto auxiliar; la fuente principal siguen siendo las paginas adjuntas.",
+        "- Cada `summary` debe sonar a una linea corta de narrador: maximo 180 caracteres y preferiblemente una sola oracion.",
+        "- `key_facts` debe tener entre 1 y 3 puntos cortos, no parrafos.",
+        "- Respeta `story_type`, `headline` y `cover_region` ya detectados desde la portada; solo corrige si las paginas internas muestran claramente que estaban mal.",
+        "- Usa los titulares detectados, hints de portada y OCR previo como contexto fuerte, y las paginas adjuntas como verificacion y ampliacion.",
         "- Si el contexto previo y las paginas adjuntas se contradicen, prioriza lo que se vea claramente en las paginas.",
+        "- No conviertas una misma noticia en varias historias distintas solo porque ocupe varias paginas.",
         "",
         "Contexto previo disponible del lote:",
         "```text",
@@ -499,7 +668,7 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "Devuelve solo JSON valido con esta estructura:",
         "```json",
         "{",
-        '  "notes": "Resumen editorial detallado desde paginas internas.",',
+        '  "notes": "Micro-resumenes editoriales desde paginas internas para narrar sobre portada.",',
         '  "newspapers": [',
         "    {",
         '      "newspaper_name": "ojo",',
@@ -507,10 +676,11 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         '      "stories": [',
         "        {",
         '          "story_type": "politica",',
-        '          "headline": "Titular principal inferido desde las paginas",',
-        '          "summary": "Resumen breve, claro y fiel de la noticia, util para speech.",',
+        '          "headline": "Titular principal detectado desde portada",',
+        '          "summary": "Corvetto queda bajo fuerte presion politica mientras crecen los pedidos para que responda por el proceso electoral.",',
         '          "page_numbers": [2, 5],',
-        '          "key_facts": ["dato 1", "dato 2"],',
+        '          "cover_region": {"x": 0.11, "y": 0.29, "width": 0.42, "height": 0.25},',
+        '          "key_facts": ["pedido de explicaciones", "presion politica"],',
         '          "notes": ""',
         "        }",
         "      ]",
@@ -822,6 +992,55 @@ with board_tab:
     if not cover_jobs:
         st.info("Los jobs filtrados no tienen portada disponible para este flujo.")
     else:
+        all_story_types = sorted(
+            {
+                str(story.get("story_type") or "actualidad")
+                for job in cover_jobs
+                for story in get_cover_stories(job)
+            }
+        )
+        with st.expander("Filtro editorial del lote", expanded=False):
+            editorial_col1, editorial_col2 = st.columns([1.2, 1.8])
+            with editorial_col1:
+                excluded_story_types = set(
+                    st.multiselect(
+                        "Excluir categorias",
+                        all_story_types,
+                        default=[],
+                        key="editorial_excluded_story_types",
+                    )
+                )
+                exclude_supplements = st.checkbox(
+                    "Ocultar suplementos y anexos",
+                    value=True,
+                    key="editorial_exclude_supplements",
+                )
+            with editorial_col2:
+                excluded_keywords_raw = st.text_input(
+                    "Excluir historias si contienen estas palabras",
+                    value="",
+                    placeholder="luces, dominical, farandula",
+                    key="editorial_excluded_keywords",
+                )
+                st.caption(
+                    "Este filtro afecta las historias visibles, las paginas que se descargan y los prompts posteriores, "
+                    "sin borrar el JSON original importado."
+                )
+
+        excluded_keywords = [
+            keyword.strip().casefold()
+            for keyword in excluded_keywords_raw.split(",")
+            if keyword.strip()
+        ]
+        effective_cover_jobs = [
+            build_editorially_filtered_job(
+                job,
+                excluded_story_types=excluded_story_types,
+                excluded_keywords=excluded_keywords,
+                exclude_supplements=exclude_supplements,
+            )
+            for job in cover_jobs
+        ]
         metadata_text = build_cover_batch_metadata(cover_jobs)
         prompt_text = build_cover_batch_prompt(cover_jobs)
         seed_payload = build_cover_batch_seed_payload(cover_jobs)
@@ -896,7 +1115,13 @@ with board_tab:
         selected_cover_jobs = []
         pending_cover_jobs = []
         unavailable_cover_jobs = []
-        for job in cover_jobs:
+        editorial_filtered_story_count = 0
+        editorial_kept_story_count = 0
+        for original_job, job in zip(cover_jobs, effective_cover_jobs):
+            original_story_count = len(get_cover_stories(original_job))
+            filtered_story_count = len(get_cover_stories(job))
+            editorial_filtered_story_count += max(0, original_story_count - filtered_story_count)
+            editorial_kept_story_count += filtered_story_count
             selected_page_numbers = [
                 int(page_number)
                 for page_number in job.get("page_selection", {}).get("selected_page_numbers", [])
@@ -911,6 +1136,11 @@ with board_tab:
                 selected_cover_jobs.append(summary_item)
             else:
                 pending_cover_jobs.append(summary_item)
+
+        st.caption(
+            f"Filtro editorial activo sobre el lote visible: {editorial_kept_story_count} historia(s) util(es) y "
+            f"{editorial_filtered_story_count} historia(s) ocultada(s)."
+        )
 
         for job in filtered_jobs:
             if job.get("input_assets", {}).get("front_page_image"):
@@ -982,7 +1212,7 @@ with board_tab:
                         matching_job = next(
                             (
                                 job
-                                for job in cover_jobs
+                                for job in effective_cover_jobs
                                 if job.get("job_id") == item["job_id"] and job.get("source_id") == item["newspaper_name"]
                             ),
                             None,
@@ -996,6 +1226,9 @@ with board_tab:
                             download_selected_pages_batch(
                                 jobs=[matching_job],
                                 force=not reuse_existing_pages,
+                                selected_page_numbers_override={
+                                    str(matching_job.get("job_id") or ""): list(item["selected_page_numbers"])
+                                },
                             )
                         )
                         progress_bar.progress(
@@ -1021,13 +1254,26 @@ with board_tab:
                         None,
                     )
                     if matching_job is not None:
-                        downloaded_jobs_for_prompt.append(matching_job)
+                        downloaded_jobs_for_prompt.append(
+                            build_editorially_filtered_job(
+                                matching_job,
+                                excluded_story_types=excluded_story_types,
+                                excluded_keywords=excluded_keywords,
+                                exclude_supplements=exclude_supplements,
+                            )
+                        )
 
                 with st.expander("Ver resultado de descarga de paginas", expanded=True):
                     for item in selected_pages_batch_results:
                         downloaded = ", ".join(str(page) for page in item.get("downloaded_page_numbers", [])) or "ninguna"
-                        tone = "downloaded" if item.get("status") == "downloaded" else "neutral"
-                        action_label = "Paginas descargadas" if item.get("status") == "downloaded" else "Paginas reutilizadas"
+                        status_value = str(item.get("status") or "")
+                        tone = "downloaded" if status_value in {"downloaded", "refreshed"} else "neutral"
+                        if status_value == "reused":
+                            action_label = "Paginas reutilizadas"
+                        elif status_value == "refreshed":
+                            action_label = "Paginas actualizadas"
+                        else:
+                            action_label = "Paginas descargadas"
                         render_status_card(
                             title=f"{item.get('source_id', 'sin-source')} · {item.get('job_id', 'sin-id')}",
                             body=f"{action_label}: {downloaded}",

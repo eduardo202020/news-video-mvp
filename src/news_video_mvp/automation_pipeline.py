@@ -80,6 +80,7 @@ def _default_page_selection() -> dict[str, object]:
         "status": "not_started",
         "selected_page_numbers": [],
         "candidates": [],
+        "stories": [],
         "notes": "",
     }
 
@@ -1036,10 +1037,14 @@ def _parse_manual_page_selection_payload(text: str) -> tuple[list[dict[str, obje
             story_type = _normalize_story_type(
                 item.get("story_type") or item.get("category") or item.get("section")
             )
+            cover_region = _normalize_cover_region(
+                item.get("cover_region") or item.get("cover_focus") or item.get("cover_bbox")
+            )
             candidates.append(
                 {
                     "headline": headline,
                     "story_type": story_type,
+                    "cover_region": cover_region,
                     "page_number": page_number,
                     "evidence_line": str(item.get("evidence_line") or headline),
                     "line_index": None,
@@ -1067,6 +1072,7 @@ def _parse_manual_page_selection_payload(text: str) -> tuple[list[dict[str, obje
             {
                 "headline": headline,
                 "story_type": "actualidad",
+                "cover_region": None,
                 "page_number": page_number,
                 "evidence_line": line,
                 "line_index": None,
@@ -1097,6 +1103,100 @@ def _normalize_story_type(value: object) -> str:
         "espectáculos": "espectaculos",
     }
     return mapping.get(raw, raw)
+
+
+def _clamp_normalized(value: object, *, default: float) -> float:
+    try:
+        parsed = float(value)
+    except (TypeError, ValueError):
+        parsed = default
+    return max(0.0, min(1.0, parsed))
+
+
+def _normalize_cover_region(value: object) -> dict[str, float] | None:
+    if not isinstance(value, dict):
+        return None
+
+    x = _clamp_normalized(value.get("x", value.get("left")), default=0.0)
+    y = _clamp_normalized(value.get("y", value.get("top")), default=0.0)
+    width = _clamp_normalized(value.get("width", value.get("w")), default=0.0)
+    height = _clamp_normalized(value.get("height", value.get("h")), default=0.0)
+
+    if width <= 0 or height <= 0:
+        return None
+
+    if x + width > 1.0:
+        width = max(0.01, 1.0 - x)
+    if y + height > 1.0:
+        height = max(0.01, 1.0 - y)
+
+    return {
+        "x": round(x, 4),
+        "y": round(y, 4),
+        "width": round(width, 4),
+        "height": round(height, 4),
+    }
+
+
+def _build_cover_story_groups(candidates: list[dict[str, object]]) -> list[dict[str, object]]:
+    grouped: dict[tuple[str, str, str], dict[str, object]] = {}
+
+    for candidate in candidates:
+        headline = _clean_cover_headline(str(candidate.get("headline") or "")).strip()
+        if not headline:
+            continue
+        story_type = _normalize_story_type(candidate.get("story_type"))
+        cover_region = _normalize_cover_region(candidate.get("cover_region"))
+        region_key = json.dumps(cover_region, sort_keys=True, ensure_ascii=False) if cover_region else "null"
+        key = (headline.casefold(), story_type, region_key)
+        story = grouped.get(key)
+        if story is None:
+            story = {
+                "headline": headline,
+                "story_type": story_type,
+                "cover_region": cover_region,
+                "page_numbers": [],
+                "evidence_lines": [],
+                "max_confidence": 0.0,
+            }
+            grouped[key] = story
+
+        page_number = int(candidate.get("page_number") or 0)
+        if page_number > 1 and page_number not in story["page_numbers"]:
+            story["page_numbers"].append(page_number)
+
+        evidence_line = " ".join(str(candidate.get("evidence_line") or "").split()).strip()
+        if evidence_line and evidence_line not in story["evidence_lines"]:
+            story["evidence_lines"].append(evidence_line)
+
+        try:
+            confidence = float(candidate.get("confidence", 0.0))
+        except (TypeError, ValueError):
+            confidence = 0.0
+        story["max_confidence"] = round(max(float(story["max_confidence"]), confidence), 4)
+
+    stories: list[dict[str, object]] = []
+    for story in grouped.values():
+        page_numbers = sorted(int(page) for page in story["page_numbers"])
+        stories.append(
+            {
+                "headline": story["headline"],
+                "story_type": story["story_type"],
+                "cover_region": story["cover_region"],
+                "page_numbers": page_numbers,
+                "evidence": " | ".join(story["evidence_lines"][:3]),
+                "evidence_lines": story["evidence_lines"],
+                "confidence": story["max_confidence"],
+            }
+        )
+
+    stories.sort(
+        key=lambda item: (
+            min(item.get("page_numbers") or [999]),
+            str(item.get("headline") or "").casefold(),
+        )
+    )
+    return stories
 
 
 def _parse_batch_manual_page_selection_payload(text: str) -> tuple[list[dict[str, object]], str]:
@@ -1304,6 +1404,7 @@ def analyze_cover_page_references_for_job(
         "status": status,
         "selected_page_numbers": page_numbers,
         "candidates": candidates,
+        "stories": _build_cover_story_groups(candidates),
         "notes": notes,
     }
     job["audit"]["updated_at"] = timestamp
@@ -1351,6 +1452,7 @@ def import_cover_page_selection_for_job(
         "status": "approved_manual",
         "selected_page_numbers": page_numbers,
         "candidates": candidates,
+        "stories": _build_cover_story_groups(candidates),
         "notes": notes or "Selección importada manualmente.",
     }
     job["audit"]["updated_at"] = timestamp
