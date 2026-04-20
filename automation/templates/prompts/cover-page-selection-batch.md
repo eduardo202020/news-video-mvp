@@ -8,6 +8,7 @@ Contexto del flujo:
 - excluye la portada, asi que no devuelvas `page_number: 1`
 - prioriza paginas claramente mencionadas por titulares principales, bajadas, cintillos o llamadas tipo `Pag. 4`, `p. 7`, `pagina 12`
 - si una portada no muestra referencias confiables, devuelve `items: []` para ese job
+- para cada noticia detectada, asigna tambien `story_type` usando una de estas categorias: `actualidad`, `politica`, `policial`, `deportes`, `mundo`, `economia`, `espectaculos`
 
 Metadatos de las portadas:
 
@@ -29,6 +30,7 @@ Devuelve solo JSON valido, sin explicacion adicional, con esta estructura exacta
       "items": [
         {
           "headline": "Titular o tema resumido",
+          "story_type": "politica",
           "page_number": 4,
           "confidence": 0.97,
           "evidence_line": "PAG 4"
@@ -42,7 +44,7 @@ Devuelve solo JSON valido, sin explicacion adicional, con esta estructura exacta
 Reglas de salida:
 - conserva exactamente `job_manifest_path`, `job_id` y `newspaper_name` como aparecen en los metadatos
 - `items` debe ser una lista
-- cada item debe incluir `headline` y `page_number`
+- cada item debe incluir `headline`, `story_type` y `page_number`
 - `confidence` debe estar entre `0` y `1`
 - `evidence_line` debe resumir la evidencia visual que justifica la pagina
 - no repitas la misma pagina dos veces para un mismo job

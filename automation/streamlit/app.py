@@ -196,6 +196,30 @@ def download_selected_pages_batch(*, jobs: list[dict], force: bool = True) -> li
             )
             continue
 
+        current_pages = [
+            {
+                "page_number": int(page.get("page_number") or 0),
+                "local_path": page.get("local_path"),
+            }
+            for page in job.get("input_assets", {}).get("pages", [])
+            if int(page.get("page_number") or 0) > 1
+        ]
+        current_page_numbers = [page["page_number"] for page in current_pages]
+        if not force and set(selected_page_numbers).issubset(set(current_page_numbers)):
+            results.append(
+                {
+                    "job_id": job.get("job_id", ""),
+                    "source_id": job.get("source_id", ""),
+                    "selected_page_numbers": selected_page_numbers,
+                    "downloaded_page_numbers": selected_page_numbers,
+                    "downloaded_pages": [
+                        page for page in current_pages if page["page_number"] in set(selected_page_numbers)
+                    ],
+                    "status": "reused",
+                }
+            )
+            continue
+
         scrape_selected_pages_for_job(
             job_manifest_path=manifest_path,
             source_config_path=source_config_path,
@@ -381,6 +405,11 @@ def build_detailed_news_metadata(jobs: list[dict]) -> str:
     for job in jobs:
         source_id = str(job.get("source_id", "sin-source"))
         job_id = str(job.get("job_id", "sin-id"))
+        headline_candidates = list(job.get("extraction", {}).get("headline_candidates", []))
+        page_selection = job.get("page_selection", {})
+        selection_notes = str(page_selection.get("notes") or "").strip()
+        selected_candidates = list(page_selection.get("candidates", []))
+        ocr_blocks = list(job.get("extraction", {}).get("ocr_blocks", []))
         pages = [
             page
             for page in job.get("input_assets", {}).get("pages", [])
@@ -395,6 +424,28 @@ def build_detailed_news_metadata(jobs: list[dict]) -> str:
                 f"  job_id: {job_id}",
             ]
         )
+        if headline_candidates:
+            lines.append("  headlines_detected:")
+            for headline in headline_candidates[:5]:
+                lines.append(f"  - {headline}")
+        if selection_notes:
+            lines.append(f"  selection_notes: {selection_notes}")
+        if selected_candidates:
+            lines.append("  page_hints_from_cover:")
+            for candidate in selected_candidates[:8]:
+                lines.append(
+                    "  - "
+                    f"story_type: {candidate.get('story_type') or 'actualidad'} | "
+                    f"page_number: {int(candidate.get('page_number') or 0)} | "
+                    f"headline_hint: {candidate.get('headline') or ''} | "
+                    f"evidence_line: {candidate.get('evidence_line') or ''}"
+                )
+        if ocr_blocks:
+            lines.append("  ocr_context:")
+            for block in ocr_blocks[:5]:
+                text = str(block.get("text") or "").strip()
+                if text:
+                    lines.append(f"  - {text}")
         for page in pages:
             lines.append(
                 f"  - page_number: {int(page.get('page_number') or 0)} | local_path: {page.get('local_path')}"
@@ -427,7 +478,7 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "Actua como analista editorial y redactor de resúmenes detallados de noticias de prensa escrita.",
         "",
         "Objetivo:",
-        "Para cada periodico, identifica las noticias principales que fueron ampliadas en las paginas adjuntas y redacta un resumen detallado de cada una.",
+        "Para cada periodico, identifica las noticias principales que fueron ampliadas en las paginas adjuntas y redacta un resumen breve y util para luego convertirlo en speech de TikTok.",
         "",
         "Reglas:",
         "- No inventes hechos, nombres, cifras o citas que no aparezcan en las imagenes.",
@@ -435,8 +486,12 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "- Mantén separados los resultados por periodico.",
         "- Si un periodico trae varias noticias relevantes, devuelve varias entradas en `stories`.",
         "- Escribe en espanol claro y natural.",
+        "- Cada `summary` debe ser breve: idealmente 2 oraciones cortas o un maximo de 320 caracteres.",
+        "- `key_facts` debe tener entre 2 y 4 puntos cortos, no parrafos.",
+        "- Usa los titulares detectados, hints de portada y OCR previo solo como contexto auxiliar; la fuente principal siguen siendo las paginas adjuntas.",
+        "- Si el contexto previo y las paginas adjuntas se contradicen, prioriza lo que se vea claramente en las paginas.",
         "",
-        "Metadatos del lote:",
+        "Contexto previo disponible del lote:",
         "```text",
         metadata_text or "- No hay paginas internas descargadas todavia.",
         "```",
@@ -451,8 +506,9 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         '      "job_id": "2026-04-20-ojo-frontpage-001",',
         '      "stories": [',
         "        {",
+        '          "story_type": "politica",',
         '          "headline": "Titular principal inferido desde las paginas",',
-        '          "summary": "Resumen detallado y fiel de la noticia.",',
+        '          "summary": "Resumen breve, claro y fiel de la noticia, util para speech.",',
         '          "page_numbers": [2, 5],',
         '          "key_facts": ["dato 1", "dato 2"],',
         '          "notes": ""',
@@ -467,6 +523,12 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "Analiza las paginas adjuntas agrupadas por periodico y devuelve el JSON completo, sin explicacion adicional.",
     ]
     return "\n".join(lines)
+
+
+def chunk_jobs(jobs: list[dict], *, size: int) -> list[list[dict]]:
+    if size <= 0:
+        return [jobs]
+    return [jobs[index : index + size] for index in range(0, len(jobs), size)]
 
 
 def render_copy_button(*, label: str, text: str, key: str) -> None:
@@ -561,6 +623,39 @@ def build_pages_bundle_dir(jobs: list[dict]) -> Path:
     unique_dates = sorted({str(job.get("date") or "sin-fecha") for job in jobs})
     batch_name = unique_dates[0] if len(unique_dates) == 1 else "mixed-dates"
     target_dir = review_dir / batch_name
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    for existing in target_dir.iterdir():
+        if existing.is_file():
+            existing.unlink()
+
+    for job in jobs:
+        source_id = str(job.get("source_id", "sin-source"))
+        pages = [
+            page
+            for page in job.get("input_assets", {}).get("pages", [])
+            if int(page.get("page_number") or 0) > 1
+        ]
+        for page in pages:
+            local_path = page.get("local_path")
+            if not local_path:
+                continue
+            source_path = PROJECT_DIR / str(local_path)
+            if not source_path.exists():
+                continue
+            suffix = source_path.suffix or ".jpg"
+            file_name = f"{source_id}-page-{int(page.get('page_number') or 0):02d}{suffix}"
+            shutil.copy2(source_path, target_dir / file_name)
+
+    return target_dir
+
+
+def build_pages_bundle_dir_for_group(jobs: list[dict], *, group_index: int) -> Path:
+    review_dir = PROJECT_DIR / "data" / "review" / "page-batches"
+    review_dir.mkdir(parents=True, exist_ok=True)
+    unique_dates = sorted({str(job.get("date") or "sin-fecha") for job in jobs})
+    batch_name = unique_dates[0] if len(unique_dates) == 1 else "mixed-dates"
+    target_dir = review_dir / f"{batch_name}-group-{group_index:02d}"
     target_dir.mkdir(parents=True, exist_ok=True)
 
     for existing in target_dir.iterdir():
@@ -800,6 +895,7 @@ with board_tab:
 
         selected_cover_jobs = []
         pending_cover_jobs = []
+        unavailable_cover_jobs = []
         for job in cover_jobs:
             selected_page_numbers = [
                 int(page_number)
@@ -816,10 +912,30 @@ with board_tab:
             else:
                 pending_cover_jobs.append(summary_item)
 
-        if selected_cover_jobs or pending_cover_jobs:
+        for job in filtered_jobs:
+            if job.get("input_assets", {}).get("front_page_image"):
+                continue
+            publication_status = str(job.get("source", {}).get("publication_status") or "")
+            status = str(job.get("status") or "")
+            if publication_status == "no_publication_for_date" or status in {"skipped", "skipped_no_publication"}:
+                reason = "sin edicion publicada para la fecha"
+            elif status == "discovered":
+                reason = "portada no disponible o no descargable"
+            else:
+                reason = "sin portada descargada"
+            unavailable_cover_jobs.append(
+                {
+                    "newspaper_name": job.get("source_id", "sin-source"),
+                    "job_id": job.get("job_id", "sin-id"),
+                    "reason": reason,
+                }
+            )
+
+        if selected_cover_jobs or pending_cover_jobs or unavailable_cover_jobs:
             st.caption(
                 f"{len(selected_cover_jobs)} periodico(s) listos para descargar y "
-                f"{len(pending_cover_jobs)} pendiente(s) de seleccion en el lote."
+                f"{len(pending_cover_jobs)} pendiente(s) de seleccion en el lote. "
+                f"{len(unavailable_cover_jobs)} sin portada disponible."
             )
             with st.expander("Estado del lote por periodico", expanded=True):
                 if selected_cover_jobs:
@@ -837,8 +953,23 @@ with board_tab:
                             body="Pendiente de JSON. Aun no hay paginas seleccionadas.",
                             tone="pending",
                         )
+                if unavailable_cover_jobs:
+                    for item in unavailable_cover_jobs:
+                        render_status_card(
+                            title=f"{item['newspaper_name']} · {item['job_id']}",
+                            body=f"No disponible en este lote: {item['reason']}.",
+                            tone="neutral",
+                        )
 
         if selected_cover_jobs:
+            reuse_existing_pages = st.checkbox(
+                "Reutilizar paginas ya descargadas del dia actual si existen",
+                value=True,
+                key="reuse_existing_pages_batch",
+            )
+            st.caption(
+                "Si esta opcion esta activa, el lote usara las paginas ya descargadas cuando coincidan con las seleccionadas."
+            )
             if st.button("Descargar paginas del lote", use_container_width=True, type="primary"):
                 progress_placeholder = st.empty()
                 status_placeholder = st.empty()
@@ -861,7 +992,12 @@ with board_tab:
                         status_placeholder.info(
                             f"Descargando {item['newspaper_name']} · paginas {', '.join(str(page) for page in item['selected_page_numbers'])}"
                         )
-                        results.extend(download_selected_pages_batch(jobs=[matching_job], force=True))
+                        results.extend(
+                            download_selected_pages_batch(
+                                jobs=[matching_job],
+                                force=not reuse_existing_pages,
+                            )
+                        )
                         progress_bar.progress(
                             int((index / total_jobs) * 100),
                             text=f"Descargando lote... {index}/{total_jobs}",
@@ -874,13 +1010,28 @@ with board_tab:
                     status_placeholder.error(str(exc))
             selected_pages_batch_results = st.session_state.get("selected_pages_batch_results")
             if selected_pages_batch_results:
+                downloaded_jobs_for_prompt = []
+                for item in selected_pages_batch_results:
+                    matching_job = next(
+                        (
+                            job
+                            for job in load_jobs()
+                            if job.get("job_id") == item.get("job_id") and job.get("source_id") == item.get("source_id")
+                        ),
+                        None,
+                    )
+                    if matching_job is not None:
+                        downloaded_jobs_for_prompt.append(matching_job)
+
                 with st.expander("Ver resultado de descarga de paginas", expanded=True):
                     for item in selected_pages_batch_results:
                         downloaded = ", ".join(str(page) for page in item.get("downloaded_page_numbers", [])) or "ninguna"
+                        tone = "downloaded" if item.get("status") == "downloaded" else "neutral"
+                        action_label = "Paginas descargadas" if item.get("status") == "downloaded" else "Paginas reutilizadas"
                         render_status_card(
                             title=f"{item.get('source_id', 'sin-source')} · {item.get('job_id', 'sin-id')}",
-                            body=f"Paginas descargadas: {downloaded}",
-                            tone="downloaded",
+                            body=f"{action_label}: {downloaded}",
+                            tone=tone,
                         )
                         downloaded_pages = item.get("downloaded_pages", [])
                         if downloaded_pages:
@@ -904,6 +1055,53 @@ with board_tab:
                                     )
                         else:
                             st.caption("No se registraron paginas descargadas para este periodico.")
+
+                if downloaded_jobs_for_prompt:
+                    grouped_jobs = chunk_jobs(downloaded_jobs_for_prompt, size=2)
+                    st.subheader("Resumen Detallado por Bloques de 2 Periodicos")
+                    st.caption(
+                        "Se generaron prompts separados, con maximo 2 periodicos por bloque, para ajustarse mejor "
+                        "al limite de imagenes de ChatGPT."
+                    )
+                    for group_index, group_jobs in enumerate(grouped_jobs, start=1):
+                        detailed_prompt = build_detailed_news_prompt(group_jobs)
+                        detailed_metadata = build_detailed_news_metadata(group_jobs)
+                        group_sources = ", ".join(str(job.get("source_id", "sin-source")) for job in group_jobs)
+                        with st.expander(f"Bloque {group_index}: {group_sources}", expanded=(group_index == 1)):
+                            detailed_col1, detailed_col2 = st.columns(2)
+                            with detailed_col1:
+                                render_copy_button(
+                                    label=f"Copiar prompt bloque {group_index}",
+                                    text=detailed_prompt,
+                                    key=f"copy_detailed_news_prompt_{group_index}",
+                                )
+                            with detailed_col2:
+                                if st.button(
+                                    f"Abrir carpeta de paginas bloque {group_index}",
+                                    use_container_width=True,
+                                    key=f"open_pages_group_{group_index}",
+                                ):
+                                    run_action(
+                                        f"Carpeta de paginas del bloque {group_index} abierta.",
+                                        lambda group_jobs=group_jobs, group_index=group_index: open_local_path(
+                                            build_pages_bundle_dir_for_group(group_jobs, group_index=group_index)
+                                        ),
+                                    )
+                            st.caption(
+                                f"Este bloque incluye {len(group_jobs)} periodico(s): {group_sources}."
+                            )
+                            st.text_area(
+                                f"Metadatos de paginas bloque {group_index}",
+                                value=detailed_metadata,
+                                height=200,
+                                key=f"detailed_news_metadata_{group_index}",
+                            )
+                            st.text_area(
+                                f"Prompt de resumen detallado bloque {group_index}",
+                                value=detailed_prompt,
+                                height=360,
+                                key=f"detailed_news_prompt_{group_index}",
+                            )
 
     with st.expander("Ver lista de jobs", expanded=False):
         render_job_board(filtered_jobs)

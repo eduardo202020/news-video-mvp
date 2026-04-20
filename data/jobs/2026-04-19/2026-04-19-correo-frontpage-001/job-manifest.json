@@ -196,7 +196,7 @@
   },
   "audit": {
     "created_at": "2026-04-19T18:51:24",
-    "updated_at": "2026-04-20T00:08:05",
+    "updated_at": "2026-04-20T00:16:43",
     "events": [
       {
         "stage": "discover",
@@ -304,6 +304,12 @@
         "stage": "scrape_selected_pages",
         "status": "completed",
         "timestamp": "2026-04-20T00:08:05",
+        "details": "Se descargaron 6 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:16:43",
         "details": "Se descargaron 6 pagina(s) seleccionadas desde la portada."
       }
     ]

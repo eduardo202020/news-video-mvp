@@ -1033,9 +1033,13 @@ def _parse_manual_page_selection_payload(text: str) -> tuple[list[dict[str, obje
             if page_number <= 1:
                 continue
             headline = _clean_cover_headline(str(item.get("headline") or f"Pagina {page_number}"))
+            story_type = _normalize_story_type(
+                item.get("story_type") or item.get("category") or item.get("section")
+            )
             candidates.append(
                 {
                     "headline": headline,
+                    "story_type": story_type,
                     "page_number": page_number,
                     "evidence_line": str(item.get("evidence_line") or headline),
                     "line_index": None,
@@ -1062,6 +1066,7 @@ def _parse_manual_page_selection_payload(text: str) -> tuple[list[dict[str, obje
         candidates.append(
             {
                 "headline": headline,
+                "story_type": "actualidad",
                 "page_number": page_number,
                 "evidence_line": line,
                 "line_index": None,
@@ -1072,6 +1077,26 @@ def _parse_manual_page_selection_payload(text: str) -> tuple[list[dict[str, obje
     if not candidates:
         raise ValueError("No se encontraron referencias de pagina en la seleccion manual.")
     return candidates, notes
+
+
+def _normalize_story_type(value: object) -> str:
+    raw = " ".join(str(value or "").strip().lower().split())
+    if not raw:
+        return "actualidad"
+    mapping = {
+        "actualidad": "actualidad",
+        "politica": "politica",
+        "política": "politica",
+        "policial": "policial",
+        "deportes": "deportes",
+        "deporte": "deportes",
+        "mundo": "mundo",
+        "economia": "economia",
+        "economía": "economia",
+        "espectaculos": "espectaculos",
+        "espectáculos": "espectaculos",
+    }
+    return mapping.get(raw, raw)
 
 
 def _parse_batch_manual_page_selection_payload(text: str) -> tuple[list[dict[str, object]], str]:

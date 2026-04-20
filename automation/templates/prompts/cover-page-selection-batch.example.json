@@ -9,12 +9,14 @@
       "items": [
         {
           "headline": "Choque politico en el Congreso",
+          "story_type": "politica",
           "page_number": 3,
           "confidence": 0.94,
           "evidence_line": "PAG 3"
         },
         {
           "headline": "Cronologia del caso",
+          "story_type": "actualidad",
           "page_number": 5,
           "confidence": 0.88,
           "evidence_line": "p. 5"
