@@ -3,7 +3,9 @@ from __future__ import annotations
 from collections import Counter
 from datetime import datetime
 import json
+import os
 from pathlib import Path
+import shutil
 import sys
 
 import streamlit as st
@@ -71,12 +73,25 @@ def discover_source_configs() -> list[Path]:
 
 
 def load_jobs() -> list[dict]:
-    jobs: list[dict] = []
+    jobs_by_source: dict[str, dict] = {}
     for path in discover_jobs():
         job = read_json(path)
         job["_path"] = path
-        jobs.append(job)
-    return jobs
+        source_id = str(job.get("source_id") or "sin-source")
+        current = jobs_by_source.get(source_id)
+        if current is None or _job_sort_key(job) > _job_sort_key(current):
+            jobs_by_source[source_id] = job
+    return sorted(jobs_by_source.values(), key=_job_sort_key, reverse=True)
+
+
+def _job_sort_key(job: dict) -> tuple[str, str, str]:
+    updated_at = str(job.get("audit", {}).get("updated_at") or "")
+    created_at = str(job.get("audit", {}).get("created_at") or "")
+    return (
+        str(job.get("date") or ""),
+        updated_at,
+        created_at,
+    )
 
 
 def get_voice_profile_path(profile_id: str | None) -> Path | None:
@@ -141,6 +156,73 @@ def create_daily_jobs_batch(
             }
         )
 
+    return results
+
+
+def download_selected_pages_batch(*, jobs: list[dict], force: bool = True) -> list[dict[str, object]]:
+    results: list[dict[str, object]] = []
+    for job in jobs:
+        page_selection = job.get("page_selection", {})
+        selected_page_numbers = [
+            int(page_number)
+            for page_number in page_selection.get("selected_page_numbers", [])
+            if int(page_number) > 1
+        ]
+        if not selected_page_numbers:
+            continue
+
+        source_config_value = job.get("source", {}).get("source_config_path") or job.get("input_assets", {}).get(
+            "source_config"
+        )
+        if not source_config_value:
+            results.append(
+                {
+                    "job_id": job.get("job_id", ""),
+                    "source_id": job.get("source_id", ""),
+                    "status": "missing_source_config",
+                }
+            )
+            continue
+
+        source_config_path = PROJECT_DIR / str(source_config_value)
+        manifest_path = job.get("_path")
+        if not isinstance(manifest_path, Path):
+            results.append(
+                {
+                    "job_id": job.get("job_id", ""),
+                    "source_id": job.get("source_id", ""),
+                    "status": "missing_manifest_path",
+                }
+            )
+            continue
+
+        scrape_selected_pages_for_job(
+            job_manifest_path=manifest_path,
+            source_config_path=source_config_path,
+            force=force,
+        )
+        refreshed_job = read_json(manifest_path)
+        downloaded_page_numbers = list(
+            refreshed_job.get("page_selection", {}).get("downloaded_page_numbers", [])
+        )
+        downloaded_pages = [
+            {
+                "page_number": int(page.get("page_number") or 0),
+                "local_path": page.get("local_path"),
+            }
+            for page in refreshed_job.get("input_assets", {}).get("pages", [])
+            if int(page.get("page_number") or 0) > 1
+        ]
+        results.append(
+            {
+                "job_id": job.get("job_id", ""),
+                "source_id": job.get("source_id", ""),
+                "selected_page_numbers": selected_page_numbers,
+                "downloaded_page_numbers": downloaded_page_numbers,
+                "downloaded_pages": downloaded_pages,
+                "status": "downloaded",
+            }
+        )
     return results
 
 
@@ -284,7 +366,107 @@ def build_cover_batch_prompt(jobs: list[dict]) -> str:
     if DEFAULT_COVER_BATCH_PROMPT.exists():
         prompt_template = DEFAULT_COVER_BATCH_PROMPT.read_text(encoding="utf-8")
     metadata_text = build_cover_batch_metadata(jobs)
-    return prompt_template.replace("{{PORTADAS}}", metadata_text) if prompt_template else metadata_text
+    cover_count = len([job for job in jobs if job.get("input_assets", {}).get("front_page_image")])
+    prefix = (
+        f"Se adjuntan exactamente {cover_count} portadas, una por cada imagen enviada en este chat. "
+        "La respuesta debe corresponder exactamente a esas portadas y en el mismo lote.\n\n"
+    )
+    body = prompt_template.replace("{{PORTADAS}}", metadata_text) if prompt_template else metadata_text
+    return prefix + body
+
+
+def build_detailed_news_metadata(jobs: list[dict]) -> str:
+    lines: list[str] = []
+    index = 1
+    for job in jobs:
+        source_id = str(job.get("source_id", "sin-source"))
+        job_id = str(job.get("job_id", "sin-id"))
+        pages = [
+            page
+            for page in job.get("input_assets", {}).get("pages", [])
+            if int(page.get("page_number") or 0) > 1
+        ]
+        if not pages:
+            continue
+        lines.extend(
+            [
+                f"- diario {index}",
+                f"  newspaper_name: {source_id}",
+                f"  job_id: {job_id}",
+            ]
+        )
+        for page in pages:
+            lines.append(
+                f"  - page_number: {int(page.get('page_number') or 0)} | local_path: {page.get('local_path')}"
+            )
+        lines.append("")
+        index += 1
+    return "\n".join(lines).strip()
+
+
+def build_detailed_news_prompt(jobs: list[dict]) -> str:
+    metadata_text = build_detailed_news_metadata(jobs)
+    newspaper_count = 0
+    page_count = 0
+    for job in jobs:
+        pages = [
+            page
+            for page in job.get("input_assets", {}).get("pages", [])
+            if int(page.get("page_number") or 0) > 1
+        ]
+        if pages:
+            newspaper_count += 1
+            page_count += len(pages)
+
+    lines = [
+        f"Se adjuntan exactamente {page_count} paginas internas, agrupadas en {newspaper_count} periodico(s).",
+        "Cada grupo de imagenes corresponde a un diario y a las paginas seleccionadas desde su portada.",
+        "Debes usar solo la informacion visible en esas paginas adjuntas.",
+        "",
+        "Rol:",
+        "Actua como analista editorial y redactor de resúmenes detallados de noticias de prensa escrita.",
+        "",
+        "Objetivo:",
+        "Para cada periodico, identifica las noticias principales que fueron ampliadas en las paginas adjuntas y redacta un resumen detallado de cada una.",
+        "",
+        "Reglas:",
+        "- No inventes hechos, nombres, cifras o citas que no aparezcan en las imagenes.",
+        "- Si una pagina no se lee bien, dilo brevemente en `notes` y resume solo lo que sea confiable.",
+        "- Mantén separados los resultados por periodico.",
+        "- Si un periodico trae varias noticias relevantes, devuelve varias entradas en `stories`.",
+        "- Escribe en espanol claro y natural.",
+        "",
+        "Metadatos del lote:",
+        "```text",
+        metadata_text or "- No hay paginas internas descargadas todavia.",
+        "```",
+        "",
+        "Devuelve solo JSON valido con esta estructura:",
+        "```json",
+        "{",
+        '  "notes": "Resumen editorial detallado desde paginas internas.",',
+        '  "newspapers": [',
+        "    {",
+        '      "newspaper_name": "ojo",',
+        '      "job_id": "2026-04-20-ojo-frontpage-001",',
+        '      "stories": [',
+        "        {",
+        '          "headline": "Titular principal inferido desde las paginas",',
+        '          "summary": "Resumen detallado y fiel de la noticia.",',
+        '          "page_numbers": [2, 5],',
+        '          "key_facts": ["dato 1", "dato 2"],',
+        '          "notes": ""',
+        "        }",
+        "      ]",
+        "    }",
+        "  ]",
+        "}",
+        "```",
+        "",
+        "Instruccion final:",
+        "Analiza las paginas adjuntas agrupadas por periodico y devuelve el JSON completo, sin explicacion adicional.",
+    ]
+    return "\n".join(lines)
 
 
 def render_copy_button(*, label: str, text: str, key: str) -> None:
@@ -319,6 +501,97 @@ def render_copy_button(*, label: str, text: str, key: str) -> None:
         """,
         height=52,
     )
+
+
+def render_status_card(*, title: str, body: str, tone: str = "neutral") -> None:
+    palette = {
+        "ready": {"bg": "#ecfdf3", "border": "#16a34a", "text": "#166534"},
+        "pending": {"bg": "#fff7ed", "border": "#ea580c", "text": "#9a3412"},
+        "downloaded": {"bg": "#eff6ff", "border": "#2563eb", "text": "#1d4ed8"},
+        "neutral": {"bg": "#f8fafc", "border": "#94a3b8", "text": "#334155"},
+    }
+    colors = palette.get(tone, palette["neutral"])
+    st.markdown(
+        f"""
+        <div style="
+            border: 1px solid {colors['border']};
+            background: {colors['bg']};
+            color: {colors['text']};
+            border-radius: 12px;
+            padding: 0.8rem 0.95rem;
+            margin-bottom: 0.55rem;
+        ">
+            <div style="font-weight: 700; margin-bottom: 0.18rem;">{title}</div>
+            <div>{body}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def build_cover_bundle_dir(jobs: list[dict]) -> Path:
+    review_dir = PROJECT_DIR / "data" / "review" / "cover-batches"
+    review_dir.mkdir(parents=True, exist_ok=True)
+    unique_dates = sorted({str(job.get("date") or "sin-fecha") for job in jobs})
+    batch_name = unique_dates[0] if len(unique_dates) == 1 else "mixed-dates"
+    target_dir = review_dir / batch_name
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    for existing in target_dir.iterdir():
+        if existing.is_file():
+            existing.unlink()
+
+    for job in jobs:
+        image_value = job.get("input_assets", {}).get("front_page_image")
+        if not image_value:
+            continue
+        source_path = PROJECT_DIR / str(image_value)
+        if not source_path.exists():
+            continue
+        suffix = source_path.suffix or ".jpg"
+        file_name = f"{job.get('source_id', 'sin-source')}-{job.get('job_id', 'sin-id')}{suffix}"
+        shutil.copy2(source_path, target_dir / file_name)
+
+    return target_dir
+
+
+def build_pages_bundle_dir(jobs: list[dict]) -> Path:
+    review_dir = PROJECT_DIR / "data" / "review" / "page-batches"
+    review_dir.mkdir(parents=True, exist_ok=True)
+    unique_dates = sorted({str(job.get("date") or "sin-fecha") for job in jobs})
+    batch_name = unique_dates[0] if len(unique_dates) == 1 else "mixed-dates"
+    target_dir = review_dir / batch_name
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    for existing in target_dir.iterdir():
+        if existing.is_file():
+            existing.unlink()
+
+    for job in jobs:
+        source_id = str(job.get("source_id", "sin-source"))
+        pages = [
+            page
+            for page in job.get("input_assets", {}).get("pages", [])
+            if int(page.get("page_number") or 0) > 1
+        ]
+        for page in pages:
+            local_path = page.get("local_path")
+            if not local_path:
+                continue
+            source_path = PROJECT_DIR / str(local_path)
+            if not source_path.exists():
+                continue
+            suffix = source_path.suffix or ".jpg"
+            file_name = f"{source_id}-page-{int(page.get('page_number') or 0):02d}{suffix}"
+            shutil.copy2(source_path, target_dir / file_name)
+
+    return target_dir
+
+
+def open_local_path(path: Path) -> None:
+    if os.name != "nt":
+        raise RuntimeError("Abrir carpetas automaticamente desde la UI esta soportado por ahora en Windows.")
+    os.startfile(str(path))  # type: ignore[attr-defined]
 
 
 def render_event_timeline(job: dict) -> None:
@@ -449,7 +722,6 @@ else:
 board_tab, detail_tab = st.tabs(["Jobs", "Detalle"])
 
 with board_tab:
-    render_job_board(filtered_jobs)
     st.subheader("Portadas y Prompt")
     cover_jobs = [job for job in filtered_jobs if job.get("input_assets", {}).get("front_page_image")]
     if not cover_jobs:
@@ -458,7 +730,11 @@ with board_tab:
         metadata_text = build_cover_batch_metadata(cover_jobs)
         prompt_text = build_cover_batch_prompt(cover_jobs)
         seed_payload = build_cover_batch_seed_payload(cover_jobs)
-        st.caption("1. Scrapear periodicos. 2. Revisar portadas. 3. Copiar bloque de portadas. 4. Copiar prompt. 5. Pegar el JSON devuelto por ChatGPT.")
+        st.caption(
+            f"Se detectaron {len(cover_jobs)} portadas descargadas en el lote visible. "
+            "1. Scrapear periodicos. 2. Revisar portadas. 3. Copiar bloque de portadas. "
+            "4. Copiar prompt. 5. Pegar el JSON devuelto por ChatGPT."
+        )
 
         gallery_cols = st.columns(min(4, len(cover_jobs)))
         for index, job in enumerate(cover_jobs[:4]):
@@ -467,7 +743,7 @@ with board_tab:
                 if image_path.exists():
                     st.image(str(image_path), caption=job.get("source_id", "sin-source"), use_container_width=True)
 
-        copy_col1, copy_col2 = st.columns(2)
+        copy_col1, copy_col2, copy_col3 = st.columns(3)
         with copy_col1:
             render_copy_button(
                 label="Copiar bloque de portadas",
@@ -480,6 +756,16 @@ with board_tab:
                 text=prompt_text,
                 key="copy_cover_prompt",
             )
+        with copy_col3:
+            if st.button("Abrir carpeta de portadas", use_container_width=True):
+                run_action(
+                    "Carpeta de portadas abierta.",
+                    lambda: open_local_path(build_cover_bundle_dir(cover_jobs)),
+                )
+
+        st.caption(
+            "El prompt copiado se arma solo con las portadas descargadas visibles en este lote."
+        )
 
         with st.expander("Ver texto a copiar", expanded=False):
             st.text_area(
@@ -511,6 +797,116 @@ with board_tab:
                         force=True,
                     ),
                 )
+
+        selected_cover_jobs = []
+        pending_cover_jobs = []
+        for job in cover_jobs:
+            selected_page_numbers = [
+                int(page_number)
+                for page_number in job.get("page_selection", {}).get("selected_page_numbers", [])
+                if int(page_number) > 1
+            ]
+            summary_item = {
+                "newspaper_name": job.get("source_id", "sin-source"),
+                "job_id": job.get("job_id", "sin-id"),
+                "selected_page_numbers": selected_page_numbers,
+            }
+            if selected_page_numbers:
+                selected_cover_jobs.append(summary_item)
+            else:
+                pending_cover_jobs.append(summary_item)
+
+        if selected_cover_jobs or pending_cover_jobs:
+            st.caption(
+                f"{len(selected_cover_jobs)} periodico(s) listos para descargar y "
+                f"{len(pending_cover_jobs)} pendiente(s) de seleccion en el lote."
+            )
+            with st.expander("Estado del lote por periodico", expanded=True):
+                if selected_cover_jobs:
+                    for item in selected_cover_jobs:
+                        page_numbers = ", ".join(str(page) for page in item["selected_page_numbers"])
+                        render_status_card(
+                            title=f"{item['newspaper_name']} · {item['job_id']}",
+                            body=f"Listo para descargar. Paginas seleccionadas: {page_numbers}",
+                            tone="ready",
+                        )
+                if pending_cover_jobs:
+                    for item in pending_cover_jobs:
+                        render_status_card(
+                            title=f"{item['newspaper_name']} · {item['job_id']}",
+                            body="Pendiente de JSON. Aun no hay paginas seleccionadas.",
+                            tone="pending",
+                        )
+
+        if selected_cover_jobs:
+            if st.button("Descargar paginas del lote", use_container_width=True, type="primary"):
+                progress_placeholder = st.empty()
+                status_placeholder = st.empty()
+                progress_bar = progress_placeholder.progress(0, text="Preparando descarga del lote...")
+                status_placeholder.info("Iniciando descarga de paginas seleccionadas...")
+                try:
+                    total_jobs = len(selected_cover_jobs)
+                    results = []
+                    for index, item in enumerate(selected_cover_jobs, start=1):
+                        matching_job = next(
+                            (
+                                job
+                                for job in cover_jobs
+                                if job.get("job_id") == item["job_id"] and job.get("source_id") == item["newspaper_name"]
+                            ),
+                            None,
+                        )
+                        if matching_job is None:
+                            continue
+                        status_placeholder.info(
+                            f"Descargando {item['newspaper_name']} · paginas {', '.join(str(page) for page in item['selected_page_numbers'])}"
+                        )
+                        results.extend(download_selected_pages_batch(jobs=[matching_job], force=True))
+                        progress_bar.progress(
+                            int((index / total_jobs) * 100),
+                            text=f"Descargando lote... {index}/{total_jobs}",
+                        )
+                    st.session_state["selected_pages_batch_results"] = results
+                    progress_bar.progress(100, text="Descarga del lote completada.")
+                    status_placeholder.success("Paginas seleccionadas descargadas para el lote.")
+                    st.rerun()
+                except Exception as exc:
+                    status_placeholder.error(str(exc))
+            selected_pages_batch_results = st.session_state.get("selected_pages_batch_results")
+            if selected_pages_batch_results:
+                with st.expander("Ver resultado de descarga de paginas", expanded=True):
+                    for item in selected_pages_batch_results:
+                        downloaded = ", ".join(str(page) for page in item.get("downloaded_page_numbers", [])) or "ninguna"
+                        render_status_card(
+                            title=f"{item.get('source_id', 'sin-source')} · {item.get('job_id', 'sin-id')}",
+                            body=f"Paginas descargadas: {downloaded}",
+                            tone="downloaded",
+                        )
+                        downloaded_pages = item.get("downloaded_pages", [])
+                        if downloaded_pages:
+                            preview_cols = st.columns(min(3, len(downloaded_pages)))
+                            for index, page in enumerate(downloaded_pages[:3]):
+                                local_path = page.get("local_path")
+                                image_path = PROJECT_DIR / str(local_path) if local_path else None
+                                if image_path and image_path.exists():
+                                    with preview_cols[index]:
+                                        st.image(
+                                            str(image_path),
+                                            caption=f"Pagina {page.get('page_number')}",
+                                            use_container_width=True,
+                                        )
+                            for page in downloaded_pages:
+                                page_number = page.get("page_number")
+                                local_path = page.get("local_path")
+                                if local_path:
+                                    st.markdown(
+                                        f"- Pagina `{page_number}`: [{local_path}](/abs/path/{PROJECT_DIR / str(local_path)})"
+                                    )
+                        else:
+                            st.caption("No se registraron paginas descargadas para este periodico.")
+
+    with st.expander("Ver lista de jobs", expanded=False):
+        render_job_board(filtered_jobs)
 
 with detail_tab:
     if not filtered_jobs:

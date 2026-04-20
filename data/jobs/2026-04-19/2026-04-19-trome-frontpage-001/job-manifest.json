@@ -31,24 +31,38 @@
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 2",
-        "page_number": 2,
-        "source_url": "https://t.prcdn.co/img?file=eag82026041900000000001001&page=2&scale=82",
-        "local_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/input/pages/page-02.jpg"
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eag82026041900000000001001&page=7&scale=82",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/input/pages/page-07.jpg"
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 3",
-        "page_number": 3,
-        "source_url": "https://t.prcdn.co/img?file=eag82026041900000000001001&page=3&scale=82",
-        "local_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/input/pages/page-03.jpg"
+        "label": "Pagina 8",
+        "page_number": 8,
+        "source_url": "https://t.prcdn.co/img?file=eag82026041900000000001001&page=8&scale=82",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/input/pages/page-08.jpg"
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 4",
-        "page_number": 4,
-        "source_url": "https://t.prcdn.co/img?file=eag82026041900000000001001&page=4&scale=82",
-        "local_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/input/pages/page-04.jpg"
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eag82026041900000000001001&page=9&scale=82",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eag82026041900000000001001&page=11&scale=82",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/input/pages/page-11.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eag82026041900000000001001&page=16&scale=82",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/input/pages/page-16.jpg"
       }
     ]
   },
@@ -66,21 +80,64 @@
   "page_selection": {
     "strategy": "cover_first",
     "provider": "chatgpt_plus_manual",
-    "status": "approved_manual",
+    "status": "downloaded",
     "selected_page_numbers": [
-      2
+      7,
+      8,
+      9,
+      11,
+      16
     ],
     "candidates": [
       {
-        "headline": "Validacion pagina 2",
-        "page_number": 2,
-        "evidence_line": "PAG 2",
+        "headline": "Carlos Meléndez sostiene que Keiko tiene posibilidades en segunda vuelta y analiza el voto de Sánchez",
+        "page_number": 7,
+        "evidence_line": "Páginas 7, 8 y 9",
         "line_index": null,
         "method": "manual_import",
-        "confidence": 0.93
+        "confidence": 0.99
+      },
+      {
+        "headline": "Carlos Meléndez sostiene que Keiko tiene posibilidades en segunda vuelta y analiza el voto de Sánchez",
+        "page_number": 8,
+        "evidence_line": "Páginas 7, 8 y 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.99
+      },
+      {
+        "headline": "Carlos Meléndez sostiene que Keiko tiene posibilidades en segunda vuelta y analiza el voto de Sánchez",
+        "page_number": 9,
+        "evidence_line": "Páginas 7, 8 y 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.99
+      },
+      {
+        "headline": "Pollito a la brasa para todo el mundo",
+        "page_number": 11,
+        "evidence_line": "PÁGINA 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Alianza aplastó 8-0 y es puntero",
+        "page_number": 16,
+        "evidence_line": "PÁGINA 16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
       }
     ],
-    "notes": "Seleccion de prueba para validar importacion batch."
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      7,
+      8,
+      9,
+      11,
+      16
+    ]
   },
   "script": {
     "template_id": "default-anchor",
@@ -122,7 +179,7 @@
   },
   "audit": {
     "created_at": "2026-04-19T18:52:35",
-    "updated_at": "2026-04-19T18:54:03",
+    "updated_at": "2026-04-20T00:08:56",
     "events": [
       {
         "stage": "discover",
@@ -147,6 +204,48 @@
         "status": "completed",
         "timestamp": "2026-04-19T18:54:03",
         "details": "Se importaron 1 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-19T23:59:15",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:00:26",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:00:47",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:01:41",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:03:55",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:06:41",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:08:56",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
       }
     ]
   }

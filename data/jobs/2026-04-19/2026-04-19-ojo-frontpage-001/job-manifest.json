@@ -35,6 +35,27 @@
         "page_number": 2,
         "source_url": "https://t.prcdn.co/img?file=eags2026041900000000001001&page=2&scale=83",
         "local_path": "data/jobs/2026-04-19/2026-04-19-ojo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eags2026041900000000001001&page=3&scale=83",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-ojo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eags2026041900000000001001&page=6&scale=83",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-ojo-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 14",
+        "page_number": 14,
+        "source_url": "https://t.prcdn.co/img?file=eags2026041900000000001001&page=14&scale=83",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-ojo-frontpage-001/input/pages/page-14.jpg"
       }
     ]
   },
@@ -54,21 +75,51 @@
     "provider": "chatgpt_plus_manual",
     "status": "downloaded",
     "selected_page_numbers": [
-      2
+      2,
+      3,
+      6,
+      14
     ],
     "candidates": [
       {
-        "headline": "Manual page 2",
+        "headline": "Corvetto en la cuerda floja",
         "page_number": 2,
-        "evidence_line": "Manual page 2",
+        "evidence_line": "POLÍTICA págs. 2 y 3",
         "line_index": null,
         "method": "manual_import",
-        "confidence": 1.0
+        "confidence": 0.96
+      },
+      {
+        "headline": "Corvetto en la cuerda floja",
+        "page_number": 3,
+        "evidence_line": "POLÍTICA págs. 2 y 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Viejo pirata cobraba cupos desde el penal",
+        "page_number": 6,
+        "evidence_line": "POLICIAL pág. 6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Alianza está imparable tras golear 8-0",
+        "page_number": 14,
+        "evidence_line": "Crack pág. 14",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
       }
     ],
-    "notes": "test manual",
+    "notes": "Paginas detectadas visualmente desde la portada.",
     "downloaded_page_numbers": [
-      2
+      2,
+      3,
+      6,
+      14
     ]
   },
   "script": {
@@ -111,7 +162,7 @@
   },
   "audit": {
     "created_at": "2026-04-19T18:52:08",
-    "updated_at": "2026-04-19T18:54:32",
+    "updated_at": "2026-04-20T00:08:42",
     "events": [
       {
         "stage": "discover",
@@ -148,6 +199,48 @@
         "status": "completed",
         "timestamp": "2026-04-19T18:54:32",
         "details": "Se descargaron 1 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-19T23:59:15",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:00:26",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:01:01",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:01:41",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:03:55",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:06:57",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:08:42",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
       }
     ]
   }

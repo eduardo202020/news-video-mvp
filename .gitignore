@@ -3,6 +3,14 @@ __pycache__/
 *.pyc
 *.wav
 *.mp4
+data/jobs/**/input/**/*.jpg
+data/jobs/**/input/**/*.jpeg
+data/jobs/**/input/**/*.png
+data/jobs/**/input/**/*.webp
+data/review/**/*.jpg
+data/review/**/*.jpeg
+data/review/**/*.png
+data/review/**/*.webp
 output/*
 !output/.gitkeep
 remotion-app/node_modules/

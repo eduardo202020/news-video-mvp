@@ -49,6 +49,27 @@
         "page_number": 4,
         "source_url": "https://t.prcdn.co/img?file=eagb2026041900000000001001&page=4&scale=80",
         "local_path": "data/jobs/2026-04-19/2026-04-19-correo-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026041900000000001001&page=5&scale=80",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-correo-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 17",
+        "page_number": 17,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026041900000000001001&page=17&scale=80",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-correo-frontpage-001/input/pages/page-17.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 22",
+        "page_number": 22,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026041900000000001001&page=22&scale=80",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-correo-frontpage-001/input/pages/page-22.jpg"
       }
     ]
   },
@@ -66,21 +87,74 @@
   "page_selection": {
     "strategy": "cover_first",
     "provider": "chatgpt_plus_manual",
-    "status": "approved_manual",
+    "status": "downloaded",
     "selected_page_numbers": [
-      2
+      2,
+      3,
+      4,
+      5,
+      17,
+      22
     ],
     "candidates": [
       {
-        "headline": "Validacion pagina 2",
+        "headline": "APP, APRA, PPC y otros partidos necesitarán medio millón de firmas para reinscribirse",
         "page_number": 2,
-        "evidence_line": "PAG 2",
+        "evidence_line": "págs. 2-3 TEMA DEL DÍA",
         "line_index": null,
         "method": "manual_import",
-        "confidence": 0.95
+        "confidence": 0.97
+      },
+      {
+        "headline": "APP, APRA, PPC y otros partidos necesitarán medio millón de firmas para reinscribirse",
+        "page_number": 3,
+        "evidence_line": "págs. 2-3 TEMA DEL DÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "El JNE anuncia resultados para la quincena de mayo y hay actas observadas pendientes",
+        "page_number": 4,
+        "evidence_line": "pág. 4 POLÍTICA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Plan de gobierno de JP copia idea del poder popular del chavismo",
+        "page_number": 5,
+        "evidence_line": "pág. 5 POLÍTICA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Autorizan el inicio del proyecto minero Tía María",
+        "page_number": 17,
+        "evidence_line": "pág. 17 PERÚ",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Alianza propina a Cusco FC una goleada histórica 8-0",
+        "page_number": 22,
+        "evidence_line": "pág. 22 DEPORTES",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
       }
     ],
-    "notes": "Seleccion de prueba para validar importacion batch."
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      3,
+      4,
+      5,
+      17,
+      22
+    ]
   },
   "script": {
     "template_id": "default-anchor",
@@ -122,7 +196,7 @@
   },
   "audit": {
     "created_at": "2026-04-19T18:51:24",
-    "updated_at": "2026-04-19T23:27:49",
+    "updated_at": "2026-04-20T00:08:05",
     "events": [
       {
         "stage": "discover",
@@ -195,6 +269,42 @@
         "status": "completed",
         "timestamp": "2026-04-19T23:27:49",
         "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-19T23:59:15",
+        "details": "Se importaron 6 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:00:26",
+        "details": "Se importaron 6 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:01:52",
+        "details": "Se descargaron 6 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:03:55",
+        "details": "Se importaron 6 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:07:48",
+        "details": "Se descargaron 6 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:08:05",
+        "details": "Se descargaron 6 pagina(s) seleccionadas desde la portada."
       }
     ]
   }

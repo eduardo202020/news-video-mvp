@@ -38,17 +38,59 @@
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 3",
-        "page_number": 3,
-        "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=3&scale=55",
-        "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-03.jpg"
-      },
-      {
-        "role": "supporting_page",
         "label": "Pagina 4",
         "page_number": 4,
         "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=4&scale=55",
         "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=5&scale=55",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=6&scale=55",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=7&scale=55",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 10",
+        "page_number": 10,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=10&scale=55",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-10.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=11&scale=55",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-11.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 14",
+        "page_number": 14,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=14&scale=55",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-14.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 15",
+        "page_number": 15,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026041900000000001001&page=15&scale=55",
+        "local_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/input/pages/page-15.jpg"
       }
     ]
   },
@@ -66,21 +108,104 @@
   "page_selection": {
     "strategy": "cover_first",
     "provider": "chatgpt_plus_manual",
-    "status": "approved_manual",
+    "status": "downloaded",
     "selected_page_numbers": [
-      2
+      2,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      14,
+      15
     ],
     "candidates": [
       {
-        "headline": "Validacion pagina 2",
+        "headline": "Editorial sobre el reemplazo de Corvetto de cara a la segunda vuelta",
         "page_number": 2,
-        "evidence_line": "PAG 2",
+        "evidence_line": "EDITORIAL -PÁGINA 2-",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "Seis expertos plantean salidas a la crisis electoral y política",
+        "page_number": 4,
+        "evidence_line": "DESDE LA CÚPULA ... -PÁGINAS 4-7-",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Seis expertos plantean salidas a la crisis electoral y política",
+        "page_number": 5,
+        "evidence_line": "DESDE LA CÚPULA ... -PÁGINAS 4-7-",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Seis expertos plantean salidas a la crisis electoral y política",
+        "page_number": 6,
+        "evidence_line": "DESDE LA CÚPULA ... -PÁGINAS 4-7-",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Seis expertos plantean salidas a la crisis electoral y política",
+        "page_number": 7,
+        "evidence_line": "DESDE LA CÚPULA ... -PÁGINAS 4-7-",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Hay elementos de juicio para pedir prisión preventiva para Corvetto",
+        "page_number": 10,
+        "evidence_line": "POR TRES DELITOS -PÁGINAS 10-11-",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.94
+      },
+      {
+        "headline": "Hay elementos de juicio para pedir prisión preventiva para Corvetto",
+        "page_number": 11,
+        "evidence_line": "POR TRES DELITOS -PÁGINAS 10-11-",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Se refuerzan vigilancias en fronteras y puntos de control",
+        "page_number": 14,
+        "evidence_line": "Se refuerzan vigilancias en fronteras y puntos de control -PÁGINA 14-",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Contraloría detecta informalidades en logística de la ONPE durante las elecciones",
+        "page_number": 15,
+        "evidence_line": "FISCALÍA INVESTIGA ... -PÁGINA 15-",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
       }
     ],
-    "notes": "Seleccion de prueba para validar importacion batch."
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      14,
+      15
+    ]
   },
   "script": {
     "template_id": "default-anchor",
@@ -122,7 +247,7 @@
   },
   "audit": {
     "created_at": "2026-04-19T18:51:49",
-    "updated_at": "2026-04-19T23:28:02",
+    "updated_at": "2026-04-20T00:08:31",
     "events": [
       {
         "stage": "discover",
@@ -195,6 +320,48 @@
         "status": "completed",
         "timestamp": "2026-04-19T23:28:02",
         "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-19T23:59:15",
+        "details": "Se importaron 9 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:00:26",
+        "details": "Se importaron 9 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:01:31",
+        "details": "Se descargaron 9 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:01:41",
+        "details": "Se importaron 9 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:03:55",
+        "details": "Se importaron 9 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:07:29",
+        "details": "Se descargaron 9 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-20T00:08:31",
+        "details": "Se descargaron 9 pagina(s) seleccionadas desde la portada."
       }
     ]
   }
