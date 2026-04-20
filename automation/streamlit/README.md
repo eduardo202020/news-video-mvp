@@ -22,12 +22,14 @@ Antes de abrir Streamlit, lo mas comodo es preparar el entorno con:
 
 La app en `automation/streamlit/app.py` permite:
 
+- crear un lote diario de jobs por periodico desde la propia UI
 - ver metricas por estado y fuente
 - filtrar jobs por fuente, estado y texto
 - revisar una bandeja de jobs
 - ver portada, OCR, titulares, guion, audio, subtitulos y preview
 - editar y aprobar guiones
 - ejecutar etapas del pipeline desde botones
+- preparar e importar seleccion manual de paginas desde varias portadas
 - preparar publicacion declarativa
 - revisar el timeline de eventos del job
 
@@ -53,37 +55,31 @@ pip install -r .\automation\streamlit\requirements.txt
 
 ## Requisito minimo
 
-La app necesita al menos un `job-manifest` en `data/jobs/`.
+Ya no necesitas crear un `job-manifest` por terminal para empezar.
 
-Si no existe ninguno, veras el mensaje:
+Si `data/jobs/` todavia esta vacio, la app igual abre y muestra el bloque `Crear Lote Diario de Jobs`, desde donde puedes:
 
-```text
-No se encontraron jobs en data/jobs/.
-```
-
-Puedes crear uno con:
-
-```powershell
-news-video-mvp-automation init-job `
-  --source-config .\automation\sources\diarios\ojo.json `
-  --date 2026-04-13 `
-  --voice-profile .\automation\templates\voices\cuy-02.json `
-  --video-template .\automation\templates\video\vertical-news.json `
-  --front-page-image .\remotion-app\public\assets\covers\ojo.png
-```
+1. elegir fecha
+2. seleccionar los periodicos
+3. definir voice profile y approval mode
+4. decidir si quieres descargar la portada al crear
+5. crear el lote completo desde la UI
 
 ## Flujo recomendado desde la UI
 
 1. abrir Streamlit
-2. seleccionar un job
-3. ejecutar `Extract + Classify`
-4. ejecutar `Generate Draft`
-5. revisar y aprobar el guion
-6. ejecutar `Voice + Subtitle`
-7. ejecutar `Build Story Manifest`
-8. ejecutar `Compose Job para Preview`
-9. abrir `npm run dev` y revisar `NewsVideo-generated`
-10. preparar o confirmar la publicacion
+2. usar `Crear Lote Diario de Jobs`
+3. si trabajas con varias portadas, usar `Seleccion Manual de Paginas desde Portadas`
+4. seleccionar un job
+5. ejecutar `Extract + Classify`
+6. usar `Cover Pages` para analizar OCR, importar JSON manual o descargar paginas seleccionadas
+7. ejecutar `Generate Draft`
+8. revisar y aprobar el guion
+9. ejecutar `Voice + Subtitle`
+10. ejecutar `Build Story Manifest`
+11. ejecutar `Compose Job para Preview`
+12. abrir `npm run dev` y revisar `NewsVideo-generated`
+13. preparar o confirmar la publicacion
 
 ## Relacion con Remotion
 

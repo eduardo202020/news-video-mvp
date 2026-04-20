@@ -7,22 +7,31 @@ from pathlib import Path
 import sys
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[2]
 JOBS_DIR = PROJECT_DIR / "data" / "jobs"
+SOURCES_DIR = PROJECT_DIR / "automation" / "sources" / "diarios"
 SRC_DIR = PROJECT_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 from news_video_mvp.automation_pipeline import (  # noqa: E402
+    analyze_cover_page_references_for_job,
     approve_script_for_job,
+    build_job_id,
     build_story_manifest_from_job,
     compose_job_for_preview,
+    create_job_manifest,
     extract_and_classify_job,
     generate_script_from_job,
     generate_voice_and_subtitles_for_job,
+    import_cover_page_selection_batch,
+    import_cover_page_selection_for_job,
     publish_job,
+    scrape_source_into_job,
+    scrape_selected_pages_for_job,
 )
 
 
@@ -31,6 +40,9 @@ DEFAULT_SCRIPT_TEMPLATE = PROJECT_DIR / "automation" / "templates" / "scripts" /
 DEFAULT_VIDEO_TEMPLATE = PROJECT_DIR / "automation" / "templates" / "video" / "vertical-news.json"
 DEFAULT_SUBTITLE_POLICY = PROJECT_DIR / "automation" / "rules" / "subtitle-policy.json"
 DEFAULT_PUBLISHING_PROFILE = PROJECT_DIR / "automation" / "templates" / "publishing" / "tiktok.json"
+DEFAULT_COVER_BATCH_PROMPT = (
+    PROJECT_DIR / "automation" / "templates" / "prompts" / "cover-page-selection-batch.md"
+)
 VOICE_PROFILES_DIR = PROJECT_DIR / "automation" / "templates" / "voices"
 
 
@@ -52,6 +64,12 @@ def discover_jobs() -> list[Path]:
     return sorted(JOBS_DIR.glob("*/*/job-manifest.json"), reverse=True)
 
 
+def discover_source_configs() -> list[Path]:
+    if not SOURCES_DIR.exists():
+        return []
+    return sorted(SOURCES_DIR.glob("*.json"))
+
+
 def load_jobs() -> list[dict]:
     jobs: list[dict] = []
     for path in discover_jobs():
@@ -66,6 +84,64 @@ def get_voice_profile_path(profile_id: str | None) -> Path | None:
         return None
     candidate = VOICE_PROFILES_DIR / f"{profile_id}.json"
     return candidate if candidate.exists() else None
+
+
+def create_daily_jobs_batch(
+    *,
+    job_date: str,
+    source_ids: list[str],
+    voice_profile_path: Path,
+    approval_mode: str,
+    scrape_front_pages: bool,
+    max_supporting_pages: int,
+    force_scrape_existing: bool,
+) -> list[dict[str, object]]:
+    source_configs = {path.stem: path for path in discover_source_configs()}
+    results: list[dict[str, object]] = []
+
+    for source_id in source_ids:
+        source_config_path = source_configs.get(source_id)
+        if source_config_path is None:
+            results.append({"source_id": source_id, "status": "missing_source_config"})
+            continue
+
+        job_id = build_job_id(job_date=job_date, source_id=source_id)
+        manifest_path = JOBS_DIR / job_date / job_id / "job-manifest.json"
+        created_now = False
+        if not manifest_path.exists():
+            manifest_path = create_job_manifest(
+                source_config_path=source_config_path,
+                job_date=job_date,
+                approval_mode=approval_mode,
+                voice_profile_path=voice_profile_path,
+                video_template_path=DEFAULT_VIDEO_TEMPLATE,
+                script_template_id="default-anchor",
+                publish_profile_id="tiktok",
+                subtitle_policy_id="default-2-lines",
+                job_id=job_id,
+            )
+            created_now = True
+
+        status = "created" if created_now else "existing"
+        if scrape_front_pages:
+            scrape_source_into_job(
+                job_manifest_path=manifest_path,
+                source_config_path=source_config_path,
+                max_supporting_pages=max_supporting_pages,
+                force=force_scrape_existing,
+            )
+            status = "scraped" if created_now else "existing_scraped"
+
+        results.append(
+            {
+                "source_id": source_id,
+                "job_id": job_id,
+                "job_manifest_path": rel(manifest_path),
+                "status": status,
+            }
+        )
+
+    return results
 
 
 def update_job_script(job_path: Path, approved_text: str, review_notes: str, approve: bool) -> None:
@@ -159,6 +235,92 @@ def render_job_summary(job: dict) -> None:
     summary_col4.metric("OCR", job.get("extraction", {}).get("confidence", 0))
 
 
+def build_cover_batch_metadata(jobs: list[dict]) -> str:
+    lines: list[str] = []
+    portadas = [job for job in jobs if job.get("input_assets", {}).get("front_page_image")]
+    for index, job in enumerate(portadas, start=1):
+        manifest_path = job.get("_path")
+        if not isinstance(manifest_path, Path):
+            continue
+        lines.extend(
+            [
+                f"- portada {index}",
+                f"  newspaper_name: {job.get('source_id', 'sin-source')}",
+                f"  job_id: {job.get('job_id', 'sin-id')}",
+                f"  job_manifest_path: {rel(manifest_path)}",
+                "",
+            ]
+        )
+    return "\n".join(lines).strip()
+
+
+def build_cover_batch_seed_payload(jobs: list[dict]) -> str:
+    payload = {
+        "notes": (
+            "Base editable para seleccion manual desde ChatGPT. "
+            "Completa `items` con la respuesta del analisis de portadas."
+        ),
+        "jobs": [],
+    }
+    for job in jobs:
+        manifest_path = job.get("_path")
+        front_page = job.get("input_assets", {}).get("front_page_image")
+        if not isinstance(manifest_path, Path) or not front_page:
+            continue
+        payload["jobs"].append(
+            {
+                "job_manifest_path": rel(manifest_path),
+                "job_id": job.get("job_id", ""),
+                "newspaper_name": job.get("source_id", ""),
+                "notes": "",
+                "items": [],
+            }
+        )
+    return json.dumps(payload, ensure_ascii=False, indent=2)
+
+
+def build_cover_batch_prompt(jobs: list[dict]) -> str:
+    prompt_template = ""
+    if DEFAULT_COVER_BATCH_PROMPT.exists():
+        prompt_template = DEFAULT_COVER_BATCH_PROMPT.read_text(encoding="utf-8")
+    metadata_text = build_cover_batch_metadata(jobs)
+    return prompt_template.replace("{{PORTADAS}}", metadata_text) if prompt_template else metadata_text
+
+
+def render_copy_button(*, label: str, text: str, key: str) -> None:
+    payload = json.dumps(text)
+    safe_label = json.dumps(label)
+    components.html(
+        f"""
+        <button id="{key}" style="
+            width: 100%;
+            padding: 0.55rem 0.8rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d0d7de;
+            background: #f6f8fa;
+            cursor: pointer;
+            font: inherit;
+        ">{label}</button>
+        <script>
+        const btn = document.getElementById({json.dumps(key)});
+        const text = {payload};
+        const original = {safe_label};
+        btn.onclick = async () => {{
+          try {{
+            await navigator.clipboard.writeText(text);
+            btn.innerText = "Copiado";
+            setTimeout(() => btn.innerText = original, 1400);
+          }} catch (err) {{
+            btn.innerText = "No se pudo copiar";
+            setTimeout(() => btn.innerText = original, 1800);
+          }}
+        }};
+        </script>
+        """,
+        height=52,
+    )
+
+
 def render_event_timeline(job: dict) -> None:
     events = list(reversed(job.get("audit", {}).get("events", [])))
     if not events:
@@ -195,12 +357,77 @@ st.title("News Video MVP Review")
 st.caption("Panel operativo para revisar jobs, ejecutar etapas y monitorear el pipeline declarativo.")
 
 all_jobs = load_jobs()
-if not all_jobs:
-    st.info("No se encontraron jobs en `data/jobs/`.")
-    st.stop()
+available_source_configs = discover_source_configs()
+available_source_ids = [path.stem for path in available_source_configs]
+default_voice_profile_path = VOICE_PROFILES_DIR / "voicebox-local.json"
 
-source_options = ["Todos"] + sorted({job.get("source_id", "sin-source") for job in all_jobs})
-status_options = ["Todos"] + sorted({job.get("status", "sin-status") for job in all_jobs})
+with st.expander("Scrapear Periodicos", expanded=not all_jobs):
+    st.caption(
+        "Crea un job por periodico e intenta descargar la portada desde la misma UI."
+    )
+    batch_col1, batch_col2 = st.columns(2)
+    with batch_col1:
+        batch_date = st.date_input("Fecha del lote", value=datetime.now().date(), format="YYYY-MM-DD")
+    with batch_col2:
+        voice_profile_options = [path.stem for path in sorted(VOICE_PROFILES_DIR.glob("*.json"))]
+        default_voice_profile = "voicebox-local" if "voicebox-local" in voice_profile_options else (
+            voice_profile_options[0] if voice_profile_options else ""
+        )
+        batch_voice_profile = st.selectbox(
+            "Voice profile",
+            voice_profile_options,
+            index=voice_profile_options.index(default_voice_profile) if default_voice_profile in voice_profile_options else 0,
+        )
+    batch_approval_mode = "semi_auto"
+
+    batch_sources = st.multiselect(
+        "Periodicos",
+        available_source_ids,
+        default=available_source_ids,
+        placeholder="Selecciona una o mas fuentes",
+    )
+    with st.expander("Opciones avanzadas", expanded=False):
+        batch_opt_col1, batch_opt_col2 = st.columns(2)
+        with batch_opt_col1:
+            batch_scrape_front_pages = st.checkbox("Descargar portada al crear", value=True)
+            batch_force_existing = st.checkbox("Re-scrapear jobs existentes", value=False)
+        with batch_opt_col2:
+            batch_max_supporting_pages = st.number_input(
+                "Max supporting pages",
+                min_value=0,
+                max_value=10,
+                value=3,
+                step=1,
+            )
+
+    if st.button("Scrapear periodicos", use_container_width=True, type="primary"):
+        if not batch_sources:
+            st.error("Selecciona al menos un periodico para crear el lote.")
+        else:
+            try:
+                results = create_daily_jobs_batch(
+                    job_date=batch_date.isoformat(),
+                    source_ids=batch_sources,
+                    voice_profile_path=VOICE_PROFILES_DIR / f"{batch_voice_profile}.json",
+                    approval_mode=batch_approval_mode,
+                    scrape_front_pages=batch_scrape_front_pages,
+                    max_supporting_pages=int(batch_max_supporting_pages),
+                    force_scrape_existing=batch_force_existing,
+                )
+                st.session_state["daily_job_batch_results"] = results
+                st.success("Lote diario procesado.")
+                st.rerun()
+            except Exception as exc:
+                st.error(str(exc))
+
+    daily_batch_results = st.session_state.get("daily_job_batch_results")
+    if daily_batch_results:
+        with st.expander("Ver resultado del scraping", expanded=False):
+            st.json(daily_batch_results)
+
+all_jobs = load_jobs()
+source_options = ["Todos"] + sorted({job.get("source_id", "sin-source") for job in all_jobs}) if all_jobs else ["Todos"]
+status_options = ["Todos"] + sorted({job.get("status", "sin-status") for job in all_jobs}) if all_jobs else ["Todos"]
 
 st.sidebar.header("Filtros")
 selected_source = st.sidebar.selectbox("Fuente", source_options)
@@ -214,12 +441,76 @@ filtered_jobs = filter_jobs(
     text_query=text_query,
 )
 
-render_dashboard(filtered_jobs)
+if all_jobs:
+    render_dashboard(filtered_jobs)
+else:
+    st.info("No se encontraron jobs en `data/jobs/`. Usa el bloque superior para crear el lote diario.")
 
 board_tab, detail_tab = st.tabs(["Jobs", "Detalle"])
 
 with board_tab:
     render_job_board(filtered_jobs)
+    st.subheader("Portadas y Prompt")
+    cover_jobs = [job for job in filtered_jobs if job.get("input_assets", {}).get("front_page_image")]
+    if not cover_jobs:
+        st.info("Los jobs filtrados no tienen portada disponible para este flujo.")
+    else:
+        metadata_text = build_cover_batch_metadata(cover_jobs)
+        prompt_text = build_cover_batch_prompt(cover_jobs)
+        seed_payload = build_cover_batch_seed_payload(cover_jobs)
+        st.caption("1. Scrapear periodicos. 2. Revisar portadas. 3. Copiar bloque de portadas. 4. Copiar prompt. 5. Pegar el JSON devuelto por ChatGPT.")
+
+        gallery_cols = st.columns(min(4, len(cover_jobs)))
+        for index, job in enumerate(cover_jobs[:4]):
+            image_path = PROJECT_DIR / str(job.get("input_assets", {}).get("front_page_image"))
+            with gallery_cols[index]:
+                if image_path.exists():
+                    st.image(str(image_path), caption=job.get("source_id", "sin-source"), use_container_width=True)
+
+        copy_col1, copy_col2 = st.columns(2)
+        with copy_col1:
+            render_copy_button(
+                label="Copiar bloque de portadas",
+                text=metadata_text,
+                key="copy_cover_metadata",
+            )
+        with copy_col2:
+            render_copy_button(
+                label="Copiar prompt",
+                text=prompt_text,
+                key="copy_cover_prompt",
+            )
+
+        with st.expander("Ver texto a copiar", expanded=False):
+            st.text_area(
+                "Bloque de portadas",
+                value=metadata_text,
+                height=180,
+                key="cover_batch_metadata",
+            )
+            st.text_area(
+                "Prompt",
+                value=prompt_text,
+                height=320,
+                key="cover_batch_prompt",
+            )
+
+        with st.expander("Pegar respuesta JSON de ChatGPT", expanded=False):
+            batch_json_value = st.text_area(
+                "Pega aqui el JSON devuelto por ChatGPT",
+                value=seed_payload,
+                height=260,
+                key="cover_batch_import_payload",
+            )
+            if st.button("Importar Seleccion Batch", use_container_width=True, type="primary"):
+                run_action(
+                    "Seleccion batch importada.",
+                    lambda: import_cover_page_selection_batch(
+                        selection_text=batch_json_value,
+                        provider="chatgpt_plus_manual",
+                        force=True,
+                    ),
+                )
 
 with detail_tab:
     if not filtered_jobs:
@@ -242,6 +533,7 @@ with detail_tab:
     subtitles = job.get("subtitles", {})
     video = job.get("video", {})
     publication = job.get("publication", {})
+    page_selection = job.get("page_selection", {})
 
     edited_text = script.get("approved_text", "") or script.get("draft", "")
     edited_notes = script.get("review_notes", "")
@@ -300,6 +592,20 @@ with detail_tab:
                 st.markdown(f"Titulo: `{publication.get('title')}`")
             if publication.get("post_url"):
                 st.markdown(f"URL: `{publication.get('post_url')}`")
+            st.subheader("Seleccion de Paginas")
+            st.markdown(f"Provider: `{page_selection.get('provider') or 'pendiente'}`")
+            st.markdown(f"Status: `{page_selection.get('status') or 'not_started'}`")
+            st.markdown(
+                f"Paginas: `{', '.join(str(item) for item in page_selection.get('selected_page_numbers', [])) or 'ninguna'}`"
+            )
+            if page_selection.get("notes"):
+                st.caption(page_selection.get("notes"))
+            with st.expander("Candidatas registradas", expanded=False):
+                candidates = page_selection.get("candidates", [])
+                if candidates:
+                    st.json(candidates)
+                else:
+                    st.caption("Sin candidatas registradas.")
 
     with script_tab:
         st.subheader("Revision del Guion")
@@ -367,6 +673,59 @@ with detail_tab:
                         editorial_policy_path=DEFAULT_EDITORIAL_POLICY,
                         ocr_text=ocr_text_value,
                         ocr_confidence=ocr_confidence_value,
+                    ),
+                )
+
+        with st.expander("Cover Pages", expanded=False):
+            source_config_value = job.get("source", {}).get("source_config_path") or job.get("input_assets", {}).get(
+                "source_config"
+            )
+            source_config_path = PROJECT_DIR / source_config_value if source_config_value else None
+            manual_selection_default = json.dumps(
+                {
+                    "notes": "Seleccion manual desde Streamlit.",
+                    "items": page_selection.get("candidates", []),
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+            cover_col1, cover_col2 = st.columns(2)
+            with cover_col1:
+                if st.button("Analizar OCR de Portada", use_container_width=True):
+                    run_action(
+                        "Analisis de portada completado.",
+                        lambda: analyze_cover_page_references_for_job(
+                            job_manifest_path=job_path,
+                            max_candidates=6,
+                            force=True,
+                        ),
+                    )
+            with cover_col2:
+                if source_config_path is None or not source_config_path.exists():
+                    st.warning("No se encontro `source_config` para descargar paginas seleccionadas.")
+                elif st.button("Descargar Paginas Seleccionadas", use_container_width=True):
+                    run_action(
+                        "Paginas seleccionadas descargadas.",
+                        lambda: scrape_selected_pages_for_job(
+                            job_manifest_path=job_path,
+                            source_config_path=source_config_path,
+                            force=True,
+                        ),
+                    )
+            manual_selection_value = st.text_area(
+                "JSON manual de seleccion",
+                value=manual_selection_default,
+                height=220,
+                key=f"manual_cover_selection_{job.get('job_id')}",
+            )
+            if st.button("Importar Seleccion Manual", use_container_width=True, type="primary"):
+                run_action(
+                    "Seleccion manual importada.",
+                    lambda: import_cover_page_selection_for_job(
+                        job_manifest_path=job_path,
+                        selection_text=manual_selection_value,
+                        provider="chatgpt_plus_manual",
+                        force=True,
                     ),
                 )
 

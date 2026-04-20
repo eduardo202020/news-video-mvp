@@ -1,0 +1,24 @@
+- portada 1
+  newspaper_name: Ojo
+  job_id: 2026-04-18-ojo-artifacts-test
+  job_manifest_path: data/jobs/2026-04-18/2026-04-18-ojo-artifacts-test/job-manifest.json
+
+- portada 2
+  newspaper_name: Ojo
+  job_id: 2026-04-18-ojo-cover-first-test
+  job_manifest_path: data/jobs/2026-04-18/2026-04-18-ojo-cover-first-test/job-manifest.json
+
+- portada 3
+  newspaper_name: Ojo
+  job_id: 2026-04-18-ojo-cover-manual-test
+  job_manifest_path: data/jobs/2026-04-18/2026-04-18-ojo-cover-manual-test/job-manifest.json
+
+- portada 4
+  newspaper_name: Ojo
+  job_id: 2026-04-18-ojo-scrape-hires
+  job_manifest_path: data/jobs/2026-04-18/2026-04-18-ojo-scrape-hires/job-manifest.json
+
+- portada 5
+  newspaper_name: Ojo
+  job_id: 2026-04-18-voicebox-test
+  job_manifest_path: data/jobs/2026-04-18/2026-04-18-voicebox-test/job-manifest.json

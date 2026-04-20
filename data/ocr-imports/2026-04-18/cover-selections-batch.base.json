@@ -1,0 +1,40 @@
+{
+  "notes": "Base editable para seleccion manual desde ChatGPT. Elimina los jobs que no quieras usar y completa `items` con la respuesta del analisis de portadas.",
+  "jobs": [
+    {
+      "job_manifest_path": "data/jobs/2026-04-18/2026-04-18-ojo-artifacts-test/job-manifest.json",
+      "job_id": "2026-04-18-ojo-artifacts-test",
+      "newspaper_name": "Ojo",
+      "notes": "",
+      "items": []
+    },
+    {
+      "job_manifest_path": "data/jobs/2026-04-18/2026-04-18-ojo-cover-first-test/job-manifest.json",
+      "job_id": "2026-04-18-ojo-cover-first-test",
+      "newspaper_name": "Ojo",
+      "notes": "",
+      "items": []
+    },
+    {
+      "job_manifest_path": "data/jobs/2026-04-18/2026-04-18-ojo-cover-manual-test/job-manifest.json",
+      "job_id": "2026-04-18-ojo-cover-manual-test",
+      "newspaper_name": "Ojo",
+      "notes": "",
+      "items": []
+    },
+    {
+      "job_manifest_path": "data/jobs/2026-04-18/2026-04-18-ojo-scrape-hires/job-manifest.json",
+      "job_id": "2026-04-18-ojo-scrape-hires",
+      "newspaper_name": "Ojo",
+      "notes": "",
+      "items": []
+    },
+    {
+      "job_manifest_path": "data/jobs/2026-04-18/2026-04-18-voicebox-test/job-manifest.json",
+      "job_id": "2026-04-18-voicebox-test",
+      "newspaper_name": "Ojo",
+      "notes": "",
+      "items": []
+    }
+  ]
+}

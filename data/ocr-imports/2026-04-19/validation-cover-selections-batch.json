@@ -1,0 +1,67 @@
+{
+  "notes": "Validacion tecnica del flujo batch desde Streamlit/ChatGPT.",
+  "jobs": [
+    {
+      "job_manifest_path": "data/jobs/2026-04-19/2026-04-19-correo-frontpage-001/job-manifest.json",
+      "job_id": "2026-04-19-correo-frontpage-001",
+      "newspaper_name": "Correo",
+      "notes": "Seleccion de prueba para validar importacion batch.",
+      "items": [
+        {
+          "headline": "Validacion pagina 2",
+          "page_number": 2,
+          "confidence": 0.95,
+          "evidence_line": "PAG 2"
+        }
+      ]
+    },
+    {
+      "job_manifest_path": "data/jobs/2026-04-19/2026-04-19-elcomercio-frontpage-001/job-manifest.json",
+      "job_id": "2026-04-19-elcomercio-frontpage-001",
+      "newspaper_name": "El Comercio",
+      "notes": "Seleccion de prueba para validar importacion batch.",
+      "items": [
+        {
+          "headline": "Validacion pagina 2",
+          "page_number": 2,
+          "confidence": 0.94,
+          "evidence_line": "PAG 2"
+        }
+      ]
+    },
+    {
+      "job_manifest_path": "data/jobs/2026-04-19/2026-04-19-ojo-frontpage-001/job-manifest.json",
+      "job_id": "2026-04-19-ojo-frontpage-001",
+      "newspaper_name": "Ojo",
+      "notes": "Seleccion de prueba para validar importacion batch.",
+      "items": [
+        {
+          "headline": "Validacion pagina 2",
+          "page_number": 2,
+          "confidence": 0.96,
+          "evidence_line": "PAG 2"
+        },
+        {
+          "headline": "Validacion pagina 5",
+          "page_number": 5,
+          "confidence": 0.91,
+          "evidence_line": "PAG 5"
+        }
+      ]
+    },
+    {
+      "job_manifest_path": "data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/job-manifest.json",
+      "job_id": "2026-04-19-trome-frontpage-001",
+      "newspaper_name": "Trome",
+      "notes": "Seleccion de prueba para validar importacion batch.",
+      "items": [
+        {
+          "headline": "Validacion pagina 2",
+          "page_number": 2,
+          "confidence": 0.93,
+          "evidence_line": "PAG 2"
+        }
+      ]
+    }
+  ]
+}
