@@ -429,123 +429,166 @@ news-video-mvp-automation publish-job `
 
 ## Flujo recomendado de trabajo
 
-### Flujo manual recomendado para varias portadas
+### Estado actual del flujo
 
-1. descubre o descarga solo la portada de cada periodico y crea un job por periodico
-2. abre [cover-page-selection-batch.md](./automation/templates/prompts/cover-page-selection-batch.md)
-3. reemplaza `{{PORTADAS}}` por una lista como esta:
+Hoy el flujo activo y mas avanzado del repo es este:
 
-```text
-- portada 1
-  newspaper_name: Ojo
-  job_id: 2026-04-19-ojo-frontpage-001
-  job_manifest_path: data/jobs/2026-04-19/2026-04-19-ojo-frontpage-001/job-manifest.json
-- portada 2
-  newspaper_name: Trome
-  job_id: 2026-04-19-trome-frontpage-001
-  job_manifest_path: data/jobs/2026-04-19/2026-04-19-trome-frontpage-001/job-manifest.json
-```
+1. scrapear solo las portadas y crear un job por periodico
+2. usar un prompt manual en ChatGPT para detectar noticias principales de portada
+3. importar esa seleccion a los `job-manifest`
+4. descargar solo las paginas internas necesarias como contexto editorial
+5. usar un segundo prompt para obtener micro-resumenes por noticia
+6. usar despues `story_type` para asignar reportero y `cover_region` para hacer zoom sobre la portada
 
-4. sube todas las portadas al mismo chat y pega el prompt
-5. guarda la respuesta JSON usando como referencia [cover-page-selection-batch.example.json](./automation/templates/prompts/cover-page-selection-batch.example.json)
-6. importa el lote con `import-cover-pages-batch`
-7. para cada job, ejecuta `scrape-selected-pages`
+Importante:
 
-### Flujo 1: Preview rapido con Streamlit + Remotion
+- en el video final la idea actual es mostrar solo la portada
+- las paginas internas no son assets visuales finales; se descargan solo para entender mejor cada noticia
+- la unidad narrativa real ya no es la pagina, sino la noticia detectada en portada
 
-1. activa `.venv`
-2. abre Streamlit
-3. crea o carga un job
-4. ejecuta etapas hasta `compose-job`
-5. abre Remotion Studio con `npm run dev`
-6. revisa `NewsVideo-generated`
+### Flujo operativo en Streamlit
+
+La app de Streamlit ya soporta este flujo semi-manual:
+
+1. `Scrapear periodicos`
+2. revisar `Portadas y Prompt`
+3. `Abrir carpeta de portadas`
+4. `Copiar prompt`
+5. pegar la respuesta JSON de ChatGPT en `Importar Seleccion Batch`
+6. aplicar opcionalmente `Filtro editorial del lote`
+7. `Descargar paginas del lote`
+8. revisar `Ver resultado de descarga de paginas` con miniaturas
+9. usar los prompts por bloques de 2 periodicos para resumir las paginas descargadas
 
 Abrir Streamlit:
 
 ```powershell
-streamlit run .\automation\streamlit\app.py
+.\.venv\Scripts\python.exe -m streamlit run .\automation\streamlit\app.py
 ```
 
-Abrir Remotion Studio:
+Atajo:
 
 ```powershell
-cd .\remotion-app
-npm run dev
+.\scripts\dev-streamlit.ps1
 ```
 
-Alternativa rapida:
+### Que devuelve hoy el primer prompt
 
-```powershell
-.\scripts\dev.ps1
-```
+El prompt de portadas devuelve JSON por job con `items` como estos:
 
-Uso recomendado en Studio:
+- `headline`
+- `story_type`
+- `cover_region`
+- `page_number`
+- `confidence`
+- `evidence_line`
 
-1. `NewsVideo-generated`
-   Ultima historia preparada por el pipeline declarativo.
-2. `NewsVideo`
-   Composicion base de trabajo.
-3. demos fijas como `NewsVideo-periodicos-secuencia-demo`
+Internamente, al importar, el pipeline conserva:
 
-### Flujo 2: Render final tradicional
+- `page_selection.candidates`
+- `page_selection.selected_page_numbers`
+- `page_selection.stories`
 
-1. prepara assets o story config
-2. corre la CLI clasica
-3. revisa salida en `output/`
+`page_selection.stories` ya agrupa automaticamente paginas repetidas de una misma noticia y es la base correcta para la capa narrativa.
 
-### Flujo 3: Pipeline declarativo completo
+### Que hace hoy el segundo prompt
 
-1. `init-job`
-2. `extract-job`
-3. `generate-script`
-4. `approve-script`
-5. `voice-job`
-6. `build-story-manifest`
-7. `compose-job`
-8. revisar en `npm run dev`
-9. `publish-job`
-10. opcionalmente render final
+El prompt que se usa sobre paginas internas ya no busca un resumen largo. Ahora produce:
+
+- micro-resumenes breves por noticia
+- `page_numbers`
+- `cover_region`
+- `story_type`
+- `key_facts`
+
+Ese prompt ya asume que:
+
+- las paginas internas sirven solo como contexto
+- el speech final sera corto, tipo TikTok
+- luego el video debe hablar sobre la portada, no sobre las paginas interiores
+
+### Uso recomendado hoy
+
+Si quieres avanzar rapido con el flujo actual:
+
+1. trabaja desde Streamlit hasta descargar paginas
+2. usa los prompts generados por la misma app
+3. guarda los JSON devueltos por ChatGPT en `data/ocr-imports/`
+4. deja Remotion para la siguiente etapa, cuando ya exista la capa narrativa cerrada
 
 ## Como usar Streamlit
 
-La app de Streamlit sirve como panel operativo. No reemplaza el pipeline; lo controla.
+La app de Streamlit es hoy el panel principal del pipeline manual-asistido.
 
-Hoy permite:
+Ya permite:
 
-- ver metricas por estado y fuente
-- filtrar jobs
-- revisar OCR, titulares, guion, audio, subtitulos y preview
-- ejecutar etapas del pipeline desde botones
-- editar y aprobar guiones
-- preparar publicacion declarativa
-- inspeccionar el timeline de eventos del job
+- crear un lote diario de jobs, uno por periodico
+- descargar portadas
+- mostrar solo un job activo por fuente
+- copiar el prompt dinamico de portadas
+- importar seleccion batch desde ChatGPT
+- aplicar filtro editorial por categoria, suplementos o palabras clave
+- descargar paginas del lote reutilizando las ya existentes cuando coinciden
+- mostrar miniaturas de paginas descargadas
+- generar prompts posteriores por bloques de 2 periodicos
+- importar desde Streamlit el JSON del segundo prompt con micro-resumenes por historia
 
 Si al abrirla aparece:
 
 ```text
-No se encontraron jobs en data/jobs/.
+No se encontraron jobs en `data/jobs/`.
 ```
 
-todavia no existe ningun `job-manifest`. Crea uno primero con `init-job`.
+todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 
-## Ejemplo minimo para poblar Streamlit
+## Lo que ya quedo implementado
 
-```powershell
-news-video-mvp-automation init-job `
-  --source-config .\automation\sources\diarios\ojo.json `
-  --date 2026-04-13 `
-  --voice-profile .\automation\templates\voices\cuy-02.json `
-  --video-template .\automation\templates\video\vertical-news.json `
-  --front-page-image .\remotion-app\public\assets\covers\ojo.png
-```
+- scraping de portadas por lote diario desde Streamlit
+- un job visible por periodico en la UI
+- prompt dinamico para varias portadas
+- importacion batch del JSON devuelto por ChatGPT
+- soporte para `story_type`
+- soporte para `cover_region` normalizado
+- agrupacion interna por historias en `page_selection.stories`
+- filtro editorial del lote antes de descargar paginas
+- descarga batch de paginas seleccionadas
+- reutilizacion de paginas ya descargadas cuando coincide la seleccion
+- miniaturas de paginas descargadas por periodico
+- prompts posteriores por bloques de 2 periodicos para respetar el limite de imagenes de ChatGPT
+- resúmenes pensados para speech breve, no para nota larga
 
-Luego recarga Streamlit y el job aparecera en el panel.
+## Lo que falta
+
+### Capa editorial / datos
+
+- definir formalmente la asignacion `story_type -> reportero/narrador`
+- conectar esos micro-resumenes importados con un manifiesto narrativo intermedio o directo a `story-manifest`
+
+### Capa de video
+
+- llevar `page_selection.stories` o su equivalente narrativo a `story-manifest`
+- usar `cover_region` en Remotion para hacer zoom sobre la portada mientras se narra cada noticia
+- secuenciar varias noticias sobre una misma portada sin mostrar paginas internas
+
+### Automatizacion futura
+
+- reemplazar el paso manual de ChatGPT por API de OpenAI
+- automatizar de punta a punta la seleccion desde portada
+- automatizar la generacion del micro-script por noticia
+
+### Limpieza / producto
+
+- revisar si conviene ocultar aun mas informacion en Streamlit para dejarlo como wizard de pocos pasos
+- documentar mejor el formato del manifiesto narrativo futuro
+- consolidar README secundarios cuando el flujo ya no cambie tanto
 
 ## Flujo de preview sin render pesado
 
-Si quieres iterar rapido, el camino recomendado es:
+La parte de preview con Remotion sigue disponible, pero aun no esta cerrada para este nuevo flujo de portadas con zoom narrativo.
 
-1. llegar hasta `compose-job`
+Cuando exista `story-manifest` listo:
+
+1. ejecutar `compose-job`
 2. abrir `npm run dev`
 3. revisar `NewsVideo-generated`
 

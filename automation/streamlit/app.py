@@ -25,6 +25,7 @@ from news_video_mvp.automation_pipeline import (  # noqa: E402
     analyze_cover_page_references_for_job,
     approve_script_for_job,
     build_job_id,
+    build_daily_rundown_for_date,
     build_story_manifest_from_job,
     compose_job_for_preview,
     create_job_manifest,
@@ -33,6 +34,8 @@ from news_video_mvp.automation_pipeline import (  # noqa: E402
     generate_voice_and_subtitles_for_job,
     import_cover_page_selection_batch,
     import_cover_page_selection_for_job,
+    import_story_narrative_batch,
+    import_story_narrative_for_job,
     publish_job,
     scrape_source_into_job,
     scrape_selected_pages_for_job,
@@ -85,15 +88,26 @@ def discover_source_configs() -> list[Path]:
 
 
 def load_jobs() -> list[dict]:
-    jobs_by_source: dict[str, dict] = {}
     for path in discover_jobs():
         job = read_json(path)
         job["_path"] = path
-        source_id = str(job.get("source_id") or "sin-source")
-        current = jobs_by_source.get(source_id)
-        if current is None or _job_sort_key(job) > _job_sort_key(current):
-            jobs_by_source[source_id] = job
-    return sorted(jobs_by_source.values(), key=_job_sort_key, reverse=True)
+        yield job
+
+
+def list_jobs() -> list[dict]:
+    return sorted(load_jobs(), key=_job_sort_key, reverse=True)
+
+
+def get_default_batch_date(jobs: list[dict]) -> str:
+    if "active_batch_date" in st.session_state:
+        return str(st.session_state["active_batch_date"])
+    if jobs:
+        return str(jobs[0].get("date") or datetime.now().date().isoformat())
+    return datetime.now().date().isoformat()
+
+
+def filter_jobs_by_date(jobs: list[dict], *, selected_date: str) -> list[dict]:
+    return [job for job in jobs if str(job.get("date") or "") == selected_date]
 
 
 def _job_sort_key(job: dict) -> tuple[str, str, str]:
@@ -150,25 +164,98 @@ def create_daily_jobs_batch(
             created_now = True
 
         status = "created" if created_now else "existing"
+        error_message = None
         if scrape_front_pages:
-            scrape_source_into_job(
-                job_manifest_path=manifest_path,
-                source_config_path=source_config_path,
-                max_supporting_pages=max_supporting_pages,
-                force=force_scrape_existing,
-            )
-            status = "scraped" if created_now else "existing_scraped"
+            try:
+                scrape_source_into_job(
+                    job_manifest_path=manifest_path,
+                    source_config_path=source_config_path,
+                    max_supporting_pages=max_supporting_pages,
+                    force=force_scrape_existing,
+                )
+                status = "scraped" if created_now else "existing_scraped"
+            except Exception as exc:
+                status = "scrape_failed"
+                error_message = str(exc)
 
-        results.append(
-            {
-                "source_id": source_id,
-                "job_id": job_id,
-                "job_manifest_path": rel(manifest_path),
-                "status": status,
-            }
-        )
+        payload: dict[str, object] = {
+            "source_id": source_id,
+            "job_id": job_id,
+            "job_manifest_path": rel(manifest_path),
+            "status": status,
+        }
+        if manifest_path.exists():
+            job = read_json(manifest_path)
+            payload["job_status"] = job.get("status")
+            payload["publication_status"] = job.get("source", {}).get("publication_status")
+            payload["front_page_image"] = job.get("input_assets", {}).get("front_page_image")
+            payload["front_page_url"] = job.get("source", {}).get("front_page_url")
+        if error_message:
+            payload["error"] = error_message
+        results.append(payload)
 
     return results
+
+
+def render_daily_batch_results(results: list[dict[str, object]], *, selected_date: str) -> None:
+    if not results:
+        return
+
+    successful = [
+        item for item in results if item.get("front_page_image") and item.get("status") != "scrape_failed"
+    ]
+    missing_front_page = [
+        item
+        for item in results
+        if not item.get("front_page_image")
+        and item.get("publication_status") != "no_publication_for_date"
+        and item.get("status") != "missing_source_config"
+    ]
+    no_publication = [
+        item for item in results if item.get("publication_status") == "no_publication_for_date"
+    ]
+    config_errors = [item for item in results if item.get("status") == "missing_source_config"]
+
+    summary_cols = st.columns(4)
+    summary_cols[0].metric("Con portada", len(successful))
+    summary_cols[1].metric("Sin portada", len(missing_front_page))
+    summary_cols[2].metric("Sin edicion", len(no_publication))
+    summary_cols[3].metric("Errores config", len(config_errors))
+
+    if successful:
+        st.success(
+            f"Lote `{selected_date}`: {len(successful)} fuente(s) con portada descargada."
+        )
+    if missing_front_page:
+        st.warning(
+            "Algunas fuentes no terminaron con portada descargada. Revisa el detalle por periodico antes de continuar."
+        )
+
+    with st.expander("Estado del scraping por periodico", expanded=True):
+        for item in results:
+            source_id = str(item.get("source_id") or "sin-source")
+            job_id = str(item.get("job_id") or "sin-id")
+            publication_status = str(item.get("publication_status") or "")
+            error_message = str(item.get("error") or "").strip()
+            if item.get("status") == "missing_source_config":
+                body = "No se encontro source config para esta fuente."
+                tone = "neutral"
+            elif publication_status == "no_publication_for_date":
+                body = "La fuente no tiene edicion publicada para esta fecha."
+                tone = "neutral"
+            elif item.get("front_page_image"):
+                body = f"Portada lista en `{item.get('front_page_image')}`."
+                tone = "ready"
+            else:
+                body = "El job se creo pero no quedo una portada descargada."
+                if error_message:
+                    body += f" Error: {error_message}"
+                tone = "pending"
+            render_status_card(
+                title=f"{source_id} · {job_id}",
+                body=body,
+                tone=tone,
+            )
 
 
 def download_selected_pages_batch(
@@ -308,6 +395,35 @@ def run_action(label: str, action) -> None:
         st.error(str(exc))
 
 
+def run_daily_rundown_with_feedback(*, job_date: str, voice_profile_id: str) -> None:
+    events: list[dict[str, str]] = []
+    with st.status("Construyendo programa diario...", expanded=True) as status:
+        def on_progress(stage: str, details: str) -> None:
+            events.append({"stage": stage, "details": details})
+            status.write(f"**{stage}** · {details}")
+
+        try:
+            manifest_path = build_daily_rundown_for_date(
+                job_date=job_date,
+                voice_profile_path=VOICE_PROFILES_DIR / f"{voice_profile_id}.json",
+                subtitle_policy_path=DEFAULT_SUBTITLE_POLICY,
+                video_template_path=DEFAULT_VIDEO_TEMPLATE,
+                force=True,
+                progress_callback=on_progress,
+            )
+        except Exception as exc:
+            status.update(label="Programa diario detenido por error.", state="error", expanded=True)
+            st.error(str(exc))
+            if events:
+                st.caption("Ultimas etapas completadas antes del error:")
+                st.json(events[-8:])
+            return
+
+        status.update(label="Programa diario construido para preview.", state="complete", expanded=True)
+        st.success(f"Manifest creado: `{rel(manifest_path)}`")
+        st.caption("Abre Remotion y revisa `NewsVideo-generated`.")
+
+
 def build_job_label(job: dict) -> str:
     return (
         f"{job.get('date', 'sin-fecha')} | "
@@ -377,6 +493,7 @@ def build_cover_batch_metadata(jobs: list[dict]) -> str:
                 f"- portada {index}",
                 f"  newspaper_name: {job.get('source_id', 'sin-source')}",
                 f"  job_id: {job.get('job_id', 'sin-id')}",
+                f"  date: {job.get('date', 'sin-fecha')}",
                 f"  job_manifest_path: {rel(manifest_path)}",
                 f"  cover_image_path: {job.get('input_assets', {}).get('front_page_image')}",
                 f"  cover_dimensions: {dimensions[0]}x{dimensions[1]}" if dimensions else "  cover_dimensions: unknown",
@@ -392,6 +509,12 @@ def build_cover_batch_seed_payload(jobs: list[dict]) -> str:
             "Base editable para seleccion manual desde ChatGPT. "
             "Completa `items` con la respuesta del analisis de portadas."
         ),
+        "rundown_intro": {
+            "speech": "",
+            "date_reference": "",
+            "source_scope": "peru|world|none",
+            "why_it_fits": "",
+        },
         "jobs": [],
     }
     for job in jobs:
@@ -477,6 +600,11 @@ def get_cover_stories(job: dict) -> list[dict]:
     if stories:
         return stories
     return build_story_groups_from_candidates(list(page_selection.get("candidates", [])))
+
+
+def get_story_narrative_entries(job: dict) -> list[dict]:
+    story_narrative = job.get("story_narrative", {})
+    return list(story_narrative.get("stories", []))
 
 
 def story_matches_editorial_filters(
@@ -639,26 +767,31 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         f"Se adjuntan exactamente {page_count} paginas internas, agrupadas en {newspaper_count} periodico(s).",
         "Cada grupo de imagenes corresponde a un diario y a las paginas seleccionadas desde su portada.",
         "Estas paginas internas no se mostraran en el video final; se usan solo para entender mejor cada noticia de la portada.",
-        "El resultado debe servir para narrar sobre la portada, con textos muy breves y faciles de convertir en voz en off.",
+        "El resultado debe ser el speech final para narrar sobre la portada, listo para voz en off, subtitulos y audio.",
         "",
-        "Rol:",
-        "Actua como editor periodistico que resume noticias para voice-over breve de TikTok.",
+        "Contexto del proyecto de ChatGPT:",
+        "- Este prompt debe pegarse en el proyecto de ChatGPT que ya tiene cargadas las fuentes derivadas de `proyect.md`.",
+        "- Ese proyecto tambien debe usar las instrucciones de `instrucciones.md`.",
+        "- Usa esas fuentes para asignar `narrator_profile_id` segun `story_type` y ajustar tono, ritmo, cautela y estilo.",
+        "- No vuelvas a explicar las fuentes; aplicalas directamente.",
         "",
         "Objetivo:",
-        "Para cada periodico, toma las noticias ya detectadas desde portada, usa las paginas internas solo como contexto, y devuelve un micro-script por noticia.",
+        "Para cada periodico, toma las noticias ya detectadas desde portada, usa las paginas internas solo como contexto, y devuelve un speech final por noticia.",
         "",
         "Reglas:",
         "- No inventes hechos, nombres, cifras o citas que no aparezcan en las imagenes.",
-        "- Si una pagina no se lee bien, dilo brevemente en `notes` y resume solo lo que sea confiable.",
+        "- Si una pagina no se lee bien, dilo brevemente en `safety_notes` y redacta solo con lo confiable.",
         "- Mantén separados los resultados por periodico.",
         "- Si un periodico trae varias noticias relevantes, devuelve varias entradas en `stories`.",
-        "- Escribe en espanol claro y natural.",
-        "- Cada `summary` debe sonar a una linea corta de narrador: maximo 180 caracteres y preferiblemente una sola oracion.",
-        "- `key_facts` debe tener entre 1 y 3 puntos cortos, no parrafos.",
+        "- Escribe en espanol peruano neutro, claro y natural.",
+        "- Cada `speech` debe tener 220 a 420 caracteres, de 1 a 3 frases, con inicio fuerte y cierre claro.",
+        "- El `speech` debe ajustarse a la categoria de noticia y al narrador asignado.",
+        "- `key_facts_used` debe tener entre 1 y 3 puntos cortos, no parrafos.",
         "- Respeta `story_type`, `headline` y `cover_region` ya detectados desde la portada; solo corrige si las paginas internas muestran claramente que estaban mal.",
         "- Usa los titulares detectados, hints de portada y OCR previo como contexto fuerte, y las paginas adjuntas como verificacion y ampliacion.",
         "- Si el contexto previo y las paginas adjuntas se contradicen, prioriza lo que se vea claramente en las paginas.",
         "- No conviertas una misma noticia en varias historias distintas solo porque ocupe varias paginas.",
+        "- Devuelve solo JSON valido compatible con la salida esperada en `instrucciones.md`.",
         "",
         "Contexto previo disponible del lote:",
         "```text",
@@ -668,20 +801,19 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "Devuelve solo JSON valido con esta estructura:",
         "```json",
         "{",
-        '  "notes": "Micro-resumenes editoriales desde paginas internas para narrar sobre portada.",',
         '  "newspapers": [',
         "    {",
         '      "newspaper_name": "ojo",',
         '      "job_id": "2026-04-20-ojo-frontpage-001",',
         '      "stories": [',
         "        {",
-        '          "story_type": "politica",',
         '          "headline": "Titular principal detectado desde portada",',
-        '          "summary": "Corvetto queda bajo fuerte presion politica mientras crecen los pedidos para que responda por el proceso electoral.",',
-        '          "page_numbers": [2, 5],',
-        '          "cover_region": {"x": 0.11, "y": 0.29, "width": 0.42, "height": 0.25},',
-        '          "key_facts": ["pedido de explicaciones", "presion politica"],',
-        '          "notes": ""',
+        '          "story_type": "politica",',
+        '          "narrator_profile_id": "Beto_Ortiz",',
+        '          "speech": "La pregunta incomoda ya esta sobre la mesa. Si el proceso electoral queda bajo sospecha, las explicaciones no pueden esperar. Esto exige respuestas claras, no silencios calculados.",',
+        '          "tone_notes": ["critico", "frontal", "prudente"],',
+        '          "key_facts_used": ["pedido de explicaciones", "presion politica"],',
+        '          "safety_notes": "Se evita afirmar delitos no probados."',
         "        }",
         "      ]",
         "    }",
@@ -690,9 +822,37 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "```",
         "",
         "Instruccion final:",
-        "Analiza las paginas adjuntas agrupadas por periodico y devuelve el JSON completo, sin explicacion adicional.",
+        "Analiza las paginas adjuntas agrupadas por periodico y devuelve el JSON completo con speeches finales, sin explicacion adicional.",
     ]
     return "\n".join(lines)
+
+
+def build_detailed_news_seed_payload(jobs: list[dict]) -> str:
+    payload = {
+        "newspapers": [],
+    }
+    for job in jobs:
+        stories = []
+        for story in get_cover_stories(job):
+            stories.append(
+                {
+                    "headline": str(story.get("headline") or ""),
+                    "story_type": str(story.get("story_type") or "actualidad"),
+                    "narrator_profile_id": "",
+                    "speech": "",
+                    "tone_notes": [],
+                    "key_facts_used": [],
+                    "safety_notes": "",
+                }
+            )
+        payload["newspapers"].append(
+            {
+                "newspaper_name": str(job.get("source_id") or "sin-source"),
+                "job_id": str(job.get("job_id") or "sin-id"),
+                "stories": stories,
+            }
+        )
+    return json.dumps(payload, ensure_ascii=False, indent=2)
 
 
 def chunk_jobs(jobs: list[dict], *, size: int) -> list[list[dict]]:
@@ -894,7 +1054,7 @@ st.set_page_config(page_title="News Video MVP Review", layout="wide")
 st.title("News Video MVP Review")
 st.caption("Panel operativo para revisar jobs, ejecutar etapas y monitorear el pipeline declarativo.")
 
-all_jobs = load_jobs()
+all_jobs = list_jobs()
 available_source_configs = discover_source_configs()
 available_source_ids = [path.stem for path in available_source_configs]
 default_voice_profile_path = VOICE_PROFILES_DIR / "voicebox-local.json"
@@ -953,6 +1113,7 @@ with st.expander("Scrapear Periodicos", expanded=not all_jobs):
                     force_scrape_existing=batch_force_existing,
                 )
                 st.session_state["daily_job_batch_results"] = results
+                st.session_state["active_batch_date"] = batch_date.isoformat()
                 st.success("Lote diario procesado.")
                 st.rerun()
             except Exception as exc:
@@ -960,37 +1121,53 @@ with st.expander("Scrapear Periodicos", expanded=not all_jobs):
 
     daily_batch_results = st.session_state.get("daily_job_batch_results")
     if daily_batch_results:
+        render_daily_batch_results(daily_batch_results, selected_date=str(st.session_state.get("active_batch_date") or batch_date.isoformat()))
         with st.expander("Ver resultado del scraping", expanded=False):
             st.json(daily_batch_results)
 
-all_jobs = load_jobs()
+all_jobs = list_jobs()
+available_job_dates = sorted({str(job.get("date") or "") for job in all_jobs if job.get("date")}, reverse=True)
+default_batch_date = get_default_batch_date(all_jobs)
+if default_batch_date and default_batch_date not in available_job_dates:
+    available_job_dates = [default_batch_date, *available_job_dates]
 source_options = ["Todos"] + sorted({job.get("source_id", "sin-source") for job in all_jobs}) if all_jobs else ["Todos"]
 status_options = ["Todos"] + sorted({job.get("status", "sin-status") for job in all_jobs}) if all_jobs else ["Todos"]
 
 st.sidebar.header("Filtros")
+selected_batch_date = st.sidebar.selectbox(
+    "Fecha del lote",
+    available_job_dates or [default_batch_date],
+    index=(available_job_dates.index(default_batch_date) if default_batch_date in available_job_dates else 0),
+)
+st.session_state["active_batch_date"] = selected_batch_date
 selected_source = st.sidebar.selectbox("Fuente", source_options)
 selected_status = st.sidebar.selectbox("Estado", status_options)
 text_query = st.sidebar.text_input("Buscar", placeholder="job id, titular o texto")
 
+jobs_for_selected_date = filter_jobs_by_date(all_jobs, selected_date=selected_batch_date)
 filtered_jobs = filter_jobs(
-    all_jobs,
+    jobs_for_selected_date,
     selected_source=selected_source,
     selected_status=selected_status,
     text_query=text_query,
 )
 
-if all_jobs:
+if jobs_for_selected_date:
     render_dashboard(filtered_jobs)
 else:
-    st.info("No se encontraron jobs en `data/jobs/`. Usa el bloque superior para crear el lote diario.")
+    st.info(
+        f"No se encontraron jobs para `{selected_batch_date}`. Usa el bloque superior para crear o reintentar ese lote."
+    )
 
 board_tab, detail_tab = st.tabs(["Jobs", "Detalle"])
 
 with board_tab:
     st.subheader("Portadas y Prompt")
-    cover_jobs = [job for job in filtered_jobs if job.get("input_assets", {}).get("front_page_image")]
+    st.caption(f"Lote activo: `{selected_batch_date}`. Esta vista solo usa jobs de esa fecha.")
+    batch_jobs = jobs_for_selected_date
+    cover_jobs = [job for job in batch_jobs if job.get("input_assets", {}).get("front_page_image")]
     if not cover_jobs:
-        st.info("Los jobs filtrados no tienen portada disponible para este flujo.")
+        st.info("El lote activo no tiene portadas disponibles para este flujo.")
     else:
         all_story_types = sorted(
             {
@@ -1044,11 +1221,13 @@ with board_tab:
         metadata_text = build_cover_batch_metadata(cover_jobs)
         prompt_text = build_cover_batch_prompt(cover_jobs)
         seed_payload = build_cover_batch_seed_payload(cover_jobs)
+        included_sources = ", ".join(str(job.get("source_id", "sin-source")) for job in cover_jobs)
         st.caption(
-            f"Se detectaron {len(cover_jobs)} portadas descargadas en el lote visible. "
+            f"Se detectaron {len(cover_jobs)} portadas descargadas en el lote activo. "
             "1. Scrapear periodicos. 2. Revisar portadas. 3. Copiar bloque de portadas. "
             "4. Copiar prompt. 5. Pegar el JSON devuelto por ChatGPT."
         )
+        st.markdown(f"**Portadas incluidas en este prompt:** `{included_sources}`")
 
         gallery_cols = st.columns(min(4, len(cover_jobs)))
         for index, job in enumerate(cover_jobs[:4]):
@@ -1078,7 +1257,7 @@ with board_tab:
                 )
 
         st.caption(
-            "El prompt copiado se arma solo con las portadas descargadas visibles en este lote."
+            "El prompt copiado se arma con todas las portadas descargadas del lote activo, sin depender de los filtros laterales."
         )
 
         with st.expander("Ver texto a copiar", expanded=False):
@@ -1115,6 +1294,7 @@ with board_tab:
         selected_cover_jobs = []
         pending_cover_jobs = []
         unavailable_cover_jobs = []
+        present_sources = {str(job.get("source_id") or "") for job in batch_jobs}
         editorial_filtered_story_count = 0
         editorial_kept_story_count = 0
         for original_job, job in zip(cover_jobs, effective_cover_jobs):
@@ -1142,7 +1322,7 @@ with board_tab:
             f"{editorial_filtered_story_count} historia(s) ocultada(s)."
         )
 
-        for job in filtered_jobs:
+        for job in batch_jobs:
             if job.get("input_assets", {}).get("front_page_image"):
                 continue
             publication_status = str(job.get("source", {}).get("publication_status") or "")
@@ -1158,6 +1338,17 @@ with board_tab:
                     "newspaper_name": job.get("source_id", "sin-source"),
                     "job_id": job.get("job_id", "sin-id"),
                     "reason": reason,
+                }
+            )
+
+        for source_id in available_source_ids:
+            if source_id in present_sources:
+                continue
+            unavailable_cover_jobs.append(
+                {
+                    "newspaper_name": source_id,
+                    "job_id": f"{selected_batch_date}-{source_id}-frontpage-001",
+                    "reason": "no se creo job para esta fecha",
                 }
             )
 
@@ -1246,11 +1437,11 @@ with board_tab:
                 downloaded_jobs_for_prompt = []
                 for item in selected_pages_batch_results:
                     matching_job = next(
-                        (
-                            job
-                            for job in load_jobs()
-                            if job.get("job_id") == item.get("job_id") and job.get("source_id") == item.get("source_id")
-                        ),
+                            (
+                                job
+                                for job in list_jobs()
+                                if job.get("job_id") == item.get("job_id") and job.get("source_id") == item.get("source_id")
+                            ),
                         None,
                     )
                     if matching_job is not None:
@@ -1304,7 +1495,7 @@ with board_tab:
 
                 if downloaded_jobs_for_prompt:
                     grouped_jobs = chunk_jobs(downloaded_jobs_for_prompt, size=2)
-                    st.subheader("Resumen Detallado por Bloques de 2 Periodicos")
+                    st.subheader("Speeches por Bloques de 2 Periodicos")
                     st.caption(
                         "Se generaron prompts separados, con maximo 2 periodicos por bloque, para ajustarse mejor "
                         "al limite de imagenes de ChatGPT."
@@ -1312,6 +1503,7 @@ with board_tab:
                     for group_index, group_jobs in enumerate(grouped_jobs, start=1):
                         detailed_prompt = build_detailed_news_prompt(group_jobs)
                         detailed_metadata = build_detailed_news_metadata(group_jobs)
+                        detailed_seed_payload = build_detailed_news_seed_payload(group_jobs)
                         group_sources = ", ".join(str(job.get("source_id", "sin-source")) for job in group_jobs)
                         with st.expander(f"Bloque {group_index}: {group_sources}", expanded=(group_index == 1)):
                             detailed_col1, detailed_col2 = st.columns(2)
@@ -1343,11 +1535,79 @@ with board_tab:
                                 key=f"detailed_news_metadata_{group_index}",
                             )
                             st.text_area(
-                                f"Prompt de resumen detallado bloque {group_index}",
+                                f"Prompt de speeches bloque {group_index}",
                                 value=detailed_prompt,
                                 height=360,
                                 key=f"detailed_news_prompt_{group_index}",
                             )
+                            narrative_batch_value = st.text_area(
+                                f"JSON editorial bloque {group_index}",
+                                value=detailed_seed_payload,
+                                height=260,
+                                key=f"detailed_news_import_payload_{group_index}",
+                            )
+                            if st.button(
+                                f"Importar Speeches Editoriales bloque {group_index}",
+                                use_container_width=True,
+                                type="primary",
+                                key=f"import_detailed_news_payload_{group_index}",
+                            ):
+                                run_action(
+                                    f"Speeches editoriales del bloque {group_index} importados.",
+                                    lambda narrative_batch_value=narrative_batch_value: import_story_narrative_batch(
+                                        narrative_text=narrative_batch_value,
+                                        provider="chatgpt_plus_manual",
+                                        force=True,
+                                    ),
+                                )
+
+                st.subheader("Programa Diario")
+                ready_rundown_jobs = [
+                    job
+                    for job in batch_jobs
+                    if job.get("story_narrative", {}).get("stories")
+                    and job.get("input_assets", {}).get("front_page_image")
+                ]
+                st.caption(
+                    "Cuando los bloques de speeches ya estan importados, esto arma una sola secuencia: "
+                    "intro de presentador, periodicos en orden y temas con narrador asignado."
+                )
+                st.markdown(
+                    f"Jobs listos para programa: `{len(ready_rundown_jobs)}` de `{len(batch_jobs)}`."
+                )
+                if ready_rundown_jobs:
+                    rundown_preview_rows = []
+                    for rundown_job in ready_rundown_jobs:
+                        stories = [
+                            story
+                            for story in rundown_job.get("story_narrative", {}).get("stories", [])
+                            if str(story.get("speech") or story.get("summary") or "").strip()
+                        ]
+                        narrator_ids = sorted(
+                            {
+                                str(story.get("narrator_profile_id") or "sin-narrador")
+                                for story in stories
+                            }
+                        )
+                        rundown_preview_rows.append(
+                            {
+                                "periodico": rundown_job.get("source_id") or "sin-source",
+                                "historias": len(stories),
+                                "narradores": ", ".join(narrator_ids),
+                                "portada": "ok" if rundown_job.get("input_assets", {}).get("front_page_image") else "falta",
+                            }
+                        )
+                    st.dataframe(rundown_preview_rows, use_container_width=True, hide_index=True)
+                if st.button(
+                    "Construir Programa Diario para Preview",
+                    use_container_width=True,
+                    type="primary",
+                    disabled=not ready_rundown_jobs,
+                ):
+                    run_daily_rundown_with_feedback(
+                        job_date=selected_batch_date,
+                        voice_profile_id=batch_voice_profile,
+                    )
 
     with st.expander("Ver lista de jobs", expanded=False):
         render_job_board(filtered_jobs)
@@ -1374,6 +1634,7 @@ with detail_tab:
     video = job.get("video", {})
     publication = job.get("publication", {})
     page_selection = job.get("page_selection", {})
+    story_narrative = job.get("story_narrative", {})
 
     edited_text = script.get("approved_text", "") or script.get("draft", "")
     edited_notes = script.get("review_notes", "")
@@ -1446,6 +1707,18 @@ with detail_tab:
                     st.json(candidates)
                 else:
                     st.caption("Sin candidatas registradas.")
+            st.subheader("Narrativa Editorial")
+            st.markdown(f"Provider: `{story_narrative.get('provider') or 'pendiente'}`")
+            st.markdown(f"Status: `{story_narrative.get('status') or 'not_started'}`")
+            story_narrative_entries = get_story_narrative_entries(job)
+            st.markdown(f"Historias: `{len(story_narrative_entries)}`")
+            if story_narrative.get("notes"):
+                st.caption(story_narrative.get("notes"))
+            with st.expander("Historias narrativas registradas", expanded=False):
+                if story_narrative_entries:
+                    st.json(story_narrative_entries)
+                else:
+                    st.caption("Sin historias editoriales importadas.")
 
     with script_tab:
         st.subheader("Revision del Guion")
@@ -1564,6 +1837,43 @@ with detail_tab:
                     lambda: import_cover_page_selection_for_job(
                         job_manifest_path=job_path,
                         selection_text=manual_selection_value,
+                        provider="chatgpt_plus_manual",
+                        force=True,
+                    ),
+                )
+
+        with st.expander("Narrativa Editorial", expanded=False):
+            cover_stories = get_cover_stories(job)
+            story_narrative_default = json.dumps(
+                {
+                    "stories": [
+                        {
+                            "headline": story.get("headline") or "",
+                            "story_type": story.get("story_type") or "actualidad",
+                            "narrator_profile_id": "",
+                            "speech": "",
+                            "tone_notes": [],
+                            "key_facts_used": [],
+                            "safety_notes": "",
+                        }
+                        for story in cover_stories
+                    ],
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+            story_narrative_value = st.text_area(
+                "JSON editorial por historia",
+                value=story_narrative_default,
+                height=260,
+                key=f"manual_story_narrative_{job.get('job_id')}",
+            )
+            if st.button("Importar Narrativa Editorial", use_container_width=True, type="primary"):
+                run_action(
+                    "Narrativa editorial importada.",
+                    lambda: import_story_narrative_for_job(
+                        job_manifest_path=job_path,
+                        narrative_text=story_narrative_value,
                         provider="chatgpt_plus_manual",
                         force=True,
                     ),

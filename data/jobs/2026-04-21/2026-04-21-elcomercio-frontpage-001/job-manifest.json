@@ -1,0 +1,461 @@
+{
+  "job_id": "2026-04-21-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "date": "2026-04-21",
+  "source": {
+    "source_id": "elcomercio",
+    "source_config_path": "automation/sources/diarios/elcomercio.json",
+    "requested_date": "2026-04-21",
+    "issue_date": "2026-04-21",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026042100000000001001&page=1&scale=207",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026042100000000001001&page=1&scale=207",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/elcomercio.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042100000000001001&page=1&scale=207",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042100000000001001&page=3&scale=55",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042100000000001001&page=4&scale=55",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042100000000001001&page=6&scale=55",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/pages/page-06.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      3,
+      4,
+      6
+    ],
+    "candidates": [
+      {
+        "headline": "Contraloria denuncia trabas de la ONPE",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.23,
+          "width": 0.9,
+          "height": 0.28
+        },
+        "page_number": 4,
+        "evidence_line": "Pagina 4 en el encabezado de la nota principal sobre ONPE y fiscalia",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.99
+      },
+      {
+        "headline": "Audiencias para recuento de votos",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.55,
+          "width": 0.65,
+          "height": 0.32
+        },
+        "page_number": 3,
+        "evidence_line": "Tema del dia pagina 3 sobre recuento de votos",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Keiko plantea eleccion complementaria",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.55,
+          "width": 0.18,
+          "height": 0.15
+        },
+        "page_number": 6,
+        "evidence_line": "Pagina 6 en el bloque lateral derecho sobre propuesta de Lopez Aliaga y Keiko",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Audiencias para recuento de votos",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.55,
+          "width": 0.65,
+          "height": 0.32
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "Tema del dia pagina 3 sobre recuento de votos",
+        "evidence_lines": [
+          "Tema del dia pagina 3 sobre recuento de votos"
+        ],
+        "confidence": 0.98
+      },
+      {
+        "headline": "Contraloria denuncia trabas de la ONPE",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.23,
+          "width": 0.9,
+          "height": 0.28
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Pagina 4 en el encabezado de la nota principal sobre ONPE y fiscalia",
+        "evidence_lines": [
+          "Pagina 4 en el encabezado de la nota principal sobre ONPE y fiscalia"
+        ],
+        "confidence": 0.99
+      },
+      {
+        "headline": "Keiko plantea eleccion complementaria",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.55,
+          "width": 0.18,
+          "height": 0.15
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "Pagina 6 en el bloque lateral derecho sobre propuesta de Lopez Aliaga y Keiko",
+        "evidence_lines": [
+          "Pagina 6 en el bloque lateral derecho sobre propuesta de Lopez Aliaga y Keiko"
+        ],
+        "confidence": 0.96
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Los JEE llevan adelante las audiencias de recuento de votos",
+        "story_type": "politica",
+        "summary": "Atención con el proceso electoral. Los Jurados Electorales Especiales ya realizan audiencias de recuento de votos en Junín y Piura, en un mecanismo que se aplica por primera vez y que abarca más de 300 actas observadas. Lo relevante ahora es que el cierre deje menos dudas, no más ruido.",
+        "speech": "Atención con el proceso electoral. Los Jurados Electorales Especiales ya realizan audiencias de recuento de votos en Junín y Piura, en un mecanismo que se aplica por primera vez y que abarca más de 300 actas observadas. Lo relevante ahora es que el cierre deje menos dudas, no más ruido.",
+        "narrator_profile_id": "Mávila_Huertas",
+        "tone_notes": [
+          "serio",
+          "elegante",
+          "prudente"
+        ],
+        "page_numbers": [],
+        "cover_region": null,
+        "key_facts": [
+          "audiencias de recuento en Junín y Piura",
+          "mecanismo aplicado por primera vez",
+          "más de 300 actas observadas"
+        ],
+        "key_facts_used": [
+          "audiencias de recuento en Junín y Piura",
+          "mecanismo aplicado por primera vez",
+          "más de 300 actas observadas"
+        ],
+        "safety_notes": "Se mantiene foco institucional y no se infiere fraude; se resume el procedimiento descrito por la página.",
+        "notes": "Se mantiene foco institucional y no se infiere fraude; se resume el procedimiento descrito por la página."
+      },
+      {
+        "headline": "“En la ONPE se vieron totalmente avasallados”",
+        "story_type": "politica",
+        "summary": "Ojo con este testimonio. Un exfuncionario vinculado a la ONPE afirma que el organismo fue sobrepasado y que no tuvo un plan de contingencia para la distribución del material electoral. Es una versión crítica, sí, pero vuelve a poner bajo presión la capacidad de respuesta del sistema.",
+        "speech": "Ojo con este testimonio. Un exfuncionario vinculado a la ONPE afirma que el organismo fue sobrepasado y que no tuvo un plan de contingencia para la distribución del material electoral. Es una versión crítica, sí, pero vuelve a poner bajo presión la capacidad de respuesta del sistema.",
+        "narrator_profile_id": "Mávila_Huertas",
+        "tone_notes": [
+          "sobrio",
+          "critico",
+          "prudente"
+        ],
+        "page_numbers": [],
+        "cover_region": null,
+        "key_facts": [
+          "entrevista a un exfuncionario sobre la ONPE",
+          "se cuestiona falta de plan de contingencia",
+          "se menciona presión en la distribución del material electoral"
+        ],
+        "key_facts_used": [
+          "entrevista a un exfuncionario sobre la ONPE",
+          "se cuestiona falta de plan de contingencia",
+          "se menciona presión en la distribución del material electoral"
+        ],
+        "safety_notes": "Se presenta como testimonio y no como hecho comprobado por sentencia o peritaje independiente.",
+        "notes": "Se presenta como testimonio y no como hecho comprobado por sentencia o peritaje independiente."
+      },
+      {
+        "headline": "Keiko Fujimori se muestra a favor de pedido de elecciones complementarias",
+        "story_type": "politica",
+        "summary": "Keiko Fujimori respaldó el pedido de elecciones complementarias, pero el debate no termina ahí. De acuerdo con la información disponible, especialistas advierten que la salida exige sustento legal y reforma previa. En un escenario tan sensible, una propuesta política no basta por sí sola.",
+        "speech": "Keiko Fujimori respaldó el pedido de elecciones complementarias, pero el debate no termina ahí. De acuerdo con la información disponible, especialistas advierten que la salida exige sustento legal y reforma previa. En un escenario tan sensible, una propuesta política no basta por sí sola.",
+        "narrator_profile_id": "Mávila_Huertas",
+        "tone_notes": [
+          "serio",
+          "sobrio",
+          "analitico"
+        ],
+        "page_numbers": [],
+        "cover_region": null,
+        "key_facts": [
+          "Keiko respalda elecciones complementarias",
+          "la página recoge objeciones legales",
+          "se menciona necesidad de reforma previa"
+        ],
+        "key_facts_used": [
+          "Keiko respalda elecciones complementarias",
+          "la página recoge objeciones legales",
+          "se menciona necesidad de reforma previa"
+        ],
+        "safety_notes": "Se resume la postura política y las reservas legales visibles en la nota, sin presentar la medida como viable o inviable de forma definitiva.",
+        "notes": "Se resume la postura política y las reservas legales visibles en la nota, sin presentar la medida como viable o inviable de forma definitiva."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente."
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Atención con el proceso electoral. Los Jurados Electorales Especiales ya realizan audiencias de recuento de votos en Junín y Piura, en un mecanismo que se aplica por primera vez y que abarca más de 300 actas observadas. Lo relevante ahora es que el cierre deje menos dudas, no más ruido.\n\nOjo con este testimonio. Un exfuncionario vinculado a la ONPE afirma que el organismo fue sobrepasado y que no tuvo un plan de contingencia para la distribución del material electoral. Es una versión crítica, sí, pero vuelve a poner bajo presión la capacidad de respuesta del sistema.\n\nKeiko Fujimori respaldó el pedido de elecciones complementarias, pero el debate no termina ahí. De acuerdo con la información disponible, especialistas advierten que la salida exige sustento legal y reforma previa. En un escenario tan sensible, una propuesta política no basta por sí sola.",
+    "approved_text": "Atención con el proceso electoral. Los Jurados Electorales Especiales ya realizan audiencias de recuento de votos en Junín y Piura, en un mecanismo que se aplica por primera vez y que abarca más de 300 actas observadas. Lo relevante ahora es que el cierre deje menos dudas, no más ruido.\n\nOjo con este testimonio. Un exfuncionario vinculado a la ONPE afirma que el organismo fue sobrepasado y que no tuvo un plan de contingencia para la distribución del material electoral. Es una versión crítica, sí, pero vuelve a poner bajo presión la capacidad de respuesta del sistema.\n\nKeiko Fujimori respaldó el pedido de elecciones complementarias, pero el debate no termina ahí. De acuerdo con la información disponible, especialistas advierten que la salida exige sustento legal y reforma previa. En un escenario tan sensible, una propuesta política no basta por sí sola.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "1e633b5c-3963-4582-a2af-47e9dd71aa35",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-21T16:33:58",
+    "updated_at": "2026-04-21T18:52:38",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:33:58",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:34:13",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:34:13",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:42:00",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:43:13",
+        "details": "Se descargaron 3 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T17:21:54",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T17:22:01",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T17:22:34",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T17:30:25",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:01:41",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:02:15",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:03:05",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:03:08",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:11:49",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:40:52",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:40:52",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:41:51",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:48:53",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:48:53",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:49:36",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:51:57",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:52:34",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:52:38",
+        "details": "Se importaron 3 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, martes 21 de abril, recorremos cinco portadas con una agenda marcada por crisis electoral, economía, policiales y deporte. En una fecha que también remite a una efeméride peruana, vamos diario por diario con lo más fuerte y las páginas clave para ampliar contexto.",
+    "date_reference": "21 de abril: nacimiento de Manuel Prado Ugarteche, dos veces presidente de la República. Adonde.com efemerides abril21 ([Adonde.com][1])",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana sobria, sin competir con el foco editorial del recorrido.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-21T18:48:53"
+  }
+}

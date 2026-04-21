@@ -120,6 +120,7 @@ def compose_video_props(
     audio_path: Path,
     output_stem: str,
     spec: VideoSpec | None = None,
+    keep_previous_generated: bool = False,
 ) -> tuple[dict, Path]:
     spec = spec or VideoSpec()
     if not segments:
@@ -162,7 +163,8 @@ def compose_video_props(
                 "gestures": segment_gesture_assets,
             }
         )
-    _cleanup_generated_assets(generated_dir=generated_dir, keep_story_id=story_id)
+    if not keep_previous_generated:
+        _cleanup_generated_assets(generated_dir=generated_dir, keep_story_id=story_id)
 
     audio_duration = _get_wav_duration(audio_asset)
     duration_in_frames = max(1, int(round(audio_duration * spec.fps)))

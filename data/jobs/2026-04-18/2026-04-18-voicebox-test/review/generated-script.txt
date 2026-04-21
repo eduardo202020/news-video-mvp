@@ -1,1 +1,0 @@
-Esta es una prueba completa del pipeline con Voicebox local. Estamos validando la generacion de audio y subtitulos dentro del proyecto.

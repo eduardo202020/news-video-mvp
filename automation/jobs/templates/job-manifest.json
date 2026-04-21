@@ -19,6 +19,22 @@
     "priority": "high",
     "reason": "main_headline_detected"
   },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": null,
+    "status": "not_started",
+    "selected_page_numbers": [],
+    "candidates": [],
+    "stories": [],
+    "notes": ""
+  },
+  "story_narrative": {
+    "provider": null,
+    "status": "not_started",
+    "source": "supporting_pages_manual",
+    "stories": [],
+    "notes": ""
+  },
   "script": {
     "template_id": "default-anchor",
     "draft": "",

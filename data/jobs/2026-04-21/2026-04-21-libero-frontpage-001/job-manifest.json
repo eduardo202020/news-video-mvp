@@ -1,0 +1,103 @@
+{
+  "job_id": "2026-04-21-libero-frontpage-001",
+  "source_id": "libero",
+  "date": "2026-04-21",
+  "source": {
+    "source_id": "libero",
+    "source_config_path": "automation/sources/diarios/libero.json",
+    "requested_date": "2026-04-21",
+    "issue_date": "2026-04-21",
+    "publication_status": "available",
+    "discovery_type": null,
+    "front_page_url": "https://example.com/libero/2026-04-21",
+    "discovered_pages_count": 0,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "discovered",
+  "input_assets": {
+    "front_page_image": null,
+    "front_page_url": "https://example.com/libero/2026-04-21",
+    "source_url": "https://example.com/libero/2026-04-21",
+    "source_config": "automation/sources/diarios/libero.json",
+    "pages": []
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": null,
+    "status": "not_started",
+    "selected_page_numbers": [],
+    "candidates": [],
+    "stories": [],
+    "notes": ""
+  },
+  "story_narrative": {
+    "provider": null,
+    "status": "not_started",
+    "source": "supporting_pages_manual",
+    "stories": [],
+    "notes": ""
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "",
+    "approved_text": "",
+    "review_notes": ""
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "1e633b5c-3963-4582-a2af-47e9dd71aa35",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-21T16:34:33",
+    "updated_at": "2026-04-21T16:34:33",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:34:33",
+        "details": "Job creado desde source config declarativo."
+      }
+    ]
+  }
+}

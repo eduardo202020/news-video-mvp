@@ -1,6 +1,0 @@
-{
-  "provider": "voicebox_local",
-  "text": "Esta es una prueba completa del pipeline con VoiceBox local. Estamos validando la generación de audio y subtítulos dentro del proyecto.",
-  "duration_seconds": 8.16,
-  "source_audio_path": "data/jobs/2026-04-18/2026-04-18-voicebox-test/output/narration.wav"
-}

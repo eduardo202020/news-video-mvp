@@ -7,7 +7,7 @@ import re
 import wave
 
 from .automation_models import SourceConfig, VideoTemplate, VoiceProfile, read_json, write_json
-from .composer import VideoSegment, VideoSpec, compose_video_props
+from .composer import VideoSegment, VideoSpec, compose_video_props, concatenate_wav_files
 from .ocr import PaddleOCRError, extract_text_with_paddleocr
 from .project import get_project_dir
 from .scraping import (
@@ -30,12 +30,81 @@ from .subtitles import build_subtitle_segments
 from .voice_generation import generate_voice_track, list_voicebox_profiles, transcribe_with_voicebox
 
 
+NARRATOR_PROFILE_TO_VOICE_PROFILE = {
+    "rene_gastelumendi": "cuy-01",
+    "mavila_huertas": "cuy-01",
+    "beto_ortiz": "cuy-02",
+    "magaly_medina": "cuy-02",
+    "rodrigo_gonzalez": "cuy-02",
+    "gonzalo_nunez": "cuy-depor",
+    "eddie_fleischman": "cuy-depor",
+    "julio_velarde": "cuy-01",
+}
+
+
 def get_automation_dir(project_dir: Path | None = None) -> Path:
     return (project_dir or get_project_dir()) / "automation"
 
 
+def _slug_identifier(value: object) -> str:
+    replacements = str.maketrans(
+        {
+            "á": "a",
+            "é": "e",
+            "í": "i",
+            "ó": "o",
+            "ú": "u",
+            "Á": "a",
+            "É": "e",
+            "Í": "i",
+            "Ó": "o",
+            "Ú": "u",
+            "ñ": "n",
+            "Ñ": "n",
+        }
+    )
+    slug = str(value or "").translate(replacements).strip().lower()
+    slug = re.sub(r"[^a-z0-9]+", "_", slug).strip("_")
+    return slug
+
+
+def _resolve_voice_profile_for_narrator(
+    *,
+    narrator_profile_id: object,
+    fallback_voice_profile_path: Path,
+    project_dir: Path,
+) -> VoiceProfile:
+    narrator_slug = _slug_identifier(narrator_profile_id)
+    profile_id = NARRATOR_PROFILE_TO_VOICE_PROFILE.get(narrator_slug)
+    if not profile_id:
+        return VoiceProfile.load(fallback_voice_profile_path)
+    candidate = project_dir / "automation" / "templates" / "voices" / f"{profile_id}.json"
+    if not candidate.exists():
+        return VoiceProfile.load(fallback_voice_profile_path)
+    return VoiceProfile.load(candidate)
+
+
+def _resolve_tts_profile_for_narrator(
+    *,
+    narrator_profile_id: object,
+    fallback_voice_profile_path: Path,
+    project_dir: Path,
+) -> VoiceProfile:
+    fallback = VoiceProfile.load(fallback_voice_profile_path)
+    if fallback.tts_provider == "voicebox_local":
+        return fallback
+    return _resolve_voice_profile_for_narrator(
+        narrator_profile_id=narrator_profile_id,
+        fallback_voice_profile_path=fallback_voice_profile_path,
+        project_dir=project_dir,
+    )
+
+
 def get_jobs_root(project_dir: Path | None = None) -> Path:
     return (project_dir or get_project_dir()) / "data" / "jobs"
+
+
+SOURCE_RUNDOWN_ORDER = ["correo", "elcomercio", "gestion", "ojo", "trome", "libero"]
 
 
 def build_job_id(*, job_date: str, source_id: str, suffix: str = "frontpage-001") -> str:
@@ -80,6 +149,16 @@ def _default_page_selection() -> dict[str, object]:
         "status": "not_started",
         "selected_page_numbers": [],
         "candidates": [],
+        "stories": [],
+        "notes": "",
+    }
+
+
+def _default_story_narrative() -> dict[str, object]:
+    return {
+        "provider": None,
+        "status": "not_started",
+        "source": "supporting_pages_manual",
         "stories": [],
         "notes": "",
     }
@@ -193,6 +272,7 @@ def create_job_manifest(
             "reason": None,
         },
         "page_selection": _default_page_selection(),
+        "story_narrative": _default_story_narrative(),
         "script": {
             "template_id": script_template_id,
             "provider": "manual_or_external_ai",
@@ -1138,6 +1218,31 @@ def _normalize_cover_region(value: object) -> dict[str, float] | None:
     }
 
 
+def _normalize_story_page_numbers(value: object) -> list[int]:
+    if not isinstance(value, list):
+        return []
+    page_numbers: list[int] = []
+    for item in value:
+        try:
+            page_number = int(item)
+        except (TypeError, ValueError):
+            continue
+        if page_number > 1 and page_number not in page_numbers:
+            page_numbers.append(page_number)
+    return sorted(page_numbers)
+
+
+def _normalize_key_facts(value: object) -> list[str]:
+    if not isinstance(value, list):
+        return []
+    key_facts: list[str] = []
+    for item in value:
+        fact = " ".join(str(item or "").split()).strip()
+        if fact and fact not in key_facts:
+            key_facts.append(fact)
+    return key_facts[:3]
+
+
 def _build_cover_story_groups(candidates: list[dict[str, object]]) -> list[dict[str, object]]:
     grouped: dict[tuple[str, str, str], dict[str, object]] = {}
 
@@ -1199,7 +1304,219 @@ def _build_cover_story_groups(candidates: list[dict[str, object]]) -> list[dict[
     return stories
 
 
-def _parse_batch_manual_page_selection_payload(text: str) -> tuple[list[dict[str, object]], str]:
+def _parse_story_narrative_payload(text: str) -> tuple[list[dict[str, object]], str]:
+    stripped = text.strip()
+    if not stripped:
+        raise ValueError("La importacion editorial por historia esta vacia.")
+
+    try:
+        payload = json.loads(stripped)
+    except json.JSONDecodeError as exc:
+        raise ValueError("La importacion editorial debe ser JSON valido.") from exc
+
+    notes = ""
+    raw_stories: object
+    if isinstance(payload, dict):
+        notes = str(payload.get("notes") or "").strip()
+        raw_stories = payload.get("stories") or payload.get("items") or []
+    else:
+        raw_stories = payload
+
+    if not isinstance(raw_stories, list):
+        raise ValueError("La importacion editorial debe incluir una lista en `stories` o `items`.")
+
+    stories: list[dict[str, object]] = []
+    for item in raw_stories:
+        if not isinstance(item, dict):
+            continue
+        headline = _clean_cover_headline(str(item.get("headline") or ""))
+        speech = " ".join(str(item.get("speech") or item.get("summary") or "").split()).strip()
+        if not headline or not speech:
+            continue
+        key_facts = item.get("key_facts_used")
+        if key_facts in (None, ""):
+            key_facts = item.get("key_facts")
+        stories.append(
+            {
+                "headline": headline,
+                "story_type": (
+                    _normalize_story_type(item.get("story_type"))
+                    if item.get("story_type") not in (None, "")
+                    else None
+                ),
+                "summary": speech,
+                "speech": speech,
+                "narrator_profile_id": " ".join(str(item.get("narrator_profile_id") or "").split()).strip(),
+                "tone_notes": _normalize_key_facts(item.get("tone_notes")),
+                "page_numbers": _normalize_story_page_numbers(item.get("page_numbers")),
+                "cover_region": _normalize_cover_region(item.get("cover_region")),
+                "key_facts": _normalize_key_facts(key_facts),
+                "safety_notes": " ".join(
+                    str(item.get("safety_notes") or item.get("notes") or "").split()
+                ).strip(),
+                "notes": " ".join(str(item.get("notes") or item.get("safety_notes") or "").split()).strip(),
+            }
+        )
+
+    if not stories:
+        raise ValueError("La importacion editorial no contiene historias validas con `headline` y `speech`.")
+    return stories, notes
+
+
+def _parse_batch_story_narrative_payload(text: str) -> tuple[list[dict[str, object]], str]:
+    stripped = text.strip()
+    if not stripped:
+        raise ValueError("La importacion batch editorial esta vacia.")
+
+    try:
+        payload = json.loads(stripped)
+    except json.JSONDecodeError as exc:
+        raise ValueError("La importacion batch editorial debe ser JSON valido.") from exc
+
+    batch_notes = ""
+    raw_entries: object
+    if isinstance(payload, dict):
+        batch_notes = str(payload.get("notes") or "").strip()
+        raw_entries = payload.get("newspapers") or payload.get("jobs") or payload.get("items") or []
+    else:
+        raw_entries = payload
+
+    if not isinstance(raw_entries, list):
+        raise ValueError("La importacion batch editorial debe incluir una lista en `newspapers`, `jobs` o `items`.")
+
+    entries: list[dict[str, object]] = []
+    for entry in raw_entries:
+        if not isinstance(entry, dict):
+            continue
+        job_id = str(entry.get("job_id") or "").strip()
+        if not job_id:
+            continue
+        stories, entry_notes = _parse_story_narrative_payload(
+            json.dumps(
+                {
+                    "notes": entry.get("notes") or "",
+                    "stories": entry.get("stories") or entry.get("items") or [],
+                },
+                ensure_ascii=False,
+            )
+        )
+        entries.append(
+            {
+                "job_id": job_id,
+                "newspaper_name": str(entry.get("newspaper_name") or "").strip(),
+                "provider": str(entry.get("provider") or "").strip(),
+                "stories": stories,
+                "notes": entry_notes,
+            }
+        )
+
+    if not entries:
+        raise ValueError("La importacion batch editorial no contiene entradas validas con `job_id`.")
+    return entries, batch_notes
+
+
+def _merge_story_narrative_with_cover_context(
+    *,
+    cover_stories: list[dict[str, object]],
+    imported_stories: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    cover_story_map = {
+        str(story.get("headline") or "").casefold(): story
+        for story in cover_stories
+        if str(story.get("headline") or "").strip()
+    }
+    merged: list[dict[str, object]] = []
+    for item in imported_stories:
+        headline = str(item.get("headline") or "").strip()
+        if not headline:
+            continue
+        cover_story = cover_story_map.get(headline.casefold(), {})
+        page_numbers = item.get("page_numbers") or cover_story.get("page_numbers") or []
+        cover_region = item.get("cover_region") or cover_story.get("cover_region")
+        story_type = item.get("story_type") or cover_story.get("story_type") or "actualidad"
+        merged.append(
+            {
+                "headline": headline,
+                "story_type": _normalize_story_type(story_type),
+                "summary": str(item.get("summary") or "").strip(),
+                "speech": str(item.get("speech") or item.get("summary") or "").strip(),
+                "narrator_profile_id": str(item.get("narrator_profile_id") or "").strip(),
+                "tone_notes": _normalize_key_facts(item.get("tone_notes")),
+                "page_numbers": _normalize_story_page_numbers(page_numbers),
+                "cover_region": _normalize_cover_region(cover_region),
+                "key_facts": _normalize_key_facts(item.get("key_facts")),
+                "key_facts_used": _normalize_key_facts(item.get("key_facts")),
+                "safety_notes": " ".join(str(item.get("safety_notes") or item.get("notes") or "").split()).strip(),
+                "notes": " ".join(str(item.get("notes") or "").split()).strip(),
+            }
+        )
+    return merged
+
+
+def _build_script_from_story_speeches(stories: list[dict[str, object]]) -> str:
+    speeches: list[str] = []
+    for story in stories:
+        speech = " ".join(str(story.get("speech") or story.get("summary") or "").split()).strip()
+        if speech:
+            speeches.append(speech)
+    return "\n\n".join(speeches)
+
+
+def _format_spanish_date(value: str) -> str:
+    months = {
+        1: "enero",
+        2: "febrero",
+        3: "marzo",
+        4: "abril",
+        5: "mayo",
+        6: "junio",
+        7: "julio",
+        8: "agosto",
+        9: "septiembre",
+        10: "octubre",
+        11: "noviembre",
+        12: "diciembre",
+    }
+    try:
+        parsed = datetime.fromisoformat(value).date()
+    except ValueError:
+        return value
+    return f"{parsed.day} de {months[parsed.month]} de {parsed.year}"
+
+
+def _build_rundown_intro(*, job_date: str, source_names: list[str], story_count: int) -> str:
+    date_text = _format_spanish_date(job_date)
+    source_text = ", ".join(source_names[:-1]) + f" y {source_names[-1]}" if len(source_names) > 1 else source_names[0]
+    return (
+        f"Hola, hoy {date_text} revisamos las portadas de {source_text}. "
+        f"Hay {story_count} temas clave para entender la agenda del dia: politica, actualidad, economia, deportes y policiales. "
+        "Vamos diario por diario, con lo central y sin rodeos."
+    )
+
+
+def _select_imported_rundown_intro(jobs: list[dict[str, object]]) -> str:
+    for job in jobs:
+        intro = job.get("rundown_intro")
+        if not isinstance(intro, dict):
+            continue
+        speech = " ".join(str(intro.get("speech") or "").split()).strip()
+        if speech:
+            return speech
+    return ""
+
+
+def _sort_jobs_for_rundown(jobs: list[dict[str, object]]) -> list[dict[str, object]]:
+    order = {source_id: index for index, source_id in enumerate(SOURCE_RUNDOWN_ORDER)}
+    return sorted(
+        jobs,
+        key=lambda job: (
+            order.get(str(job.get("source_id") or ""), len(order)),
+            str(job.get("source_id") or ""),
+        ),
+    )
+
+
+def _parse_batch_manual_page_selection_payload(text: str) -> tuple[list[dict[str, object]], str, dict[str, object]]:
     stripped = text.strip()
     if not stripped:
         raise ValueError("La seleccion batch de paginas esta vacia.")
@@ -1210,10 +1527,19 @@ def _parse_batch_manual_page_selection_payload(text: str) -> tuple[list[dict[str
         raise ValueError("La seleccion batch debe ser JSON valido.") from exc
 
     batch_notes = ""
+    rundown_intro: dict[str, object] = {}
     raw_entries: object
     if isinstance(payload, dict):
         if isinstance(payload.get("notes"), str):
             batch_notes = payload["notes"].strip()
+        if isinstance(payload.get("rundown_intro"), dict):
+            raw_intro = payload["rundown_intro"]
+            rundown_intro = {
+                "speech": " ".join(str(raw_intro.get("speech") or "").split()).strip(),
+                "date_reference": " ".join(str(raw_intro.get("date_reference") or "").split()).strip(),
+                "source_scope": " ".join(str(raw_intro.get("source_scope") or "").split()).strip(),
+                "why_it_fits": " ".join(str(raw_intro.get("why_it_fits") or "").split()).strip(),
+            }
         raw_entries = (
             payload.get("jobs")
             or payload.get("selections")
@@ -1259,7 +1585,7 @@ def _parse_batch_manual_page_selection_payload(text: str) -> tuple[list[dict[str
 
     if not entries:
         raise ValueError("No se encontraron entradas validas en la seleccion batch.")
-    return entries, batch_notes
+    return entries, batch_notes, rundown_intro
 
 
 def extract_and_classify_job(
@@ -1484,7 +1810,7 @@ def import_cover_page_selection_batch(
     else:
         raise ValueError("Debes proporcionar `--selection-text` o `--selection-file`.")
 
-    entries, batch_notes = _parse_batch_manual_page_selection_payload(raw_selection)
+    entries, batch_notes, rundown_intro = _parse_batch_manual_page_selection_payload(raw_selection)
     results: list[dict[str, object]] = []
     for entry in entries:
         manifest_value = Path(str(entry["job_manifest_path"]))
@@ -1500,10 +1826,150 @@ def import_cover_page_selection_batch(
             provider=resolved_provider,
             force=force,
         )
+        if str(rundown_intro.get("speech") or "").strip():
+            job = read_json(manifest_path)
+            timestamp = datetime.now().isoformat(timespec="seconds")
+            job["rundown_intro"] = {
+                **rundown_intro,
+                "provider": resolved_provider,
+                "source": "cover_batch_prompt",
+                "imported_at": timestamp,
+            }
+            job.setdefault("audit", {}).setdefault("events", []).append(
+                {
+                    "stage": "rundown_intro_import",
+                    "status": "completed",
+                    "timestamp": timestamp,
+                    "details": "Intro dinamica importada desde el prompt de portadas.",
+                }
+            )
+            job.setdefault("audit", {})["updated_at"] = timestamp
+            write_json(manifest_path, job)
         results.append(
             {
                 "job_manifest_path": manifest_path.resolve().relative_to(project_dir).as_posix(),
                 "job_id": entry.get("job_id") or "",
+                "newspaper_name": entry.get("newspaper_name") or "",
+                "provider": resolved_provider,
+                "status": "imported",
+                "batch_notes": batch_notes,
+                "rundown_intro": bool(str(rundown_intro.get("speech") or "").strip()),
+            }
+        )
+    return results
+
+
+def import_story_narrative_for_job(
+    *,
+    job_manifest_path: Path,
+    narrative_text: str | None = None,
+    narrative_file: Path | None = None,
+    provider: str = "chatgpt_plus_manual",
+    force: bool = False,
+) -> Path:
+    job = read_json(job_manifest_path)
+    current_stories = list(job.get("story_narrative", {}).get("stories", []))
+    if current_stories and not force:
+        raise ValueError(
+            "El job ya tiene historias editoriales importadas. Usa `--force` si quieres reemplazarlas."
+        )
+
+    if narrative_file is not None:
+        if not narrative_file.exists():
+            raise FileNotFoundError(f"No existe el archivo editorial: {narrative_file}")
+        raw_narrative = narrative_file.read_text(encoding="utf-8")
+    elif narrative_text is not None:
+        raw_narrative = narrative_text
+    else:
+        raise ValueError("Debes proporcionar `--narrative-text` o `--narrative-file`.")
+
+    imported_stories, notes = _parse_story_narrative_payload(raw_narrative)
+    cover_stories = list(job.get("page_selection", {}).get("stories", []))
+    merged_stories = _merge_story_narrative_with_cover_context(
+        cover_stories=cover_stories,
+        imported_stories=imported_stories,
+    )
+    speech_script = _build_script_from_story_speeches(merged_stories)
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["story_narrative"] = {
+        "provider": provider,
+        "status": "approved_manual",
+        "source": "supporting_pages_manual",
+        "stories": merged_stories,
+        "notes": notes or "Speeches editoriales importados manualmente.",
+    }
+    if speech_script:
+        job["script"] = {
+            **job.get("script", {}),
+            "draft": speech_script,
+            "approved_text": speech_script,
+            "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+            "inputs": {
+                **job.get("script", {}).get("inputs", {}),
+                "story_narrative_source": "story_narrative.stories",
+                "story_count": len(merged_stories),
+            },
+        }
+        job["status"] = "scripted"
+    job["audit"]["updated_at"] = timestamp
+    job["audit"].setdefault("events", []).append(
+        {
+            "stage": "story_narrative_import",
+            "status": "completed",
+            "timestamp": timestamp,
+            "details": f"Se importaron {len(merged_stories)} speech(es) editoriales.",
+        }
+    )
+    return write_json(job_manifest_path, job)
+
+
+def import_story_narrative_batch(
+    *,
+    narrative_text: str | None = None,
+    narrative_file: Path | None = None,
+    provider: str = "chatgpt_plus_manual",
+    force: bool = False,
+) -> list[dict[str, object]]:
+    project_dir = get_project_dir()
+    if narrative_file is not None:
+        if not narrative_file.exists():
+            raise FileNotFoundError(f"No existe el archivo editorial batch: {narrative_file}")
+        raw_narrative = narrative_file.read_text(encoding="utf-8")
+    elif narrative_text is not None:
+        raw_narrative = narrative_text
+    else:
+        raise ValueError("Debes proporcionar `--narrative-text` o `--narrative-file`.")
+
+    entries, batch_notes = _parse_batch_story_narrative_payload(raw_narrative)
+    results: list[dict[str, object]] = []
+    job_manifest_paths = list(get_jobs_root(project_dir).glob("*/*/job-manifest.json"))
+    manifest_by_job_id = {
+        read_json(path).get("job_id"): path
+        for path in job_manifest_paths
+    }
+
+    for entry in entries:
+        job_id = str(entry.get("job_id") or "")
+        manifest_path = manifest_by_job_id.get(job_id)
+        if manifest_path is None:
+            raise FileNotFoundError(f"No se encontro job-manifest para `job_id={job_id}`.")
+        resolved_provider = str(entry.get("provider") or provider)
+        import_story_narrative_for_job(
+            job_manifest_path=manifest_path,
+            narrative_text=json.dumps(
+                {
+                    "notes": entry.get("notes") or "",
+                    "stories": entry.get("stories") or [],
+                },
+                ensure_ascii=False,
+            ),
+            provider=resolved_provider,
+            force=force,
+        )
+        results.append(
+            {
+                "job_manifest_path": manifest_path.resolve().relative_to(project_dir).as_posix(),
+                "job_id": job_id,
                 "newspaper_name": entry.get("newspaper_name") or "",
                 "provider": resolved_provider,
                 "status": "imported",
@@ -1792,9 +2258,16 @@ def generate_voice_and_subtitles_for_job(
 ) -> Path:
     project_dir = get_project_dir()
     job = read_json(job_manifest_path)
-    voice = VoiceProfile.load(voice_profile_path)
+    fallback_voice = VoiceProfile.load(voice_profile_path)
     subtitle_policy = read_json(subtitle_policy_path)
+    narrative_stories = [
+        story
+        for story in job.get("story_narrative", {}).get("stories", [])
+        if str(story.get("speech") or story.get("summary") or "").strip()
+    ]
     approved_text = job.get("script", {}).get("approved_text", "").strip()
+    if narrative_stories:
+        approved_text = _build_script_from_story_speeches(narrative_stories)
     if not approved_text:
         raise ValueError(
             "El job no tiene `script.approved_text`. Aprueba primero el guion antes de generar voz y subtitulos."
@@ -1813,15 +2286,51 @@ def generate_voice_and_subtitles_for_job(
     audio_path = output_dir / "narration.wav"
     subtitle_segments_path = output_dir / "subtitle-segments.json"
 
-    generate_voice_track(
-        text=approved_text,
-        provider=voice.tts_provider,
-        output_path=audio_path,
-        audio_file=audio_file,
-        voice=voice.tts_voice,
-        language=voice.language,
-        provider_settings=voice.provider_settings,
-    )
+    generated_segments: list[dict[str, object]] = []
+    if narrative_stories:
+        segment_audio_paths: list[Path] = []
+        for index, story in enumerate(narrative_stories, start=1):
+            speech = " ".join(str(story.get("speech") or story.get("summary") or "").split()).strip()
+            if not speech:
+                continue
+            segment_voice = _resolve_tts_profile_for_narrator(
+                narrator_profile_id=story.get("narrator_profile_id"),
+                fallback_voice_profile_path=voice_profile_path,
+                project_dir=project_dir,
+            )
+            segment_audio_path = output_dir / f"narration-segment-{index:02d}.wav"
+            generate_voice_track(
+                text=speech,
+                provider=segment_voice.tts_provider,
+                output_path=segment_audio_path,
+                audio_file=None,
+                voice=segment_voice.tts_voice,
+                language=segment_voice.language,
+                provider_settings=segment_voice.provider_settings,
+            )
+            segment_audio_paths.append(segment_audio_path)
+            generated_segments.append(
+                {
+                    "index": index,
+                    "headline": story.get("headline") or "",
+                    "narrator_profile_id": story.get("narrator_profile_id") or "",
+                    "voice_profile_id": segment_voice.profile_id,
+                    "narrator_name": segment_voice.narrator_name,
+                    "audio_path": segment_audio_path.resolve().relative_to(project_dir).as_posix(),
+                    "text": speech,
+                }
+            )
+        concatenate_wav_files(segment_audio_paths, audio_path)
+    else:
+        generate_voice_track(
+            text=approved_text,
+            provider=fallback_voice.tts_provider,
+            output_path=audio_path,
+            audio_file=audio_file,
+            voice=fallback_voice.tts_voice,
+            language=fallback_voice.language,
+            provider_settings=fallback_voice.provider_settings,
+        )
     total_duration = _get_wav_duration_seconds(audio_path)
     subtitle_text, subtitle_text_source = _select_subtitle_source_text(
         job=job,
@@ -1855,12 +2364,13 @@ def generate_voice_and_subtitles_for_job(
     timestamp = datetime.now().isoformat(timespec="seconds")
     job["voice"] = {
         **job.get("voice", {}),
-        "profile_id": voice.profile_id,
-        "provider": voice.tts_provider,
-        "tts_voice": voice.tts_voice,
-        "language": voice.language,
-        "provider_settings": voice.provider_settings,
+        "profile_id": fallback_voice.profile_id,
+        "provider": fallback_voice.tts_provider,
+        "tts_voice": fallback_voice.tts_voice,
+        "language": fallback_voice.language,
+        "provider_settings": fallback_voice.provider_settings,
         "audio_path": audio_path.resolve().relative_to(project_dir).as_posix(),
+        "segments": generated_segments,
         "timestamps_path": None,
     }
     job["subtitles"] = {
@@ -1894,7 +2404,16 @@ def build_story_manifest_from_job(
     video_template = VideoTemplate.load(video_template_path)
     story_id = job["job_id"]
     render_output = f"output/{story_id}.mp4"
-    approved_text = job["script"].get("approved_text") or job["script"].get("draft")
+    narrative_stories = [
+        story
+        for story in job.get("story_narrative", {}).get("stories", [])
+        if str(story.get("speech") or story.get("summary") or "").strip()
+    ]
+    approved_text = (
+        _build_script_from_story_speeches(narrative_stories)
+        if narrative_stories
+        else job["script"].get("approved_text") or job["script"].get("draft")
+    )
     if not approved_text:
         raise ValueError(
             "El job-manifest no tiene `script.approved_text` ni `script.draft`; no se puede construir el story-manifest."
@@ -1906,16 +2425,35 @@ def build_story_manifest_from_job(
             "El job-manifest no tiene `input_assets.front_page_image`; primero debes asociar o descargar la portada."
         )
 
-    manifest = {
-        "story_id": story_id,
-        "video_template": video_template.template_id,
-        "background": video_template.default_background,
-        "music": video_template.default_music,
-        "subtitle_policy": job["subtitles"]["policy_id"],
-        "render_output": render_output,
-        "segments": [
+    source_name = job["source_id"].replace("-", " ").title()
+    if narrative_stories:
+        manifest_segments = []
+        for story in narrative_stories:
+            segment_voice = _resolve_voice_profile_for_narrator(
+                narrator_profile_id=story.get("narrator_profile_id"),
+                fallback_voice_profile_path=voice_profile_path,
+                project_dir=project_dir,
+            )
+            manifest_segments.append(
+                {
+                    "newspaper_name": source_name,
+                    "cover": front_page_image,
+                    "headline": story.get("headline") or "",
+                    "story_type": story.get("story_type") or "actualidad",
+                    "narrator_profile_id": story.get("narrator_profile_id") or "",
+                    "voice_profile_id": segment_voice.profile_id,
+                    "narrator_name": segment_voice.narrator_name,
+                    "gestures_dir": segment_voice.gestures_dir,
+                    "text": str(story.get("speech") or story.get("summary") or "").strip(),
+                    "cover_region": story.get("cover_region"),
+                    "audio_file": job["voice"].get("audio_path"),
+                    "subtitle_segments_file": job["subtitles"].get("segments_path"),
+                }
+            )
+    else:
+        manifest_segments = [
             {
-                "newspaper_name": job["source_id"].replace("-", " ").title(),
+                "newspaper_name": source_name,
                 "cover": front_page_image,
                 "narrator_name": voice.narrator_name,
                 "gestures_dir": voice.gestures_dir,
@@ -1923,7 +2461,16 @@ def build_story_manifest_from_job(
                 "audio_file": job["voice"].get("audio_path"),
                 "subtitle_segments_file": job["subtitles"].get("segments_path"),
             }
-        ],
+        ]
+
+    manifest = {
+        "story_id": story_id,
+        "video_template": video_template.template_id,
+        "background": video_template.default_background,
+        "music": video_template.default_music,
+        "subtitle_policy": job["subtitles"]["policy_id"],
+        "render_output": render_output,
+        "segments": manifest_segments,
     }
 
     target = output_path or job_manifest_path.with_name("story-manifest.json")
@@ -1942,6 +2489,261 @@ def build_story_manifest_from_job(
     )
     write_json(job_manifest_path, job)
     return written
+
+
+def build_daily_rundown_for_date(
+    *,
+    job_date: str,
+    voice_profile_path: Path,
+    subtitle_policy_path: Path,
+    video_template_path: Path,
+    output_dir: Path | None = None,
+    force: bool = False,
+    progress_callback=None,
+) -> Path:
+    def emit(stage: str, details: str) -> None:
+        if progress_callback is not None:
+            progress_callback(stage, details)
+
+    project_dir = get_project_dir()
+    emit("inicio", f"Preparando programa diario para {job_date}.")
+    jobs_root = get_jobs_root(project_dir)
+    job_paths = sorted((jobs_root / job_date).glob("*/job-manifest.json"))
+    emit("lectura", f"Encontrados {len(job_paths)} job-manifest para el lote.")
+    jobs = [read_json(path) | {"_path": path} for path in job_paths]
+    jobs = [
+        job
+        for job in jobs
+        if job.get("input_assets", {}).get("front_page_image")
+        and job.get("story_narrative", {}).get("stories")
+    ]
+    if not jobs:
+        raise ValueError(f"No hay jobs con speeches importados para `{job_date}`.")
+
+    jobs = _sort_jobs_for_rundown(jobs)
+    emit(
+        "validacion",
+        "Jobs listos: " + ", ".join(str(job.get("source_id") or "sin-source") for job in jobs),
+    )
+    fallback_voice = VoiceProfile.load(voice_profile_path)
+    presenter_visual = _resolve_voice_profile_for_narrator(
+        narrator_profile_id="Mávila_Huertas",
+        fallback_voice_profile_path=voice_profile_path,
+        project_dir=project_dir,
+    )
+    video_template = VideoTemplate.load(video_template_path)
+    subtitle_policy = read_json(subtitle_policy_path)
+
+    source_names = [_format_source_name(str(job.get("source_id") or "")) for job in jobs]
+    story_count = sum(
+        1
+        for job in jobs
+        for story in job.get("story_narrative", {}).get("stories", [])
+        if str(story.get("speech") or story.get("summary") or "").strip()
+    )
+    if story_count == 0:
+        raise ValueError(f"Los jobs de `{job_date}` no tienen speeches validos.")
+    emit("validacion", f"Se usaran {len(jobs)} periodicos y {story_count} speeches.")
+
+    run_stamp = datetime.now().strftime("%H%M%S")
+    story_id = f"{job_date}-daily-rundown-{run_stamp}"
+    target_dir = output_dir or project_dir / "data" / "rundowns" / job_date / run_stamp
+    if target_dir.exists() and any(target_dir.iterdir()) and not force:
+        raise ValueError("El rundown diario ya existe. Usa `force=True` para regenerarlo.")
+    target_dir.mkdir(parents=True, exist_ok=True)
+    audio_dir = target_dir / "audio"
+    audio_dir.mkdir(parents=True, exist_ok=True)
+    emit("carpetas", f"Salida preparada en {target_dir.resolve().relative_to(project_dir).as_posix()}.")
+
+    intro_text = _select_imported_rundown_intro(jobs)
+    if intro_text:
+        emit("intro", "Usando intro dinamica importada desde el primer prompt.")
+    else:
+        intro_text = _build_rundown_intro(
+            job_date=job_date,
+            source_names=source_names,
+            story_count=story_count,
+        )
+        emit("intro", "No se encontro intro importada; se uso intro automatica de respaldo.")
+    first_cover = str(jobs[0]["input_assets"]["front_page_image"])
+    segment_specs: list[dict[str, object]] = [
+        {
+            "newspaper_name": "Resumen de Portadas",
+            "cover": first_cover,
+            "headline": "Introduccion",
+            "story_type": "intro",
+            "narrator_profile_id": "presentador",
+            "voice_profile_id": presenter_visual.profile_id,
+            "narrator_name": presenter_visual.narrator_name,
+            "gestures_dir": presenter_visual.gestures_dir,
+            "text": intro_text,
+            "cover_region": None,
+        }
+    ]
+    emit("intro", f"Intro de presentador lista: {intro_text[:120]}{'...' if len(intro_text) > 120 else ''}")
+
+    for job in jobs:
+        source_name = _format_source_name(str(job.get("source_id") or ""))
+        cover = str(job["input_assets"]["front_page_image"])
+        story_items = [
+            story
+            for story in job.get("story_narrative", {}).get("stories", [])
+            if str(story.get("speech") or story.get("summary") or "").strip()
+        ]
+        emit("rundown", f"{source_name}: agregando {len(story_items)} noticia(s).")
+        for story in story_items:
+            speech = " ".join(str(story.get("speech") or story.get("summary") or "").split()).strip()
+            visual_voice = _resolve_voice_profile_for_narrator(
+                narrator_profile_id=story.get("narrator_profile_id"),
+                fallback_voice_profile_path=voice_profile_path,
+                project_dir=project_dir,
+            )
+            segment_specs.append(
+                {
+                    "newspaper_name": source_name,
+                    "cover": cover,
+                    "headline": story.get("headline") or "",
+                    "story_type": story.get("story_type") or "actualidad",
+                    "narrator_profile_id": story.get("narrator_profile_id") or "",
+                    "voice_profile_id": visual_voice.profile_id,
+                    "narrator_name": visual_voice.narrator_name,
+                    "gestures_dir": visual_voice.gestures_dir,
+                    "text": speech,
+                    "cover_region": story.get("cover_region"),
+                }
+            )
+            emit(
+                "segmento",
+                f"{source_name} | {story.get('story_type') or 'actualidad'} | "
+                f"{story.get('narrator_profile_id') or 'sin-narrador'} | {story.get('headline') or 'sin titular'}",
+            )
+
+    segment_audio_paths: list[Path] = []
+    for index, segment in enumerate(segment_specs, start=1):
+        emit(
+            "audio",
+            f"Generando audio {index}/{len(segment_specs)}: "
+            f"{segment.get('newspaper_name')} - {segment.get('headline')}",
+        )
+        tts_voice = _resolve_tts_profile_for_narrator(
+            narrator_profile_id=segment.get("narrator_profile_id"),
+            fallback_voice_profile_path=voice_profile_path,
+            project_dir=project_dir,
+        )
+        if str(segment.get("narrator_profile_id") or "") == "presentador":
+            tts_voice = fallback_voice
+        segment_audio_path = audio_dir / f"segment-{index:02d}.wav"
+        generate_voice_track(
+            text=str(segment["text"]),
+            provider=tts_voice.tts_provider,
+            output_path=segment_audio_path,
+            audio_file=None,
+            voice=tts_voice.tts_voice,
+            language=tts_voice.language,
+            provider_settings=tts_voice.provider_settings,
+        )
+        segment_audio_paths.append(segment_audio_path)
+        segment["segment_audio_file"] = segment_audio_path.resolve().relative_to(project_dir).as_posix()
+        emit(
+            "audio",
+            f"Audio generado: {segment_audio_path.resolve().relative_to(project_dir).as_posix()}",
+        )
+
+    audio_path = target_dir / "narration.wav"
+    emit("audio", f"Uniendo {len(segment_audio_paths)} audios en narration.wav.")
+    concatenate_wav_files(segment_audio_paths, audio_path)
+    total_duration = _get_wav_duration_seconds(audio_path)
+    emit("audio", f"Audio final listo: {round(total_duration, 2)} segundos.")
+    full_text = "\n\n".join(str(segment["text"]) for segment in segment_specs)
+    emit("subtitulos", "Generando subtitulos del programa completo.")
+    subtitle_segments = build_subtitle_segments(
+        full_text,
+        total_duration=total_duration,
+        max_chars=int(subtitle_policy.get("max_chars_per_block", 72)),
+    )
+    subtitles_path = target_dir / "subtitle-segments.json"
+    write_json(
+        subtitles_path,
+        {
+            "policy_id": subtitle_policy["policy_id"],
+            "text_source": "daily_rundown",
+            "text": full_text,
+            "audio_duration_seconds": round(total_duration, 3),
+            "segments": [
+                {
+                    "text": segment.text,
+                    "start": round(segment.start, 3),
+                    "end": round(segment.end, 3),
+                }
+                for segment in subtitle_segments
+            ],
+        },
+    )
+    emit("subtitulos", f"Subtitulos listos: {subtitles_path.resolve().relative_to(project_dir).as_posix()}.")
+    for segment in segment_specs:
+        segment["audio_file"] = audio_path.resolve().relative_to(project_dir).as_posix()
+        segment["subtitle_segments_file"] = subtitles_path.resolve().relative_to(project_dir).as_posix()
+
+    story_manifest_path = target_dir / "story-manifest.json"
+    manifest = {
+        "story_id": story_id,
+        "video_template": video_template.template_id,
+        "background": video_template.default_background,
+        "music": video_template.default_music,
+        "subtitle_policy": subtitle_policy["policy_id"],
+        "render_output": f"output/{story_id}.mp4",
+        "audio_path": audio_path.resolve().relative_to(project_dir).as_posix(),
+        "subtitle_segments_path": subtitles_path.resolve().relative_to(project_dir).as_posix(),
+        "segments": segment_specs,
+    }
+    write_json(story_manifest_path, manifest)
+    emit("manifest", f"Story manifest creado: {story_manifest_path.resolve().relative_to(project_dir).as_posix()}.")
+
+    gestures_dir = project_dir / str(segment_specs[0]["gestures_dir"])
+    fallback_gestures = sorted(
+        path
+        for path in gestures_dir.iterdir()
+        if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"}
+    )
+    if not fallback_gestures:
+        raise ValueError(f"No se encontraron gestos para el presentador en: {gestures_dir}")
+
+    video_segments: list[VideoSegment] = []
+    for index, segment in enumerate(segment_specs, start=1):
+        segment_gestures_dir = project_dir / str(segment["gestures_dir"])
+        emit(
+            "assets",
+            f"Validando gestos {index}/{len(segment_specs)}: {segment.get('narrator_name')}.",
+        )
+        segment_gestures = sorted(
+            path
+            for path in segment_gestures_dir.iterdir()
+            if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"}
+        )
+        if not segment_gestures:
+            raise ValueError(f"No se encontraron gestos en: {segment_gestures_dir}")
+        video_segments.append(
+            VideoSegment(
+                newspaper_name=str(segment["newspaper_name"]),
+                cover_path=project_dir / str(segment["cover"]),
+                text=str(segment["text"]),
+                narrator_name=str(segment["narrator_name"]),
+                gesture_paths=segment_gestures,
+            )
+        )
+
+    emit("remotion", "Sincronizando assets y actualizando generated-story.js.")
+    compose_video_props(
+        background_path=project_dir / video_template.default_background,
+        gesture_paths=fallback_gestures,
+        segments=video_segments,
+        audio_path=audio_path,
+        output_stem=story_id,
+        spec=VideoSpec(fps=30, composition_id=video_template.composition_id),
+        keep_previous_generated=True,
+    )
+    emit("remotion", "Preview diario listo en Remotion: NewsVideo-generated.")
+    return story_manifest_path
 
 
 def compose_job_for_preview(

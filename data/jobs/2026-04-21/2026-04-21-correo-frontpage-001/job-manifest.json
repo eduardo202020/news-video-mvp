@@ -1,0 +1,546 @@
+{
+  "job_id": "2026-04-21-correo-frontpage-001",
+  "source_id": "correo",
+  "date": "2026-04-21",
+  "source": {
+    "source_id": "correo",
+    "source_config_path": "automation/sources/diarios/correo.json",
+    "requested_date": "2026-04-21",
+    "issue_date": "2026-04-21",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042100000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042100000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/correo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042100000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042100000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042100000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042100000000001001&page=5&scale=80",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042100000000001001&page=7&scale=80",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042100000000001001&page=16&scale=80",
+        "local_path": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      2,
+      3,
+      5,
+      7,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Precariedad de organizaciones politicas",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.32,
+          "width": 0.89,
+          "height": 0.6
+        },
+        "page_number": 2,
+        "evidence_line": "Pags. 2 y 3 TEMA DEL DIA en el titular principal 'Puro cascaron'",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.99
+      },
+      {
+        "headline": "Precariedad de organizaciones politicas",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.32,
+          "width": 0.89,
+          "height": 0.6
+        },
+        "page_number": 3,
+        "evidence_line": "Pags. 2 y 3 TEMA DEL DIA en el titular principal 'Puro cascaron'",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.99
+      },
+      {
+        "headline": "Congreso cita a ministros por compra de F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.33,
+          "y": 0.1,
+          "width": 0.34,
+          "height": 0.15
+        },
+        "page_number": 7,
+        "evidence_line": "Pag. 7 Lima en el recuadro superior central sobre aviones F-16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Bellido impulsa proyecto para su partido",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.69,
+          "y": 0.1,
+          "width": 0.28,
+          "height": 0.15
+        },
+        "page_number": 5,
+        "evidence_line": "Pag. 5 Politica en el recuadro superior derecho de Guido Bellido",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Rabanal tiene las horas contadas en la U",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.33,
+          "y": 0.25,
+          "width": 0.64,
+          "height": 0.09
+        },
+        "page_number": 16,
+        "evidence_line": "Pag. 16 Deportes en la franja roja sobre Javier Rabanal",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Precariedad de organizaciones politicas",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.32,
+          "width": 0.89,
+          "height": 0.6
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "Pags. 2 y 3 TEMA DEL DIA en el titular principal 'Puro cascaron'",
+        "evidence_lines": [
+          "Pags. 2 y 3 TEMA DEL DIA en el titular principal 'Puro cascaron'"
+        ],
+        "confidence": 0.99
+      },
+      {
+        "headline": "Bellido impulsa proyecto para su partido",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.69,
+          "y": 0.1,
+          "width": 0.28,
+          "height": 0.15
+        },
+        "page_numbers": [
+          5
+        ],
+        "evidence": "Pag. 5 Politica en el recuadro superior derecho de Guido Bellido",
+        "evidence_lines": [
+          "Pag. 5 Politica en el recuadro superior derecho de Guido Bellido"
+        ],
+        "confidence": 0.98
+      },
+      {
+        "headline": "Congreso cita a ministros por compra de F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.33,
+          "y": 0.1,
+          "width": 0.34,
+          "height": 0.15
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "Pag. 7 Lima en el recuadro superior central sobre aviones F-16",
+        "evidence_lines": [
+          "Pag. 7 Lima en el recuadro superior central sobre aviones F-16"
+        ],
+        "confidence": 0.98
+      },
+      {
+        "headline": "Rabanal tiene las horas contadas en la U",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.33,
+          "y": 0.25,
+          "width": 0.64,
+          "height": 0.09
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "Pag. 16 Deportes en la franja roja sobre Javier Rabanal",
+        "evidence_lines": [
+          "Pag. 16 Deportes en la franja roja sobre Javier Rabanal"
+        ],
+        "confidence": 0.97
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Doce candidatos a la Presidencia no captaron el voto de sus afiliados",
+        "story_type": "politica",
+        "summary": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.",
+        "speech": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.",
+        "narrator_profile_id": "beto_ortiz",
+        "tone_notes": [
+          "critico",
+          "frontal",
+          "prudente"
+        ],
+        "page_numbers": [],
+        "cover_region": null,
+        "key_facts": [
+          "12 candidatos no captaron el voto de sus afiliados",
+          "el diario habla de \"partidos cascarón\"",
+          "el contraste se apoya en votos y militancia"
+        ],
+        "key_facts_used": [
+          "12 candidatos no captaron el voto de sus afiliados",
+          "el diario habla de \"partidos cascarón\"",
+          "el contraste se apoya en votos y militancia"
+        ],
+        "safety_notes": "Se resume el hallazgo central y se evitan cifras parciales poco legibles en los cuadros secundarios.",
+        "notes": "Se resume el hallazgo central y se evitan cifras parciales poco legibles en los cuadros secundarios."
+      },
+      {
+        "headline": "Bellido presenta proyecto que favorecería a su partido",
+        "story_type": "politica",
+        "summary": "La pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.",
+        "speech": "La pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.",
+        "narrator_profile_id": "beto_ortiz",
+        "tone_notes": [
+          "critico",
+          "incisivo",
+          "cauteloso"
+        ],
+        "page_numbers": [],
+        "cover_region": null,
+        "key_facts": [
+          "Guido Bellido impulsa un proyecto de ley",
+          "la nota señala posible beneficio para Perú Consciente",
+          "se menciona un requisito legal de cancelación"
+        ],
+        "key_facts_used": [
+          "Guido Bellido impulsa un proyecto de ley",
+          "la nota señala posible beneficio para Perú Consciente",
+          "se menciona un requisito legal de cancelación"
+        ],
+        "safety_notes": "Se usa cautela y no se afirma intención dolosa; solo se recoge el posible beneficio señalado por la nota.",
+        "notes": "Se usa cautela y no se afirma intención dolosa; solo se recoge el posible beneficio señalado por la nota."
+      },
+      {
+        "headline": "Congreso convoca a tres ministros por compra de aviones",
+        "story_type": "politica",
+        "summary": "Atención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.",
+        "speech": "Atención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.",
+        "narrator_profile_id": "Mávila_Huertas",
+        "tone_notes": [
+          "serio",
+          "sobrio",
+          "institucional"
+        ],
+        "page_numbers": [],
+        "cover_region": null,
+        "key_facts": [
+          "citación a tres ministros",
+          "negociación por aviones de combate",
+          "pedido de transparencia sobre la compra"
+        ],
+        "key_facts_used": [
+          "citación a tres ministros",
+          "negociación por aviones de combate",
+          "pedido de transparencia sobre la compra"
+        ],
+        "safety_notes": "Se evita adelantar irregularidades y se resume solo la citación y el debate institucional visibles en la página.",
+        "notes": "Se evita adelantar irregularidades y se resume solo la citación y el debate institucional visibles en la página."
+      },
+      {
+        "headline": "La revolución no progresó",
+        "story_type": "deportes",
+        "summary": "Sin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
+        "speech": "Sin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
+        "narrator_profile_id": "gonzalo_nunez",
+        "tone_notes": [
+          "pasional",
+          "frontal",
+          "deportivo"
+        ],
+        "page_numbers": [],
+        "cover_region": null,
+        "key_facts": [
+          "Javier Rabanal está bajo fuerte presión",
+          "la nota habla de críticas y malos resultados",
+          "Universitario evalúa su continuidad"
+        ],
+        "key_facts_used": [
+          "Javier Rabanal está bajo fuerte presión",
+          "la nota habla de críticas y malos resultados",
+          "Universitario evalúa su continuidad"
+        ],
+        "safety_notes": "Se evita dar por cerrada una salida que la nota presenta como inminente, no oficializada.",
+        "notes": "Se evita dar por cerrada una salida que la nota presenta como inminente, no oficializada."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente."
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.\n\nLa pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.\n\nAtención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.\n\nSin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
+    "approved_text": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.\n\nLa pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.\n\nAtención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.\n\nSin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "1e633b5c-3963-4582-a2af-47e9dd71aa35",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-21T16:33:34",
+    "updated_at": "2026-04-21T18:52:49",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:33:34",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:33:57",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:33:58",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:42:00",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-21T16:43:30",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T17:21:54",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T17:22:01",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T17:22:34",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T17:30:25",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:01:41",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:02:15",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:03:05",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:03:08",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:11:49",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:40:52",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:40:52",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:42:06",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:48:53",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:48:53",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:49:48",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:51:57",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T18:52:49",
+        "details": "Se importaron 4 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, martes 21 de abril, recorremos cinco portadas con una agenda marcada por crisis electoral, economía, policiales y deporte. En una fecha que también remite a una efeméride peruana, vamos diario por diario con lo más fuerte y las páginas clave para ampliar contexto.",
+    "date_reference": "21 de abril: nacimiento de Manuel Prado Ugarteche, dos veces presidente de la República. Adonde.com efemerides abril21 ([Adonde.com][1])",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana sobria, sin competir con el foco editorial del recorrido.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-21T18:48:53"
+  }
+}
