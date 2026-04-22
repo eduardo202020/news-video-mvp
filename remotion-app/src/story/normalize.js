@@ -7,7 +7,10 @@ const normalizeSegment = (segment, fallbackStory) => ({
   coverSrc: segment.coverSrc ?? fallbackStory.coverSrc,
   text: segment.text ?? fallbackStory.text,
   narratorName: segment.narratorName ?? fallbackStory.narratorName,
-  gestures: segment.gestures?.length ? segment.gestures : fallbackStory.gestures
+  gestures: segment.gestures?.length ? segment.gestures : fallbackStory.gestures,
+  durationSeconds: segment.durationSeconds ?? null,
+  coverRegion: segment.coverRegion ?? null,
+  segmentType: segment.segmentType ?? "story"
 });
 
 export const normalizeStory = (story) => {
@@ -22,6 +25,22 @@ export const normalizeStory = (story) => {
     baseStory.segments?.length > 0
       ? baseStory.segments.map((segment) => normalizeSegment(segment, baseStory))
       : [normalizeSegment(baseStory, baseStory)];
+  const newspaperCoverStack = [];
+  const seenNewspapers = new Set();
+  for (const segment of segments) {
+    if (segment.segmentType !== "story") {
+      continue;
+    }
+    const newspaperKey = `${segment.newspaperName}`;
+    if (seenNewspapers.has(newspaperKey)) {
+      continue;
+    }
+    seenNewspapers.add(newspaperKey);
+    newspaperCoverStack.push({
+      newspaperName: segment.newspaperName,
+      coverSrc: segment.coverSrc
+    });
+  }
 
   return {
     ...baseStory,
@@ -30,7 +49,9 @@ export const normalizeStory = (story) => {
     coverSrc: segments[0].coverSrc,
     narratorName: segments[0].narratorName,
     text: baseStory.text ?? segments.map((segment) => segment.text).join(" "),
-    gestures: baseStory.gestures?.length ? baseStory.gestures : segments[0].gestures
+    gestures: baseStory.gestures?.length ? baseStory.gestures : segments[0].gestures,
+    subtitleSegments: baseStory.subtitleSegments ?? [],
+    newspaperCoverStack
   };
 };
 

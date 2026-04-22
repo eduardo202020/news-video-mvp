@@ -77,29 +77,14 @@ export const NewsVideo = ({
 
   const cardTranslateY = interpolate(cardEntrance, [0, 1], [80, 0]);
   const narratorTranslateY = interpolate(narratorEntrance, [0, 1], [200, 0]);
-  const narratorScale = interpolate(narratorEntrance, [0, 1], [0.94, 1]);
+  const narratorScale = interpolate(narratorEntrance, [0, 1], [0.98, 1]);
 
-  const backgroundTravel = 190;
-  const backgroundCycleFrames = Math.max(120, Math.floor(durationInFrames * 0.65));
-  const cycleFrame = frame % backgroundCycleFrames;
-  const backgroundPan = interpolate(
-    cycleFrame,
-    [0, backgroundCycleFrames / 2, backgroundCycleFrames],
-    [backgroundTravel, -backgroundTravel, backgroundTravel],
-    {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp"
-    }
-  );
-  const backgroundScale = interpolate(
-    frame,
-    [0, durationInFrames / 2, durationInFrames],
-    [1.08, 1.12, 1.08],
-    {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp"
-    }
-  );
+  const backgroundTravel = 28;
+  const backgroundPan = interpolate(frame, [0, durationInFrames], [0, -backgroundTravel], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp"
+  });
+  const backgroundScale = 1.03;
 
   const narratorSegmentProgress = interpolate(
     timeline.segmentFrame,
@@ -110,15 +95,15 @@ export const NewsVideo = ({
       extrapolateRight: "clamp"
     }
   );
-  const narratorSegmentTranslateX = interpolate(narratorSegmentProgress, [0, 1], [32, 0]);
-  const narratorSegmentTranslateY = interpolate(narratorSegmentProgress, [0, 1], [30, 0]);
-  const narratorSegmentScale = interpolate(narratorSegmentProgress, [0, 1], [0.97, 1]);
+  const narratorSegmentTranslateX = interpolate(narratorSegmentProgress, [0, 1], [16, 0]);
+  const narratorSegmentTranslateY = interpolate(narratorSegmentProgress, [0, 1], [14, 0]);
+  const narratorSegmentScale = interpolate(narratorSegmentProgress, [0, 1], [0.99, 1]);
   const narratorSegmentOpacity = interpolate(narratorSegmentProgress, [0, 1], [0, 1]);
 
   const coverFloatY = interpolate(
     frame,
     [0, durationInFrames / 2, durationInFrames],
-    [0, -10, 0],
+    [0, -3, 0],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp"
@@ -150,36 +135,27 @@ export const NewsVideo = ({
         <Img
           src={staticFile(story.backgroundSrc)}
           style={{
-            width: "142%",
+            width: "112%",
             height: "100%",
             objectFit: "cover",
-            filter: "blur(6px) saturate(1.15)",
-            marginLeft: "-21%",
+            marginLeft: "-6%",
             transform: `translateX(${backgroundPan}px) scale(${backgroundScale})`
           }}
         />
         <AbsoluteFill
           style={{
             background:
-              "linear-gradient(180deg, rgba(28,16,24,0.18) 0%, rgba(22,16,21,0.08) 32%, rgba(17,12,18,0.42) 68%, rgba(13,9,13,0.78) 100%)"
-          }}
-        />
-        <AbsoluteFill
-          style={{
-            background:
-              "radial-gradient(circle at 32% 28%, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.04) 20%, rgba(255,255,255,0) 44%)"
-          }}
-        />
-        <AbsoluteFill
-          style={{
-            boxShadow: "inset 0 0 220px rgba(0,0,0,0.28)"
+              "linear-gradient(180deg, rgba(20,16,20,0.22) 0%, rgba(16,13,18,0.18) 44%, rgba(12,10,14,0.56) 100%)"
           }}
         />
       </AbsoluteFill>
 
       <CoverStage
+        newspaperCoverStack={story.newspaperCoverStack}
         currentSegment={timeline.currentSegment}
         nextSegment={timeline.nextSegment}
+        segmentFrame={timeline.segmentFrame}
+        segmentDuration={timeline.segmentDuration}
         isTransitioning={timeline.isTransitioning}
         transitionProgress={timeline.transitionProgress}
         cardTranslateY={cardTranslateY}

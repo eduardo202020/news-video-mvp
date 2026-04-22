@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import Counter
 import copy
 from datetime import datetime
+import importlib
 import json
 import os
 from pathlib import Path
@@ -21,25 +22,30 @@ SRC_DIR = PROJECT_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from news_video_mvp.automation_pipeline import (  # noqa: E402
-    analyze_cover_page_references_for_job,
-    approve_script_for_job,
-    build_job_id,
-    build_daily_rundown_for_date,
-    build_story_manifest_from_job,
-    compose_job_for_preview,
-    create_job_manifest,
-    extract_and_classify_job,
-    generate_script_from_job,
-    generate_voice_and_subtitles_for_job,
-    import_cover_page_selection_batch,
-    import_cover_page_selection_for_job,
-    import_story_narrative_batch,
-    import_story_narrative_for_job,
-    publish_job,
-    scrape_source_into_job,
-    scrape_selected_pages_for_job,
-)
+from news_video_mvp import composer as composer_module  # noqa: E402
+from news_video_mvp import automation_pipeline as pipeline_module  # noqa: E402
+
+importlib.invalidate_caches()
+composer_module = importlib.reload(composer_module)
+pipeline_module = importlib.reload(pipeline_module)
+analyze_cover_page_references_for_job = pipeline_module.analyze_cover_page_references_for_job
+approve_script_for_job = pipeline_module.approve_script_for_job
+build_job_id = pipeline_module.build_job_id
+build_daily_rundown_for_date = pipeline_module.build_daily_rundown_for_date
+build_story_manifest_from_job = pipeline_module.build_story_manifest_from_job
+compose_job_for_preview = pipeline_module.compose_job_for_preview
+create_job_manifest = pipeline_module.create_job_manifest
+extract_and_classify_job = pipeline_module.extract_and_classify_job
+generate_script_from_job = pipeline_module.generate_script_from_job
+generate_voice_and_subtitles_for_job = pipeline_module.generate_voice_and_subtitles_for_job
+import_cover_page_selection_batch = pipeline_module.import_cover_page_selection_batch
+import_cover_page_selection_for_job = pipeline_module.import_cover_page_selection_for_job
+import_story_narrative_batch = pipeline_module.import_story_narrative_batch
+import_story_narrative_for_job = pipeline_module.import_story_narrative_for_job
+publish_job = pipeline_module.publish_job
+retry_daily_rundown_from_existing_audio = pipeline_module.retry_daily_rundown_from_existing_audio
+scrape_source_into_job = pipeline_module.scrape_source_into_job
+scrape_selected_pages_for_job = pipeline_module.scrape_selected_pages_for_job
 
 
 DEFAULT_EDITORIAL_POLICY = PROJECT_DIR / "automation" / "rules" / "editorial-policy.json"
@@ -51,6 +57,8 @@ DEFAULT_COVER_BATCH_PROMPT = (
     PROJECT_DIR / "automation" / "templates" / "prompts" / "cover-page-selection-batch.md"
 )
 VOICE_PROFILES_DIR = PROJECT_DIR / "automation" / "templates" / "voices"
+DEV_CACHE_DIR = PROJECT_DIR / "data" / "dev-cache"
+CHATGPT_CACHE_PREFIX = "chatgpt-responses"
 
 
 def read_json(path: Path) -> dict:
@@ -59,6 +67,72 @@ def read_json(path: Path) -> dict:
 
 def write_json(path: Path, payload: dict) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def get_chatgpt_response_cache_path(batch_date: str) -> Path:
+    safe_date = "".join(char for char in str(batch_date) if char.isdigit() or char in {"-"}) or "unknown-date"
+    return DEV_CACHE_DIR / f"{CHATGPT_CACHE_PREFIX}-{safe_date}.json"
+
+
+def read_chatgpt_response_cache(batch_date: str) -> dict:
+    cache_path = get_chatgpt_response_cache_path(batch_date)
+    if not cache_path.exists():
+        return {"batch_date": batch_date, "responses": {}}
+    try:
+        payload = read_json(cache_path)
+    except Exception:
+        return {"batch_date": batch_date, "responses": {}}
+    if not isinstance(payload.get("responses"), dict):
+        payload["responses"] = {}
+    return payload
+
+
+def write_chatgpt_response_cache(batch_date: str, payload: dict) -> Path:
+    DEV_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_path = get_chatgpt_response_cache_path(batch_date)
+    payload = {
+        **payload,
+        "batch_date": batch_date,
+        "updated_at": datetime.now().isoformat(timespec="seconds"),
+    }
+    write_json(cache_path, payload)
+    return cache_path
+
+
+def save_chatgpt_response_cache_value(batch_date: str, key: str, value: str) -> Path:
+    payload = read_chatgpt_response_cache(batch_date)
+    payload.setdefault("responses", {})
+    payload["responses"][key] = value
+    return write_chatgpt_response_cache(batch_date, payload)
+
+
+def get_chatgpt_response_cache_value(batch_date: str, key: str, default: str) -> str:
+    if key in st.session_state:
+        return str(st.session_state[key])
+    payload = read_chatgpt_response_cache(batch_date)
+    responses = payload.get("responses", {})
+    cached_value = responses.get(key)
+    if cached_value is None:
+        return default
+    return str(cached_value)
+
+
+def save_rendered_chatgpt_response(batch_date: str, key: str, value: str, default: str) -> None:
+    existing = read_chatgpt_response_cache(batch_date).get("responses", {})
+    if value != default or key in existing:
+        save_chatgpt_response_cache_value(batch_date, key, value)
+
+
+def cache_chatgpt_widget_value(batch_date: str, key: str) -> None:
+    save_chatgpt_response_cache_value(batch_date, key, str(st.session_state.get(key, "")))
+
+
+def load_chatgpt_response_cache_into_session(batch_date: str) -> int:
+    payload = read_chatgpt_response_cache(batch_date)
+    responses = payload.get("responses", {})
+    for key, value in responses.items():
+        st.session_state[str(key)] = str(value)
+    return len(responses)
 
 
 def rel(path: Path) -> str:
@@ -395,7 +469,38 @@ def run_action(label: str, action) -> None:
         st.error(str(exc))
 
 
-def run_daily_rundown_with_feedback(*, job_date: str, voice_profile_id: str) -> None:
+def import_cover_selection_with_dev_cache(*, batch_date: str, selection_text: str, dev_cache_enabled: bool) -> None:
+    if dev_cache_enabled:
+        save_chatgpt_response_cache_value(batch_date, "cover_batch_import_payload", selection_text)
+    import_cover_page_selection_batch(
+        selection_text=selection_text,
+        provider="chatgpt_plus_manual",
+        force=True,
+    )
+
+
+def import_story_narrative_with_dev_cache(
+    *,
+    batch_date: str,
+    cache_key: str,
+    narrative_text: str,
+    dev_cache_enabled: bool,
+) -> None:
+    if dev_cache_enabled:
+        save_chatgpt_response_cache_value(batch_date, cache_key, narrative_text)
+    import_story_narrative_batch(
+        narrative_text=narrative_text,
+        provider="chatgpt_plus_manual",
+        force=True,
+    )
+
+
+def run_daily_rundown_with_feedback(
+    *,
+    job_date: str,
+    voice_profile_id: str,
+    development_mode: bool = False,
+) -> None:
     events: list[dict[str, str]] = []
     with st.status("Construyendo programa diario...", expanded=True) as status:
         def on_progress(stage: str, details: str) -> None:
@@ -408,6 +513,7 @@ def run_daily_rundown_with_feedback(*, job_date: str, voice_profile_id: str) -> 
                 voice_profile_path=VOICE_PROFILES_DIR / f"{voice_profile_id}.json",
                 subtitle_policy_path=DEFAULT_SUBTITLE_POLICY,
                 video_template_path=DEFAULT_VIDEO_TEMPLATE,
+                max_newspapers=2 if development_mode else None,
                 force=True,
                 progress_callback=on_progress,
             )
@@ -422,6 +528,54 @@ def run_daily_rundown_with_feedback(*, job_date: str, voice_profile_id: str) -> 
         status.update(label="Programa diario construido para preview.", state="complete", expanded=True)
         st.success(f"Manifest creado: `{rel(manifest_path)}`")
         st.caption("Abre Remotion y revisa `NewsVideo-generated`.")
+
+
+def run_daily_rundown_retry_with_feedback(
+    *,
+    job_date: str,
+    voice_profile_id: str,
+    rundown_dir: Path,
+) -> None:
+    events: list[dict[str, str]] = []
+    with st.status("Reintentando desde audios existentes...", expanded=True) as status:
+        def on_progress(stage: str, details: str) -> None:
+            events.append({"stage": stage, "details": details})
+            status.write(f"**{stage}** · {details}")
+
+        try:
+            manifest_path = retry_daily_rundown_from_existing_audio(
+                job_date=job_date,
+                rundown_dir=rundown_dir,
+                voice_profile_path=VOICE_PROFILES_DIR / f"{voice_profile_id}.json",
+                subtitle_policy_path=DEFAULT_SUBTITLE_POLICY,
+                video_template_path=DEFAULT_VIDEO_TEMPLATE,
+                progress_callback=on_progress,
+            )
+        except Exception as exc:
+            status.update(label="Reintento detenido por error.", state="error", expanded=True)
+            st.error(str(exc))
+            if events:
+                st.caption("Ultimas etapas completadas antes del error:")
+                st.json(events[-8:])
+            return
+
+        status.update(label="Programa diario reconstruido desde audios existentes.", state="complete", expanded=True)
+        st.success(f"Manifest creado: `{rel(manifest_path)}`")
+        st.caption("Abre Remotion y revisa `NewsVideo-generated`.")
+
+
+def discover_rundown_dirs_for_date(job_date: str) -> list[Path]:
+    rundown_root = PROJECT_DIR / "data" / "rundowns" / job_date
+    if not rundown_root.exists():
+        return []
+    return sorted(
+        [
+            path
+            for path in rundown_root.iterdir()
+            if path.is_dir() and (path / "audio").exists() and list((path / "audio").glob("segment-*.wav"))
+        ],
+        reverse=True,
+    )
 
 
 def build_job_label(job: dict) -> str:
@@ -784,8 +938,10 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "- Mantén separados los resultados por periodico.",
         "- Si un periodico trae varias noticias relevantes, devuelve varias entradas en `stories`.",
         "- Escribe en espanol peruano neutro, claro y natural.",
-        "- Cada `speech` debe tener 220 a 420 caracteres, de 1 a 3 frases, con inicio fuerte y cierre claro.",
+        "- Cada `speech` debe tener 140 a 260 caracteres, idealmente 1 o 2 frases, con inicio fuerte y cierre claro.",
         "- El `speech` debe ajustarse a la categoria de noticia y al narrador asignado.",
+        "- Prioriza brevedad y pegada: el video final debe sentirse agil, no recargado.",
+        "- Evita contexto accesorio, repeticiones y cierres redundantes.",
         "- `key_facts_used` debe tener entre 1 y 3 puntos cortos, no parrafos.",
         "- Respeta `story_type`, `headline` y `cover_region` ya detectados desde la portada; solo corrige si las paginas internas muestran claramente que estaban mal.",
         "- Usa los titulares detectados, hints de portada y OCR previo como contexto fuerte, y las paginas adjuntas como verificacion y ampliacion.",
@@ -1144,6 +1300,32 @@ selected_source = st.sidebar.selectbox("Fuente", source_options)
 selected_status = st.sidebar.selectbox("Estado", status_options)
 text_query = st.sidebar.text_input("Buscar", placeholder="job id, titular o texto")
 
+dev_mode_default = os.getenv("NEWS_VIDEO_DEV_MODE", "").strip().lower() in {"1", "true", "yes", "on"}
+dev_mode_enabled = st.checkbox(
+    "Modo desarrollo",
+    value=bool(st.session_state.get("dev_mode_enabled", dev_mode_default)),
+    help="Guarda y recupera respuestas pegadas de ChatGPT en data/dev-cache para no reescribirlas al reiniciar Streamlit.",
+)
+st.session_state["dev_mode_enabled"] = dev_mode_enabled
+header_col1, header_col2 = st.columns([1, 2])
+with header_col1:
+    if st.button(
+        "Cargar respuestas de prueba",
+        use_container_width=True,
+        help="Restaura en los campos de la UI las respuestas de ChatGPT guardadas para el lote activo.",
+    ):
+        restored_count = load_chatgpt_response_cache_into_session(selected_batch_date)
+        if restored_count:
+            st.success(f"Se cargaron {restored_count} respuesta(s) cacheadas para `{selected_batch_date}`.")
+            st.rerun()
+        else:
+            st.info(f"No hay respuestas cacheadas para `{selected_batch_date}`.")
+with header_col2:
+    if dev_mode_enabled:
+        st.caption(f"Cache dev activo: `{rel(get_chatgpt_response_cache_path(selected_batch_date))}`")
+    else:
+        st.caption("Activa modo desarrollo para guardar automaticamente las respuestas pegadas de ChatGPT.")
+
 jobs_for_selected_date = filter_jobs_by_date(all_jobs, selected_date=selected_batch_date)
 filtered_jobs = filter_jobs(
     jobs_for_selected_date,
@@ -1275,19 +1457,35 @@ with board_tab:
             )
 
         with st.expander("Pegar respuesta JSON de ChatGPT", expanded=False):
+            cover_import_key = "cover_batch_import_payload"
             batch_json_value = st.text_area(
                 "Pega aqui el JSON devuelto por ChatGPT",
-                value=seed_payload,
+                value=get_chatgpt_response_cache_value(
+                    selected_batch_date,
+                    cover_import_key,
+                    seed_payload,
+                )
+                if dev_mode_enabled
+                else seed_payload,
                 height=260,
-                key="cover_batch_import_payload",
+                key=cover_import_key,
+                on_change=cache_chatgpt_widget_value if dev_mode_enabled else None,
+                args=(selected_batch_date, cover_import_key) if dev_mode_enabled else None,
             )
+            if dev_mode_enabled:
+                save_rendered_chatgpt_response(
+                    selected_batch_date,
+                    cover_import_key,
+                    batch_json_value,
+                    seed_payload,
+                )
             if st.button("Importar Seleccion Batch", use_container_width=True, type="primary"):
                 run_action(
                     "Seleccion batch importada.",
-                    lambda: import_cover_page_selection_batch(
+                    lambda batch_json_value=batch_json_value: import_cover_selection_with_dev_cache(
+                        batch_date=selected_batch_date,
                         selection_text=batch_json_value,
-                        provider="chatgpt_plus_manual",
-                        force=True,
+                        dev_cache_enabled=dev_mode_enabled,
                     ),
                 )
 
@@ -1540,12 +1738,33 @@ with board_tab:
                                 height=360,
                                 key=f"detailed_news_prompt_{group_index}",
                             )
+                            detailed_import_key = f"detailed_news_import_payload_{group_index}"
                             narrative_batch_value = st.text_area(
                                 f"JSON editorial bloque {group_index}",
-                                value=detailed_seed_payload,
+                                value=get_chatgpt_response_cache_value(
+                                    selected_batch_date,
+                                    detailed_import_key,
+                                    detailed_seed_payload,
+                                )
+                                if dev_mode_enabled
+                                else detailed_seed_payload,
                                 height=260,
-                                key=f"detailed_news_import_payload_{group_index}",
+                                key=detailed_import_key,
+                                on_change=cache_chatgpt_widget_value if dev_mode_enabled else None,
+                                args=(
+                                    selected_batch_date,
+                                    detailed_import_key,
+                                )
+                                if dev_mode_enabled
+                                else None,
                             )
+                            if dev_mode_enabled:
+                                save_rendered_chatgpt_response(
+                                    selected_batch_date,
+                                    detailed_import_key,
+                                    narrative_batch_value,
+                                    detailed_seed_payload,
+                                )
                             if st.button(
                                 f"Importar Speeches Editoriales bloque {group_index}",
                                 use_container_width=True,
@@ -1554,10 +1773,11 @@ with board_tab:
                             ):
                                 run_action(
                                     f"Speeches editoriales del bloque {group_index} importados.",
-                                    lambda narrative_batch_value=narrative_batch_value: import_story_narrative_batch(
+                                    lambda narrative_batch_value=narrative_batch_value, detailed_import_key=detailed_import_key: import_story_narrative_with_dev_cache(
+                                        batch_date=selected_batch_date,
+                                        cache_key=detailed_import_key,
                                         narrative_text=narrative_batch_value,
-                                        provider="chatgpt_plus_manual",
-                                        force=True,
+                                        dev_cache_enabled=dev_mode_enabled,
                                     ),
                                 )
 
@@ -1575,6 +1795,19 @@ with board_tab:
                 st.markdown(
                     f"Jobs listos para programa: `{len(ready_rundown_jobs)}` de `{len(batch_jobs)}`."
                 )
+                rundown_dev_mode = st.checkbox(
+                    "Modo desarrollo para preview",
+                    value=False,
+                    help="Genera audio solo para el primer bloque de 2 periodicos listos del lote y aun asi actualiza Remotion para iterar mas rapido.",
+                    key="rundown_dev_mode",
+                )
+                if rundown_dev_mode:
+                    preview_sources = ", ".join(
+                        str(job.get("source_id") or "sin-source") for job in ready_rundown_jobs[:2]
+                    )
+                    st.caption(
+                        f"Preview rapido activo: se construira intro + primer bloque listo (`{preview_sources}`)."
+                    )
                 if ready_rundown_jobs:
                     rundown_preview_rows = []
                     for rundown_job in ready_rundown_jobs:
@@ -1607,7 +1840,32 @@ with board_tab:
                     run_daily_rundown_with_feedback(
                         job_date=selected_batch_date,
                         voice_profile_id=batch_voice_profile,
+                        development_mode=rundown_dev_mode,
                     )
+
+                retry_rundown_dirs = discover_rundown_dirs_for_date(selected_batch_date)
+                if retry_rundown_dirs:
+                    retry_options = {
+                        f"{path.name} · {len(list((path / 'audio').glob('segment-*.wav')))} audios": path
+                        for path in retry_rundown_dirs
+                    }
+                    retry_label = st.selectbox(
+                        "Corrida para reintentar desde audios existentes",
+                        list(retry_options.keys()),
+                        key="retry_daily_rundown_dir",
+                    )
+                    if st.button(
+                        "Reintentar desde audios existentes",
+                        use_container_width=True,
+                        disabled=not ready_rundown_jobs,
+                    ):
+                        run_daily_rundown_retry_with_feedback(
+                            job_date=selected_batch_date,
+                            voice_profile_id=batch_voice_profile,
+                            rundown_dir=retry_options[retry_label],
+                        )
+                else:
+                    st.caption("Todavia no hay corridas con audios existentes para reintentar.")
 
     with st.expander("Ver lista de jobs", expanded=False):
         render_job_board(filtered_jobs)

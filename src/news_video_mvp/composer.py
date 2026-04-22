@@ -30,6 +30,9 @@ class VideoSegment:
     text: str
     narrator_name: str | None = None
     gesture_paths: list[Path] | None = None
+    duration_seconds: float | None = None
+    cover_region: dict[str, float] | None = None
+    segment_type: str | None = None
 
 
 def render_video(
@@ -73,6 +76,7 @@ def render_video_sequence(
         audio_path=audio_path,
         output_stem=output_path.stem,
         spec=spec,
+        subtitle_segments=None,
     )
     output_path = output_path.resolve()
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -121,6 +125,7 @@ def compose_video_props(
     output_stem: str,
     spec: VideoSpec | None = None,
     keep_previous_generated: bool = False,
+    subtitle_segments: list[dict[str, object]] | None = None,
 ) -> tuple[dict, Path]:
     spec = spec or VideoSpec()
     if not segments:
@@ -161,6 +166,9 @@ def compose_video_props(
                 "text": segment.text,
                 "narratorName": segment.narrator_name or spec.narrator_name,
                 "gestures": segment_gesture_assets,
+                "durationSeconds": segment.duration_seconds,
+                "coverRegion": segment.cover_region,
+                "segmentType": segment.segment_type or "story",
             }
         )
     if not keep_previous_generated:
@@ -181,6 +189,7 @@ def compose_video_props(
         "text": " ".join(segment.text for segment in segments),
         "gestures": [_to_static_path(path, public_dir) for path in gesture_assets],
         "segments": segment_props,
+        "subtitleSegments": subtitle_segments or [],
     }
     _write_generated_story_module(remotion_dir=remotion_dir, props=props)
     return props, remotion_dir
@@ -249,10 +258,13 @@ def concatenate_wav_files(audio_paths: list[Path], output_path: Path) -> Path:
     with wave.open(str(audio_paths[0]), "rb") as first_wav:
         params = first_wav.getparams()
         frames = [first_wav.readframes(first_wav.getnframes())]
+        format_params = params[:3] + params[4:6]
 
     for audio_path in audio_paths[1:]:
         with wave.open(str(audio_path), "rb") as wav_file:
-            if wav_file.getparams()[:4] != params[:4]:
+            current_params = wav_file.getparams()
+            current_format_params = current_params[:3] + current_params[4:6]
+            if current_format_params != format_params:
                 raise VideoRenderError(
                     "No se pudieron concatenar los audios porque no comparten el mismo formato WAV."
                 )

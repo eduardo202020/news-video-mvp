@@ -1,35 +1,1330 @@
 export const generatedStory = {
-  "id": "2026-04-18-voicebox-test",
-  "newspaperName": "Ojo",
-  "coverSrc": "assets/generated/2026-04-18-voicebox-test/covers/cover_00.png",
-  "backgroundSrc": "assets/generated/2026-04-18-voicebox-test/background.jpg",
-  "audioSrc": "assets/generated/2026-04-18-voicebox-test/audio.wav",
-  "durationInFrames": 247,
+  "id": "2026-04-21-daily-rundown-190441",
+  "newspaperName": "Resumen de Portadas",
+  "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_00.jpg",
+  "backgroundSrc": "assets/generated/2026-04-21-daily-rundown-190441/background.jpg",
+  "audioSrc": "assets/generated/2026-04-21-daily-rundown-190441/audio.wav",
+  "durationInFrames": 9223,
   "fps": 30,
-  "narratorName": "Voicebox Narrator",
-  "text": "Esta es una prueba completa del pipeline con Voicebox local. Estamos validando la generacion de audio y subtitulos dentro del proyecto.",
+  "narratorName": "Cuy-01",
+  "text": "Hola. Hoy, martes 21 de abril, recorremos cinco portadas con una agenda marcada por crisis electoral, economía, policiales y deporte. En una fecha que también remite a una efeméride peruana, vamos diario por diario con lo más fuerte y las páginas clave para ampliar contexto. Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas. La pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse. Atención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final. Sin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde. Atención con el proceso electoral. Los Jurados Electorales Especiales ya realizan audiencias de recuento de votos en Junín y Piura, en un mecanismo que se aplica por primera vez y que abarca más de 300 actas observadas. Lo relevante ahora es que el cierre deje menos dudas, no más ruido. Ojo con este testimonio. Un exfuncionario vinculado a la ONPE afirma que el organismo fue sobrepasado y que no tuvo un plan de contingencia para la distribución del material electoral. Es una versión crítica, sí, pero vuelve a poner bajo presión la capacidad de respuesta del sistema. Keiko Fujimori respaldó el pedido de elecciones complementarias, pero el debate no termina ahí. De acuerdo con la información disponible, especialistas advierten que la salida exige sustento legal y reforma previa. En un escenario tan sensible, una propuesta política no basta por sí sola. El dato clave está en la estabilidad. Con las reservas del BCR superando los 100,000 millones de dólares, Perú se prepara para cualquier shock económico. Las reservas internacionales se han convertido en un pilar clave para la estabilidad del país. La campaña del Día de la Madre está marcando una tendencia positiva para los importadores. Se espera un incremento en las compras de hasta un 15%, lo que refuerza las expectativas del sector en este periodo de consumo. El futuro de Petroperú en manos del Senado está en juego. Las reformas propuestas no están garantizadas y dependerán del nuevo Congreso. Esto tiene un impacto directo en la estabilidad de la empresa estatal y su futuro financiero. La medida sobre la importación de productos de bajo valor está en evaluación. Si se aprueba, afectaría a un amplio número de importadores. La decisión de la SUNAT impactaría directamente en el comercio transfronterizo. Keiko Fujimori vuelve a la carga. En su segundo intento, pide la salida de las autoridades de la ONPE, mientras se especula sobre la posible detención del jefe de la entidad. En política, cada paso cuenta, y en este contexto, el reloj está corriendo. Atención con este caso, porque la alarma suena fuerte. Un colombiano, conocido como 'Satanás', está siendo investigado por cobrar cupos en el corazón de Gamarra. La justicia empieza a poner la mirada sobre redes criminales que operan bajo amenazas. Sin rodeos: Javier Rabanal ya no es más técnico de Universitario. La derrota ante Melgar terminó con la paciencia de la directiva. En el fútbol, la presión y los resultados no perdonan, y esta decisión marca un cambio necesario para el equipo. El pleito entre Yahaira Plasencia y Magaly Medina se intensifica. La cantante pide un millón y medio de soles como reparación por difamación, mientras que la conductora se defiende asegurando que todo fue parte de su rol en el entretenimiento. La crisis en la ONPE es un hecho: se pierden actas de 17 mesas en plena jornada electoral. Esto pone bajo presión a las autoridades, ya que la integridad del proceso depende de cada voto y cada documento. Se requieren respuestas urgentes. La compra de aviones de guerra para Perú se encuentra en medio de una fuerte controversia. Mientras el gobierno defiende la adquisición, las presiones internas y externas siguen aumentando, especialmente con Estados Unidos exigiendo explicaciones sobre la transacción. Sin rodeos: Javier Rabanal ha sido despedido de Universitario tras la dura derrota ante Melgar. El técnico deja el club en medio de una crisis, donde la paciencia se agotó. En el fútbol, los resultados mandan, y hoy la U necesita un cambio urgente. La disputa entre Pamela y Christian se vuelve cada vez más explosiva. Pamela no se guardó nada y le llamó 'conchudo' después de un tenso intercambio. En el mundo de los espectáculos, todo se amplifica, y este enfrentamiento promete seguir dando de qué hablar.",
   "gestures": [
-    "assets/generated/2026-04-18-voicebox-test/gestures/gesture_00.png",
-    "assets/generated/2026-04-18-voicebox-test/gestures/gesture_01.png",
-    "assets/generated/2026-04-18-voicebox-test/gestures/gesture_02.png",
-    "assets/generated/2026-04-18-voicebox-test/gestures/gesture_03.png",
-    "assets/generated/2026-04-18-voicebox-test/gestures/gesture_04.png",
-    "assets/generated/2026-04-18-voicebox-test/gestures/gesture_05.png"
+    "assets/generated/2026-04-21-daily-rundown-190441/gestures/gesture_00.png",
+    "assets/generated/2026-04-21-daily-rundown-190441/gestures/gesture_01.png",
+    "assets/generated/2026-04-21-daily-rundown-190441/gestures/gesture_02.png",
+    "assets/generated/2026-04-21-daily-rundown-190441/gestures/gesture_03.png",
+    "assets/generated/2026-04-21-daily-rundown-190441/gestures/gesture_04.png",
+    "assets/generated/2026-04-21-daily-rundown-190441/gestures/gesture_05.png"
   ],
   "segments": [
     {
-      "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-18-voicebox-test/covers/cover_00.png",
-      "text": "Esta es una prueba completa del pipeline con Voicebox local. Estamos validando la generacion de audio y subtitulos dentro del proyecto.",
-      "narratorName": "Voicebox Narrator",
+      "newspaperName": "Resumen de Portadas",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_00.jpg",
+      "text": "Hola. Hoy, martes 21 de abril, recorremos cinco portadas con una agenda marcada por crisis electoral, economía, policiales y deporte. En una fecha que también remite a una efeméride peruana, vamos diario por diario con lo más fuerte y las páginas clave para ampliar contexto.",
+      "narratorName": "Cuy-01",
       "gestures": [
-        "assets/generated/2026-04-18-voicebox-test/segment_gestures/segment_00/gesture_00.png",
-        "assets/generated/2026-04-18-voicebox-test/segment_gestures/segment_00/gesture_01.png",
-        "assets/generated/2026-04-18-voicebox-test/segment_gestures/segment_00/gesture_02.png",
-        "assets/generated/2026-04-18-voicebox-test/segment_gestures/segment_00/gesture_03.png",
-        "assets/generated/2026-04-18-voicebox-test/segment_gestures/segment_00/gesture_04.png",
-        "assets/generated/2026-04-18-voicebox-test/segment_gestures/segment_00/gesture_05.png"
-      ]
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_00/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_00/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_00/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_00/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_00/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_00/gesture_05.png"
+      ],
+      "durationSeconds": 15.92,
+      "coverRegion": null,
+      "segmentType": "intro"
+    },
+    {
+      "newspaperName": "Correo",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_01.jpg",
+      "text": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.",
+      "narratorName": "Cuy-02",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_01/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_01/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_01/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_01/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_01/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_01/gesture_05.png"
+      ],
+      "durationSeconds": 16.96,
+      "coverRegion": {
+        "x": 0.06,
+        "y": 0.32,
+        "width": 0.89,
+        "height": 0.6
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Correo",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_02.jpg",
+      "text": "La pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.",
+      "narratorName": "Cuy-02",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_02/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_02/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_02/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_02/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_02/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_02/gesture_05.png"
+      ],
+      "durationSeconds": 17.36,
+      "coverRegion": {
+        "x": 0.69,
+        "y": 0.1,
+        "width": 0.28,
+        "height": 0.15
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Correo",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_03.jpg",
+      "text": "Atención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_03/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_03/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_03/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_03/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_03/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_03/gesture_05.png"
+      ],
+      "durationSeconds": 14.56,
+      "coverRegion": {
+        "x": 0.33,
+        "y": 0.1,
+        "width": 0.34,
+        "height": 0.15
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Correo",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_04.jpg",
+      "text": "Sin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
+      "narratorName": "Cuy-Depor",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_04/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_04/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_04/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_04/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_04/gesture_04.png"
+      ],
+      "durationSeconds": 16.56,
+      "coverRegion": {
+        "x": 0.06,
+        "y": 0.32,
+        "width": 0.89,
+        "height": 0.6
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Elcomercio",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_05.jpg",
+      "text": "Atención con el proceso electoral. Los Jurados Electorales Especiales ya realizan audiencias de recuento de votos en Junín y Piura, en un mecanismo que se aplica por primera vez y que abarca más de 300 actas observadas. Lo relevante ahora es que el cierre deje menos dudas, no más ruido.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_05/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_05/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_05/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_05/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_05/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_05/gesture_05.png"
+      ],
+      "durationSeconds": 17.84,
+      "coverRegion": {
+        "x": 0.05,
+        "y": 0.55,
+        "width": 0.65,
+        "height": 0.32
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Elcomercio",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_06.jpg",
+      "text": "Ojo con este testimonio. Un exfuncionario vinculado a la ONPE afirma que el organismo fue sobrepasado y que no tuvo un plan de contingencia para la distribución del material electoral. Es una versión crítica, sí, pero vuelve a poner bajo presión la capacidad de respuesta del sistema.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_06/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_06/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_06/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_06/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_06/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_06/gesture_05.png"
+      ],
+      "durationSeconds": 17.44,
+      "coverRegion": {
+        "x": 0.04,
+        "y": 0.23,
+        "width": 0.9,
+        "height": 0.28
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Elcomercio",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_07.jpg",
+      "text": "Keiko Fujimori respaldó el pedido de elecciones complementarias, pero el debate no termina ahí. De acuerdo con la información disponible, especialistas advierten que la salida exige sustento legal y reforma previa. En un escenario tan sensible, una propuesta política no basta por sí sola.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_07/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_07/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_07/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_07/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_07/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_07/gesture_05.png"
+      ],
+      "durationSeconds": 16.88,
+      "coverRegion": {
+        "x": 0.77,
+        "y": 0.55,
+        "width": 0.18,
+        "height": 0.15
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Gestion",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_08.jpg",
+      "text": "El dato clave está en la estabilidad. Con las reservas del BCR superando los 100,000 millones de dólares, Perú se prepara para cualquier shock económico. Las reservas internacionales se han convertido en un pilar clave para la estabilidad del país.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_08/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_08/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_08/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_08/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_08/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_08/gesture_05.png"
+      ],
+      "durationSeconds": 14.88,
+      "coverRegion": {
+        "x": 0.05,
+        "y": 0.26,
+        "width": 0.63,
+        "height": 0.33
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Gestion",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_09.jpg",
+      "text": "La campaña del Día de la Madre está marcando una tendencia positiva para los importadores. Se espera un incremento en las compras de hasta un 15%, lo que refuerza las expectativas del sector en este periodo de consumo.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_09/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_09/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_09/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_09/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_09/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_09/gesture_05.png"
+      ],
+      "durationSeconds": 12.48,
+      "coverRegion": {
+        "x": 0.7,
+        "y": 0.26,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Gestion",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_10.jpg",
+      "text": "El futuro de Petroperú en manos del Senado está en juego. Las reformas propuestas no están garantizadas y dependerán del nuevo Congreso. Esto tiene un impacto directo en la estabilidad de la empresa estatal y su futuro financiero.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_10/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_10/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_10/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_10/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_10/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_10/gesture_05.png"
+      ],
+      "durationSeconds": 13.52,
+      "coverRegion": {
+        "x": 0.05,
+        "y": 0.6,
+        "width": 0.4,
+        "height": 0.29
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Gestion",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_11.jpg",
+      "text": "La medida sobre la importación de productos de bajo valor está en evaluación. Si se aprueba, afectaría a un amplio número de importadores. La decisión de la SUNAT impactaría directamente en el comercio transfronterizo.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_11/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_11/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_11/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_11/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_11/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_11/gesture_05.png"
+      ],
+      "durationSeconds": 12.8,
+      "coverRegion": {
+        "x": 0.53,
+        "y": 0.62,
+        "width": 0.25,
+        "height": 0.23
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_12.jpg",
+      "text": "Keiko Fujimori vuelve a la carga. En su segundo intento, pide la salida de las autoridades de la ONPE, mientras se especula sobre la posible detención del jefe de la entidad. En política, cada paso cuenta, y en este contexto, el reloj está corriendo.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_12/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_12/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_12/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_12/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_12/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_12/gesture_05.png"
+      ],
+      "durationSeconds": 15.04,
+      "coverRegion": {
+        "x": 0.0,
+        "y": 0.35,
+        "width": 0.24,
+        "height": 0.36
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_13.jpg",
+      "text": "Atención con este caso, porque la alarma suena fuerte. Un colombiano, conocido como 'Satanás', está siendo investigado por cobrar cupos en el corazón de Gamarra. La justicia empieza a poner la mirada sobre redes criminales que operan bajo amenazas.",
+      "narratorName": "Cuy-02",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_13/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_13/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_13/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_13/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_13/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_13/gesture_05.png"
+      ],
+      "durationSeconds": 14.24,
+      "coverRegion": {
+        "x": 0.27,
+        "y": 0.18,
+        "width": 0.68,
+        "height": 0.7
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_14.jpg",
+      "text": "Sin rodeos: Javier Rabanal ya no es más técnico de Universitario. La derrota ante Melgar terminó con la paciencia de la directiva. En el fútbol, la presión y los resultados no perdonan, y esta decisión marca un cambio necesario para el equipo.",
+      "narratorName": "Cuy-Depor",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_14/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_14/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_14/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_14/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_14/gesture_04.png"
+      ],
+      "durationSeconds": 14.64,
+      "coverRegion": {
+        "x": 0.0,
+        "y": 0.73,
+        "width": 0.23,
+        "height": 0.15
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_15.jpg",
+      "text": "El pleito entre Yahaira Plasencia y Magaly Medina se intensifica. La cantante pide un millón y medio de soles como reparación por difamación, mientras que la conductora se defiende asegurando que todo fue parte de su rol en el entretenimiento.",
+      "narratorName": "Cuy-02",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_15/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_15/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_15/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_15/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_15/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_15/gesture_05.png"
+      ],
+      "durationSeconds": 13.6,
+      "coverRegion": {
+        "x": 0.31,
+        "y": 0.84,
+        "width": 0.67,
+        "height": 0.14
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_16.jpg",
+      "text": "La crisis en la ONPE es un hecho: se pierden actas de 17 mesas en plena jornada electoral. Esto pone bajo presión a las autoridades, ya que la integridad del proceso depende de cada voto y cada documento. Se requieren respuestas urgentes.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_16/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_16/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_16/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_16/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_16/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_16/gesture_05.png"
+      ],
+      "durationSeconds": 14.96,
+      "coverRegion": {
+        "x": 0.0,
+        "y": 0.22,
+        "width": 0.23,
+        "height": 0.63
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_17.jpg",
+      "text": "La compra de aviones de guerra para Perú se encuentra en medio de una fuerte controversia. Mientras el gobierno defiende la adquisición, las presiones internas y externas siguen aumentando, especialmente con Estados Unidos exigiendo explicaciones sobre la transacción.",
+      "narratorName": "Cuy-01",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_17/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_17/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_17/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_17/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_17/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_17/gesture_05.png"
+      ],
+      "durationSeconds": 15.76,
+      "coverRegion": {
+        "x": 0.23,
+        "y": 0.22,
+        "width": 0.72,
+        "height": 0.59
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_18.jpg",
+      "text": "Sin rodeos: Javier Rabanal ha sido despedido de Universitario tras la dura derrota ante Melgar. El técnico deja el club en medio de una crisis, donde la paciencia se agotó. En el fútbol, los resultados mandan, y hoy la U necesita un cambio urgente.",
+      "narratorName": "Cuy-Depor",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_18/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_18/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_18/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_18/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_18/gesture_04.png"
+      ],
+      "durationSeconds": 16.4,
+      "coverRegion": {
+        "x": 0.05,
+        "y": 0.87,
+        "width": 0.49,
+        "height": 0.12
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-04-21-daily-rundown-190441/covers/cover_19.jpg",
+      "text": "La disputa entre Pamela y Christian se vuelve cada vez más explosiva. Pamela no se guardó nada y le llamó 'conchudo' después de un tenso intercambio. En el mundo de los espectáculos, todo se amplifica, y este enfrentamiento promete seguir dando de qué hablar.",
+      "narratorName": "Cuy-02",
+      "gestures": [
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_19/gesture_00.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_19/gesture_01.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_19/gesture_02.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_19/gesture_03.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_19/gesture_04.png",
+        "assets/generated/2026-04-21-daily-rundown-190441/segment_gestures/segment_19/gesture_05.png"
+      ],
+      "durationSeconds": 15.6,
+      "coverRegion": {
+        "x": 0.54,
+        "y": 0.87,
+        "width": 0.42,
+        "height": 0.12
+      },
+      "segmentType": "story"
+    }
+  ],
+  "subtitleSegments": [
+    {
+      "text": "Hola.",
+      "start": 0.0,
+      "end": 1.6
+    },
+    {
+      "text": "Hoy, martes 21 de abril, recorremos",
+      "start": 1.6,
+      "end": 3.75
+    },
+    {
+      "text": "cinco portadas con una agenda",
+      "start": 3.75,
+      "end": 5.531
+    },
+    {
+      "text": "marcada por crisis electoral,",
+      "start": 5.531,
+      "end": 7.313
+    },
+    {
+      "text": "economía, policiales y deporte.",
+      "start": 7.313,
+      "end": 9.217
+    },
+    {
+      "text": "En una fecha que también remite a",
+      "start": 9.217,
+      "end": 11.244
+    },
+    {
+      "text": "una efeméride peruana, vamos diario",
+      "start": 11.244,
+      "end": 13.394
+    },
+    {
+      "text": "por diario con lo más fuerte y las",
+      "start": 13.394,
+      "end": 15.482
+    },
+    {
+      "text": "páginas clave para ampliar contexto.",
+      "start": 15.482,
+      "end": 17.694
+    },
+    {
+      "text": "Ojo con este dato: doce candidatos",
+      "start": 17.694,
+      "end": 19.782
+    },
+    {
+      "text": "presidenciales no lograron ni",
+      "start": 19.782,
+      "end": 21.564
+    },
+    {
+      "text": "siquiera arrastrar el voto de sus",
+      "start": 21.564,
+      "end": 23.591
+    },
+    {
+      "text": "propios afiliados.",
+      "start": 23.591,
+      "end": 25.191
+    },
+    {
+      "text": "La portada y el desarrollo muestran",
+      "start": 25.191,
+      "end": 27.341
+    },
+    {
+      "text": "partidos con inscripción, pero sin",
+      "start": 27.341,
+      "end": 29.429
+    },
+    {
+      "text": "verdadera conexión política.",
+      "start": 29.429,
+      "end": 31.149
+    },
+    {
+      "text": "No es un detalle menor: la",
+      "start": 31.149,
+      "end": 32.749
+    },
+    {
+      "text": "precariedad ya quedó expuesta en las",
+      "start": 32.749,
+      "end": 34.96
+    },
+    {
+      "text": "urnas.",
+      "start": 34.96,
+      "end": 36.56
+    },
+    {
+      "text": "La pregunta incómoda cae sola.",
+      "start": 36.56,
+      "end": 38.403
+    },
+    {
+      "text": "Guido Bellido presentó un proyecto",
+      "start": 38.403,
+      "end": 40.492
+    },
+    {
+      "text": "que, según la información",
+      "start": 40.492,
+      "end": 42.092
+    },
+    {
+      "text": "disponible, podría evitar la",
+      "start": 42.092,
+      "end": 43.812
+    },
+    {
+      "text": "cancelación de Perú Consciente por",
+      "start": 43.812,
+      "end": 45.9
+    },
+    {
+      "text": "no cumplir un requisito legal.",
+      "start": 45.9,
+      "end": 47.743
+    },
+    {
+      "text": "En política, cuando una norma roza",
+      "start": 47.743,
+      "end": 49.831
+    },
+    {
+      "text": "el interés propio, la sospecha no",
+      "start": 49.831,
+      "end": 51.859
+    },
+    {
+      "text": "tarda en encenderse.",
+      "start": 51.859,
+      "end": 53.459
+    },
+    {
+      "text": "Atención con esta compra millonaria.",
+      "start": 53.459,
+      "end": 55.67
+    },
+    {
+      "text": "El Congreso citó al premier, al",
+      "start": 55.67,
+      "end": 57.574
+    },
+    {
+      "text": "canciller y al ministro de Defensa",
+      "start": 57.574,
+      "end": 59.663
+    },
+    {
+      "text": "para explicar la negociación de",
+      "start": 59.663,
+      "end": 61.567
+    },
+    {
+      "text": "aviones de combate, mientras crecen",
+      "start": 61.567,
+      "end": 63.717
+    },
+    {
+      "text": "los pedidos de transparencia y se",
+      "start": 63.717,
+      "end": 65.744
+    },
+    {
+      "text": "plantea que el siguiente gobierno",
+      "start": 65.744,
+      "end": 67.771
+    },
+    {
+      "text": "asuma la decisión final.",
+      "start": 67.771,
+      "end": 69.371
+    },
+    {
+      "text": "Sin vueltas: en la \"U\" la revolución",
+      "start": 69.371,
+      "end": 71.582
+    },
+    {
+      "text": "prometida por Javier Rabanal no",
+      "start": 71.582,
+      "end": 73.487
+    },
+    {
+      "text": "despegó.",
+      "start": 73.487,
+      "end": 75.087
+    },
+    {
+      "text": "Los resultados recientes y las",
+      "start": 75.087,
+      "end": 76.929
+    },
+    {
+      "text": "críticas lo dejan al borde de la",
+      "start": 76.929,
+      "end": 78.895
+    },
+    {
+      "text": "salida, en un momento donde",
+      "start": 78.895,
+      "end": 80.554
+    },
+    {
+      "text": "Universitario ya no tiene margen",
+      "start": 80.554,
+      "end": 82.519
+    },
+    {
+      "text": "para seguir probando.",
+      "start": 82.519,
+      "end": 84.119
+    },
+    {
+      "text": "En el fútbol, el discurso dura poco",
+      "start": 84.119,
+      "end": 86.269
+    },
+    {
+      "text": "si la cancha no responde.",
+      "start": 86.269,
+      "end": 87.869
+    },
+    {
+      "text": "Atención con el proceso electoral.",
+      "start": 87.869,
+      "end": 89.958
+    },
+    {
+      "text": "Los Jurados Electorales Especiales",
+      "start": 89.958,
+      "end": 92.046
+    },
+    {
+      "text": "ya realizan audiencias de recuento",
+      "start": 92.046,
+      "end": 94.135
+    },
+    {
+      "text": "de votos en Junín y Piura, en un",
+      "start": 94.135,
+      "end": 96.1
+    },
+    {
+      "text": "mecanismo que se aplica por primera",
+      "start": 96.1,
+      "end": 98.25
+    },
+    {
+      "text": "vez y que abarca más de 300 actas",
+      "start": 98.25,
+      "end": 100.277
+    },
+    {
+      "text": "observadas.",
+      "start": 100.277,
+      "end": 101.877
+    },
+    {
+      "text": "Lo relevante ahora es que el cierre",
+      "start": 101.877,
+      "end": 104.027
+    },
+    {
+      "text": "deje menos dudas, no más ruido.",
+      "start": 104.027,
+      "end": 105.931
+    },
+    {
+      "text": "Ojo con este testimonio.",
+      "start": 105.931,
+      "end": 107.531
+    },
+    {
+      "text": "Un exfuncionario vinculado a la ONPE",
+      "start": 107.531,
+      "end": 109.743
+    },
+    {
+      "text": "afirma que el organismo fue",
+      "start": 109.743,
+      "end": 111.401
+    },
+    {
+      "text": "sobrepasado y que no tuvo un plan de",
+      "start": 111.401,
+      "end": 113.613
+    },
+    {
+      "text": "contingencia para la distribución",
+      "start": 113.613,
+      "end": 115.64
+    },
+    {
+      "text": "del material electoral.",
+      "start": 115.64,
+      "end": 117.24
+    },
+    {
+      "text": "Es una versión crítica, sí, pero",
+      "start": 117.24,
+      "end": 119.205
+    },
+    {
+      "text": "vuelve a poner bajo presión la",
+      "start": 119.205,
+      "end": 121.048
+    },
+    {
+      "text": "capacidad de respuesta del sistema.",
+      "start": 121.048,
+      "end": 123.198
+    },
+    {
+      "text": "Keiko Fujimori respaldó el pedido de",
+      "start": 123.198,
+      "end": 125.409
+    },
+    {
+      "text": "elecciones complementarias, pero el",
+      "start": 125.409,
+      "end": 127.559
+    },
+    {
+      "text": "debate no termina ahí.",
+      "start": 127.559,
+      "end": 129.159
+    },
+    {
+      "text": "De acuerdo con la información",
+      "start": 129.159,
+      "end": 130.941
+    },
+    {
+      "text": "disponible, especialistas advierten",
+      "start": 130.941,
+      "end": 133.091
+    },
+    {
+      "text": "que la salida exige sustento legal y",
+      "start": 133.091,
+      "end": 135.302
+    },
+    {
+      "text": "reforma previa.",
+      "start": 135.302,
+      "end": 136.902
+    },
+    {
+      "text": "En un escenario tan sensible, una",
+      "start": 136.902,
+      "end": 138.929
+    },
+    {
+      "text": "propuesta política no basta por sí",
+      "start": 138.929,
+      "end": 141.018
+    },
+    {
+      "text": "sola.",
+      "start": 141.018,
+      "end": 142.618
+    },
+    {
+      "text": "El dato clave está en la",
+      "start": 142.618,
+      "end": 144.218
+    },
+    {
+      "text": "estabilidad.",
+      "start": 144.218,
+      "end": 145.818
+    },
+    {
+      "text": "Con las reservas del BCR superando",
+      "start": 145.818,
+      "end": 147.906
+    },
+    {
+      "text": "los 100,000 millones de dólares,",
+      "start": 147.906,
+      "end": 149.872
+    },
+    {
+      "text": "Perú se prepara para cualquier shock",
+      "start": 149.872,
+      "end": 152.083
+    },
+    {
+      "text": "económico.",
+      "start": 152.083,
+      "end": 153.683
+    },
+    {
+      "text": "Las reservas internacionales se han",
+      "start": 153.683,
+      "end": 155.833
+    },
+    {
+      "text": "convertido en un pilar clave para la",
+      "start": 155.833,
+      "end": 158.044
+    },
+    {
+      "text": "estabilidad del país.",
+      "start": 158.044,
+      "end": 159.644
+    },
+    {
+      "text": "La campaña del Día de la Madre está",
+      "start": 159.644,
+      "end": 161.794
+    },
+    {
+      "text": "marcando una tendencia positiva para",
+      "start": 161.794,
+      "end": 164.006
+    },
+    {
+      "text": "los importadores.",
+      "start": 164.006,
+      "end": 165.606
+    },
+    {
+      "text": "Se espera un incremento en las",
+      "start": 165.606,
+      "end": 167.449
+    },
+    {
+      "text": "compras de hasta un 15%, lo que",
+      "start": 167.449,
+      "end": 169.353
+    },
+    {
+      "text": "refuerza las expectativas del sector",
+      "start": 169.353,
+      "end": 171.564
+    },
+    {
+      "text": "en este periodo de consumo.",
+      "start": 171.564,
+      "end": 173.223
+    },
+    {
+      "text": "El futuro de Petroperú en manos del",
+      "start": 173.223,
+      "end": 175.373
+    },
+    {
+      "text": "Senado está en juego.",
+      "start": 175.373,
+      "end": 176.973
+    },
+    {
+      "text": "Las reformas propuestas no están",
+      "start": 176.973,
+      "end": 178.938
+    },
+    {
+      "text": "garantizadas y dependerán del nuevo",
+      "start": 178.938,
+      "end": 181.088
+    },
+    {
+      "text": "Congreso.",
+      "start": 181.088,
+      "end": 182.688
+    },
+    {
+      "text": "Esto tiene un impacto directo en la",
+      "start": 182.688,
+      "end": 184.838
+    },
+    {
+      "text": "estabilidad de la empresa estatal y",
+      "start": 184.838,
+      "end": 186.988
+    },
+    {
+      "text": "su futuro financiero.",
+      "start": 186.988,
+      "end": 188.588
+    },
+    {
+      "text": "La medida sobre la importación de",
+      "start": 188.588,
+      "end": 190.615
+    },
+    {
+      "text": "productos de bajo valor está en",
+      "start": 190.615,
+      "end": 192.519
+    },
+    {
+      "text": "evaluación.",
+      "start": 192.519,
+      "end": 194.119
+    },
+    {
+      "text": "Si se aprueba, afectaría a un amplio",
+      "start": 194.119,
+      "end": 196.331
+    },
+    {
+      "text": "número de importadores.",
+      "start": 196.331,
+      "end": 197.931
+    },
+    {
+      "text": "La decisión de la SUNAT impactaría",
+      "start": 197.931,
+      "end": 200.019
+    },
+    {
+      "text": "directamente en el comercio",
+      "start": 200.019,
+      "end": 201.678
+    },
+    {
+      "text": "transfronterizo.",
+      "start": 201.678,
+      "end": 203.278
+    },
+    {
+      "text": "Keiko Fujimori vuelve a la carga.",
+      "start": 203.278,
+      "end": 205.305
+    },
+    {
+      "text": "En su segundo intento, pide la",
+      "start": 205.305,
+      "end": 207.148
+    },
+    {
+      "text": "salida de las autoridades de la",
+      "start": 207.148,
+      "end": 209.052
+    },
+    {
+      "text": "ONPE, mientras se especula sobre la",
+      "start": 209.052,
+      "end": 211.202
+    },
+    {
+      "text": "posible detención del jefe de la",
+      "start": 211.202,
+      "end": 213.167
+    },
+    {
+      "text": "entidad.",
+      "start": 213.167,
+      "end": 214.767
+    },
+    {
+      "text": "En política, cada paso cuenta, y en",
+      "start": 214.767,
+      "end": 216.917
+    },
+    {
+      "text": "este contexto, el reloj está",
+      "start": 216.917,
+      "end": 218.637
+    },
+    {
+      "text": "corriendo.",
+      "start": 218.637,
+      "end": 220.237
+    },
+    {
+      "text": "Atención con este caso, porque la",
+      "start": 220.237,
+      "end": 222.264
+    },
+    {
+      "text": "alarma suena fuerte.",
+      "start": 222.264,
+      "end": 223.864
+    },
+    {
+      "text": "Un colombiano, conocido como",
+      "start": 223.864,
+      "end": 225.584
+    },
+    {
+      "text": "'Satanás', está siendo investigado",
+      "start": 225.584,
+      "end": 227.673
+    },
+    {
+      "text": "por cobrar cupos en el corazón de",
+      "start": 227.673,
+      "end": 229.7
+    },
+    {
+      "text": "Gamarra.",
+      "start": 229.7,
+      "end": 231.3
+    },
+    {
+      "text": "La justicia empieza a poner la",
+      "start": 231.3,
+      "end": 233.143
+    },
+    {
+      "text": "mirada sobre redes criminales que",
+      "start": 233.143,
+      "end": 235.17
+    },
+    {
+      "text": "operan bajo amenazas.",
+      "start": 235.17,
+      "end": 236.77
+    },
+    {
+      "text": "Sin rodeos: Javier Rabanal ya no es",
+      "start": 236.77,
+      "end": 238.92
+    },
+    {
+      "text": "más técnico de Universitario.",
+      "start": 238.92,
+      "end": 240.701
+    },
+    {
+      "text": "La derrota ante Melgar terminó con",
+      "start": 240.701,
+      "end": 242.789
+    },
+    {
+      "text": "la paciencia de la directiva.",
+      "start": 242.789,
+      "end": 244.571
+    },
+    {
+      "text": "En el fútbol, la presión y los",
+      "start": 244.571,
+      "end": 246.414
+    },
+    {
+      "text": "resultados no perdonan, y esta",
+      "start": 246.414,
+      "end": 248.256
+    },
+    {
+      "text": "decisión marca un cambio necesario",
+      "start": 248.256,
+      "end": 250.345
+    },
+    {
+      "text": "para el equipo.",
+      "start": 250.345,
+      "end": 251.945
+    },
+    {
+      "text": "El pleito entre Yahaira Plasencia y",
+      "start": 251.945,
+      "end": 254.095
+    },
+    {
+      "text": "Magaly Medina se intensifica.",
+      "start": 254.095,
+      "end": 255.876
+    },
+    {
+      "text": "La cantante pide un millón y medio",
+      "start": 255.876,
+      "end": 257.965
+    },
+    {
+      "text": "de soles como reparación por",
+      "start": 257.965,
+      "end": 259.685
+    },
+    {
+      "text": "difamación, mientras que la",
+      "start": 259.685,
+      "end": 261.343
+    },
+    {
+      "text": "conductora se defiende asegurando",
+      "start": 261.343,
+      "end": 263.37
+    },
+    {
+      "text": "que todo fue parte de su rol en el",
+      "start": 263.37,
+      "end": 265.459
+    },
+    {
+      "text": "entretenimiento.",
+      "start": 265.459,
+      "end": 267.059
+    },
+    {
+      "text": "La crisis en la ONPE es un hecho: se",
+      "start": 267.059,
+      "end": 269.27
+    },
+    {
+      "text": "pierden actas de 17 mesas en plena",
+      "start": 269.27,
+      "end": 271.359
+    },
+    {
+      "text": "jornada electoral.",
+      "start": 271.359,
+      "end": 272.959
+    },
+    {
+      "text": "Esto pone bajo presión a las",
+      "start": 272.959,
+      "end": 274.679
+    },
+    {
+      "text": "autoridades, ya que la integridad",
+      "start": 274.679,
+      "end": 276.706
+    },
+    {
+      "text": "del proceso depende de cada voto y",
+      "start": 276.706,
+      "end": 278.794
+    },
+    {
+      "text": "cada documento.",
+      "start": 278.794,
+      "end": 280.394
+    },
+    {
+      "text": "Se requieren respuestas urgentes.",
+      "start": 280.394,
+      "end": 282.421
+    },
+    {
+      "text": "La compra de aviones de guerra para",
+      "start": 282.421,
+      "end": 284.571
+    },
+    {
+      "text": "Perú se encuentra en medio de una",
+      "start": 284.571,
+      "end": 286.598
+    },
+    {
+      "text": "fuerte controversia.",
+      "start": 286.598,
+      "end": 288.198
+    },
+    {
+      "text": "Mientras el gobierno defiende la",
+      "start": 288.198,
+      "end": 290.164
+    },
+    {
+      "text": "adquisición, las presiones internas",
+      "start": 290.164,
+      "end": 292.314
+    },
+    {
+      "text": "y externas siguen aumentando,",
+      "start": 292.314,
+      "end": 294.095
+    },
+    {
+      "text": "especialmente con Estados Unidos",
+      "start": 294.095,
+      "end": 296.061
+    },
+    {
+      "text": "exigiendo explicaciones sobre la",
+      "start": 296.061,
+      "end": 298.027
+    },
+    {
+      "text": "transacción.",
+      "start": 298.027,
+      "end": 299.627
+    },
+    {
+      "text": "Sin rodeos: Javier Rabanal ha sido",
+      "start": 299.627,
+      "end": 301.715
+    },
+    {
+      "text": "despedido de Universitario tras la",
+      "start": 301.715,
+      "end": 303.804
+    },
+    {
+      "text": "dura derrota ante Melgar.",
+      "start": 303.804,
+      "end": 305.404
+    },
+    {
+      "text": "El técnico deja el club en medio de",
+      "start": 305.404,
+      "end": 307.44
+    },
+    {
+      "text": "una crisis, donde la paciencia se",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "agotó.",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "En el fútbol, los resultados mandan,",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "y hoy la U necesita un cambio",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "urgente.",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "La disputa entre Pamela y Christian",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "se vuelve cada vez más explosiva.",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "Pamela no se guardó nada y le llamó",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "'conchudo' después de un tenso",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "intercambio.",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "En el mundo de los espectáculos,",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "todo se amplifica, y este",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "enfrentamiento promete seguir dando",
+      "start": 307.44,
+      "end": 307.44
+    },
+    {
+      "text": "de qué hablar.",
+      "start": 307.44,
+      "end": 307.44
     }
   ]
 };

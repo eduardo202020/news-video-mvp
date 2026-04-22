@@ -38,6 +38,7 @@ Contexto del flujo:
 - `rundown_intro.speech` debe tener entre 180 y 360 caracteres, sin hashtags ni emojis
 - `rundown_intro.source_scope` debe ser `peru`, `world` o `none`
 - `rundown_intro.date_reference` debe resumir la efemeride elegida y, si usaste Adonde.com, incluir una referencia breve tipo `Adonde.com efemerides abril22`
+- manten la intro realmente corta y directa; evita saludos largos o rodeos
 
 Metadatos de las portadas:
 

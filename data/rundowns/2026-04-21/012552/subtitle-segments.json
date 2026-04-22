@@ -1,0 +1,168 @@
+{
+  "policy_id": "default-2-lines",
+  "text_source": "daily_rundown",
+  "text": "Martes 21 de abril. En una fecha que recuerda el nacimiento de Manuel Prado Ugarteche, repasamos un lote de portadas marcado por tensión electoral, seguridad, economía y deporte. Vamos diario por diario con lo central y sin rodeos.\n\nLa evidencia de los partidos 'cascarón' es clara: a pesar de tener afiliados, doce candidatos no lograron captar su voto. Un fenómeno que subraya la desconexión entre partidos y sus seguidores.\n\nGuido Bellido sigue en la mira: presenta un proyecto que podría beneficiar a su propio partido, creando un camino más fácil para su organización. La pregunta es clara: ¿esto es lo que necesita el país?\n\nEl Congreso no se queda atrás: cita a tres ministros para dar explicaciones sobre la compra de aviones F-16. Esta decisión mantiene la presión sobre el gobierno en temas clave de defensa nacional.\n\nEn Universitario, la paciencia se agotó. Javier Rabanal tiene las horas contadas tras otra derrota crucial. Los cambios no se hacen esperar cuando los resultados no llegan.\n\nAhora pasamos al periodico Elcomercio. Revisamos lo mas importante de su portada.\n\nLas audiencias para el recuento de votos ya están en marcha. Este proceso es crucial para asegurar la transparencia y la legitimidad de los resultados electorales.\n\nLa Contraloría ha señalado irregularidades en la entrega de información por parte de la ONPE. Es fundamental que se aclare este proceso para mantener la confianza pública.\n\nKeiko Fujimori ha propuesto la convocatoria a elecciones complementarias. La pregunta incómoda está sobre la mesa: ¿Es esta la mejor solución para el actual panorama político?",
+  "audio_duration_seconds": 96.64,
+  "segments": [
+    {
+      "text": "Martes 21 de abril.",
+      "start": 0.0,
+      "end": 1.6
+    },
+    {
+      "text": "En una fecha que recuerda el nacimiento de Manuel Prado Ugarteche,",
+      "start": 1.6,
+      "end": 5.689
+    },
+    {
+      "text": "repasamos un lote de portadas marcado por tensión electoral, seguridad,",
+      "start": 5.689,
+      "end": 10.087
+    },
+    {
+      "text": "economía y deporte.",
+      "start": 10.087,
+      "end": 11.687
+    },
+    {
+      "text": "Vamos diario por diario con lo central y sin rodeos.",
+      "start": 11.687,
+      "end": 14.908
+    },
+    {
+      "text": "La evidencia de los partidos 'cascarón' es clara: a pesar de tener",
+      "start": 14.908,
+      "end": 18.997
+    },
+    {
+      "text": "afiliados, doce candidatos no lograron captar su voto.",
+      "start": 18.997,
+      "end": 22.342
+    },
+    {
+      "text": "Un fenómeno que subraya la desconexión entre partidos y sus seguidores.",
+      "start": 22.342,
+      "end": 26.741
+    },
+    {
+      "text": "Guido Bellido sigue en la mira: presenta un proyecto que podría",
+      "start": 26.741,
+      "end": 30.643
+    },
+    {
+      "text": "beneficiar a su propio partido, creando un camino más fácil para su",
+      "start": 30.643,
+      "end": 34.794
+    },
+    {
+      "text": "organización.",
+      "start": 34.794,
+      "end": 36.394
+    },
+    {
+      "text": "La pregunta es clara: ¿esto es lo que necesita el país?",
+      "start": 36.394,
+      "end": 39.801
+    },
+    {
+      "text": "El Congreso no se queda atrás: cita a tres ministros para dar",
+      "start": 39.801,
+      "end": 43.58
+    },
+    {
+      "text": "explicaciones sobre la compra de aviones F-16.",
+      "start": 43.58,
+      "end": 46.43
+    },
+    {
+      "text": "Esta decisión mantiene la presión sobre el gobierno en temas clave de",
+      "start": 46.43,
+      "end": 50.704
+    },
+    {
+      "text": "defensa nacional.",
+      "start": 50.704,
+      "end": 52.304
+    },
+    {
+      "text": "En Universitario, la paciencia se agotó.",
+      "start": 52.304,
+      "end": 54.782
+    },
+    {
+      "text": "Javier Rabanal tiene las horas contadas tras otra derrota crucial.",
+      "start": 54.782,
+      "end": 58.871
+    },
+    {
+      "text": "Los cambios no se hacen esperar cuando los resultados no llegan.",
+      "start": 58.871,
+      "end": 62.835
+    },
+    {
+      "text": "Ahora pasamos al periodico Elcomercio.",
+      "start": 62.835,
+      "end": 65.189
+    },
+    {
+      "text": "Revisamos lo mas importante de su portada.",
+      "start": 65.189,
+      "end": 67.791
+    },
+    {
+      "text": "Las audiencias para el recuento de votos ya están en marcha.",
+      "start": 67.791,
+      "end": 71.508
+    },
+    {
+      "text": "Este proceso es crucial para asegurar la transparencia y la legitimidad",
+      "start": 71.508,
+      "end": 75.906
+    },
+    {
+      "text": "de los resultados electorales.",
+      "start": 75.906,
+      "end": 77.765
+    },
+    {
+      "text": "La Contraloría ha señalado irregularidades en la entrega de información",
+      "start": 77.765,
+      "end": 82.163
+    },
+    {
+      "text": "por parte de la ONPE.",
+      "start": 82.163,
+      "end": 83.763
+    },
+    {
+      "text": "Es fundamental que se aclare este proceso para mantener la confianza",
+      "start": 83.763,
+      "end": 87.976
+    },
+    {
+      "text": "pública.",
+      "start": 87.976,
+      "end": 89.576
+    },
+    {
+      "text": "Keiko Fujimori ha propuesto la convocatoria a elecciones",
+      "start": 89.576,
+      "end": 93.045
+    },
+    {
+      "text": "complementarias.",
+      "start": 93.045,
+      "end": 94.645
+    },
+    {
+      "text": "La pregunta incómoda está sobre la mesa: ¿Es esta la mejor solución para",
+      "start": 94.645,
+      "end": 96.64
+    },
+    {
+      "text": "el actual panorama político?",
+      "start": 96.64,
+      "end": 96.64
+    }
+  ]
+}

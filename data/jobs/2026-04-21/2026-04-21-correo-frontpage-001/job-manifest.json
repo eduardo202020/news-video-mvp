@@ -90,31 +90,31 @@
     ],
     "candidates": [
       {
-        "headline": "Precariedad de organizaciones politicas",
+        "headline": "Puro cascarón",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.06,
-          "y": 0.32,
-          "width": 0.89,
-          "height": 0.6
+          "x": 0.11,
+          "y": 0.67,
+          "width": 0.83,
+          "height": 0.28
         },
         "page_number": 2,
-        "evidence_line": "Pags. 2 y 3 TEMA DEL DIA en el titular principal 'Puro cascaron'",
+        "evidence_line": "Titular principal con referencia 'págs. 2 y 3 TEMA DEL DÍA'",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.99
       },
       {
-        "headline": "Precariedad de organizaciones politicas",
+        "headline": "Puro cascarón",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.06,
-          "y": 0.32,
-          "width": 0.89,
-          "height": 0.6
+          "x": 0.11,
+          "y": 0.67,
+          "width": 0.83,
+          "height": 0.28
         },
         "page_number": 3,
-        "evidence_line": "Pags. 2 y 3 TEMA DEL DIA en el titular principal 'Puro cascaron'",
+        "evidence_line": "Titular principal con referencia 'págs. 2 y 3 TEMA DEL DÍA'",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.99
@@ -123,73 +123,73 @@
         "headline": "Congreso cita a ministros por compra de F-16",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.33,
+          "x": 0.35,
           "y": 0.1,
-          "width": 0.34,
+          "width": 0.29,
           "height": 0.15
         },
         "page_number": 7,
-        "evidence_line": "Pag. 7 Lima en el recuadro superior central sobre aviones F-16",
+        "evidence_line": "Bloque superior con 'CONGRESO CITA A TRES MINISTROS...' y 'pág. 7 LIMA'",
         "line_index": null,
         "method": "manual_import",
-        "confidence": 0.98
+        "confidence": 0.97
       },
       {
-        "headline": "Bellido impulsa proyecto para su partido",
+        "headline": "Bellido presenta proyecto para favorecer a su partido",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.69,
+          "x": 0.65,
           "y": 0.1,
           "width": 0.28,
           "height": 0.15
         },
         "page_number": 5,
-        "evidence_line": "Pag. 5 Politica en el recuadro superior derecho de Guido Bellido",
-        "line_index": null,
-        "method": "manual_import",
-        "confidence": 0.98
-      },
-      {
-        "headline": "Rabanal tiene las horas contadas en la U",
-        "story_type": "deportes",
-        "cover_region": {
-          "x": 0.33,
-          "y": 0.25,
-          "width": 0.64,
-          "height": 0.09
-        },
-        "page_number": 16,
-        "evidence_line": "Pag. 16 Deportes en la franja roja sobre Javier Rabanal",
+        "evidence_line": "Bloque superior derecho con 'pág. 5 POLÍTICA'",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.97
+      },
+      {
+        "headline": "Rabanal tiene las horas contadas en tienda crema",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.46,
+          "width": 0.56,
+          "height": 0.1
+        },
+        "page_number": 16,
+        "evidence_line": "Franja roja superior con 'pág. 16 DEPORTES'",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
       }
     ],
     "stories": [
       {
-        "headline": "Precariedad de organizaciones politicas",
+        "headline": "Puro cascarón",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.06,
-          "y": 0.32,
-          "width": 0.89,
-          "height": 0.6
+          "x": 0.11,
+          "y": 0.67,
+          "width": 0.83,
+          "height": 0.28
         },
         "page_numbers": [
           2,
           3
         ],
-        "evidence": "Pags. 2 y 3 TEMA DEL DIA en el titular principal 'Puro cascaron'",
+        "evidence": "Titular principal con referencia 'págs. 2 y 3 TEMA DEL DÍA'",
         "evidence_lines": [
-          "Pags. 2 y 3 TEMA DEL DIA en el titular principal 'Puro cascaron'"
+          "Titular principal con referencia 'págs. 2 y 3 TEMA DEL DÍA'"
         ],
         "confidence": 0.99
       },
       {
-        "headline": "Bellido impulsa proyecto para su partido",
+        "headline": "Bellido presenta proyecto para favorecer a su partido",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.69,
+          "x": 0.65,
           "y": 0.1,
           "width": 0.28,
           "height": 0.15
@@ -197,47 +197,47 @@
         "page_numbers": [
           5
         ],
-        "evidence": "Pag. 5 Politica en el recuadro superior derecho de Guido Bellido",
+        "evidence": "Bloque superior derecho con 'pág. 5 POLÍTICA'",
         "evidence_lines": [
-          "Pag. 5 Politica en el recuadro superior derecho de Guido Bellido"
+          "Bloque superior derecho con 'pág. 5 POLÍTICA'"
         ],
-        "confidence": 0.98
+        "confidence": 0.97
       },
       {
         "headline": "Congreso cita a ministros por compra de F-16",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.33,
+          "x": 0.35,
           "y": 0.1,
-          "width": 0.34,
+          "width": 0.29,
           "height": 0.15
         },
         "page_numbers": [
           7
         ],
-        "evidence": "Pag. 7 Lima en el recuadro superior central sobre aviones F-16",
+        "evidence": "Bloque superior con 'CONGRESO CITA A TRES MINISTROS...' y 'pág. 7 LIMA'",
         "evidence_lines": [
-          "Pag. 7 Lima en el recuadro superior central sobre aviones F-16"
+          "Bloque superior con 'CONGRESO CITA A TRES MINISTROS...' y 'pág. 7 LIMA'"
         ],
-        "confidence": 0.98
+        "confidence": 0.97
       },
       {
-        "headline": "Rabanal tiene las horas contadas en la U",
+        "headline": "Rabanal tiene las horas contadas en tienda crema",
         "story_type": "deportes",
         "cover_region": {
-          "x": 0.33,
-          "y": 0.25,
-          "width": 0.64,
-          "height": 0.09
+          "x": 0.35,
+          "y": 0.46,
+          "width": 0.56,
+          "height": 0.1
         },
         "page_numbers": [
           16
         ],
-        "evidence": "Pag. 16 Deportes en la franja roja sobre Javier Rabanal",
+        "evidence": "Franja roja superior con 'pág. 16 DEPORTES'",
         "evidence_lines": [
-          "Pag. 16 Deportes en la franja roja sobre Javier Rabanal"
+          "Franja roja superior con 'pág. 16 DEPORTES'"
         ],
-        "confidence": 0.97
+        "confidence": 0.95
       }
     ],
     "notes": "Paginas detectadas visualmente desde la portada."
@@ -250,106 +250,135 @@
       {
         "headline": "Doce candidatos a la Presidencia no captaron el voto de sus afiliados",
         "story_type": "politica",
-        "summary": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.",
-        "speech": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.",
+        "summary": "La evidencia de los partidos 'cascarón' es clara: a pesar de tener afiliados, doce candidatos no lograron captar su voto. Un fenómeno que subraya la desconexión entre partidos y sus seguidores.",
+        "speech": "La evidencia de los partidos 'cascarón' es clara: a pesar de tener afiliados, doce candidatos no lograron captar su voto. Un fenómeno que subraya la desconexión entre partidos y sus seguidores.",
+        "narrator_profile_id": "Mávila_Huertas",
+        "tone_notes": [
+          "serio",
+          "elegante",
+          "prudente"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.11,
+          "y": 0.67,
+          "width": 0.83,
+          "height": 0.28
+        },
+        "key_facts": [
+          "doce candidatos sin captar votos de afiliados",
+          "partidos cascarón",
+          "desconexión con seguidores"
+        ],
+        "key_facts_used": [
+          "doce candidatos sin captar votos de afiliados",
+          "partidos cascarón",
+          "desconexión con seguidores"
+        ],
+        "safety_notes": "No se afirman irregularidades, solo se presenta un hecho observable.",
+        "notes": "No se afirman irregularidades, solo se presenta un hecho observable."
+      },
+      {
+        "headline": "Bellido presenta proyecto para favorecer a su partido",
+        "story_type": "politica",
+        "summary": "Guido Bellido sigue en la mira: presenta un proyecto que podría beneficiar a su propio partido, creando un camino más fácil para su organización. La pregunta es clara: ¿esto es lo que necesita el país?",
+        "speech": "Guido Bellido sigue en la mira: presenta un proyecto que podría beneficiar a su propio partido, creando un camino más fácil para su organización. La pregunta es clara: ¿esto es lo que necesita el país?",
         "narrator_profile_id": "beto_ortiz",
         "tone_notes": [
           "critico",
           "frontal",
           "prudente"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          5
+        ],
+        "cover_region": {
+          "x": 0.65,
+          "y": 0.1,
+          "width": 0.28,
+          "height": 0.15
+        },
         "key_facts": [
-          "12 candidatos no captaron el voto de sus afiliados",
-          "el diario habla de \"partidos cascarón\"",
-          "el contraste se apoya en votos y militancia"
+          "proyecto de Bellido",
+          "beneficio a su partido",
+          "cuestionamiento sobre la necesidad para el país"
         ],
         "key_facts_used": [
-          "12 candidatos no captaron el voto de sus afiliados",
-          "el diario habla de \"partidos cascarón\"",
-          "el contraste se apoya en votos y militancia"
+          "proyecto de Bellido",
+          "beneficio a su partido",
+          "cuestionamiento sobre la necesidad para el país"
         ],
-        "safety_notes": "Se resume el hallazgo central y se evitan cifras parciales poco legibles en los cuadros secundarios.",
-        "notes": "Se resume el hallazgo central y se evitan cifras parciales poco legibles en los cuadros secundarios."
+        "safety_notes": "No se afirma que el proyecto sea ilegal, pero se subraya la controversia sobre sus implicaciones.",
+        "notes": "No se afirma que el proyecto sea ilegal, pero se subraya la controversia sobre sus implicaciones."
       },
       {
-        "headline": "Bellido presenta proyecto que favorecería a su partido",
+        "headline": "Congreso cita a tres ministros por compra de F-16",
         "story_type": "politica",
-        "summary": "La pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.",
-        "speech": "La pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.",
-        "narrator_profile_id": "beto_ortiz",
-        "tone_notes": [
-          "critico",
-          "incisivo",
-          "cauteloso"
-        ],
-        "page_numbers": [],
-        "cover_region": null,
-        "key_facts": [
-          "Guido Bellido impulsa un proyecto de ley",
-          "la nota señala posible beneficio para Perú Consciente",
-          "se menciona un requisito legal de cancelación"
-        ],
-        "key_facts_used": [
-          "Guido Bellido impulsa un proyecto de ley",
-          "la nota señala posible beneficio para Perú Consciente",
-          "se menciona un requisito legal de cancelación"
-        ],
-        "safety_notes": "Se usa cautela y no se afirma intención dolosa; solo se recoge el posible beneficio señalado por la nota.",
-        "notes": "Se usa cautela y no se afirma intención dolosa; solo se recoge el posible beneficio señalado por la nota."
-      },
-      {
-        "headline": "Congreso convoca a tres ministros por compra de aviones",
-        "story_type": "politica",
-        "summary": "Atención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.",
-        "speech": "Atención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.",
+        "summary": "El Congreso no se queda atrás: cita a tres ministros para dar explicaciones sobre la compra de aviones F-16. Esta decisión mantiene la presión sobre el gobierno en temas clave de defensa nacional.",
+        "speech": "El Congreso no se queda atrás: cita a tres ministros para dar explicaciones sobre la compra de aviones F-16. Esta decisión mantiene la presión sobre el gobierno en temas clave de defensa nacional.",
         "narrator_profile_id": "Mávila_Huertas",
         "tone_notes": [
           "serio",
-          "sobrio",
-          "institucional"
+          "elegante",
+          "prudente"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.1,
+          "width": 0.29,
+          "height": 0.15
+        },
         "key_facts": [
           "citación a tres ministros",
-          "negociación por aviones de combate",
-          "pedido de transparencia sobre la compra"
+          "compra de aviones F-16",
+          "presión sobre el gobierno"
         ],
         "key_facts_used": [
           "citación a tres ministros",
-          "negociación por aviones de combate",
-          "pedido de transparencia sobre la compra"
+          "compra de aviones F-16",
+          "presión sobre el gobierno"
         ],
-        "safety_notes": "Se evita adelantar irregularidades y se resume solo la citación y el debate institucional visibles en la página.",
-        "notes": "Se evita adelantar irregularidades y se resume solo la citación y el debate institucional visibles en la página."
+        "safety_notes": "El proceso está en curso, sin asumir culpabilidad ni conclusiones antes de la audiencia.",
+        "notes": "El proceso está en curso, sin asumir culpabilidad ni conclusiones antes de la audiencia."
       },
       {
-        "headline": "La revolución no progresó",
+        "headline": "Rabanal tiene las horas contadas en Universitario",
         "story_type": "deportes",
-        "summary": "Sin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
-        "speech": "Sin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
+        "summary": "En Universitario, la paciencia se agotó. Javier Rabanal tiene las horas contadas tras otra derrota crucial. Los cambios no se hacen esperar cuando los resultados no llegan.",
+        "speech": "En Universitario, la paciencia se agotó. Javier Rabanal tiene las horas contadas tras otra derrota crucial. Los cambios no se hacen esperar cuando los resultados no llegan.",
         "narrator_profile_id": "gonzalo_nunez",
         "tone_notes": [
           "pasional",
           "frontal",
-          "deportivo"
+          "agil"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.46,
+          "width": 0.56,
+          "height": 0.1
+        },
         "key_facts": [
-          "Javier Rabanal está bajo fuerte presión",
-          "la nota habla de críticas y malos resultados",
-          "Universitario evalúa su continuidad"
+          "salida inminente de Rabanal",
+          "derrotas en Universitario",
+          "búsqueda de un reemplazo"
         ],
         "key_facts_used": [
-          "Javier Rabanal está bajo fuerte presión",
-          "la nota habla de críticas y malos resultados",
-          "Universitario evalúa su continuidad"
+          "salida inminente de Rabanal",
+          "derrotas en Universitario",
+          "búsqueda de un reemplazo"
         ],
-        "safety_notes": "Se evita dar por cerrada una salida que la nota presenta como inminente, no oficializada.",
-        "notes": "Se evita dar por cerrada una salida que la nota presenta como inminente, no oficializada."
+        "safety_notes": "Se confirma que Rabanal está fuera del club, sin citar a posibles reemplazos definitivos.",
+        "notes": "Se confirma que Rabanal está fuera del club, sin citar a posibles reemplazos definitivos."
       }
     ],
     "notes": "Speeches editoriales importados manualmente."
@@ -358,8 +387,8 @@
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.\n\nLa pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.\n\nAtención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.\n\nSin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
-    "approved_text": "Ojo con este dato: doce candidatos presidenciales no lograron ni siquiera arrastrar el voto de sus propios afiliados. La portada y el desarrollo muestran partidos con inscripción, pero sin verdadera conexión política. No es un detalle menor: la precariedad ya quedó expuesta en las urnas.\n\nLa pregunta incómoda cae sola. Guido Bellido presentó un proyecto que, según la información disponible, podría evitar la cancelación de Perú Consciente por no cumplir un requisito legal. En política, cuando una norma roza el interés propio, la sospecha no tarda en encenderse.\n\nAtención con esta compra millonaria. El Congreso citó al premier, al canciller y al ministro de Defensa para explicar la negociación de aviones de combate, mientras crecen los pedidos de transparencia y se plantea que el siguiente gobierno asuma la decisión final.\n\nSin vueltas: en la \"U\" la revolución prometida por Javier Rabanal no despegó. Los resultados recientes y las críticas lo dejan al borde de la salida, en un momento donde Universitario ya no tiene margen para seguir probando. En el fútbol, el discurso dura poco si la cancha no responde.",
+    "draft": "La evidencia de los partidos 'cascarón' es clara: a pesar de tener afiliados, doce candidatos no lograron captar su voto. Un fenómeno que subraya la desconexión entre partidos y sus seguidores.\n\nGuido Bellido sigue en la mira: presenta un proyecto que podría beneficiar a su propio partido, creando un camino más fácil para su organización. La pregunta es clara: ¿esto es lo que necesita el país?\n\nEl Congreso no se queda atrás: cita a tres ministros para dar explicaciones sobre la compra de aviones F-16. Esta decisión mantiene la presión sobre el gobierno en temas clave de defensa nacional.\n\nEn Universitario, la paciencia se agotó. Javier Rabanal tiene las horas contadas tras otra derrota crucial. Los cambios no se hacen esperar cuando los resultados no llegan.",
+    "approved_text": "La evidencia de los partidos 'cascarón' es clara: a pesar de tener afiliados, doce candidatos no lograron captar su voto. Un fenómeno que subraya la desconexión entre partidos y sus seguidores.\n\nGuido Bellido sigue en la mira: presenta un proyecto que podría beneficiar a su propio partido, creando un camino más fácil para su organización. La pregunta es clara: ¿esto es lo que necesita el país?\n\nEl Congreso no se queda atrás: cita a tres ministros para dar explicaciones sobre la compra de aviones F-16. Esta decisión mantiene la presión sobre el gobierno en temas clave de defensa nacional.\n\nEn Universitario, la paciencia se agotó. Javier Rabanal tiene las horas contadas tras otra derrota crucial. Los cambios no se hacen esperar cuando los resultados no llegan.",
     "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
     "inputs": {
       "story_narrative_source": "story_narrative.stories",
@@ -398,7 +427,7 @@
   },
   "audit": {
     "created_at": "2026-04-21T16:33:34",
-    "updated_at": "2026-04-21T18:52:49",
+    "updated_at": "2026-04-22T03:28:47",
     "events": [
       {
         "stage": "discover",
@@ -531,16 +560,100 @@
         "status": "completed",
         "timestamp": "2026-04-21T18:52:49",
         "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:00:24",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:01:18",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:52:43",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:53:13",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:43:09",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:43:09",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:52:00",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T01:00:07",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:43",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:43",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:41:13",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:20",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:20",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:47",
+        "details": "Se importaron 4 speech(es) editoriales."
       }
     ]
   },
   "rundown_intro": {
-    "speech": "Hola. Hoy, martes 21 de abril, recorremos cinco portadas con una agenda marcada por crisis electoral, economía, policiales y deporte. En una fecha que también remite a una efeméride peruana, vamos diario por diario con lo más fuerte y las páginas clave para ampliar contexto.",
-    "date_reference": "21 de abril: nacimiento de Manuel Prado Ugarteche, dos veces presidente de la República. Adonde.com efemerides abril21 ([Adonde.com][1])",
+    "speech": "Martes 21 de abril. En una fecha que recuerda el nacimiento de Manuel Prado Ugarteche, repasamos un lote de portadas marcado por tensión electoral, seguridad, economía y deporte. Vamos diario por diario con lo central y sin rodeos.",
+    "date_reference": "Nacimiento de Manuel Prado Ugarteche en 1889; Adonde.com efemerides abril21",
     "source_scope": "peru",
-    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana sobria, sin competir con el foco editorial del recorrido.",
+    "why_it_fits": "Conecta la fecha del lote con una efemeride peruana verificable y acompaña el tono politico de varias portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-21T18:48:53"
+    "imported_at": "2026-04-22T03:28:20"
   }
 }

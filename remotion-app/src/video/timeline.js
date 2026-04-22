@@ -1,23 +1,50 @@
 import {interpolate} from "remotion";
-import {getCaptionStateForFrame} from "../utils.js";
-import {PAGE_TURN_FRAMES, SEGMENT_GAP_FRAMES} from "./constants.js";
+import {PAGE_TURN_FRAMES} from "./constants.js";
 import {buildWordHighlights} from "./helpers.js";
 
 export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
   const sequence = story.segments;
-  const segmentDuration = Math.max(
-    1,
-    Math.floor((durationInFrames - PAGE_TURN_FRAMES * Math.max(sequence.length - 1, 0)) / sequence.length)
+  const transitionFlags = sequence.map((segment, index) => {
+    if (index >= sequence.length - 1) {
+      return false;
+    }
+
+    return (segment.newspaperName ?? "") !== (sequence[index + 1]?.newspaperName ?? "");
+  });
+  const transitionCount = transitionFlags.filter(Boolean).length;
+  const resolvedDurations = sequence.map((segment) =>
+    Math.max(
+      1,
+      Math.round(
+        (segment.durationSeconds ?? durationInFrames / Math.max(1, fps * sequence.length)) * fps
+      )
+    )
   );
-  const totalSegmentBlock = segmentDuration + PAGE_TURN_FRAMES;
-  const segmentStride = Math.max(1, totalSegmentBlock - SEGMENT_GAP_FRAMES);
-  const activeIndex = Math.min(sequence.length - 1, Math.floor(frame / segmentStride));
+  const segmentStarts = [];
+  let cursor = 0;
+
+  for (let index = 0; index < sequence.length; index += 1) {
+    segmentStarts.push(cursor);
+    cursor += resolvedDurations[index];
+  }
+
+  let activeIndex = sequence.length - 1;
+  for (let index = 0; index < segmentStarts.length; index += 1) {
+    const start = segmentStarts[index];
+    const nextStart = segmentStarts[index + 1] ?? Number.POSITIVE_INFINITY;
+    if (frame >= start && frame < nextStart) {
+      activeIndex = index;
+      break;
+    }
+  }
   const currentSegment = sequence[activeIndex];
   const nextSegment = sequence[Math.min(sequence.length - 1, activeIndex + 1)];
-  const localBlockStart = activeIndex * segmentStride;
+  const localBlockStart = segmentStarts[activeIndex];
   const segmentFrame = frame - localBlockStart;
+  const segmentDuration = resolvedDurations[activeIndex];
+  const shouldTransition = transitionFlags[activeIndex];
   const isTransitioning =
-    activeIndex < sequence.length - 1 && segmentFrame >= segmentDuration - PAGE_TURN_FRAMES;
+    shouldTransition && activeIndex < sequence.length - 1 && segmentFrame >= segmentDuration - PAGE_TURN_FRAMES;
 
   const transitionProgress = isTransitioning
     ? interpolate(
@@ -31,17 +58,26 @@ export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
       )
     : 0;
 
-  const captionState = getCaptionStateForFrame({
-    text: currentSegment.text,
-    frame: Math.max(0, segmentFrame),
-    durationInFrames: isTransitioning ? segmentDuration : Math.max(1, segmentDuration - SEGMENT_GAP_FRAMES),
-    fps
-  });
+  const subtitleSegments = Array.isArray(story.subtitleSegments) ? story.subtitleSegments : [];
+  const activeSubtitle =
+    subtitleSegments.find((item) => {
+      const startFrame = Math.round((item.start ?? 0) * fps);
+      const endFrame = Math.max(startFrame + 1, Math.round((item.end ?? 0) * fps));
+      return frame >= startFrame && frame < endFrame;
+    }) ?? subtitleSegments[subtitleSegments.length - 1] ?? null;
+  const subtitleStartFrame = activeSubtitle ? Math.round((activeSubtitle.start ?? 0) * fps) : 0;
+  const subtitleEndFrame = activeSubtitle
+    ? Math.max(subtitleStartFrame + 1, Math.round((activeSubtitle.end ?? 0) * fps))
+    : Math.max(1, segmentDuration);
+  const subtitleProgress = activeSubtitle
+    ? Math.max(0, Math.min(1, (frame - subtitleStartFrame) / Math.max(1, subtitleEndFrame - subtitleStartFrame)))
+    : Math.max(0, Math.min(1, segmentFrame / Math.max(1, segmentDuration)));
+  const captionText = activeSubtitle?.text ?? currentSegment.text;
 
   const activeGestures = currentSegment.gestures?.length ? currentSegment.gestures : story.gestures;
   const gestureIndex = Math.floor(frame / fps) % activeGestures.length;
   const activeNarratorName = currentSegment.narratorName ?? story.narratorName;
-  const subtitleLength = captionState.text.length;
+  const subtitleLength = captionText.length;
 
   return {
     sequence,
@@ -55,9 +91,9 @@ export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
     activeGestures,
     activeNarratorName,
     activeGestureSrc: activeGestures[gestureIndex],
-    captionWords: buildWordHighlights(captionState.text, captionState.progress),
+    captionWords: buildWordHighlights(captionText, subtitleProgress),
     subtitleFontSize:
-      subtitleLength > 120 ? 47 : subtitleLength > 90 ? 52 : subtitleLength > 65 ? 57 : 62,
-    subtitleLineHeight: subtitleLength > 120 ? 1.08 : 1.12
+      subtitleLength > 120 ? 52 : subtitleLength > 100 ? 56 : subtitleLength > 82 ? 60 : subtitleLength > 64 ? 66 : 74,
+    subtitleLineHeight: subtitleLength > 96 ? 1.06 : 1.08
   };
 };

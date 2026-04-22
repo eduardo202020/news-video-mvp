@@ -1,0 +1,648 @@
+{
+  "policy_id": "default-2-lines",
+  "text_source": "daily_rundown",
+  "text": "Martes 21 de abril. En una fecha que recuerda el nacimiento de Manuel Prado Ugarteche, repasamos un lote de portadas marcado por tensión electoral, seguridad, economía y deporte. Vamos diario por diario con lo central y sin rodeos.\n\nLa evidencia de los partidos 'cascarón' es clara: a pesar de tener afiliados, doce candidatos no lograron captar su voto. Un fenómeno que subraya la desconexión entre partidos y sus seguidores.\n\nGuido Bellido sigue en la mira: presenta un proyecto que podría beneficiar a su propio partido, creando un camino más fácil para su organización. La pregunta es clara: ¿esto es lo que necesita el país?\n\nEl Congreso no se queda atrás: cita a tres ministros para dar explicaciones sobre la compra de aviones F-16. Esta decisión mantiene la presión sobre el gobierno en temas clave de defensa nacional.\n\nEn Universitario, la paciencia se agotó. Javier Rabanal tiene las horas contadas tras otra derrota crucial. Los cambios no se hacen esperar cuando los resultados no llegan.\n\nAhora pasamos al periodico Elcomercio. Revisamos lo mas importante de su portada.\n\nLas audiencias para el recuento de votos ya están en marcha. Este proceso es crucial para asegurar la transparencia y la legitimidad de los resultados electorales.\n\nLa Contraloría ha señalado irregularidades en la entrega de información por parte de la ONPE. Es fundamental que se aclare este proceso para mantener la confianza pública.\n\nKeiko Fujimori ha propuesto la convocatoria a elecciones complementarias. La pregunta incómoda está sobre la mesa: ¿Es esta la mejor solución para el actual panorama político?\n\nAhora pasamos al periodico Gestion. Revisamos lo mas importante de su portada.\n\nEl dato clave está en la estabilidad económica. Las reservas del BCR alcanzaron US$ 100,000 millones, lo que asegura un respaldo ante posibles crisis. Este aumento es clave para la proyección del país.\n\nEl impacto será directo en el consumo. Se espera un alza de hasta 15% en las importaciones debido a la campaña del Día de la Madre. Esto refleja el comportamiento del mercado en fechas claves.\n\nLas reformas propuestas no tienen un panorama claro en el próximo Senado. El futuro de Petroperú dependerá de las decisiones políticas que se tomen en los próximos meses.\n\nAhora pasamos al periodico Ojo. Revisamos lo mas importante de su portada.\n\nLa presión sobre Corvetto ya no es solo política, también tiene frente fiscal. Keiko pide su salida y la página muestra un caso que complica al jefe de la ONPE. La pregunta incómoda ya quedó instalada.\n\nAtención con esto, porque en Gamarra la cosa se puso muy seria. Un colombiano apodado 'Satanás' fue detenido y, según la página, estaría vinculado al cobro de cupos y a una red que sembraba miedo.\n\nSe acabó la paciencia en Universitario. La caída ante Melgar dejó a Javier Rabanal fuera del cargo y el club ya mira otros nombres para reaccionar. En la U no hubo margen para esperar más.\n\nAhora pasamos al periodico Trome. Revisamos lo mas importante de su portada.\n\nLa presión ya es institucional. Corvetto debe acudir hoy a la Fiscalía y entregar su pasaporte, mientras crecen las dudas por actas perdidas y el manejo del proceso. En una elección, la confianza no admite sombras.\n\nOjo con esto: la compra de aviones de guerra ya encendió una bronca política. La página habla de presión de Estados Unidos y de un debate que sube de tono en el Congreso. No es un detalle menor.\n\nSin vueltas: a Rabanal se le acabó el crédito en la U. La derrota en Arequipa aceleró su salida y ahora ya suenan reemplazos para un equipo que no quiere perder más terreno. Golpe fuerte en tienda crema.",
+  "audio_duration_seconds": 219.68,
+  "segments": [
+    {
+      "text": "Martes 21 de abril.",
+      "start": 0.0,
+      "end": 1.6
+    },
+    {
+      "text": "En una fecha que recuerda el",
+      "start": 1.6,
+      "end": 3.376
+    },
+    {
+      "text": "nacimiento de Manuel Prado",
+      "start": 3.376,
+      "end": 5.026
+    },
+    {
+      "text": "Ugarteche, repasamos un lote de",
+      "start": 5.026,
+      "end": 6.992
+    },
+    {
+      "text": "portadas marcado por tensión",
+      "start": 6.992,
+      "end": 8.768
+    },
+    {
+      "text": "electoral, seguridad, economía y",
+      "start": 8.768,
+      "end": 10.798
+    },
+    {
+      "text": "deporte.",
+      "start": 10.798,
+      "end": 12.398
+    },
+    {
+      "text": "Vamos diario por diario con lo",
+      "start": 12.398,
+      "end": 14.301
+    },
+    {
+      "text": "central y sin rodeos.",
+      "start": 14.301,
+      "end": 15.901
+    },
+    {
+      "text": "La evidencia de los partidos",
+      "start": 15.901,
+      "end": 17.678
+    },
+    {
+      "text": "'cascarón' es clara: a pesar de",
+      "start": 17.678,
+      "end": 19.644
+    },
+    {
+      "text": "tener afiliados, doce candidatos no",
+      "start": 19.644,
+      "end": 21.864
+    },
+    {
+      "text": "lograron captar su voto.",
+      "start": 21.864,
+      "end": 23.464
+    },
+    {
+      "text": "Un fenómeno que subraya la",
+      "start": 23.464,
+      "end": 25.114
+    },
+    {
+      "text": "desconexión entre partidos y sus",
+      "start": 25.114,
+      "end": 27.144
+    },
+    {
+      "text": "seguidores.",
+      "start": 27.144,
+      "end": 28.744
+    },
+    {
+      "text": "Guido Bellido sigue en la mira:",
+      "start": 28.744,
+      "end": 30.71
+    },
+    {
+      "text": "presenta un proyecto que podría",
+      "start": 30.71,
+      "end": 32.677
+    },
+    {
+      "text": "beneficiar a su propio partido,",
+      "start": 32.677,
+      "end": 34.643
+    },
+    {
+      "text": "creando un camino más fácil para su",
+      "start": 34.643,
+      "end": 36.864
+    },
+    {
+      "text": "organización.",
+      "start": 36.864,
+      "end": 38.464
+    },
+    {
+      "text": "La pregunta es clara: ¿esto es lo",
+      "start": 38.464,
+      "end": 40.557
+    },
+    {
+      "text": "que necesita el país?",
+      "start": 40.557,
+      "end": 42.157
+    },
+    {
+      "text": "El Congreso no se queda atrás: cita",
+      "start": 42.157,
+      "end": 44.377
+    },
+    {
+      "text": "a tres ministros para dar",
+      "start": 44.377,
+      "end": 45.977
+    },
+    {
+      "text": "explicaciones sobre la compra de",
+      "start": 45.977,
+      "end": 48.007
+    },
+    {
+      "text": "aviones F-16.",
+      "start": 48.007,
+      "end": 49.607
+    },
+    {
+      "text": "Esta decisión mantiene la presión",
+      "start": 49.607,
+      "end": 51.701
+    },
+    {
+      "text": "sobre el gobierno en temas clave de",
+      "start": 51.701,
+      "end": 53.921
+    },
+    {
+      "text": "defensa nacional.",
+      "start": 53.921,
+      "end": 55.521
+    },
+    {
+      "text": "En Universitario, la paciencia se",
+      "start": 55.521,
+      "end": 57.614
+    },
+    {
+      "text": "agotó.",
+      "start": 57.614,
+      "end": 59.214
+    },
+    {
+      "text": "Javier Rabanal tiene las horas",
+      "start": 59.214,
+      "end": 61.117
+    },
+    {
+      "text": "contadas tras otra derrota crucial.",
+      "start": 61.117,
+      "end": 63.338
+    },
+    {
+      "text": "Los cambios no se hacen esperar",
+      "start": 63.338,
+      "end": 65.304
+    },
+    {
+      "text": "cuando los resultados no llegan.",
+      "start": 65.304,
+      "end": 67.334
+    },
+    {
+      "text": "Ahora pasamos al periodico",
+      "start": 67.334,
+      "end": 68.983
+    },
+    {
+      "text": "Elcomercio.",
+      "start": 68.983,
+      "end": 70.583
+    },
+    {
+      "text": "Revisamos lo mas importante de su",
+      "start": 70.583,
+      "end": 72.677
+    },
+    {
+      "text": "portada.",
+      "start": 72.677,
+      "end": 74.277
+    },
+    {
+      "text": "Las audiencias para el recuento de",
+      "start": 74.277,
+      "end": 76.434
+    },
+    {
+      "text": "votos ya están en marcha.",
+      "start": 76.434,
+      "end": 78.034
+    },
+    {
+      "text": "Este proceso es crucial para",
+      "start": 78.034,
+      "end": 79.81
+    },
+    {
+      "text": "asegurar la transparencia y la",
+      "start": 79.81,
+      "end": 81.713
+    },
+    {
+      "text": "legitimidad de los resultados",
+      "start": 81.713,
+      "end": 83.553
+    },
+    {
+      "text": "electorales.",
+      "start": 83.553,
+      "end": 85.153
+    },
+    {
+      "text": "La Contraloría ha señalado",
+      "start": 85.153,
+      "end": 86.802
+    },
+    {
+      "text": "irregularidades en la entrega de",
+      "start": 86.802,
+      "end": 88.832
+    },
+    {
+      "text": "información por parte de la ONPE.",
+      "start": 88.832,
+      "end": 90.925
+    },
+    {
+      "text": "Es fundamental que se aclare este",
+      "start": 90.925,
+      "end": 93.019
+    },
+    {
+      "text": "proceso para mantener la confianza",
+      "start": 93.019,
+      "end": 95.176
+    },
+    {
+      "text": "pública.",
+      "start": 95.176,
+      "end": 96.776
+    },
+    {
+      "text": "Keiko Fujimori ha propuesto la",
+      "start": 96.776,
+      "end": 98.679
+    },
+    {
+      "text": "convocatoria a elecciones",
+      "start": 98.679,
+      "end": 100.279
+    },
+    {
+      "text": "complementarias.",
+      "start": 100.279,
+      "end": 101.879
+    },
+    {
+      "text": "La pregunta incómoda está sobre la",
+      "start": 101.879,
+      "end": 104.035
+    },
+    {
+      "text": "mesa: ¿Es esta la mejor solución",
+      "start": 104.035,
+      "end": 106.065
+    },
+    {
+      "text": "para el actual panorama político?",
+      "start": 106.065,
+      "end": 108.159
+    },
+    {
+      "text": "Ahora pasamos al periodico Gestion.",
+      "start": 108.159,
+      "end": 110.379
+    },
+    {
+      "text": "Revisamos lo mas importante de su",
+      "start": 110.379,
+      "end": 112.473
+    },
+    {
+      "text": "portada.",
+      "start": 112.473,
+      "end": 114.073
+    },
+    {
+      "text": "El dato clave está en la estabilidad",
+      "start": 114.073,
+      "end": 116.356
+    },
+    {
+      "text": "económica.",
+      "start": 116.356,
+      "end": 117.956
+    },
+    {
+      "text": "Las reservas del BCR alcanzaron US$",
+      "start": 117.956,
+      "end": 120.176
+    },
+    {
+      "text": "100,000 millones, lo que asegura un",
+      "start": 120.176,
+      "end": 122.397
+    },
+    {
+      "text": "respaldo ante posibles crisis.",
+      "start": 122.397,
+      "end": 124.3
+    },
+    {
+      "text": "Este aumento es clave para la",
+      "start": 124.3,
+      "end": 126.14
+    },
+    {
+      "text": "proyección del país.",
+      "start": 126.14,
+      "end": 127.74
+    },
+    {
+      "text": "El impacto será directo en el",
+      "start": 127.74,
+      "end": 129.579
+    },
+    {
+      "text": "consumo.",
+      "start": 129.579,
+      "end": 131.179
+    },
+    {
+      "text": "Se espera un alza de hasta 15% en",
+      "start": 131.179,
+      "end": 133.273
+    },
+    {
+      "text": "las importaciones debido a la",
+      "start": 133.273,
+      "end": 135.112
+    },
+    {
+      "text": "campaña del Día de la Madre.",
+      "start": 135.112,
+      "end": 136.888
+    },
+    {
+      "text": "Esto refleja el comportamiento del",
+      "start": 136.888,
+      "end": 139.045
+    },
+    {
+      "text": "mercado en fechas claves.",
+      "start": 139.045,
+      "end": 140.645
+    },
+    {
+      "text": "Las reformas propuestas no tienen un",
+      "start": 140.645,
+      "end": 142.929
+    },
+    {
+      "text": "panorama claro en el próximo Senado.",
+      "start": 142.929,
+      "end": 145.213
+    },
+    {
+      "text": "El futuro de Petroperú dependerá de",
+      "start": 145.213,
+      "end": 147.433
+    },
+    {
+      "text": "las decisiones políticas que se",
+      "start": 147.433,
+      "end": 149.399
+    },
+    {
+      "text": "tomen en los próximos meses.",
+      "start": 149.399,
+      "end": 151.176
+    },
+    {
+      "text": "Ahora pasamos al periodico Ojo.",
+      "start": 151.176,
+      "end": 153.142
+    },
+    {
+      "text": "Revisamos lo mas importante de su",
+      "start": 153.142,
+      "end": 155.236
+    },
+    {
+      "text": "portada.",
+      "start": 155.236,
+      "end": 156.836
+    },
+    {
+      "text": "La presión sobre Corvetto ya no es",
+      "start": 156.836,
+      "end": 158.992
+    },
+    {
+      "text": "solo política, también tiene frente",
+      "start": 158.992,
+      "end": 161.213
+    },
+    {
+      "text": "fiscal.",
+      "start": 161.213,
+      "end": 162.813
+    },
+    {
+      "text": "Keiko pide su salida y la página",
+      "start": 162.813,
+      "end": 164.843
+    },
+    {
+      "text": "muestra un caso que complica al jefe",
+      "start": 164.843,
+      "end": 167.126
+    },
+    {
+      "text": "de la ONPE.",
+      "start": 167.126,
+      "end": 168.726
+    },
+    {
+      "text": "La pregunta incómoda ya quedó",
+      "start": 168.726,
+      "end": 170.566
+    },
+    {
+      "text": "instalada.",
+      "start": 170.566,
+      "end": 172.166
+    },
+    {
+      "text": "Atención con esto, porque en Gamarra",
+      "start": 172.166,
+      "end": 174.45
+    },
+    {
+      "text": "la cosa se puso muy seria.",
+      "start": 174.45,
+      "end": 176.099
+    },
+    {
+      "text": "Un colombiano apodado 'Satanás' fue",
+      "start": 176.099,
+      "end": 178.319
+    },
+    {
+      "text": "detenido y, según la página, estaría",
+      "start": 178.319,
+      "end": 180.603
+    },
+    {
+      "text": "vinculado al cobro de cupos y a una",
+      "start": 180.603,
+      "end": 182.823
+    },
+    {
+      "text": "red que sembraba miedo.",
+      "start": 182.823,
+      "end": 184.423
+    },
+    {
+      "text": "Se acabó la paciencia en",
+      "start": 184.423,
+      "end": 186.023
+    },
+    {
+      "text": "Universitario.",
+      "start": 186.023,
+      "end": 187.623
+    },
+    {
+      "text": "La caída ante Melgar dejó a Javier",
+      "start": 187.623,
+      "end": 189.78
+    },
+    {
+      "text": "Rabanal fuera del cargo y el club ya",
+      "start": 189.78,
+      "end": 192.064
+    },
+    {
+      "text": "mira otros nombres para reaccionar.",
+      "start": 192.064,
+      "end": 194.284
+    },
+    {
+      "text": "En la U no hubo margen para esperar",
+      "start": 194.284,
+      "end": 196.504
+    },
+    {
+      "text": "más.",
+      "start": 196.504,
+      "end": 198.104
+    },
+    {
+      "text": "Ahora pasamos al periodico Trome.",
+      "start": 198.104,
+      "end": 200.198
+    },
+    {
+      "text": "Revisamos lo mas importante de su",
+      "start": 200.198,
+      "end": 202.291
+    },
+    {
+      "text": "portada.",
+      "start": 202.291,
+      "end": 203.891
+    },
+    {
+      "text": "La presión ya es institucional.",
+      "start": 203.891,
+      "end": 205.858
+    },
+    {
+      "text": "Corvetto debe acudir hoy a la",
+      "start": 205.858,
+      "end": 207.697
+    },
+    {
+      "text": "Fiscalía y entregar su pasaporte,",
+      "start": 207.697,
+      "end": 209.791
+    },
+    {
+      "text": "mientras crecen las dudas por actas",
+      "start": 209.791,
+      "end": 212.011
+    },
+    {
+      "text": "perdidas y el manejo del proceso.",
+      "start": 212.011,
+      "end": 214.104
+    },
+    {
+      "text": "En una elección, la confianza no",
+      "start": 214.104,
+      "end": 216.134
+    },
+    {
+      "text": "admite sombras.",
+      "start": 216.134,
+      "end": 217.734
+    },
+    {
+      "text": "Ojo con esto: la compra de aviones",
+      "start": 217.734,
+      "end": 219.68
+    },
+    {
+      "text": "de guerra ya encendió una bronca",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "política.",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "La página habla de presión de",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "Estados Unidos y de un debate que",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "sube de tono en el Congreso.",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "No es un detalle menor.",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "Sin vueltas: a Rabanal se le acabó",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "el crédito en la U.",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "La derrota en Arequipa aceleró su",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "salida y ahora ya suenan reemplazos",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "para un equipo que no quiere perder",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "más terreno.",
+      "start": 219.68,
+      "end": 219.68
+    },
+    {
+      "text": "Golpe fuerte en tienda crema.",
+      "start": 219.68,
+      "end": 219.68
+    }
+  ]
+}

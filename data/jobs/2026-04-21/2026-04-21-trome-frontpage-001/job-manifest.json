@@ -77,143 +77,109 @@
     "selected_page_numbers": [
       8,
       9,
-      11,
-      16
+      11
     ],
     "candidates": [
       {
-        "headline": "Compra de aviones de guerra",
+        "headline": "Bronca por aviones de guerra",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.23,
-          "y": 0.22,
-          "width": 0.72,
-          "height": 0.59
+          "x": 0.24,
+          "y": 0.25,
+          "width": 0.7,
+          "height": 0.61
         },
         "page_number": 9,
-        "evidence_line": "Pagina 9 junto al titular central sobre aviones de guerra",
+        "evidence_line": "Página 9 junto al titular central 'BRONCA POR AVIONES DE GUERRA PARA EL PERÚ'",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.99
       },
       {
-        "headline": "Fiscalia cita a Corvetto",
+        "headline": "Fiscalía cita a Corvetto",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.0,
-          "y": 0.22,
-          "width": 0.23,
-          "height": 0.63
+          "x": 0.03,
+          "y": 0.24,
+          "width": 0.2,
+          "height": 0.61
         },
         "page_number": 8,
-        "evidence_line": "Pagina 8 en el bloque lateral izquierdo de Corvetto",
+        "evidence_line": "Bloque lateral con 'LO CITAN PARA QUE DECLARE HOY' y referencia PÁGINA 8",
         "line_index": null,
         "method": "manual_import",
-        "confidence": 0.98
+        "confidence": 0.97
       },
       {
-        "headline": "Salida de Rabanal en la U",
+        "headline": "Botan a Rabanal de la U",
         "story_type": "deportes",
         "cover_region": {
-          "x": 0.05,
-          "y": 0.87,
-          "width": 0.49,
+          "x": 0.24,
+          "y": 0.84,
+          "width": 0.21,
           "height": 0.12
         },
         "page_number": 11,
-        "evidence_line": "Pagina 11 en la franja inferior sobre Rabanal",
+        "evidence_line": "Franja inferior con 'BOTAN A RABANAL DE LA U' y referencia PÁGINA 11",
         "line_index": null,
         "method": "manual_import",
-        "confidence": 0.97
-      },
-      {
-        "headline": "Pamela expone a Christian",
-        "story_type": "espectaculos",
-        "cover_region": {
-          "x": 0.54,
-          "y": 0.87,
-          "width": 0.42,
-          "height": 0.12
-        },
-        "page_number": 16,
-        "evidence_line": "Pagina 16 en la franja inferior derecha de espectaculos",
-        "line_index": null,
-        "method": "manual_import",
-        "confidence": 0.97
+        "confidence": 0.94
       }
     ],
     "stories": [
       {
-        "headline": "Fiscalia cita a Corvetto",
+        "headline": "Fiscalía cita a Corvetto",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.0,
-          "y": 0.22,
-          "width": 0.23,
-          "height": 0.63
+          "x": 0.03,
+          "y": 0.24,
+          "width": 0.2,
+          "height": 0.61
         },
         "page_numbers": [
           8
         ],
-        "evidence": "Pagina 8 en el bloque lateral izquierdo de Corvetto",
+        "evidence": "Bloque lateral con 'LO CITAN PARA QUE DECLARE HOY' y referencia PÁGINA 8",
         "evidence_lines": [
-          "Pagina 8 en el bloque lateral izquierdo de Corvetto"
+          "Bloque lateral con 'LO CITAN PARA QUE DECLARE HOY' y referencia PÁGINA 8"
         ],
-        "confidence": 0.98
+        "confidence": 0.97
       },
       {
-        "headline": "Compra de aviones de guerra",
+        "headline": "Bronca por aviones de guerra",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.23,
-          "y": 0.22,
-          "width": 0.72,
-          "height": 0.59
+          "x": 0.24,
+          "y": 0.25,
+          "width": 0.7,
+          "height": 0.61
         },
         "page_numbers": [
           9
         ],
-        "evidence": "Pagina 9 junto al titular central sobre aviones de guerra",
+        "evidence": "Página 9 junto al titular central 'BRONCA POR AVIONES DE GUERRA PARA EL PERÚ'",
         "evidence_lines": [
-          "Pagina 9 junto al titular central sobre aviones de guerra"
+          "Página 9 junto al titular central 'BRONCA POR AVIONES DE GUERRA PARA EL PERÚ'"
         ],
         "confidence": 0.99
       },
       {
-        "headline": "Salida de Rabanal en la U",
+        "headline": "Botan a Rabanal de la U",
         "story_type": "deportes",
         "cover_region": {
-          "x": 0.05,
-          "y": 0.87,
-          "width": 0.49,
+          "x": 0.24,
+          "y": 0.84,
+          "width": 0.21,
           "height": 0.12
         },
         "page_numbers": [
           11
         ],
-        "evidence": "Pagina 11 en la franja inferior sobre Rabanal",
+        "evidence": "Franja inferior con 'BOTAN A RABANAL DE LA U' y referencia PÁGINA 11",
         "evidence_lines": [
-          "Pagina 11 en la franja inferior sobre Rabanal"
+          "Franja inferior con 'BOTAN A RABANAL DE LA U' y referencia PÁGINA 11"
         ],
-        "confidence": 0.97
-      },
-      {
-        "headline": "Pamela expone a Christian",
-        "story_type": "espectaculos",
-        "cover_region": {
-          "x": 0.54,
-          "y": 0.87,
-          "width": 0.42,
-          "height": 0.12
-        },
-        "page_numbers": [
-          16
-        ],
-        "evidence": "Pagina 16 en la franja inferior derecha de espectaculos",
-        "evidence_lines": [
-          "Pagina 16 en la franja inferior derecha de espectaculos"
-        ],
-        "confidence": 0.97
+        "confidence": 0.94
       }
     ],
     "notes": "Paginas detectadas visualmente desde la portada."
@@ -224,108 +190,103 @@
     "source": "supporting_pages_manual",
     "stories": [
       {
-        "headline": "ONPE es una coladera: se pierden actas de 17 mesas",
+        "headline": "Fiscalía cita a Corvetto",
         "story_type": "politica",
-        "summary": "La crisis en la ONPE es un hecho: se pierden actas de 17 mesas en plena jornada electoral. Esto pone bajo presión a las autoridades, ya que la integridad del proceso depende de cada voto y cada documento. Se requieren respuestas urgentes.",
-        "speech": "La crisis en la ONPE es un hecho: se pierden actas de 17 mesas en plena jornada electoral. Esto pone bajo presión a las autoridades, ya que la integridad del proceso depende de cada voto y cada documento. Se requieren respuestas urgentes.",
+        "summary": "La presión ya es institucional. Corvetto debe acudir hoy a la Fiscalía y entregar su pasaporte, mientras crecen las dudas por actas perdidas y el manejo del proceso. En una elección, la confianza no admite sombras.",
+        "speech": "La presión ya es institucional. Corvetto debe acudir hoy a la Fiscalía y entregar su pasaporte, mientras crecen las dudas por actas perdidas y el manejo del proceso. En una elección, la confianza no admite sombras.",
         "narrator_profile_id": "Mávila_Huertas",
         "tone_notes": [
           "serio",
           "elegante",
           "prudente"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.24,
+          "width": 0.2,
+          "height": 0.61
+        },
         "key_facts": [
-          "actas perdidas en 17 mesas",
-          "presión sobre la ONPE",
-          "urgencia por la pérdida de información electoral"
+          "citación fiscal a Corvetto",
+          "entrega de pasaporte",
+          "actas de 17 mesas perdidas"
         ],
         "key_facts_used": [
-          "actas perdidas en 17 mesas",
-          "presión sobre la ONPE",
-          "urgencia por la pérdida de información electoral"
+          "citación fiscal a Corvetto",
+          "entrega de pasaporte",
+          "actas de 17 mesas perdidas"
         ],
-        "safety_notes": "Se presenta como una situación crítica sin afirmar corrupción directa.",
-        "notes": "Se presenta como una situación crítica sin afirmar corrupción directa."
+        "safety_notes": "Se describe una citación e investigación visibles en la página; no se afirma delito ni responsabilidad penal.",
+        "notes": "Se describe una citación e investigación visibles en la página; no se afirma delito ni responsabilidad penal."
       },
       {
-        "headline": "Bronca por aviones de guerra para Perú",
+        "headline": "Bronca por aviones de guerra para el Perú",
         "story_type": "politica",
-        "summary": "La compra de aviones de guerra para Perú se encuentra en medio de una fuerte controversia. Mientras el gobierno defiende la adquisición, las presiones internas y externas siguen aumentando, especialmente con Estados Unidos exigiendo explicaciones sobre la transacción.",
-        "speech": "La compra de aviones de guerra para Perú se encuentra en medio de una fuerte controversia. Mientras el gobierno defiende la adquisición, las presiones internas y externas siguen aumentando, especialmente con Estados Unidos exigiendo explicaciones sobre la transacción.",
-        "narrator_profile_id": "Mávila_Huertas",
+        "summary": "Ojo con esto: la compra de aviones de guerra ya encendió una bronca política. La página habla de presión de Estados Unidos y de un debate que sube de tono en el Congreso. No es un detalle menor.",
+        "speech": "Ojo con esto: la compra de aviones de guerra ya encendió una bronca política. La página habla de presión de Estados Unidos y de un debate que sube de tono en el Congreso. No es un detalle menor.",
+        "narrator_profile_id": "beto_ortiz",
         "tone_notes": [
-          "serio",
-          "analitico",
-          "institucional"
+          "critico",
+          "frontal",
+          "prudente"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.24,
+          "y": 0.25,
+          "width": 0.7,
+          "height": 0.61
+        },
         "key_facts": [
-          "controversia sobre la compra de aviones de guerra",
-          "presiones de Estados Unidos",
-          "necesidad de explicaciones sobre la compra"
+          "debate por compra de aviones",
+          "presión de Estados Unidos",
+          "discusión en el Congreso"
         ],
         "key_facts_used": [
-          "controversia sobre la compra de aviones de guerra",
-          "presiones de Estados Unidos",
-          "necesidad de explicaciones sobre la compra"
+          "debate por compra de aviones",
+          "presión de Estados Unidos",
+          "discusión en el Congreso"
         ],
-        "safety_notes": "Se evita hacer afirmaciones sobre la culpabilidad, solo se exponen las presiones y cuestionamientos.",
-        "notes": "Se evita hacer afirmaciones sobre la culpabilidad, solo se exponen las presiones y cuestionamientos."
+        "safety_notes": "Se usa solo lo claramente legible del enfoque político; se omiten detalles técnicos menores no totalmente visibles.",
+        "notes": "Se usa solo lo claramente legible del enfoque político; se omiten detalles técnicos menores no totalmente visibles."
       },
       {
-        "headline": "Patada en el Rabanal",
+        "headline": "Botan a Rabanal de la U",
         "story_type": "deportes",
-        "summary": "Sin rodeos: Javier Rabanal ha sido despedido de Universitario tras la dura derrota ante Melgar. El técnico deja el club en medio de una crisis, donde la paciencia se agotó. En el fútbol, los resultados mandan, y hoy la U necesita un cambio urgente.",
-        "speech": "Sin rodeos: Javier Rabanal ha sido despedido de Universitario tras la dura derrota ante Melgar. El técnico deja el club en medio de una crisis, donde la paciencia se agotó. En el fútbol, los resultados mandan, y hoy la U necesita un cambio urgente.",
+        "summary": "Sin vueltas: a Rabanal se le acabó el crédito en la U. La derrota en Arequipa aceleró su salida y ahora ya suenan reemplazos para un equipo que no quiere perder más terreno. Golpe fuerte en tienda crema.",
+        "speech": "Sin vueltas: a Rabanal se le acabó el crédito en la U. La derrota en Arequipa aceleró su salida y ahora ya suenan reemplazos para un equipo que no quiere perder más terreno. Golpe fuerte en tienda crema.",
         "narrator_profile_id": "gonzalo_nunez",
         "tone_notes": [
           "pasional",
           "frontal",
-          "deportivo"
+          "agil"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          11
+        ],
+        "cover_region": {
+          "x": 0.24,
+          "y": 0.84,
+          "width": 0.21,
+          "height": 0.12
+        },
         "key_facts": [
-          "despido de Rabanal",
+          "salida de Javier Rabanal",
           "derrota ante Melgar",
-          "crisis en Universitario"
+          "búsqueda de reemplazo"
         ],
         "key_facts_used": [
-          "despido de Rabanal",
+          "salida de Javier Rabanal",
           "derrota ante Melgar",
-          "crisis en Universitario"
+          "búsqueda de reemplazo"
         ],
-        "safety_notes": "Se omiten detalles internos no confirmados, se basa en la crisis reportada.",
-        "notes": "Se omiten detalles internos no confirmados, se basa en la crisis reportada."
-      },
-      {
-        "headline": "Pamela llama conchudo a Christian",
-        "story_type": "espectaculos",
-        "summary": "La disputa entre Pamela y Christian se vuelve cada vez más explosiva. Pamela no se guardó nada y le llamó 'conchudo' después de un tenso intercambio. En el mundo de los espectáculos, todo se amplifica, y este enfrentamiento promete seguir dando de qué hablar.",
-        "speech": "La disputa entre Pamela y Christian se vuelve cada vez más explosiva. Pamela no se guardó nada y le llamó 'conchudo' después de un tenso intercambio. En el mundo de los espectáculos, todo se amplifica, y este enfrentamiento promete seguir dando de qué hablar.",
-        "narrator_profile_id": "magaly_medina",
-        "tone_notes": [
-          "popular",
-          "intenso",
-          "viral"
-        ],
-        "page_numbers": [],
-        "cover_region": null,
-        "key_facts": [
-          "Pamela llama 'conchudo' a Christian",
-          "tensión entre ambos personajes",
-          "potencial escándalo en los medios"
-        ],
-        "key_facts_used": [
-          "Pamela llama 'conchudo' a Christian",
-          "tensión entre ambos personajes",
-          "potencial escándalo en los medios"
-        ],
-        "safety_notes": "Se evita caer en difamación, solo se recoge el conflicto reportado.",
-        "notes": "Se evita caer en difamación, solo se recoge el conflicto reportado."
+        "safety_notes": "Se resume la salida del técnico y el contexto deportivo visible, sin agregar versiones no confirmadas.",
+        "notes": "Se resume la salida del técnico y el contexto deportivo visible, sin agregar versiones no confirmadas."
       }
     ],
     "notes": "Speeches editoriales importados manualmente."
@@ -334,12 +295,12 @@
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "La crisis en la ONPE es un hecho: se pierden actas de 17 mesas en plena jornada electoral. Esto pone bajo presión a las autoridades, ya que la integridad del proceso depende de cada voto y cada documento. Se requieren respuestas urgentes.\n\nLa compra de aviones de guerra para Perú se encuentra en medio de una fuerte controversia. Mientras el gobierno defiende la adquisición, las presiones internas y externas siguen aumentando, especialmente con Estados Unidos exigiendo explicaciones sobre la transacción.\n\nSin rodeos: Javier Rabanal ha sido despedido de Universitario tras la dura derrota ante Melgar. El técnico deja el club en medio de una crisis, donde la paciencia se agotó. En el fútbol, los resultados mandan, y hoy la U necesita un cambio urgente.\n\nLa disputa entre Pamela y Christian se vuelve cada vez más explosiva. Pamela no se guardó nada y le llamó 'conchudo' después de un tenso intercambio. En el mundo de los espectáculos, todo se amplifica, y este enfrentamiento promete seguir dando de qué hablar.",
-    "approved_text": "La crisis en la ONPE es un hecho: se pierden actas de 17 mesas en plena jornada electoral. Esto pone bajo presión a las autoridades, ya que la integridad del proceso depende de cada voto y cada documento. Se requieren respuestas urgentes.\n\nLa compra de aviones de guerra para Perú se encuentra en medio de una fuerte controversia. Mientras el gobierno defiende la adquisición, las presiones internas y externas siguen aumentando, especialmente con Estados Unidos exigiendo explicaciones sobre la transacción.\n\nSin rodeos: Javier Rabanal ha sido despedido de Universitario tras la dura derrota ante Melgar. El técnico deja el club en medio de una crisis, donde la paciencia se agotó. En el fútbol, los resultados mandan, y hoy la U necesita un cambio urgente.\n\nLa disputa entre Pamela y Christian se vuelve cada vez más explosiva. Pamela no se guardó nada y le llamó 'conchudo' después de un tenso intercambio. En el mundo de los espectáculos, todo se amplifica, y este enfrentamiento promete seguir dando de qué hablar.",
+    "draft": "La presión ya es institucional. Corvetto debe acudir hoy a la Fiscalía y entregar su pasaporte, mientras crecen las dudas por actas perdidas y el manejo del proceso. En una elección, la confianza no admite sombras.\n\nOjo con esto: la compra de aviones de guerra ya encendió una bronca política. La página habla de presión de Estados Unidos y de un debate que sube de tono en el Congreso. No es un detalle menor.\n\nSin vueltas: a Rabanal se le acabó el crédito en la U. La derrota en Arequipa aceleró su salida y ahora ya suenan reemplazos para un equipo que no quiere perder más terreno. Golpe fuerte en tienda crema.",
+    "approved_text": "La presión ya es institucional. Corvetto debe acudir hoy a la Fiscalía y entregar su pasaporte, mientras crecen las dudas por actas perdidas y el manejo del proceso. En una elección, la confianza no admite sombras.\n\nOjo con esto: la compra de aviones de guerra ya encendió una bronca política. La página habla de presión de Estados Unidos y de un debate que sube de tono en el Congreso. No es un detalle menor.\n\nSin vueltas: a Rabanal se le acabó el crédito en la U. La derrota en Arequipa aceleró su salida y ahora ya suenan reemplazos para un equipo que no quiere perder más terreno. Golpe fuerte en tienda crema.",
     "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
     "inputs": {
       "story_narrative_source": "story_narrative.stories",
-      "story_count": 4
+      "story_count": 3
     }
   },
   "voice": {
@@ -374,7 +335,7 @@
   },
   "audit": {
     "created_at": "2026-04-21T16:34:58",
-    "updated_at": "2026-04-21T18:52:18",
+    "updated_at": "2026-04-22T03:28:35",
     "events": [
       {
         "stage": "discover",
@@ -507,16 +468,106 @@
         "status": "completed",
         "timestamp": "2026-04-21T18:52:18",
         "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:00:24",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:01:07",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:52:43",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:53:13",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:43:09",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:43:09",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:47:21",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:59:48",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:59:51",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:43",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:43",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:58",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:20",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:20",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:35",
+        "details": "Se importaron 3 speech(es) editoriales."
       }
     ]
   },
   "rundown_intro": {
-    "speech": "Hola. Hoy, martes 21 de abril, recorremos cinco portadas con una agenda marcada por crisis electoral, economía, policiales y deporte. En una fecha que también remite a una efeméride peruana, vamos diario por diario con lo más fuerte y las páginas clave para ampliar contexto.",
-    "date_reference": "21 de abril: nacimiento de Manuel Prado Ugarteche, dos veces presidente de la República. Adonde.com efemerides abril21 ([Adonde.com][1])",
+    "speech": "Martes 21 de abril. En una fecha que recuerda el nacimiento de Manuel Prado Ugarteche, repasamos un lote de portadas marcado por tensión electoral, seguridad, economía y deporte. Vamos diario por diario con lo central y sin rodeos.",
+    "date_reference": "Nacimiento de Manuel Prado Ugarteche en 1889; Adonde.com efemerides abril21",
     "source_scope": "peru",
-    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana sobria, sin competir con el foco editorial del recorrido.",
+    "why_it_fits": "Conecta la fecha del lote con una efemeride peruana verificable y acompaña el tono politico de varias portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-21T18:48:53"
+    "imported_at": "2026-04-22T03:28:20"
   }
 }

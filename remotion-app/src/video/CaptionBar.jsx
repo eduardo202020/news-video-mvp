@@ -2,8 +2,8 @@ import React from "react";
 import {SUBTITLE_SIDE, SUBTITLE_TOP} from "./constants";
 
 export const CaptionBar = ({captionWords, subtitleFontSize, subtitleLineHeight}) => {
-  const verticalPadding = 40;
-  const maxCaptionHeight = Math.ceil(subtitleFontSize * subtitleLineHeight * 2 + verticalPadding);
+  const verticalPadding = 42;
+  const minCaptionHeight = Math.ceil(subtitleFontSize * subtitleLineHeight * 2 + verticalPadding);
 
   return (
     <div
@@ -12,6 +12,7 @@ export const CaptionBar = ({captionWords, subtitleFontSize, subtitleLineHeight})
         left: SUBTITLE_SIDE,
         right: SUBTITLE_SIDE,
         top: SUBTITLE_TOP,
+        zIndex: 200,
         display: "flex",
         justifyContent: "center"
       }}
@@ -24,16 +25,17 @@ export const CaptionBar = ({captionWords, subtitleFontSize, subtitleLineHeight})
           color: "white",
           border: "1px solid rgba(255,255,255,0.06)",
           borderRadius: 30,
-          padding: "20px 34px",
+          padding: "15px 28px",
           fontSize: subtitleFontSize,
           fontWeight: 700,
           lineHeight: subtitleLineHeight,
           textAlign: "center",
-          maxHeight: maxCaptionHeight,
-          overflow: "hidden",
+          minHeight: minCaptionHeight,
+          overflow: "visible",
+          whiteSpace: "normal",
+          wordBreak: "break-word",
           boxShadow: "0 14px 30px rgba(0,0,0,0.16)",
-          backdropFilter: "blur(8px)",
-          letterSpacing: 0.15
+          letterSpacing: 0
         }}
       >
         {captionWords.map((word) => (

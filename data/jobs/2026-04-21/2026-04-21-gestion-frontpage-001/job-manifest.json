@@ -93,175 +93,141 @@
       3,
       5,
       10,
-      11,
-      12
+      11
     ],
     "candidates": [
       {
-        "headline": "Reservas del BCR superan US$100 mil millones",
+        "headline": "Reservas del Banco Central superan US$ 100,000 millones",
         "story_type": "economia",
         "cover_region": {
-          "x": 0.05,
-          "y": 0.26,
-          "width": 0.63,
-          "height": 0.33
+          "x": 0.06,
+          "y": 0.3,
+          "width": 0.64,
+          "height": 0.42
         },
         "page_number": 2,
-        "evidence_line": "P. 2-3 en la franja superior del titular principal",
+        "evidence_line": "Cinta superior 'P. 2-3' sobre el titular principal",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.99
       },
       {
-        "headline": "Reservas del BCR superan US$100 mil millones",
+        "headline": "Reservas del Banco Central superan US$ 100,000 millones",
         "story_type": "economia",
         "cover_region": {
-          "x": 0.05,
-          "y": 0.26,
-          "width": 0.63,
-          "height": 0.33
+          "x": 0.06,
+          "y": 0.3,
+          "width": 0.64,
+          "height": 0.42
         },
         "page_number": 3,
-        "evidence_line": "P. 2-3 en la franja superior del titular principal",
+        "evidence_line": "Cinta superior 'P. 2-3' sobre el titular principal",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.99
       },
       {
-        "headline": "Importadores prevén alza por Dia de la Madre",
+        "headline": "Importadores prevén alza por Día de la Madre",
         "story_type": "economia",
         "cover_region": {
-          "x": 0.7,
-          "y": 0.26,
-          "width": 0.25,
-          "height": 0.25
+          "x": 0.72,
+          "y": 0.32,
+          "width": 0.23,
+          "height": 0.26
         },
         "page_number": 5,
-        "evidence_line": "P. 5 en el bloque lateral derecho de importadores",
-        "line_index": null,
-        "method": "manual_import",
-        "confidence": 0.98
-      },
-      {
-        "headline": "Reformas sobre Petroperu y Senado",
-        "story_type": "economia",
-        "cover_region": {
-          "x": 0.05,
-          "y": 0.6,
-          "width": 0.4,
-          "height": 0.29
-        },
-        "page_number": 10,
-        "evidence_line": "P. 10-11 en el bloque inferior izquierdo sobre Petroperu",
-        "line_index": null,
-        "method": "manual_import",
-        "confidence": 0.97
-      },
-      {
-        "headline": "Reformas sobre Petroperu y Senado",
-        "story_type": "economia",
-        "cover_region": {
-          "x": 0.05,
-          "y": 0.6,
-          "width": 0.4,
-          "height": 0.29
-        },
-        "page_number": 11,
-        "evidence_line": "P. 10-11 en el bloque inferior izquierdo sobre Petroperu",
-        "line_index": null,
-        "method": "manual_import",
-        "confidence": 0.97
-      },
-      {
-        "headline": "Sunat evalua gravar importaciones menores de US$200",
-        "story_type": "economia",
-        "cover_region": {
-          "x": 0.53,
-          "y": 0.62,
-          "width": 0.25,
-          "height": 0.23
-        },
-        "page_number": 12,
-        "evidence_line": "P. 12 en el bloque medio inferior sobre Sunat",
+        "evidence_line": "Columna derecha con 'Importadores estiman incremento...' y referencia P. 5",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.96
+      },
+      {
+        "headline": "Reformas sobre Petroperú y el próximo Senado",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.07,
+          "y": 0.74,
+          "width": 0.31,
+          "height": 0.19
+        },
+        "page_number": 10,
+        "evidence_line": "Bloque inferior izquierdo con 'Reformas sobre Petroperú...' y referencia P. 10-11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Reformas sobre Petroperú y el próximo Senado",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.07,
+          "y": 0.74,
+          "width": 0.31,
+          "height": 0.19
+        },
+        "page_number": 11,
+        "evidence_line": "Bloque inferior izquierdo con 'Reformas sobre Petroperú...' y referencia P. 10-11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
       }
     ],
     "stories": [
       {
-        "headline": "Reservas del BCR superan US$100 mil millones",
+        "headline": "Reservas del Banco Central superan US$ 100,000 millones",
         "story_type": "economia",
         "cover_region": {
-          "x": 0.05,
-          "y": 0.26,
-          "width": 0.63,
-          "height": 0.33
+          "x": 0.06,
+          "y": 0.3,
+          "width": 0.64,
+          "height": 0.42
         },
         "page_numbers": [
           2,
           3
         ],
-        "evidence": "P. 2-3 en la franja superior del titular principal",
+        "evidence": "Cinta superior 'P. 2-3' sobre el titular principal",
         "evidence_lines": [
-          "P. 2-3 en la franja superior del titular principal"
+          "Cinta superior 'P. 2-3' sobre el titular principal"
         ],
         "confidence": 0.99
       },
       {
-        "headline": "Importadores prevén alza por Dia de la Madre",
+        "headline": "Importadores prevén alza por Día de la Madre",
         "story_type": "economia",
         "cover_region": {
-          "x": 0.7,
-          "y": 0.26,
-          "width": 0.25,
-          "height": 0.25
+          "x": 0.72,
+          "y": 0.32,
+          "width": 0.23,
+          "height": 0.26
         },
         "page_numbers": [
           5
         ],
-        "evidence": "P. 5 en el bloque lateral derecho de importadores",
+        "evidence": "Columna derecha con 'Importadores estiman incremento...' y referencia P. 5",
         "evidence_lines": [
-          "P. 5 en el bloque lateral derecho de importadores"
+          "Columna derecha con 'Importadores estiman incremento...' y referencia P. 5"
         ],
-        "confidence": 0.98
+        "confidence": 0.96
       },
       {
-        "headline": "Reformas sobre Petroperu y Senado",
+        "headline": "Reformas sobre Petroperú y el próximo Senado",
         "story_type": "economia",
         "cover_region": {
-          "x": 0.05,
-          "y": 0.6,
-          "width": 0.4,
-          "height": 0.29
+          "x": 0.07,
+          "y": 0.74,
+          "width": 0.31,
+          "height": 0.19
         },
         "page_numbers": [
           10,
           11
         ],
-        "evidence": "P. 10-11 en el bloque inferior izquierdo sobre Petroperu",
+        "evidence": "Bloque inferior izquierdo con 'Reformas sobre Petroperú...' y referencia P. 10-11",
         "evidence_lines": [
-          "P. 10-11 en el bloque inferior izquierdo sobre Petroperu"
+          "Bloque inferior izquierdo con 'Reformas sobre Petroperú...' y referencia P. 10-11"
         ],
-        "confidence": 0.97
-      },
-      {
-        "headline": "Sunat evalua gravar importaciones menores de US$200",
-        "story_type": "economia",
-        "cover_region": {
-          "x": 0.53,
-          "y": 0.62,
-          "width": 0.25,
-          "height": 0.23
-        },
-        "page_numbers": [
-          12
-        ],
-        "evidence": "P. 12 en el bloque medio inferior sobre Sunat",
-        "evidence_lines": [
-          "P. 12 en el bloque medio inferior sobre Sunat"
-        ],
-        "confidence": 0.96
+        "confidence": 0.95
       }
     ],
     "notes": "Paginas detectadas visualmente desde la portada."
@@ -274,106 +240,103 @@
       {
         "headline": "Reservas del BCR suben a US$ 100,000 millones para afrontar shocks",
         "story_type": "economia",
-        "summary": "El dato clave está en la estabilidad. Con las reservas del BCR superando los 100,000 millones de dólares, Perú se prepara para cualquier shock económico. Las reservas internacionales se han convertido en un pilar clave para la estabilidad del país.",
-        "speech": "El dato clave está en la estabilidad. Con las reservas del BCR superando los 100,000 millones de dólares, Perú se prepara para cualquier shock económico. Las reservas internacionales se han convertido en un pilar clave para la estabilidad del país.",
+        "summary": "El dato clave está en la estabilidad económica. Las reservas del BCR alcanzaron US$ 100,000 millones, lo que asegura un respaldo ante posibles crisis. Este aumento es clave para la proyección del país.",
+        "speech": "El dato clave está en la estabilidad económica. Las reservas del BCR alcanzaron US$ 100,000 millones, lo que asegura un respaldo ante posibles crisis. Este aumento es clave para la proyección del país.",
         "narrator_profile_id": "julio_velarde",
         "tone_notes": [
           "serio",
           "tecnico",
           "elegante"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.3,
+          "width": 0.64,
+          "height": 0.42
+        },
         "key_facts": [
-          "reservas del BCR superan los 100,000 millones de dólares",
-          "preparación para shocks económicos",
-          "importancia de las reservas internacionales"
+          "reservas BCR superan US$ 100,000 millones",
+          "respaldo ante crisis",
+          "proyección del país"
         ],
         "key_facts_used": [
-          "reservas del BCR superan los 100,000 millones de dólares",
-          "preparación para shocks económicos",
-          "importancia de las reservas internacionales"
+          "reservas BCR superan US$ 100,000 millones",
+          "respaldo ante crisis",
+          "proyección del país"
         ],
-        "safety_notes": "Se evita afirmar efectos inmediatos, se presenta el contexto y la proyección del impacto.",
-        "notes": "Se evita afirmar efectos inmediatos, se presenta el contexto y la proyección del impacto."
+        "safety_notes": "Se presenta el aumento de reservas sin hacer promesas financieras específicas.",
+        "notes": "Se presenta el aumento de reservas sin hacer promesas financieras específicas."
       },
       {
         "headline": "Importadores estiman aumento de hasta 15% por campaña del Día de la Madre",
         "story_type": "economia",
-        "summary": "La campaña del Día de la Madre está marcando una tendencia positiva para los importadores. Se espera un incremento en las compras de hasta un 15%, lo que refuerza las expectativas del sector en este periodo de consumo.",
-        "speech": "La campaña del Día de la Madre está marcando una tendencia positiva para los importadores. Se espera un incremento en las compras de hasta un 15%, lo que refuerza las expectativas del sector en este periodo de consumo.",
+        "summary": "El impacto será directo en el consumo. Se espera un alza de hasta 15% en las importaciones debido a la campaña del Día de la Madre. Esto refleja el comportamiento del mercado en fechas claves.",
+        "speech": "El impacto será directo en el consumo. Se espera un alza de hasta 15% en las importaciones debido a la campaña del Día de la Madre. Esto refleja el comportamiento del mercado en fechas claves.",
         "narrator_profile_id": "julio_velarde",
         "tone_notes": [
           "serio",
           "tecnico",
           "elegante"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          5
+        ],
+        "cover_region": {
+          "x": 0.72,
+          "y": 0.32,
+          "width": 0.23,
+          "height": 0.26
+        },
         "key_facts": [
-          "estimación de aumento en compras por el Día de la Madre",
-          "impacto del 15% en ventas",
-          "refuerzo del sector de importaciones"
+          "alza de 15% en importaciones",
+          "campaña del Día de la Madre",
+          "comportamiento del mercado"
         ],
         "key_facts_used": [
-          "estimación de aumento en compras por el Día de la Madre",
-          "impacto del 15% en ventas",
-          "refuerzo del sector de importaciones"
+          "alza de 15% en importaciones",
+          "campaña del Día de la Madre",
+          "comportamiento del mercado"
         ],
-        "safety_notes": "No se proyecta con certeza los resultados exactos, solo se presenta la estimación del sector.",
-        "notes": "No se proyecta con certeza los resultados exactos, solo se presenta la estimación del sector."
+        "safety_notes": "Se resalta el aumento estimado sin confirmar resultados definitivos.",
+        "notes": "Se resalta el aumento estimado sin confirmar resultados definitivos."
       },
       {
         "headline": "Reformas sobre Petroperú no estarían garantizadas en el próximo Senado",
         "story_type": "economia",
-        "summary": "El futuro de Petroperú en manos del Senado está en juego. Las reformas propuestas no están garantizadas y dependerán del nuevo Congreso. Esto tiene un impacto directo en la estabilidad de la empresa estatal y su futuro financiero.",
-        "speech": "El futuro de Petroperú en manos del Senado está en juego. Las reformas propuestas no están garantizadas y dependerán del nuevo Congreso. Esto tiene un impacto directo en la estabilidad de la empresa estatal y su futuro financiero.",
+        "summary": "Las reformas propuestas no tienen un panorama claro en el próximo Senado. El futuro de Petroperú dependerá de las decisiones políticas que se tomen en los próximos meses.",
+        "speech": "Las reformas propuestas no tienen un panorama claro en el próximo Senado. El futuro de Petroperú dependerá de las decisiones políticas que se tomen en los próximos meses.",
         "narrator_profile_id": "julio_velarde",
         "tone_notes": [
           "serio",
-          "elegante",
-          "prudente"
+          "tecnico",
+          "elegante"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          10,
+          11
+        ],
+        "cover_region": {
+          "x": 0.07,
+          "y": 0.74,
+          "width": 0.31,
+          "height": 0.19
+        },
         "key_facts": [
-          "reformas sobre Petroperú no garantizadas",
-          "dependencia del nuevo Senado",
-          "impacto en la estabilidad financiera"
+          "reformas no garantizadas",
+          "próximo Senado",
+          "futuro de Petroperú"
         ],
         "key_facts_used": [
-          "reformas sobre Petroperú no garantizadas",
-          "dependencia del nuevo Senado",
-          "impacto en la estabilidad financiera"
+          "reformas no garantizadas",
+          "próximo Senado",
+          "futuro de Petroperú"
         ],
-        "safety_notes": "Se mantiene la información en un tono analítico, evitando predicciones definitivas.",
-        "notes": "Se mantiene la información en un tono analítico, evitando predicciones definitivas."
-      },
-      {
-        "headline": "Sunat evalúa que importaciones de menos de US$ 200 paguen impuestos",
-        "story_type": "economia",
-        "summary": "La medida sobre la importación de productos de bajo valor está en evaluación. Si se aprueba, afectaría a un amplio número de importadores. La decisión de la SUNAT impactaría directamente en el comercio transfronterizo.",
-        "speech": "La medida sobre la importación de productos de bajo valor está en evaluación. Si se aprueba, afectaría a un amplio número de importadores. La decisión de la SUNAT impactaría directamente en el comercio transfronterizo.",
-        "narrator_profile_id": "julio_velarde",
-        "tone_notes": [
-          "serio",
-          "elegante",
-          "tecnico"
-        ],
-        "page_numbers": [],
-        "cover_region": null,
-        "key_facts": [
-          "evaluación de SUNAT sobre importaciones menores de US$ 200",
-          "posible impacto en el comercio transfronterizo",
-          "posibles cambios fiscales"
-        ],
-        "key_facts_used": [
-          "evaluación de SUNAT sobre importaciones menores de US$ 200",
-          "posible impacto en el comercio transfronterizo",
-          "posibles cambios fiscales"
-        ],
-        "safety_notes": "Se evitan predicciones definitivas, solo se informa sobre el proceso de evaluación.",
-        "notes": "Se evitan predicciones definitivas, solo se informa sobre el proceso de evaluación."
+        "safety_notes": "Se mantiene una visión prudente, sin especular sobre los resultados legislativos.",
+        "notes": "Se mantiene una visión prudente, sin especular sobre los resultados legislativos."
       }
     ],
     "notes": "Speeches editoriales importados manualmente."
@@ -382,12 +345,12 @@
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "El dato clave está en la estabilidad. Con las reservas del BCR superando los 100,000 millones de dólares, Perú se prepara para cualquier shock económico. Las reservas internacionales se han convertido en un pilar clave para la estabilidad del país.\n\nLa campaña del Día de la Madre está marcando una tendencia positiva para los importadores. Se espera un incremento en las compras de hasta un 15%, lo que refuerza las expectativas del sector en este periodo de consumo.\n\nEl futuro de Petroperú en manos del Senado está en juego. Las reformas propuestas no están garantizadas y dependerán del nuevo Congreso. Esto tiene un impacto directo en la estabilidad de la empresa estatal y su futuro financiero.\n\nLa medida sobre la importación de productos de bajo valor está en evaluación. Si se aprueba, afectaría a un amplio número de importadores. La decisión de la SUNAT impactaría directamente en el comercio transfronterizo.",
-    "approved_text": "El dato clave está en la estabilidad. Con las reservas del BCR superando los 100,000 millones de dólares, Perú se prepara para cualquier shock económico. Las reservas internacionales se han convertido en un pilar clave para la estabilidad del país.\n\nLa campaña del Día de la Madre está marcando una tendencia positiva para los importadores. Se espera un incremento en las compras de hasta un 15%, lo que refuerza las expectativas del sector en este periodo de consumo.\n\nEl futuro de Petroperú en manos del Senado está en juego. Las reformas propuestas no están garantizadas y dependerán del nuevo Congreso. Esto tiene un impacto directo en la estabilidad de la empresa estatal y su futuro financiero.\n\nLa medida sobre la importación de productos de bajo valor está en evaluación. Si se aprueba, afectaría a un amplio número de importadores. La decisión de la SUNAT impactaría directamente en el comercio transfronterizo.",
+    "draft": "El dato clave está en la estabilidad económica. Las reservas del BCR alcanzaron US$ 100,000 millones, lo que asegura un respaldo ante posibles crisis. Este aumento es clave para la proyección del país.\n\nEl impacto será directo en el consumo. Se espera un alza de hasta 15% en las importaciones debido a la campaña del Día de la Madre. Esto refleja el comportamiento del mercado en fechas claves.\n\nLas reformas propuestas no tienen un panorama claro en el próximo Senado. El futuro de Petroperú dependerá de las decisiones políticas que se tomen en los próximos meses.",
+    "approved_text": "El dato clave está en la estabilidad económica. Las reservas del BCR alcanzaron US$ 100,000 millones, lo que asegura un respaldo ante posibles crisis. Este aumento es clave para la proyección del país.\n\nEl impacto será directo en el consumo. Se espera un alza de hasta 15% en las importaciones debido a la campaña del Día de la Madre. Esto refleja el comportamiento del mercado en fechas claves.\n\nLas reformas propuestas no tienen un panorama claro en el próximo Senado. El futuro de Petroperú dependerá de las decisiones políticas que se tomen en los próximos meses.",
     "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
     "inputs": {
       "story_narrative_source": "story_narrative.stories",
-      "story_count": 4
+      "story_count": 3
     }
   },
   "voice": {
@@ -422,7 +385,7 @@
   },
   "audit": {
     "created_at": "2026-04-21T16:34:13",
-    "updated_at": "2026-04-21T18:52:38",
+    "updated_at": "2026-04-22T03:28:41",
     "events": [
       {
         "stage": "discover",
@@ -543,16 +506,100 @@
         "status": "completed",
         "timestamp": "2026-04-21T18:52:38",
         "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:00:24",
+        "details": "Se importaron 6 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:01:05",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:52:43",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:53:13",
+        "details": "Se importaron 6 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:43:09",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:43:09",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:59:58",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T01:00:01",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:43",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:43",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:41:07",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:20",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:20",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:41",
+        "details": "Se importaron 3 speech(es) editoriales."
       }
     ]
   },
   "rundown_intro": {
-    "speech": "Hola. Hoy, martes 21 de abril, recorremos cinco portadas con una agenda marcada por crisis electoral, economía, policiales y deporte. En una fecha que también remite a una efeméride peruana, vamos diario por diario con lo más fuerte y las páginas clave para ampliar contexto.",
-    "date_reference": "21 de abril: nacimiento de Manuel Prado Ugarteche, dos veces presidente de la República. Adonde.com efemerides abril21 ([Adonde.com][1])",
+    "speech": "Martes 21 de abril. En una fecha que recuerda el nacimiento de Manuel Prado Ugarteche, repasamos un lote de portadas marcado por tensión electoral, seguridad, economía y deporte. Vamos diario por diario con lo central y sin rodeos.",
+    "date_reference": "Nacimiento de Manuel Prado Ugarteche en 1889; Adonde.com efemerides abril21",
     "source_scope": "peru",
-    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana sobria, sin competir con el foco editorial del recorrido.",
+    "why_it_fits": "Conecta la fecha del lote con una efemeride peruana verificable y acompaña el tono politico de varias portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-21T18:48:53"
+    "imported_at": "2026-04-22T03:28:20"
   }
 }

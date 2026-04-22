@@ -1,0 +1,194 @@
+{
+  "story_id": "2026-04-21-daily-rundown-012552",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-21-daily-rundown-012552.mp4",
+  "audio_path": "data/rundowns/2026-04-21/012552/narration.wav",
+  "subtitle_segments_path": "data/rundowns/2026-04-21/012552/subtitle-segments.json",
+  "segments": [
+    {
+      "newspaper_name": "Resumen de Portadas",
+      "cover": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Introduccion",
+      "story_type": "intro",
+      "segment_type": "intro",
+      "narrator_profile_id": "presentador",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Martes 21 de abril. En una fecha que recuerda el nacimiento de Manuel Prado Ugarteche, repasamos un lote de portadas marcado por tensión electoral, seguridad, economía y deporte. Vamos diario por diario con lo central y sin rodeos.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-01.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Doce candidatos a la Presidencia no captaron el voto de sus afiliados",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "Mávila_Huertas",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La evidencia de los partidos 'cascarón' es clara: a pesar de tener afiliados, doce candidatos no lograron captar su voto. Un fenómeno que subraya la desconexión entre partidos y sus seguidores.",
+      "cover_region": {
+        "x": 0.11,
+        "y": 0.67,
+        "width": 0.83,
+        "height": 0.28
+      },
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-02.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Bellido presenta proyecto para favorecer a su partido",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "cuy-02",
+      "narrator_name": "Cuy-02",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Guido Bellido sigue en la mira: presenta un proyecto que podría beneficiar a su propio partido, creando un camino más fácil para su organización. La pregunta es clara: ¿esto es lo que necesita el país?",
+      "cover_region": {
+        "x": 0.65,
+        "y": 0.1,
+        "width": 0.28,
+        "height": 0.15
+      },
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-03.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Congreso cita a tres ministros por compra de F-16",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "Mávila_Huertas",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El Congreso no se queda atrás: cita a tres ministros para dar explicaciones sobre la compra de aviones F-16. Esta decisión mantiene la presión sobre el gobierno en temas clave de defensa nacional.",
+      "cover_region": {
+        "x": 0.35,
+        "y": 0.1,
+        "width": 0.29,
+        "height": 0.15
+      },
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-04.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-21/2026-04-21-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Rabanal tiene las horas contadas en Universitario",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "voice_profile_id": "cuy-depor",
+      "narrator_name": "Cuy-Depor",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "En Universitario, la paciencia se agotó. Javier Rabanal tiene las horas contadas tras otra derrota crucial. Los cambios no se hacen esperar cuando los resultados no llegan.",
+      "cover_region": {
+        "x": 0.35,
+        "y": 0.46,
+        "width": 0.56,
+        "height": 0.1
+      },
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-05.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Elcomercio",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "presentador",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Ahora pasamos al periodico Elcomercio. Revisamos lo mas importante de su portada.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-06.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Empiezan audiencias para recuento de votos",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "Mávila_Huertas",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Las audiencias para el recuento de votos ya están en marcha. Este proceso es crucial para asegurar la transparencia y la legitimidad de los resultados electorales.",
+      "cover_region": {
+        "x": 0.08,
+        "y": 0.63,
+        "width": 0.62,
+        "height": 0.28
+      },
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-07.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Contraloría cuestiona entrega de información de la ONPE",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "Mávila_Huertas",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La Contraloría ha señalado irregularidades en la entrega de información por parte de la ONPE. Es fundamental que se aclare este proceso para mantener la confianza pública.",
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.3,
+        "width": 0.84,
+        "height": 0.29
+      },
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-08.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-21/2026-04-21-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Keiko plantea elección complementaria",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "cuy-02",
+      "narrator_name": "Cuy-02",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Keiko Fujimori ha propuesto la convocatoria a elecciones complementarias. La pregunta incómoda está sobre la mesa: ¿Es esta la mejor solución para el actual panorama político?",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.61,
+        "width": 0.18,
+        "height": 0.16
+      },
+      "segment_audio_file": "data/rundowns/2026-04-21/012552/audio/segment-09.wav",
+      "audio_file": "data/rundowns/2026-04-21/012552/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-21/012552/subtitle-segments.json"
+    }
+  ]
+}

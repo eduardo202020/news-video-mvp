@@ -77,143 +77,109 @@
     "selected_page_numbers": [
       3,
       6,
-      13,
-      17
+      13
     ],
     "candidates": [
       {
-        "headline": "Cobro de cupos en Gamarra",
+        "headline": "Satanás cobraba cupos en Gamarra",
         "story_type": "policial",
         "cover_region": {
-          "x": 0.27,
-          "y": 0.18,
-          "width": 0.68,
-          "height": 0.7
+          "x": 0.2,
+          "y": 0.39,
+          "width": 0.73,
+          "height": 0.53
         },
         "page_number": 6,
-        "evidence_line": "Policial pag. 6 dentro del titular principal 'Satanas cobraba cupos en Gamarra'",
+        "evidence_line": "Sello rojo 'POLICIAL pag. 6' sobre el titular central",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.99
       },
       {
-        "headline": "Keiko contra Corvetto",
+        "headline": "Keiko presiona por salida de Corvetto",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.0,
-          "y": 0.35,
-          "width": 0.24,
-          "height": 0.36
+          "x": 0.03,
+          "y": 0.57,
+          "width": 0.23,
+          "height": 0.26
         },
         "page_number": 3,
-        "evidence_line": "Impacto pag. 3 en el bloque rojo lateral izquierdo",
-        "line_index": null,
-        "method": "manual_import",
-        "confidence": 0.98
-      },
-      {
-        "headline": "Rabanal fuera de la U",
-        "story_type": "deportes",
-        "cover_region": {
-          "x": 0.0,
-          "y": 0.73,
-          "width": 0.23,
-          "height": 0.15
-        },
-        "page_number": 13,
-        "evidence_line": "Crack pag. 13 en el recuadro deportivo inferior izquierdo",
-        "line_index": null,
-        "method": "manual_import",
-        "confidence": 0.96
-      },
-      {
-        "headline": "Magaly a juicio por Yahaira",
-        "story_type": "espectaculos",
-        "cover_region": {
-          "x": 0.31,
-          "y": 0.84,
-          "width": 0.67,
-          "height": 0.14
-        },
-        "page_number": 17,
-        "evidence_line": "Ojoshow pag. 17 en la banda amarilla inferior",
+        "evidence_line": "Bloque lateral 'KEIKO PONE LA CRUZ A CORVETTO' con 'IMPACTO pág. 3'",
         "line_index": null,
         "method": "manual_import",
         "confidence": 0.97
+      },
+      {
+        "headline": "Botó a Rabanal",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.67,
+          "width": 0.28,
+          "height": 0.27
+        },
+        "page_number": 13,
+        "evidence_line": "Bloque inferior izquierdo 'BOTÓ A RABANAL' con 'CRACK pág. 13'",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
       }
     ],
     "stories": [
       {
-        "headline": "Keiko contra Corvetto",
+        "headline": "Keiko presiona por salida de Corvetto",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.0,
-          "y": 0.35,
-          "width": 0.24,
-          "height": 0.36
+          "x": 0.03,
+          "y": 0.57,
+          "width": 0.23,
+          "height": 0.26
         },
         "page_numbers": [
           3
         ],
-        "evidence": "Impacto pag. 3 en el bloque rojo lateral izquierdo",
+        "evidence": "Bloque lateral 'KEIKO PONE LA CRUZ A CORVETTO' con 'IMPACTO pág. 3'",
         "evidence_lines": [
-          "Impacto pag. 3 en el bloque rojo lateral izquierdo"
+          "Bloque lateral 'KEIKO PONE LA CRUZ A CORVETTO' con 'IMPACTO pág. 3'"
         ],
-        "confidence": 0.98
+        "confidence": 0.97
       },
       {
-        "headline": "Cobro de cupos en Gamarra",
+        "headline": "Satanás cobraba cupos en Gamarra",
         "story_type": "policial",
         "cover_region": {
-          "x": 0.27,
-          "y": 0.18,
-          "width": 0.68,
-          "height": 0.7
+          "x": 0.2,
+          "y": 0.39,
+          "width": 0.73,
+          "height": 0.53
         },
         "page_numbers": [
           6
         ],
-        "evidence": "Policial pag. 6 dentro del titular principal 'Satanas cobraba cupos en Gamarra'",
+        "evidence": "Sello rojo 'POLICIAL pag. 6' sobre el titular central",
         "evidence_lines": [
-          "Policial pag. 6 dentro del titular principal 'Satanas cobraba cupos en Gamarra'"
+          "Sello rojo 'POLICIAL pag. 6' sobre el titular central"
         ],
         "confidence": 0.99
       },
       {
-        "headline": "Rabanal fuera de la U",
+        "headline": "Botó a Rabanal",
         "story_type": "deportes",
         "cover_region": {
-          "x": 0.0,
-          "y": 0.73,
-          "width": 0.23,
-          "height": 0.15
+          "x": 0.03,
+          "y": 0.67,
+          "width": 0.28,
+          "height": 0.27
         },
         "page_numbers": [
           13
         ],
-        "evidence": "Crack pag. 13 en el recuadro deportivo inferior izquierdo",
+        "evidence": "Bloque inferior izquierdo 'BOTÓ A RABANAL' con 'CRACK pág. 13'",
         "evidence_lines": [
-          "Crack pag. 13 en el recuadro deportivo inferior izquierdo"
+          "Bloque inferior izquierdo 'BOTÓ A RABANAL' con 'CRACK pág. 13'"
         ],
-        "confidence": 0.96
-      },
-      {
-        "headline": "Magaly a juicio por Yahaira",
-        "story_type": "espectaculos",
-        "cover_region": {
-          "x": 0.31,
-          "y": 0.84,
-          "width": 0.67,
-          "height": 0.14
-        },
-        "page_numbers": [
-          17
-        ],
-        "evidence": "Ojoshow pag. 17 en la banda amarilla inferior",
-        "evidence_lines": [
-          "Ojoshow pag. 17 en la banda amarilla inferior"
-        ],
-        "confidence": 0.97
+        "confidence": 0.95
       }
     ],
     "notes": "Paginas detectadas visualmente desde la portada."
@@ -224,115 +190,103 @@
     "source": "supporting_pages_manual",
     "stories": [
       {
-        "headline": "Keiko pide su salida y pueden detenerlo",
+        "headline": "Keiko presiona por salida de Corvetto",
         "story_type": "politica",
-        "summary": "Keiko Fujimori vuelve a la carga. En su segundo intento, pide la salida de las autoridades de la ONPE, mientras se especula sobre la posible detención del jefe de la entidad. En política, cada paso cuenta, y en este contexto, el reloj está corriendo.",
-        "speech": "Keiko Fujimori vuelve a la carga. En su segundo intento, pide la salida de las autoridades de la ONPE, mientras se especula sobre la posible detención del jefe de la entidad. En política, cada paso cuenta, y en este contexto, el reloj está corriendo.",
-        "narrator_profile_id": "Mávila_Huertas",
+        "summary": "La presión sobre Corvetto ya no es solo política, también tiene frente fiscal. Keiko pide su salida y la página muestra un caso que complica al jefe de la ONPE. La pregunta incómoda ya quedó instalada.",
+        "speech": "La presión sobre Corvetto ya no es solo política, también tiene frente fiscal. Keiko pide su salida y la página muestra un caso que complica al jefe de la ONPE. La pregunta incómoda ya quedó instalada.",
+        "narrator_profile_id": "beto_ortiz",
         "tone_notes": [
-          "serio",
-          "sobrio",
-          "institucional"
+          "critico",
+          "frontal",
+          "prudente"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.57,
+          "width": 0.23,
+          "height": 0.26
+        },
         "key_facts": [
-          "Keiko pide la salida de autoridades",
-          "se menciona posible detención del jefe de la ONPE",
-          "se destaca la segunda vuelta de Keiko"
+          "pedido de salida de Corvetto",
+          "frente fiscal abierto",
+          "cuestionamientos a la ONPE"
         ],
         "key_facts_used": [
-          "Keiko pide la salida de autoridades",
-          "se menciona posible detención del jefe de la ONPE",
-          "se destaca la segunda vuelta de Keiko"
+          "pedido de salida de Corvetto",
+          "frente fiscal abierto",
+          "cuestionamientos a la ONPE"
         ],
-        "safety_notes": "No se afirma que la detención sea inminente, solo se reporta la especulación.",
-        "notes": "No se afirma que la detención sea inminente, solo se reporta la especulación."
+        "safety_notes": "Se reportan presiones e investigación visibles en la página; no se afirma detención ni delito como hecho consumado.",
+        "notes": "Se reportan presiones e investigación visibles en la página; no se afirma detención ni delito como hecho consumado."
       },
       {
         "headline": "Satanás cobraba cupos en Gamarra",
         "story_type": "policial",
-        "summary": "Atención con este caso, porque la alarma suena fuerte. Un colombiano, conocido como 'Satanás', está siendo investigado por cobrar cupos en el corazón de Gamarra. La justicia empieza a poner la mirada sobre redes criminales que operan bajo amenazas.",
-        "speech": "Atención con este caso, porque la alarma suena fuerte. Un colombiano, conocido como 'Satanás', está siendo investigado por cobrar cupos en el corazón de Gamarra. La justicia empieza a poner la mirada sobre redes criminales que operan bajo amenazas.",
+        "summary": "Atención con esto, porque en Gamarra la cosa se puso muy seria. Un colombiano apodado 'Satanás' fue detenido y, según la página, estaría vinculado al cobro de cupos y a una red que sembraba miedo.",
+        "speech": "Atención con esto, porque en Gamarra la cosa se puso muy seria. Un colombiano apodado 'Satanás' fue detenido y, según la página, estaría vinculado al cobro de cupos y a una red que sembraba miedo.",
         "narrator_profile_id": "magaly_medina",
         "tone_notes": [
-          "popular",
           "intenso",
-          "viral"
+          "popular",
+          "prudente"
         ],
-        "page_numbers": [],
-        "cover_region": null,
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.2,
+          "y": 0.39,
+          "width": 0.73,
+          "height": 0.53
+        },
         "key_facts": [
-          "colombiano conocido como Satanás",
-          "cobro de cupos en Gamarra",
-          "red de extorsión bajo amenazas"
+          "detenido apodado 'Satanás'",
+          "presuntos cobros de cupos",
+          "vínculo con red delictiva"
         ],
         "key_facts_used": [
-          "colombiano conocido como Satanás",
-          "cobro de cupos en Gamarra",
-          "red de extorsión bajo amenazas"
+          "detenido apodado 'Satanás'",
+          "presuntos cobros de cupos",
+          "vínculo con red delictiva"
         ],
-        "safety_notes": "Se usa cautela al no afirmar la culpabilidad sin investigación.",
-        "notes": "Se usa cautela al no afirmar la culpabilidad sin investigación."
+        "safety_notes": "Se mantiene cautela al tratarse de una detención e investigación; no se presenta responsabilidad penal como sentencia.",
+        "notes": "Se mantiene cautela al tratarse de una detención e investigación; no se presenta responsabilidad penal como sentencia."
       },
       {
-        "headline": "Rabanal fuera de la U",
+        "headline": "Botó a Rabanal",
         "story_type": "deportes",
-        "summary": "Sin rodeos: Javier Rabanal ya no es más técnico de Universitario. La derrota ante Melgar terminó con la paciencia de la directiva. En el fútbol, la presión y los resultados no perdonan, y esta decisión marca un cambio necesario para el equipo.",
-        "speech": "Sin rodeos: Javier Rabanal ya no es más técnico de Universitario. La derrota ante Melgar terminó con la paciencia de la directiva. En el fútbol, la presión y los resultados no perdonan, y esta decisión marca un cambio necesario para el equipo.",
+        "summary": "Se acabó la paciencia en Universitario. La caída ante Melgar dejó a Javier Rabanal fuera del cargo y el club ya mira otros nombres para reaccionar. En la U no hubo margen para esperar más.",
+        "speech": "Se acabó la paciencia en Universitario. La caída ante Melgar dejó a Javier Rabanal fuera del cargo y el club ya mira otros nombres para reaccionar. En la U no hubo margen para esperar más.",
         "narrator_profile_id": "gonzalo_nunez",
         "tone_notes": [
           "pasional",
           "frontal",
-          "deportivo"
+          "agil"
         ],
         "page_numbers": [
           13
         ],
         "cover_region": {
-          "x": 0.0,
-          "y": 0.73,
-          "width": 0.23,
-          "height": 0.15
+          "x": 0.03,
+          "y": 0.67,
+          "width": 0.28,
+          "height": 0.27
         },
         "key_facts": [
-          "Rabanal fuera de Universitario",
-          "derrota ante Melgar como detonante",
-          "decisión de la directiva"
+          "salida de Javier Rabanal",
+          "derrota ante Melgar",
+          "posibles reemplazos"
         ],
         "key_facts_used": [
-          "Rabanal fuera de Universitario",
-          "derrota ante Melgar como detonante",
-          "decisión de la directiva"
+          "salida de Javier Rabanal",
+          "derrota ante Melgar",
+          "posibles reemplazos"
         ],
-        "safety_notes": "No se afirman motivos internos de la directiva más allá de los reportados.",
-        "notes": "No se afirman motivos internos de la directiva más allá de los reportados."
-      },
-      {
-        "headline": "Yahaira enjuició a Magaly",
-        "story_type": "espectaculos",
-        "summary": "El pleito entre Yahaira Plasencia y Magaly Medina se intensifica. La cantante pide un millón y medio de soles como reparación por difamación, mientras que la conductora se defiende asegurando que todo fue parte de su rol en el entretenimiento.",
-        "speech": "El pleito entre Yahaira Plasencia y Magaly Medina se intensifica. La cantante pide un millón y medio de soles como reparación por difamación, mientras que la conductora se defiende asegurando que todo fue parte de su rol en el entretenimiento.",
-        "narrator_profile_id": "magaly_medina",
-        "tone_notes": [
-          "popular",
-          "intenso",
-          "debatible"
-        ],
-        "page_numbers": [],
-        "cover_region": null,
-        "key_facts": [
-          "Yahaira demanda a Magaly",
-          "reclama 1.5 millones de soles",
-          "Magaly defiende su labor como periodista"
-        ],
-        "key_facts_used": [
-          "Yahaira demanda a Magaly",
-          "reclama 1.5 millones de soles",
-          "Magaly defiende su labor como periodista"
-        ],
-        "safety_notes": "No se declara culpabilidad de ninguna parte, solo se informa sobre la demanda.",
-        "notes": "No se declara culpabilidad de ninguna parte, solo se informa sobre la demanda."
+        "safety_notes": "Se usa lo central y legible de la página deportiva, sin añadir versiones no confirmadas sobre negociaciones.",
+        "notes": "Se usa lo central y legible de la página deportiva, sin añadir versiones no confirmadas sobre negociaciones."
       }
     ],
     "notes": "Speeches editoriales importados manualmente."
@@ -341,12 +295,12 @@
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "Keiko Fujimori vuelve a la carga. En su segundo intento, pide la salida de las autoridades de la ONPE, mientras se especula sobre la posible detención del jefe de la entidad. En política, cada paso cuenta, y en este contexto, el reloj está corriendo.\n\nAtención con este caso, porque la alarma suena fuerte. Un colombiano, conocido como 'Satanás', está siendo investigado por cobrar cupos en el corazón de Gamarra. La justicia empieza a poner la mirada sobre redes criminales que operan bajo amenazas.\n\nSin rodeos: Javier Rabanal ya no es más técnico de Universitario. La derrota ante Melgar terminó con la paciencia de la directiva. En el fútbol, la presión y los resultados no perdonan, y esta decisión marca un cambio necesario para el equipo.\n\nEl pleito entre Yahaira Plasencia y Magaly Medina se intensifica. La cantante pide un millón y medio de soles como reparación por difamación, mientras que la conductora se defiende asegurando que todo fue parte de su rol en el entretenimiento.",
-    "approved_text": "Keiko Fujimori vuelve a la carga. En su segundo intento, pide la salida de las autoridades de la ONPE, mientras se especula sobre la posible detención del jefe de la entidad. En política, cada paso cuenta, y en este contexto, el reloj está corriendo.\n\nAtención con este caso, porque la alarma suena fuerte. Un colombiano, conocido como 'Satanás', está siendo investigado por cobrar cupos en el corazón de Gamarra. La justicia empieza a poner la mirada sobre redes criminales que operan bajo amenazas.\n\nSin rodeos: Javier Rabanal ya no es más técnico de Universitario. La derrota ante Melgar terminó con la paciencia de la directiva. En el fútbol, la presión y los resultados no perdonan, y esta decisión marca un cambio necesario para el equipo.\n\nEl pleito entre Yahaira Plasencia y Magaly Medina se intensifica. La cantante pide un millón y medio de soles como reparación por difamación, mientras que la conductora se defiende asegurando que todo fue parte de su rol en el entretenimiento.",
+    "draft": "La presión sobre Corvetto ya no es solo política, también tiene frente fiscal. Keiko pide su salida y la página muestra un caso que complica al jefe de la ONPE. La pregunta incómoda ya quedó instalada.\n\nAtención con esto, porque en Gamarra la cosa se puso muy seria. Un colombiano apodado 'Satanás' fue detenido y, según la página, estaría vinculado al cobro de cupos y a una red que sembraba miedo.\n\nSe acabó la paciencia en Universitario. La caída ante Melgar dejó a Javier Rabanal fuera del cargo y el club ya mira otros nombres para reaccionar. En la U no hubo margen para esperar más.",
+    "approved_text": "La presión sobre Corvetto ya no es solo política, también tiene frente fiscal. Keiko pide su salida y la página muestra un caso que complica al jefe de la ONPE. La pregunta incómoda ya quedó instalada.\n\nAtención con esto, porque en Gamarra la cosa se puso muy seria. Un colombiano apodado 'Satanás' fue detenido y, según la página, estaría vinculado al cobro de cupos y a una red que sembraba miedo.\n\nSe acabó la paciencia en Universitario. La caída ante Melgar dejó a Javier Rabanal fuera del cargo y el club ya mira otros nombres para reaccionar. En la U no hubo margen para esperar más.",
     "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
     "inputs": {
       "story_narrative_source": "story_narrative.stories",
-      "story_count": 4
+      "story_count": 3
     }
   },
   "voice": {
@@ -381,7 +335,7 @@
   },
   "audit": {
     "created_at": "2026-04-21T16:34:33",
-    "updated_at": "2026-04-21T18:52:18",
+    "updated_at": "2026-04-22T03:28:35",
     "events": [
       {
         "stage": "discover",
@@ -508,16 +462,106 @@
         "status": "completed",
         "timestamp": "2026-04-21T18:52:18",
         "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:00:24",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:01:07",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:52:43",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-21T19:53:13",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:43:09",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:43:09",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:47:21",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:59:48",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T00:59:51",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:43",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:43",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T02:40:58",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:20",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:20",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T03:28:35",
+        "details": "Se importaron 3 speech(es) editoriales."
       }
     ]
   },
   "rundown_intro": {
-    "speech": "Hola. Hoy, martes 21 de abril, recorremos cinco portadas con una agenda marcada por crisis electoral, economía, policiales y deporte. En una fecha que también remite a una efeméride peruana, vamos diario por diario con lo más fuerte y las páginas clave para ampliar contexto.",
-    "date_reference": "21 de abril: nacimiento de Manuel Prado Ugarteche, dos veces presidente de la República. Adonde.com efemerides abril21 ([Adonde.com][1])",
+    "speech": "Martes 21 de abril. En una fecha que recuerda el nacimiento de Manuel Prado Ugarteche, repasamos un lote de portadas marcado por tensión electoral, seguridad, economía y deporte. Vamos diario por diario con lo central y sin rodeos.",
+    "date_reference": "Nacimiento de Manuel Prado Ugarteche en 1889; Adonde.com efemerides abril21",
     "source_scope": "peru",
-    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana sobria, sin competir con el foco editorial del recorrido.",
+    "why_it_fits": "Conecta la fecha del lote con una efemeride peruana verificable y acompaña el tono politico de varias portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-21T18:48:53"
+    "imported_at": "2026-04-22T03:28:20"
   }
 }
