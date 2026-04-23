@@ -5,6 +5,7 @@ import {DEFAULT_MUSIC_SRC, DEFAULT_MUSIC_VOLUME, VIDEO_SPEC} from "./defaults.js
 const normalizeSegment = (segment, fallbackStory) => ({
   newspaperName: segment.newspaperName ?? fallbackStory.newspaperName,
   coverSrc: segment.coverSrc ?? fallbackStory.coverSrc,
+  headline: segment.headline ?? "",
   text: segment.text ?? fallbackStory.text,
   narratorName: segment.narratorName ?? fallbackStory.narratorName,
   gestures: segment.gestures?.length ? segment.gestures : fallbackStory.gestures,

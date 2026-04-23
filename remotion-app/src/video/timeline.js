@@ -93,7 +93,7 @@ export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
     activeGestureSrc: activeGestures[gestureIndex],
     captionWords: buildWordHighlights(captionText, subtitleProgress),
     subtitleFontSize:
-      subtitleLength > 120 ? 52 : subtitleLength > 100 ? 56 : subtitleLength > 82 ? 60 : subtitleLength > 64 ? 66 : 74,
-    subtitleLineHeight: subtitleLength > 96 ? 1.06 : 1.08
+      subtitleLength > 120 ? 54 : subtitleLength > 100 ? 58 : subtitleLength > 82 ? 64 : subtitleLength > 64 ? 72 : 78,
+    subtitleLineHeight: subtitleLength > 96 ? 1.02 : 1.04
   };
 };

@@ -35,17 +35,54 @@ def split_sentences(text: str) -> list[str]:
     return [s for s in sentences if s]
 
 
-def build_subtitle_segments(text: str, total_duration: float, max_chars: int = 75) -> list[SubtitleSegment]:
+def _wrap_subtitle_chunk(text: str, width: int) -> list[str]:
+    return textwrap.wrap(
+        text,
+        width=max(8, width),
+        break_long_words=False,
+        break_on_hyphens=False,
+    )
+
+
+def _group_wrapped_lines(lines: list[str], max_lines: int) -> list[str]:
+    if max_lines <= 1:
+        return lines
+
+    grouped: list[str] = []
+    buffer: list[str] = []
+    for line in lines:
+        normalized = " ".join(str(line or "").split()).strip()
+        if not normalized:
+            continue
+        buffer.append(normalized)
+        if len(buffer) >= max_lines:
+            grouped.append("\n".join(buffer))
+            buffer = []
+
+    if buffer:
+        grouped.append("\n".join(buffer))
+    return grouped
+
+
+def build_subtitle_segments(
+    text: str,
+    total_duration: float,
+    max_chars: int = 75,
+    max_lines: int = 2,
+    min_seconds: float = 1.4,
+) -> list[SubtitleSegment]:
     sentences = split_sentences(text)
     if not sentences:
         return []
 
-    chunks: list[str] = []
+    wrapped_lines: list[str] = []
     for sentence in sentences:
         if len(sentence) <= max_chars:
-            chunks.append(sentence)
+            wrapped_lines.append(sentence)
         else:
-            chunks.extend(textwrap.wrap(sentence, width=max_chars))
+            wrapped_lines.extend(_wrap_subtitle_chunk(sentence, max_chars))
+
+    chunks = _group_wrapped_lines(wrapped_lines, max_lines=max_lines)
 
     total_chars = sum(max(len(chunk), 1) for chunk in chunks)
     segments: list[SubtitleSegment] = []
@@ -53,7 +90,7 @@ def build_subtitle_segments(text: str, total_duration: float, max_chars: int = 7
 
     for index, chunk in enumerate(chunks):
         weight = max(len(chunk), 1) / total_chars
-        duration = max(1.6, total_duration * weight)
+        duration = max(min_seconds, total_duration * weight)
         if index == len(chunks) - 1:
             end = total_duration
         else:
@@ -61,10 +98,15 @@ def build_subtitle_segments(text: str, total_duration: float, max_chars: int = 7
         segments.append(SubtitleSegment(text=chunk, start=cursor, end=end))
         cursor = end
 
-    return rebalance_segments(segments, total_duration)
+    return rebalance_segments(segments, total_duration, min_seconds=min_seconds)
 
 
-def rebalance_segments(segments: list[SubtitleSegment], total_duration: float) -> list[SubtitleSegment]:
+def rebalance_segments(
+    segments: list[SubtitleSegment],
+    total_duration: float,
+    *,
+    min_seconds: float = 1.4,
+) -> list[SubtitleSegment]:
     if not segments:
         return []
 
@@ -74,7 +116,7 @@ def rebalance_segments(segments: list[SubtitleSegment], total_duration: float) -
         remaining = len(segments) - index
         remaining_time = max(total_duration - cursor, 0.2 * remaining)
         min_slice = remaining_time / remaining
-        segment_duration = max(segment.end - segment.start, min(1.4, min_slice))
+        segment_duration = max(segment.end - segment.start, min(min_seconds, min_slice))
         end = min(total_duration, cursor + segment_duration)
         balanced.append(SubtitleSegment(text=segment.text, start=cursor, end=end))
         cursor = end

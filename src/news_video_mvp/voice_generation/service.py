@@ -204,6 +204,8 @@ def synthesize_with_voicebox(
     }
     if settings.get("model_size"):
         payload["model_size"] = settings["model_size"]
+    if settings.get("speed") is not None:
+        payload["speed"] = float(settings["speed"])
     if settings.get("seed") is not None:
         payload["seed"] = settings["seed"]
 
@@ -260,4 +262,5 @@ def generate_voice_track(
         output_path=output_path,
         audio_file=audio_file,
         voice=voice,
+        provider_settings=provider_settings,
     )

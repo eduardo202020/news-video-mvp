@@ -28,6 +28,7 @@ class VideoSegment:
     newspaper_name: str
     cover_path: Path
     text: str
+    headline: str | None = None
     narrator_name: str | None = None
     gesture_paths: list[Path] | None = None
     duration_seconds: float | None = None
@@ -151,7 +152,8 @@ def compose_video_props(
     ]
     segment_props = []
     for index, segment in enumerate(segments):
-        cover_asset = _copy_asset(segment.cover_path, story_assets_dir / "covers" / f"cover_{index:02d}")
+        resolved_cover_path = _resolve_test_trimmed_cover_path(segment.cover_path, project_root=project_root)
+        cover_asset = _copy_asset(resolved_cover_path, story_assets_dir / "covers" / f"cover_{index:02d}")
         segment_gesture_assets = []
         for gesture_index, gesture_path in enumerate(segment.gesture_paths or gesture_paths):
             copied = _copy_asset(
@@ -163,6 +165,7 @@ def compose_video_props(
             {
                 "newspaperName": segment.newspaper_name,
                 "coverSrc": _to_static_path(cover_asset, public_dir),
+                "headline": segment.headline or "",
                 "text": segment.text,
                 "narratorName": segment.narrator_name or spec.narrator_name,
                 "gestures": segment_gesture_assets,
@@ -193,6 +196,31 @@ def compose_video_props(
     }
     _write_generated_story_module(remotion_dir=remotion_dir, props=props)
     return props, remotion_dir
+
+
+def _resolve_test_trimmed_cover_path(source_path: Path, *, project_root: Path) -> Path:
+    source_path = source_path.resolve()
+    try:
+        relative = source_path.relative_to(project_root)
+    except ValueError:
+        return source_path
+
+    parts = relative.parts
+    if len(parts) < 6:
+        return source_path
+    if parts[:3] != ("data", "jobs", parts[2]):
+        return source_path
+    if parts[3].count("-") < 3:
+        return source_path
+    if parts[4] != "input":
+        return source_path
+
+    job_date = parts[2]
+    job_id = parts[3]
+    trimmed_candidate = project_root / "data" / "tests" / "trim-front-pages" / job_date / job_id / source_path.name
+    if trimmed_candidate.exists():
+        return trimmed_candidate
+    return source_path
 
 
 def _copy_asset(source: Path, target_without_suffix: Path) -> Path:

@@ -94,6 +94,7 @@ def synthesize_with_system_tts(
     text: str,
     output_path: Path,
     rate: int = 180,
+    windows_rate: int = 2,
     preferred_language: str = "es",
     preferred_voice: str | None = None,
 ) -> Path:
@@ -101,6 +102,7 @@ def synthesize_with_system_tts(
         return synthesize_with_windows_speech(
             text=text,
             output_path=output_path,
+            rate=windows_rate,
             preferred_language=preferred_language,
             preferred_voice=preferred_voice,
         )
@@ -137,6 +139,7 @@ def synthesize_with_system_tts(
 def synthesize_with_windows_speech(
     text: str,
     output_path: Path,
+    rate: int = 2,
     preferred_language: str = "es",
     preferred_voice: str | None = None,
 ) -> Path:
@@ -169,6 +172,9 @@ def synthesize_with_windows_speech(
         "} "
         "if (-not $voice) { throw 'NoSpanishVoice'; } "
         "$synth.SelectVoice($voice.VoiceInfo.Name); "
+        "$synth.Rate = "
+        + str(int(rate))
+        + "; "
         "$synth.SetOutputToWaveFile('"
         + escaped_output
         + "'); "
@@ -198,7 +204,7 @@ def synthesize_with_windows_speech(
     return output_path
 
 
-def synthesize_with_kokoro(text: str, output_path: Path, voice: str = "af_sarah") -> Path:
+def synthesize_with_kokoro(text: str, output_path: Path, voice: str = "af_sarah", speed: float = 1.0) -> Path:
     try:
         from kokoro_onnx import Kokoro
         import soundfile as sf
@@ -209,7 +215,7 @@ def synthesize_with_kokoro(text: str, output_path: Path, voice: str = "af_sarah"
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     kokoro = Kokoro()
-    samples, sample_rate = kokoro.create(text, voice=voice, speed=1.0, lang="es")
+    samples, sample_rate = kokoro.create(text, voice=voice, speed=float(speed), lang="es")
     sf.write(str(output_path), samples, sample_rate)
 
     if not output_path.exists():
@@ -223,6 +229,7 @@ def prepare_audio(
     output_path: Path,
     audio_file: Path | None = None,
     voice: str = "auto",
+    provider_settings: dict[str, Any] | None = None,
 ) -> Path:
     if audio_file is not None:
         if not audio_file.exists():
@@ -231,16 +238,24 @@ def prepare_audio(
         shutil.copy2(audio_file, output_path)
         return output_path
 
+    settings = provider_settings or {}
     if provider == "system":
         preferred_voice = None if voice == "auto" else voice
         return synthesize_with_system_tts(
             text=text,
             output_path=output_path,
+            rate=int(settings.get("system_rate", 235)),
+            windows_rate=int(settings.get("windows_rate", 2)),
             preferred_language="es",
             preferred_voice=preferred_voice,
         )
     if provider == "kokoro":
         kokoro_voice = "af_sarah" if voice == "auto" else voice
-        return synthesize_with_kokoro(text=text, output_path=output_path, voice=kokoro_voice)
+        return synthesize_with_kokoro(
+            text=text,
+            output_path=output_path,
+            voice=kokoro_voice,
+            speed=float(settings.get("speed", settings.get("kokoro_speed", 1.3))),
+        )
 
     raise TTSGenerationError(f"Proveedor TTS no soportado: {provider}")

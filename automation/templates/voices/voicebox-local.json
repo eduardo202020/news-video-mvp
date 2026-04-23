@@ -8,6 +8,7 @@
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",
-    "model_size": "1.7B"
+    "model_size": "1.7B",
+    "speed": 1.4
   }
 }

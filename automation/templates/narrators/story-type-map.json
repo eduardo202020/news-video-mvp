@@ -1,0 +1,71 @@
+{
+  "map_id": "default-story-type-narrators",
+  "description": "Asignacion editorial base entre categoria de noticia y narrador sugerido.",
+  "default_narrator_profile_id": "rene_gastelumendi",
+  "presenter_narrator_profile_id": "mavila_huertas",
+  "story_types": {
+    "actualidad": {
+      "narrator_profile_id": "rene_gastelumendi",
+      "role": "reportero_general",
+      "tone_notes": [
+        "claro",
+        "agil",
+        "sobrio"
+      ]
+    },
+    "politica": {
+      "narrator_profile_id": "mavila_huertas",
+      "role": "analista_politica",
+      "tone_notes": [
+        "serio",
+        "contextual",
+        "prudente"
+      ]
+    },
+    "policial": {
+      "narrator_profile_id": "beto_ortiz",
+      "role": "reportero_policial",
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "cuidadoso"
+      ]
+    },
+    "deportes": {
+      "narrator_profile_id": "gonzalo_nunez",
+      "role": "reportero_deportivo",
+      "tone_notes": [
+        "energetico",
+        "rapido",
+        "picante"
+      ]
+    },
+    "mundo": {
+      "narrator_profile_id": "mavila_huertas",
+      "role": "corresponsal_internacional",
+      "tone_notes": [
+        "sereno",
+        "explicativo",
+        "preciso"
+      ]
+    },
+    "economia": {
+      "narrator_profile_id": "julio_velarde",
+      "role": "analista_economia",
+      "tone_notes": [
+        "didactico",
+        "calmo",
+        "concreto"
+      ]
+    },
+    "espectaculos": {
+      "narrator_profile_id": "magaly_medina",
+      "role": "conductora_espectaculos",
+      "tone_notes": [
+        "afilado",
+        "coloquial",
+        "ligero"
+      ]
+    }
+  }
+}

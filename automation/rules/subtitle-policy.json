@@ -2,8 +2,8 @@
   "policy_id": "default-2-lines",
   "description": "Politica base de subtitulos legibles para video vertical.",
   "max_lines": 2,
-  "max_chars_per_block": 36,
-  "min_segment_seconds": 1.4,
+  "max_chars_per_block": 24,
+  "min_segment_seconds": 0.9,
   "highlight_mode": "progressive",
   "timing_strategy": "audio_aligned_preferred_text_weighted_fallback"
 }

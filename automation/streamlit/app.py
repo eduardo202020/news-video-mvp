@@ -24,8 +24,10 @@ if str(SRC_DIR) not in sys.path:
 
 from news_video_mvp import composer as composer_module  # noqa: E402
 from news_video_mvp import automation_pipeline as pipeline_module  # noqa: E402
+from news_video_mvp import subtitles as subtitles_module  # noqa: E402
 
 importlib.invalidate_caches()
+subtitles_module = importlib.reload(subtitles_module)
 composer_module = importlib.reload(composer_module)
 pipeline_module = importlib.reload(pipeline_module)
 analyze_cover_page_references_for_job = pipeline_module.analyze_cover_page_references_for_job
@@ -38,6 +40,7 @@ create_job_manifest = pipeline_module.create_job_manifest
 extract_and_classify_job = pipeline_module.extract_and_classify_job
 generate_script_from_job = pipeline_module.generate_script_from_job
 generate_voice_and_subtitles_for_job = pipeline_module.generate_voice_and_subtitles_for_job
+get_story_type_narrator_map_path = pipeline_module.get_story_type_narrator_map_path
 import_cover_page_selection_batch = pipeline_module.import_cover_page_selection_batch
 import_cover_page_selection_for_job = pipeline_module.import_cover_page_selection_for_job
 import_story_narrative_batch = pipeline_module.import_story_narrative_batch
@@ -147,6 +150,28 @@ def get_image_dimensions(path: Path) -> tuple[int, int] | None:
             return image.size
     except Exception:
         return None
+
+
+def load_story_type_narrator_map() -> dict:
+    mapping_path = get_story_type_narrator_map_path(PROJECT_DIR)
+    if not mapping_path.exists():
+        return {"story_types": {}, "default_narrator_profile_id": ""}
+    payload = read_json(mapping_path)
+    if not isinstance(payload.get("story_types"), dict):
+        payload["story_types"] = {}
+    return payload
+
+
+def get_default_narrator_for_story_type(story_type: str | None) -> str:
+    mapping = load_story_type_narrator_map()
+    story_types = mapping.get("story_types", {})
+    normalized_story_type = str(story_type or "actualidad").strip().lower() or "actualidad"
+    if isinstance(story_types, dict):
+        configured = story_types.get(normalized_story_type, {})
+        narrator = str(configured.get("narrator_profile_id") or "").strip()
+        if narrator:
+            return narrator
+    return str(mapping.get("default_narrator_profile_id") or "").strip()
 
 
 def discover_jobs() -> list[Path]:
@@ -905,6 +930,14 @@ def build_detailed_news_metadata(jobs: list[dict]) -> str:
 
 def build_detailed_news_prompt(jobs: list[dict]) -> str:
     metadata_text = build_detailed_news_metadata(jobs)
+    narrator_map = load_story_type_narrator_map()
+    story_type_lines = []
+    for story_type, config in narrator_map.get("story_types", {}).items():
+        narrator_id = str(config.get("narrator_profile_id") or "").strip()
+        role = str(config.get("role") or "").strip()
+        if narrator_id:
+            suffix = f" ({role})" if role else ""
+            story_type_lines.append(f"- `{story_type}` -> `{narrator_id}`{suffix}")
     newspaper_count = 0
     page_count = 0
     for job in jobs:
@@ -928,25 +961,36 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "- Ese proyecto tambien debe usar las instrucciones de `instrucciones.md`.",
         "- Usa esas fuentes para asignar `narrator_profile_id` segun `story_type` y ajustar tono, ritmo, cautela y estilo.",
         "- No vuelvas a explicar las fuentes; aplicalas directamente.",
+        "- Mapeo editorial actual `story_type -> narrator_profile_id`:",
+        *(story_type_lines or ["- Usa el narrador por defecto si no hay mapa disponible."]),
         "",
         "Objetivo:",
         "Para cada periodico, toma las noticias ya detectadas desde portada, usa las paginas internas solo como contexto, y devuelve un speech final por noticia.",
+        "La lista `stories_detected_from_cover` funciona como contrato de entrada del lote: debes cubrir esas historias y no reemplazarlas por otras.",
         "",
         "Reglas:",
         "- No inventes hechos, nombres, cifras o citas que no aparezcan en las imagenes.",
         "- Si una pagina no se lee bien, dilo brevemente en `safety_notes` y redacta solo con lo confiable.",
         "- Mantén separados los resultados por periodico.",
-        "- Si un periodico trae varias noticias relevantes, devuelve varias entradas en `stories`.",
+        "- Debes devolver una entrada en `stories` por cada historia listada en `stories_detected_from_cover` para ese periodico.",
+        "- No omitas historias detectadas desde portada aunque una de ellas tenga menos contexto que otra.",
+        "- No agregues historias nuevas que no esten en `stories_detected_from_cover`, salvo correccion evidente porque una referencia de portada en realidad era la misma historia ya listada.",
+        "- Si un periodico trae cuatro historias detectadas desde portada, la salida de ese periodico tambien debe traer cuatro historias.",
         "- Escribe en espanol peruano neutro, claro y natural.",
         "- Cada `speech` debe tener 140 a 260 caracteres, idealmente 1 o 2 frases, con inicio fuerte y cierre claro.",
         "- El `speech` debe ajustarse a la categoria de noticia y al narrador asignado.",
         "- Prioriza brevedad y pegada: el video final debe sentirse agil, no recargado.",
         "- Evita contexto accesorio, repeticiones y cierres redundantes.",
         "- `key_facts_used` debe tener entre 1 y 3 puntos cortos, no parrafos.",
+        "- Usa `headline_hint` como base del `headline` final. Puedes limpiarlo o resumirlo levemente, pero no lo reemplaces por otra noticia distinta.",
         "- Respeta `story_type`, `headline` y `cover_region` ya detectados desde la portada; solo corrige si las paginas internas muestran claramente que estaban mal.",
         "- Usa los titulares detectados, hints de portada y OCR previo como contexto fuerte, y las paginas adjuntas como verificacion y ampliacion.",
         "- Si el contexto previo y las paginas adjuntas se contradicen, prioriza lo que se vea claramente en las paginas.",
         "- No conviertas una misma noticia en varias historias distintas solo porque ocupe varias paginas.",
+        "- Si una historia de portada usa varias paginas, devuelve una sola entrada para esa historia, integrando el contexto de todas sus paginas.",
+        "- Si una historia tiene poco contexto legible, igual devuelvela; resume solo lo verificable y explica la limitacion en `safety_notes`.",
+        "- Antes de cerrar, verifica que cada `headline_hint` del contexto previo tenga una historia correspondiente en la salida.",
+        "- Si aparece un tema fuerte en las paginas internas pero no estaba detectado desde portada, no lo promociones por encima de las historias ya listadas.",
         "- Devuelve solo JSON valido compatible con la salida esperada en `instrucciones.md`.",
         "",
         "Contexto previo disponible del lote:",
@@ -963,13 +1007,22 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         '      "job_id": "2026-04-20-ojo-frontpage-001",',
         '      "stories": [',
         "        {",
-        '          "headline": "Titular principal detectado desde portada",',
+        '          "headline": "Corvetto fuera de la ONPE por caos electoral",',
         '          "story_type": "politica",',
-        '          "narrator_profile_id": "Beto_Ortiz",',
-        '          "speech": "La pregunta incomoda ya esta sobre la mesa. Si el proceso electoral queda bajo sospecha, las explicaciones no pueden esperar. Esto exige respuestas claras, no silencios calculados.",',
-        '          "tone_notes": ["critico", "frontal", "prudente"],',
-        '          "key_facts_used": ["pedido de explicaciones", "presion politica"],',
+        '          "narrator_profile_id": "mavila_huertas",',
+        '          "speech": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.",',
+        '          "tone_notes": ["serio", "contextual", "prudente"],',
+        '          "key_facts_used": ["salida de Corvetto", "caos electoral", "presion sobre la ONPE"],',
         '          "safety_notes": "Se evita afirmar delitos no probados."',
+        "        },",
+        "        {",
+        '          "headline": "Mapa de puntos de robo en Lima",',
+        '          "story_type": "policial",',
+        '          "narrator_profile_id": "beto_ortiz",',
+        '          "speech": "La inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.",',
+        '          "tone_notes": ["directo", "tenso", "cuidadoso"],',
+        '          "key_facts_used": ["mapa de robos", "zonas de mayor riesgo", "alerta ciudadana"],',
+        '          "safety_notes": "Se resume solo lo que se aprecia con claridad en la pagina."',
         "        }",
         "      ]",
         "    }",
@@ -994,7 +1047,9 @@ def build_detailed_news_seed_payload(jobs: list[dict]) -> str:
                 {
                     "headline": str(story.get("headline") or ""),
                     "story_type": str(story.get("story_type") or "actualidad"),
-                    "narrator_profile_id": "",
+                    "narrator_profile_id": get_default_narrator_for_story_type(
+                        str(story.get("story_type") or "actualidad")
+                    ),
                     "speech": "",
                     "tone_notes": [],
                     "key_facts_used": [],
@@ -2108,7 +2163,9 @@ with detail_tab:
                         {
                             "headline": story.get("headline") or "",
                             "story_type": story.get("story_type") or "actualidad",
-                            "narrator_profile_id": "",
+                            "narrator_profile_id": get_default_narrator_for_story_type(
+                                str(story.get("story_type") or "actualidad")
+                            ),
                             "speech": "",
                             "tone_notes": [],
                             "key_facts_used": [],

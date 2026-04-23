@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
+import inspect
 import json
 from pathlib import Path
 import re
@@ -40,10 +41,15 @@ NARRATOR_PROFILE_TO_VOICE_PROFILE = {
     "eddie_fleischman": "cuy-depor",
     "julio_velarde": "cuy-01",
 }
+DEFAULT_STORY_TYPE_NARRATOR_MAP_PATH = Path("automation/templates/narrators/story-type-map.json")
 
 
 def get_automation_dir(project_dir: Path | None = None) -> Path:
     return (project_dir or get_project_dir()) / "automation"
+
+
+def get_story_type_narrator_map_path(project_dir: Path | None = None) -> Path:
+    return (project_dir or get_project_dir()) / DEFAULT_STORY_TYPE_NARRATOR_MAP_PATH
 
 
 def _slug_identifier(value: object) -> str:
@@ -66,6 +72,54 @@ def _slug_identifier(value: object) -> str:
     slug = str(value or "").translate(replacements).strip().lower()
     slug = re.sub(r"[^a-z0-9]+", "_", slug).strip("_")
     return slug
+
+
+def _load_story_type_narrator_map(*, project_dir: Path) -> dict[str, object]:
+    mapping_path = get_story_type_narrator_map_path(project_dir)
+    if not mapping_path.exists():
+        return {
+            "map_id": "missing-story-type-map",
+            "default_narrator_profile_id": "rene_gastelumendi",
+            "presenter_narrator_profile_id": "mavila_huertas",
+            "story_types": {},
+        }
+    payload = read_json(mapping_path)
+    if not isinstance(payload.get("story_types"), dict):
+        payload["story_types"] = {}
+    return payload
+
+
+def _resolve_story_narrator_config(
+    *,
+    story_type: object,
+    narrator_profile_id: object = None,
+    project_dir: Path,
+) -> dict[str, object]:
+    mapping = _load_story_type_narrator_map(project_dir=project_dir)
+    normalized_story_type = _normalize_story_type(story_type)
+    story_types = mapping.get("story_types", {})
+    configured = story_types.get(normalized_story_type, {}) if isinstance(story_types, dict) else {}
+    configured_narrator = str(configured.get("narrator_profile_id") or "").strip()
+    resolved_narrator = (
+        _slug_identifier(narrator_profile_id)
+        if str(narrator_profile_id or "").strip()
+        else _slug_identifier(
+            configured_narrator or mapping.get("default_narrator_profile_id") or "rene_gastelumendi"
+        )
+    )
+    tone_notes = _normalize_key_facts(configured.get("tone_notes"))
+    return {
+        "map_id": str(mapping.get("map_id") or "default-story-type-narrators"),
+        "story_type": normalized_story_type,
+        "narrator_profile_id": resolved_narrator or "rene_gastelumendi",
+        "role": str(configured.get("role") or "reportero_general"),
+        "tone_notes": tone_notes,
+    }
+
+
+def _get_presenter_narrator_profile_id(*, project_dir: Path) -> str:
+    mapping = _load_story_type_narrator_map(project_dir=project_dir)
+    return _slug_identifier(mapping.get("presenter_narrator_profile_id") or "mavila_huertas")
 
 
 def _resolve_voice_profile_for_narrator(
@@ -160,6 +214,7 @@ def _default_story_narrative() -> dict[str, object]:
         "status": "not_started",
         "source": "supporting_pages_manual",
         "stories": [],
+        "manifest_path": None,
         "notes": "",
     }
 
@@ -1419,6 +1474,7 @@ def _merge_story_narrative_with_cover_context(
     *,
     cover_stories: list[dict[str, object]],
     imported_stories: list[dict[str, object]],
+    project_dir: Path,
 ) -> list[dict[str, object]]:
     cover_story_map = {
         _clean_cover_headline(str(story.get("headline") or "")).casefold(): story
@@ -1441,18 +1497,26 @@ def _merge_story_narrative_with_cover_context(
         page_numbers = item.get("page_numbers") or cover_story.get("page_numbers") or []
         cover_region = item.get("cover_region") or cover_story.get("cover_region")
         story_type = item.get("story_type") or cover_story.get("story_type") or "actualidad"
+        narrator_config = _resolve_story_narrator_config(
+            story_type=story_type,
+            narrator_profile_id=item.get("narrator_profile_id"),
+            project_dir=project_dir,
+        )
+        imported_tone_notes = _normalize_key_facts(item.get("tone_notes"))
         merged.append(
             {
                 "headline": headline,
-                "story_type": _normalize_story_type(story_type),
+                "story_type": narrator_config["story_type"],
                 "summary": str(item.get("summary") or "").strip(),
                 "speech": str(item.get("speech") or item.get("summary") or "").strip(),
-                "narrator_profile_id": str(item.get("narrator_profile_id") or "").strip(),
-                "tone_notes": _normalize_key_facts(item.get("tone_notes")),
+                "narrator_profile_id": narrator_config["narrator_profile_id"],
+                "narrator_role": narrator_config["role"],
+                "tone_notes": imported_tone_notes or narrator_config["tone_notes"],
                 "page_numbers": _normalize_story_page_numbers(page_numbers),
                 "cover_region": _normalize_cover_region(cover_region),
                 "key_facts": _normalize_key_facts(item.get("key_facts")),
                 "key_facts_used": _normalize_key_facts(item.get("key_facts")),
+                "narrator_map_id": narrator_config["map_id"],
                 "safety_notes": " ".join(str(item.get("safety_notes") or item.get("notes") or "").split()).strip(),
                 "notes": " ".join(str(item.get("notes") or "").split()).strip(),
             }
@@ -1470,6 +1534,7 @@ def _build_script_from_story_speeches(stories: list[dict[str, object]]) -> str:
 
 
 def _enrich_job_story_narrative_with_cover_context(job: dict[str, object]) -> list[dict[str, object]]:
+    project_dir = get_project_dir()
     story_items = [
         story
         for story in job.get("story_narrative", {}).get("stories", [])
@@ -1489,6 +1554,12 @@ def _enrich_job_story_narrative_with_cover_context(job: dict[str, object]) -> li
                 cover_stories=cover_stories,
                 used_indexes=used_cover_indexes,
             )
+        narrator_config = _resolve_story_narrator_config(
+            story_type=story.get("story_type") or cover_story.get("story_type") or "actualidad",
+            narrator_profile_id=story.get("narrator_profile_id"),
+            project_dir=project_dir,
+        )
+        tone_notes = _normalize_key_facts(story.get("tone_notes")) or narrator_config["tone_notes"]
         enriched.append(
             {
                 **story,
@@ -1496,9 +1567,11 @@ def _enrich_job_story_narrative_with_cover_context(job: dict[str, object]) -> li
                 "page_numbers": _normalize_story_page_numbers(
                     story.get("page_numbers") or cover_story.get("page_numbers")
                 ),
-                "story_type": _normalize_story_type(
-                    story.get("story_type") or cover_story.get("story_type") or "actualidad"
-                ),
+                "story_type": narrator_config["story_type"],
+                "narrator_profile_id": narrator_config["narrator_profile_id"],
+                "narrator_role": narrator_config["role"],
+                "tone_notes": tone_notes,
+                "narrator_map_id": narrator_config["map_id"],
             }
         )
     return enriched
@@ -1536,8 +1609,13 @@ def _build_rundown_intro(*, job_date: str, source_names: list[str], story_count:
     )
 
 
-def _build_newspaper_connector_text(source_name: str) -> str:
-    return f"Ahora pasamos al periodico {source_name}. Revisamos lo mas importante de su portada."
+def _build_newspaper_connector_text(source_name: str, *, story_count: int | None = None) -> str:
+    if story_count and story_count > 1:
+        return (
+            f"Ahora entramos a {source_name}. Primero miramos la portada completa y despues vamos con "
+            f"sus {story_count} historias mas fuertes."
+        )
+    return f"Ahora entramos a {source_name}. Miramos la portada completa y vamos con su noticia clave."
 
 
 def _select_imported_rundown_intro(jobs: list[dict[str, object]]) -> str:
@@ -1549,6 +1627,112 @@ def _select_imported_rundown_intro(jobs: list[dict[str, object]]) -> str:
         if speech:
             return speech
     return ""
+
+
+def _build_story_narrative_manifest_payload(
+    *,
+    job: dict[str, object],
+    voice_profile_path: Path | None = None,
+    include_audio_segments: bool = True,
+) -> dict[str, object]:
+    project_dir = get_project_dir()
+    source_name = _format_source_name(str(job.get("source_id") or ""))
+    front_page_image = job.get("input_assets", {}).get("front_page_image")
+    enriched_stories = _enrich_job_story_narrative_with_cover_context(job)
+    voice_segments = list(job.get("voice", {}).get("segments", [])) if include_audio_segments else []
+    fallback_voice_path = voice_profile_path
+    if fallback_voice_path is None:
+        fallback_id = str(job.get("voice", {}).get("profile_id") or "").strip()
+        fallback_candidate = project_dir / "automation" / "templates" / "voices" / f"{fallback_id}.json"
+        if fallback_candidate.exists():
+            fallback_voice_path = fallback_candidate
+
+    stories_payload: list[dict[str, object]] = []
+    for index, story in enumerate(enriched_stories, start=1):
+        story_voice_segment = voice_segments[index - 1] if index - 1 < len(voice_segments) else {}
+        narrator_config = _resolve_story_narrator_config(
+            story_type=story.get("story_type") or "actualidad",
+            narrator_profile_id=story.get("narrator_profile_id"),
+            project_dir=project_dir,
+        )
+        segment_voice = None
+        if fallback_voice_path is not None:
+            segment_voice = _resolve_voice_profile_for_narrator(
+                narrator_profile_id=narrator_config["narrator_profile_id"],
+                fallback_voice_profile_path=fallback_voice_path,
+                project_dir=project_dir,
+            )
+        stories_payload.append(
+            {
+                "story_index": index,
+                "segment_type": "story",
+                "headline": story.get("headline") or "",
+                "story_type": narrator_config["story_type"],
+                "summary": str(story.get("summary") or "").strip(),
+                "speech": str(story.get("speech") or story.get("summary") or "").strip(),
+                "page_numbers": _normalize_story_page_numbers(story.get("page_numbers")),
+                "cover_region": _normalize_cover_region(story.get("cover_region")),
+                "key_facts": _normalize_key_facts(story.get("key_facts") or story.get("key_facts_used")),
+                "tone_notes": _normalize_key_facts(story.get("tone_notes")) or narrator_config["tone_notes"],
+                "safety_notes": " ".join(str(story.get("safety_notes") or "").split()).strip(),
+                "notes": " ".join(str(story.get("notes") or "").split()).strip(),
+                "narrator_profile_id": narrator_config["narrator_profile_id"],
+                "narrator_role": narrator_config["role"],
+                "narrator_map_id": narrator_config["map_id"],
+                "voice_profile_id": (
+                    str(story_voice_segment.get("voice_profile_id") or "")
+                    or (segment_voice.profile_id if segment_voice is not None else "")
+                ),
+                "narrator_name": (
+                    str(story_voice_segment.get("narrator_name") or "")
+                    or (segment_voice.narrator_name if segment_voice is not None else "")
+                ),
+                "segment_audio_file": str(story_voice_segment.get("audio_path") or "").strip() or None,
+            }
+        )
+
+    return {
+        "manifest_type": "story_narrative_manifest",
+        "manifest_version": 1,
+        "job_id": job.get("job_id"),
+        "source_id": job.get("source_id"),
+        "source_name": source_name,
+        "date": job.get("date"),
+        "front_page_image": front_page_image,
+        "story_type_map_path": (
+            get_story_type_narrator_map_path(project_dir).resolve().relative_to(project_dir).as_posix()
+        ),
+        "story_type_map_id": _load_story_type_narrator_map(project_dir=project_dir).get("map_id"),
+        "stories": stories_payload,
+    }
+
+
+def _sync_story_narrative_manifest(
+    *,
+    job: dict[str, object],
+    job_manifest_path: Path,
+    voice_profile_path: Path | None = None,
+) -> str | None:
+    stories = [
+        story
+        for story in job.get("story_narrative", {}).get("stories", [])
+        if str(story.get("speech") or story.get("summary") or "").strip()
+    ]
+    if not stories:
+        job.setdefault("story_narrative", {})["manifest_path"] = None
+        return None
+
+    project_dir = get_project_dir()
+    manifest_path = job_manifest_path.parent / "review" / "story-narrative-manifest.json"
+    payload = _build_story_narrative_manifest_payload(
+        job=job,
+        voice_profile_path=voice_profile_path,
+        include_audio_segments=True,
+    )
+    write_json(manifest_path, payload)
+    relative_path = manifest_path.resolve().relative_to(project_dir).as_posix()
+    job.setdefault("story_narrative", {})["manifest_path"] = relative_path
+    return relative_path
 
 
 def _sort_jobs_for_rundown(jobs: list[dict[str, object]]) -> list[dict[str, object]]:
@@ -1745,6 +1929,7 @@ def analyze_cover_page_references_for_job(
     max_candidates: int = 6,
     force: bool = False,
 ) -> Path:
+    project_dir = get_project_dir()
     job = read_json(job_manifest_path)
     extraction = job.get("extraction", {})
     current_candidates = list(job.get("page_selection", {}).get("candidates", []))
@@ -1913,6 +2098,7 @@ def import_story_narrative_for_job(
     provider: str = "chatgpt_plus_manual",
     force: bool = False,
 ) -> Path:
+    project_dir = get_project_dir()
     job = read_json(job_manifest_path)
     current_stories = list(job.get("story_narrative", {}).get("stories", []))
     if current_stories and not force:
@@ -1934,6 +2120,7 @@ def import_story_narrative_for_job(
     merged_stories = _merge_story_narrative_with_cover_context(
         cover_stories=cover_stories,
         imported_stories=imported_stories,
+        project_dir=project_dir,
     )
     speech_script = _build_script_from_story_speeches(merged_stories)
     timestamp = datetime.now().isoformat(timespec="seconds")
@@ -1957,6 +2144,7 @@ def import_story_narrative_for_job(
             },
         }
         job["status"] = "scripted"
+    _sync_story_narrative_manifest(job=job, job_manifest_path=job_manifest_path)
     job["audit"]["updated_at"] = timestamp
     job["audit"].setdefault("events", []).append(
         {
@@ -2353,6 +2541,63 @@ def _select_subtitle_source_text(*, job: dict, subtitle_policy: dict) -> tuple[s
     return "", "missing"
 
 
+def _safe_build_subtitle_segments(
+    text: str,
+    *,
+    total_duration: float,
+    max_chars: int,
+    max_lines: int,
+    min_seconds: float,
+):
+    params = inspect.signature(build_subtitle_segments).parameters
+    kwargs = {
+        "total_duration": total_duration,
+        "max_chars": max_chars,
+        "min_seconds": min_seconds,
+    }
+    if "max_lines" in params:
+        kwargs["max_lines"] = max_lines
+    return build_subtitle_segments(text, **kwargs)
+
+
+def _build_rundown_subtitle_segments(
+    *,
+    segment_specs: list[dict[str, object]],
+    subtitle_policy: dict,
+    project_dir: Path,
+) -> tuple[str, list[dict[str, object]], float]:
+    full_text = "\n\n".join(str(segment.get("text") or "").strip() for segment in segment_specs if str(segment.get("text") or "").strip())
+    subtitle_segments: list[dict[str, object]] = []
+    cursor = 0.0
+
+    for segment in segment_specs:
+        segment_text = str(segment.get("text") or "").strip()
+        segment_audio_file = str(segment.get("segment_audio_file") or "").strip()
+        if not segment_text or not segment_audio_file:
+            continue
+
+        segment_audio_path = project_dir / segment_audio_file
+        segment_duration = _get_wav_duration_seconds(segment_audio_path)
+        segment_subtitles = _safe_build_subtitle_segments(
+            segment_text,
+            total_duration=segment_duration,
+            max_chars=int(subtitle_policy.get("max_chars_per_block", 72)),
+            max_lines=int(subtitle_policy.get("max_lines", 2)),
+            min_seconds=float(subtitle_policy.get("min_segment_seconds", 1.4)),
+        )
+        for subtitle in segment_subtitles:
+            subtitle_segments.append(
+                {
+                    "text": subtitle.text,
+                    "start": round(cursor + subtitle.start, 3),
+                    "end": round(cursor + subtitle.end, 3),
+                }
+            )
+        cursor += segment_duration
+
+    return full_text, subtitle_segments, round(cursor, 3)
+
+
 def generate_voice_and_subtitles_for_job(
     *,
     job_manifest_path: Path,
@@ -2414,6 +2659,7 @@ def generate_voice_and_subtitles_for_job(
                 {
                     "index": index,
                     "headline": story.get("headline") or "",
+                    "story_type": story.get("story_type") or "actualidad",
                     "narrator_profile_id": story.get("narrator_profile_id") or "",
                     "voice_profile_id": segment_voice.profile_id,
                     "narrator_name": segment_voice.narrator_name,
@@ -2441,10 +2687,12 @@ def generate_voice_and_subtitles_for_job(
         raise ValueError(
             "No se encontro texto para subtitulos. Genera o importa un guion, o ejecuta `transcribe-job`."
         )
-    segments = build_subtitle_segments(
+    segments = _safe_build_subtitle_segments(
         subtitle_text,
         total_duration=total_duration,
         max_chars=int(subtitle_policy.get("max_chars_per_block", 72)),
+        max_lines=int(subtitle_policy.get("max_lines", 2)),
+        min_seconds=float(subtitle_policy.get("min_segment_seconds", 1.4)),
     )
     subtitle_payload = {
         "policy_id": subtitle_policy["policy_id"],
@@ -2480,6 +2728,11 @@ def generate_voice_and_subtitles_for_job(
         "segments_path": subtitle_segments_path.resolve().relative_to(project_dir).as_posix(),
     }
     job["status"] = "subtitled"
+    _sync_story_narrative_manifest(
+        job=job,
+        job_manifest_path=job_manifest_path,
+        voice_profile_path=voice_profile_path,
+    )
     job["audit"]["updated_at"] = timestamp
     job["audit"].setdefault("events", []).append(
         {
@@ -2505,11 +2758,12 @@ def build_story_manifest_from_job(
     video_template = VideoTemplate.load(video_template_path)
     story_id = job["job_id"]
     render_output = f"output/{story_id}.mp4"
-    narrative_stories = [
-        story
-        for story in job.get("story_narrative", {}).get("stories", [])
-        if str(story.get("speech") or story.get("summary") or "").strip()
-    ]
+    narrative_manifest = _build_story_narrative_manifest_payload(
+        job=job,
+        voice_profile_path=voice_profile_path,
+        include_audio_segments=True,
+    )
+    narrative_stories = list(narrative_manifest.get("stories", []))
     approved_text = (
         _build_script_from_story_speeches(narrative_stories)
         if narrative_stories
@@ -2541,12 +2795,19 @@ def build_story_manifest_from_job(
                     "cover": front_page_image,
                     "headline": story.get("headline") or "",
                     "story_type": story.get("story_type") or "actualidad",
+                    "segment_type": story.get("segment_type") or "story",
                     "narrator_profile_id": story.get("narrator_profile_id") or "",
+                    "narrator_role": story.get("narrator_role") or "",
                     "voice_profile_id": segment_voice.profile_id,
                     "narrator_name": segment_voice.narrator_name,
                     "gestures_dir": segment_voice.gestures_dir,
                     "text": str(story.get("speech") or story.get("summary") or "").strip(),
+                    "page_numbers": story.get("page_numbers") or [],
+                    "key_facts": story.get("key_facts") or [],
+                    "tone_notes": story.get("tone_notes") or [],
+                    "safety_notes": story.get("safety_notes") or "",
                     "cover_region": story.get("cover_region"),
+                    "segment_audio_file": story.get("segment_audio_file"),
                     "audio_file": job["voice"].get("audio_path"),
                     "subtitle_segments_file": job["subtitles"].get("segments_path"),
                 }
@@ -2564,6 +2825,12 @@ def build_story_manifest_from_job(
             }
         ]
 
+    narrative_manifest_path = _sync_story_narrative_manifest(
+        job=job,
+        job_manifest_path=job_manifest_path,
+        voice_profile_path=voice_profile_path,
+    )
+
     manifest = {
         "story_id": story_id,
         "video_template": video_template.template_id,
@@ -2571,6 +2838,7 @@ def build_story_manifest_from_job(
         "music": video_template.default_music,
         "subtitle_policy": job["subtitles"]["policy_id"],
         "render_output": render_output,
+        "story_narrative_manifest_path": narrative_manifest_path,
         "segments": manifest_segments,
     }
 
@@ -2636,7 +2904,7 @@ def build_daily_rundown_for_date(
     )
     fallback_voice = VoiceProfile.load(voice_profile_path)
     presenter_visual = _resolve_voice_profile_for_narrator(
-        narrator_profile_id="Mávila_Huertas",
+        narrator_profile_id=_get_presenter_narrator_profile_id(project_dir=project_dir),
         fallback_voice_profile_path=voice_profile_path,
         project_dir=project_dir,
     )
@@ -2697,22 +2965,21 @@ def build_daily_rundown_for_date(
         cover = str(job["input_assets"]["front_page_image"])
         story_items = _enrich_job_story_narrative_with_cover_context(job)
         emit("rundown", f"{source_name}: agregando {len(story_items)} noticia(s).")
-        if len(segment_specs) > 1:
-            segment_specs.append(
-                {
-                    "newspaper_name": source_name,
-                    "cover": cover,
-                    "headline": f"Paso a {source_name}",
-                    "story_type": "connector",
-                    "segment_type": "connector",
-                    "narrator_profile_id": "presentador",
-                    "voice_profile_id": presenter_visual.profile_id,
-                    "narrator_name": presenter_visual.narrator_name,
-                    "gestures_dir": presenter_visual.gestures_dir,
-                    "text": _build_newspaper_connector_text(source_name),
-                    "cover_region": None,
-                }
-            )
+        segment_specs.append(
+            {
+                "newspaper_name": source_name,
+                "cover": cover,
+                "headline": f"Paso a {source_name}",
+                "story_type": "connector",
+                "segment_type": "connector",
+                "narrator_profile_id": "presentador",
+                "voice_profile_id": presenter_visual.profile_id,
+                "narrator_name": presenter_visual.narrator_name,
+                "gestures_dir": presenter_visual.gestures_dir,
+                "text": _build_newspaper_connector_text(source_name, story_count=len(story_items)),
+                "cover_region": None,
+            }
+        )
         for story in story_items:
             speech = " ".join(str(story.get("speech") or story.get("summary") or "").split()).strip()
             visual_voice = _resolve_voice_profile_for_narrator(
@@ -2777,12 +3044,11 @@ def build_daily_rundown_for_date(
     concatenate_wav_files(segment_audio_paths, audio_path)
     total_duration = _get_wav_duration_seconds(audio_path)
     emit("audio", f"Audio final listo: {round(total_duration, 2)} segundos.")
-    full_text = "\n\n".join(str(segment["text"]) for segment in segment_specs)
     emit("subtitulos", "Generando subtitulos del programa completo.")
-    subtitle_segments = build_subtitle_segments(
-        full_text,
-        total_duration=total_duration,
-        max_chars=int(subtitle_policy.get("max_chars_per_block", 72)),
+    full_text, subtitle_segments, aligned_duration = _build_rundown_subtitle_segments(
+        segment_specs=segment_specs,
+        subtitle_policy=subtitle_policy,
+        project_dir=project_dir,
     )
     subtitles_path = target_dir / "subtitle-segments.json"
     write_json(
@@ -2791,15 +3057,8 @@ def build_daily_rundown_for_date(
             "policy_id": subtitle_policy["policy_id"],
             "text_source": "daily_rundown",
             "text": full_text,
-            "audio_duration_seconds": round(total_duration, 3),
-            "segments": [
-                {
-                    "text": segment.text,
-                    "start": round(segment.start, 3),
-                    "end": round(segment.end, 3),
-                }
-                for segment in subtitle_segments
-            ],
+            "audio_duration_seconds": round(max(total_duration, aligned_duration), 3),
+            "segments": subtitle_segments,
         },
     )
     emit("subtitulos", f"Subtitulos listos: {subtitles_path.resolve().relative_to(project_dir).as_posix()}.")
@@ -2849,6 +3108,7 @@ def build_daily_rundown_for_date(
             VideoSegment(
                 newspaper_name=str(segment["newspaper_name"]),
                 cover_path=project_dir / str(segment["cover"]),
+                headline=str(segment.get("headline") or ""),
                 text=str(segment["text"]),
                 narrator_name=str(segment["narrator_name"]),
                 gesture_paths=segment_gestures,
@@ -2912,7 +3172,7 @@ def retry_daily_rundown_from_existing_audio(
 
     fallback_voice = VoiceProfile.load(voice_profile_path)
     presenter_visual = _resolve_voice_profile_for_narrator(
-        narrator_profile_id="Mávila_Huertas",
+        narrator_profile_id=_get_presenter_narrator_profile_id(project_dir=project_dir),
         fallback_voice_profile_path=voice_profile_path,
         project_dir=project_dir,
     )
@@ -2971,22 +3231,21 @@ def retry_daily_rundown_from_existing_audio(
             source_name = _format_source_name(str(job.get("source_id") or ""))
             cover = str(job["input_assets"]["front_page_image"])
             story_items = _enrich_job_story_narrative_with_cover_context(job)
-            if len(segment_specs) > 1:
-                segment_specs.append(
-                    {
-                        "newspaper_name": source_name,
-                        "cover": cover,
-                        "headline": f"Paso a {source_name}",
-                        "story_type": "connector",
-                        "segment_type": "connector",
-                        "narrator_profile_id": "presentador",
-                        "voice_profile_id": presenter_visual.profile_id,
-                        "narrator_name": presenter_visual.narrator_name,
-                        "gestures_dir": presenter_visual.gestures_dir,
-                        "text": _build_newspaper_connector_text(source_name),
-                        "cover_region": None,
-                    }
-                )
+            segment_specs.append(
+                {
+                    "newspaper_name": source_name,
+                    "cover": cover,
+                    "headline": f"Paso a {source_name}",
+                    "story_type": "connector",
+                    "segment_type": "connector",
+                    "narrator_profile_id": "presentador",
+                    "voice_profile_id": presenter_visual.profile_id,
+                    "narrator_name": presenter_visual.narrator_name,
+                    "gestures_dir": presenter_visual.gestures_dir,
+                    "text": _build_newspaper_connector_text(source_name, story_count=len(story_items)),
+                    "cover_region": None,
+                }
+            )
             for story in story_items:
                 speech = " ".join(str(story.get("speech") or story.get("summary") or "").split()).strip()
                 visual_voice = _resolve_voice_profile_for_narrator(
@@ -3034,12 +3293,11 @@ def retry_daily_rundown_from_existing_audio(
     total_duration = _get_wav_duration_seconds(audio_path)
     emit("audio", f"Audio final listo: {round(total_duration, 2)} segundos.")
 
-    full_text = "\n\n".join(str(segment["text"]) for segment in segment_specs)
     emit("subtitulos", "Regenerando subtitulos del programa completo.")
-    subtitle_segments = build_subtitle_segments(
-        full_text,
-        total_duration=total_duration,
-        max_chars=int(subtitle_policy.get("max_chars_per_block", 72)),
+    full_text, subtitle_segments, aligned_duration = _build_rundown_subtitle_segments(
+        segment_specs=segment_specs,
+        subtitle_policy=subtitle_policy,
+        project_dir=project_dir,
     )
     subtitles_path = target_dir / "subtitle-segments.json"
     write_json(
@@ -3048,15 +3306,8 @@ def retry_daily_rundown_from_existing_audio(
             "policy_id": subtitle_policy["policy_id"],
             "text_source": "daily_rundown",
             "text": full_text,
-            "audio_duration_seconds": round(total_duration, 3),
-            "segments": [
-                {
-                    "text": segment.text,
-                    "start": round(segment.start, 3),
-                    "end": round(segment.end, 3),
-                }
-                for segment in subtitle_segments
-            ],
+            "audio_duration_seconds": round(max(total_duration, aligned_duration), 3),
+            "segments": subtitle_segments,
         },
     )
     emit("subtitulos", f"Subtitulos listos: {subtitles_path.resolve().relative_to(project_dir).as_posix()}.")
@@ -3103,6 +3354,7 @@ def retry_daily_rundown_from_existing_audio(
             VideoSegment(
                 newspaper_name=str(segment["newspaper_name"]),
                 cover_path=project_dir / str(segment["cover"]),
+                headline=str(segment.get("headline") or ""),
                 text=str(segment["text"]),
                 narrator_name=str(segment["narrator_name"]),
                 gesture_paths=segment_gestures,
@@ -3171,6 +3423,7 @@ def compose_job_for_preview(
             VideoSegment(
                 newspaper_name=segment["newspaper_name"],
                 cover_path=project_dir / segment["cover"],
+                headline=segment.get("headline"),
                 text=segment["text"],
                 narrator_name=segment.get("narrator_name"),
                 gesture_paths=gesture_paths,

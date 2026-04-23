@@ -13,12 +13,44 @@ export const buildSegments = ({segments, newspaperName, coverSrc, text}) => {
 };
 
 export const buildWordHighlights = (caption, progress) => {
-  const captionWords = caption ? caption.split(" ") : [];
-  const spokenWords = Math.floor(captionWords.length * progress);
+  const lines = caption ? caption.split("\n") : [];
+  const tokens = [];
 
-  return captionWords.map((word, index) => ({
-    key: `${word}-${index}`,
-    text: `${index > 0 ? " " : ""}${word}`,
-    active: index < spokenWords
-  }));
+  lines.forEach((line, lineIndex) => {
+    const words = line.split(" ").filter(Boolean);
+    words.forEach((word, wordIndex) => {
+      tokens.push({
+        key: `${lineIndex}-${wordIndex}-${word}`,
+        type: "word",
+        text: `${wordIndex > 0 ? " " : ""}${word}`
+      });
+    });
+    if (lineIndex < lines.length - 1) {
+      tokens.push({
+        key: `break-${lineIndex}`,
+        type: "break",
+        text: "\n"
+      });
+    }
+  });
+
+  const totalWords = tokens.filter((token) => token.type === "word").length;
+  const spokenWords = Math.floor(totalWords * progress);
+  let activeWordIndex = 0;
+
+  return tokens.map((token) => {
+    if (token.type === "break") {
+      return {
+        ...token,
+        active: false
+      };
+    }
+
+    const active = activeWordIndex < spokenWords;
+    activeWordIndex += 1;
+    return {
+      ...token,
+      active
+    };
+  });
 };

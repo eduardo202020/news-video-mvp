@@ -32,7 +32,8 @@ export const NewsVideo = ({
   narratorName,
   text,
   gestures,
-  segments
+  segments,
+  subtitleSegments
 }) => {
   const frame = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
@@ -47,6 +48,7 @@ export const NewsVideo = ({
     text,
     gestures,
     segments,
+    subtitleSegments,
     fps,
     durationInFrames
   });

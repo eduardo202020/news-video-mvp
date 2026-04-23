@@ -161,6 +161,7 @@ def normalize_story_segment(
         newspaper_name=story.newspaper_name
         or cover.stem.replace("_", " ").replace("-", " ").title(),
         cover_path=cover,
+        headline=story.newspaper_name or cover.stem.replace("_", " ").replace("-", " ").title(),
         text=story.text,
         narrator_name=story.narrator_name,
         gesture_paths=segment_gesture_paths,
