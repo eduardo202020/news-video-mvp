@@ -1,0 +1,154 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-22-correo-frontpage-001",
+  "source_id": "correo",
+  "source_name": "Correo",
+  "date": "2026-04-22",
+  "front_page_image": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Renuncia en la ONPE tras irregularidades electorales",
+      "story_type": "politica",
+      "summary": "Piero Corvetto deja la ONPE tras una gestión marcada por controversias y errores. Su salida pone en duda la integridad del proceso electoral y deja espacio para una nueva dirección al frente de la institución.",
+      "speech": "Piero Corvetto deja la ONPE tras una gestión marcada por controversias y errores. Su salida pone en duda la integridad del proceso electoral y deja espacio para una nueva dirección al frente de la institución.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.12,
+        "y": 0.42,
+        "width": 0.76,
+        "height": 0.46
+      },
+      "key_facts": [
+        "renuncia de Piero Corvetto",
+        "controversias en la ONPE",
+        "proceso electoral cuestionado"
+      ],
+      "tone_notes": [
+        "serio",
+        "informativo",
+        "contextual"
+      ],
+      "safety_notes": "No se menciona evidencia de corrupción o irregularidades no verificadas.",
+      "notes": "No se menciona evidencia de corrupción o irregularidades no verificadas.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Actas de votación del exterior publicadas por la ONPE",
+      "story_type": "politica",
+      "summary": "La ONPE publicó erróneamente actas de prueba, generando confusión y desconfianza en la plataforma. Esta situación resalta la necesidad de revisar los protocolos de seguridad para evitar estos errores.",
+      "speech": "La ONPE publicó erróneamente actas de prueba, generando confusión y desconfianza en la plataforma. Esta situación resalta la necesidad de revisar los protocolos de seguridad para evitar estos errores.",
+      "page_numbers": [
+        5
+      ],
+      "cover_region": {
+        "x": 0.42,
+        "y": 0.08,
+        "width": 0.34,
+        "height": 0.22
+      },
+      "key_facts": [
+        "actas publicadas por error",
+        "confusión en la plataforma",
+        "acciones correctivas de la ONPE"
+      ],
+      "tone_notes": [
+        "informativo",
+        "crítico",
+        "directo"
+      ],
+      "safety_notes": "El contenido mencionado se verifica como una corrección oficial de la ONPE.",
+      "notes": "El contenido mencionado se verifica como una corrección oficial de la ONPE.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Gobierno descarta compra de aviones F-16",
+      "story_type": "politica",
+      "summary": "El gobierno ha ratificado que no procederá con la compra de los aviones F-16, a pesar de la insistencia de algunos sectores. Este anuncio busca aclarar dudas y priorizar otras necesidades de defensa.",
+      "speech": "El gobierno ha ratificado que no procederá con la compra de los aviones F-16, a pesar de la insistencia de algunos sectores. Este anuncio busca aclarar dudas y priorizar otras necesidades de defensa.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.74,
+        "y": 0.06,
+        "width": 0.23,
+        "height": 0.2
+      },
+      "key_facts": [
+        "descarta compra F-16",
+        "anuncio del gobierno",
+        "prioridades de defensa"
+      ],
+      "tone_notes": [
+        "neutral",
+        "informativo",
+        "clarificador"
+      ],
+      "safety_notes": "Las razones detrás del rechazo no se detallan completamente.",
+      "notes": "Las razones detrás del rechazo no se detallan completamente.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Universitario oficializa salida de Rabanal",
+      "story_type": "deportes",
+      "summary": "La ‘U’ anuncia oficialmente la salida de Rabanal, cerrando así un ciclo en su plantel. El club busca una nueva estrategia para el futuro, mientras la afición aún digiere la decisión.",
+      "speech": "La ‘U’ anuncia oficialmente la salida de Rabanal, cerrando así un ciclo en su plantel. El club busca una nueva estrategia para el futuro, mientras la afición aún digiere la decisión.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.73,
+        "y": 0.23,
+        "width": 0.24,
+        "height": 0.1
+      },
+      "key_facts": [
+        "salida de Rabanal",
+        "decisión oficial",
+        "cambio en el plantel de la U"
+      ],
+      "tone_notes": [
+        "informativo",
+        "deportivo",
+        "directo"
+      ],
+      "safety_notes": "No se detallan las razones personales de la salida.",
+      "notes": "No se detallan las razones personales de la salida.",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-depor",
+      "narrator_name": "Cuy-Depor",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-22-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "source_name": "Elcomercio",
+  "date": "2026-04-22",
+  "front_page_image": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Corvetto deja la ONPE tras cuestionamientos",
+      "story_type": "politica",
+      "summary": "La salida de Piero Corvetto de la ONPE se da en medio de una fuerte controversia sobre la transparencia del proceso electoral. La situación plantea dudas sobre la independencia de la entidad.",
+      "speech": "La salida de Piero Corvetto de la ONPE se da en medio de una fuerte controversia sobre la transparencia del proceso electoral. La situación plantea dudas sobre la independencia de la entidad.",
+      "page_numbers": [
+        4,
+        5
+      ],
+      "cover_region": {
+        "x": 0.08,
+        "y": 0.32,
+        "width": 0.84,
+        "height": 0.42
+      },
+      "key_facts": [
+        "renuncia de Piero Corvetto",
+        "cuestionamientos a la ONPE",
+        "presión sobre la entidad"
+      ],
+      "tone_notes": [
+        "serio",
+        "analítico",
+        "prudente"
+      ],
+      "safety_notes": "No se mencionan detalles no confirmados sobre irregularidades.",
+      "notes": "No se mencionan detalles no confirmados sobre irregularidades.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Empresa afirma que ONPE pidió 40 camiones",
+      "story_type": "actualidad",
+      "summary": "Hermes, empresa de transporte, reveló que la ONPE solicitó 40 camiones para las elecciones del 11 de abril. Este pedido ha generado cuestionamientos sobre la logística y planificación de la institución.",
+      "speech": "Hermes, empresa de transporte, reveló que la ONPE solicitó 40 camiones para las elecciones del 11 de abril. Este pedido ha generado cuestionamientos sobre la logística y planificación de la institución.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.74,
+        "width": 0.28,
+        "height": 0.2
+      },
+      "key_facts": [
+        "solicitud de camiones",
+        "revelación de Hermes",
+        "elecciones del 11 de abril"
+      ],
+      "tone_notes": [
+        "informativo",
+        "objetivo",
+        "detallado"
+      ],
+      "safety_notes": "El contenido de la empresa debe verificarse más detalladamente.",
+      "notes": "El contenido de la empresa debe verificarse más detalladamente.",
+      "narrator_profile_id": "rene_gastelumendi",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Keiko Fujimori inicia campaña de segunda vuelta",
+      "story_type": "politica",
+      "summary": "Keiko Fujimori comienza su campaña de segunda vuelta en medio de un panorama electoral incierto. La ex candidata apuesta por reuniones cercanas con la gente para fortalecer su imagen.",
+      "speech": "Keiko Fujimori comienza su campaña de segunda vuelta en medio de un panorama electoral incierto. La ex candidata apuesta por reuniones cercanas con la gente para fortalecer su imagen.",
+      "page_numbers": [
+        8
+      ],
+      "cover_region": {
+        "x": 0.68,
+        "y": 0.74,
+        "width": 0.28,
+        "height": 0.2
+      },
+      "key_facts": [
+        "inicio de campaña",
+        "estrategia cercana",
+        "segunda vuelta electoral"
+      ],
+      "tone_notes": [
+        "informativo",
+        "neutral",
+        "detallado"
+      ],
+      "safety_notes": "La campaña se está ejecutando bajo un contexto de alta polarización.",
+      "notes": "La campaña se está ejecutando bajo un contexto de alta polarización.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Sunat evalúa impuestos a importaciones menores",
+      "story_type": "economia",
+      "summary": "La Sunat está considerando nuevas regulaciones sobre importaciones menores. La medida afectaría a una gran cantidad de productos de bajo costo, lo que podría encarecer el mercado local.",
+      "speech": "La Sunat está considerando nuevas regulaciones sobre importaciones menores. La medida afectaría a una gran cantidad de productos de bajo costo, lo que podría encarecer el mercado local.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.36,
+        "y": 0.12,
+        "width": 0.28,
+        "height": 0.12
+      },
+      "key_facts": [
+        "evaluación de la Sunat",
+        "impuestos a importaciones menores",
+        "potencial impacto en precios"
+      ],
+      "tone_notes": [
+        "analítico",
+        "precavido",
+        "detallado"
+      ],
+      "safety_notes": "Se evita especular sobre cambios específicos sin base oficial.",
+      "notes": "Se evita especular sobre cambios específicos sin base oficial.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    }
+  ]
+}

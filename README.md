@@ -437,8 +437,8 @@ Hoy el flujo activo y mas avanzado del repo es este:
 2. usar un prompt manual en ChatGPT para detectar noticias principales de portada
 3. importar esa seleccion a los `job-manifest`
 4. descargar solo las paginas internas necesarias como contexto editorial
-5. usar un segundo prompt para obtener micro-resumenes por noticia
-6. usar despues `story_type` para asignar reportero y `cover_region` para hacer zoom sobre la portada
+5. usar un segundo prompt para obtener speeches editoriales breves por noticia
+6. convertir esos speeches en narrativa util para video, usando `story_type` para asignar narrador y `cover_region` para hacer zoom sobre la portada
 
 Importante:
 
@@ -495,11 +495,12 @@ Internamente, al importar, el pipeline conserva:
 
 El prompt que se usa sobre paginas internas ya no busca un resumen largo. Ahora produce:
 
-- micro-resumenes breves por noticia
-- `page_numbers`
-- `cover_region`
-- `story_type`
-- `key_facts`
+- un `speech` final breve por noticia
+- `narrator_profile_id`
+- `tone_notes`
+- `key_facts_used`
+- `safety_notes`
+- conservacion de `page_numbers`, `cover_region` y `story_type` por historia
 
 Ese prompt ya asume que:
 
@@ -531,7 +532,7 @@ Ya permite:
 - descargar paginas del lote reutilizando las ya existentes cuando coinciden
 - mostrar miniaturas de paginas descargadas
 - generar prompts posteriores por bloques de 2 periodicos
-- importar desde Streamlit el JSON del segundo prompt con micro-resumenes por historia
+- importar desde Streamlit el JSON del segundo prompt con speeches editoriales por historia
 
 Si al abrirla aparece:
 
@@ -544,6 +545,7 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 ## Lo que ya quedo implementado
 
 - scraping de portadas por lote diario desde Streamlit
+- recorte automatico de margenes blancos en portadas nuevas al descargarlas o copiarlas al job
 - un job visible por periodico en la UI
 - prompt dinamico para varias portadas
 - importacion batch del JSON devuelto por ChatGPT
@@ -555,20 +557,41 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 - reutilizacion de paginas ya descargadas cuando coincide la seleccion
 - miniaturas de paginas descargadas por periodico
 - prompts posteriores por bloques de 2 periodicos para respetar el limite de imagenes de ChatGPT
-- resúmenes pensados para speech breve, no para nota larga
+- speeches editoriales pensados para voz breve, no para nota larga
+- modo desarrollo en Streamlit para cachear respuestas pegadas de ChatGPT y recargarlas al reabrir la app
+- importacion de speeches editoriales con enriquecimiento automatico desde portada
+- manifiesto narrativo intermedio por job para conectar historias importadas con `story-manifest`
+- mapeo formal `story_type -> narrator_profile_id` desde `automation/templates/narrators/story-type-map.json`
+- construccion de `programa diario` para preview desde Streamlit
+- modo desarrollo del `programa diario` para trabajar solo con intro + primer bloque de 2 periodicos
+- reintento del `programa diario` desde audios existentes, sin volver a generar TTS cuando ya existe una corrida previa
+- feedback por etapas durante la construccion del `programa diario`
+- sincronizacion del preview diario con `NewsVideo-generated` en Remotion
+- soporte de segmentos narrativos con intro, historias y conectores entre periodicos
+- conector visual por diario mostrando la portada completa antes de entrar a las historias
+- uso de `cover_region` en Remotion para zoom por noticia sobre la portada
+- transicion visual entre noticias del mismo diario para volver a portada completa antes del siguiente zoom
+- intro animada en Remotion con aparicion secuencial de portadas de periodicos
+- subtitulos sincronizados por segmentos reales de audio, incluyendo conectores entre periodicos
+- subtitulos partidos en bloques practicos de hasta 2 lineas
+- ajuste visual del bloque de subtitulos para ancho, posicion y lectura
+- velocidad de voz configurable desde los perfiles TTS, con base actual de `1.4`
+- optimizaciones visuales del preview para reducir costo de exportacion
 
 ## Lo que falta
 
 ### Capa editorial / datos
 
-- definir formalmente la asignacion `story_type -> reportero/narrador`
-- conectar esos micro-resumenes importados con un manifiesto narrativo intermedio o directo a `story-manifest`
+- seguir afinando el prompt editorial para cubrir todas las historias detectadas sin inventar ni omitir casos limite
+- documentar mejor el contrato del manifiesto narrativo intermedio y sus campos finales
 
 ### Capa de video
 
-- llevar `page_selection.stories` o su equivalente narrativo a `story-manifest`
-- usar `cover_region` en Remotion para hacer zoom sobre la portada mientras se narra cada noticia
-- secuenciar varias noticias sobre una misma portada sin mostrar paginas internas
+- seguir afinando el balance entre cantidad de palabras por bloque y comodidad de lectura en subtitulos
+- validar en renders largos la velocidad de voz `1.4x` y ajustar por narrador si hace falta
+- seguir afinando la intro de portadas para que la secuencia inicial quede cerrada visualmente
+- seguir afinando el comportamiento del zoom sobre portadas grandes o de composicion irregular
+- seguir puliendo la posicion relativa entre portadas, subtitulos y narrador para distintos diarios
 
 ### Automatizacion futura
 
@@ -627,6 +650,7 @@ sin lanzar `remotion render`.
 - formato vertical: `1080 x 1920`
 - subtitulos maximo 2 lineas
 - audio principal en espanol
+- velocidad base de voz actual: `1.4`
 - fondo musical suave en `public/assets/fondo-musical/`
 - narradores actuales:
   - `Cuy-01`

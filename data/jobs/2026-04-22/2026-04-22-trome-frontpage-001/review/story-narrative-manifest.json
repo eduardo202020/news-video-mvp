@@ -1,0 +1,154 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-22-trome-frontpage-001",
+  "source_id": "trome",
+  "source_name": "Trome",
+  "date": "2026-04-22",
+  "front_page_image": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Tragedia por combi sin control deja muertos",
+      "story_type": "policial",
+      "summary": "La combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente.",
+      "speech": "La combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.7,
+        "width": 0.22,
+        "height": 0.16
+      },
+      "key_facts": [
+        "combi fuera de control",
+        "muertos y heridos",
+        "investigación en curso"
+      ],
+      "tone_notes": [
+        "grave",
+        "directo",
+        "dramático"
+      ],
+      "safety_notes": "Las imágenes proporcionadas dan detalles gráficos, pero se mantienen los hechos verificables.",
+      "notes": "Las imágenes proporcionadas dan detalles gráficos, pero se mantienen los hechos verificables.",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-02",
+      "narrator_name": "Cuy-02",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Campaña comercial por dia de la madre se intensifica",
+      "story_type": "actualidad",
+      "summary": "La campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores.",
+      "speech": "La campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.86,
+        "width": 0.22,
+        "height": 0.12
+      },
+      "key_facts": [
+        "campaña Día de la Madre",
+        "ofertas comerciales",
+        "expectativa de compras"
+      ],
+      "tone_notes": [
+        "informativo",
+        "comercial",
+        "dinámico"
+      ],
+      "safety_notes": "Se ofrece un panorama general sin detalles específicos de las ofertas.",
+      "notes": "Se ofrece un panorama general sin detalles específicos de las ofertas.",
+      "narrator_profile_id": "rene_gastelumendi",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Corvetto renuncia por caos electoral",
+      "story_type": "politica",
+      "summary": "La salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país.",
+      "speech": "La salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "cover_region": {
+        "x": 0.28,
+        "y": 0.22,
+        "width": 0.62,
+        "height": 0.58
+      },
+      "key_facts": [
+        "renuncia de Corvetto",
+        "caos electoral",
+        "presión política"
+      ],
+      "tone_notes": [
+        "serio",
+        "analítico",
+        "crítico"
+      ],
+      "safety_notes": "Se describe la situación política con base en fuentes y hechos probados.",
+      "notes": "Se describe la situación política con base en fuentes y hechos probados.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Universitario busca levantar cabeza ante Garcilaso",
+      "story_type": "deportes",
+      "summary": "Universitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
+      "speech": "Universitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
+      "page_numbers": [
+        11
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.28,
+        "width": 0.22,
+        "height": 0.4
+      },
+      "key_facts": [
+        "partido ante Garcilaso",
+        "necesidad de victoria",
+        "recuperación del equipo"
+      ],
+      "tone_notes": [
+        "motivado",
+        "deportivo",
+        "optimista"
+      ],
+      "safety_notes": "La narrativa se enfoca en los retos del equipo sin exagerar las expectativas.",
+      "notes": "La narrativa se enfoca en los retos del equipo sin exagerar las expectativas.",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-depor",
+      "narrator_name": "Cuy-Depor",
+      "segment_audio_file": null
+    }
+  ]
+}

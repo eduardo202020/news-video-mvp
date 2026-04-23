@@ -8,20 +8,63 @@
     "requested_date": "2026-04-22",
     "issue_date": "2026-04-22",
     "publication_status": "available",
-    "discovery_type": null,
-    "front_page_url": "https://t.prcdn.co/img",
-    "discovered_pages_count": 0,
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042200000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
     "archive_summary_path": null,
     "page_count_probe_path": null
   },
   "approval_mode": "semi_auto",
-  "status": "discovered",
+  "status": "scripted",
   "input_assets": {
-    "front_page_image": null,
-    "front_page_url": "https://t.prcdn.co/img",
+    "front_page_image": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042200000000001001&page=1&scale=300",
     "source_url": "https://t.prcdn.co/img",
     "source_config": "automation/sources/diarios/correo.json",
-    "pages": []
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042200000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042200000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042200000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042200000000001001&page=5&scale=80",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042200000000001001&page=6&scale=80",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042200000000001001&page=16&scale=80",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
   },
   "extraction": {
     "ocr_blocks": [],
@@ -36,27 +79,330 @@
   },
   "page_selection": {
     "strategy": "cover_first",
-    "provider": null,
-    "status": "not_started",
-    "selected_page_numbers": [],
-    "candidates": [],
-    "stories": [],
-    "notes": ""
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      2,
+      3,
+      5,
+      6,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Renuncia en la ONPE tras irregularidades electorales",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.12,
+          "y": 0.42,
+          "width": 0.76,
+          "height": 0.46
+        },
+        "page_number": 2,
+        "evidence_line": "págs. 2 y 3 TEMA DEL DÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Renuncia en la ONPE tras irregularidades electorales",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.12,
+          "y": 0.42,
+          "width": 0.76,
+          "height": 0.46
+        },
+        "page_number": 3,
+        "evidence_line": "págs. 2 y 3 TEMA DEL DÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Actas de votacion del exterior publicadas por la ONPE",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.42,
+          "y": 0.08,
+          "width": 0.34,
+          "height": 0.22
+        },
+        "page_number": 5,
+        "evidence_line": "pág. 5 POLÍTICA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Gobierno descarta compra de aviones F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.74,
+          "y": 0.06,
+          "width": 0.23,
+          "height": 0.2
+        },
+        "page_number": 6,
+        "evidence_line": "pág. 6 LIMA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Universitario oficializa salida de Rabanal",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.73,
+          "y": 0.23,
+          "width": 0.24,
+          "height": 0.1
+        },
+        "page_number": 16,
+        "evidence_line": "págs. 16 DEPORTES",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Renuncia en la ONPE tras irregularidades electorales",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.12,
+          "y": 0.42,
+          "width": 0.76,
+          "height": 0.46
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "págs. 2 y 3 TEMA DEL DÍA",
+        "evidence_lines": [
+          "págs. 2 y 3 TEMA DEL DÍA"
+        ],
+        "confidence": 0.97
+      },
+      {
+        "headline": "Actas de votacion del exterior publicadas por la ONPE",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.42,
+          "y": 0.08,
+          "width": 0.34,
+          "height": 0.22
+        },
+        "page_numbers": [
+          5
+        ],
+        "evidence": "pág. 5 POLÍTICA",
+        "evidence_lines": [
+          "pág. 5 POLÍTICA"
+        ],
+        "confidence": 0.94
+      },
+      {
+        "headline": "Gobierno descarta compra de aviones F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.74,
+          "y": 0.06,
+          "width": 0.23,
+          "height": 0.2
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "pág. 6 LIMA",
+        "evidence_lines": [
+          "pág. 6 LIMA"
+        ],
+        "confidence": 0.93
+      },
+      {
+        "headline": "Universitario oficializa salida de Rabanal",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.73,
+          "y": 0.23,
+          "width": 0.24,
+          "height": 0.1
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "págs. 16 DEPORTES",
+        "evidence_lines": [
+          "págs. 16 DEPORTES"
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
-    "provider": null,
-    "status": "not_started",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
     "source": "supporting_pages_manual",
-    "stories": [],
-    "notes": ""
+    "stories": [
+      {
+        "headline": "Renuncia en la ONPE tras irregularidades electorales",
+        "story_type": "politica",
+        "summary": "Piero Corvetto deja la ONPE tras una gestión marcada por controversias y errores. Su salida pone en duda la integridad del proceso electoral y deja espacio para una nueva dirección al frente de la institución.",
+        "speech": "Piero Corvetto deja la ONPE tras una gestión marcada por controversias y errores. Su salida pone en duda la integridad del proceso electoral y deja espacio para una nueva dirección al frente de la institución.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "serio",
+          "informativo",
+          "contextual"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.12,
+          "y": 0.42,
+          "width": 0.76,
+          "height": 0.46
+        },
+        "key_facts": [
+          "renuncia de Piero Corvetto",
+          "controversias en la ONPE",
+          "proceso electoral cuestionado"
+        ],
+        "key_facts_used": [
+          "renuncia de Piero Corvetto",
+          "controversias en la ONPE",
+          "proceso electoral cuestionado"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se menciona evidencia de corrupción o irregularidades no verificadas.",
+        "notes": "No se menciona evidencia de corrupción o irregularidades no verificadas."
+      },
+      {
+        "headline": "Actas de votación del exterior publicadas por la ONPE",
+        "story_type": "politica",
+        "summary": "La ONPE publicó erróneamente actas de prueba, generando confusión y desconfianza en la plataforma. Esta situación resalta la necesidad de revisar los protocolos de seguridad para evitar estos errores.",
+        "speech": "La ONPE publicó erróneamente actas de prueba, generando confusión y desconfianza en la plataforma. Esta situación resalta la necesidad de revisar los protocolos de seguridad para evitar estos errores.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "informativo",
+          "crítico",
+          "directo"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "cover_region": {
+          "x": 0.42,
+          "y": 0.08,
+          "width": 0.34,
+          "height": 0.22
+        },
+        "key_facts": [
+          "actas publicadas por error",
+          "confusión en la plataforma",
+          "acciones correctivas de la ONPE"
+        ],
+        "key_facts_used": [
+          "actas publicadas por error",
+          "confusión en la plataforma",
+          "acciones correctivas de la ONPE"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El contenido mencionado se verifica como una corrección oficial de la ONPE.",
+        "notes": "El contenido mencionado se verifica como una corrección oficial de la ONPE."
+      },
+      {
+        "headline": "Gobierno descarta compra de aviones F-16",
+        "story_type": "politica",
+        "summary": "El gobierno ha ratificado que no procederá con la compra de los aviones F-16, a pesar de la insistencia de algunos sectores. Este anuncio busca aclarar dudas y priorizar otras necesidades de defensa.",
+        "speech": "El gobierno ha ratificado que no procederá con la compra de los aviones F-16, a pesar de la insistencia de algunos sectores. Este anuncio busca aclarar dudas y priorizar otras necesidades de defensa.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "neutral",
+          "informativo",
+          "clarificador"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.74,
+          "y": 0.06,
+          "width": 0.23,
+          "height": 0.2
+        },
+        "key_facts": [
+          "descarta compra F-16",
+          "anuncio del gobierno",
+          "prioridades de defensa"
+        ],
+        "key_facts_used": [
+          "descarta compra F-16",
+          "anuncio del gobierno",
+          "prioridades de defensa"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Las razones detrás del rechazo no se detallan completamente.",
+        "notes": "Las razones detrás del rechazo no se detallan completamente."
+      },
+      {
+        "headline": "Universitario oficializa salida de Rabanal",
+        "story_type": "deportes",
+        "summary": "La ‘U’ anuncia oficialmente la salida de Rabanal, cerrando así un ciclo en su plantel. El club busca una nueva estrategia para el futuro, mientras la afición aún digiere la decisión.",
+        "speech": "La ‘U’ anuncia oficialmente la salida de Rabanal, cerrando así un ciclo en su plantel. El club busca una nueva estrategia para el futuro, mientras la afición aún digiere la decisión.",
+        "narrator_profile_id": "gonzalo_nunez",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "informativo",
+          "deportivo",
+          "directo"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.73,
+          "y": 0.23,
+          "width": 0.24,
+          "height": 0.1
+        },
+        "key_facts": [
+          "salida de Rabanal",
+          "decisión oficial",
+          "cambio en el plantel de la U"
+        ],
+        "key_facts_used": [
+          "salida de Rabanal",
+          "decisión oficial",
+          "cambio en el plantel de la U"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se detallan las razones personales de la salida.",
+        "notes": "No se detallan las razones personales de la salida."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-22/2026-04-22-correo-frontpage-001/review/story-narrative-manifest.json"
   },
   "script": {
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "",
-    "approved_text": "",
-    "review_notes": ""
+    "draft": "Piero Corvetto deja la ONPE tras una gestión marcada por controversias y errores. Su salida pone en duda la integridad del proceso electoral y deja espacio para una nueva dirección al frente de la institución.\n\nLa ONPE publicó erróneamente actas de prueba, generando confusión y desconfianza en la plataforma. Esta situación resalta la necesidad de revisar los protocolos de seguridad para evitar estos errores.\n\nEl gobierno ha ratificado que no procederá con la compra de los aviones F-16, a pesar de la insistencia de algunos sectores. Este anuncio busca aclarar dudas y priorizar otras necesidades de defensa.\n\nLa ‘U’ anuncia oficialmente la salida de Rabanal, cerrando así un ciclo en su plantel. El club busca una nueva estrategia para el futuro, mientras la afición aún digiere la decisión.",
+    "approved_text": "Piero Corvetto deja la ONPE tras una gestión marcada por controversias y errores. Su salida pone en duda la integridad del proceso electoral y deja espacio para una nueva dirección al frente de la institución.\n\nLa ONPE publicó erróneamente actas de prueba, generando confusión y desconfianza en la plataforma. Esta situación resalta la necesidad de revisar los protocolos de seguridad para evitar estos errores.\n\nEl gobierno ha ratificado que no procederá con la compra de los aviones F-16, a pesar de la insistencia de algunos sectores. Este anuncio busca aclarar dudas y priorizar otras necesidades de defensa.\n\nLa ‘U’ anuncia oficialmente la salida de Rabanal, cerrando así un ciclo en su plantel. El club busca una nueva estrategia para el futuro, mientras la afición aún digiere la decisión.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
   },
   "voice": {
     "profile_id": "voicebox-local",
@@ -90,14 +436,125 @@
   },
   "audit": {
     "created_at": "2026-04-22T00:31:24",
-    "updated_at": "2026-04-22T00:31:24",
+    "updated_at": "2026-04-22T19:04:09",
     "events": [
       {
         "stage": "discover",
         "status": "completed",
         "timestamp": "2026-04-22T00:31:24",
         "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:36:24",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:36:24",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:05",
+        "details": "Se importaron 1 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:05",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:56",
+        "details": "Se descargaron 1 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:15",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:15",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:41:15",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:50:59",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:50:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:51:03",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:51:03",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:59:33",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:59:33",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:58",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:58",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T19:04:09",
+        "details": "Se importaron 4 speech(es) editoriales."
       }
     ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 22 de abril, revisamos las portadas marcadas por la crisis electoral, movimientos en la economia y tensiones en la agenda politica. En una jornada que conecta con el Dia de la Tierra, recorremos lo esencial de cada diario.",
+    "date_reference": "22 de abril: Dia de la Tierra",
+    "source_scope": "world",
+    "why_it_fits": "Aporta una referencia global reconocible y permite abrir con un tono sobrio antes de entrar en la coyuntura nacional.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-22T23:04:58"
   }
 }

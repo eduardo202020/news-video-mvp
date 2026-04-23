@@ -8,20 +8,77 @@
     "requested_date": "2026-04-22",
     "issue_date": "2026-04-22",
     "publication_status": "available",
-    "discovery_type": null,
-    "front_page_url": "https://t.prcdn.co/img",
-    "discovered_pages_count": 0,
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=1&scale=207",
+    "discovered_pages_count": 4,
     "archive_summary_path": null,
     "page_count_probe_path": null
   },
   "approval_mode": "semi_auto",
-  "status": "discovered",
+  "status": "scripted",
   "input_assets": {
-    "front_page_image": null,
-    "front_page_url": "https://t.prcdn.co/img",
+    "front_page_image": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=1&scale=207",
     "source_url": "https://t.prcdn.co/img",
     "source_config": "automation/sources/diarios/elcomercio.json",
-    "pages": []
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=1&scale=207",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=4&scale=55",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=5&scale=55",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=7&scale=55",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 8",
+        "page_number": 8,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=8&scale=55",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/pages/page-08.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=9&scale=55",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=11&scale=55",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/pages/page-11.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042200000000001001&page=12&scale=55",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/input/pages/page-12.jpg"
+      }
+    ]
   },
   "extraction": {
     "ocr_blocks": [],
@@ -36,27 +93,398 @@
   },
   "page_selection": {
     "strategy": "cover_first",
-    "provider": null,
-    "status": "not_started",
-    "selected_page_numbers": [],
-    "candidates": [],
-    "stories": [],
-    "notes": ""
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      12
+    ],
+    "candidates": [
+      {
+        "headline": "Corvetto deja la ONPE tras cuestionamientos",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.08,
+          "y": 0.32,
+          "width": 0.84,
+          "height": 0.42
+        },
+        "page_number": 4,
+        "evidence_line": "PÁGS. 4 Y 5 TEMA DEL DÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Corvetto deja la ONPE tras cuestionamientos",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.08,
+          "y": 0.32,
+          "width": 0.84,
+          "height": 0.42
+        },
+        "page_number": 5,
+        "evidence_line": "PÁGS. 4 Y 5 TEMA DEL DÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Empresa afirma que ONPE pidió 40 camiones",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.74,
+          "width": 0.28,
+          "height": 0.2
+        },
+        "page_number": 7,
+        "evidence_line": "PÁGINA 7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      },
+      {
+        "headline": "Trump extiende alto el fuego con Irán",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.36,
+          "y": 0.74,
+          "width": 0.28,
+          "height": 0.2
+        },
+        "page_number": 11,
+        "evidence_line": "PÁGINA 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "Sunat evalúa impuestos a importaciones menores",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.36,
+          "y": 0.12,
+          "width": 0.28,
+          "height": 0.12
+        },
+        "page_number": 9,
+        "evidence_line": "PÁGINA 9 ECONOMÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      },
+      {
+        "headline": "Nuevo ingeniero liderará Apple tras Tim Cook",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.62,
+          "y": 0.12,
+          "width": 0.3,
+          "height": 0.12
+        },
+        "page_number": 12,
+        "evidence_line": "PÁGINA 12 MUNDO",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.87
+      },
+      {
+        "headline": "Keiko Fujimori inicia campaña de segunda vuelta",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.68,
+          "y": 0.74,
+          "width": 0.28,
+          "height": 0.2
+        },
+        "page_number": 8,
+        "evidence_line": "PÁGINA 8",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Corvetto deja la ONPE tras cuestionamientos",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.08,
+          "y": 0.32,
+          "width": 0.84,
+          "height": 0.42
+        },
+        "page_numbers": [
+          4,
+          5
+        ],
+        "evidence": "PÁGS. 4 Y 5 TEMA DEL DÍA",
+        "evidence_lines": [
+          "PÁGS. 4 Y 5 TEMA DEL DÍA"
+        ],
+        "confidence": 0.96
+      },
+      {
+        "headline": "Empresa afirma que ONPE pidió 40 camiones",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.74,
+          "width": 0.28,
+          "height": 0.2
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "PÁGINA 7",
+        "evidence_lines": [
+          "PÁGINA 7"
+        ],
+        "confidence": 0.92
+      },
+      {
+        "headline": "Keiko Fujimori inicia campaña de segunda vuelta",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.68,
+          "y": 0.74,
+          "width": 0.28,
+          "height": 0.2
+        },
+        "page_numbers": [
+          8
+        ],
+        "evidence": "PÁGINA 8",
+        "evidence_lines": [
+          "PÁGINA 8"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "Sunat evalúa impuestos a importaciones menores",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.36,
+          "y": 0.12,
+          "width": 0.28,
+          "height": 0.12
+        },
+        "page_numbers": [
+          9
+        ],
+        "evidence": "PÁGINA 9 ECONOMÍA",
+        "evidence_lines": [
+          "PÁGINA 9 ECONOMÍA"
+        ],
+        "confidence": 0.88
+      },
+      {
+        "headline": "Trump extiende alto el fuego con Irán",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.36,
+          "y": 0.74,
+          "width": 0.28,
+          "height": 0.2
+        },
+        "page_numbers": [
+          11
+        ],
+        "evidence": "PÁGINA 11",
+        "evidence_lines": [
+          "PÁGINA 11"
+        ],
+        "confidence": 0.91
+      },
+      {
+        "headline": "Nuevo ingeniero liderará Apple tras Tim Cook",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.62,
+          "y": 0.12,
+          "width": 0.3,
+          "height": 0.12
+        },
+        "page_numbers": [
+          12
+        ],
+        "evidence": "PÁGINA 12 MUNDO",
+        "evidence_lines": [
+          "PÁGINA 12 MUNDO"
+        ],
+        "confidence": 0.87
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
-    "provider": null,
-    "status": "not_started",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
     "source": "supporting_pages_manual",
-    "stories": [],
-    "notes": ""
+    "stories": [
+      {
+        "headline": "Corvetto deja la ONPE tras cuestionamientos",
+        "story_type": "politica",
+        "summary": "La salida de Piero Corvetto de la ONPE se da en medio de una fuerte controversia sobre la transparencia del proceso electoral. La situación plantea dudas sobre la independencia de la entidad.",
+        "speech": "La salida de Piero Corvetto de la ONPE se da en medio de una fuerte controversia sobre la transparencia del proceso electoral. La situación plantea dudas sobre la independencia de la entidad.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "serio",
+          "analítico",
+          "prudente"
+        ],
+        "page_numbers": [
+          4,
+          5
+        ],
+        "cover_region": {
+          "x": 0.08,
+          "y": 0.32,
+          "width": 0.84,
+          "height": 0.42
+        },
+        "key_facts": [
+          "renuncia de Piero Corvetto",
+          "cuestionamientos a la ONPE",
+          "presión sobre la entidad"
+        ],
+        "key_facts_used": [
+          "renuncia de Piero Corvetto",
+          "cuestionamientos a la ONPE",
+          "presión sobre la entidad"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se mencionan detalles no confirmados sobre irregularidades.",
+        "notes": "No se mencionan detalles no confirmados sobre irregularidades."
+      },
+      {
+        "headline": "Empresa afirma que ONPE pidió 40 camiones",
+        "story_type": "actualidad",
+        "summary": "Hermes, empresa de transporte, reveló que la ONPE solicitó 40 camiones para las elecciones del 11 de abril. Este pedido ha generado cuestionamientos sobre la logística y planificación de la institución.",
+        "speech": "Hermes, empresa de transporte, reveló que la ONPE solicitó 40 camiones para las elecciones del 11 de abril. Este pedido ha generado cuestionamientos sobre la logística y planificación de la institución.",
+        "narrator_profile_id": "rene_gastelumendi",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "informativo",
+          "objetivo",
+          "detallado"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.74,
+          "width": 0.28,
+          "height": 0.2
+        },
+        "key_facts": [
+          "solicitud de camiones",
+          "revelación de Hermes",
+          "elecciones del 11 de abril"
+        ],
+        "key_facts_used": [
+          "solicitud de camiones",
+          "revelación de Hermes",
+          "elecciones del 11 de abril"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El contenido de la empresa debe verificarse más detalladamente.",
+        "notes": "El contenido de la empresa debe verificarse más detalladamente."
+      },
+      {
+        "headline": "Keiko Fujimori inicia campaña de segunda vuelta",
+        "story_type": "politica",
+        "summary": "Keiko Fujimori comienza su campaña de segunda vuelta en medio de un panorama electoral incierto. La ex candidata apuesta por reuniones cercanas con la gente para fortalecer su imagen.",
+        "speech": "Keiko Fujimori comienza su campaña de segunda vuelta en medio de un panorama electoral incierto. La ex candidata apuesta por reuniones cercanas con la gente para fortalecer su imagen.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "informativo",
+          "neutral",
+          "detallado"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.68,
+          "y": 0.74,
+          "width": 0.28,
+          "height": 0.2
+        },
+        "key_facts": [
+          "inicio de campaña",
+          "estrategia cercana",
+          "segunda vuelta electoral"
+        ],
+        "key_facts_used": [
+          "inicio de campaña",
+          "estrategia cercana",
+          "segunda vuelta electoral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La campaña se está ejecutando bajo un contexto de alta polarización.",
+        "notes": "La campaña se está ejecutando bajo un contexto de alta polarización."
+      },
+      {
+        "headline": "Sunat evalúa impuestos a importaciones menores",
+        "story_type": "economia",
+        "summary": "La Sunat está considerando nuevas regulaciones sobre importaciones menores. La medida afectaría a una gran cantidad de productos de bajo costo, lo que podría encarecer el mercado local.",
+        "speech": "La Sunat está considerando nuevas regulaciones sobre importaciones menores. La medida afectaría a una gran cantidad de productos de bajo costo, lo que podría encarecer el mercado local.",
+        "narrator_profile_id": "julio_velarde",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "analítico",
+          "precavido",
+          "detallado"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.36,
+          "y": 0.12,
+          "width": 0.28,
+          "height": 0.12
+        },
+        "key_facts": [
+          "evaluación de la Sunat",
+          "impuestos a importaciones menores",
+          "potencial impacto en precios"
+        ],
+        "key_facts_used": [
+          "evaluación de la Sunat",
+          "impuestos a importaciones menores",
+          "potencial impacto en precios"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita especular sobre cambios específicos sin base oficial.",
+        "notes": "Se evita especular sobre cambios específicos sin base oficial."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-22/2026-04-22-elcomercio-frontpage-001/review/story-narrative-manifest.json"
   },
   "script": {
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "",
-    "approved_text": "",
-    "review_notes": ""
+    "draft": "La salida de Piero Corvetto de la ONPE se da en medio de una fuerte controversia sobre la transparencia del proceso electoral. La situación plantea dudas sobre la independencia de la entidad.\n\nHermes, empresa de transporte, reveló que la ONPE solicitó 40 camiones para las elecciones del 11 de abril. Este pedido ha generado cuestionamientos sobre la logística y planificación de la institución.\n\nKeiko Fujimori comienza su campaña de segunda vuelta en medio de un panorama electoral incierto. La ex candidata apuesta por reuniones cercanas con la gente para fortalecer su imagen.\n\nLa Sunat está considerando nuevas regulaciones sobre importaciones menores. La medida afectaría a una gran cantidad de productos de bajo costo, lo que podría encarecer el mercado local.",
+    "approved_text": "La salida de Piero Corvetto de la ONPE se da en medio de una fuerte controversia sobre la transparencia del proceso electoral. La situación plantea dudas sobre la independencia de la entidad.\n\nHermes, empresa de transporte, reveló que la ONPE solicitó 40 camiones para las elecciones del 11 de abril. Este pedido ha generado cuestionamientos sobre la logística y planificación de la institución.\n\nKeiko Fujimori comienza su campaña de segunda vuelta en medio de un panorama electoral incierto. La ex candidata apuesta por reuniones cercanas con la gente para fortalecer su imagen.\n\nLa Sunat está considerando nuevas regulaciones sobre importaciones menores. La medida afectaría a una gran cantidad de productos de bajo costo, lo que podría encarecer el mercado local.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
   },
   "voice": {
     "profile_id": "voicebox-local",
@@ -90,14 +518,125 @@
   },
   "audit": {
     "created_at": "2026-04-22T00:31:26",
-    "updated_at": "2026-04-22T00:31:26",
+    "updated_at": "2026-04-22T19:03:18",
     "events": [
       {
         "stage": "discover",
         "status": "completed",
         "timestamp": "2026-04-22T00:31:26",
         "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:36:42",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:36:42",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:05",
+        "details": "Se importaron 1 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:05",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:53",
+        "details": "Se descargaron 1 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:15",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:15",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:40:53",
+        "details": "Se descargaron 7 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:50:59",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:50:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:51:03",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:51:03",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:59:33",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:59:33",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:59",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T19:03:18",
+        "details": "Se importaron 4 speech(es) editoriales."
       }
     ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 22 de abril, revisamos las portadas marcadas por la crisis electoral, movimientos en la economia y tensiones en la agenda politica. En una jornada que conecta con el Dia de la Tierra, recorremos lo esencial de cada diario.",
+    "date_reference": "22 de abril: Dia de la Tierra",
+    "source_scope": "world",
+    "why_it_fits": "Aporta una referencia global reconocible y permite abrir con un tono sobrio antes de entrar en la coyuntura nacional.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-22T23:04:59"
   }
 }

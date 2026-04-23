@@ -1,0 +1,153 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-22-ojo-frontpage-001",
+  "source_id": "ojo",
+  "source_name": "Ojo",
+  "date": "2026-04-22",
+  "front_page_image": "data/jobs/2026-04-22/2026-04-22-ojo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Corvetto fuera de la ONPE por caos electoral",
+      "story_type": "politica",
+      "summary": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.",
+      "speech": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.18,
+        "y": 0.2,
+        "width": 0.64,
+        "height": 0.46
+      },
+      "key_facts": [
+        "salida de Corvetto",
+        "caos electoral",
+        "presion sobre la ONPE"
+      ],
+      "tone_notes": [
+        "serio",
+        "contextual",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar delitos no probados.",
+      "notes": "Se evita afirmar delitos no probados.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Mapa de puntos de robo en Lima",
+      "story_type": "policial",
+      "summary": "La inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.",
+      "speech": "La inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.36,
+        "y": 0.7,
+        "width": 0.28,
+        "height": 0.18
+      },
+      "key_facts": [
+        "mapa de robos",
+        "zonas de mayor riesgo",
+        "alerta ciudadana"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "cuidadoso"
+      ],
+      "safety_notes": "Se resume solo lo que se aprecia con claridad en la pagina.",
+      "notes": "Se resume solo lo que se aprecia con claridad en la pagina.",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-02",
+      "narrator_name": "Cuy-02",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Reynoso en la mira previo a partido con Garcilaso",
+      "story_type": "deportes",
+      "summary": "La expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad.",
+      "speech": "La expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad.",
+      "page_numbers": [
+        13
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.7,
+        "width": 0.28,
+        "height": 0.18
+      },
+      "key_facts": [
+        "estado del equipo",
+        "partido con Garcilaso",
+        "necesidad de victoria"
+      ],
+      "tone_notes": [
+        "entusiasta",
+        "urgente",
+        "expectante"
+      ],
+      "safety_notes": "Contexto basado en el análisis previo de la selección.",
+      "notes": "Contexto basado en el análisis previo de la selección.",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-depor",
+      "narrator_name": "Cuy-Depor",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Richavo destaca momento personal y familiar",
+      "story_type": "espectaculos",
+      "summary": "Ricardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía.",
+      "speech": "Ricardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía.",
+      "page_numbers": [
+        17
+      ],
+      "cover_region": {
+        "x": 0.66,
+        "y": 0.7,
+        "width": 0.28,
+        "height": 0.18
+      },
+      "key_facts": [
+        "momento familiar de Ricardo",
+        "relación con Katya",
+        "enfoque personal y familiar"
+      ],
+      "tone_notes": [
+        "positivo",
+        "personal",
+        "reflexivo"
+      ],
+      "safety_notes": "El contexto es familiar y emocional.",
+      "notes": "El contexto es familiar y emocional.",
+      "narrator_profile_id": "magaly_medina",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-02",
+      "narrator_name": "Cuy-02",
+      "segment_audio_file": null
+    }
+  ]
+}

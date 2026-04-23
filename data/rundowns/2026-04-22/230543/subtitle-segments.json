@@ -1,0 +1,523 @@
+{
+  "policy_id": "default-2-lines",
+  "text_source": "daily_rundown",
+  "text": "Hola. Hoy, 22 de abril, revisamos las portadas marcadas por la crisis electoral, movimientos en la economia y tensiones en la agenda politica. En una jornada que conecta con el Dia de la Tierra, recorremos lo esencial de cada diario.\n\nAhora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.\n\nLa salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.\n\nLa inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.\n\nLa expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad.\n\nRicardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía.\n\nAhora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.\n\nLa combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente.\n\nLa campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores.\n\nLa salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país.\n\nUniversitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
+  "audio_duration_seconds": 124.64,
+  "segments": [
+    {
+      "text": "Hola.",
+      "start": 0.0,
+      "end": 0.9
+    },
+    {
+      "text": "Hoy, 22 de abril,",
+      "start": 0.9,
+      "end": 2.003
+    },
+    {
+      "text": "revisamos las portadas",
+      "start": 2.003,
+      "end": 3.43
+    },
+    {
+      "text": "marcadas por la crisis",
+      "start": 3.43,
+      "end": 4.857
+    },
+    {
+      "text": "electoral, movimientos",
+      "start": 4.857,
+      "end": 6.284
+    },
+    {
+      "text": "en la economia y",
+      "start": 6.284,
+      "end": 7.322
+    },
+    {
+      "text": "tensiones en la agenda",
+      "start": 7.322,
+      "end": 8.749
+    },
+    {
+      "text": "politica.",
+      "start": 8.749,
+      "end": 9.649
+    },
+    {
+      "text": "En una jornada que",
+      "start": 9.649,
+      "end": 10.816
+    },
+    {
+      "text": "conecta con el Dia de la",
+      "start": 10.816,
+      "end": 12.373
+    },
+    {
+      "text": "Tierra, recorremos lo",
+      "start": 12.373,
+      "end": 13.735
+    },
+    {
+      "text": "esencial de cada diario.",
+      "start": 13.735,
+      "end": 14.4
+    },
+    {
+      "text": "Ahora entramos a Ojo.",
+      "start": 14.4,
+      "end": 15.767
+    },
+    {
+      "text": "Primero miramos la",
+      "start": 15.767,
+      "end": 16.939
+    },
+    {
+      "text": "portada completa y",
+      "start": 16.939,
+      "end": 18.111
+    },
+    {
+      "text": "despues vamos con sus 4",
+      "start": 18.111,
+      "end": 19.608
+    },
+    {
+      "text": "historias mas fuertes.",
+      "start": 19.608,
+      "end": 21.04
+    },
+    {
+      "text": "La salida de Corvetto",
+      "start": 21.04,
+      "end": 22.245
+    },
+    {
+      "text": "deja una señal fuerte en",
+      "start": 22.245,
+      "end": 23.622
+    },
+    {
+      "text": "plena resaca electoral.",
+      "start": 23.622,
+      "end": 24.941
+    },
+    {
+      "text": "Si el caos ya golpeo la",
+      "start": 24.941,
+      "end": 26.261
+    },
+    {
+      "text": "confianza en la ONPE, lo",
+      "start": 26.261,
+      "end": 27.638
+    },
+    {
+      "text": "que viene exige",
+      "start": 27.638,
+      "end": 28.538
+    },
+    {
+      "text": "explicaciones firmes y",
+      "start": 28.538,
+      "end": 29.8
+    },
+    {
+      "text": "una reorganizacion sin",
+      "start": 29.8,
+      "end": 31.062
+    },
+    {
+      "text": "margen para mas errores.",
+      "start": 31.062,
+      "end": 32.4
+    },
+    {
+      "text": "La inseguridad vuelve a",
+      "start": 32.4,
+      "end": 33.735
+    },
+    {
+      "text": "marcar la agenda en",
+      "start": 33.735,
+      "end": 34.837
+    },
+    {
+      "text": "Lima.",
+      "start": 34.837,
+      "end": 35.737
+    },
+    {
+      "text": "El informe ubica zonas",
+      "start": 35.737,
+      "end": 37.014
+    },
+    {
+      "text": "de robo reiterado y",
+      "start": 37.014,
+      "end": 38.117
+    },
+    {
+      "text": "refuerza una idea",
+      "start": 38.117,
+      "end": 39.103
+    },
+    {
+      "text": "simple: cuando el delito",
+      "start": 39.103,
+      "end": 40.496
+    },
+    {
+      "text": "se vuelve rutina, la",
+      "start": 40.496,
+      "end": 41.656
+    },
+    {
+      "text": "ausencia de control ya",
+      "start": 41.656,
+      "end": 42.933
+    },
+    {
+      "text": "no se puede maquillar.",
+      "start": 42.933,
+      "end": 43.6
+    },
+    {
+      "text": "La expectativa sigue",
+      "start": 43.6,
+      "end": 44.935
+    },
+    {
+      "text": "alta para Reynoso, a",
+      "start": 44.935,
+      "end": 46.269
+    },
+    {
+      "text": "pesar de los recientes",
+      "start": 46.269,
+      "end": 47.737
+    },
+    {
+      "text": "resultados.",
+      "start": 47.737,
+      "end": 48.637
+    },
+    {
+      "text": "El equipo nacional",
+      "start": 48.637,
+      "end": 49.839
+    },
+    {
+      "text": "necesita urgentemente",
+      "start": 49.839,
+      "end": 51.24
+    },
+    {
+      "text": "una victoria para",
+      "start": 51.24,
+      "end": 52.374
+    },
+    {
+      "text": "mantener viva la ilusión",
+      "start": 52.374,
+      "end": 53.976
+    },
+    {
+      "text": "en los hinchas, y",
+      "start": 53.976,
+      "end": 55.11
+    },
+    {
+      "text": "Garcilaso podría ser la",
+      "start": 55.11,
+      "end": 56.645
+    },
+    {
+      "text": "oportunidad.",
+      "start": 56.645,
+      "end": 57.28
+    },
+    {
+      "text": "Ricardo vive un buen",
+      "start": 57.28,
+      "end": 58.635
+    },
+    {
+      "text": "momento personal y",
+      "start": 58.635,
+      "end": 59.855
+    },
+    {
+      "text": "familiar, lo que según",
+      "start": 59.855,
+      "end": 61.346
+    },
+    {
+      "text": "él, ha sido un pilar",
+      "start": 61.346,
+      "end": 62.701
+    },
+    {
+      "text": "fundamental en su éxito",
+      "start": 62.701,
+      "end": 64.259
+    },
+    {
+      "text": "reciente.",
+      "start": 64.259,
+      "end": 65.159
+    },
+    {
+      "text": "Su relación con Katya y",
+      "start": 65.159,
+      "end": 66.718
+    },
+    {
+      "text": "sus hijos lo mantiene",
+      "start": 66.718,
+      "end": 68.141
+    },
+    {
+      "text": "enfocado y lleno de",
+      "start": 68.141,
+      "end": 69.428
+    },
+    {
+      "text": "energía.",
+      "start": 69.428,
+      "end": 69.68
+    },
+    {
+      "text": "Ahora entramos a Trome.",
+      "start": 69.68,
+      "end": 71.255
+    },
+    {
+      "text": "Primero miramos la",
+      "start": 71.255,
+      "end": 72.487
+    },
+    {
+      "text": "portada completa y",
+      "start": 72.487,
+      "end": 73.719
+    },
+    {
+      "text": "despues vamos con sus 4",
+      "start": 73.719,
+      "end": 75.294
+    },
+    {
+      "text": "historias mas fuertes.",
+      "start": 75.294,
+      "end": 76.8
+    },
+    {
+      "text": "La combi descontrolada",
+      "start": 76.8,
+      "end": 78.044
+    },
+    {
+      "text": "arrasó todo a su paso,",
+      "start": 78.044,
+      "end": 79.289
+    },
+    {
+      "text": "dejando una persona",
+      "start": 79.289,
+      "end": 80.364
+    },
+    {
+      "text": "muerta y 20 heridos.",
+      "start": 80.364,
+      "end": 81.495
+    },
+    {
+      "text": "Las imágenes del",
+      "start": 81.495,
+      "end": 82.4
+    },
+    {
+      "text": "incidente muestran el",
+      "start": 82.4,
+      "end": 83.588
+    },
+    {
+      "text": "impacto devastador,",
+      "start": 83.588,
+      "end": 84.663
+    },
+    {
+      "text": "mientras las autoridades",
+      "start": 84.663,
+      "end": 86.02
+    },
+    {
+      "text": "investigan las causas",
+      "start": 86.02,
+      "end": 87.208
+    },
+    {
+      "text": "del accidente.",
+      "start": 87.208,
+      "end": 88.0
+    },
+    {
+      "text": "La campaña comercial se",
+      "start": 88.0,
+      "end": 89.413
+    },
+    {
+      "text": "intensifica a medida que",
+      "start": 89.413,
+      "end": 90.886
+    },
+    {
+      "text": "se acerca el Día de la",
+      "start": 90.886,
+      "end": 92.238
+    },
+    {
+      "text": "Madre.",
+      "start": 92.238,
+      "end": 93.138
+    },
+    {
+      "text": "Las tiendas, desde ropa",
+      "start": 93.138,
+      "end": 94.55
+    },
+    {
+      "text": "hasta electrodomésticos,",
+      "start": 94.55,
+      "end": 96.024
+    },
+    {
+      "text": "buscan aprovechar la",
+      "start": 96.024,
+      "end": 97.252
+    },
+    {
+      "text": "alta demanda con ofertas",
+      "start": 97.252,
+      "end": 98.726
+    },
+    {
+      "text": "atractivas para los",
+      "start": 98.726,
+      "end": 99.893
+    },
+    {
+      "text": "consumidores.",
+      "start": 99.893,
+      "end": 100.16
+    },
+    {
+      "text": "La salida de Corvetto",
+      "start": 100.16,
+      "end": 101.416
+    },
+    {
+      "text": "del cargo de jefe de la",
+      "start": 101.416,
+      "end": 102.791
+    },
+    {
+      "text": "ONPE responde al caos",
+      "start": 102.791,
+      "end": 104.047
+    },
+    {
+      "text": "electoral reciente.",
+      "start": 104.047,
+      "end": 105.184
+    },
+    {
+      "text": "La presión por los",
+      "start": 105.184,
+      "end": 106.26
+    },
+    {
+      "text": "fallos de las elecciones",
+      "start": 106.26,
+      "end": 107.696
+    },
+    {
+      "text": "ha sido insostenible, lo",
+      "start": 107.696,
+      "end": 109.131
+    },
+    {
+      "text": "que abre una nueva etapa",
+      "start": 109.131,
+      "end": 110.566
+    },
+    {
+      "text": "en la gestión electoral",
+      "start": 110.566,
+      "end": 111.942
+    },
+    {
+      "text": "del país.",
+      "start": 111.942,
+      "end": 112.48
+    },
+    {
+      "text": "Universitario tiene un",
+      "start": 112.48,
+      "end": 113.798
+    },
+    {
+      "text": "reto importante ante",
+      "start": 113.798,
+      "end": 114.996
+    },
+    {
+      "text": "Garcilaso.",
+      "start": 114.996,
+      "end": 115.896
+    },
+    {
+      "text": "Luego de algunos",
+      "start": 115.896,
+      "end": 116.854
+    },
+    {
+      "text": "tropiezos, el equipo de",
+      "start": 116.854,
+      "end": 118.232
+    },
+    {
+      "text": "Reynoso necesita",
+      "start": 118.232,
+      "end": 119.19
+    },
+    {
+      "text": "recuperar la confianza",
+      "start": 119.19,
+      "end": 120.508
+    },
+    {
+      "text": "de sus seguidores y",
+      "start": 120.508,
+      "end": 121.646
+    },
+    {
+      "text": "demostrar su nivel para",
+      "start": 121.646,
+      "end": 123.024
+    },
+    {
+      "text": "seguir peleando en el",
+      "start": 123.024,
+      "end": 124.282
+    },
+    {
+      "text": "campeonato.",
+      "start": 124.282,
+      "end": 124.64
+    }
+  ]
+}

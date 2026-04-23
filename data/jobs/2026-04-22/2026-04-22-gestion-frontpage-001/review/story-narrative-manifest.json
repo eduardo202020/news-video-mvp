@@ -1,0 +1,155 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-22-gestion-frontpage-001",
+  "source_id": "gestion",
+  "source_name": "Gestion",
+  "date": "2026-04-22",
+  "front_page_image": "data/jobs/2026-04-22/2026-04-22-gestion-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Minería formal se restringe y crece la ilegal",
+      "story_type": "economia",
+      "summary": "La minería formal en el país enfrenta restricciones cada vez mayores, mientras que la minería ilegal y la informal siguen creciendo sin control, afectando al medio ambiente y a la economía.",
+      "speech": "La minería formal en el país enfrenta restricciones cada vez mayores, mientras que la minería ilegal y la informal siguen creciendo sin control, afectando al medio ambiente y a la economía.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.08,
+        "y": 0.62,
+        "width": 0.68,
+        "height": 0.22
+      },
+      "key_facts": [
+        "restricciones a minería formal",
+        "crecimiento de minería ilegal",
+        "impacto ambiental"
+      ],
+      "tone_notes": [
+        "serio",
+        "informativo",
+        "precavido"
+      ],
+      "safety_notes": "La información está basada en estudios previos y estimaciones de la producción.",
+      "notes": "La información está basada en estudios previos y estimaciones de la producción.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Venta de refrigeradoras se dispara por verano",
+      "story_type": "economia",
+      "summary": "El mercado de refrigeradoras experimentó un incremento considerable durante este verano. Las ventas se dispararon impulsadas por la temporada de altas temperaturas y la demanda de electrodomésticos.",
+      "speech": "El mercado de refrigeradoras experimentó un incremento considerable durante este verano. Las ventas se dispararon impulsadas por la temporada de altas temperaturas y la demanda de electrodomésticos.",
+      "page_numbers": [
+        5
+      ],
+      "cover_region": {
+        "x": 0.74,
+        "y": 0.28,
+        "width": 0.22,
+        "height": 0.22
+      },
+      "key_facts": [
+        "aumento en ventas",
+        "factores estacionales",
+        "demanda de refrigeradoras"
+      ],
+      "tone_notes": [
+        "informativo",
+        "dinámico",
+        "optimista"
+      ],
+      "safety_notes": "Los datos de ventas deben compararse con los anteriores para entender la magnitud del incremento.",
+      "notes": "Los datos de ventas deben compararse con los anteriores para entender la magnitud del incremento.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Agrícola Cerro Prieto invertirá en arándanos",
+      "story_type": "economia",
+      "summary": "Agrícola Cerro Prieto destinará 32 millones de dólares a la siembra de arándanos, apostando por un mercado en expansión. La inversión busca diversificar sus productos agrícolas y aprovechar la demanda internacional.",
+      "speech": "Agrícola Cerro Prieto destinará 32 millones de dólares a la siembra de arándanos, apostando por un mercado en expansión. La inversión busca diversificar sus productos agrícolas y aprovechar la demanda internacional.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.08,
+        "y": 0.62,
+        "width": 0.68,
+        "height": 0.22
+      },
+      "key_facts": [
+        "inversión de Cerro Prieto",
+        "32 millones de dólares",
+        "expansión en arándanos"
+      ],
+      "tone_notes": [
+        "positivo",
+        "optimista",
+        "detallado"
+      ],
+      "safety_notes": "Los datos de inversión y expansión deben ser confirmados por la empresa.",
+      "notes": "Los datos de inversión y expansión deben ser confirmados por la empresa.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Puerto de Chancay en planes de gobierno",
+      "story_type": "economia",
+      "summary": "El puerto de Chancay, uno de los proyectos más ambiciosos del gobierno, está bajo la mira de varios candidatos presidenciales. La infraestructura portuaria se ve como un factor clave para el crecimiento del comercio exterior.",
+      "speech": "El puerto de Chancay, uno de los proyectos más ambiciosos del gobierno, está bajo la mira de varios candidatos presidenciales. La infraestructura portuaria se ve como un factor clave para el crecimiento del comercio exterior.",
+      "page_numbers": [
+        12
+      ],
+      "cover_region": {
+        "x": 0.08,
+        "y": 0.86,
+        "width": 0.68,
+        "height": 0.1
+      },
+      "key_facts": [
+        "proyecto puerto Chancay",
+        "interés presidencial",
+        "crecimiento del comercio exterior"
+      ],
+      "tone_notes": [
+        "analítico",
+        "serio",
+        "informativo"
+      ],
+      "safety_notes": "El proyecto sigue siendo parte de la agenda de varios políticos.",
+      "notes": "El proyecto sigue siendo parte de la agenda de varios políticos.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "cuy-01",
+      "narrator_name": "Cuy-01",
+      "segment_audio_file": null
+    }
+  ]
+}

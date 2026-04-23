@@ -8,20 +8,56 @@
     "requested_date": "2026-04-22",
     "issue_date": "2026-04-22",
     "publication_status": "available",
-    "discovery_type": null,
-    "front_page_url": "https://t.prcdn.co/img",
-    "discovered_pages_count": 0,
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026042200000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
     "archive_summary_path": null,
     "page_count_probe_path": null
   },
   "approval_mode": "semi_auto",
-  "status": "discovered",
+  "status": "scripted",
   "input_assets": {
-    "front_page_image": null,
-    "front_page_url": "https://t.prcdn.co/img",
+    "front_page_image": "data/jobs/2026-04-22/2026-04-22-ojo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026042200000000001001&page=1&scale=300",
     "source_url": "https://t.prcdn.co/img",
     "source_config": "automation/sources/diarios/ojo.json",
-    "pages": []
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042200000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-ojo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042200000000001001&page=3&scale=83",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-ojo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042200000000001001&page=4&scale=83",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-ojo-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 13",
+        "page_number": 13,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042200000000001001&page=13&scale=83",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-ojo-frontpage-001/input/pages/page-13.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 17",
+        "page_number": 17,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042200000000001001&page=17&scale=83",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-ojo-frontpage-001/input/pages/page-17.jpg"
+      }
+    ]
   },
   "extraction": {
     "ocr_blocks": [],
@@ -36,27 +72,312 @@
   },
   "page_selection": {
     "strategy": "cover_first",
-    "provider": null,
-    "status": "not_started",
-    "selected_page_numbers": [],
-    "candidates": [],
-    "stories": [],
-    "notes": ""
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      3,
+      4,
+      13,
+      17
+    ],
+    "candidates": [
+      {
+        "headline": "Corvetto fuera de la ONPE por caos electoral",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.18,
+          "y": 0.2,
+          "width": 0.64,
+          "height": 0.46
+        },
+        "page_number": 3,
+        "evidence_line": "IMPACTO pág. 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Inseguridad: mapa de puntos de robo en Lima",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.36,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "page_number": 4,
+        "evidence_line": "pág. 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      },
+      {
+        "headline": "Reynoso en la mira previo a partido con Garcilaso",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "page_number": 13,
+        "evidence_line": "pág. 13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "Richavo destaca momento personal y familiar",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "page_number": 17,
+        "evidence_line": "pág. 17",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Corvetto fuera de la ONPE por caos electoral",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.18,
+          "y": 0.2,
+          "width": 0.64,
+          "height": 0.46
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "IMPACTO pág. 3",
+        "evidence_lines": [
+          "IMPACTO pág. 3"
+        ],
+        "confidence": 0.97
+      },
+      {
+        "headline": "Inseguridad: mapa de puntos de robo en Lima",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.36,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "pág. 4",
+        "evidence_lines": [
+          "pág. 4"
+        ],
+        "confidence": 0.92
+      },
+      {
+        "headline": "Reynoso en la mira previo a partido con Garcilaso",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "page_numbers": [
+          13
+        ],
+        "evidence": "pág. 13",
+        "evidence_lines": [
+          "pág. 13"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "Richavo destaca momento personal y familiar",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "page_numbers": [
+          17
+        ],
+        "evidence": "pág. 17",
+        "evidence_lines": [
+          "pág. 17"
+        ],
+        "confidence": 0.88
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
-    "provider": null,
-    "status": "not_started",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
     "source": "supporting_pages_manual",
-    "stories": [],
-    "notes": ""
+    "stories": [
+      {
+        "headline": "Corvetto fuera de la ONPE por caos electoral",
+        "story_type": "politica",
+        "summary": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.",
+        "speech": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "serio",
+          "contextual",
+          "prudente"
+        ],
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.18,
+          "y": 0.2,
+          "width": 0.64,
+          "height": 0.46
+        },
+        "key_facts": [
+          "salida de Corvetto",
+          "caos electoral",
+          "presion sobre la ONPE"
+        ],
+        "key_facts_used": [
+          "salida de Corvetto",
+          "caos electoral",
+          "presion sobre la ONPE"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita afirmar delitos no probados.",
+        "notes": "Se evita afirmar delitos no probados."
+      },
+      {
+        "headline": "Mapa de puntos de robo en Lima",
+        "story_type": "policial",
+        "summary": "La inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.",
+        "speech": "La inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "directo",
+          "tenso",
+          "cuidadoso"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.36,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "key_facts": [
+          "mapa de robos",
+          "zonas de mayor riesgo",
+          "alerta ciudadana"
+        ],
+        "key_facts_used": [
+          "mapa de robos",
+          "zonas de mayor riesgo",
+          "alerta ciudadana"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resume solo lo que se aprecia con claridad en la pagina.",
+        "notes": "Se resume solo lo que se aprecia con claridad en la pagina."
+      },
+      {
+        "headline": "Reynoso en la mira previo a partido con Garcilaso",
+        "story_type": "deportes",
+        "summary": "La expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad.",
+        "speech": "La expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad.",
+        "narrator_profile_id": "gonzalo_nunez",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "entusiasta",
+          "urgente",
+          "expectante"
+        ],
+        "page_numbers": [
+          13
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "key_facts": [
+          "estado del equipo",
+          "partido con Garcilaso",
+          "necesidad de victoria"
+        ],
+        "key_facts_used": [
+          "estado del equipo",
+          "partido con Garcilaso",
+          "necesidad de victoria"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Contexto basado en el análisis previo de la selección.",
+        "notes": "Contexto basado en el análisis previo de la selección."
+      },
+      {
+        "headline": "Richavo destaca momento personal y familiar",
+        "story_type": "espectaculos",
+        "summary": "Ricardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía.",
+        "speech": "Ricardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía.",
+        "narrator_profile_id": "magaly_medina",
+        "narrator_role": "conductora_espectaculos",
+        "tone_notes": [
+          "positivo",
+          "personal",
+          "reflexivo"
+        ],
+        "page_numbers": [
+          17
+        ],
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.7,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "key_facts": [
+          "momento familiar de Ricardo",
+          "relación con Katya",
+          "enfoque personal y familiar"
+        ],
+        "key_facts_used": [
+          "momento familiar de Ricardo",
+          "relación con Katya",
+          "enfoque personal y familiar"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El contexto es familiar y emocional.",
+        "notes": "El contexto es familiar y emocional."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-22/2026-04-22-ojo-frontpage-001/review/story-narrative-manifest.json"
   },
   "script": {
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "",
-    "approved_text": "",
-    "review_notes": ""
+    "draft": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.\n\nLa inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.\n\nLa expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad.\n\nRicardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía.",
+    "approved_text": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.\n\nLa inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.\n\nLa expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad.\n\nRicardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
   },
   "voice": {
     "profile_id": "voicebox-local",
@@ -90,14 +411,131 @@
   },
   "audit": {
     "created_at": "2026-04-22T00:31:28",
-    "updated_at": "2026-04-22T00:31:28",
+    "updated_at": "2026-04-22T23:05:15",
     "events": [
       {
         "stage": "discover",
         "status": "completed",
         "timestamp": "2026-04-22T00:31:28",
         "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:37:34",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:37:35",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:05",
+        "details": "Se importaron 1 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:05",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:50",
+        "details": "Se descargaron 1 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:15",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:15",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:59",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:50:59",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:50:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:51:03",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:51:03",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:59:33",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:59:33",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:04",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:59",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:05:15",
+        "details": "Se importaron 4 speech(es) editoriales."
       }
     ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 22 de abril, revisamos las portadas marcadas por la crisis electoral, movimientos en la economia y tensiones en la agenda politica. En una jornada que conecta con el Dia de la Tierra, recorremos lo esencial de cada diario.",
+    "date_reference": "22 de abril: Dia de la Tierra",
+    "source_scope": "world",
+    "why_it_fits": "Aporta una referencia global reconocible y permite abrir con un tono sobrio antes de entrar en la coyuntura nacional.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-22T23:04:59"
   }
 }

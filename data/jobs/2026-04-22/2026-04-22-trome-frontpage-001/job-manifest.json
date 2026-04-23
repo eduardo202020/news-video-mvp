@@ -8,20 +8,63 @@
     "requested_date": "2026-04-22",
     "issue_date": "2026-04-22",
     "publication_status": "available",
-    "discovery_type": null,
-    "front_page_url": "https://t.prcdn.co/img",
-    "discovered_pages_count": 0,
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026042200000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
     "archive_summary_path": null,
     "page_count_probe_path": null
   },
   "approval_mode": "semi_auto",
-  "status": "discovered",
+  "status": "scripted",
   "input_assets": {
-    "front_page_image": null,
-    "front_page_url": "https://t.prcdn.co/img",
+    "front_page_image": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026042200000000001001&page=1&scale=300",
     "source_url": "https://t.prcdn.co/img",
     "source_config": "automation/sources/diarios/trome.json",
-    "pages": []
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042200000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042200000000001001&page=4&scale=82",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042200000000001001&page=7&scale=82",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 8",
+        "page_number": 8,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042200000000001001&page=8&scale=82",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/input/pages/page-08.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042200000000001001&page=9&scale=82",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042200000000001001&page=11&scale=82",
+        "local_path": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/input/pages/page-11.jpg"
+      }
+    ]
   },
   "extraction": {
     "ocr_blocks": [],
@@ -36,27 +79,330 @@
   },
   "page_selection": {
     "strategy": "cover_first",
-    "provider": null,
-    "status": "not_started",
-    "selected_page_numbers": [],
-    "candidates": [],
-    "stories": [],
-    "notes": ""
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      4,
+      7,
+      8,
+      9,
+      11
+    ],
+    "candidates": [
+      {
+        "headline": "Cayo Corvetto tras desastre electoral",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.28,
+          "y": 0.22,
+          "width": 0.62,
+          "height": 0.58
+        },
+        "page_number": 8,
+        "evidence_line": "Páginas 8 y 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Cayo Corvetto tras desastre electoral",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.28,
+          "y": 0.22,
+          "width": 0.62,
+          "height": 0.58
+        },
+        "page_number": 9,
+        "evidence_line": "Páginas 8 y 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Universitario busca levantar cabeza ante Garcilaso",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.28,
+          "width": 0.22,
+          "height": 0.4
+        },
+        "page_number": 11,
+        "evidence_line": "PÁGINA 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "Tragedia por combi sin control deja muertos",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.7,
+          "width": 0.22,
+          "height": 0.16
+        },
+        "page_number": 4,
+        "evidence_line": "PÁGINA 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "Campaña comercial por dia de la madre se intensifica",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.86,
+          "width": 0.22,
+          "height": 0.12
+        },
+        "page_number": 7,
+        "evidence_line": "PÁGINA 7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Tragedia por combi sin control deja muertos",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.7,
+          "width": 0.22,
+          "height": 0.16
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "PÁGINA 4",
+        "evidence_lines": [
+          "PÁGINA 4"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "Campaña comercial por dia de la madre se intensifica",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.86,
+          "width": 0.22,
+          "height": 0.12
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "PÁGINA 7",
+        "evidence_lines": [
+          "PÁGINA 7"
+        ],
+        "confidence": 0.88
+      },
+      {
+        "headline": "Cayo Corvetto tras desastre electoral",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.28,
+          "y": 0.22,
+          "width": 0.62,
+          "height": 0.58
+        },
+        "page_numbers": [
+          8,
+          9
+        ],
+        "evidence": "Páginas 8 y 9",
+        "evidence_lines": [
+          "Páginas 8 y 9"
+        ],
+        "confidence": 0.96
+      },
+      {
+        "headline": "Universitario busca levantar cabeza ante Garcilaso",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.28,
+          "width": 0.22,
+          "height": 0.4
+        },
+        "page_numbers": [
+          11
+        ],
+        "evidence": "PÁGINA 11",
+        "evidence_lines": [
+          "PÁGINA 11"
+        ],
+        "confidence": 0.91
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
-    "provider": null,
-    "status": "not_started",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
     "source": "supporting_pages_manual",
-    "stories": [],
-    "notes": ""
+    "stories": [
+      {
+        "headline": "Tragedia por combi sin control deja muertos",
+        "story_type": "policial",
+        "summary": "La combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente.",
+        "speech": "La combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "grave",
+          "directo",
+          "dramático"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.7,
+          "width": 0.22,
+          "height": 0.16
+        },
+        "key_facts": [
+          "combi fuera de control",
+          "muertos y heridos",
+          "investigación en curso"
+        ],
+        "key_facts_used": [
+          "combi fuera de control",
+          "muertos y heridos",
+          "investigación en curso"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Las imágenes proporcionadas dan detalles gráficos, pero se mantienen los hechos verificables.",
+        "notes": "Las imágenes proporcionadas dan detalles gráficos, pero se mantienen los hechos verificables."
+      },
+      {
+        "headline": "Campaña comercial por dia de la madre se intensifica",
+        "story_type": "actualidad",
+        "summary": "La campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores.",
+        "speech": "La campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores.",
+        "narrator_profile_id": "rene_gastelumendi",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "informativo",
+          "comercial",
+          "dinámico"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.86,
+          "width": 0.22,
+          "height": 0.12
+        },
+        "key_facts": [
+          "campaña Día de la Madre",
+          "ofertas comerciales",
+          "expectativa de compras"
+        ],
+        "key_facts_used": [
+          "campaña Día de la Madre",
+          "ofertas comerciales",
+          "expectativa de compras"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se ofrece un panorama general sin detalles específicos de las ofertas.",
+        "notes": "Se ofrece un panorama general sin detalles específicos de las ofertas."
+      },
+      {
+        "headline": "Corvetto renuncia por caos electoral",
+        "story_type": "politica",
+        "summary": "La salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país.",
+        "speech": "La salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "serio",
+          "analítico",
+          "crítico"
+        ],
+        "page_numbers": [
+          8,
+          9
+        ],
+        "cover_region": {
+          "x": 0.28,
+          "y": 0.22,
+          "width": 0.62,
+          "height": 0.58
+        },
+        "key_facts": [
+          "renuncia de Corvetto",
+          "caos electoral",
+          "presión política"
+        ],
+        "key_facts_used": [
+          "renuncia de Corvetto",
+          "caos electoral",
+          "presión política"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se describe la situación política con base en fuentes y hechos probados.",
+        "notes": "Se describe la situación política con base en fuentes y hechos probados."
+      },
+      {
+        "headline": "Universitario busca levantar cabeza ante Garcilaso",
+        "story_type": "deportes",
+        "summary": "Universitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
+        "speech": "Universitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
+        "narrator_profile_id": "gonzalo_nunez",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "motivado",
+          "deportivo",
+          "optimista"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.28,
+          "width": 0.22,
+          "height": 0.4
+        },
+        "key_facts": [
+          "partido ante Garcilaso",
+          "necesidad de victoria",
+          "recuperación del equipo"
+        ],
+        "key_facts_used": [
+          "partido ante Garcilaso",
+          "necesidad de victoria",
+          "recuperación del equipo"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La narrativa se enfoca en los retos del equipo sin exagerar las expectativas.",
+        "notes": "La narrativa se enfoca en los retos del equipo sin exagerar las expectativas."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-22/2026-04-22-trome-frontpage-001/review/story-narrative-manifest.json"
   },
   "script": {
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "",
-    "approved_text": "",
-    "review_notes": ""
+    "draft": "La combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente.\n\nLa campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores.\n\nLa salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país.\n\nUniversitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
+    "approved_text": "La combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente.\n\nLa campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores.\n\nLa salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país.\n\nUniversitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
   },
   "voice": {
     "profile_id": "voicebox-local",
@@ -90,14 +436,143 @@
   },
   "audit": {
     "created_at": "2026-04-22T00:31:29",
-    "updated_at": "2026-04-22T00:31:29",
+    "updated_at": "2026-04-22T23:05:15",
     "events": [
       {
         "stage": "discover",
         "status": "completed",
         "timestamp": "2026-04-22T00:31:29",
         "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:38:04",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:38:04",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:05",
+        "details": "Se importaron 1 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:05",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:18",
+        "details": "Se descargaron 1 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T13:40:46",
+        "details": "Se descargaron 1 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:15",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:15",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:39:46",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:50:59",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:50:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:51:03",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:51:03",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:57:13",
+        "details": "Se importaron 1 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:59:33",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T22:59:33",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:04",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:59",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:04:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-22T23:05:15",
+        "details": "Se importaron 4 speech(es) editoriales."
       }
     ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 22 de abril, revisamos las portadas marcadas por la crisis electoral, movimientos en la economia y tensiones en la agenda politica. En una jornada que conecta con el Dia de la Tierra, recorremos lo esencial de cada diario.",
+    "date_reference": "22 de abril: Dia de la Tierra",
+    "source_scope": "world",
+    "why_it_fits": "Aporta una referencia global reconocible y permite abrir con un tono sobrio antes de entrar en la coyuntura nacional.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-22T23:04:59"
   }
 }
