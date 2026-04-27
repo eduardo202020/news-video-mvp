@@ -1,0 +1,155 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-23-trome-frontpage-001",
+  "source_id": "trome",
+  "source_name": "Trome",
+  "date": "2026-04-23",
+  "front_page_image": "data/jobs/2026-04-23/2026-04-23-trome-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Fiscalía acorrala a Corvetto",
+      "story_type": "politica",
+      "summary": "La Fiscalía sigue de cerca a Piero Corvetto por posibles vínculos con el fraude electoral. Su detención es una medida cautelar mientras continúan las investigaciones.",
+      "speech": "La Fiscalía sigue de cerca a Piero Corvetto por posibles vínculos con el fraude electoral. Su detención es una medida cautelar mientras continúan las investigaciones.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "cover_region": {
+        "x": 0.18,
+        "y": 0.28,
+        "width": 0.55,
+        "height": 0.38
+      },
+      "key_facts": [
+        "investigación sobre Corvetto",
+        "posible fraude electoral",
+        "medida cautelar"
+      ],
+      "tone_notes": [
+        "serio",
+        "estratégico",
+        "alerta"
+      ],
+      "safety_notes": "El proceso judicial está en curso, y las implicaciones aún no están claras.",
+      "notes": "El proceso judicial está en curso, y las implicaciones aún no están claras.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Perú compró aviones a Estados Unidos",
+      "story_type": "politica",
+      "summary": "Perú adquirió aviones F-16 por un valor de 462 millones de dólares, asegurando así un control de defensa más robusto ante las tensiones en la región.",
+      "speech": "Perú adquirió aviones F-16 por un valor de 462 millones de dólares, asegurando así un control de defensa más robusto ante las tensiones en la región.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.2,
+        "y": 0.72,
+        "width": 0.55,
+        "height": 0.18
+      },
+      "key_facts": [
+        "compra de F-16",
+        "462 millones de dólares",
+        "refuerzo de defensa"
+      ],
+      "tone_notes": [
+        "informativo",
+        "formal",
+        "militar"
+      ],
+      "safety_notes": "Se detallan los costos, pero no se ahonda en el impacto militar.",
+      "notes": "Se detallan los costos, pero no se ahonda en el impacto militar.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Se fue Rabanal y cremas golearon",
+      "story_type": "deportes",
+      "summary": "Tras la salida de Javier Rabanal, Universitario recuperó su nivel de juego y goleó 4-1 a Deportivo Garcilaso, mostrando una mejora significativa en su rendimiento.",
+      "speech": "Tras la salida de Javier Rabanal, Universitario recuperó su nivel de juego y goleó 4-1 a Deportivo Garcilaso, mostrando una mejora significativa en su rendimiento.",
+      "page_numbers": [
+        11
+      ],
+      "cover_region": {
+        "x": 0.72,
+        "y": 0.3,
+        "width": 0.25,
+        "height": 0.5
+      },
+      "key_facts": [
+        "victoria 4-1",
+        "Deportivo Garcilaso",
+        "salida de Rabanal"
+      ],
+      "tone_notes": [
+        "energético",
+        "futbolístico",
+        "positivo"
+      ],
+      "safety_notes": "El impacto del cambio en el equipo se evalúa con base en los resultados inmediatos del partido.",
+      "notes": "El impacto del cambio en el equipo se evalúa con base en los resultados inmediatos del partido.",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "Gonzalo Nunez",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Fiscalía pide detención de Corvetto",
+      "story_type": "politica",
+      "summary": "El Ministerio Público ha solicitado la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras la revelación de su implicación en irregularidades durante las elecciones.",
+      "speech": "El Ministerio Público ha solicitado la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras la revelación de su implicación en irregularidades durante las elecciones.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "cover_region": {
+        "x": 0.18,
+        "y": 0.28,
+        "width": 0.55,
+        "height": 0.38
+      },
+      "key_facts": [
+        "solicitud de detención",
+        "Corvetto",
+        "irregularidades en elecciones"
+      ],
+      "tone_notes": [
+        "formal",
+        "directo",
+        "declarativo"
+      ],
+      "safety_notes": "Aún no se confirma el alcance de las acusaciones, solo la solicitud de detención.",
+      "notes": "Aún no se confirma el alcance de las acusaciones, solo la solicitud de detención.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    }
+  ]
+}

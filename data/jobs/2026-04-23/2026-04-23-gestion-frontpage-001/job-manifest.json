@@ -1,0 +1,814 @@
+{
+  "job_id": "2026-04-23-gestion-frontpage-001",
+  "source_id": "gestion",
+  "date": "2026-04-23",
+  "source": {
+    "source_id": "gestion",
+    "source_config_path": "automation/sources/diarios/gestion.json",
+    "requested_date": "2026-04-23",
+    "issue_date": "2026-04-23",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/gestion.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=6&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=7&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 10",
+        "page_number": 10,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=10&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/pages/page-10.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=16&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/pages/page-16.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 22",
+        "page_number": 22,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042300000000001001&page=22&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/pages/page-22.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      2,
+      3,
+      6,
+      7,
+      10,
+      16,
+      22
+    ],
+    "candidates": [
+      {
+        "headline": "Comercio ilicito golpea a empresas",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.1,
+          "y": 0.25,
+          "width": 0.7,
+          "height": 0.35
+        },
+        "page_number": 10,
+        "evidence_line": "P.10",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Entel invertira 221 millones",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.25,
+          "width": 0.22,
+          "height": 0.25
+        },
+        "page_number": 6,
+        "evidence_line": "P.6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "Clinica Javier Prado expandira operaciones",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.5,
+          "width": 0.22,
+          "height": 0.2
+        },
+        "page_number": 7,
+        "evidence_line": "P.7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      },
+      {
+        "headline": "BCR pone tope a tasas de creditos",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.6,
+          "width": 0.45,
+          "height": 0.25
+        },
+        "page_number": 16,
+        "evidence_line": "P.16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.87
+      },
+      {
+        "headline": "Callao obtiene trato especial",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.5,
+          "y": 0.65,
+          "width": 0.25,
+          "height": 0.2
+        },
+        "page_number": 2,
+        "evidence_line": "P.2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.85
+      },
+      {
+        "headline": "Callao obtiene trato especial",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.5,
+          "y": 0.65,
+          "width": 0.25,
+          "height": 0.2
+        },
+        "page_number": 3,
+        "evidence_line": "P.2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.85
+      },
+      {
+        "headline": "La IA tiene problema de imagen",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.75,
+          "width": 0.22,
+          "height": 0.18
+        },
+        "page_number": 22,
+        "evidence_line": "P.22",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.83
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Callao obtiene trato especial",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.5,
+          "y": 0.65,
+          "width": 0.25,
+          "height": 0.2
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "P.2-3",
+        "evidence_lines": [
+          "P.2-3"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "headline": "Entel invertira 221 millones",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.25,
+          "width": 0.22,
+          "height": 0.25
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "P.6",
+        "evidence_lines": [
+          "P.6"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "Clinica Javier Prado expandira operaciones",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.5,
+          "width": 0.22,
+          "height": 0.2
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "P.7",
+        "evidence_lines": [
+          "P.7"
+        ],
+        "confidence": 0.88
+      },
+      {
+        "headline": "Comercio ilicito golpea a empresas",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.1,
+          "y": 0.25,
+          "width": 0.7,
+          "height": 0.35
+        },
+        "page_numbers": [
+          10
+        ],
+        "evidence": "P.10",
+        "evidence_lines": [
+          "P.10"
+        ],
+        "confidence": 0.96
+      },
+      {
+        "headline": "BCR pone tope a tasas de creditos",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.6,
+          "width": 0.45,
+          "height": 0.25
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "P.16",
+        "evidence_lines": [
+          "P.16"
+        ],
+        "confidence": 0.87
+      },
+      {
+        "headline": "La IA tiene problema de imagen",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.75,
+          "width": 0.22,
+          "height": 0.18
+        },
+        "page_numbers": [
+          22
+        ],
+        "evidence": "P.22",
+        "evidence_lines": [
+          "P.22"
+        ],
+        "confidence": 0.83
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Callao obtiene trato especial para Zona Económica Privada",
+        "story_type": "economia",
+        "summary": "Callao logra un trato preferencial en su Zona Económica Privada, con incentivos que buscan atraer nuevas inversiones y mejorar la competitividad de su puerto y actividades logísticas.",
+        "speech": "Callao logra un trato preferencial en su Zona Económica Privada, con incentivos que buscan atraer nuevas inversiones y mejorar la competitividad de su puerto y actividades logísticas.",
+        "narrator_profile_id": "julio_velarde",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "informativo",
+          "económico",
+          "analítico"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.5,
+          "y": 0.65,
+          "width": 0.25,
+          "height": 0.2
+        },
+        "key_facts": [
+          "trato preferencial",
+          "incentivos",
+          "mejora de competitividad"
+        ],
+        "key_facts_used": [
+          "trato preferencial",
+          "incentivos",
+          "mejora de competitividad"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El contexto del trato especial es claro, pero se limita a las referencias del documento.",
+        "notes": "El contexto del trato especial es claro, pero se limita a las referencias del documento."
+      },
+      {
+        "headline": "Entel invertirá 221 millones en el mercado peruano",
+        "story_type": "economia",
+        "summary": "Entel reafirma su apuesta por el mercado peruano, con una inversión de 221 millones de dólares en expansión y actualización de su infraestructura tecnológica para el 2025.",
+        "speech": "Entel reafirma su apuesta por el mercado peruano, con una inversión de 221 millones de dólares en expansión y actualización de su infraestructura tecnológica para el 2025.",
+        "narrator_profile_id": "julio_velarde",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "empresarial",
+          "positivo",
+          "informativo"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.25,
+          "width": 0.22,
+          "height": 0.25
+        },
+        "key_facts": [
+          "221 millones de dólares",
+          "expansión de infraestructura",
+          "proyección para 2025"
+        ],
+        "key_facts_used": [
+          "221 millones de dólares",
+          "expansión de infraestructura",
+          "proyección para 2025"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se destacan las cifras de inversión, pero se evita especular sobre la implementación futura.",
+        "notes": "Se destacan las cifras de inversión, pero se evita especular sobre la implementación futura."
+      },
+      {
+        "headline": "Clínica Javier Prado expandirá operaciones",
+        "story_type": "economia",
+        "summary": "La Clínica Javier Prado proyecta triplicar su tamaño, con una inversión de 5 millones de dólares, apuntando a una expansión en su red de servicios médicos en Lima.",
+        "speech": "La Clínica Javier Prado proyecta triplicar su tamaño, con una inversión de 5 millones de dólares, apuntando a una expansión en su red de servicios médicos en Lima.",
+        "narrator_profile_id": "julio_velarde",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "optimista",
+          "de crecimiento",
+          "progresivo"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.5,
+          "width": 0.22,
+          "height": 0.2
+        },
+        "key_facts": [
+          "expansión",
+          "5 millones de dólares",
+          "nueva infraestructura"
+        ],
+        "key_facts_used": [
+          "expansión",
+          "5 millones de dólares",
+          "nueva infraestructura"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La expansión está confirmada, aunque no se detallan todos los aspectos operativos.",
+        "notes": "La expansión está confirmada, aunque no se detallan todos los aspectos operativos."
+      },
+      {
+        "headline": "Comercio ilícito ahora golpea a casi la mitad de empresas industriales",
+        "story_type": "economia",
+        "summary": "El comercio ilícito afecta a casi el 50% de las empresas industriales, impactando gravemente sus operaciones y aumentando los costos operativos, según informe reciente de la SNI.",
+        "speech": "El comercio ilícito afecta a casi el 50% de las empresas industriales, impactando gravemente sus operaciones y aumentando los costos operativos, según informe reciente de la SNI.",
+        "narrator_profile_id": "julio_velarde",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "preocupante",
+          "directo",
+          "informativo"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "cover_region": {
+          "x": 0.1,
+          "y": 0.25,
+          "width": 0.7,
+          "height": 0.35
+        },
+        "key_facts": [
+          "afectación al 50%",
+          "SNI",
+          "aumento de costos operativos"
+        ],
+        "key_facts_used": [
+          "afectación al 50%",
+          "SNI",
+          "aumento de costos operativos"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La cifra de afectación está clara, pero los detalles adicionales dependen del contexto general.",
+        "notes": "La cifra de afectación está clara, pero los detalles adicionales dependen del contexto general."
+      },
+      {
+        "headline": "BCR pone tope a tasas de créditos en soles y dólares",
+        "story_type": "economia",
+        "summary": "El Banco Central de Reserva establece un tope del 100% en las tasas de interés de créditos en soles y dólares, una medida que busca proteger a los consumidores de prácticas usureras.",
+        "speech": "El Banco Central de Reserva establece un tope del 100% en las tasas de interés de créditos en soles y dólares, una medida que busca proteger a los consumidores de prácticas usureras.",
+        "narrator_profile_id": "julio_velarde",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "regulatorio",
+          "neutral",
+          "preventivo"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.6,
+          "width": 0.45,
+          "height": 0.25
+        },
+        "key_facts": [
+          "tope de 100%",
+          "tasas de crédito",
+          "medida regulatoria"
+        ],
+        "key_facts_used": [
+          "tope de 100%",
+          "tasas de crédito",
+          "medida regulatoria"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La medida está claramente definida, pero no se menciona el impacto a largo plazo.",
+        "notes": "La medida está claramente definida, pero no se menciona el impacto a largo plazo."
+      },
+      {
+        "headline": "La IA tiene un grave problema de imagen",
+        "story_type": "mundo",
+        "summary": "La inteligencia artificial enfrenta serios desafíos en su percepción pública. Los recientes temores sobre su impacto y los debates éticos han dañado su imagen ante muchos sectores de la sociedad.",
+        "speech": "La inteligencia artificial enfrenta serios desafíos en su percepción pública. Los recientes temores sobre su impacto y los debates éticos han dañado su imagen ante muchos sectores de la sociedad.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "corresponsal_internacional",
+        "tone_notes": [
+          "reflexivo",
+          "crítico",
+          "informativo"
+        ],
+        "page_numbers": [
+          22
+        ],
+        "cover_region": {
+          "x": 0.75,
+          "y": 0.75,
+          "width": 0.22,
+          "height": 0.18
+        },
+        "key_facts": [
+          "temores sobre IA",
+          "impacto social",
+          "debates éticos"
+        ],
+        "key_facts_used": [
+          "temores sobre IA",
+          "impacto social",
+          "debates éticos"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El artículo menciona los problemas de imagen, pero no se profundiza en todos los detalles del análisis.",
+        "notes": "El artículo menciona los problemas de imagen, pero no se profundiza en todos los detalles del análisis."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Callao logra un trato preferencial en su Zona Económica Privada, con incentivos que buscan atraer nuevas inversiones y mejorar la competitividad de su puerto y actividades logísticas.\n\nEntel reafirma su apuesta por el mercado peruano, con una inversión de 221 millones de dólares en expansión y actualización de su infraestructura tecnológica para el 2025.\n\nLa Clínica Javier Prado proyecta triplicar su tamaño, con una inversión de 5 millones de dólares, apuntando a una expansión en su red de servicios médicos en Lima.\n\nEl comercio ilícito afecta a casi el 50% de las empresas industriales, impactando gravemente sus operaciones y aumentando los costos operativos, según informe reciente de la SNI.\n\nEl Banco Central de Reserva establece un tope del 100% en las tasas de interés de créditos en soles y dólares, una medida que busca proteger a los consumidores de prácticas usureras.\n\nLa inteligencia artificial enfrenta serios desafíos en su percepción pública. Los recientes temores sobre su impacto y los debates éticos han dañado su imagen ante muchos sectores de la sociedad.",
+    "approved_text": "Callao logra un trato preferencial en su Zona Económica Privada, con incentivos que buscan atraer nuevas inversiones y mejorar la competitividad de su puerto y actividades logísticas.\n\nEntel reafirma su apuesta por el mercado peruano, con una inversión de 221 millones de dólares en expansión y actualización de su infraestructura tecnológica para el 2025.\n\nLa Clínica Javier Prado proyecta triplicar su tamaño, con una inversión de 5 millones de dólares, apuntando a una expansión en su red de servicios médicos en Lima.\n\nEl comercio ilícito afecta a casi el 50% de las empresas industriales, impactando gravemente sus operaciones y aumentando los costos operativos, según informe reciente de la SNI.\n\nEl Banco Central de Reserva establece un tope del 100% en las tasas de interés de créditos en soles y dólares, una medida que busca proteger a los consumidores de prácticas usureras.\n\nLa inteligencia artificial enfrenta serios desafíos en su percepción pública. Los recientes temores sobre su impacto y los debates éticos han dañado su imagen ante muchos sectores de la sociedad.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 6
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "1e633b5c-3963-4582-a2af-47e9dd71aa35",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-23T10:33:34",
+    "updated_at": "2026-04-23T13:12:25",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:33:34",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:33:55",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:33:56",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:09:36",
+        "details": "Se importaron 2 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:09:36",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:10:05",
+        "details": "Se descargaron 2 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:16:39",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:16:39",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:17:39",
+        "details": "Se descargaron 7 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:22:50",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:22:53",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:19",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:19",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:22",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:22",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:24",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:24",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:56:12",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:56:14",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:34:56",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:34:56",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:35:33",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:35:35",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:41:45",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:41:45",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:43:05",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:57:31",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:57:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:58:08",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:07",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:07",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:36",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:11:59",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:11:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:12:25",
+        "details": "Se importaron 6 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Jueves 23 de abril. Revisamos las portadas con una agenda marcada por la crisis politica, la compra de aviones y sus efectos en el gabinete, junto a temas de seguridad, economia y deporte. Vamos diario por diario con lo esencial del dia.",
+    "date_reference": "Sin efemeride verificada para apertura",
+    "source_scope": "none",
+    "why_it_fits": "Conecta la fecha con los temas dominantes visibles en las portadas.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-23T13:11:59"
+  }
+}

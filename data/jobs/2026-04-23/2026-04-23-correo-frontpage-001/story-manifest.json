@@ -1,0 +1,159 @@
+{
+  "story_id": "2026-04-23-correo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-23-correo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Compra de aviones F-16 sigue en marcha",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La compra de los aviones F-16 sigue adelante pese a la polémica y las renuncias dentro del gabinete. El presidente confirma que el proceso no se detuvo y asegura la primera cuota de 462 millones de dólares.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "key_facts": [
+        "compra de aviones F-16",
+        "462 millones de dólares",
+        "proceso no detenido"
+      ],
+      "tone_notes": [
+        "serio",
+        "formal",
+        "informativo"
+      ],
+      "safety_notes": "El proceso sigue, pero las implicaciones políticas son inciertas.",
+      "cover_region": {
+        "x": 0.3,
+        "y": 0.4,
+        "width": 0.65,
+        "height": 0.45
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/front-page.jpg",
+      "headline": "JNE evalua ordenar elecciones complementarias",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El Jurado Nacional de Elecciones analiza la posibilidad de convocar elecciones complementarias tras la crisis electoral de las últimas semanas, lo que podría cambiar el rumbo político en el país.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "JNE",
+        "elecciones complementarias",
+        "crisis electoral"
+      ],
+      "tone_notes": [
+        "institucional",
+        "resolutivo",
+        "serio"
+      ],
+      "safety_notes": "El proceso de evaluación está en marcha, pero las decisiones finales aún no se toman.",
+      "cover_region": {
+        "x": 0.35,
+        "y": 0.05,
+        "width": 0.35,
+        "height": 0.15
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Asesinan a chofer en combi en Comas",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La extorsión sigue cobrando vidas en Lima. En Comas, un chofer de combi fue asesinado por un grupo de delincuentes que le exigían dinero por protección.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "asesinato en Comas",
+        "extorsión",
+        "delincuentes"
+      ],
+      "tone_notes": [
+        "grave",
+        "directo",
+        "alarmante"
+      ],
+      "safety_notes": "El crimen sigue bajo investigación, con detalles limitados.",
+      "cover_region": {
+        "x": 0.65,
+        "y": 0.05,
+        "width": 0.2,
+        "height": 0.15
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Cristal golea a Atletico Grau",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "Gonzalo Nunez",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Sporting Cristal se impuso 3-0 a Atlético Grau, demostrando su superioridad en el torneo y consolidando su lugar entre los equipos más fuertes de la liga.",
+      "page_numbers": [
+        16
+      ],
+      "key_facts": [
+        "victoria 3-0",
+        "Atlético Grau",
+        "superioridad en el torneo"
+      ],
+      "tone_notes": [
+        "entusiasta",
+        "positivo",
+        "deportivo"
+      ],
+      "safety_notes": "El equipo ganó con claridad, pero no se mencionan detalles adicionales.",
+      "cover_region": {
+        "x": 0.85,
+        "y": 0.05,
+        "width": 0.15,
+        "height": 0.15
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

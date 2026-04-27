@@ -1,0 +1,153 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-23-ojo-frontpage-001",
+  "source_id": "ojo",
+  "source_name": "Ojo",
+  "date": "2026-04-23",
+  "front_page_image": "data/jobs/2026-04-23/2026-04-23-ojo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Perú compró cazas F-16 a Estados Unidos",
+      "story_type": "politica",
+      "summary": "El gobierno de Perú confirmó la compra de los aviones F-16 por un valor de 462 millones de dólares. La compra se realizó en medio de tensiones políticas y críticas dentro del gobierno.",
+      "speech": "El gobierno de Perú confirmó la compra de los aviones F-16 por un valor de 462 millones de dólares. La compra se realizó en medio de tensiones políticas y críticas dentro del gobierno.",
+      "page_numbers": [
+        2
+      ],
+      "cover_region": {
+        "x": 0.22,
+        "y": 0.3,
+        "width": 0.78,
+        "height": 0.68
+      },
+      "key_facts": [
+        "compra de F-16",
+        "462 millones de dólares",
+        "tensiones políticas"
+      ],
+      "tone_notes": [
+        "informativo",
+        "serio",
+        "conciso"
+      ],
+      "safety_notes": "No se mencionan detalles adicionales sobre las implicaciones políticas más allá de lo evidenciado en la portada.",
+      "notes": "No se mencionan detalles adicionales sobre las implicaciones políticas más allá de lo evidenciado en la portada.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Fiscalía pide detención de Corvetto",
+      "story_type": "politica",
+      "summary": "La Fiscalía solicitó la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras las revelaciones de su implicación en posibles irregularidades relacionadas con las elecciones.",
+      "speech": "La Fiscalía solicitó la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras las revelaciones de su implicación en posibles irregularidades relacionadas con las elecciones.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.4,
+        "width": 0.22,
+        "height": 0.3
+      },
+      "key_facts": [
+        "solicitud de detención",
+        "Piero Corvetto",
+        "irregularidades en elecciones"
+      ],
+      "tone_notes": [
+        "formal",
+        "declarativo",
+        "de alerta"
+      ],
+      "safety_notes": "Las implicaciones legales aún están en proceso de confirmación.",
+      "notes": "Las implicaciones legales aún están en proceso de confirmación.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "La U se acordó de ganar y golear",
+      "story_type": "deportes",
+      "summary": "Universitario de Deportes logró una importante victoria al golear 4-1 a Deportivo Garcilaso. Un triunfo que revitaliza al equipo tras una serie de malos resultados.",
+      "speech": "Universitario de Deportes logró una importante victoria al golear 4-1 a Deportivo Garcilaso. Un triunfo que revitaliza al equipo tras una serie de malos resultados.",
+      "page_numbers": [
+        2
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.7,
+        "width": 0.3,
+        "height": 0.3
+      },
+      "key_facts": [
+        "victoria 4-1",
+        "Deportivo Garcilaso",
+        "revitalización de Universitario"
+      ],
+      "tone_notes": [
+        "entusiasta",
+        "deportivo",
+        "motivacional"
+      ],
+      "safety_notes": "Se detalla solo lo ocurrido en el partido y el impacto en el equipo.",
+      "notes": "Se detalla solo lo ocurrido en el partido y el impacto en el equipo.",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "Gonzalo Nunez",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Xiomy a Farfán: El anillo pa' cuando",
+      "story_type": "espectaculos",
+      "summary": "Xiomy Kanashiro lanzó una indirecta a Jefferson Farfán al preguntar sobre el anillo de compromiso, dejando abierta la posibilidad de un futuro matrimonio entre ambos.",
+      "speech": "Xiomy Kanashiro lanzó una indirecta a Jefferson Farfán al preguntar sobre el anillo de compromiso, dejando abierta la posibilidad de un futuro matrimonio entre ambos.",
+      "page_numbers": [
+        2
+      ],
+      "cover_region": {
+        "x": 0.3,
+        "y": 0.4,
+        "width": 0.6,
+        "height": 0.4
+      },
+      "key_facts": [
+        "pregunta sobre el anillo",
+        "posibilidad de matrimonio",
+        "declaraciones de Xiomy"
+      ],
+      "tone_notes": [
+        "informal",
+        "curioso",
+        "entretenido"
+      ],
+      "safety_notes": "Se evitan comentarios sobre la relación fuera de lo confirmado en la nota.",
+      "notes": "Se evitan comentarios sobre la relación fuera de lo confirmado en la nota.",
+      "narrator_profile_id": "magaly_medina",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "magaly_medina",
+      "narrator_name": "Magaly Medina",
+      "segment_audio_file": null
+    }
+  ]
+}

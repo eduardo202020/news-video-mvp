@@ -1,0 +1,160 @@
+{
+  "story_id": "2026-04-23-trome-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-23-trome-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-23/2026-04-23-trome-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-23/2026-04-23-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Fiscalía acorrala a Corvetto",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La Fiscalía sigue de cerca a Piero Corvetto por posibles vínculos con el fraude electoral. Su detención es una medida cautelar mientras continúan las investigaciones.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "key_facts": [
+        "investigación sobre Corvetto",
+        "posible fraude electoral",
+        "medida cautelar"
+      ],
+      "tone_notes": [
+        "serio",
+        "estratégico",
+        "alerta"
+      ],
+      "safety_notes": "El proceso judicial está en curso, y las implicaciones aún no están claras.",
+      "cover_region": {
+        "x": 0.18,
+        "y": 0.28,
+        "width": 0.55,
+        "height": 0.38
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-23/2026-04-23-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Perú compró aviones a Estados Unidos",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Perú adquirió aviones F-16 por un valor de 462 millones de dólares, asegurando así un control de defensa más robusto ante las tensiones en la región.",
+      "page_numbers": [
+        9
+      ],
+      "key_facts": [
+        "compra de F-16",
+        "462 millones de dólares",
+        "refuerzo de defensa"
+      ],
+      "tone_notes": [
+        "informativo",
+        "formal",
+        "militar"
+      ],
+      "safety_notes": "Se detallan los costos, pero no se ahonda en el impacto militar.",
+      "cover_region": {
+        "x": 0.2,
+        "y": 0.72,
+        "width": 0.55,
+        "height": 0.18
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-23/2026-04-23-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Se fue Rabanal y cremas golearon",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "Gonzalo Nunez",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Tras la salida de Javier Rabanal, Universitario recuperó su nivel de juego y goleó 4-1 a Deportivo Garcilaso, mostrando una mejora significativa en su rendimiento.",
+      "page_numbers": [
+        11
+      ],
+      "key_facts": [
+        "victoria 4-1",
+        "Deportivo Garcilaso",
+        "salida de Rabanal"
+      ],
+      "tone_notes": [
+        "energético",
+        "futbolístico",
+        "positivo"
+      ],
+      "safety_notes": "El impacto del cambio en el equipo se evalúa con base en los resultados inmediatos del partido.",
+      "cover_region": {
+        "x": 0.72,
+        "y": 0.25,
+        "width": 0.25,
+        "height": 0.5
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-23/2026-04-23-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Fiscalía pide detención de Corvetto",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El Ministerio Público ha solicitado la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras la revelación de su implicación en irregularidades durante las elecciones.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "key_facts": [
+        "solicitud de detención",
+        "Corvetto",
+        "irregularidades en elecciones"
+      ],
+      "tone_notes": [
+        "formal",
+        "directo",
+        "declarativo"
+      ],
+      "safety_notes": "Aún no se confirma el alcance de las acusaciones, solo la solicitud de detención.",
+      "cover_region": {
+        "x": 0.18,
+        "y": 0.28,
+        "width": 0.55,
+        "height": 0.38
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

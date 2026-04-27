@@ -1,0 +1,224 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-23-gestion-frontpage-001",
+  "source_id": "gestion",
+  "source_name": "Gestion",
+  "date": "2026-04-23",
+  "front_page_image": "data/jobs/2026-04-23/2026-04-23-gestion-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Callao obtiene trato especial para Zona Económica Privada",
+      "story_type": "economia",
+      "summary": "Callao logra un trato preferencial en su Zona Económica Privada, con incentivos que buscan atraer nuevas inversiones y mejorar la competitividad de su puerto y actividades logísticas.",
+      "speech": "Callao logra un trato preferencial en su Zona Económica Privada, con incentivos que buscan atraer nuevas inversiones y mejorar la competitividad de su puerto y actividades logísticas.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.5,
+        "y": 0.65,
+        "width": 0.25,
+        "height": 0.2
+      },
+      "key_facts": [
+        "trato preferencial",
+        "incentivos",
+        "mejora de competitividad"
+      ],
+      "tone_notes": [
+        "informativo",
+        "económico",
+        "analítico"
+      ],
+      "safety_notes": "El contexto del trato especial es claro, pero se limita a las referencias del documento.",
+      "notes": "El contexto del trato especial es claro, pero se limita a las referencias del documento.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "julio_velarde",
+      "narrator_name": "Julio Velarde",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Entel invertirá 221 millones en el mercado peruano",
+      "story_type": "economia",
+      "summary": "Entel reafirma su apuesta por el mercado peruano, con una inversión de 221 millones de dólares en expansión y actualización de su infraestructura tecnológica para el 2025.",
+      "speech": "Entel reafirma su apuesta por el mercado peruano, con una inversión de 221 millones de dólares en expansión y actualización de su infraestructura tecnológica para el 2025.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.25,
+        "width": 0.22,
+        "height": 0.25
+      },
+      "key_facts": [
+        "221 millones de dólares",
+        "expansión de infraestructura",
+        "proyección para 2025"
+      ],
+      "tone_notes": [
+        "empresarial",
+        "positivo",
+        "informativo"
+      ],
+      "safety_notes": "Se destacan las cifras de inversión, pero se evita especular sobre la implementación futura.",
+      "notes": "Se destacan las cifras de inversión, pero se evita especular sobre la implementación futura.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "julio_velarde",
+      "narrator_name": "Julio Velarde",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Clínica Javier Prado expandirá operaciones",
+      "story_type": "economia",
+      "summary": "La Clínica Javier Prado proyecta triplicar su tamaño, con una inversión de 5 millones de dólares, apuntando a una expansión en su red de servicios médicos en Lima.",
+      "speech": "La Clínica Javier Prado proyecta triplicar su tamaño, con una inversión de 5 millones de dólares, apuntando a una expansión en su red de servicios médicos en Lima.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.5,
+        "width": 0.22,
+        "height": 0.2
+      },
+      "key_facts": [
+        "expansión",
+        "5 millones de dólares",
+        "nueva infraestructura"
+      ],
+      "tone_notes": [
+        "optimista",
+        "de crecimiento",
+        "progresivo"
+      ],
+      "safety_notes": "La expansión está confirmada, aunque no se detallan todos los aspectos operativos.",
+      "notes": "La expansión está confirmada, aunque no se detallan todos los aspectos operativos.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "julio_velarde",
+      "narrator_name": "Julio Velarde",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Comercio ilícito ahora golpea a casi la mitad de empresas industriales",
+      "story_type": "economia",
+      "summary": "El comercio ilícito afecta a casi el 50% de las empresas industriales, impactando gravemente sus operaciones y aumentando los costos operativos, según informe reciente de la SNI.",
+      "speech": "El comercio ilícito afecta a casi el 50% de las empresas industriales, impactando gravemente sus operaciones y aumentando los costos operativos, según informe reciente de la SNI.",
+      "page_numbers": [
+        10
+      ],
+      "cover_region": {
+        "x": 0.1,
+        "y": 0.25,
+        "width": 0.7,
+        "height": 0.35
+      },
+      "key_facts": [
+        "afectación al 50%",
+        "SNI",
+        "aumento de costos operativos"
+      ],
+      "tone_notes": [
+        "preocupante",
+        "directo",
+        "informativo"
+      ],
+      "safety_notes": "La cifra de afectación está clara, pero los detalles adicionales dependen del contexto general.",
+      "notes": "La cifra de afectación está clara, pero los detalles adicionales dependen del contexto general.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "julio_velarde",
+      "narrator_name": "Julio Velarde",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 5,
+      "segment_type": "story",
+      "headline": "BCR pone tope a tasas de créditos en soles y dólares",
+      "story_type": "economia",
+      "summary": "El Banco Central de Reserva establece un tope del 100% en las tasas de interés de créditos en soles y dólares, una medida que busca proteger a los consumidores de prácticas usureras.",
+      "speech": "El Banco Central de Reserva establece un tope del 100% en las tasas de interés de créditos en soles y dólares, una medida que busca proteger a los consumidores de prácticas usureras.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.6,
+        "width": 0.45,
+        "height": 0.25
+      },
+      "key_facts": [
+        "tope de 100%",
+        "tasas de crédito",
+        "medida regulatoria"
+      ],
+      "tone_notes": [
+        "regulatorio",
+        "neutral",
+        "preventivo"
+      ],
+      "safety_notes": "La medida está claramente definida, pero no se menciona el impacto a largo plazo.",
+      "notes": "La medida está claramente definida, pero no se menciona el impacto a largo plazo.",
+      "narrator_profile_id": "julio_velarde",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "julio_velarde",
+      "narrator_name": "Julio Velarde",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 6,
+      "segment_type": "story",
+      "headline": "La IA tiene un grave problema de imagen",
+      "story_type": "mundo",
+      "summary": "La inteligencia artificial enfrenta serios desafíos en su percepción pública. Los recientes temores sobre su impacto y los debates éticos han dañado su imagen ante muchos sectores de la sociedad.",
+      "speech": "La inteligencia artificial enfrenta serios desafíos en su percepción pública. Los recientes temores sobre su impacto y los debates éticos han dañado su imagen ante muchos sectores de la sociedad.",
+      "page_numbers": [
+        22
+      ],
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.75,
+        "width": 0.22,
+        "height": 0.18
+      },
+      "key_facts": [
+        "temores sobre IA",
+        "impacto social",
+        "debates éticos"
+      ],
+      "tone_notes": [
+        "reflexivo",
+        "crítico",
+        "informativo"
+      ],
+      "safety_notes": "El artículo menciona los problemas de imagen, pero no se profundiza en todos los detalles del análisis.",
+      "notes": "El artículo menciona los problemas de imagen, pero no se profundiza en todos los detalles del análisis.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    }
+  ]
+}

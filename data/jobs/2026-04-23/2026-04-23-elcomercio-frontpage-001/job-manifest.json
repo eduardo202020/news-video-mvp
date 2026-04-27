@@ -1,0 +1,586 @@
+{
+  "job_id": "2026-04-23-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "date": "2026-04-23",
+  "source": {
+    "source_id": "elcomercio",
+    "source_config_path": "automation/sources/diarios/elcomercio.json",
+    "requested_date": "2026-04-23",
+    "issue_date": "2026-04-23",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026042300000000001001&page=1&scale=207",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-23/2026-04-23-elcomercio-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026042300000000001001&page=1&scale=207",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/elcomercio.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042300000000001001&page=1&scale=207",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-elcomercio-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042300000000001001&page=4&scale=55",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-elcomercio-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042300000000001001&page=5&scale=55",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-elcomercio-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042300000000001001&page=6&scale=55",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-elcomercio-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042300000000001001&page=7&scale=55",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-elcomercio-frontpage-001/input/pages/page-07.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "candidates": [
+      {
+        "headline": "Caos en compra de aviones F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.25,
+          "y": 0.3,
+          "width": 0.6,
+          "height": 0.35
+        },
+        "page_number": 4,
+        "evidence_line": "PAGS.4 Y 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Caos en compra de aviones F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.25,
+          "y": 0.3,
+          "width": 0.6,
+          "height": 0.35
+        },
+        "page_number": 5,
+        "evidence_line": "PAGS.4 Y 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Pleno del JNE analiza elecciones",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.65,
+          "width": 0.35,
+          "height": 0.25
+        },
+        "page_number": 6,
+        "evidence_line": "PAG.6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "Fiscalia pide detencion de Corvetto",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.65,
+          "y": 0.65,
+          "width": 0.3,
+          "height": 0.25
+        },
+        "page_number": 7,
+        "evidence_line": "PAGINA 7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Caos en compra de aviones F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.25,
+          "y": 0.3,
+          "width": 0.6,
+          "height": 0.35
+        },
+        "page_numbers": [
+          4,
+          5
+        ],
+        "evidence": "PAGS.4 Y 5",
+        "evidence_lines": [
+          "PAGS.4 Y 5"
+        ],
+        "confidence": 0.97
+      },
+      {
+        "headline": "Pleno del JNE analiza elecciones",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.65,
+          "width": 0.35,
+          "height": 0.25
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "PAG.6",
+        "evidence_lines": [
+          "PAG.6"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "Fiscalia pide detencion de Corvetto",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.65,
+          "y": 0.65,
+          "width": 0.3,
+          "height": 0.25
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "PAGINA 7",
+        "evidence_lines": [
+          "PAGINA 7"
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Caos en compra de aviones F-16",
+        "story_type": "politica",
+        "summary": "El gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo.",
+        "speech": "El gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "polémico",
+          "serio",
+          "urgente"
+        ],
+        "page_numbers": [
+          4,
+          5
+        ],
+        "cover_region": {
+          "x": 0.25,
+          "y": 0.3,
+          "width": 0.6,
+          "height": 0.35
+        },
+        "key_facts": [
+          "compra de F-16",
+          "crisis política",
+          "renuncias dentro del gobierno"
+        ],
+        "key_facts_used": [
+          "compra de F-16",
+          "crisis política",
+          "renuncias dentro del gobierno"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El contexto de la crisis es claro, pero el alcance de las protestas no se detalla completamente.",
+        "notes": "El contexto de la crisis es claro, pero el alcance de las protestas no se detalla completamente."
+      },
+      {
+        "headline": "Pleno del JNE analiza elecciones",
+        "story_type": "politica",
+        "summary": "El Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta.",
+        "speech": "El Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "institucional",
+          "informativo",
+          "estratégico"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.65,
+          "width": 0.35,
+          "height": 0.25
+        },
+        "key_facts": [
+          "JNE",
+          "crisis electoral",
+          "posibles cambios en la segunda vuelta"
+        ],
+        "key_facts_used": [
+          "JNE",
+          "crisis electoral",
+          "posibles cambios en la segunda vuelta"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se mencionan las posibles medidas, pero no se confirma aún el resultado de la discusión.",
+        "notes": "Se mencionan las posibles medidas, pero no se confirma aún el resultado de la discusión."
+      },
+      {
+        "headline": "Fiscalía pide detención de Corvetto",
+        "story_type": "politica",
+        "summary": "La Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político.",
+        "speech": "La Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "serio",
+          "formal",
+          "declarativo"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.65,
+          "y": 0.65,
+          "width": 0.3,
+          "height": 0.25
+        },
+        "key_facts": [
+          "solicitud de detención",
+          "Piero Corvetto",
+          "fraude electoral"
+        ],
+        "key_facts_used": [
+          "solicitud de detención",
+          "Piero Corvetto",
+          "fraude electoral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El caso está en proceso judicial, por lo que las implicaciones aún no se definen completamente.",
+        "notes": "El caso está en proceso judicial, por lo que las implicaciones aún no se definen completamente."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-23/2026-04-23-elcomercio-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo.\n\nEl Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta.\n\nLa Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político.",
+    "approved_text": "El gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo.\n\nEl Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta.\n\nLa Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "1e633b5c-3963-4582-a2af-47e9dd71aa35",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-23T10:33:19",
+    "updated_at": "2026-04-23T13:12:25",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:33:19",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:33:34",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:33:34",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:09:36",
+        "details": "Se importaron 2 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:09:36",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:10:12",
+        "details": "Se descargaron 2 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:16:39",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:16:39",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:17:54",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:22:50",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:22:53",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:19",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:19",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:22",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:22",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:24",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:24",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:56:12",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:56:14",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:34:56",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:34:56",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:35:33",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:35:35",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:41:45",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:41:45",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:43:05",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:57:31",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:57:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:58:08",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:08",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:08",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:36",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:11:59",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:11:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:12:25",
+        "details": "Se importaron 3 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Jueves 23 de abril. Revisamos las portadas con una agenda marcada por la crisis politica, la compra de aviones y sus efectos en el gabinete, junto a temas de seguridad, economia y deporte. Vamos diario por diario con lo esencial del dia.",
+    "date_reference": "Sin efemeride verificada para apertura",
+    "source_scope": "none",
+    "why_it_fits": "Conecta la fecha con los temas dominantes visibles en las portadas.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-23T13:11:59"
+  }
+}

@@ -33,7 +33,8 @@ export const NewsVideo = ({
   text,
   gestures,
   segments,
-  subtitleSegments
+  subtitleSegments,
+  showCoverDebug = false
 }) => {
   const frame = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
@@ -162,6 +163,7 @@ export const NewsVideo = ({
         transitionProgress={timeline.transitionProgress}
         cardTranslateY={cardTranslateY}
         coverFloatY={coverFloatY}
+        showCoverDebug={showCoverDebug}
       />
 
       <CaptionBar

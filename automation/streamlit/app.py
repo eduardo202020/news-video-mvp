@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import Counter
 import copy
 from datetime import datetime
+import base64
 import importlib
 import json
 import os
@@ -49,6 +50,7 @@ publish_job = pipeline_module.publish_job
 retry_daily_rundown_from_existing_audio = pipeline_module.retry_daily_rundown_from_existing_audio
 scrape_source_into_job = pipeline_module.scrape_source_into_job
 scrape_selected_pages_for_job = pipeline_module.scrape_selected_pages_for_job
+normalize_cover_region = pipeline_module._normalize_cover_region
 
 
 DEFAULT_EDITORIAL_POLICY = PROJECT_DIR / "automation" / "rules" / "editorial-policy.json"
@@ -70,6 +72,31 @@ def read_json(path: Path) -> dict:
 
 def write_json(path: Path, payload: dict) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def image_to_data_url(path: Path, *, max_width: int = 720) -> str:
+    with Image.open(path) as image:
+        image = image.convert("RGB")
+        if image.width > max_width:
+            target_height = int(image.height * (max_width / image.width))
+            image = image.resize((max_width, max(1, target_height)))
+        from io import BytesIO
+
+        buffer = BytesIO()
+        image.save(buffer, format="JPEG", quality=88)
+    payload = base64.b64encode(buffer.getvalue()).decode("ascii")
+    return f"data:image/jpeg;base64,{payload}"
+
+
+def get_scaled_dimensions(path: Path, *, max_width: int) -> tuple[int, int]:
+    dimensions = get_image_dimensions(path) or (max_width, max_width)
+    width, height = dimensions
+    if width <= 0 or height <= 0:
+        return max_width, max_width
+    if width <= max_width:
+        return width, height
+    scaled_height = int(height * (max_width / width))
+    return max_width, max(1, scaled_height)
 
 
 def get_chatgpt_response_cache_path(batch_date: str) -> Path:
@@ -485,6 +512,248 @@ def update_job_script(job_path: Path, approved_text: str, review_notes: str, app
     write_json(job_path, job)
 
 
+def update_job_story_cover_region(
+    *,
+    job_path: Path,
+    story_index: int,
+    cover_region: dict[str, float] | None,
+) -> tuple[dict, list[str]]:
+    job = read_json(job_path)
+    stories = job.setdefault("story_narrative", {}).setdefault("stories", [])
+    if story_index < 0 or story_index >= len(stories):
+        raise ValueError("La historia seleccionada ya no existe en el job-manifest.")
+
+    normalized_cover_region = normalize_cover_region(cover_region) if cover_region else None
+    stories[story_index]["cover_region"] = normalized_cover_region
+
+    headline = str(stories[story_index].get("headline") or "").strip()
+    story_type = str(stories[story_index].get("story_type") or "").strip().lower()
+    for cover_story in job.get("page_selection", {}).get("stories", []):
+        if (
+            str(cover_story.get("headline") or "").strip() == headline
+            and str(cover_story.get("story_type") or "").strip().lower() == story_type
+        ):
+            cover_story["cover_region"] = normalized_cover_region
+
+    job.setdefault("audit", {})
+    job["audit"].setdefault("events", [])
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["audit"]["events"].append(
+        {
+            "stage": "focus_review_ui",
+            "status": "edited",
+            "timestamp": timestamp,
+            "details": (
+                f"Enfoque manual actualizado para historia {story_index + 1}: "
+                f"{headline or 'sin titular'}."
+            ),
+        }
+    )
+    job["audit"]["updated_at"] = timestamp
+    write_json(job_path, job)
+
+    notes: list[str] = []
+    voice_profile_path = get_voice_profile_path(job.get("voice", {}).get("profile_id")) or (
+        VOICE_PROFILES_DIR / "voicebox-local.json"
+    )
+    story_manifest_value = str(job.get("video", {}).get("story_manifest_path") or "").strip()
+    resolved_story_manifest_path = PROJECT_DIR / story_manifest_value if story_manifest_value else None
+    try:
+        built_story_manifest = build_story_manifest_from_job(
+            job_manifest_path=job_path,
+            video_template_path=DEFAULT_VIDEO_TEMPLATE,
+            voice_profile_path=voice_profile_path,
+            output_path=resolved_story_manifest_path if resolved_story_manifest_path else None,
+        )
+        notes.append(f"Story manifest resincronizado: `{rel(built_story_manifest)}`.")
+        if job.get("voice", {}).get("audio_path"):
+            composed_path = compose_job_for_preview(
+                job_manifest_path=job_path,
+                story_manifest_path=built_story_manifest,
+                video_template_path=DEFAULT_VIDEO_TEMPLATE,
+            )
+            notes.append(f"Preview Remotion actualizado: `{rel(composed_path)}`.")
+    except Exception as exc:
+        notes.append(f"El enfoque se guardo, pero no se pudo recomponer el preview: {exc}")
+
+    return read_json(job_path), notes
+
+
+def render_cover_focus_preview(
+    *,
+    image_path: Path,
+    cover_region: dict[str, float] | None,
+    title: str | None = None,
+) -> None:
+    preview_width = 540
+    data_url = image_to_data_url(image_path, max_width=preview_width)
+    rendered_width, rendered_height = get_scaled_dimensions(image_path, max_width=preview_width)
+    normalized = normalize_cover_region(cover_region)
+    if normalized:
+        x = normalized["x"] * 100
+        y = normalized["y"] * 100
+        width = normalized["width"] * 100
+        height = normalized["height"] * 100
+        overlay_html = f"""
+        <div style="position:absolute;left:{x:.3f}%;top:{y:.3f}%;width:{width:.3f}%;height:{height:.3f}%;
+                    border:3px solid #ffca28;border-radius:12px;box-shadow:0 0 0 9999px rgba(8,8,10,.18) inset;">
+          <div style="position:absolute;left:10px;top:10px;padding:6px 10px;border-radius:999px;
+                      background:rgba(10,10,14,.82);color:#ffca28;font:700 14px/1 sans-serif;">
+            focus
+          </div>
+        </div>
+        """
+        focus_center_x = (normalized["x"] + normalized["width"] / 2) * 100
+        focus_center_y = (normalized["y"] + normalized["height"] / 2) * 100
+        crop_html = f"""
+        <div style="position:relative;overflow:hidden;border-radius:14px;background:#0f1014;height:240px;">
+          <img src="{data_url}" style="position:absolute;left:{50 - focus_center_x:.3f}%;top:{50 - focus_center_y:.3f}%;
+               width:100%;height:100%;object-fit:contain;transform:scale({max(1.0, min(3.2, 0.9 / max(normalized['width'], normalized['height'], 0.08))):.3f});
+               transform-origin:center center;" />
+        </div>
+        """
+    else:
+        overlay_html = ""
+        crop_html = """
+        <div style="display:flex;align-items:center;justify-content:center;height:240px;border-radius:14px;
+                    background:#101116;color:#d8d8de;font:600 15px/1.4 sans-serif;">
+          Sin zoom. Se mostrara la portada completa.
+        </div>
+        """
+    header_html = f"<div style='margin-bottom:10px;color:#f3f4f6;font:700 15px/1.3 sans-serif;'>{title}</div>" if title else ""
+    html = f"""
+    <div style="display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.8fr);gap:16px;align-items:start;">
+      <div>
+        {header_html}
+        <div style="position:relative;width:{rendered_width}px;border-radius:16px;overflow:hidden;background:#0f1014;border:1px solid rgba(255,255,255,.08);">
+          <img src="{data_url}" style="display:block;width:{rendered_width}px;height:{rendered_height}px;" />
+          {overlay_html}
+        </div>
+      </div>
+      <div>
+        <div style="margin-bottom:10px;color:#f3f4f6;font:700 15px/1.3 sans-serif;">Vista aproximada del enfoque</div>
+        {crop_html}
+      </div>
+    </div>
+    """
+    component_height = max(rendered_height + 120, 520)
+    components.html(html, height=component_height, scrolling=False)
+
+
+def render_focus_editor_for_job(
+    *,
+    job: dict,
+    job_path: Path,
+    ui_prefix: str,
+) -> None:
+    focus_entries = get_story_narrative_entries(job)
+    if not focus_entries:
+        st.caption("Todavia no hay historias importadas para corregir el enfoque.")
+        return
+
+    front_page_path_value = job.get("input_assets", {}).get("front_page_image")
+    if not front_page_path_value:
+        st.caption("Este job todavia no tiene portada para ajustar el enfoque.")
+        return
+    image_path = PROJECT_DIR / str(front_page_path_value)
+    if not image_path.exists():
+        st.caption("No se encontro la portada local para este job.")
+        return
+
+    story_options = [
+        f"{index + 1}. {str(story.get('headline') or 'Sin titular')} · {str(story.get('story_type') or 'actualidad')}"
+        for index, story in enumerate(focus_entries)
+    ]
+    selected_story_label = st.selectbox(
+        "Historia a corregir",
+        story_options,
+        key=f"{ui_prefix}_story_selector",
+    )
+    story_index = story_options.index(selected_story_label)
+    story_entry = focus_entries[story_index]
+    headline = str(story_entry.get("headline") or f"Historia {story_index + 1}")
+    story_type = str(story_entry.get("story_type") or "actualidad")
+    narrator_id = str(story_entry.get("narrator_profile_id") or "sin-narrador")
+    current_region = normalize_cover_region(story_entry.get("cover_region"))
+    clear_focus = st.checkbox(
+        "Sin zoom",
+        value=current_region is None,
+        key=f"{ui_prefix}_clear_{story_index}",
+        help="Activa esto si prefieres mostrar la portada completa sin enfoque automatico para esta historia.",
+    )
+    editor_col1, editor_col2, editor_col3, editor_col4 = st.columns(4)
+    x_value = editor_col1.number_input(
+        "x",
+        min_value=0.0,
+        max_value=1.0,
+        value=float((current_region or {}).get("x", 0.0)),
+        step=0.01,
+        key=f"{ui_prefix}_x_{story_index}",
+        disabled=clear_focus,
+    )
+    y_value = editor_col2.number_input(
+        "y",
+        min_value=0.0,
+        max_value=1.0,
+        value=float((current_region or {}).get("y", 0.0)),
+        step=0.01,
+        key=f"{ui_prefix}_y_{story_index}",
+        disabled=clear_focus,
+    )
+    width_value = editor_col3.number_input(
+        "width",
+        min_value=0.01,
+        max_value=1.0,
+        value=float((current_region or {}).get("width", 0.45)),
+        step=0.01,
+        key=f"{ui_prefix}_w_{story_index}",
+        disabled=clear_focus,
+    )
+    height_value = editor_col4.number_input(
+        "height",
+        min_value=0.01,
+        max_value=1.0,
+        value=float((current_region or {}).get("height", 0.2)),
+        step=0.01,
+        key=f"{ui_prefix}_h_{story_index}",
+        disabled=clear_focus,
+    )
+    preview_region = None if clear_focus else {
+        "x": x_value,
+        "y": y_value,
+        "width": width_value,
+        "height": height_value,
+    }
+    st.caption(
+        f"{headline} · {story_type} · {narrator_id}. "
+        "La caja amarilla y la vista de la derecha se actualizan mientras cambias los valores."
+    )
+    render_cover_focus_preview(
+        image_path=image_path,
+        cover_region=preview_region,
+        title=str(job.get("source_id") or "sin-source"),
+    )
+    st.caption(
+        "Valores normalizados sobre la portada: `x` y `y` son la esquina superior izquierda; "
+        "`width` y `height` el tamano relativo del recorte."
+    )
+    if st.button("Guardar enfoque", key=f"{ui_prefix}_save_{story_index}", use_container_width=True):
+        try:
+            updated_job, sync_notes = update_job_story_cover_region(
+                job_path=job_path,
+                story_index=story_index,
+                cover_region=preview_region,
+            )
+            st.session_state[f"{ui_prefix}_focus_notes_{story_index}"] = sync_notes
+            st.success("Enfoque guardado.")
+            st.rerun()
+        except Exception as exc:
+            st.error(str(exc))
+    saved_notes = st.session_state.get(f"{ui_prefix}_focus_notes_{story_index}", [])
+    for note in saved_notes:
+        st.caption(note)
+
+
 def run_action(label: str, action) -> None:
     try:
         action()
@@ -525,12 +794,19 @@ def run_daily_rundown_with_feedback(
     job_date: str,
     voice_profile_id: str,
     development_mode: bool = False,
+    seed_rundown_dir: Path | None = None,
 ) -> None:
     events: list[dict[str, str]] = []
     with st.status("Construyendo programa diario...", expanded=True) as status:
         def on_progress(stage: str, details: str) -> None:
             events.append({"stage": stage, "details": details})
             status.write(f"**{stage}** · {details}")
+
+        effective_seed_rundown_dir = seed_rundown_dir
+        if not development_mode and effective_seed_rundown_dir is None:
+            existing_rundowns = discover_rundown_dirs_for_date(job_date)
+            if existing_rundowns:
+                effective_seed_rundown_dir = existing_rundowns[0]
 
         try:
             manifest_path = build_daily_rundown_for_date(
@@ -539,6 +815,7 @@ def run_daily_rundown_with_feedback(
                 subtitle_policy_path=DEFAULT_SUBTITLE_POLICY,
                 video_template_path=DEFAULT_VIDEO_TEMPLATE,
                 max_newspapers=2 if development_mode else None,
+                seed_rundown_dir=effective_seed_rundown_dir,
                 force=True,
                 progress_callback=on_progress,
             )
@@ -1886,6 +2163,50 @@ with board_tab:
                             }
                         )
                     st.dataframe(rundown_preview_rows, use_container_width=True, hide_index=True)
+                    with st.expander("Ajuste Manual de Enfoque del Lote", expanded=False):
+                        batch_focus_options = {
+                            f"{job.get('source_id') or 'sin-source'} · {job.get('job_id') or 'sin-id'}": job
+                            for job in ready_rundown_jobs
+                        }
+                        selected_focus_job_label = st.selectbox(
+                            "Periodico a corregir",
+                            list(batch_focus_options.keys()),
+                            key="batch_focus_job_selector",
+                        )
+                        selected_focus_job = batch_focus_options[selected_focus_job_label]
+                        selected_focus_job_path = selected_focus_job.get("_path")
+                        if isinstance(selected_focus_job_path, Path):
+                            render_focus_editor_for_job(
+                                job=selected_focus_job,
+                                job_path=selected_focus_job_path,
+                                ui_prefix=f"batch_focus_{selected_focus_job.get('job_id')}",
+                            )
+                        else:
+                            st.caption("No se encontro la ruta del job para editar el enfoque.")
+                available_seed_rundowns = discover_rundown_dirs_for_date(selected_batch_date)
+                suggested_seed_rundown = available_seed_rundowns[0] if available_seed_rundowns else None
+                reuse_preview_audio = False
+                selected_seed_rundown = None
+                if not rundown_dev_mode and suggested_seed_rundown is not None:
+                    reuse_preview_audio = st.checkbox(
+                        "Reutilizar audios ya generados del preview si coinciden",
+                        value=True,
+                        help="Si la intro y el primer bloque son iguales a una corrida previa, copia esos WAV y solo genera el resto.",
+                        key="reuse_preview_audio_for_full_rundown",
+                    )
+                    if reuse_preview_audio:
+                        selected_seed_rundown = st.selectbox(
+                            "Corrida base para reutilizar audio",
+                            available_seed_rundowns,
+                            index=0,
+                            format_func=lambda path: (
+                                f"{path.name} · {len(list((path / 'audio').glob('segment-*.wav')))} audios"
+                            ),
+                            key="seed_rundown_dir_for_full_build",
+                        )
+                        st.caption(
+                            f"Si los primeros segmentos no cambiaron, se copiaran desde `{rel(selected_seed_rundown)}`."
+                        )
                 if st.button(
                     "Construir Programa Diario para Preview",
                     use_container_width=True,
@@ -1896,9 +2217,10 @@ with board_tab:
                         job_date=selected_batch_date,
                         voice_profile_id=batch_voice_profile,
                         development_mode=rundown_dev_mode,
+                        seed_rundown_dir=selected_seed_rundown if reuse_preview_audio else None,
                     )
 
-                retry_rundown_dirs = discover_rundown_dirs_for_date(selected_batch_date)
+                retry_rundown_dirs = available_seed_rundowns
                 if retry_rundown_dirs:
                     retry_options = {
                         f"{path.name} · {len(list((path / 'audio').glob('segment-*.wav')))} audios": path
@@ -2071,6 +2393,16 @@ with detail_tab:
             if segments_path.exists():
                 with st.expander("Ver segmentos de subtitulo", expanded=False):
                     st.json(read_json(segments_path))
+
+        st.subheader("Ajuste Manual de Enfoque")
+        render_focus_editor_for_job(
+            job=job,
+            job_path=job_path,
+            ui_prefix=f"detail_focus_{job.get('job_id')}",
+        )
+        st.caption(
+            "Para validar visualmente la caja sobre el video final, abre en Remotion la composicion `NewsVideo-generated-debug`."
+        )
 
     with ops_tab:
         st.subheader("Acciones del Pipeline")

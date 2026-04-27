@@ -37,6 +37,18 @@ export const RemotionRoot = () => {
         height={VIDEO_SPEC.height}
         defaultProps={latestGeneratedStory}
       />
+      <Composition
+        id="NewsVideo-generated-debug"
+        component={NewsVideo}
+        durationInFrames={latestGeneratedStory.durationInFrames}
+        fps={latestGeneratedStory.fps}
+        width={VIDEO_SPEC.width}
+        height={VIDEO_SPEC.height}
+        defaultProps={{
+          ...latestGeneratedStory,
+          showCoverDebug: true
+        }}
+      />
       {Object.values(studioStories).map((story) => (
         <Composition
           key={story.id}

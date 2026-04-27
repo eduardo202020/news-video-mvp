@@ -1,0 +1,119 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-23-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "source_name": "Elcomercio",
+  "date": "2026-04-23",
+  "front_page_image": "data/jobs/2026-04-23/2026-04-23-elcomercio-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Caos en compra de aviones F-16",
+      "story_type": "politica",
+      "summary": "El gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo.",
+      "speech": "El gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo.",
+      "page_numbers": [
+        4,
+        5
+      ],
+      "cover_region": {
+        "x": 0.25,
+        "y": 0.3,
+        "width": 0.6,
+        "height": 0.35
+      },
+      "key_facts": [
+        "compra de F-16",
+        "crisis política",
+        "renuncias dentro del gobierno"
+      ],
+      "tone_notes": [
+        "polémico",
+        "serio",
+        "urgente"
+      ],
+      "safety_notes": "El contexto de la crisis es claro, pero el alcance de las protestas no se detalla completamente.",
+      "notes": "El contexto de la crisis es claro, pero el alcance de las protestas no se detalla completamente.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Pleno del JNE analiza elecciones",
+      "story_type": "politica",
+      "summary": "El Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta.",
+      "speech": "El Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.65,
+        "width": 0.35,
+        "height": 0.25
+      },
+      "key_facts": [
+        "JNE",
+        "crisis electoral",
+        "posibles cambios en la segunda vuelta"
+      ],
+      "tone_notes": [
+        "institucional",
+        "informativo",
+        "estratégico"
+      ],
+      "safety_notes": "Se mencionan las posibles medidas, pero no se confirma aún el resultado de la discusión.",
+      "notes": "Se mencionan las posibles medidas, pero no se confirma aún el resultado de la discusión.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Fiscalía pide detención de Corvetto",
+      "story_type": "politica",
+      "summary": "La Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político.",
+      "speech": "La Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.65,
+        "y": 0.65,
+        "width": 0.3,
+        "height": 0.25
+      },
+      "key_facts": [
+        "solicitud de detención",
+        "Piero Corvetto",
+        "fraude electoral"
+      ],
+      "tone_notes": [
+        "serio",
+        "formal",
+        "declarativo"
+      ],
+      "safety_notes": "El caso está en proceso judicial, por lo que las implicaciones aún no se definen completamente.",
+      "notes": "El caso está en proceso judicial, por lo que las implicaciones aún no se definen completamente.",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "segment_audio_file": null
+    }
+  ]
+}

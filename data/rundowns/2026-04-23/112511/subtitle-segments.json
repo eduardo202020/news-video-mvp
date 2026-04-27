@@ -1,0 +1,218 @@
+{
+  "policy_id": "default-2-lines",
+  "text_source": "daily_rundown",
+  "text": "Jueves 23 de abril. Revisamos las portadas con una agenda marcada por la crisis politica, la compra de aviones y sus efectos en el gabinete, junto a temas de seguridad, economia y deporte. Vamos diario por diario con lo esencial del dia.\n\nAhora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.\n\nLa compra de los aviones F-16 sigue adelante pese a la polémica y las renuncias dentro del gabinete. El presidente confirma que el proceso no se detuvo y asegura la primera cuota de 462 millones de dólares.\n\nEl Jurado Nacional de Elecciones analiza la posibilidad de convocar elecciones complementarias tras la crisis electoral de las últimas semanas, lo que podría cambiar el rumbo político en el país.\n\nLa extorsión sigue cobrando vidas en Lima. En Comas, un chofer de combi fue asesinado por un grupo de delincuentes que le exigían dinero por protección.\n\nSporting Cristal se impuso 3-0 a Atlético Grau, demostrando su superioridad en el torneo y consolidando su lugar entre los equipos más fuertes de la liga.\n\nAhora entramos a Elcomercio. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes.\n\nEl gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo.\n\nEl Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta.\n\nLa Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político.",
+  "audio_duration_seconds": 106.56,
+  "segments": [
+    {
+      "text": "Jueves 23 de abril.\nRevisamos las portadas",
+      "start": 0.0,
+      "end": 2.752
+    },
+    {
+      "text": "con una agenda marcada\npor la crisis politica,",
+      "start": 2.752,
+      "end": 5.766
+    },
+    {
+      "text": "la compra de aviones y\nsus efectos en el",
+      "start": 5.766,
+      "end": 8.386
+    },
+    {
+      "text": "gabinete, junto a temas\nde seguridad, economia y",
+      "start": 8.386,
+      "end": 11.531
+    },
+    {
+      "text": "deporte.\nVamos diario por diario",
+      "start": 11.531,
+      "end": 13.628
+    },
+    {
+      "text": "con lo esencial del dia.",
+      "start": 13.628,
+      "end": 15.2
+    },
+    {
+      "text": "Ahora entramos a Correo.\nPrimero miramos la",
+      "start": 15.2,
+      "end": 18.126
+    },
+    {
+      "text": "portada completa y\ndespues vamos con sus 4",
+      "start": 18.126,
+      "end": 20.983
+    },
+    {
+      "text": "historias mas fuertes.",
+      "start": 20.983,
+      "end": 22.48
+    },
+    {
+      "text": "La compra de los aviones\nF-16 sigue adelante pese",
+      "start": 22.48,
+      "end": 26.148
+    },
+    {
+      "text": "a la polémica y las\nrenuncias dentro del",
+      "start": 26.148,
+      "end": 29.142
+    },
+    {
+      "text": "gabinete.\nEl presidente confirma",
+      "start": 29.142,
+      "end": 31.537
+    },
+    {
+      "text": "que el proceso no se\ndetuvo y asegura la",
+      "start": 31.537,
+      "end": 34.531
+    },
+    {
+      "text": "primera cuota de 462\nmillones de dólares.",
+      "start": 34.531,
+      "end": 37.6
+    },
+    {
+      "text": "El Jurado Nacional de\nElecciones analiza la",
+      "start": 37.6,
+      "end": 40.356
+    },
+    {
+      "text": "posibilidad de convocar\nelecciones",
+      "start": 40.356,
+      "end": 42.534
+    },
+    {
+      "text": "complementarias tras la\ncrisis electoral de las",
+      "start": 42.534,
+      "end": 45.546
+    },
+    {
+      "text": "últimas semanas, lo que\npodría cambiar el rumbo",
+      "start": 45.546,
+      "end": 48.558
+    },
+    {
+      "text": "político en el país.",
+      "start": 48.558,
+      "end": 49.84
+    },
+    {
+      "text": "La extorsión sigue\ncobrando vidas en Lima.",
+      "start": 49.84,
+      "end": 52.659
+    },
+    {
+      "text": "En Comas, un chofer de\ncombi fue asesinado por",
+      "start": 52.659,
+      "end": 55.746
+    },
+    {
+      "text": "un grupo de delincuentes\nque le exigían dinero",
+      "start": 55.746,
+      "end": 58.833
+    },
+    {
+      "text": "por protección.",
+      "start": 58.833,
+      "end": 59.84
+    },
+    {
+      "text": "Sporting Cristal se\nimpuso 3-0 a Atlético",
+      "start": 59.84,
+      "end": 62.012
+    },
+    {
+      "text": "Grau, demostrando su\nsuperioridad en el",
+      "start": 62.012,
+      "end": 64.078
+    },
+    {
+      "text": "torneo y consolidando su\nlugar entre los equipos",
+      "start": 64.078,
+      "end": 66.621
+    },
+    {
+      "text": "más fuertes de la liga.",
+      "start": 66.621,
+      "end": 67.84
+    },
+    {
+      "text": "Ahora entramos a\nElcomercio.",
+      "start": 67.84,
+      "end": 69.475
+    },
+    {
+      "text": "Primero miramos la\nportada completa y",
+      "start": 69.475,
+      "end": 71.635
+    },
+    {
+      "text": "despues vamos con sus 3\nhistorias mas fuertes.",
+      "start": 71.635,
+      "end": 74.32
+    },
+    {
+      "text": "El gobierno enfrenta una\ngrave crisis política",
+      "start": 74.32,
+      "end": 77.647
+    },
+    {
+      "text": "tras la compra de\naviones F-16 a Estados",
+      "start": 77.647,
+      "end": 80.54
+    },
+    {
+      "text": "Unidos, desatando\nrenuncias y protestas",
+      "start": 80.54,
+      "end": 83.361
+    },
+    {
+      "text": "dentro del Ejecutivo.",
+      "start": 83.361,
+      "end": 84.88
+    },
+    {
+      "text": "El Jurado Nacional de\nElecciones discute",
+      "start": 84.88,
+      "end": 87.672
+    },
+    {
+      "text": "medidas para resolver la\ncrisis electoral que",
+      "start": 87.672,
+      "end": 90.814
+    },
+    {
+      "text": "afectó las últimas\nelecciones, con posibles",
+      "start": 90.814,
+      "end": 93.816
+    },
+    {
+      "text": "cambios en la segunda\nvuelta.",
+      "start": 93.816,
+      "end": 95.84
+    },
+    {
+      "text": "La Fiscalía solicita la\ndetención de Piero",
+      "start": 95.84,
+      "end": 98.569
+    },
+    {
+      "text": "Corvetto por su\nimplicación en posibles",
+      "start": 98.569,
+      "end": 101.103
+    },
+    {
+      "text": "fraudes electorales,\nintensificando la",
+      "start": 101.103,
+      "end": 103.571
+    },
+    {
+      "text": "presión sobre su figura\nen el ámbito político.",
+      "start": 103.571,
+      "end": 106.56
+    }
+  ]
+}

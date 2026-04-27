@@ -397,8 +397,10 @@ Notas para Voicebox:
 
 - instala y abre Voicebox local antes de ejecutar `voice-job`
 - por defecto se usa `http://localhost:17493`
-- cambia `tts_voice` en [voicebox-local.json](C:/Users/pc/Documents/proyectos/news-video-mvp/automation/templates/voices/voicebox-local.json:1) por el `profile_id` real de tu voz clonada
+- los perfiles en `automation/templates/voices/` ya pueden apuntar a voces clonadas distintas por narrador, no solo al fallback `voicebox-local`
+- cambia `tts_voice` en [voicebox-local.json](C:/Users/pc/Documents/proyectos/news-video-mvp/automation/templates/voices/voicebox-local.json:1) o en el perfil del narrador por el `profile_id` real de tu voz clonada
 - si tu instancia usa otra URL, ajusta `provider_settings.api_url` o la variable `VOICEBOX_API_URL`
+- si alguna voz tarda mucho, sube `generation_timeout_seconds` en `provider_settings`
 - `transcribe-job` usa el audio del job por defecto, o uno externo con `--audio-file`
 
 Construir story manifest:
@@ -533,6 +535,9 @@ Ya permite:
 - mostrar miniaturas de paginas descargadas
 - generar prompts posteriores por bloques de 2 periodicos
 - importar desde Streamlit el JSON del segundo prompt con speeches editoriales por historia
+- ajustar manualmente `cover_region` por historia desde Streamlit
+- corregir enfoque por cualquier periodico del lote desde `Ajuste Manual de Enfoque del Lote`
+- ver una previsualizacion inmediata del recorte antes de guardar el zoom
 
 Si al abrirla aparece:
 
@@ -565,13 +570,15 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 - construccion de `programa diario` para preview desde Streamlit
 - modo desarrollo del `programa diario` para trabajar solo con intro + primer bloque de 2 periodicos
 - reintento del `programa diario` desde audios existentes, sin volver a generar TTS cuando ya existe una corrida previa
+- reutilizacion automatica del ultimo rundown del dia como semilla al reconstruir el `programa diario`
+- reconstruccion del `programa diario` respetando cambios guardados de `cover_region` aunque se reutilicen audios
 - feedback por etapas durante la construccion del `programa diario`
 - sincronizacion del preview diario con `NewsVideo-generated` en Remotion
 - soporte de segmentos narrativos con intro, historias y conectores entre periodicos
-- conector visual por diario mostrando la portada completa antes de entrar a las historias
+- transicion entre diarios sin tarjeta central que tape la portada
 - uso de `cover_region` en Remotion para zoom por noticia sobre la portada
 - transicion visual entre noticias del mismo diario para volver a portada completa antes del siguiente zoom
-- intro animada en Remotion con aparicion secuencial de portadas de periodicos
+- intro animada en Remotion con aparicion secuencial de portadas de periodicos y fecha visible en la apertura
 - subtitulos sincronizados por segmentos reales de audio, incluyendo conectores entre periodicos
 - subtitulos partidos en bloques practicos de hasta 2 lineas
 - ajuste visual del bloque de subtitulos para ancho, posicion y lectura
@@ -622,6 +629,14 @@ Eso actualiza:
 
 sin lanzar `remotion render`.
 
+Para el `programa diario`, el flujo practico hoy es:
+
+1. construir el preview rapido en modo desarrollo si quieres validar voces y ritmo
+2. corregir speeches o `cover_region` desde Streamlit si hace falta
+3. reconstruir el `programa diario`
+
+Si ya existe una corrida previa del mismo dia, la app intenta reutilizar audios existentes y solo actualiza manifests + Remotion cuando el texto no cambio.
+
 ## Donde tocar cada cosa
 
 ### Plantillas declarativas
@@ -652,10 +667,9 @@ sin lanzar `remotion render`.
 - audio principal en espanol
 - velocidad base de voz actual: `1.4`
 - fondo musical suave en `public/assets/fondo-musical/`
-- narradores actuales:
-  - `Cuy-01`
-  - `Cuy-02`
-  - `Cuy-Depor`
+- el fallback de voz suele vivir en `voicebox-local.json`
+- los narradores editoriales reales se resuelven desde `automation/templates/narrators/story-type-map.json`
+- cada narrador puede usar su propio perfil de Voicebox en `automation/templates/voices/`
 
 ## Troubleshooting
 
@@ -665,6 +679,8 @@ sin lanzar `remotion render`.
 - si `npm run dev` muestra un estado viejo, reinicia Studio
 - si el audio o assets no aparecen en Studio, revisa `remotion-app/src/generated-story.js`
 - si el fondo musical no suena, valida el archivo dentro de `public/assets/fondo-musical/`
+- si ajustaste un zoom y no lo ves reflejado, guarda el enfoque y reconstruye o reintenta el `programa diario` desde audios existentes
+- si Voicebox tarda demasiado y corta la generacion, sube `generation_timeout_seconds` en el perfil de voz usado
 
 ## Documentacion relacionada
 

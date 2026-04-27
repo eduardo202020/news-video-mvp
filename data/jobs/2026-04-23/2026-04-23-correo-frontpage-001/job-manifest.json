@@ -1,0 +1,674 @@
+{
+  "job_id": "2026-04-23-correo-frontpage-001",
+  "source_id": "correo",
+  "date": "2026-04-23",
+  "source": {
+    "source_id": "correo",
+    "source_config_path": "automation/sources/diarios/correo.json",
+    "requested_date": "2026-04-23",
+    "issue_date": "2026-04-23",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042300000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042300000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/correo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042300000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042300000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042300000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042300000000001001&page=4&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042300000000001001&page=6&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042300000000001001&page=16&scale=80",
+        "local_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      2,
+      3,
+      4,
+      6,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Compra de aviones F-16 sigue en marcha",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.3,
+          "y": 0.4,
+          "width": 0.65,
+          "height": 0.45
+        },
+        "page_number": 2,
+        "evidence_line": "pags. 2 y 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Compra de aviones F-16 sigue en marcha",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.3,
+          "y": 0.4,
+          "width": 0.65,
+          "height": 0.45
+        },
+        "page_number": 3,
+        "evidence_line": "pags. 2 y 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "JNE evalua ordenar elecciones complementarias",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.05,
+          "width": 0.35,
+          "height": 0.15
+        },
+        "page_number": 4,
+        "evidence_line": "pag. 4 politica",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      },
+      {
+        "headline": "Asesinan a chofer en combi en Comas",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.65,
+          "y": 0.05,
+          "width": 0.2,
+          "height": 0.15
+        },
+        "page_number": 6,
+        "evidence_line": "pag. 6 lima",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.87
+      },
+      {
+        "headline": "Cristal golea a Atletico Grau",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.85,
+          "y": 0.05,
+          "width": 0.15,
+          "height": 0.15
+        },
+        "page_number": 16,
+        "evidence_line": "pag. 16 deportes",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.85
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Compra de aviones F-16 sigue en marcha",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.3,
+          "y": 0.4,
+          "width": 0.65,
+          "height": 0.45
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "pags. 2 y 3",
+        "evidence_lines": [
+          "pags. 2 y 3"
+        ],
+        "confidence": 0.96
+      },
+      {
+        "headline": "JNE evalua ordenar elecciones complementarias",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.05,
+          "width": 0.35,
+          "height": 0.15
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "pag. 4 politica",
+        "evidence_lines": [
+          "pag. 4 politica"
+        ],
+        "confidence": 0.88
+      },
+      {
+        "headline": "Asesinan a chofer en combi en Comas",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.65,
+          "y": 0.05,
+          "width": 0.2,
+          "height": 0.15
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "pag. 6 lima",
+        "evidence_lines": [
+          "pag. 6 lima"
+        ],
+        "confidence": 0.87
+      },
+      {
+        "headline": "Cristal golea a Atletico Grau",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.85,
+          "y": 0.05,
+          "width": 0.15,
+          "height": 0.15
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "pag. 16 deportes",
+        "evidence_lines": [
+          "pag. 16 deportes"
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Compra de aviones F-16 sigue en marcha",
+        "story_type": "politica",
+        "summary": "La compra de los aviones F-16 sigue adelante pese a la polémica y las renuncias dentro del gabinete. El presidente confirma que el proceso no se detuvo y asegura la primera cuota de 462 millones de dólares.",
+        "speech": "La compra de los aviones F-16 sigue adelante pese a la polémica y las renuncias dentro del gabinete. El presidente confirma que el proceso no se detuvo y asegura la primera cuota de 462 millones de dólares.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "serio",
+          "formal",
+          "informativo"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.3,
+          "y": 0.4,
+          "width": 0.65,
+          "height": 0.45
+        },
+        "key_facts": [
+          "compra de aviones F-16",
+          "462 millones de dólares",
+          "proceso no detenido"
+        ],
+        "key_facts_used": [
+          "compra de aviones F-16",
+          "462 millones de dólares",
+          "proceso no detenido"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El proceso sigue, pero las implicaciones políticas son inciertas.",
+        "notes": "El proceso sigue, pero las implicaciones políticas son inciertas."
+      },
+      {
+        "headline": "JNE evalua ordenar elecciones complementarias",
+        "story_type": "politica",
+        "summary": "El Jurado Nacional de Elecciones analiza la posibilidad de convocar elecciones complementarias tras la crisis electoral de las últimas semanas, lo que podría cambiar el rumbo político en el país.",
+        "speech": "El Jurado Nacional de Elecciones analiza la posibilidad de convocar elecciones complementarias tras la crisis electoral de las últimas semanas, lo que podría cambiar el rumbo político en el país.",
+        "narrator_profile_id": "mavila_huertas",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "institucional",
+          "resolutivo",
+          "serio"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.05,
+          "width": 0.35,
+          "height": 0.15
+        },
+        "key_facts": [
+          "JNE",
+          "elecciones complementarias",
+          "crisis electoral"
+        ],
+        "key_facts_used": [
+          "JNE",
+          "elecciones complementarias",
+          "crisis electoral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El proceso de evaluación está en marcha, pero las decisiones finales aún no se toman.",
+        "notes": "El proceso de evaluación está en marcha, pero las decisiones finales aún no se toman."
+      },
+      {
+        "headline": "Asesinan a chofer en combi en Comas",
+        "story_type": "policial",
+        "summary": "La extorsión sigue cobrando vidas en Lima. En Comas, un chofer de combi fue asesinado por un grupo de delincuentes que le exigían dinero por protección.",
+        "speech": "La extorsión sigue cobrando vidas en Lima. En Comas, un chofer de combi fue asesinado por un grupo de delincuentes que le exigían dinero por protección.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "grave",
+          "directo",
+          "alarmante"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.65,
+          "y": 0.05,
+          "width": 0.2,
+          "height": 0.15
+        },
+        "key_facts": [
+          "asesinato en Comas",
+          "extorsión",
+          "delincuentes"
+        ],
+        "key_facts_used": [
+          "asesinato en Comas",
+          "extorsión",
+          "delincuentes"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El crimen sigue bajo investigación, con detalles limitados.",
+        "notes": "El crimen sigue bajo investigación, con detalles limitados."
+      },
+      {
+        "headline": "Cristal golea a Atletico Grau",
+        "story_type": "deportes",
+        "summary": "Sporting Cristal se impuso 3-0 a Atlético Grau, demostrando su superioridad en el torneo y consolidando su lugar entre los equipos más fuertes de la liga.",
+        "speech": "Sporting Cristal se impuso 3-0 a Atlético Grau, demostrando su superioridad en el torneo y consolidando su lugar entre los equipos más fuertes de la liga.",
+        "narrator_profile_id": "gonzalo_nunez",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "entusiasta",
+          "positivo",
+          "deportivo"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.85,
+          "y": 0.05,
+          "width": 0.15,
+          "height": 0.15
+        },
+        "key_facts": [
+          "victoria 3-0",
+          "Atlético Grau",
+          "superioridad en el torneo"
+        ],
+        "key_facts_used": [
+          "victoria 3-0",
+          "Atlético Grau",
+          "superioridad en el torneo"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El equipo ganó con claridad, pero no se mencionan detalles adicionales.",
+        "notes": "El equipo ganó con claridad, pero no se mencionan detalles adicionales."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "La compra de los aviones F-16 sigue adelante pese a la polémica y las renuncias dentro del gabinete. El presidente confirma que el proceso no se detuvo y asegura la primera cuota de 462 millones de dólares.\n\nEl Jurado Nacional de Elecciones analiza la posibilidad de convocar elecciones complementarias tras la crisis electoral de las últimas semanas, lo que podría cambiar el rumbo político en el país.\n\nLa extorsión sigue cobrando vidas en Lima. En Comas, un chofer de combi fue asesinado por un grupo de delincuentes que le exigían dinero por protección.\n\nSporting Cristal se impuso 3-0 a Atlético Grau, demostrando su superioridad en el torneo y consolidando su lugar entre los equipos más fuertes de la liga.",
+    "approved_text": "La compra de los aviones F-16 sigue adelante pese a la polémica y las renuncias dentro del gabinete. El presidente confirma que el proceso no se detuvo y asegura la primera cuota de 462 millones de dólares.\n\nEl Jurado Nacional de Elecciones analiza la posibilidad de convocar elecciones complementarias tras la crisis electoral de las últimas semanas, lo que podría cambiar el rumbo político en el país.\n\nLa extorsión sigue cobrando vidas en Lima. En Comas, un chofer de combi fue asesinado por un grupo de delincuentes que le exigían dinero por protección.\n\nSporting Cristal se impuso 3-0 a Atlético Grau, demostrando su superioridad en el torneo y consolidando su lugar entre los equipos más fuertes de la liga.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "1e633b5c-3963-4582-a2af-47e9dd71aa35",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-04-23/2026-04-23-correo-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-23-correo-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-23T10:32:56",
+    "updated_at": "2026-04-23T13:12:30",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:32:56",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:33:18",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T10:33:19",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:09:36",
+        "details": "Se importaron 2 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:09:36",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:10:21",
+        "details": "Se descargaron 2 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:16:39",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:16:39",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:18:14",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:25:04",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:19",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:19",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:22",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:22",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:24",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:55:24",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T11:56:26",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:34:56",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:34:56",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:35:42",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:35:44",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-23T12:36:56",
+        "details": "Enfoque manual actualizado para historia 4: Cristal golea a Atletico Grau."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:36:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-23T12:38:10",
+        "details": "Enfoque manual actualizado para historia 2: JNE evalua ordenar elecciones complementarias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:38:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:41:45",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:41:45",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:43:08",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:57:31",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:57:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T12:58:12",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:08",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:08",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:04:40",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:11:59",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:11:59",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-23T13:12:30",
+        "details": "Se importaron 4 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Jueves 23 de abril. Revisamos las portadas con una agenda marcada por la crisis politica, la compra de aviones y sus efectos en el gabinete, junto a temas de seguridad, economia y deporte. Vamos diario por diario con lo esencial del dia.",
+    "date_reference": "Sin efemeride verificada para apertura",
+    "source_scope": "none",
+    "why_it_fits": "Conecta la fecha con los temas dominantes visibles en las portadas.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-23T13:11:59"
+  }
+}

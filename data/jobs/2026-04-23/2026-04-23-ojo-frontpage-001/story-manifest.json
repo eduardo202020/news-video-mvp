@@ -1,0 +1,158 @@
+{
+  "story_id": "2026-04-23-ojo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-23-ojo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-23/2026-04-23-ojo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-23/2026-04-23-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Perú compró cazas F-16 a Estados Unidos",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El gobierno de Perú confirmó la compra de los aviones F-16 por un valor de 462 millones de dólares. La compra se realizó en medio de tensiones políticas y críticas dentro del gobierno.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "compra de F-16",
+        "462 millones de dólares",
+        "tensiones políticas"
+      ],
+      "tone_notes": [
+        "informativo",
+        "serio",
+        "conciso"
+      ],
+      "safety_notes": "No se mencionan detalles adicionales sobre las implicaciones políticas más allá de lo evidenciado en la portada.",
+      "cover_region": {
+        "x": 0.22,
+        "y": 0.3,
+        "width": 0.78,
+        "height": 0.68
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-23/2026-04-23-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Fiscalía pide detención de Corvetto",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "mavila_huertas",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "mavila_huertas",
+      "narrator_name": "Mavila Huertas",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La Fiscalía solicitó la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras las revelaciones de su implicación en posibles irregularidades relacionadas con las elecciones.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "solicitud de detención",
+        "Piero Corvetto",
+        "irregularidades en elecciones"
+      ],
+      "tone_notes": [
+        "formal",
+        "declarativo",
+        "de alerta"
+      ],
+      "safety_notes": "Las implicaciones legales aún están en proceso de confirmación.",
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.4,
+        "width": 0.22,
+        "height": 0.3
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-23/2026-04-23-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "La U se acordó de ganar y golear",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "Gonzalo Nunez",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Universitario de Deportes logró una importante victoria al golear 4-1 a Deportivo Garcilaso. Un triunfo que revitaliza al equipo tras una serie de malos resultados.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "victoria 4-1",
+        "Deportivo Garcilaso",
+        "revitalización de Universitario"
+      ],
+      "tone_notes": [
+        "entusiasta",
+        "deportivo",
+        "motivacional"
+      ],
+      "safety_notes": "Se detalla solo lo ocurrido en el partido y el impacto en el equipo.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.7,
+        "width": 0.3,
+        "height": 0.3
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-23/2026-04-23-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Xiomy a Farfán: El anillo pa' cuando",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "magaly_medina",
+      "narrator_role": "conductora_espectaculos",
+      "voice_profile_id": "magaly_medina",
+      "narrator_name": "Magaly Medina",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Xiomy Kanashiro lanzó una indirecta a Jefferson Farfán al preguntar sobre el anillo de compromiso, dejando abierta la posibilidad de un futuro matrimonio entre ambos.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "pregunta sobre el anillo",
+        "posibilidad de matrimonio",
+        "declaraciones de Xiomy"
+      ],
+      "tone_notes": [
+        "informal",
+        "curioso",
+        "entretenido"
+      ],
+      "safety_notes": "Se evitan comentarios sobre la relación fuera de lo confirmado en la nota.",
+      "cover_region": {
+        "x": 0.3,
+        "y": 0.4,
+        "width": 0.6,
+        "height": 0.4
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

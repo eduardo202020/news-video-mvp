@@ -1,1218 +1,1186 @@
 export const generatedStory = {
-  "id": "2026-04-22-daily-rundown-190436",
+  "id": "2026-04-23-daily-rundown-115654",
   "newspaperName": "Resumen de Portadas",
-  "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_00.jpg",
-  "backgroundSrc": "assets/generated/2026-04-22-daily-rundown-190436/background.jpg",
-  "audioSrc": "assets/generated/2026-04-22-daily-rundown-190436/audio.wav",
-  "durationInFrames": 8683,
+  "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_00.jpg",
+  "backgroundSrc": "assets/generated/2026-04-23-daily-rundown-115654/background.jpg",
+  "audioSrc": "assets/generated/2026-04-23-daily-rundown-115654/audio.wav",
+  "durationInFrames": 8417,
   "fps": 30,
-  "narratorName": "Cuy-01",
-  "text": "Hola. Hoy, 22 de abril, revisamos las portadas marcadas por la crisis electoral, movimientos en la economia y tensiones en la agenda politica. En una jornada que conecta con el Dia de la Tierra, recorremos lo esencial de cada diario. Ahora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. Piero Corvetto deja la ONPE tras una gestión marcada por controversias y errores. Su salida pone en duda la integridad del proceso electoral y deja espacio para una nueva dirección al frente de la institución. La ONPE publicó erróneamente actas de prueba, generando confusión y desconfianza en la plataforma. Esta situación resalta la necesidad de revisar los protocolos de seguridad para evitar estos errores. El gobierno ha ratificado que no procederá con la compra de los aviones F-16, a pesar de la insistencia de algunos sectores. Este anuncio busca aclarar dudas y priorizar otras necesidades de defensa. La ‘U’ anuncia oficialmente la salida de Rabanal, cerrando así un ciclo en su plantel. El club busca una nueva estrategia para el futuro, mientras la afición aún digiere la decisión. Ahora entramos a Elcomercio. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. La salida de Piero Corvetto de la ONPE se da en medio de una fuerte controversia sobre la transparencia del proceso electoral. La situación plantea dudas sobre la independencia de la entidad. Hermes, empresa de transporte, reveló que la ONPE solicitó 40 camiones para las elecciones del 11 de abril. Este pedido ha generado cuestionamientos sobre la logística y planificación de la institución. Keiko Fujimori comienza su campaña de segunda vuelta en medio de un panorama electoral incierto. La ex candidata apuesta por reuniones cercanas con la gente para fortalecer su imagen. La Sunat está considerando nuevas regulaciones sobre importaciones menores. La medida afectaría a una gran cantidad de productos de bajo costo, lo que podría encarecer el mercado local. Ahora entramos a Gestion. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. La minería formal en el país enfrenta restricciones cada vez mayores, mientras que la minería ilegal y la informal siguen creciendo sin control, afectando al medio ambiente y a la economía. El mercado de refrigeradoras experimentó un incremento considerable durante este verano. Las ventas se dispararon impulsadas por la temporada de altas temperaturas y la demanda de electrodomésticos. Agrícola Cerro Prieto destinará 32 millones de dólares a la siembra de arándanos, apostando por un mercado en expansión. La inversión busca diversificar sus productos agrícolas y aprovechar la demanda internacional. El puerto de Chancay, uno de los proyectos más ambiciosos del gobierno, está bajo la mira de varios candidatos presidenciales. La infraestructura portuaria se ve como un factor clave para el crecimiento del comercio exterior. Ahora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores. La inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar. La expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad. Ricardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía. Ahora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. La combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente. La campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores. La salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país. Universitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
+  "narratorName": "Mavila Huertas",
+  "text": "Jueves 23 de abril. Revisamos las portadas con una agenda marcada por la crisis politica, la compra de aviones y sus efectos en el gabinete, junto a temas de seguridad, economia y deporte. Vamos diario por diario con lo esencial del dia. Ahora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. La compra de los aviones F-16 sigue adelante pese a la polémica y las renuncias dentro del gabinete. El presidente confirma que el proceso no se detuvo y asegura la primera cuota de 462 millones de dólares. El Jurado Nacional de Elecciones analiza la posibilidad de convocar elecciones complementarias tras la crisis electoral de las últimas semanas, lo que podría cambiar el rumbo político en el país. La extorsión sigue cobrando vidas en Lima. En Comas, un chofer de combi fue asesinado por un grupo de delincuentes que le exigían dinero por protección. Sporting Cristal se impuso 3-0 a Atlético Grau, demostrando su superioridad en el torneo y consolidando su lugar entre los equipos más fuertes de la liga. Ahora entramos a Elcomercio. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes. El gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo. El Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta. La Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político. Ahora entramos a Gestion. Primero miramos la portada completa y despues vamos con sus 6 historias mas fuertes. Callao logra un trato preferencial en su Zona Económica Privada, con incentivos que buscan atraer nuevas inversiones y mejorar la competitividad de su puerto y actividades logísticas. Entel reafirma su apuesta por el mercado peruano, con una inversión de 221 millones de dólares en expansión y actualización de su infraestructura tecnológica para el 2025. La Clínica Javier Prado proyecta triplicar su tamaño, con una inversión de 5 millones de dólares, apuntando a una expansión en su red de servicios médicos en Lima. El comercio ilícito afecta a casi el 50% de las empresas industriales, impactando gravemente sus operaciones y aumentando los costos operativos, según informe reciente de la SNI. El Banco Central de Reserva establece un tope del 100% en las tasas de interés de créditos en soles y dólares, una medida que busca proteger a los consumidores de prácticas usureras. La inteligencia artificial enfrenta serios desafíos en su percepción pública. Los recientes temores sobre su impacto y los debates éticos han dañado su imagen ante muchos sectores de la sociedad. Ahora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. El gobierno de Perú confirmó la compra de los aviones F-16 por un valor de 462 millones de dólares. La compra se realizó en medio de tensiones políticas y críticas dentro del gobierno. La Fiscalía solicitó la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras las revelaciones de su implicación en posibles irregularidades relacionadas con las elecciones. Universitario de Deportes logró una importante victoria al golear 4-1 a Deportivo Garcilaso. Un triunfo que revitaliza al equipo tras una serie de malos resultados. Xiomy Kanashiro lanzó una indirecta a Jefferson Farfán al preguntar sobre el anillo de compromiso, dejando abierta la posibilidad de un futuro matrimonio entre ambos. Ahora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. La Fiscalía sigue de cerca a Piero Corvetto por posibles vínculos con el fraude electoral. Su detención es una medida cautelar mientras continúan las investigaciones. Perú adquirió aviones F-16 por un valor de 462 millones de dólares, asegurando así un control de defensa más robusto ante las tensiones en la región. Tras la salida de Javier Rabanal, Universitario recuperó su nivel de juego y goleó 4-1 a Deportivo Garcilaso, mostrando una mejora significativa en su rendimiento. El Ministerio Público ha solicitado la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras la revelación de su implicación en irregularidades durante las elecciones.",
   "gestures": [
-    "assets/generated/2026-04-22-daily-rundown-190436/gestures/gesture_00.png",
-    "assets/generated/2026-04-22-daily-rundown-190436/gestures/gesture_01.png",
-    "assets/generated/2026-04-22-daily-rundown-190436/gestures/gesture_02.png",
-    "assets/generated/2026-04-22-daily-rundown-190436/gestures/gesture_03.png",
-    "assets/generated/2026-04-22-daily-rundown-190436/gestures/gesture_04.png",
-    "assets/generated/2026-04-22-daily-rundown-190436/gestures/gesture_05.png"
+    "assets/generated/2026-04-23-daily-rundown-115654/gestures/gesture_00.png",
+    "assets/generated/2026-04-23-daily-rundown-115654/gestures/gesture_01.png",
+    "assets/generated/2026-04-23-daily-rundown-115654/gestures/gesture_02.png",
+    "assets/generated/2026-04-23-daily-rundown-115654/gestures/gesture_03.png",
+    "assets/generated/2026-04-23-daily-rundown-115654/gestures/gesture_04.png",
+    "assets/generated/2026-04-23-daily-rundown-115654/gestures/gesture_05.png"
   ],
   "segments": [
     {
       "newspaperName": "Resumen de Portadas",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_00.jpg",
-      "headline": "Introduccion",
-      "text": "Hola. Hoy, 22 de abril, revisamos las portadas marcadas por la crisis electoral, movimientos en la economia y tensiones en la agenda politica. En una jornada que conecta con el Dia de la Tierra, recorremos lo esencial de cada diario.",
-      "narratorName": "Cuy-01",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_00.jpg",
+      "headline": "23 de abril de 2026",
+      "text": "Jueves 23 de abril. Revisamos las portadas con una agenda marcada por la crisis politica, la compra de aviones y sus efectos en el gabinete, junto a temas de seguridad, economia y deporte. Vamos diario por diario con lo esencial del dia.",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_00/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_00/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_00/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_00/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_00/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_00/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_00/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_00/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_00/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_00/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_00/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_00/gesture_05.png"
       ],
-      "durationSeconds": 14.4,
+      "durationSeconds": 15.2,
       "coverRegion": null,
       "segmentType": "intro"
     },
     {
       "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_01.jpg",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_01.jpg",
       "headline": "Paso a Correo",
       "text": "Ahora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
-      "narratorName": "Cuy-01",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_01/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_01/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_01/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_01/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_01/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_01/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_01/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_01/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_01/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_01/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_01/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_01/gesture_05.png"
       ],
-      "durationSeconds": 7.04,
+      "durationSeconds": 7.28,
       "coverRegion": null,
       "segmentType": "connector"
     },
     {
       "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_02.jpg",
-      "headline": "Renuncia en la ONPE tras irregularidades electorales",
-      "text": "Piero Corvetto deja la ONPE tras una gestión marcada por controversias y errores. Su salida pone en duda la integridad del proceso electoral y deja espacio para una nueva dirección al frente de la institución.",
-      "narratorName": "Cuy-01",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_02.jpg",
+      "headline": "Compra de aviones F-16 sigue en marcha",
+      "text": "La compra de los aviones F-16 sigue adelante pese a la polémica y las renuncias dentro del gabinete. El presidente confirma que el proceso no se detuvo y asegura la primera cuota de 462 millones de dólares.",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_02/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_02/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_02/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_02/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_02/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_02/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_02/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_02/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_02/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_02/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_02/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_02/gesture_05.png"
       ],
-      "durationSeconds": 12.4,
+      "durationSeconds": 15.12,
       "coverRegion": {
-        "x": 0.12,
-        "y": 0.42,
-        "width": 0.76,
-        "height": 0.46
+        "x": 0.3,
+        "y": 0.4,
+        "width": 0.65,
+        "height": 0.45
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_03.jpg",
-      "headline": "Actas de votación del exterior publicadas por la ONPE",
-      "text": "La ONPE publicó erróneamente actas de prueba, generando confusión y desconfianza en la plataforma. Esta situación resalta la necesidad de revisar los protocolos de seguridad para evitar estos errores.",
-      "narratorName": "Cuy-01",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_03.jpg",
+      "headline": "JNE evalua ordenar elecciones complementarias",
+      "text": "El Jurado Nacional de Elecciones analiza la posibilidad de convocar elecciones complementarias tras la crisis electoral de las últimas semanas, lo que podría cambiar el rumbo político en el país.",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_03/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_03/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_03/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_03/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_03/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_03/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_03/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_03/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_03/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_03/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_03/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_03/gesture_05.png"
       ],
-      "durationSeconds": 11.2,
+      "durationSeconds": 12.24,
       "coverRegion": {
-        "x": 0.42,
-        "y": 0.08,
-        "width": 0.34,
-        "height": 0.22
+        "x": 0.35,
+        "y": 0.05,
+        "width": 0.35,
+        "height": 0.15
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_04.jpg",
-      "headline": "Gobierno descarta compra de aviones F-16",
-      "text": "El gobierno ha ratificado que no procederá con la compra de los aviones F-16, a pesar de la insistencia de algunos sectores. Este anuncio busca aclarar dudas y priorizar otras necesidades de defensa.",
-      "narratorName": "Cuy-01",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_04.jpg",
+      "headline": "Asesinan a chofer en combi en Comas",
+      "text": "La extorsión sigue cobrando vidas en Lima. En Comas, un chofer de combi fue asesinado por un grupo de delincuentes que le exigían dinero por protección.",
+      "narratorName": "Beto Ortiz",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_04/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_04/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_04/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_04/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_04/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_04/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_04/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_04/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_04/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_04/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_04/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_04/gesture_05.png"
       ],
-      "durationSeconds": 12.0,
+      "durationSeconds": 10.0,
       "coverRegion": {
-        "x": 0.74,
-        "y": 0.06,
-        "width": 0.23,
-        "height": 0.2
+        "x": 0.65,
+        "y": 0.05,
+        "width": 0.2,
+        "height": 0.15
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_05.jpg",
-      "headline": "Universitario oficializa salida de Rabanal",
-      "text": "La ‘U’ anuncia oficialmente la salida de Rabanal, cerrando así un ciclo en su plantel. El club busca una nueva estrategia para el futuro, mientras la afición aún digiere la decisión.",
-      "narratorName": "Cuy-Depor",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_05.jpg",
+      "headline": "Cristal golea a Atletico Grau",
+      "text": "Sporting Cristal se impuso 3-0 a Atlético Grau, demostrando su superioridad en el torneo y consolidando su lugar entre los equipos más fuertes de la liga.",
+      "narratorName": "Gonzalo Nunez",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_05/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_05/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_05/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_05/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_05/gesture_04.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_05/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_05/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_05/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_05/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_05/gesture_04.png"
       ],
-      "durationSeconds": 11.2,
+      "durationSeconds": 8.0,
       "coverRegion": {
-        "x": 0.73,
-        "y": 0.23,
-        "width": 0.24,
-        "height": 0.1
+        "x": 0.85,
+        "y": 0.05,
+        "width": 0.15,
+        "height": 0.15
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Elcomercio",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_06.jpg",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_06.jpg",
       "headline": "Paso a Elcomercio",
-      "text": "Ahora entramos a Elcomercio. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
-      "narratorName": "Cuy-01",
+      "text": "Ahora entramos a Elcomercio. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes.",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_06/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_06/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_06/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_06/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_06/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_06/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_06/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_06/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_06/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_06/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_06/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_06/gesture_05.png"
+      ],
+      "durationSeconds": 6.48,
+      "coverRegion": null,
+      "segmentType": "connector"
+    },
+    {
+      "newspaperName": "Elcomercio",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_07.jpg",
+      "headline": "Caos en compra de aviones F-16",
+      "text": "El gobierno enfrenta una grave crisis política tras la compra de aviones F-16 a Estados Unidos, desatando renuncias y protestas dentro del Ejecutivo.",
+      "narratorName": "Mavila Huertas",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_07/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_07/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_07/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_07/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_07/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_07/gesture_05.png"
+      ],
+      "durationSeconds": 10.56,
+      "coverRegion": {
+        "x": 0.25,
+        "y": 0.3,
+        "width": 0.6,
+        "height": 0.35
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Elcomercio",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_08.jpg",
+      "headline": "Pleno del JNE analiza elecciones",
+      "text": "El Jurado Nacional de Elecciones discute medidas para resolver la crisis electoral que afectó las últimas elecciones, con posibles cambios en la segunda vuelta.",
+      "narratorName": "Mavila Huertas",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_08/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_08/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_08/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_08/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_08/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_08/gesture_05.png"
+      ],
+      "durationSeconds": 10.96,
+      "coverRegion": {
+        "x": 0.05,
+        "y": 0.65,
+        "width": 0.35,
+        "height": 0.25
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Elcomercio",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_09.jpg",
+      "headline": "Fiscalía pide detención de Corvetto",
+      "text": "La Fiscalía solicita la detención de Piero Corvetto por su implicación en posibles fraudes electorales, intensificando la presión sobre su figura en el ámbito político.",
+      "narratorName": "Mavila Huertas",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_09/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_09/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_09/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_09/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_09/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_09/gesture_05.png"
+      ],
+      "durationSeconds": 10.72,
+      "coverRegion": {
+        "x": 0.65,
+        "y": 0.65,
+        "width": 0.3,
+        "height": 0.25
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Gestion",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_10.jpg",
+      "headline": "Paso a Gestion",
+      "text": "Ahora entramos a Gestion. Primero miramos la portada completa y despues vamos con sus 6 historias mas fuertes.",
+      "narratorName": "Mavila Huertas",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_10/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_10/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_10/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_10/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_10/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_10/gesture_05.png"
       ],
       "durationSeconds": 6.16,
       "coverRegion": null,
       "segmentType": "connector"
     },
     {
-      "newspaperName": "Elcomercio",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_07.jpg",
-      "headline": "Corvetto deja la ONPE tras cuestionamientos",
-      "text": "La salida de Piero Corvetto de la ONPE se da en medio de una fuerte controversia sobre la transparencia del proceso electoral. La situación plantea dudas sobre la independencia de la entidad.",
-      "narratorName": "Cuy-01",
+      "newspaperName": "Gestion",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_11.jpg",
+      "headline": "Callao obtiene trato especial para Zona Económica Privada",
+      "text": "Callao logra un trato preferencial en su Zona Económica Privada, con incentivos que buscan atraer nuevas inversiones y mejorar la competitividad de su puerto y actividades logísticas.",
+      "narratorName": "Julio Velarde",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_07/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_07/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_07/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_07/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_07/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_07/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_11/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_11/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_11/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_11/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_11/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_11/gesture_05.png"
       ],
-      "durationSeconds": 11.12,
+      "durationSeconds": 10.24,
       "coverRegion": {
-        "x": 0.08,
-        "y": 0.32,
-        "width": 0.84,
-        "height": 0.42
-      },
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Elcomercio",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_08.jpg",
-      "headline": "Empresa afirma que ONPE pidió 40 camiones",
-      "text": "Hermes, empresa de transporte, reveló que la ONPE solicitó 40 camiones para las elecciones del 11 de abril. Este pedido ha generado cuestionamientos sobre la logística y planificación de la institución.",
-      "narratorName": "Cuy-01",
-      "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_08/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_08/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_08/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_08/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_08/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_08/gesture_05.png"
-      ],
-      "durationSeconds": 12.32,
-      "coverRegion": {
-        "x": 0.06,
-        "y": 0.74,
-        "width": 0.28,
+        "x": 0.5,
+        "y": 0.65,
+        "width": 0.25,
         "height": 0.2
       },
       "segmentType": "story"
     },
     {
-      "newspaperName": "Elcomercio",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_09.jpg",
-      "headline": "Keiko Fujimori inicia campaña de segunda vuelta",
-      "text": "Keiko Fujimori comienza su campaña de segunda vuelta en medio de un panorama electoral incierto. La ex candidata apuesta por reuniones cercanas con la gente para fortalecer su imagen.",
-      "narratorName": "Cuy-01",
-      "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_09/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_09/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_09/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_09/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_09/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_09/gesture_05.png"
-      ],
-      "durationSeconds": 11.68,
-      "coverRegion": {
-        "x": 0.68,
-        "y": 0.74,
-        "width": 0.28,
-        "height": 0.2
-      },
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Elcomercio",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_10.jpg",
-      "headline": "Sunat evalúa impuestos a importaciones menores",
-      "text": "La Sunat está considerando nuevas regulaciones sobre importaciones menores. La medida afectaría a una gran cantidad de productos de bajo costo, lo que podría encarecer el mercado local.",
-      "narratorName": "Cuy-01",
-      "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_10/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_10/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_10/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_10/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_10/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_10/gesture_05.png"
-      ],
-      "durationSeconds": 10.72,
-      "coverRegion": {
-        "x": 0.36,
-        "y": 0.12,
-        "width": 0.28,
-        "height": 0.12
-      },
-      "segmentType": "story"
-    },
-    {
       "newspaperName": "Gestion",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_11.jpg",
-      "headline": "Paso a Gestion",
-      "text": "Ahora entramos a Gestion. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
-      "narratorName": "Cuy-01",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_12.jpg",
+      "headline": "Entel invertirá 221 millones en el mercado peruano",
+      "text": "Entel reafirma su apuesta por el mercado peruano, con una inversión de 221 millones de dólares en expansión y actualización de su infraestructura tecnológica para el 2025.",
+      "narratorName": "Julio Velarde",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_11/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_11/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_11/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_11/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_11/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_11/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_12/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_12/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_12/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_12/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_12/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_12/gesture_05.png"
       ],
-      "durationSeconds": 7.76,
-      "coverRegion": null,
-      "segmentType": "connector"
-    },
-    {
-      "newspaperName": "Gestion",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_12.jpg",
-      "headline": "Minería formal se restringe y crece la ilegal",
-      "text": "La minería formal en el país enfrenta restricciones cada vez mayores, mientras que la minería ilegal y la informal siguen creciendo sin control, afectando al medio ambiente y a la economía.",
-      "narratorName": "Cuy-01",
-      "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_12/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_12/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_12/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_12/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_12/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_12/gesture_05.png"
-      ],
-      "durationSeconds": 11.12,
+      "durationSeconds": 9.6,
       "coverRegion": {
-        "x": 0.08,
-        "y": 0.62,
-        "width": 0.68,
-        "height": 0.22
-      },
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Gestion",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_13.jpg",
-      "headline": "Venta de refrigeradoras se dispara por verano",
-      "text": "El mercado de refrigeradoras experimentó un incremento considerable durante este verano. Las ventas se dispararon impulsadas por la temporada de altas temperaturas y la demanda de electrodomésticos.",
-      "narratorName": "Cuy-01",
-      "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_13/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_13/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_13/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_13/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_13/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_13/gesture_05.png"
-      ],
-      "durationSeconds": 10.8,
-      "coverRegion": {
-        "x": 0.74,
-        "y": 0.28,
+        "x": 0.75,
+        "y": 0.25,
         "width": 0.22,
-        "height": 0.22
+        "height": 0.25
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Gestion",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_14.jpg",
-      "headline": "Agrícola Cerro Prieto invertirá en arándanos",
-      "text": "Agrícola Cerro Prieto destinará 32 millones de dólares a la siembra de arándanos, apostando por un mercado en expansión. La inversión busca diversificar sus productos agrícolas y aprovechar la demanda internacional.",
-      "narratorName": "Cuy-01",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_13.jpg",
+      "headline": "Clínica Javier Prado expandirá operaciones",
+      "text": "La Clínica Javier Prado proyecta triplicar su tamaño, con una inversión de 5 millones de dólares, apuntando a una expansión en su red de servicios médicos en Lima.",
+      "narratorName": "Julio Velarde",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_14/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_14/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_14/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_14/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_14/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_14/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_13/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_13/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_13/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_13/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_13/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_13/gesture_05.png"
       ],
-      "durationSeconds": 13.76,
+      "durationSeconds": 8.24,
       "coverRegion": {
-        "x": 0.08,
-        "y": 0.62,
-        "width": 0.68,
-        "height": 0.22
+        "x": 0.75,
+        "y": 0.5,
+        "width": 0.22,
+        "height": 0.2
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Gestion",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_15.jpg",
-      "headline": "Puerto de Chancay en planes de gobierno",
-      "text": "El puerto de Chancay, uno de los proyectos más ambiciosos del gobierno, está bajo la mira de varios candidatos presidenciales. La infraestructura portuaria se ve como un factor clave para el crecimiento del comercio exterior.",
-      "narratorName": "Cuy-01",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_14.jpg",
+      "headline": "Comercio ilícito ahora golpea a casi la mitad de empresas industriales",
+      "text": "El comercio ilícito afecta a casi el 50% de las empresas industriales, impactando gravemente sus operaciones y aumentando los costos operativos, según informe reciente de la SNI.",
+      "narratorName": "Julio Velarde",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_15/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_15/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_15/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_15/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_15/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_15/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_14/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_14/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_14/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_14/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_14/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_14/gesture_05.png"
       ],
-      "durationSeconds": 11.52,
+      "durationSeconds": 9.44,
       "coverRegion": {
-        "x": 0.08,
-        "y": 0.86,
-        "width": 0.68,
-        "height": 0.1
+        "x": 0.1,
+        "y": 0.25,
+        "width": 0.7,
+        "height": 0.35
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Gestion",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_15.jpg",
+      "headline": "BCR pone tope a tasas de créditos en soles y dólares",
+      "text": "El Banco Central de Reserva establece un tope del 100% en las tasas de interés de créditos en soles y dólares, una medida que busca proteger a los consumidores de prácticas usureras.",
+      "narratorName": "Julio Velarde",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_15/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_15/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_15/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_15/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_15/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_15/gesture_05.png"
+      ],
+      "durationSeconds": 9.92,
+      "coverRegion": {
+        "x": 0.05,
+        "y": 0.6,
+        "width": 0.45,
+        "height": 0.25
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Gestion",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_16.jpg",
+      "headline": "La IA tiene un grave problema de imagen",
+      "text": "La inteligencia artificial enfrenta serios desafíos en su percepción pública. Los recientes temores sobre su impacto y los debates éticos han dañado su imagen ante muchos sectores de la sociedad.",
+      "narratorName": "Mavila Huertas",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_16/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_16/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_16/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_16/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_16/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_16/gesture_05.png"
+      ],
+      "durationSeconds": 13.52,
+      "coverRegion": {
+        "x": 0.75,
+        "y": 0.75,
+        "width": 0.22,
+        "height": 0.18
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_16.jpg",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_17.jpg",
       "headline": "Paso a Ojo",
       "text": "Ahora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
-      "narratorName": "Cuy-01",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_16/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_16/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_16/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_16/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_16/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_16/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_17/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_17/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_17/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_17/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_17/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_17/gesture_05.png"
       ],
-      "durationSeconds": 6.08,
+      "durationSeconds": 6.4,
       "coverRegion": null,
       "segmentType": "connector"
     },
     {
       "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_17.jpg",
-      "headline": "Corvetto fuera de la ONPE por caos electoral",
-      "text": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.",
-      "narratorName": "Cuy-01",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_18.jpg",
+      "headline": "Perú compró cazas F-16 a Estados Unidos",
+      "text": "El gobierno de Perú confirmó la compra de los aviones F-16 por un valor de 462 millones de dólares. La compra se realizó en medio de tensiones políticas y críticas dentro del gobierno.",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_17/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_17/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_17/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_17/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_17/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_17/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_18/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_18/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_18/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_18/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_18/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_18/gesture_05.png"
       ],
-      "durationSeconds": 12.4,
+      "durationSeconds": 13.44,
       "coverRegion": {
-        "x": 0.18,
-        "y": 0.2,
-        "width": 0.64,
-        "height": 0.46
+        "x": 0.22,
+        "y": 0.3,
+        "width": 0.78,
+        "height": 0.68
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_18.jpg",
-      "headline": "Mapa de puntos de robo en Lima",
-      "text": "La inseguridad vuelve a marcar la agenda en Lima. El informe ubica zonas de robo reiterado y refuerza una idea simple: cuando el delito se vuelve rutina, la ausencia de control ya no se puede maquillar.",
-      "narratorName": "Cuy-02",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_19.jpg",
+      "headline": "Fiscalía pide detención de Corvetto",
+      "text": "La Fiscalía solicitó la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras las revelaciones de su implicación en posibles irregularidades relacionadas con las elecciones.",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_18/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_18/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_18/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_18/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_18/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_18/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_19/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_19/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_19/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_19/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_19/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_19/gesture_05.png"
       ],
-      "durationSeconds": 12.24,
+      "durationSeconds": 13.44,
       "coverRegion": {
-        "x": 0.36,
-        "y": 0.7,
-        "width": 0.28,
-        "height": 0.18
+        "x": 0.05,
+        "y": 0.4,
+        "width": 0.22,
+        "height": 0.3
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_19.jpg",
-      "headline": "Reynoso en la mira previo a partido con Garcilaso",
-      "text": "La expectativa sigue alta para Reynoso, a pesar de los recientes resultados. El equipo nacional necesita urgentemente una victoria para mantener viva la ilusión en los hinchas, y Garcilaso podría ser la oportunidad.",
-      "narratorName": "Cuy-Depor",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_20.jpg",
+      "headline": "La U se acordó de ganar y golear",
+      "text": "Universitario de Deportes logró una importante victoria al golear 4-1 a Deportivo Garcilaso. Un triunfo que revitaliza al equipo tras una serie de malos resultados.",
+      "narratorName": "Gonzalo Nunez",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_19/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_19/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_19/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_19/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_19/gesture_04.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_20/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_20/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_20/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_20/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_20/gesture_04.png"
       ],
-      "durationSeconds": 13.6,
+      "durationSeconds": 10.24,
       "coverRegion": {
-        "x": 0.06,
+        "x": 0.0,
         "y": 0.7,
-        "width": 0.28,
-        "height": 0.18
+        "width": 0.3,
+        "height": 0.3
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_20.jpg",
-      "headline": "Richavo destaca momento personal y familiar",
-      "text": "Ricardo vive un buen momento personal y familiar, lo que según él, ha sido un pilar fundamental en su éxito reciente. Su relación con Katya y sus hijos lo mantiene enfocado y lleno de energía.",
-      "narratorName": "Cuy-02",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_21.jpg",
+      "headline": "Xiomy a Farfán: El anillo pa' cuando",
+      "text": "Xiomy Kanashiro lanzó una indirecta a Jefferson Farfán al preguntar sobre el anillo de compromiso, dejando abierta la posibilidad de un futuro matrimonio entre ambos.",
+      "narratorName": "Magaly Medina",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_20/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_20/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_20/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_20/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_20/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_20/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_21/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_21/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_21/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_21/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_21/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_21/gesture_05.png"
       ],
-      "durationSeconds": 12.0,
+      "durationSeconds": 11.36,
       "coverRegion": {
-        "x": 0.66,
-        "y": 0.7,
-        "width": 0.28,
-        "height": 0.18
+        "x": 0.3,
+        "y": 0.4,
+        "width": 0.6,
+        "height": 0.4
       },
       "segmentType": "story"
     },
     {
       "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_21.jpg",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_22.jpg",
       "headline": "Paso a Trome",
       "text": "Ahora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
-      "narratorName": "Cuy-01",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_21/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_21/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_21/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_21/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_21/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_21/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_22/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_22/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_22/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_22/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_22/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_22/gesture_05.png"
       ],
-      "durationSeconds": 6.88,
+      "durationSeconds": 6.56,
       "coverRegion": null,
       "segmentType": "connector"
     },
     {
       "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_22.jpg",
-      "headline": "Tragedia por combi sin control deja muertos",
-      "text": "La combi descontrolada arrasó todo a su paso, dejando una persona muerta y 20 heridos. Las imágenes del incidente muestran el impacto devastador, mientras las autoridades investigan las causas del accidente.",
-      "narratorName": "Cuy-02",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_23.jpg",
+      "headline": "Fiscalía acorrala a Corvetto",
+      "text": "La Fiscalía sigue de cerca a Piero Corvetto por posibles vínculos con el fraude electoral. Su detención es una medida cautelar mientras continúan las investigaciones.",
+      "narratorName": "Mavila Huertas",
       "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_22/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_22/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_22/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_22/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_22/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_22/gesture_05.png"
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_23/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_23/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_23/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_23/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_23/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_23/gesture_05.png"
       ],
-      "durationSeconds": 12.88,
+      "durationSeconds": 11.76,
       "coverRegion": {
-        "x": 0.04,
-        "y": 0.7,
-        "width": 0.22,
-        "height": 0.16
-      },
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_23.jpg",
-      "headline": "Campaña comercial por dia de la madre se intensifica",
-      "text": "La campaña comercial se intensifica a medida que se acerca el Día de la Madre. Las tiendas, desde ropa hasta electrodomésticos, buscan aprovechar la alta demanda con ofertas atractivas para los consumidores.",
-      "narratorName": "Cuy-01",
-      "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_23/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_23/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_23/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_23/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_23/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_23/gesture_05.png"
-      ],
-      "durationSeconds": 13.76,
-      "coverRegion": {
-        "x": 0.04,
-        "y": 0.86,
-        "width": 0.22,
-        "height": 0.12
-      },
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_24.jpg",
-      "headline": "Corvetto renuncia por caos electoral",
-      "text": "La salida de Corvetto del cargo de jefe de la ONPE responde al caos electoral reciente. La presión por los fallos de las elecciones ha sido insostenible, lo que abre una nueva etapa en la gestión electoral del país.",
-      "narratorName": "Cuy-01",
-      "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_24/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_24/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_24/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_24/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_24/gesture_04.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_24/gesture_05.png"
-      ],
-      "durationSeconds": 13.2,
-      "coverRegion": {
-        "x": 0.28,
-        "y": 0.22,
-        "width": 0.62,
-        "height": 0.58
-      },
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-22-daily-rundown-190436/covers/cover_25.jpg",
-      "headline": "Universitario busca levantar cabeza ante Garcilaso",
-      "text": "Universitario tiene un reto importante ante Garcilaso. Luego de algunos tropiezos, el equipo de Reynoso necesita recuperar la confianza de sus seguidores y demostrar su nivel para seguir peleando en el campeonato.",
-      "narratorName": "Cuy-Depor",
-      "gestures": [
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_25/gesture_00.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_25/gesture_01.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_25/gesture_02.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_25/gesture_03.png",
-        "assets/generated/2026-04-22-daily-rundown-190436/segment_gestures/segment_25/gesture_04.png"
-      ],
-      "durationSeconds": 11.2,
-      "coverRegion": {
-        "x": 0.04,
+        "x": 0.18,
         "y": 0.28,
-        "width": 0.22,
-        "height": 0.4
+        "width": 0.55,
+        "height": 0.38
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_24.jpg",
+      "headline": "Perú compró aviones a Estados Unidos",
+      "text": "Perú adquirió aviones F-16 por un valor de 462 millones de dólares, asegurando así un control de defensa más robusto ante las tensiones en la región.",
+      "narratorName": "Mavila Huertas",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_24/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_24/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_24/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_24/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_24/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_24/gesture_05.png"
+      ],
+      "durationSeconds": 11.84,
+      "coverRegion": {
+        "x": 0.2,
+        "y": 0.72,
+        "width": 0.55,
+        "height": 0.18
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_25.jpg",
+      "headline": "Se fue Rabanal y cremas golearon",
+      "text": "Tras la salida de Javier Rabanal, Universitario recuperó su nivel de juego y goleó 4-1 a Deportivo Garcilaso, mostrando una mejora significativa en su rendimiento.",
+      "narratorName": "Gonzalo Nunez",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_25/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_25/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_25/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_25/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_25/gesture_04.png"
+      ],
+      "durationSeconds": 9.2,
+      "coverRegion": {
+        "x": 0.72,
+        "y": 0.3,
+        "width": 0.25,
+        "height": 0.5
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-04-23-daily-rundown-115654/covers/cover_26.jpg",
+      "headline": "Fiscalía pide detención de Corvetto",
+      "text": "El Ministerio Público ha solicitado la detención preliminar de Piero Corvetto, exjefe de la ONPE, tras la revelación de su implicación en irregularidades durante las elecciones.",
+      "narratorName": "Mavila Huertas",
+      "gestures": [
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_26/gesture_00.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_26/gesture_01.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_26/gesture_02.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_26/gesture_03.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_26/gesture_04.png",
+        "assets/generated/2026-04-23-daily-rundown-115654/segment_gestures/segment_26/gesture_05.png"
+      ],
+      "durationSeconds": 12.64,
+      "coverRegion": {
+        "x": 0.18,
+        "y": 0.28,
+        "width": 0.55,
+        "height": 0.38
       },
       "segmentType": "story"
     }
   ],
   "subtitleSegments": [
     {
-      "text": "Hola.\nHoy, 22 de abril,",
+      "text": "Jueves 23 de abril.\nRevisamos las portadas",
       "start": 0.0,
-      "end": 1.453
+      "end": 2.752
     },
     {
-      "text": "revisamos las portadas\nmarcadas por la crisis",
-      "start": 1.453,
-      "end": 4.295
+      "text": "con una agenda marcada\npor la crisis politica,",
+      "start": 2.752,
+      "end": 5.766
     },
     {
-      "text": "electoral, movimientos\nen la economia y",
-      "start": 4.295,
-      "end": 6.758
+      "text": "la compra de aviones y\nsus efectos en el",
+      "start": 5.766,
+      "end": 8.386
     },
     {
-      "text": "tensiones en la agenda\npolitica.",
-      "start": 6.758,
-      "end": 8.779
+      "text": "gabinete, junto a temas\nde seguridad, economia y",
+      "start": 8.386,
+      "end": 11.531
     },
     {
-      "text": "En una jornada que\nconecta con el Dia de la",
-      "start": 8.779,
-      "end": 11.495
+      "text": "deporte.\nVamos diario por diario",
+      "start": 11.531,
+      "end": 13.628
     },
     {
-      "text": "Tierra, recorremos lo\nesencial de cada diario.",
-      "start": 11.495,
-      "end": 14.4
+      "text": "con lo esencial del dia.",
+      "start": 13.628,
+      "end": 15.2
     },
     {
       "text": "Ahora entramos a Correo.\nPrimero miramos la",
-      "start": 14.4,
-      "end": 17.229
+      "start": 15.2,
+      "end": 18.126
     },
     {
       "text": "portada completa y\ndespues vamos con sus 4",
-      "start": 17.229,
-      "end": 19.993
+      "start": 18.126,
+      "end": 20.983
     },
     {
       "text": "historias mas fuertes.",
-      "start": 19.993,
-      "end": 21.44
+      "start": 20.983,
+      "end": 22.48
     },
     {
-      "text": "Piero Corvetto deja la\nONPE tras una gestión",
-      "start": 21.44,
-      "end": 24.101
+      "text": "La compra de los aviones\nF-16 sigue adelante pese",
+      "start": 22.48,
+      "end": 26.148
     },
     {
-      "text": "marcada por\ncontroversias y errores.",
-      "start": 24.101,
-      "end": 26.279
+      "text": "a la polémica y las\nrenuncias dentro del",
+      "start": 26.148,
+      "end": 29.142
     },
     {
-      "text": "Su salida pone en duda\nla integridad del",
-      "start": 26.279,
-      "end": 28.699
+      "text": "gabinete.\nEl presidente confirma",
+      "start": 29.142,
+      "end": 31.537
     },
     {
-      "text": "proceso electoral y deja\nespacio para una nueva",
-      "start": 28.699,
-      "end": 31.541
+      "text": "que el proceso no se\ndetuvo y asegura la",
+      "start": 31.537,
+      "end": 34.531
     },
     {
-      "text": "dirección al frente de\nla institución.",
-      "start": 31.541,
-      "end": 33.84
+      "text": "primera cuota de 462\nmillones de dólares.",
+      "start": 34.531,
+      "end": 37.6
     },
     {
-      "text": "La ONPE publicó\nerróneamente actas de",
-      "start": 33.84,
-      "end": 35.954
+      "text": "El Jurado Nacional de\nElecciones analiza la",
+      "start": 37.6,
+      "end": 40.356
     },
     {
-      "text": "prueba, generando\nconfusión y desconfianza",
-      "start": 35.954,
-      "end": 38.354
+      "text": "posibilidad de convocar\nelecciones",
+      "start": 40.356,
+      "end": 42.534
     },
     {
-      "text": "en la plataforma.\nEsta situación resalta",
-      "start": 38.354,
-      "end": 40.64
+      "text": "complementarias tras la\ncrisis electoral de las",
+      "start": 42.534,
+      "end": 45.546
     },
     {
-      "text": "la necesidad de revisar\nlos protocolos de",
-      "start": 40.64,
-      "end": 42.983
+      "text": "últimas semanas, lo que\npodría cambiar el rumbo",
+      "start": 45.546,
+      "end": 48.558
     },
     {
-      "text": "seguridad para evitar\nestos errores.",
-      "start": 42.983,
-      "end": 45.04
-    },
-    {
-      "text": "El gobierno ha\nratificado que no",
-      "start": 45.04,
-      "end": 47.009
-    },
-    {
-      "text": "procederá con la compra\nde los aviones F-16, a",
-      "start": 47.009,
+      "text": "político en el país.",
+      "start": 48.558,
       "end": 49.84
     },
     {
-      "text": "pesar de la insistencia\nde algunos sectores.",
+      "text": "La extorsión sigue\ncobrando vidas en Lima.",
       "start": 49.84,
-      "end": 52.548
+      "end": 52.659
     },
     {
-      "text": "Este anuncio busca\naclarar dudas y",
-      "start": 52.548,
-      "end": 54.64
+      "text": "En Comas, un chofer de\ncombi fue asesinado por",
+      "start": 52.659,
+      "end": 55.746
     },
     {
-      "text": "priorizar otras\nnecesidades de defensa.",
-      "start": 54.64,
-      "end": 57.04
+      "text": "un grupo de delincuentes\nque le exigían dinero",
+      "start": 55.746,
+      "end": 58.833
     },
     {
-      "text": "La ‘U’ anuncia\noficialmente la salida",
-      "start": 57.04,
-      "end": 59.368
+      "text": "por protección.",
+      "start": 58.833,
+      "end": 59.84
     },
     {
-      "text": "de Rabanal, cerrando así\nun ciclo en su plantel.",
-      "start": 59.368,
-      "end": 62.388
+      "text": "Sporting Cristal se\nimpuso 3-0 a Atlético",
+      "start": 59.84,
+      "end": 62.012
     },
     {
-      "text": "El club busca una nueva\nestrategia para el",
-      "start": 62.388,
-      "end": 65.031
+      "text": "Grau, demostrando su\nsuperioridad en el",
+      "start": 62.012,
+      "end": 64.078
     },
     {
-      "text": "futuro, mientras la\nafición aún digiere la",
-      "start": 65.031,
-      "end": 67.674
+      "text": "torneo y consolidando su\nlugar entre los equipos",
+      "start": 64.078,
+      "end": 66.621
     },
     {
-      "text": "decisión.",
-      "start": 67.674,
-      "end": 68.24
+      "text": "más fuertes de la liga.",
+      "start": 66.621,
+      "end": 67.84
     },
     {
       "text": "Ahora entramos a\nElcomercio.",
-      "start": 68.24,
-      "end": 69.794
+      "start": 67.84,
+      "end": 69.475
     },
     {
       "text": "Primero miramos la\nportada completa y",
-      "start": 69.794,
-      "end": 71.847
+      "start": 69.475,
+      "end": 71.635
     },
     {
-      "text": "despues vamos con sus 4\nhistorias mas fuertes.",
-      "start": 71.847,
-      "end": 74.4
+      "text": "despues vamos con sus 3\nhistorias mas fuertes.",
+      "start": 71.635,
+      "end": 74.32
     },
     {
-      "text": "La salida de Piero\nCorvetto de la ONPE se",
-      "start": 74.4,
-      "end": 76.838
+      "text": "El gobierno enfrenta una\ngrave crisis política",
+      "start": 74.32,
+      "end": 77.647
     },
     {
-      "text": "da en medio de una\nfuerte controversia",
-      "start": 76.838,
-      "end": 79.098
+      "text": "tras la compra de\naviones F-16 a Estados",
+      "start": 77.647,
+      "end": 80.54
     },
     {
-      "text": "sobre la transparencia\ndel proceso electoral.",
-      "start": 79.098,
-      "end": 81.774
+      "text": "Unidos, desatando\nrenuncias y protestas",
+      "start": 80.54,
+      "end": 83.361
     },
     {
-      "text": "La situación plantea\ndudas sobre la",
-      "start": 81.774,
-      "end": 83.855
+      "text": "dentro del Ejecutivo.",
+      "start": 83.361,
+      "end": 84.88
     },
     {
-      "text": "independencia de la\nentidad.",
-      "start": 83.855,
-      "end": 85.52
+      "text": "El Jurado Nacional de\nElecciones discute",
+      "start": 84.88,
+      "end": 87.672
     },
     {
-      "text": "Hermes, empresa de\ntransporte, reveló que",
-      "start": 85.52,
-      "end": 88.084
+      "text": "medidas para resolver la\ncrisis electoral que",
+      "start": 87.672,
+      "end": 90.814
     },
     {
-      "text": "la ONPE solicitó 40\ncamiones para las",
-      "start": 88.084,
-      "end": 90.398
+      "text": "afectó las últimas\nelecciones, con posibles",
+      "start": 90.814,
+      "end": 93.816
     },
     {
-      "text": "elecciones del 11 de\nabril.",
-      "start": 90.398,
-      "end": 92.086
+      "text": "cambios en la segunda\nvuelta.",
+      "start": 93.816,
+      "end": 95.84
     },
     {
-      "text": "Este pedido ha generado\ncuestionamientos sobre",
-      "start": 92.086,
-      "end": 94.963
+      "text": "La Fiscalía solicita la\ndetención de Piero",
+      "start": 95.84,
+      "end": 98.569
     },
     {
-      "text": "la logística y\nplanificación de la",
-      "start": 94.963,
-      "end": 97.09
+      "text": "Corvetto por su\nimplicación en posibles",
+      "start": 98.569,
+      "end": 101.103
     },
     {
-      "text": "institución.",
-      "start": 97.09,
-      "end": 97.84
+      "text": "fraudes electorales,\nintensificando la",
+      "start": 101.103,
+      "end": 103.571
     },
     {
-      "text": "Keiko Fujimori comienza\nsu campaña de segunda",
-      "start": 97.84,
-      "end": 100.776
-    },
-    {
-      "text": "vuelta en medio de un\npanorama electoral",
-      "start": 100.776,
-      "end": 103.386
-    },
-    {
-      "text": "incierto.\nLa ex candidata apuesta",
-      "start": 103.386,
-      "end": 105.54
-    },
-    {
-      "text": "por reuniones cercanas\ncon la gente para",
-      "start": 105.54,
-      "end": 108.15
-    },
-    {
-      "text": "fortalecer su imagen.",
-      "start": 108.15,
-      "end": 109.52
-    },
-    {
-      "text": "La Sunat está\nconsiderando nuevas",
-      "start": 109.52,
-      "end": 111.474
-    },
-    {
-      "text": "regulaciones sobre\nimportaciones menores.",
-      "start": 111.474,
-      "end": 113.903
-    },
-    {
-      "text": "La medida afectaría a\nuna gran cantidad de",
-      "start": 113.903,
-      "end": 116.39
-    },
-    {
-      "text": "productos de bajo costo,\nlo que podría encarecer",
-      "start": 116.39,
-      "end": 119.233
-    },
-    {
-      "text": "el mercado local.",
-      "start": 119.233,
-      "end": 120.24
+      "text": "presión sobre su figura\nen el ámbito político.",
+      "start": 103.571,
+      "end": 106.56
     },
     {
       "text": "Ahora entramos a\nGestion.",
-      "start": 120.24,
-      "end": 122.036
+      "start": 106.56,
+      "end": 107.986
     },
     {
       "text": "Primero miramos la\nportada completa y",
-      "start": 122.036,
-      "end": 124.695
+      "start": 107.986,
+      "end": 110.096
     },
     {
-      "text": "despues vamos con sus 4\nhistorias mas fuertes.",
-      "start": 124.695,
-      "end": 128.0
+      "text": "despues vamos con sus 6\nhistorias mas fuertes.",
+      "start": 110.096,
+      "end": 112.72
     },
     {
-      "text": "La minería formal en el\npaís enfrenta",
-      "start": 128.0,
-      "end": 130.224
+      "text": "Callao logra un trato\npreferencial en su Zona",
+      "start": 112.72,
+      "end": 115.294
     },
     {
-      "text": "restricciones cada vez\nmayores, mientras que la",
-      "start": 130.224,
-      "end": 133.049
+      "text": "Económica Privada, con\nincentivos que buscan",
+      "start": 115.294,
+      "end": 117.811
     },
     {
-      "text": "minería ilegal y la\ninformal siguen",
-      "start": 133.049,
-      "end": 135.153
+      "text": "atraer nuevas\ninversiones y mejorar la",
+      "start": 117.811,
+      "end": 119.985
     },
     {
-      "text": "creciendo sin control,\nafectando al medio",
-      "start": 135.153,
-      "end": 137.617
+      "text": "competitividad de su\npuerto y actividades",
+      "start": 119.985,
+      "end": 122.331
     },
     {
-      "text": "ambiente y a la\neconomía.",
-      "start": 137.617,
-      "end": 139.12
+      "text": "logísticas.",
+      "start": 122.331,
+      "end": 122.96
     },
     {
-      "text": "El mercado de\nrefrigeradoras",
-      "start": 139.12,
-      "end": 140.687
+      "text": "Entel reafirma su\napuesta por el mercado",
+      "start": 122.96,
+      "end": 125.259
     },
     {
-      "text": "experimentó un\nincremento considerable",
-      "start": 140.687,
-      "end": 142.813
+      "text": "peruano, con una\ninversión de 221",
+      "start": 125.259,
+      "end": 127.156
     },
     {
-      "text": "durante este verano.\nLas ventas se dispararon",
-      "start": 142.813,
-      "end": 145.331
+      "text": "millones de dólares en\nexpansión y",
+      "start": 127.156,
+      "end": 129.111
     },
     {
-      "text": "impulsadas por la\ntemporada de altas",
-      "start": 145.331,
-      "end": 147.346
+      "text": "actualización de su\ninfraestructura",
+      "start": 129.111,
+      "end": 131.123
     },
     {
-      "text": "temperaturas y la\ndemanda de",
-      "start": 147.346,
-      "end": 148.913
+      "text": "tecnológica para el\n2025.",
+      "start": 131.123,
+      "end": 132.56
     },
     {
-      "text": "electrodomésticos.",
-      "start": 148.913,
-      "end": 149.92
+      "text": "La Clínica Javier Prado\nproyecta triplicar su",
+      "start": 132.56,
+      "end": 134.877
     },
     {
-      "text": "Agrícola Cerro Prieto\ndestinará 32 millones de",
-      "start": 149.92,
-      "end": 152.92
+      "text": "tamaño, con una\ninversión de 5 millones",
+      "start": 134.877,
+      "end": 136.886
     },
     {
-      "text": "dólares a la siembra de\narándanos, apostando por",
-      "start": 152.92,
-      "end": 156.05
+      "text": "de dólares, apuntando a\nuna expansión en su red",
+      "start": 136.886,
+      "end": 139.306
     },
     {
-      "text": "un mercado en expansión.\nLa inversión busca",
-      "start": 156.05,
-      "end": 158.854
+      "text": "de servicios médicos en\nLima.",
+      "start": 139.306,
+      "end": 140.8
     },
     {
-      "text": "diversificar sus\nproductos agrícolas y",
-      "start": 158.854,
-      "end": 161.332
+      "text": "El comercio ilícito\nafecta a casi el 50% de",
+      "start": 140.8,
+      "end": 143.133
     },
     {
-      "text": "aprovechar la demanda\ninternacional.",
-      "start": 161.332,
-      "end": 163.68
+      "text": "las empresas\nindustriales, impactando",
+      "start": 143.133,
+      "end": 145.14
     },
     {
-      "text": "El puerto de Chancay,\nuno de los proyectos más",
-      "start": 163.68,
-      "end": 166.089
+      "text": "gravemente sus\noperaciones y aumentando",
+      "start": 145.14,
+      "end": 147.256
     },
     {
-      "text": "ambiciosos del gobierno,\nestá bajo la mira de",
-      "start": 166.089,
-      "end": 168.445
+      "text": "los costos operativos,\nsegún informe reciente",
+      "start": 147.256,
+      "end": 149.697
     },
     {
-      "text": "varios candidatos\npresidenciales.",
-      "start": 168.445,
-      "end": 170.173
+      "text": "de la SNI.",
+      "start": 149.697,
+      "end": 150.24
     },
     {
-      "text": "La infraestructura\nportuaria se ve como un",
-      "start": 170.173,
-      "end": 172.372
+      "text": "El Banco Central de\nReserva establece un",
+      "start": 150.24,
+      "end": 152.469
     },
     {
-      "text": "factor clave para el\ncrecimiento del comercio",
-      "start": 172.372,
-      "end": 174.729
+      "text": "tope del 100% en las\ntasas de interés de",
+      "start": 152.469,
+      "end": 154.698
     },
     {
-      "text": "exterior.",
-      "start": 174.729,
-      "end": 175.2
+      "text": "créditos en soles y\ndólares, una medida que",
+      "start": 154.698,
+      "end": 157.095
+    },
+    {
+      "text": "busca proteger a los\nconsumidores de",
+      "start": 157.095,
+      "end": 159.101
+    },
+    {
+      "text": "prácticas usureras.",
+      "start": 159.101,
+      "end": 160.16
+    },
+    {
+      "text": "La inteligencia\nartificial enfrenta",
+      "start": 160.16,
+      "end": 162.637
+    },
+    {
+      "text": "serios desafíos en su\npercepción pública.",
+      "start": 162.637,
+      "end": 165.54
+    },
+    {
+      "text": "Los recientes temores\nsobre su impacto y los",
+      "start": 165.54,
+      "end": 168.654
+    },
+    {
+      "text": "debates éticos han\ndañado su imagen ante",
+      "start": 168.654,
+      "end": 171.486
+    },
+    {
+      "text": "muchos sectores de la\nsociedad.",
+      "start": 171.486,
+      "end": 173.68
     },
     {
       "text": "Ahora entramos a Ojo.\nPrimero miramos la",
-      "start": 175.2,
-      "end": 177.538
+      "start": 173.68,
+      "end": 176.142
     },
     {
       "text": "portada completa y\ndespues vamos con sus 4",
-      "start": 177.538,
-      "end": 179.994
+      "start": 176.142,
+      "end": 178.726
     },
     {
       "text": "historias mas fuertes.",
-      "start": 179.994,
-      "end": 181.28
+      "start": 178.726,
+      "end": 180.08
     },
     {
-      "text": "La salida de Corvetto\ndeja una señal fuerte en",
-      "start": 181.28,
-      "end": 184.104
+      "text": "El gobierno de Perú\nconfirmó la compra de",
+      "start": 180.08,
+      "end": 183.141
     },
     {
-      "text": "plena resaca electoral.\nSi el caos ya golpeo la",
-      "start": 184.104,
-      "end": 186.989
+      "text": "los aviones F-16 por un\nvalor de 462 millones de",
+      "start": 183.141,
+      "end": 186.725
     },
     {
-      "text": "confianza en la ONPE, lo\nque viene exige",
-      "start": 186.989,
-      "end": 189.444
+      "text": "dólares.\nLa compra se realizó en",
+      "start": 186.725,
+      "end": 189.115
     },
     {
-      "text": "explicaciones firmes y\nuna reorganizacion sin",
-      "start": 189.444,
-      "end": 192.207
+      "text": "medio de tensiones\npolíticas y críticas",
+      "start": 189.115,
+      "end": 192.027
     },
     {
-      "text": "margen para mas errores.",
-      "start": 192.207,
-      "end": 193.68
+      "text": "dentro del gobierno.",
+      "start": 192.027,
+      "end": 193.52
     },
     {
-      "text": "La inseguridad vuelve a\nmarcar la agenda en",
-      "start": 193.68,
-      "end": 196.338
+      "text": "La Fiscalía solicitó la\ndetención preliminar de",
+      "start": 193.52,
+      "end": 197.049
     },
     {
-      "text": "Lima.\nEl informe ubica zonas",
-      "start": 196.338,
-      "end": 198.069
+      "text": "Piero Corvetto, exjefe\nde la ONPE, tras las",
+      "start": 197.049,
+      "end": 200.278
     },
     {
-      "text": "de robo reiterado y\nrefuerza una idea",
-      "start": 198.069,
-      "end": 200.356
+      "text": "revelaciones de su\nimplicación en posibles",
+      "start": 200.278,
+      "end": 203.431
     },
     {
-      "text": "simple: cuando el delito\nse vuelve rutina, la",
-      "start": 200.356,
-      "end": 203.138
+      "text": "irregularidades\nrelacionadas con las",
+      "start": 203.431,
+      "end": 206.134
     },
     {
-      "text": "ausencia de control ya\nno se puede maquillar.",
-      "start": 203.138,
-      "end": 205.92
+      "text": "elecciones.",
+      "start": 206.134,
+      "end": 206.96
     },
     {
-      "text": "La expectativa sigue\nalta para Reynoso, a",
-      "start": 205.92,
-      "end": 208.575
+      "text": "Universitario de\nDeportes logró una",
+      "start": 206.96,
+      "end": 209.2
     },
     {
-      "text": "pesar de los recientes\nresultados.",
-      "start": 208.575,
-      "end": 210.777
+      "text": "importante victoria al\ngolear 4-1 a Deportivo",
+      "start": 209.2,
+      "end": 212.08
     },
     {
-      "text": "El equipo nacional\nnecesita urgentemente",
-      "start": 210.777,
-      "end": 213.368
+      "text": "Garcilaso.\nUn triunfo que",
+      "start": 212.08,
+      "end": 213.68
     },
     {
-      "text": "una victoria para\nmantener viva la ilusión",
-      "start": 213.368,
-      "end": 216.088
+      "text": "revitaliza al equipo\ntras una serie de malos",
+      "start": 213.68,
+      "end": 216.496
     },
     {
-      "text": "en los hinchas, y\nGarcilaso podría ser la",
-      "start": 216.088,
-      "end": 218.743
+      "text": "resultados.",
+      "start": 216.496,
+      "end": 217.2
     },
     {
-      "text": "oportunidad.",
-      "start": 218.743,
-      "end": 219.52
+      "text": "Xiomy Kanashiro lanzó\nuna indirecta a",
+      "start": 217.2,
+      "end": 219.779
     },
     {
-      "text": "Ricardo vive un buen\nmomento personal y",
-      "start": 219.52,
-      "end": 222.009
+      "text": "Jefferson Farfán al\npreguntar sobre el",
+      "start": 219.779,
+      "end": 222.427
     },
     {
-      "text": "familiar, lo que según\nél, ha sido un pilar",
-      "start": 222.009,
-      "end": 224.754
+      "text": "anillo de compromiso,\ndejando abierta la",
+      "start": 222.427,
+      "end": 225.215
     },
     {
-      "text": "fundamental en su éxito\nreciente.",
-      "start": 224.754,
-      "end": 226.86
-    },
-    {
-      "text": "Su relación con Katya y\nsus hijos lo mantiene",
-      "start": 226.86,
-      "end": 229.733
-    },
-    {
-      "text": "enfocado y lleno de\nenergía.",
-      "start": 229.733,
-      "end": 231.52
+      "text": "posibilidad de un futuro\nmatrimonio entre ambos.",
+      "start": 225.215,
+      "end": 228.56
     },
     {
       "text": "Ahora entramos a Trome.\nPrimero miramos la",
-      "start": 231.52,
-      "end": 234.246
+      "start": 228.56,
+      "end": 231.159
     },
     {
       "text": "portada completa y\ndespues vamos con sus 4",
-      "start": 234.246,
-      "end": 236.972
+      "start": 231.159,
+      "end": 233.758
     },
     {
       "text": "historias mas fuertes.",
-      "start": 236.972,
-      "end": 238.4
+      "start": 233.758,
+      "end": 235.12
     },
     {
-      "text": "La combi descontrolada\narrasó todo a su paso,",
-      "start": 238.4,
-      "end": 241.255
+      "text": "La Fiscalía sigue de\ncerca a Piero Corvetto",
+      "start": 235.12,
+      "end": 238.222
     },
     {
-      "text": "dejando una persona\nmuerta y 20 heridos.",
-      "start": 241.255,
-      "end": 243.793
+      "text": "por posibles vínculos\ncon el fraude electoral.",
+      "start": 238.222,
+      "end": 241.541
     },
     {
-      "text": "Las imágenes del\nincidente muestran el",
-      "start": 243.793,
-      "end": 246.204
+      "text": "Su detención es una\nmedida cautelar mientras",
+      "start": 241.541,
+      "end": 244.716
     },
     {
-      "text": "impacto devastador,\nmientras las autoridades",
-      "start": 246.204,
-      "end": 248.996
+      "text": "continúan las\ninvestigaciones.",
+      "start": 244.716,
+      "end": 246.88
     },
     {
-      "text": "investigan las causas\ndel accidente.",
-      "start": 248.996,
-      "end": 251.28
+      "text": "Perú adquirió aviones\nF-16 por un valor de 462",
+      "start": 246.88,
+      "end": 250.61
     },
     {
-      "text": "La campaña comercial se\nintensifica a medida que",
-      "start": 251.28,
-      "end": 254.534
+      "text": "millones de dólares,\nasegurando así un",
+      "start": 250.61,
+      "end": 253.692
     },
     {
-      "text": "se acerca el Día de la\nMadre.",
-      "start": 254.534,
-      "end": 256.499
+      "text": "control de defensa más\nrobusto ante las",
+      "start": 253.692,
+      "end": 256.855
     },
     {
-      "text": "Las tiendas, desde ropa\nhasta electrodomésticos,",
-      "start": 256.499,
-      "end": 259.753
+      "text": "tensiones en la región.",
+      "start": 256.855,
+      "end": 258.72
     },
     {
-      "text": "buscan aprovechar la\nalta demanda con ofertas",
-      "start": 259.753,
-      "end": 262.803
+      "text": "Tras la salida de Javier\nRabanal, Universitario",
+      "start": 258.72,
+      "end": 261.422
     },
     {
-      "text": "atractivas para los\nconsumidores.",
-      "start": 262.803,
-      "end": 265.04
+      "text": "recuperó su nivel de\njuego y goleó 4-1 a",
+      "start": 261.422,
+      "end": 263.722
     },
     {
-      "text": "La salida de Corvetto\ndel cargo de jefe de la",
-      "start": 265.04,
-      "end": 267.855
+      "text": "Deportivo Garcilaso,\nmostrando una mejora",
+      "start": 263.722,
+      "end": 266.08
     },
     {
-      "text": "ONPE responde al caos\nelectoral reciente.",
-      "start": 267.855,
-      "end": 270.42
+      "text": "significativa en su\nrendimiento.",
+      "start": 266.08,
+      "end": 267.92
     },
     {
-      "text": "La presión por los\nfallos de las elecciones",
-      "start": 270.42,
-      "end": 273.11
+      "text": "El Ministerio Público ha\nsolicitado la detención",
+      "start": 267.92,
+      "end": 271.407
     },
     {
-      "text": "ha sido insostenible, lo\nque abre una nueva etapa",
-      "start": 273.11,
-      "end": 276.176
+      "text": "preliminar de Piero\nCorvetto, exjefe de la",
+      "start": 271.407,
+      "end": 274.458
     },
     {
-      "text": "en la gestión electoral\ndel país.",
-      "start": 276.176,
-      "end": 278.24
+      "text": "ONPE, tras la revelación\nde su implicación en",
+      "start": 274.458,
+      "end": 277.727
     },
     {
-      "text": "Universitario tiene un\nreto importante ante",
-      "start": 278.24,
-      "end": 280.555
-    },
-    {
-      "text": "Garcilaso.\nLuego de algunos",
-      "start": 280.555,
-      "end": 282.009
-    },
-    {
-      "text": "tropiezos, el equipo de\nReynoso necesita",
-      "start": 282.009,
-      "end": 284.163
-    },
-    {
-      "text": "recuperar la confianza\nde sus seguidores y",
-      "start": 284.163,
-      "end": 286.425
-    },
-    {
-      "text": "demostrar su nivel para\nseguir peleando en el",
-      "start": 286.425,
-      "end": 288.848
-    },
-    {
-      "text": "campeonato.",
-      "start": 288.848,
-      "end": 289.44
+      "text": "irregularidades durante\nlas elecciones.",
+      "start": 277.727,
+      "end": 280.56
     }
   ]
 };

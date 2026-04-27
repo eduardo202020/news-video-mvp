@@ -48,7 +48,8 @@ export const CoverStage = ({
   isTransitioning,
   transitionProgress,
   cardTranslateY,
-  coverFloatY
+  coverFloatY,
+  showCoverDebug = false
 }) => {
   const currentTranslateX = interpolate(transitionProgress, [0, 1], [0, -28]);
   const nextTranslateX = interpolate(transitionProgress, [0, 1], [28, 0]);
@@ -71,21 +72,6 @@ export const CoverStage = ({
   const nextFocusTransform = buildCoverFocusTransform(nextSegment?.coverRegion, nextFocusProgress);
   const currentCoverTransform = makeTransform([translateX(currentTranslateX)]);
   const nextCoverTransform = makeTransform([translateX(nextTranslateX)]);
-  const connectorProgress =
-    currentSegment.segmentType === "connector"
-      ? interpolate(segmentFrame, [0, Math.max(18, segmentDuration - 18), segmentDuration], [0, 1, 0.92], {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp"
-        })
-      : 0;
-  const connectorOverlayOpacity =
-    currentSegment.segmentType === "connector"
-      ? interpolate(segmentFrame, [0, 10, Math.max(16, segmentDuration - 18), segmentDuration], [0, 1, 1, 0], {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp"
-        })
-      : 0;
-  const connectorScale = interpolate(connectorProgress, [0, 1], [1.035, 1]);
 
   if (currentSegment.segmentType === "intro" && Array.isArray(newspaperCoverStack) && newspaperCoverStack.length > 0) {
     const introStack = newspaperCoverStack.slice(0, 6);
@@ -108,6 +94,28 @@ export const CoverStage = ({
           transform: stageTransform
         }}
       >
+        {currentSegment.headline ? (
+          <div
+            style={{
+              position: "absolute",
+              top: -72,
+              left: 0,
+              zIndex: 20,
+              padding: "14px 22px",
+              borderRadius: 999,
+              background: "rgba(10,10,14,0.78)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "0 18px 48px rgba(0,0,0,0.2)",
+              color: "#f8cf52",
+              fontSize: 34,
+              fontWeight: 700,
+              letterSpacing: 1.1,
+              textTransform: "uppercase"
+            }}
+          >
+            {currentSegment.headline}
+          </div>
+        ) : null}
         {introStack
           .slice()
           .reverse()
@@ -183,10 +191,7 @@ export const CoverStage = ({
             width: CARD_WIDTH,
             height: COVER_HEIGHT,
             transformOrigin: "left center",
-            transform:
-              currentSegment.segmentType === "connector"
-                ? makeTransform([translateX(currentTranslateX), scale(connectorScale)])
-                : currentCoverTransform,
+            transform: currentCoverTransform,
             opacity: isTransitioning ? interpolate(transitionProgress, [0, 1], [1, 0.1]) : 1,
             overflow: "hidden"
           }}
@@ -201,66 +206,7 @@ export const CoverStage = ({
             transform: currentFocusTransform
           }}
         />
-          {currentSegment.segmentType === "connector" ? (
-            <>
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background:
-                    "linear-gradient(180deg, rgba(11,10,14,0.16) 0%, rgba(11,10,14,0.02) 32%, rgba(11,10,14,0.56) 100%)"
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  left: 34,
-                  right: 34,
-                  bottom: 38,
-                  opacity: connectorOverlayOpacity,
-                  display: "flex",
-                  justifyContent: "center"
-                }}
-              >
-                <div
-                  style={{
-                    maxWidth: 840,
-                    padding: "24px 30px",
-                    borderRadius: 28,
-                    background: "rgba(10,10,14,0.68)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    boxShadow: "0 24px 54px rgba(0,0,0,0.28)",
-                    textAlign: "center",
-                    backdropFilter: "blur(8px)"
-                  }}
-                >
-                  <div
-                    style={{
-                      color: "#f8cf52",
-                      fontSize: 34,
-                      fontWeight: 700,
-                      letterSpacing: 1.4,
-                      textTransform: "uppercase"
-                    }}
-                  >
-                    {currentSegment.newspaperName}
-                  </div>
-                  <div
-                    style={{
-                      marginTop: 10,
-                      color: "white",
-                      fontSize: 56,
-                      fontWeight: 700,
-                      lineHeight: 1.02
-                    }}
-                  >
-                    {currentSegment.headline || `Entramos a ${currentSegment.newspaperName}`}
-                  </div>
-                </div>
-              </div>
-            </>
-          ) : null}
-      </div>
+          </div>
       {isTransitioning ? (
         <div
           style={{
