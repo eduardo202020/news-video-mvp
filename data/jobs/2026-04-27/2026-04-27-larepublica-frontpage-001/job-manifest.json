@@ -1,0 +1,585 @@
+{
+  "job_id": "2026-04-27-larepublica-frontpage-001",
+  "source_id": "larepublica",
+  "date": "2026-04-27",
+  "source": {
+    "source_id": "larepublica",
+    "source_config_path": "automation/sources/diarios/larepublica.json",
+    "requested_date": "2026-04-27",
+    "issue_date": "2026-04-27",
+    "publication_status": "available",
+    "discovery_type": "direct_image_url",
+    "front_page_url": "https://img.kiosko.net/2026/04/27/pe/pe_republica.750.jpg",
+    "discovered_pages_count": 1,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://img.kiosko.net/2026/04/27/pe/pe_republica.750.jpg",
+    "source_url": "https://img.kiosko.net/2026/04/27/pe/pe_republica.750.jpg",
+    "source_config": "automation/sources/diarios/larepublica.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://img.kiosko.net/2026/04/27/pe/pe_republica.750.jpg",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/input/front-page.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      2,
+      3,
+      4,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19
+    ],
+    "candidates": [
+      {
+        "headline": "Ocho militares detenidos por muerte de cinco jóvenes",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.18,
+          "width": 0.61,
+          "height": 0.48
+        },
+        "page_number": 4,
+        "evidence_line": "Durante supuesto ataque narcoterrorista en Huancavelica → 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Juez evalúa devolver acusación del caso Gasoducto",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.68,
+          "width": 0.47,
+          "height": 0.19
+        },
+        "page_number": 2,
+        "evidence_line": "ESPECIAL → 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Juez evalúa devolver acusación del caso Gasoducto",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.68,
+          "width": 0.47,
+          "height": 0.19
+        },
+        "page_number": 3,
+        "evidence_line": "ESPECIAL → 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Denuncian más de 194 mil actos violentos",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.55,
+          "width": 0.3,
+          "height": 0.1
+        },
+        "page_number": 12,
+        "evidence_line": "ESPECIAL → 12-13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "Denuncian más de 194 mil actos violentos",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.55,
+          "width": 0.3,
+          "height": 0.1
+        },
+        "page_number": 13,
+        "evidence_line": "ESPECIAL → 12-13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "Festival de la FAP en Las Palmas",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.22,
+          "width": 0.3,
+          "height": 0.3
+        },
+        "page_number": 14,
+        "evidence_line": "SOCIEDAD → 14",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "Oleajes anómalos cierran puertos",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.69,
+          "width": 0.29,
+          "height": 0.11
+        },
+        "page_number": 15,
+        "evidence_line": "SOCIEDAD → 15",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      },
+      {
+        "headline": "Alianza venció a Atlético Grau",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.02,
+          "width": 0.31,
+          "height": 0.08
+        },
+        "page_number": 18,
+        "evidence_line": "DEPORTES → 18",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.87
+      },
+      {
+        "headline": "Keniano Sawe gana maratón en menos de 2 horas",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.34,
+          "y": 0.02,
+          "width": 0.24,
+          "height": 0.08
+        },
+        "page_number": 19,
+        "evidence_line": "DEPORTES → 19",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.86
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Juez evalúa devolver acusación del caso Gasoducto",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.68,
+          "width": 0.47,
+          "height": 0.19
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "ESPECIAL → 2-3",
+        "evidence_lines": [
+          "ESPECIAL → 2-3"
+        ],
+        "confidence": 0.93
+      },
+      {
+        "headline": "Ocho militares detenidos por muerte de cinco jóvenes",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.18,
+          "width": 0.61,
+          "height": 0.48
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Durante supuesto ataque narcoterrorista en Huancavelica → 4",
+        "evidence_lines": [
+          "Durante supuesto ataque narcoterrorista en Huancavelica → 4"
+        ],
+        "confidence": 0.97
+      },
+      {
+        "headline": "Denuncian más de 194 mil actos violentos",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.55,
+          "width": 0.3,
+          "height": 0.1
+        },
+        "page_numbers": [
+          12,
+          13
+        ],
+        "evidence": "ESPECIAL → 12-13",
+        "evidence_lines": [
+          "ESPECIAL → 12-13"
+        ],
+        "confidence": 0.91
+      },
+      {
+        "headline": "Festival de la FAP en Las Palmas",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.22,
+          "width": 0.3,
+          "height": 0.3
+        },
+        "page_numbers": [
+          14
+        ],
+        "evidence": "SOCIEDAD → 14",
+        "evidence_lines": [
+          "SOCIEDAD → 14"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "Oleajes anómalos cierran puertos",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.69,
+          "width": 0.29,
+          "height": 0.11
+        },
+        "page_numbers": [
+          15
+        ],
+        "evidence": "SOCIEDAD → 15",
+        "evidence_lines": [
+          "SOCIEDAD → 15"
+        ],
+        "confidence": 0.88
+      },
+      {
+        "headline": "Alianza venció a Atlético Grau",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.02,
+          "width": 0.31,
+          "height": 0.08
+        },
+        "page_numbers": [
+          18
+        ],
+        "evidence": "DEPORTES → 18",
+        "evidence_lines": [
+          "DEPORTES → 18"
+        ],
+        "confidence": 0.87
+      },
+      {
+        "headline": "Keniano Sawe gana maratón en menos de 2 horas",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.34,
+          "y": 0.02,
+          "width": 0.24,
+          "height": 0.08
+        },
+        "page_numbers": [
+          19
+        ],
+        "evidence": "DEPORTES → 19",
+        "evidence_lines": [
+          "DEPORTES → 19"
+        ],
+        "confidence": 0.86
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Ocho militares detenidos por muerte de cinco jóvenes",
+        "story_type": "policial",
+        "summary": "La noticia sacudió al país. Ocho militares han sido detenidos por su supuesta participación en la muerte de cinco jóvenes durante un ataque narcoterrorista en Huancavelica. La investigación está en curso y se espera más información sobre este trágico suceso.",
+        "speech": "La noticia sacudió al país. Ocho militares han sido detenidos por su supuesta participación en la muerte de cinco jóvenes durante un ataque narcoterrorista en Huancavelica. La investigación está en curso y se espera más información sobre este trágico suceso.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "grave",
+          "cauteloso",
+          "tenso"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.18,
+          "width": 0.61,
+          "height": 0.48
+        },
+        "key_facts": [
+          "detención de militares",
+          "muerte de cinco jóvenes",
+          "ataque narcoterrorista"
+        ],
+        "key_facts_used": [
+          "detención de militares",
+          "muerte de cinco jóvenes",
+          "ataque narcoterrorista"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita afirman hechos no probados y se mantiene la cautela en la información.",
+        "notes": "Se evita afirman hechos no probados y se mantiene la cautela en la información."
+      },
+      {
+        "headline": "Juez evalúa devolver acusación del caso Gasoducto",
+        "story_type": "politica",
+        "summary": "El caso Gasoducto sigue siendo un tema candente. Un juez evalúa la posibilidad de devolver la acusación al fiscal, lo que podría cambiar el rumbo de este proceso que ha sacudido a la política peruana. ¿Qué sucederá con esta polémica?",
+        "speech": "El caso Gasoducto sigue siendo un tema candente. Un juez evalúa la posibilidad de devolver la acusación al fiscal, lo que podría cambiar el rumbo de este proceso que ha sacudido a la política peruana. ¿Qué sucederá con esta polémica?",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "confrontacional",
+          "irónico",
+          "crítico"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.68,
+          "width": 0.47,
+          "height": 0.19
+        },
+        "key_facts": [
+          "juez evalúa acusación",
+          "caso Gasoducto",
+          "polémica política"
+        ],
+        "key_facts_used": [
+          "juez evalúa acusación",
+          "caso Gasoducto",
+          "polémica política"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se cuestionan procesos, sin afirmar culpabilidad antes de tiempo.",
+        "notes": "Se cuestionan procesos, sin afirmar culpabilidad antes de tiempo."
+      },
+      {
+        "headline": "Denuncian más de 194 mil actos violentos",
+        "story_type": "actualidad",
+        "summary": "La violencia sigue siendo un problema grave en el país. Más de 194 mil actos violentos fueron reportados durante el primer trimestre, lo que pone en evidencia la creciente inseguridad en varias regiones. ¿Qué medidas tomarán las autoridades?",
+        "speech": "La violencia sigue siendo un problema grave en el país. Más de 194 mil actos violentos fueron reportados durante el primer trimestre, lo que pone en evidencia la creciente inseguridad en varias regiones. ¿Qué medidas tomarán las autoridades?",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "serio",
+          "analítico",
+          "preocupante"
+        ],
+        "page_numbers": [
+          12,
+          13
+        ],
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.55,
+          "width": 0.3,
+          "height": 0.1
+        },
+        "key_facts": [
+          "actos violentos reportados",
+          "primer trimestre",
+          "creciente inseguridad"
+        ],
+        "key_facts_used": [
+          "actos violentos reportados",
+          "primer trimestre",
+          "creciente inseguridad"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se centra en los hechos verificables sin dramatizar cifras.",
+        "notes": "Se centra en los hechos verificables sin dramatizar cifras."
+      },
+      {
+        "headline": "Festival de la FAP en Las Palmas",
+        "story_type": "actualidad",
+        "summary": "En un evento que se ha convertido en una tradición, el Festival de la Fuerza Aérea del Perú deslumbró a miles de ciudadanos en Las Palmas. Un espectáculo aéreo que mostró lo mejor de la aviación y dejó claro el compromiso de la FAP con la seguridad nacional.",
+        "speech": "En un evento que se ha convertido en una tradición, el Festival de la Fuerza Aérea del Perú deslumbró a miles de ciudadanos en Las Palmas. Un espectáculo aéreo que mostró lo mejor de la aviación y dejó claro el compromiso de la FAP con la seguridad nacional.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "positivo",
+          "informativo",
+          "inspirador"
+        ],
+        "page_numbers": [
+          14
+        ],
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.22,
+          "width": 0.3,
+          "height": 0.3
+        },
+        "key_facts": [
+          "Festival de la FAP",
+          "Las Palmas",
+          "espectáculo aéreo"
+        ],
+        "key_facts_used": [
+          "Festival de la FAP",
+          "Las Palmas",
+          "espectáculo aéreo"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Solo se menciona el evento y sus aspectos más destacados.",
+        "notes": "Solo se menciona el evento y sus aspectos más destacados."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "La noticia sacudió al país. Ocho militares han sido detenidos por su supuesta participación en la muerte de cinco jóvenes durante un ataque narcoterrorista en Huancavelica. La investigación está en curso y se espera más información sobre este trágico suceso.\n\nEl caso Gasoducto sigue siendo un tema candente. Un juez evalúa la posibilidad de devolver la acusación al fiscal, lo que podría cambiar el rumbo de este proceso que ha sacudido a la política peruana. ¿Qué sucederá con esta polémica?\n\nLa violencia sigue siendo un problema grave en el país. Más de 194 mil actos violentos fueron reportados durante el primer trimestre, lo que pone en evidencia la creciente inseguridad en varias regiones. ¿Qué medidas tomarán las autoridades?\n\nEn un evento que se ha convertido en una tradición, el Festival de la Fuerza Aérea del Perú deslumbró a miles de ciudadanos en Las Palmas. Un espectáculo aéreo que mostró lo mejor de la aviación y dejó claro el compromiso de la FAP con la seguridad nacional.",
+    "approved_text": "La noticia sacudió al país. Ocho militares han sido detenidos por su supuesta participación en la muerte de cinco jóvenes durante un ataque narcoterrorista en Huancavelica. La investigación está en curso y se espera más información sobre este trágico suceso.\n\nEl caso Gasoducto sigue siendo un tema candente. Un juez evalúa la posibilidad de devolver la acusación al fiscal, lo que podría cambiar el rumbo de este proceso que ha sacudido a la política peruana. ¿Qué sucederá con esta polémica?\n\nLa violencia sigue siendo un problema grave en el país. Más de 194 mil actos violentos fueron reportados durante el primer trimestre, lo que pone en evidencia la creciente inseguridad en varias regiones. ¿Qué medidas tomarán las autoridades?\n\nEn un evento que se ha convertido en una tradición, el Festival de la Fuerza Aérea del Perú deslumbró a miles de ciudadanos en Las Palmas. Un espectáculo aéreo que mostró lo mejor de la aviación y dejó claro el compromiso de la FAP con la seguridad nacional.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-27-larepublica-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-27T07:31:57",
+    "updated_at": "2026-04-27T07:57:30",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:31:57",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:31:58",
+        "details": "Fuente analizada desde HTML; portada descubierta y 0 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:14",
+        "details": "Se importaron 9 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:14",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:52:49",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:52:51",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-27T07:57:30",
+        "details": "Enfoque manual actualizado para historia 1: Ocho militares detenidos por muerte de cinco jóvenes."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:57:30",
+        "details": "Story manifest generado desde job manifest."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Es lunes 27 de abril y las portadas llegan cargadas: Congreso, elecciones, economía, fútbol y un caso internacional que marca agenda. En esta fecha, Adonde recuerda el manifiesto previo al bombardeo de Lima de 1866. Vamos diario por diario, directo a lo central.",
+    "date_reference": "Adonde.com efemerides abril27: en 1866, Casto Méndez Núñez notificó que en tres días iniciaría el bombardeo de Lima.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana y abre paso a una agenda fuerte de política, economía, mundo y deportes.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-27T07:36:14"
+  }
+}

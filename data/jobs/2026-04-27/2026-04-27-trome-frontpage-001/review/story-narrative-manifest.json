@@ -1,0 +1,153 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-27-trome-frontpage-001",
+  "source_id": "trome",
+  "source_name": "Trome",
+  "date": "2026-04-27",
+  "front_page_image": "data/jobs/2026-04-27/2026-04-27-trome-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Plan para asesinar a Trump",
+      "story_type": "mundo",
+      "summary": "Un nuevo intento contra Donald Trump ha salido a la luz. Cole Thomas Allen, conocido como el 'lobo solitario', había planeado asesinar al expresidente estadounidense. La intervención de las autoridades evitó una tragedia de magnitudes internacionales.",
+      "speech": "Un nuevo intento contra Donald Trump ha salido a la luz. Cole Thomas Allen, conocido como el 'lobo solitario', había planeado asesinar al expresidente estadounidense. La intervención de las autoridades evitó una tragedia de magnitudes internacionales.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.19,
+        "width": 0.73,
+        "height": 0.63
+      },
+      "key_facts": [
+        "intentó asesinato a Trump",
+        "Cole Thomas Allen",
+        "intervención de las autoridades"
+      ],
+      "tone_notes": [
+        "grave",
+        "informativo",
+        "serio"
+      ],
+      "safety_notes": "La noticia se basa en información oficial disponible; no se afirman detalles no verificados.",
+      "notes": "La noticia se basa en información oficial disponible; no se afirman detalles no verificados.",
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Compran regalos para mamita",
+      "story_type": "actualidad",
+      "summary": "Con el Día de la Madre a la vuelta de la esquina, las compras están a la orden del día. Comerciantes se preparan para una jornada de ventas y promociones, buscando ofrecer los mejores regalos para las mamás. ¿Qué es lo más buscado este año?",
+      "speech": "Con el Día de la Madre a la vuelta de la esquina, las compras están a la orden del día. Comerciantes se preparan para una jornada de ventas y promociones, buscando ofrecer los mejores regalos para las mamás. ¿Qué es lo más buscado este año?",
+      "page_numbers": [
+        10
+      ],
+      "cover_region": {
+        "x": 0.58,
+        "y": 0.86,
+        "width": 0.4,
+        "height": 0.12
+      },
+      "key_facts": [
+        "ventas por el Día de la Madre",
+        "promociones comerciales",
+        "regalos más buscados"
+      ],
+      "tone_notes": [
+        "ligero",
+        "informativo",
+        "cercano"
+      ],
+      "safety_notes": "No se mencionan detalles específicos sobre los productos, solo la tendencia de compra.",
+      "notes": "No se mencionan detalles específicos sobre los productos, solo la tendencia de compra.",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Alianza celebra en la punta",
+      "story_type": "deportes",
+      "summary": "Alianza Lima sigue demostrando su calidad en el campo. Tras la victoria de hoy, se mantiene en la cima del Apertura, con un juego efectivo que está marcando la diferencia entre los grandes. Todo apunta a que la lucha por el título será intensa.",
+      "speech": "Alianza Lima sigue demostrando su calidad en el campo. Tras la victoria de hoy, se mantiene en la cima del Apertura, con un juego efectivo que está marcando la diferencia entre los grandes. Todo apunta a que la lucha por el título será intensa.",
+      "page_numbers": [
+        12
+      ],
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.21,
+        "width": 0.21,
+        "height": 0.67
+      },
+      "key_facts": [
+        "victoria clave",
+        "liderato del Apertura",
+        "diferencia con otros equipos"
+      ],
+      "tone_notes": [
+        "enérgico",
+        "emocionante",
+        "competitivo"
+      ],
+      "safety_notes": "El enfoque está en el desempeño y liderazgo en el campeonato.",
+      "notes": "El enfoque está en el desempeño y liderazgo en el campeonato.",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Monserrat dice que ya no ama a Melcochita",
+      "story_type": "espectaculos",
+      "summary": "Una confesión que ha dejado huella: Monserrat asegura que ya no siente lo mismo por Melcochita. Tras 17 años de relación, su ruptura está siendo el tema más hablado del momento en la farándula peruana.",
+      "speech": "Una confesión que ha dejado huella: Monserrat asegura que ya no siente lo mismo por Melcochita. Tras 17 años de relación, su ruptura está siendo el tema más hablado del momento en la farándula peruana.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.86,
+        "width": 0.54,
+        "height": 0.12
+      },
+      "key_facts": [
+        "ruptura de relación",
+        "confesión de Monserrat",
+        "17 años juntos"
+      ],
+      "tone_notes": [
+        "picante",
+        "sin filtros",
+        "directo"
+      ],
+      "safety_notes": "Se mantiene el respeto a la privacidad, enfocándose solo en los hechos públicos.",
+      "notes": "Se mantiene el respeto a la privacidad, enfocándose solo en los hechos públicos.",
+      "narrator_profile_id": "reportera_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportera_magaly",
+      "narrator_name": "Reportera Magaly",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-27-ojo-frontpage-001",
+  "source_id": "ojo",
+  "source_name": "Ojo",
+  "date": "2026-04-27",
+  "front_page_image": "data/jobs/2026-04-27/2026-04-27-ojo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Ministros responderán por compra de F-16",
+      "story_type": "politica",
+      "summary": "El escándalo por la compra de los F-16 está llegando al Congreso. Los ministros responsables deberán explicar cómo se manejó este acuerdo de defensa, mientras las dudas siguen creciendo entre los ciudadanos. La política de compras millonarias está bajo lupa.",
+      "speech": "El escándalo por la compra de los F-16 está llegando al Congreso. Los ministros responsables deberán explicar cómo se manejó este acuerdo de defensa, mientras las dudas siguen creciendo entre los ciudadanos. La política de compras millonarias está bajo lupa.",
+      "page_numbers": [
+        2
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.17,
+        "width": 0.96,
+        "height": 0.68
+      },
+      "key_facts": [
+        "compra de F-16",
+        "ministros responsables",
+        "dudas sobre el acuerdo"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "irónico",
+        "exigente"
+      ],
+      "safety_notes": "No se afirman delitos, solo cuestionamientos políticos.",
+      "notes": "No se afirman delitos, solo cuestionamientos políticos.",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Alianza volvió a la punta",
+      "story_type": "deportes",
+      "summary": "Alianza Lima pegó fuerte, se llevó la victoria y recuperó la punta. Este triunfo fue clave para mantenerse al frente, consolidando su dominio en el Apertura y mandando un mensaje claro: la competencia aún no está decidida.",
+      "speech": "Alianza Lima pegó fuerte, se llevó la victoria y recuperó la punta. Este triunfo fue clave para mantenerse al frente, consolidando su dominio en el Apertura y mandando un mensaje claro: la competencia aún no está decidida.",
+      "page_numbers": [
+        13,
+        14
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.84,
+        "width": 0.56,
+        "height": 0.14
+      },
+      "key_facts": [
+        "triunfo clave",
+        "recuperó la punta",
+        "liderato del Apertura"
+      ],
+      "tone_notes": [
+        "emocionante",
+        "dinámico",
+        "competitivo"
+      ],
+      "safety_notes": "Se centra en el impacto deportivo de la victoria.",
+      "notes": "Se centra en el impacto deportivo de la victoria.",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Monserrat olvidó a Melcochita",
+      "story_type": "espectaculos",
+      "summary": "Monserrat revela que ya no hay amor por Melcochita, sorprendiendo a todos con su sinceridad. La ruptura es una de las más comentadas, pero ¿será el fin de esta historia? Los detalles se mantienen como un tema candente en el mundo del espectáculo.",
+      "speech": "Monserrat revela que ya no hay amor por Melcochita, sorprendiendo a todos con su sinceridad. La ruptura es una de las más comentadas, pero ¿será el fin de esta historia? Los detalles se mantienen como un tema candente en el mundo del espectáculo.",
+      "page_numbers": [
+        18
+      ],
+      "cover_region": {
+        "x": 0.58,
+        "y": 0.84,
+        "width": 0.4,
+        "height": 0.14
+      },
+      "key_facts": [
+        "ruptura de relación",
+        "Monserrat y Melcochita",
+        "comentarios de la farándula"
+      ],
+      "tone_notes": [
+        "picante",
+        "directo",
+        "sin rodeos"
+      ],
+      "safety_notes": "Se evita invadir la privacidad, solo se reportan hechos verificables.",
+      "notes": "Se evita invadir la privacidad, solo se reportan hechos verificables.",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "segment_audio_file": null
+    }
+  ]
+}

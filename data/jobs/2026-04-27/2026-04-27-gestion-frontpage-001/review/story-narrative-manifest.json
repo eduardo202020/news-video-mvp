@@ -1,0 +1,225 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-27-gestion-frontpage-001",
+  "source_id": "gestion",
+  "source_name": "Gestion",
+  "date": "2026-04-27",
+  "front_page_image": "data/jobs/2026-04-27/2026-04-27-gestion-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Empleo formal se aceleró en las 5,000 empresas más grandes en el primer trimestre",
+      "story_type": "economia",
+      "summary": "El empleo formal sigue creciendo, especialmente en las grandes empresas. Sin embargo, el panorama económico aún presenta retos, y la incertidumbre electoral podría afectar los próximos meses.",
+      "speech": "El empleo formal sigue creciendo, especialmente en las grandes empresas. Sin embargo, el panorama económico aún presenta retos, y la incertidumbre electoral podría afectar los próximos meses.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.72,
+        "width": 0.69,
+        "height": 0.17
+      },
+      "key_facts": [
+        "empleo formal",
+        "empresas más grandes",
+        "crecimiento en el primer trimestre"
+      ],
+      "tone_notes": [
+        "analítico",
+        "serio",
+        "profundo"
+      ],
+      "safety_notes": "Se basa en las tendencias económicas más recientes, sin adelantar conclusiones.",
+      "notes": "Se basa en las tendencias económicas más recientes, sin adelantar conclusiones.",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Pago Perú integrará un nuevo método de pago y evaluará otros tres",
+      "story_type": "economia",
+      "summary": "Mercado Pago se prepara para implementar nuevos métodos de pago en el Perú. Con un crecimiento sólido en el sector, la empresa apuesta por la innovación y la inclusión financiera.",
+      "speech": "Mercado Pago se prepara para implementar nuevos métodos de pago en el Perú. Con un crecimiento sólido en el sector, la empresa apuesta por la innovación y la inclusión financiera.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.27,
+        "width": 0.22,
+        "height": 0.27
+      },
+      "key_facts": [
+        "nuevos métodos de pago",
+        "crecimiento de Mercado Pago",
+        "innovación financiera"
+      ],
+      "tone_notes": [
+        "optimista",
+        "futurista",
+        "innovador"
+      ],
+      "safety_notes": "Se basa en las declaraciones de la empresa, sin cifras específicas del impacto esperado.",
+      "notes": "Se basa en las declaraciones de la empresa, sin cifras específicas del impacto esperado.",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Cafferena expande su portafolio en Perú",
+      "story_type": "economia",
+      "summary": "La compañía Cafferena está ampliando su presencia en Perú con nuevas tiendas, un paso clave en su estrategia de crecimiento en América Latina. La diversificación es clave para su éxito.",
+      "speech": "La compañía Cafferena está ampliando su presencia en Perú con nuevas tiendas, un paso clave en su estrategia de crecimiento en América Latina. La diversificación es clave para su éxito.",
+      "page_numbers": [
+        10
+      ],
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.55,
+        "width": 0.22,
+        "height": 0.25
+      },
+      "key_facts": [
+        "expansión de Cafferena",
+        "nuevas tiendas",
+        "estrategia de crecimiento"
+      ],
+      "tone_notes": [
+        "estratégico",
+        "dinámico",
+        "enfocado"
+      ],
+      "safety_notes": "Basado en los planes de expansión de la empresa, sin detalles sobre los resultados inmediatos.",
+      "notes": "Basado en los planes de expansión de la empresa, sin detalles sobre los resultados inmediatos.",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Petróleo mayor a US$ 100 el barril desacelera crecimiento a solo 2.7%",
+      "story_type": "economia",
+      "summary": "El aumento del precio del petróleo está afectando negativamente las proyecciones de crecimiento para el Perú, que ahora se espera que sea de solo 2.7% debido a los altos costos energéticos.",
+      "speech": "El aumento del precio del petróleo está afectando negativamente las proyecciones de crecimiento para el Perú, que ahora se espera que sea de solo 2.7% debido a los altos costos energéticos.",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.91,
+        "width": 0.74,
+        "height": 0.06
+      },
+      "key_facts": [
+        "precio del petróleo",
+        "proyección de crecimiento",
+        "efectos en la economía"
+      ],
+      "tone_notes": [
+        "preocupante",
+        "realista",
+        "informativo"
+      ],
+      "safety_notes": "Se menciona el impacto del precio del petróleo sobre las proyecciones económicas, sin detalles adicionales sobre las causas específicas.",
+      "notes": "Se menciona el impacto del precio del petróleo sobre las proyecciones económicas, sin detalles adicionales sobre las causas específicas.",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 5,
+      "segment_type": "story",
+      "headline": "Ventas de mypes afectadas por incertidumbre electoral",
+      "story_type": "economia",
+      "summary": "Las mypes empiezan a sentir los efectos de la incertidumbre electoral. Las ventas han comenzado a bajar, lo que está afectando la economía local, y el futuro cercano sigue siendo incierto.",
+      "speech": "Las mypes empiezan a sentir los efectos de la incertidumbre electoral. Las ventas han comenzado a bajar, lo que está afectando la economía local, y el futuro cercano sigue siendo incierto.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.31,
+        "width": 0.69,
+        "height": 0.36
+      },
+      "key_facts": [
+        "ventas de mypes",
+        "incertidumbre electoral",
+        "efectos en la economía local"
+      ],
+      "tone_notes": [
+        "preocupante",
+        "análisis",
+        "prudente"
+      ],
+      "safety_notes": "Basado en las tendencias observadas, sin previsiones exactas para el futuro.",
+      "notes": "Basado en las tendencias observadas, sin previsiones exactas para el futuro.",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 6,
+      "segment_type": "story",
+      "headline": "Bata fabrica 4 millones de pares al año en Perú",
+      "story_type": "economia",
+      "summary": "La compañía Bata se consolida como uno de los grandes jugadores del mercado de calzado en Perú, con una producción anual de 4 millones de pares, apuntando a la calidad y sostenibilidad.",
+      "speech": "La compañía Bata se consolida como uno de los grandes jugadores del mercado de calzado en Perú, con una producción anual de 4 millones de pares, apuntando a la calidad y sostenibilidad.",
+      "page_numbers": [
+        23
+      ],
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.82,
+        "width": 0.22,
+        "height": 0.13
+      },
+      "key_facts": [
+        "producción de Bata",
+        "4 millones de pares",
+        "mercado de calzado en Perú"
+      ],
+      "tone_notes": [
+        "positivo",
+        "informativo",
+        "expansivo"
+      ],
+      "safety_notes": "La cifra es proporcionada por la empresa, sin detalles adicionales sobre la distribución de sus productos.",
+      "notes": "La cifra es proporcionada por la empresa, sin detalles adicionales sobre la distribución de sus productos.",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    }
+  ]
+}

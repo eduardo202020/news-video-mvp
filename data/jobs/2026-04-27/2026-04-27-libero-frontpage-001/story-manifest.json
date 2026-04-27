@@ -1,0 +1,90 @@
+{
+  "story_id": "2026-04-27-libero-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-27-libero-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-27/2026-04-27-libero-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-27/2026-04-27-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Alianza arriba",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Alianza Lima sigue marcando su superioridad, liderando el Apertura con una victoria que reafirma su dominio en el torneo. Los blanquiazules no dan tregua y siguen peleando con todo por el primer lugar.",
+      "page_numbers": [
+        8,
+        9,
+        10
+      ],
+      "key_facts": [
+        "victoria clave",
+        "liderato del Apertura",
+        "superioridad en el torneo"
+      ],
+      "tone_notes": [
+        "emocionante",
+        "enérgico",
+        "competitivo"
+      ],
+      "safety_notes": "Se centra en el contexto deportivo y en el impacto de la victoria.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.05,
+        "width": 0.74,
+        "height": 0.82
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-27/2026-04-27-libero-frontpage-001/input/front-page.jpg",
+      "headline": "A la U solo le queda la Copa",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Universitario se despide de la lucha por el Apertura. El equipo cayó ante un Alianza Lima imparable, y ahora sus esperanzas se centran en la Copa. La presión está sobre ellos, y necesitan recuperarse rápidamente.",
+      "page_numbers": [
+        3,
+        4,
+        5
+      ],
+      "key_facts": [
+        "despedida del Apertura",
+        "caída ante Alianza",
+        "esperanzas en la Copa"
+      ],
+      "tone_notes": [
+        "desafiante",
+        "realista",
+        "frontal"
+      ],
+      "safety_notes": "Se mantiene en el ámbito deportivo y el desempeño del equipo.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.86,
+        "width": 0.42,
+        "height": 0.1
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

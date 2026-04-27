@@ -1,0 +1,154 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-27-correo-frontpage-001",
+  "source_id": "correo",
+  "source_name": "Correo",
+  "date": "2026-04-27",
+  "front_page_image": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Los 18 más votados del nuevo Congreso bicameral",
+      "story_type": "politica",
+      "summary": "El Congreso renovado trae sorpresas. 18 congresistas lograron más de 100 mil votos, pero el panorama sigue marcado por la política de alianzas y la fuerte competencia por la reelección.",
+      "speech": "El Congreso renovado trae sorpresas. 18 congresistas lograron más de 100 mil votos, pero el panorama sigue marcado por la política de alianzas y la fuerte competencia por la reelección.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.35,
+        "y": 0.03,
+        "width": 0.63,
+        "height": 0.93
+      },
+      "key_facts": [
+        "18 congresistas más de 100 mil votos",
+        "alianzas políticas",
+        "lucha por la reelección"
+      ],
+      "tone_notes": [
+        "analítico",
+        "serio",
+        "firme"
+      ],
+      "safety_notes": "Respetando los resultados oficiales, no se asume ninguna ilegalidad en el proceso.",
+      "notes": "Respetando los resultados oficiales, no se asume ninguna ilegalidad en el proceso.",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Incendio afecta escuela de la Policía en Puente Piedra",
+      "story_type": "actualidad",
+      "summary": "Un incendio de grandes proporciones afecta la escuela de la Policía en Puente Piedra, dejando a 200 personas en riesgo. Los bomberos lucharon contra las llamas, mientras se investiga la causa del siniestro.",
+      "speech": "Un incendio de grandes proporciones afecta la escuela de la Policía en Puente Piedra, dejando a 200 personas en riesgo. Los bomberos lucharon contra las llamas, mientras se investiga la causa del siniestro.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.36,
+        "width": 0.3,
+        "height": 0.25
+      },
+      "key_facts": [
+        "incendio en la escuela de la Policía",
+        "200 personas en riesgo",
+        "investigación en curso"
+      ],
+      "tone_notes": [
+        "grave",
+        "directo",
+        "urgente"
+      ],
+      "safety_notes": "Se evita especular sobre las causas del incendio hasta que haya un informe oficial.",
+      "notes": "Se evita especular sobre las causas del incendio hasta que haya un informe oficial.",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Pedro Yaranga advierte sobre Huallaga",
+      "story_type": "economia",
+      "summary": "Pedro Yaranga destaca el creciente problema de la minería ilegal en Huallaga. Según su análisis, esta actividad afecta seriamente a la economía de la región, poniendo en riesgo la seguridad ambiental.",
+      "speech": "Pedro Yaranga destaca el creciente problema de la minería ilegal en Huallaga. Según su análisis, esta actividad afecta seriamente a la economía de la región, poniendo en riesgo la seguridad ambiental.",
+      "page_numbers": [
+        12
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.63,
+        "width": 0.3,
+        "height": 0.19
+      },
+      "key_facts": [
+        "minería ilegal en Huallaga",
+        "riesgos ambientales",
+        "afectación a la economía"
+      ],
+      "tone_notes": [
+        "serio",
+        "informativo",
+        "preocupante"
+      ],
+      "safety_notes": "El análisis está basado en declaraciones del experto, con énfasis en los riesgos para la región.",
+      "notes": "El análisis está basado en declaraciones del experto, con énfasis en los riesgos para la región.",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Alianza gana y toma la punta",
+      "story_type": "deportes",
+      "summary": "Alianza Lima reafirma su liderazgo al ganar nuevamente en el Apertura. Con su victoria ante Atlético Grau, el equipo se consolida como el principal contendiente del torneo.",
+      "speech": "Alianza Lima reafirma su liderazgo al ganar nuevamente en el Apertura. Con su victoria ante Atlético Grau, el equipo se consolida como el principal contendiente del torneo.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.84,
+        "width": 0.31,
+        "height": 0.12
+      },
+      "key_facts": [
+        "victoria de Alianza Lima",
+        "líder del Apertura",
+        "triunfo importante contra Atlético Grau"
+      ],
+      "tone_notes": [
+        "emocionante",
+        "energético",
+        "frenético"
+      ],
+      "safety_notes": "El contexto se enfoca solo en el desempeño del equipo y su posición en la tabla.",
+      "notes": "El contexto se enfoca solo en el desempeño del equipo y su posición en la tabla.",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    }
+  ]
+}

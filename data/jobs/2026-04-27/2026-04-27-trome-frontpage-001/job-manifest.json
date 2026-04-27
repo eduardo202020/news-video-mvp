@@ -1,0 +1,475 @@
+{
+  "job_id": "2026-04-27-trome-frontpage-001",
+  "source_id": "trome",
+  "date": "2026-04-27",
+  "source": {
+    "source_id": "trome",
+    "source_config_path": "automation/sources/diarios/trome.json",
+    "requested_date": "2026-04-27",
+    "issue_date": "2026-04-27",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026042700000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-27/2026-04-27-trome-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026042700000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/trome.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042700000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-trome-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042700000000001001&page=9&scale=82",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-trome-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 10",
+        "page_number": 10,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042700000000001001&page=10&scale=82",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-trome-frontpage-001/input/pages/page-10.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042700000000001001&page=12&scale=82",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-trome-frontpage-001/input/pages/page-12.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042700000000001001&page=16&scale=82",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-trome-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      9,
+      10,
+      12,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Plan para asesinar a Trump",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.19,
+          "width": 0.73,
+          "height": 0.63
+        },
+        "page_number": 9,
+        "evidence_line": "Página 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Alianza celebra en la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.21,
+          "width": 0.21,
+          "height": 0.67
+        },
+        "page_number": 12,
+        "evidence_line": "Página 12",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Monserrat dice que ya no ama a Melcochita",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.86,
+          "width": 0.54,
+          "height": 0.12
+        },
+        "page_number": 16,
+        "evidence_line": "Página 16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      },
+      {
+        "headline": "Compran regalos para mamita",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.58,
+          "y": 0.86,
+          "width": 0.4,
+          "height": 0.12
+        },
+        "page_number": 10,
+        "evidence_line": "Página 10",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Plan para asesinar a Trump",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.19,
+          "width": 0.73,
+          "height": 0.63
+        },
+        "page_numbers": [
+          9
+        ],
+        "evidence": "Página 9",
+        "evidence_lines": [
+          "Página 9"
+        ],
+        "confidence": 0.96
+      },
+      {
+        "headline": "Compran regalos para mamita",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.58,
+          "y": 0.86,
+          "width": 0.4,
+          "height": 0.12
+        },
+        "page_numbers": [
+          10
+        ],
+        "evidence": "Página 10",
+        "evidence_lines": [
+          "Página 10"
+        ],
+        "confidence": 0.88
+      },
+      {
+        "headline": "Alianza celebra en la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.21,
+          "width": 0.21,
+          "height": 0.67
+        },
+        "page_numbers": [
+          12
+        ],
+        "evidence": "Página 12",
+        "evidence_lines": [
+          "Página 12"
+        ],
+        "confidence": 0.94
+      },
+      {
+        "headline": "Monserrat dice que ya no ama a Melcochita",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.86,
+          "width": 0.54,
+          "height": 0.12
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "Página 16",
+        "evidence_lines": [
+          "Página 16"
+        ],
+        "confidence": 0.92
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      9,
+      10,
+      12,
+      16
+    ]
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Plan para asesinar a Trump",
+        "story_type": "mundo",
+        "summary": "Un nuevo intento contra Donald Trump ha salido a la luz. Cole Thomas Allen, conocido como el 'lobo solitario', había planeado asesinar al expresidente estadounidense. La intervención de las autoridades evitó una tragedia de magnitudes internacionales.",
+        "speech": "Un nuevo intento contra Donald Trump ha salido a la luz. Cole Thomas Allen, conocido como el 'lobo solitario', había planeado asesinar al expresidente estadounidense. La intervención de las autoridades evitó una tragedia de magnitudes internacionales.",
+        "narrator_profile_id": "narrador_dbz",
+        "narrator_role": "corresponsal_internacional",
+        "tone_notes": [
+          "grave",
+          "informativo",
+          "serio"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.19,
+          "width": 0.73,
+          "height": 0.63
+        },
+        "key_facts": [
+          "intentó asesinato a Trump",
+          "Cole Thomas Allen",
+          "intervención de las autoridades"
+        ],
+        "key_facts_used": [
+          "intentó asesinato a Trump",
+          "Cole Thomas Allen",
+          "intervención de las autoridades"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La noticia se basa en información oficial disponible; no se afirman detalles no verificados.",
+        "notes": "La noticia se basa en información oficial disponible; no se afirman detalles no verificados."
+      },
+      {
+        "headline": "Compran regalos para mamita",
+        "story_type": "actualidad",
+        "summary": "Con el Día de la Madre a la vuelta de la esquina, las compras están a la orden del día. Comerciantes se preparan para una jornada de ventas y promociones, buscando ofrecer los mejores regalos para las mamás. ¿Qué es lo más buscado este año?",
+        "speech": "Con el Día de la Madre a la vuelta de la esquina, las compras están a la orden del día. Comerciantes se preparan para una jornada de ventas y promociones, buscando ofrecer los mejores regalos para las mamás. ¿Qué es lo más buscado este año?",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "ligero",
+          "informativo",
+          "cercano"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "cover_region": {
+          "x": 0.58,
+          "y": 0.86,
+          "width": 0.4,
+          "height": 0.12
+        },
+        "key_facts": [
+          "ventas por el Día de la Madre",
+          "promociones comerciales",
+          "regalos más buscados"
+        ],
+        "key_facts_used": [
+          "ventas por el Día de la Madre",
+          "promociones comerciales",
+          "regalos más buscados"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se mencionan detalles específicos sobre los productos, solo la tendencia de compra.",
+        "notes": "No se mencionan detalles específicos sobre los productos, solo la tendencia de compra."
+      },
+      {
+        "headline": "Alianza celebra en la punta",
+        "story_type": "deportes",
+        "summary": "Alianza Lima sigue demostrando su calidad en el campo. Tras la victoria de hoy, se mantiene en la cima del Apertura, con un juego efectivo que está marcando la diferencia entre los grandes. Todo apunta a que la lucha por el título será intensa.",
+        "speech": "Alianza Lima sigue demostrando su calidad en el campo. Tras la victoria de hoy, se mantiene en la cima del Apertura, con un juego efectivo que está marcando la diferencia entre los grandes. Todo apunta a que la lucha por el título será intensa.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "enérgico",
+          "emocionante",
+          "competitivo"
+        ],
+        "page_numbers": [
+          12
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.21,
+          "width": 0.21,
+          "height": 0.67
+        },
+        "key_facts": [
+          "victoria clave",
+          "liderato del Apertura",
+          "diferencia con otros equipos"
+        ],
+        "key_facts_used": [
+          "victoria clave",
+          "liderato del Apertura",
+          "diferencia con otros equipos"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El enfoque está en el desempeño y liderazgo en el campeonato.",
+        "notes": "El enfoque está en el desempeño y liderazgo en el campeonato."
+      },
+      {
+        "headline": "Monserrat dice que ya no ama a Melcochita",
+        "story_type": "espectaculos",
+        "summary": "Una confesión que ha dejado huella: Monserrat asegura que ya no siente lo mismo por Melcochita. Tras 17 años de relación, su ruptura está siendo el tema más hablado del momento en la farándula peruana.",
+        "speech": "Una confesión que ha dejado huella: Monserrat asegura que ya no siente lo mismo por Melcochita. Tras 17 años de relación, su ruptura está siendo el tema más hablado del momento en la farándula peruana.",
+        "narrator_profile_id": "reportera_magaly",
+        "narrator_role": "conductora_espectaculos",
+        "tone_notes": [
+          "picante",
+          "sin filtros",
+          "directo"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.86,
+          "width": 0.54,
+          "height": 0.12
+        },
+        "key_facts": [
+          "ruptura de relación",
+          "confesión de Monserrat",
+          "17 años juntos"
+        ],
+        "key_facts_used": [
+          "ruptura de relación",
+          "confesión de Monserrat",
+          "17 años juntos"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se mantiene el respeto a la privacidad, enfocándose solo en los hechos públicos.",
+        "notes": "Se mantiene el respeto a la privacidad, enfocándose solo en los hechos públicos."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-27/2026-04-27-trome-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Un nuevo intento contra Donald Trump ha salido a la luz. Cole Thomas Allen, conocido como el 'lobo solitario', había planeado asesinar al expresidente estadounidense. La intervención de las autoridades evitó una tragedia de magnitudes internacionales.\n\nCon el Día de la Madre a la vuelta de la esquina, las compras están a la orden del día. Comerciantes se preparan para una jornada de ventas y promociones, buscando ofrecer los mejores regalos para las mamás. ¿Qué es lo más buscado este año?\n\nAlianza Lima sigue demostrando su calidad en el campo. Tras la victoria de hoy, se mantiene en la cima del Apertura, con un juego efectivo que está marcando la diferencia entre los grandes. Todo apunta a que la lucha por el título será intensa.\n\nUna confesión que ha dejado huella: Monserrat asegura que ya no siente lo mismo por Melcochita. Tras 17 años de relación, su ruptura está siendo el tema más hablado del momento en la farándula peruana.",
+    "approved_text": "Un nuevo intento contra Donald Trump ha salido a la luz. Cole Thomas Allen, conocido como el 'lobo solitario', había planeado asesinar al expresidente estadounidense. La intervención de las autoridades evitó una tragedia de magnitudes internacionales.\n\nCon el Día de la Madre a la vuelta de la esquina, las compras están a la orden del día. Comerciantes se preparan para una jornada de ventas y promociones, buscando ofrecer los mejores regalos para las mamás. ¿Qué es lo más buscado este año?\n\nAlianza Lima sigue demostrando su calidad en el campo. Tras la victoria de hoy, se mantiene en la cima del Apertura, con un juego efectivo que está marcando la diferencia entre los grandes. Todo apunta a que la lucha por el título será intensa.\n\nUna confesión que ha dejado huella: Monserrat asegura que ya no siente lo mismo por Melcochita. Tras 17 años de relación, su ruptura está siendo el tema más hablado del momento en la farándula peruana.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-27T07:32:20",
+    "updated_at": "2026-04-27T07:50:27",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:32:20",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:32:40",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:32:41",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:14",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:14",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:33",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:50:27",
+        "details": "Se importaron 4 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Es lunes 27 de abril y las portadas llegan cargadas: Congreso, elecciones, economía, fútbol y un caso internacional que marca agenda. En esta fecha, Adonde recuerda el manifiesto previo al bombardeo de Lima de 1866. Vamos diario por diario, directo a lo central.",
+    "date_reference": "Adonde.com efemerides abril27: en 1866, Casto Méndez Núñez notificó que en tres días iniciaría el bombardeo de Lima.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana y abre paso a una agenda fuerte de política, economía, mundo y deportes.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-27T07:36:14"
+  }
+}

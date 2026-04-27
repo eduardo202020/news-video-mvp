@@ -1,0 +1,122 @@
+{
+  "story_id": "2026-04-27-elcomercio-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-27-elcomercio-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-27/2026-04-27-elcomercio-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-27/2026-04-27-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Congresistas que buscaron reelegirse quedarían sin curul",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La reelección se convierte en un desafío político para muchos congresistas. Más del 70% de los actuales no lograron retener su curul. Un cambio importante que marca el rumbo del nuevo Congreso.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "reelección fallida",
+        "nuevo Congreso",
+        "número de congresistas afectados"
+      ],
+      "tone_notes": [
+        "crítico",
+        "analítico",
+        "firme"
+      ],
+      "safety_notes": "Basado en los resultados de las elecciones, sin afirmaciones sobre motivos internos.",
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.55,
+        "width": 0.7,
+        "height": 0.11
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-27/2026-04-27-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Virtuales congresistas a favor de minería informal",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Cinco congresistas electos apoyan la expansión de la minería informal, un tema polémico que podría cambiar las políticas ambientales y laborales. ¿Qué tan viable es esta postura dentro del nuevo Congreso?",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "apoyo a minería informal",
+        "congresistas virtuales",
+        "impacto ambiental y laboral"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "crítico",
+        "polémico"
+      ],
+      "safety_notes": "La noticia es incierta en cuanto a la postura final de estos congresistas y sus implicaciones.",
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.28,
+        "width": 0.7,
+        "height": 0.32
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-27/2026-04-27-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Empresa postora advirtió a la ONPE",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "En medio de un proceso electoral cargado de incertidumbres, una empresa postora alertó a la ONPE sobre posibles irregularidades en la contratación de servicios. ¿Qué consecuencias tendrá este señalamiento?",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "advertencia de empresa",
+        "ONPE",
+        "posibles irregularidades"
+      ],
+      "tone_notes": [
+        "serio",
+        "alerta",
+        "rigurosidad"
+      ],
+      "safety_notes": "Se hace una revisión cuidadosa de los hechos, sin afirmar con certeza ninguna irregularidad.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.28,
+        "width": 0.2,
+        "height": 0.17
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

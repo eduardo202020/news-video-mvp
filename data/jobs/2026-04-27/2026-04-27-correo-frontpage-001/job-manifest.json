@@ -1,0 +1,528 @@
+{
+  "job_id": "2026-04-27-correo-frontpage-001",
+  "source_id": "correo",
+  "date": "2026-04-27",
+  "source": {
+    "source_id": "correo",
+    "source_config_path": "automation/sources/diarios/correo.json",
+    "requested_date": "2026-04-27",
+    "issue_date": "2026-04-27",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042700000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042700000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/correo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042700000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042700000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042700000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042700000000001001&page=7&scale=80",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042700000000001001&page=12&scale=80",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/input/pages/page-12.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042700000000001001&page=16&scale=80",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      2,
+      3,
+      7,
+      12,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Los 18 más votados del nuevo Congreso bicameral",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.03,
+          "width": 0.63,
+          "height": 0.93
+        },
+        "page_number": 2,
+        "evidence_line": "pág. 2 y 3 TEMA DEL DÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Los 18 más votados del nuevo Congreso bicameral",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.03,
+          "width": 0.63,
+          "height": 0.93
+        },
+        "page_number": 3,
+        "evidence_line": "pág. 2 y 3 TEMA DEL DÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Incendio afecta escuela de la Policía en Puente Piedra",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.36,
+          "width": 0.3,
+          "height": 0.25
+        },
+        "page_number": 7,
+        "evidence_line": "pág. 7 LIMA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Pedro Yaranga advierte sobre Huallaga",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.63,
+          "width": 0.3,
+          "height": 0.19
+        },
+        "page_number": 12,
+        "evidence_line": "pág. 12 ECONOMÍA",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "Alianza gana y toma la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.84,
+          "width": 0.31,
+          "height": 0.12
+        },
+        "page_number": 16,
+        "evidence_line": "pág. 16 DEPORTES",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Los 18 más votados del nuevo Congreso bicameral",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.03,
+          "width": 0.63,
+          "height": 0.93
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "pág. 2 y 3 TEMA DEL DÍA",
+        "evidence_lines": [
+          "pág. 2 y 3 TEMA DEL DÍA"
+        ],
+        "confidence": 0.97
+      },
+      {
+        "headline": "Incendio afecta escuela de la Policía en Puente Piedra",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.36,
+          "width": 0.3,
+          "height": 0.25
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "pág. 7 LIMA",
+        "evidence_lines": [
+          "pág. 7 LIMA"
+        ],
+        "confidence": 0.94
+      },
+      {
+        "headline": "Pedro Yaranga advierte sobre Huallaga",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.63,
+          "width": 0.3,
+          "height": 0.19
+        },
+        "page_numbers": [
+          12
+        ],
+        "evidence": "pág. 12 ECONOMÍA",
+        "evidence_lines": [
+          "pág. 12 ECONOMÍA"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "Alianza gana y toma la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.84,
+          "width": 0.31,
+          "height": 0.12
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "pág. 16 DEPORTES",
+        "evidence_lines": [
+          "pág. 16 DEPORTES"
+        ],
+        "confidence": 0.92
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      3,
+      7,
+      12,
+      16
+    ]
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Los 18 más votados del nuevo Congreso bicameral",
+        "story_type": "politica",
+        "summary": "El Congreso renovado trae sorpresas. 18 congresistas lograron más de 100 mil votos, pero el panorama sigue marcado por la política de alianzas y la fuerte competencia por la reelección.",
+        "speech": "El Congreso renovado trae sorpresas. 18 congresistas lograron más de 100 mil votos, pero el panorama sigue marcado por la política de alianzas y la fuerte competencia por la reelección.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "analítico",
+          "serio",
+          "firme"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.35,
+          "y": 0.03,
+          "width": 0.63,
+          "height": 0.93
+        },
+        "key_facts": [
+          "18 congresistas más de 100 mil votos",
+          "alianzas políticas",
+          "lucha por la reelección"
+        ],
+        "key_facts_used": [
+          "18 congresistas más de 100 mil votos",
+          "alianzas políticas",
+          "lucha por la reelección"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Respetando los resultados oficiales, no se asume ninguna ilegalidad en el proceso.",
+        "notes": "Respetando los resultados oficiales, no se asume ninguna ilegalidad en el proceso.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "bar",
+          "title": "Top votacion congresal",
+          "subtitle": "Demo visual para probar soporte grafico en video",
+          "unit": " mil",
+          "highlight_label": "Prueba",
+          "data_source_note": "Datos aproximados de prueba para demo visual. No usar como referencia editorial final.",
+          "points": [
+            {
+              "label": "1°",
+              "value": 146
+            },
+            {
+              "label": "2°",
+              "value": 134
+            },
+            {
+              "label": "3°",
+              "value": 121
+            },
+            {
+              "label": "4°",
+              "value": 108
+            }
+          ]
+        }
+      },
+      {
+        "headline": "Incendio afecta escuela de la Policía en Puente Piedra",
+        "story_type": "actualidad",
+        "summary": "Un incendio de grandes proporciones afecta la escuela de la Policía en Puente Piedra, dejando a 200 personas en riesgo. Los bomberos lucharon contra las llamas, mientras se investiga la causa del siniestro.",
+        "speech": "Un incendio de grandes proporciones afecta la escuela de la Policía en Puente Piedra, dejando a 200 personas en riesgo. Los bomberos lucharon contra las llamas, mientras se investiga la causa del siniestro.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "grave",
+          "directo",
+          "urgente"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.36,
+          "width": 0.3,
+          "height": 0.25
+        },
+        "key_facts": [
+          "incendio en la escuela de la Policía",
+          "200 personas en riesgo",
+          "investigación en curso"
+        ],
+        "key_facts_used": [
+          "incendio en la escuela de la Policía",
+          "200 personas en riesgo",
+          "investigación en curso"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita especular sobre las causas del incendio hasta que haya un informe oficial.",
+        "notes": "Se evita especular sobre las causas del incendio hasta que haya un informe oficial."
+      },
+      {
+        "headline": "Pedro Yaranga advierte sobre Huallaga",
+        "story_type": "economia",
+        "summary": "Pedro Yaranga destaca el creciente problema de la minería ilegal en Huallaga. Según su análisis, esta actividad afecta seriamente a la economía de la región, poniendo en riesgo la seguridad ambiental.",
+        "speech": "Pedro Yaranga destaca el creciente problema de la minería ilegal en Huallaga. Según su análisis, esta actividad afecta seriamente a la economía de la región, poniendo en riesgo la seguridad ambiental.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "serio",
+          "informativo",
+          "preocupante"
+        ],
+        "page_numbers": [
+          12
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.63,
+          "width": 0.3,
+          "height": 0.19
+        },
+        "key_facts": [
+          "minería ilegal en Huallaga",
+          "riesgos ambientales",
+          "afectación a la economía"
+        ],
+        "key_facts_used": [
+          "minería ilegal en Huallaga",
+          "riesgos ambientales",
+          "afectación a la economía"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El análisis está basado en declaraciones del experto, con énfasis en los riesgos para la región.",
+        "notes": "El análisis está basado en declaraciones del experto, con énfasis en los riesgos para la región."
+      },
+      {
+        "headline": "Alianza gana y toma la punta",
+        "story_type": "deportes",
+        "summary": "Alianza Lima reafirma su liderazgo al ganar nuevamente en el Apertura. Con su victoria ante Atlético Grau, el equipo se consolida como el principal contendiente del torneo.",
+        "speech": "Alianza Lima reafirma su liderazgo al ganar nuevamente en el Apertura. Con su victoria ante Atlético Grau, el equipo se consolida como el principal contendiente del torneo.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "emocionante",
+          "energético",
+          "frenético"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.84,
+          "width": 0.31,
+          "height": 0.12
+        },
+        "key_facts": [
+          "victoria de Alianza Lima",
+          "líder del Apertura",
+          "triunfo importante contra Atlético Grau"
+        ],
+        "key_facts_used": [
+          "victoria de Alianza Lima",
+          "líder del Apertura",
+          "triunfo importante contra Atlético Grau"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El contexto se enfoca solo en el desempeño del equipo y su posición en la tabla.",
+        "notes": "El contexto se enfoca solo en el desempeño del equipo y su posición en la tabla."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-27/2026-04-27-correo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El Congreso renovado trae sorpresas. 18 congresistas lograron más de 100 mil votos, pero el panorama sigue marcado por la política de alianzas y la fuerte competencia por la reelección.\n\nUn incendio de grandes proporciones afecta la escuela de la Policía en Puente Piedra, dejando a 200 personas en riesgo. Los bomberos lucharon contra las llamas, mientras se investiga la causa del siniestro.\n\nPedro Yaranga destaca el creciente problema de la minería ilegal en Huallaga. Según su análisis, esta actividad afecta seriamente a la economía de la región, poniendo en riesgo la seguridad ambiental.\n\nAlianza Lima reafirma su liderazgo al ganar nuevamente en el Apertura. Con su victoria ante Atlético Grau, el equipo se consolida como el principal contendiente del torneo.",
+    "approved_text": "El Congreso renovado trae sorpresas. 18 congresistas lograron más de 100 mil votos, pero el panorama sigue marcado por la política de alianzas y la fuerte competencia por la reelección.\n\nUn incendio de grandes proporciones afecta la escuela de la Policía en Puente Piedra, dejando a 200 personas en riesgo. Los bomberos lucharon contra las llamas, mientras se investiga la causa del siniestro.\n\nPedro Yaranga destaca el creciente problema de la minería ilegal en Huallaga. Según su análisis, esta actividad afecta seriamente a la economía de la región, poniendo en riesgo la seguridad ambiental.\n\nAlianza Lima reafirma su liderazgo al ganar nuevamente en el Apertura. Con su victoria ante Atlético Grau, el equipo se consolida como el principal contendiente del torneo.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-27T07:31:06",
+    "updated_at": "2026-04-27T07:57:39",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:31:06",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:31:26",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:31:26",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:14",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:14",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:46:27",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:57:39",
+        "details": "Se importaron 4 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Es lunes 27 de abril y las portadas llegan cargadas: Congreso, elecciones, economía, fútbol y un caso internacional que marca agenda. En esta fecha, Adonde recuerda el manifiesto previo al bombardeo de Lima de 1866. Vamos diario por diario, directo a lo central.",
+    "date_reference": "Adonde.com efemerides abril27: en 1866, Casto Méndez Núñez notificó que en tres días iniciaría el bombardeo de Lima.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana y abre paso a una agenda fuerte de política, economía, mundo y deportes.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-27T07:36:14"
+  }
+}

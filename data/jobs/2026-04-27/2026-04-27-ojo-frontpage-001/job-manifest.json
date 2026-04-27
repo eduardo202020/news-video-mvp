@@ -1,0 +1,424 @@
+{
+  "job_id": "2026-04-27-ojo-frontpage-001",
+  "source_id": "ojo",
+  "date": "2026-04-27",
+  "source": {
+    "source_id": "ojo",
+    "source_config_path": "automation/sources/diarios/ojo.json",
+    "requested_date": "2026-04-27",
+    "issue_date": "2026-04-27",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026042700000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-27/2026-04-27-ojo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026042700000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/ojo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042700000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-ojo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042700000000001001&page=2&scale=83",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-ojo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 13",
+        "page_number": 13,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042700000000001001&page=13&scale=83",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-ojo-frontpage-001/input/pages/page-13.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 14",
+        "page_number": 14,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042700000000001001&page=14&scale=83",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-ojo-frontpage-001/input/pages/page-14.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 18",
+        "page_number": 18,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042700000000001001&page=18&scale=83",
+        "local_path": "data/jobs/2026-04-27/2026-04-27-ojo-frontpage-001/input/pages/page-18.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      2,
+      13,
+      14,
+      18
+    ],
+    "candidates": [
+      {
+        "headline": "Ministros responderán por compra de F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.17,
+          "width": 0.96,
+          "height": 0.68
+        },
+        "page_number": 2,
+        "evidence_line": "POLÍTICA pág. 2",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Alianza volvió a la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.84,
+          "width": 0.56,
+          "height": 0.14
+        },
+        "page_number": 13,
+        "evidence_line": "CRACK págs. 13 y 14",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Alianza volvió a la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.84,
+          "width": 0.56,
+          "height": 0.14
+        },
+        "page_number": 14,
+        "evidence_line": "CRACK págs. 13 y 14",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Monserrat olvidó a Melcochita",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.58,
+          "y": 0.84,
+          "width": 0.4,
+          "height": 0.14
+        },
+        "page_number": 18,
+        "evidence_line": "OJOSHOW pág. 18",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Ministros responderán por compra de F-16",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.17,
+          "width": 0.96,
+          "height": 0.68
+        },
+        "page_numbers": [
+          2
+        ],
+        "evidence": "POLÍTICA pág. 2",
+        "evidence_lines": [
+          "POLÍTICA pág. 2"
+        ],
+        "confidence": 0.97
+      },
+      {
+        "headline": "Alianza volvió a la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.84,
+          "width": 0.56,
+          "height": 0.14
+        },
+        "page_numbers": [
+          13,
+          14
+        ],
+        "evidence": "CRACK págs. 13 y 14",
+        "evidence_lines": [
+          "CRACK págs. 13 y 14"
+        ],
+        "confidence": 0.94
+      },
+      {
+        "headline": "Monserrat olvidó a Melcochita",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.58,
+          "y": 0.84,
+          "width": 0.4,
+          "height": 0.14
+        },
+        "page_numbers": [
+          18
+        ],
+        "evidence": "OJOSHOW pág. 18",
+        "evidence_lines": [
+          "OJOSHOW pág. 18"
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      13,
+      14,
+      18
+    ]
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Ministros responderán por compra de F-16",
+        "story_type": "politica",
+        "summary": "El escándalo por la compra de los F-16 está llegando al Congreso. Los ministros responsables deberán explicar cómo se manejó este acuerdo de defensa, mientras las dudas siguen creciendo entre los ciudadanos. La política de compras millonarias está bajo lupa.",
+        "speech": "El escándalo por la compra de los F-16 está llegando al Congreso. Los ministros responsables deberán explicar cómo se manejó este acuerdo de defensa, mientras las dudas siguen creciendo entre los ciudadanos. La política de compras millonarias está bajo lupa.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "confrontacional",
+          "irónico",
+          "exigente"
+        ],
+        "page_numbers": [
+          2
+        ],
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.17,
+          "width": 0.96,
+          "height": 0.68
+        },
+        "key_facts": [
+          "compra de F-16",
+          "ministros responsables",
+          "dudas sobre el acuerdo"
+        ],
+        "key_facts_used": [
+          "compra de F-16",
+          "ministros responsables",
+          "dudas sobre el acuerdo"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se afirman delitos, solo cuestionamientos políticos.",
+        "notes": "No se afirman delitos, solo cuestionamientos políticos."
+      },
+      {
+        "headline": "Alianza volvió a la punta",
+        "story_type": "deportes",
+        "summary": "Alianza Lima pegó fuerte, se llevó la victoria y recuperó la punta. Este triunfo fue clave para mantenerse al frente, consolidando su dominio en el Apertura y mandando un mensaje claro: la competencia aún no está decidida.",
+        "speech": "Alianza Lima pegó fuerte, se llevó la victoria y recuperó la punta. Este triunfo fue clave para mantenerse al frente, consolidando su dominio en el Apertura y mandando un mensaje claro: la competencia aún no está decidida.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "emocionante",
+          "dinámico",
+          "competitivo"
+        ],
+        "page_numbers": [
+          13,
+          14
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.84,
+          "width": 0.56,
+          "height": 0.14
+        },
+        "key_facts": [
+          "triunfo clave",
+          "recuperó la punta",
+          "liderato del Apertura"
+        ],
+        "key_facts_used": [
+          "triunfo clave",
+          "recuperó la punta",
+          "liderato del Apertura"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se centra en el impacto deportivo de la victoria.",
+        "notes": "Se centra en el impacto deportivo de la victoria."
+      },
+      {
+        "headline": "Monserrat olvidó a Melcochita",
+        "story_type": "espectaculos",
+        "summary": "Monserrat revela que ya no hay amor por Melcochita, sorprendiendo a todos con su sinceridad. La ruptura es una de las más comentadas, pero ¿será el fin de esta historia? Los detalles se mantienen como un tema candente en el mundo del espectáculo.",
+        "speech": "Monserrat revela que ya no hay amor por Melcochita, sorprendiendo a todos con su sinceridad. La ruptura es una de las más comentadas, pero ¿será el fin de esta historia? Los detalles se mantienen como un tema candente en el mundo del espectáculo.",
+        "narrator_profile_id": "reportero_magaly",
+        "narrator_role": "conductora_espectaculos",
+        "tone_notes": [
+          "picante",
+          "directo",
+          "sin rodeos"
+        ],
+        "page_numbers": [
+          18
+        ],
+        "cover_region": {
+          "x": 0.58,
+          "y": 0.84,
+          "width": 0.4,
+          "height": 0.14
+        },
+        "key_facts": [
+          "ruptura de relación",
+          "Monserrat y Melcochita",
+          "comentarios de la farándula"
+        ],
+        "key_facts_used": [
+          "ruptura de relación",
+          "Monserrat y Melcochita",
+          "comentarios de la farándula"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita invadir la privacidad, solo se reportan hechos verificables.",
+        "notes": "Se evita invadir la privacidad, solo se reportan hechos verificables."
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-27/2026-04-27-ojo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El escándalo por la compra de los F-16 está llegando al Congreso. Los ministros responsables deberán explicar cómo se manejó este acuerdo de defensa, mientras las dudas siguen creciendo entre los ciudadanos. La política de compras millonarias está bajo lupa.\n\nAlianza Lima pegó fuerte, se llevó la victoria y recuperó la punta. Este triunfo fue clave para mantenerse al frente, consolidando su dominio en el Apertura y mandando un mensaje claro: la competencia aún no está decidida.\n\nMonserrat revela que ya no hay amor por Melcochita, sorprendiendo a todos con su sinceridad. La ruptura es una de las más comentadas, pero ¿será el fin de esta historia? Los detalles se mantienen como un tema candente en el mundo del espectáculo.",
+    "approved_text": "El escándalo por la compra de los F-16 está llegando al Congreso. Los ministros responsables deberán explicar cómo se manejó este acuerdo de defensa, mientras las dudas siguen creciendo entre los ciudadanos. La política de compras millonarias está bajo lupa.\n\nAlianza Lima pegó fuerte, se llevó la victoria y recuperó la punta. Este triunfo fue clave para mantenerse al frente, consolidando su dominio en el Apertura y mandando un mensaje claro: la competencia aún no está decidida.\n\nMonserrat revela que ya no hay amor por Melcochita, sorprendiendo a todos con su sinceridad. La ruptura es una de las más comentadas, pero ¿será el fin de esta historia? Los detalles se mantienen como un tema candente en el mundo del espectáculo.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-27T07:32:00",
+    "updated_at": "2026-04-27T07:50:27",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:32:00",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:32:20",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:32:20",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:14",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:14",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:36:45",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-27T07:50:27",
+        "details": "Se importaron 3 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Es lunes 27 de abril y las portadas llegan cargadas: Congreso, elecciones, economía, fútbol y un caso internacional que marca agenda. En esta fecha, Adonde recuerda el manifiesto previo al bombardeo de Lima de 1866. Vamos diario por diario, directo a lo central.",
+    "date_reference": "Adonde.com efemerides abril27: en 1866, Casto Méndez Núñez notificó que en tres días iniciaría el bombardeo de Lima.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia histórica peruana y abre paso a una agenda fuerte de política, economía, mundo y deportes.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-27T07:36:14"
+  }
+}

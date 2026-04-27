@@ -1,0 +1,160 @@
+{
+  "story_id": "2026-04-27-larepublica-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-27-larepublica-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Ocho militares detenidos por muerte de cinco jóvenes",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La noticia sacudió al país. Ocho militares han sido detenidos por su supuesta participación en la muerte de cinco jóvenes durante un ataque narcoterrorista en Huancavelica. La investigación está en curso y se espera más información sobre este trágico suceso.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "detención de militares",
+        "muerte de cinco jóvenes",
+        "ataque narcoterrorista"
+      ],
+      "tone_notes": [
+        "grave",
+        "cauteloso",
+        "tenso"
+      ],
+      "safety_notes": "Se evita afirman hechos no probados y se mantiene la cautela en la información.",
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.18,
+        "width": 0.61,
+        "height": 0.48
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Juez evalúa devolver acusación del caso Gasoducto",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El caso Gasoducto sigue siendo un tema candente. Un juez evalúa la posibilidad de devolver la acusación al fiscal, lo que podría cambiar el rumbo de este proceso que ha sacudido a la política peruana. ¿Qué sucederá con esta polémica?",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "key_facts": [
+        "juez evalúa acusación",
+        "caso Gasoducto",
+        "polémica política"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "irónico",
+        "crítico"
+      ],
+      "safety_notes": "Se cuestionan procesos, sin afirmar culpabilidad antes de tiempo.",
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.68,
+        "width": 0.47,
+        "height": 0.19
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Denuncian más de 194 mil actos violentos",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La violencia sigue siendo un problema grave en el país. Más de 194 mil actos violentos fueron reportados durante el primer trimestre, lo que pone en evidencia la creciente inseguridad en varias regiones. ¿Qué medidas tomarán las autoridades?",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "key_facts": [
+        "actos violentos reportados",
+        "primer trimestre",
+        "creciente inseguridad"
+      ],
+      "tone_notes": [
+        "serio",
+        "analítico",
+        "preocupante"
+      ],
+      "safety_notes": "Se centra en los hechos verificables sin dramatizar cifras.",
+      "cover_region": {
+        "x": 0.66,
+        "y": 0.55,
+        "width": 0.3,
+        "height": 0.1
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-27/2026-04-27-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Festival de la FAP en Las Palmas",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "En un evento que se ha convertido en una tradición, el Festival de la Fuerza Aérea del Perú deslumbró a miles de ciudadanos en Las Palmas. Un espectáculo aéreo que mostró lo mejor de la aviación y dejó claro el compromiso de la FAP con la seguridad nacional.",
+      "page_numbers": [
+        14
+      ],
+      "key_facts": [
+        "Festival de la FAP",
+        "Las Palmas",
+        "espectáculo aéreo"
+      ],
+      "tone_notes": [
+        "positivo",
+        "informativo",
+        "inspirador"
+      ],
+      "safety_notes": "Solo se menciona el evento y sus aspectos más destacados.",
+      "cover_region": {
+        "x": 0.66,
+        "y": 0.22,
+        "width": 0.3,
+        "height": 0.3
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}
