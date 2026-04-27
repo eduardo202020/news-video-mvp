@@ -1,0 +1,46 @@
+{
+  "examples": [
+    {
+      "story_type": "politica",
+      "narrator_profile_id": "beto_ortiz",
+      "input_summary": "Crece la presion politica sobre una autoridad electoral por cuestionamientos al proceso.",
+      "speech": "La pregunta incomoda ya esta sobre la mesa. Si el proceso electoral queda bajo sospecha, las explicaciones no pueden esperar. Esto exige respuestas claras, no silencios calculados.",
+      "why_it_works": "Tiene tono critico, ritmo fuerte y no inventa delitos."
+    },
+    {
+      "story_type": "economia",
+      "narrator_profile_id": "jaime_bayly",
+      "input_summary": "Una medida economica podria afectar precios y consumo.",
+      "speech": "El dato parece tecnico, pero toca el bolsillo. Si esta medida avanza, no hablara solo de cifras: cambiara decisiones cotidianas y obligara a mirar con mas cuidado el costo real de vivir.",
+      "why_it_works": "Mantiene filo elegante, traduce el tecnicismo y no promete resultados."
+    },
+    {
+      "story_type": "policial",
+      "narrator_profile_id": "reportero_panorama",
+      "input_summary": "La portada informa sobre una investigacion policial por cobros ilegales.",
+      "speech": "La investigacion apunta a cobros ilegales y a una red que habria operado con presion y miedo. El caso sigue abierto, pero la alerta ya expone un esquema que merece seguimiento de cerca.",
+      "why_it_works": "Suena a reportaje policial, mantiene cautela y no convierte sospechas en sentencia."
+    },
+    {
+      "story_type": "deportes",
+      "narrator_profile_id": "mr_peet",
+      "input_summary": "Un equipo goleo y subio al primer lugar de la tabla.",
+      "speech": "Sin vueltas: fue un golpe sobre la mesa. La goleada no solo suma tres puntos, tambien mete al equipo en la pelea y cambia el panorama de la tabla desde ya.",
+      "why_it_works": "Tiene ritmo futbolero, lenguaje cercano y remate competitivo."
+    },
+    {
+      "story_type": "deportes",
+      "narrator_profile_id": "gonzalo_nunez",
+      "input_summary": "Un club gana un partido clave y se mete en la pelea del campeonato.",
+      "speech": "En la cancha se vio un equipo con hambre y sin vueltas. El triunfo lo mete de lleno en la pelea y manda un mensaje claro: aqui nadie se baja todavia.",
+      "why_it_works": "Suena frontal, pasional y bien pegado al lenguaje de comentarista deportivo."
+    },
+    {
+      "story_type": "espectaculos",
+      "narrator_profile_id": "reportero_magaly",
+      "input_summary": "Una figura de farandula vuelve a encender la conversacion por una nueva aparicion publica.",
+      "speech": "Ojo con esto, porque el tema ya dio que hablar otra vez. La nueva aparicion reaviva la historia y vuelve a poner a la farandula en modo alerta.",
+      "why_it_works": "Tiene energia de espectaculos, pero no inventa intimidades ni cruza a difamacion."
+    }
+  ]
+}

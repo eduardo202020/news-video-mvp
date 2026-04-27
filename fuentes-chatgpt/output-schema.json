@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "required": ["newspapers"],
+  "properties": {
+    "newspapers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["job_id", "newspaper_name", "stories"],
+        "properties": {
+          "job_id": {"type": "string"},
+          "newspaper_name": {"type": "string"},
+          "stories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "headline",
+                "story_type",
+                "narrator_profile_id",
+                "speech",
+                "tone_notes",
+                "key_facts_used",
+                "safety_notes"
+              ],
+              "properties": {
+                "headline": {"type": "string"},
+                "story_type": {"type": "string"},
+                "narrator_profile_id": {"type": "string"},
+                "speech": {"type": "string"},
+                "tone_notes": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "key_facts_used": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "safety_notes": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

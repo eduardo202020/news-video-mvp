@@ -1,0 +1,10 @@
+{
+  "voz_en_off": ["thanos", "narrador_dbz", "skipper", "ironman"],
+  "actualidad": ["thanos", "narrador_dbz", "jaime_bayly"],
+  "politica": ["beto_ortiz", "jaime_bayly", "ted"],
+  "policial": ["reportero_panorama"],
+  "deportes": ["mr_peet", "gonzalo_nunez"],
+  "mundo": ["thanos", "narrador_dbz", "jaime_bayly"],
+  "economia": ["jaime_bayly", "ted"],
+  "espectaculos": ["reportero_magaly", "reportera_magaly"]
+}

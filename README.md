@@ -402,6 +402,7 @@ Notas para Voicebox:
 - si tu instancia usa otra URL, ajusta `provider_settings.api_url` o la variable `VOICEBOX_API_URL`
 - si alguna voz tarda mucho, sube `generation_timeout_seconds` en `provider_settings`
 - `transcribe-job` usa el audio del job por defecto, o uno externo con `--audio-file`
+- la CLI `list-voicebox-profiles` te ayuda a verificar nombres, descripciones e IDs reales antes de mapear una voz nueva al pipeline
 
 Construir story manifest:
 
@@ -440,13 +441,14 @@ Hoy el flujo activo y mas avanzado del repo es este:
 3. importar esa seleccion a los `job-manifest`
 4. descargar solo las paginas internas necesarias como contexto editorial
 5. usar un segundo prompt para obtener speeches editoriales breves por noticia
-6. convertir esos speeches en narrativa util para video, usando `story_type` para asignar narrador y `cover_region` para hacer zoom sobre la portada
+6. convertir esos speeches en narrativa util para video, usando `story_type` para asignar narrador, `cover_region` para hacer zoom sobre la portada y una capa separada de `voz_en_off` para apertura, conectores y comentarios puente
 
 Importante:
 
 - en el video final la idea actual es mostrar solo la portada
 - las paginas internas no son assets visuales finales; se descargan solo para entender mejor cada noticia
 - la unidad narrativa real ya no es la pagina, sino la noticia detectada en portada
+- el proyecto de ChatGPT que genera los speeches debe cargar las fuentes en `fuentes-chatgpt/`, que ya reflejan el casting actual de narradores y sus categorias
 
 ### Flujo operativo en Streamlit
 
@@ -509,6 +511,8 @@ Ese prompt ya asume que:
 - las paginas internas sirven solo como contexto
 - el speech final sera corto, tipo TikTok
 - luego el video debe hablar sobre la portada, no sobre las paginas interiores
+- la apertura y los cambios de periodico usan perfiles de `voz_en_off`, separados de los narradores principales de cada historia
+- el proyecto de ChatGPT toma como referencia `fuentes-chatgpt/narrator-profiles.json` y `fuentes-chatgpt/story-type-mapping.json`
 
 ### Uso recomendado hoy
 
@@ -567,6 +571,8 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 - importacion de speeches editoriales con enriquecimiento automatico desde portada
 - manifiesto narrativo intermedio por job para conectar historias importadas con `story-manifest`
 - mapeo formal `story_type -> narrator_profile_id` desde `automation/templates/narrators/story-type-map.json`
+- separacion formal entre narradores de noticia y voces de `voz_en_off` para intro, conectores y comentarios puente
+- integracion de voces reales de Voicebox por categoria editorial, incluyendo politica, policial, espectaculos, economia y deportes
 - construccion de `programa diario` para preview desde Streamlit
 - modo desarrollo del `programa diario` para trabajar solo con intro + primer bloque de 2 periodicos
 - reintento del `programa diario` desde audios existentes, sin volver a generar TTS cuando ya existe una corrida previa
@@ -670,6 +676,14 @@ Si ya existe una corrida previa del mismo dia, la app intenta reutilizar audios 
 - el fallback de voz suele vivir en `voicebox-local.json`
 - los narradores editoriales reales se resuelven desde `automation/templates/narrators/story-type-map.json`
 - cada narrador puede usar su propio perfil de Voicebox en `automation/templates/voices/`
+- el proyecto de ChatGPT consume sus fuentes desde `fuentes-chatgpt/`, no solo desde `proyect.md`
+- categorias activas hoy en el casting:
+- `voz_en_off`: `thanos`, `narrador_dbz`, `skipper`, `ironman`
+- `politica`: `beto_ortiz`, `jaime_bayly`, `ted`
+- `economia`: `jaime_bayly`, `ted`
+- `deportes`: `mr_peet`, `gonzalo_nunez`
+- `policial`: `reportero_panorama`
+- `espectaculos`: `reportero_magaly`, `reportera_magaly`
 
 ## Troubleshooting
 
