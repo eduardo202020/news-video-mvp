@@ -1,11 +1,59 @@
 {
   "map_id": "default-story-type-narrators",
-  "description": "Asignacion editorial base entre categoria de noticia y narrador sugerido.",
-  "default_narrator_profile_id": "rene_gastelumendi",
-  "presenter_narrator_profile_id": "mavila_huertas",
+  "description": "Asignacion editorial base entre categoria de noticia, voces reales disponibles en Voicebox y rotacion recomendada para voz en off.",
+  "default_narrator_profile_id": "thanos",
+  "presenter_narrator_profile_id": "thanos",
+  "presenter_narrator_profile_ids": [
+    "thanos",
+    "narrador_dbz",
+    "skipper",
+    "ironman"
+  ],
+  "voice_categories": {
+    "voz_en_off": [
+      "thanos",
+      "narrador_dbz",
+      "skipper",
+      "ironman"
+    ],
+    "politica": [
+      "beto_ortiz",
+      "jaime_bayly",
+      "ted"
+    ],
+    "economia": [
+      "jaime_bayly",
+      "ted"
+    ],
+    "deportes": [
+      "mr_peet",
+      "gonzalo_nunez"
+    ],
+    "policial": [
+      "reportero_panorama"
+    ],
+    "espectaculos": [
+      "reportero_magaly",
+      "reportera_magaly"
+    ],
+    "actualidad": [
+      "thanos",
+      "narrador_dbz",
+      "jaime_bayly"
+    ],
+    "mundo": [
+      "thanos",
+      "narrador_dbz",
+      "jaime_bayly"
+    ]
+  },
   "story_types": {
     "actualidad": {
-      "narrator_profile_id": "rene_gastelumendi",
+      "narrator_profile_id": "thanos",
+      "alternative_narrator_profile_ids": [
+        "narrador_dbz",
+        "jaime_bayly"
+      ],
       "role": "reportero_general",
       "tone_notes": [
         "claro",
@@ -14,7 +62,11 @@
       ]
     },
     "politica": {
-      "narrator_profile_id": "mavila_huertas",
+      "narrator_profile_id": "beto_ortiz",
+      "alternative_narrator_profile_ids": [
+        "jaime_bayly",
+        "ted"
+      ],
       "role": "analista_politica",
       "tone_notes": [
         "serio",
@@ -23,7 +75,7 @@
       ]
     },
     "policial": {
-      "narrator_profile_id": "beto_ortiz",
+      "narrator_profile_id": "reportero_panorama",
       "role": "reportero_policial",
       "tone_notes": [
         "directo",
@@ -32,7 +84,10 @@
       ]
     },
     "deportes": {
-      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_profile_id": "mr_peet",
+      "alternative_narrator_profile_ids": [
+        "gonzalo_nunez"
+      ],
       "role": "reportero_deportivo",
       "tone_notes": [
         "energetico",
@@ -41,7 +96,11 @@
       ]
     },
     "mundo": {
-      "narrator_profile_id": "mavila_huertas",
+      "narrator_profile_id": "narrador_dbz",
+      "alternative_narrator_profile_ids": [
+        "thanos",
+        "jaime_bayly"
+      ],
       "role": "corresponsal_internacional",
       "tone_notes": [
         "sereno",
@@ -50,7 +109,10 @@
       ]
     },
     "economia": {
-      "narrator_profile_id": "julio_velarde",
+      "narrator_profile_id": "jaime_bayly",
+      "alternative_narrator_profile_ids": [
+        "ted"
+      ],
       "role": "analista_economia",
       "tone_notes": [
         "didactico",
@@ -59,7 +121,10 @@
       ]
     },
     "espectaculos": {
-      "narrator_profile_id": "magaly_medina",
+      "narrator_profile_id": "reportero_magaly",
+      "alternative_narrator_profile_ids": [
+        "reportera_magaly"
+      ],
       "role": "conductora_espectaculos",
       "tone_notes": [
         "afilado",

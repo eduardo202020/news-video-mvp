@@ -1,10 +1,10 @@
 {
-  "profile_id": "beto_ortiz",
-  "display_name": "Beto Ortiz",
+  "profile_id": "thanos",
+  "display_name": "Thanos",
   "tts_provider": "voicebox_local",
-  "tts_voice": "9df58df3-53f3-42ed-964f-2af89e27cba0",
-  "narrator_name": "Beto Ortiz",
-  "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+  "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+  "narrator_name": "Thanos",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",

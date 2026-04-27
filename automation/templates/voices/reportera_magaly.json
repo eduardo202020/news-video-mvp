@@ -1,15 +1,15 @@
 {
-  "profile_id": "beto_ortiz",
-  "display_name": "Beto Ortiz",
+  "profile_id": "reportera_magaly",
+  "display_name": "Reportera Magaly",
   "tts_provider": "voicebox_local",
-  "tts_voice": "9df58df3-53f3-42ed-964f-2af89e27cba0",
-  "narrator_name": "Beto Ortiz",
+  "tts_voice": "8598e772-c919-411b-aa84-7e83e48ca4cf",
+  "narrator_name": "Reportera Magaly",
   "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",
     "model_size": "1.7B",
-    "speed": 1.35,
+    "speed": 1.45,
     "generation_timeout_seconds": 600,
     "generation_poll_seconds": 2.0
   }

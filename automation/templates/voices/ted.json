@@ -1,15 +1,15 @@
 {
-  "profile_id": "gonzalo_nunez",
-  "display_name": "Gonzalo Nunez",
+  "profile_id": "ted",
+  "display_name": "Ted",
   "tts_provider": "voicebox_local",
-  "tts_voice": "32ee760d-eec5-40a5-892f-c1839023235a",
-  "narrator_name": "Gonzalo Nunez",
+  "tts_voice": "ab5afd2c-e1b8-411b-ae26-20a4f2b96d25",
+  "narrator_name": "Ted",
   "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",
     "model_size": "1.7B",
-    "speed": 1.5,
+    "speed": 1.4,
     "generation_timeout_seconds": 600,
     "generation_poll_seconds": 2.0
   }

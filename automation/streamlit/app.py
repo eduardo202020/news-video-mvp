@@ -1212,9 +1212,36 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
     for story_type, config in narrator_map.get("story_types", {}).items():
         narrator_id = str(config.get("narrator_profile_id") or "").strip()
         role = str(config.get("role") or "").strip()
+        alternative_ids = [
+            str(item).strip()
+            for item in config.get("alternative_narrator_profile_ids", [])
+            if str(item).strip()
+        ] if isinstance(config.get("alternative_narrator_profile_ids"), list) else []
         if narrator_id:
             suffix = f" ({role})" if role else ""
-            story_type_lines.append(f"- `{story_type}` -> `{narrator_id}`{suffix}")
+            extra = f" | alternativas: {', '.join(f'`{item}`' for item in alternative_ids)}" if alternative_ids else ""
+            story_type_lines.append(f"- `{story_type}` -> `{narrator_id}`{suffix}{extra}")
+    voice_category_lines = []
+    voice_categories = narrator_map.get("voice_categories", {})
+    if isinstance(voice_categories, dict):
+        for category, profile_ids in voice_categories.items():
+            if not isinstance(profile_ids, list):
+                continue
+            normalized = [str(item).strip() for item in profile_ids if str(item).strip()]
+            if normalized:
+                voice_category_lines.append(
+                    f"- `{category}`: " + ", ".join(f"`{item}`" for item in normalized)
+                )
+    presenter_ids = narrator_map.get("presenter_narrator_profile_ids", [])
+    presenter_line = ""
+    if isinstance(presenter_ids, list):
+        normalized_presenters = [str(item).strip() for item in presenter_ids if str(item).strip()]
+        if normalized_presenters:
+            presenter_line = (
+                "- Para intro, cambios de periodico y comentarios puente usa rotacion de voz en off entre: "
+                + ", ".join(f"`{item}`" for item in normalized_presenters)
+                + "."
+            )
     newspaper_count = 0
     page_count = 0
     for job in jobs:
@@ -1240,6 +1267,9 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "- No vuelvas a explicar las fuentes; aplicalas directamente.",
         "- Mapeo editorial actual `story_type -> narrator_profile_id`:",
         *(story_type_lines or ["- Usa el narrador por defecto si no hay mapa disponible."]),
+        "- Cast real disponible hoy en Voicebox por categoria:",
+        *(voice_category_lines or ["- No hay categorias de voz configuradas todavia."]),
+        *( [presenter_line] if presenter_line else [] ),
         "",
         "Objetivo:",
         "Para cada periodico, toma las noticias ya detectadas desde portada, usa las paginas internas solo como contexto, y devuelve un speech final por noticia.",

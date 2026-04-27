@@ -33,6 +33,15 @@ from .voice_generation import generate_voice_track, list_voicebox_profiles, tran
 
 
 NARRATOR_PROFILE_TO_VOICE_PROFILE = {
+    "jaime_bayly": "jaime_bayly",
+    "ted": "ted",
+    "reportera_magaly": "reportera_magaly",
+    "reportero_panorama": "reportero_panorama",
+    "reportero_magaly": "reportero_magaly",
+    "thanos": "thanos",
+    "narrador_dbz": "narrador_dbz",
+    "skipper": "skipper",
+    "ironman": "ironman",
     "rene_gastelumendi": "rene_gastelumendi",
     "mavila_huertas": "mavila_huertas",
     "beto_ortiz": "beto_ortiz",
@@ -121,6 +130,21 @@ def _resolve_story_narrator_config(
 def _get_presenter_narrator_profile_id(*, project_dir: Path) -> str:
     mapping = _load_story_type_narrator_map(project_dir=project_dir)
     return _slug_identifier(mapping.get("presenter_narrator_profile_id") or "mavila_huertas")
+
+
+def _get_presenter_narrator_profile_ids(*, project_dir: Path) -> list[str]:
+    mapping = _load_story_type_narrator_map(project_dir=project_dir)
+    configured = mapping.get("presenter_narrator_profile_ids")
+    if isinstance(configured, list):
+        normalized = [
+            _slug_identifier(item)
+            for item in configured
+            if str(item or "").strip()
+        ]
+        normalized = [item for item in normalized if item]
+        if normalized:
+            return normalized
+    return [_get_presenter_narrator_profile_id(project_dir=project_dir)]
 
 
 def _resolve_voice_profile_for_narrator(
@@ -2603,11 +2627,17 @@ def _build_daily_rundown_segment_specs(
     project_dir: Path,
 ) -> list[dict[str, object]]:
     fallback_voice = VoiceProfile.load(voice_profile_path)
-    presenter_visual = _resolve_voice_profile_for_narrator(
-        narrator_profile_id=_get_presenter_narrator_profile_id(project_dir=project_dir),
-        fallback_voice_profile_path=voice_profile_path,
-        project_dir=project_dir,
-    )
+    presenter_narrator_ids = _get_presenter_narrator_profile_ids(project_dir=project_dir)
+
+    def resolve_presenter_voice(sequence_index: int) -> tuple[str, VoiceProfile]:
+        narrator_id = presenter_narrator_ids[sequence_index % len(presenter_narrator_ids)]
+        return narrator_id, _resolve_voice_profile_for_narrator(
+            narrator_profile_id=narrator_id,
+            fallback_voice_profile_path=voice_profile_path,
+            project_dir=project_dir,
+        )
+
+    intro_narrator_id, presenter_visual = resolve_presenter_voice(0)
     first_cover = str(jobs[0]["input_assets"]["front_page_image"])
     source_names = [_format_source_name(str(job.get("source_id") or "")) for job in jobs]
     story_count = sum(
@@ -2630,7 +2660,7 @@ def _build_daily_rundown_segment_specs(
             "headline": _format_spanish_date(str(jobs[0].get("date") or "")),
             "story_type": "intro",
             "segment_type": "intro",
-            "narrator_profile_id": "presentador",
+            "narrator_profile_id": intro_narrator_id,
             "voice_profile_id": presenter_visual.profile_id,
             "narrator_name": presenter_visual.narrator_name,
             "gestures_dir": presenter_visual.gestures_dir,
@@ -2638,10 +2668,13 @@ def _build_daily_rundown_segment_specs(
             "cover_region": None,
         }
     ]
+    presenter_sequence_index = 1
     for job in jobs:
         source_name = _format_source_name(str(job.get("source_id") or ""))
         cover = str(job["input_assets"]["front_page_image"])
         story_items = _enrich_job_story_narrative_with_cover_context(job)
+        connector_narrator_id, connector_voice = resolve_presenter_voice(presenter_sequence_index)
+        presenter_sequence_index += 1
         segment_specs.append(
             {
                 "newspaper_name": source_name,
@@ -2649,10 +2682,10 @@ def _build_daily_rundown_segment_specs(
                 "headline": f"Paso a {source_name}",
                 "story_type": "connector",
                 "segment_type": "connector",
-                "narrator_profile_id": "presentador",
-                "voice_profile_id": presenter_visual.profile_id,
-                "narrator_name": presenter_visual.narrator_name,
-                "gestures_dir": presenter_visual.gestures_dir,
+                "narrator_profile_id": connector_narrator_id,
+                "voice_profile_id": connector_voice.profile_id,
+                "narrator_name": connector_voice.narrator_name,
+                "gestures_dir": connector_voice.gestures_dir,
                 "text": _build_newspaper_connector_text(source_name, story_count=len(story_items)),
                 "cover_region": None,
             }
