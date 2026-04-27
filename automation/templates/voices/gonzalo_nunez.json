@@ -1,0 +1,16 @@
+{
+  "profile_id": "gonzalo_nunez",
+  "display_name": "Gonzalo Nunez",
+  "tts_provider": "voicebox_local",
+  "tts_voice": "50f50fa3-6b92-4c44-8a5c-ab039b50295e",
+  "narrator_name": "Gonzalo Nunez",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+  "language": "es",
+  "provider_settings": {
+    "api_url": "http://localhost:17493",
+    "model_size": "1.7B",
+    "speed": 1.5,
+    "generation_timeout_seconds": 600,
+    "generation_poll_seconds": 2.0
+  }
+}

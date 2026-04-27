@@ -1,0 +1,16 @@
+{
+  "profile_id": "mavila_huertas",
+  "display_name": "Mavila Huertas",
+  "tts_provider": "voicebox_local",
+  "tts_voice": "b2cc82b7-ec1d-447b-b479-5f1806d57abe",
+  "narrator_name": "Mavila Huertas",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+  "language": "es",
+  "provider_settings": {
+    "api_url": "http://localhost:17493",
+    "model_size": "1.7B",
+    "speed": 1.35,
+    "generation_timeout_seconds": 600,
+    "generation_poll_seconds": 2.0
+  }
+}

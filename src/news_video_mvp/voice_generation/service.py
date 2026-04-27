@@ -144,7 +144,7 @@ def _download_voicebox_audio_by_generation_id(
     generation_id: str,
     output_path: Path,
     api_url: str,
-    timeout_seconds: int = 180,
+    timeout_seconds: int = 600,
     poll_interval_seconds: float = 2.0,
 ) -> Path:
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -178,7 +178,9 @@ def _download_voicebox_audio_by_generation_id(
         time.sleep(poll_interval_seconds)
 
     raise TTSGenerationError(
-        f"Voicebox no termino de generar el audio para `{generation_id}` dentro de {timeout_seconds} segundos."
+        "Voicebox no termino de generar el audio para "
+        f"`{generation_id}` dentro de {timeout_seconds} segundos. "
+        "Puedes subir `generation_timeout_seconds` en `provider_settings` si esa voz tarda mas."
     )
 
 
@@ -228,7 +230,7 @@ def synthesize_with_voicebox(
             generation_id=generation_id.strip(),
             output_path=output_path,
             api_url=api_url,
-            timeout_seconds=int(settings.get("generation_timeout_seconds", 180)),
+            timeout_seconds=int(settings.get("generation_timeout_seconds", 600)),
             poll_interval_seconds=float(settings.get("generation_poll_seconds", 2.0)),
         )
 

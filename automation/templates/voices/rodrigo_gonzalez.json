@@ -1,15 +1,15 @@
 {
-  "profile_id": "voicebox-local",
-  "display_name": "Voicebox Local",
+  "profile_id": "rodrigo_gonzalez",
+  "display_name": "Rodrigo Gonzalez",
   "tts_provider": "voicebox_local",
-  "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
-  "narrator_name": "Voicebox Narrator",
+  "tts_voice": "07c30d5c-ad7e-4a5b-a796-1d43b80840f7",
+  "narrator_name": "Rodrigo Gonzalez",
   "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",
     "model_size": "1.7B",
-    "speed": 1.4,
+    "speed": 1.45,
     "generation_timeout_seconds": 600,
     "generation_poll_seconds": 2.0
   }
