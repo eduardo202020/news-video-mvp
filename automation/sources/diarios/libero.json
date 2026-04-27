@@ -1,10 +1,10 @@
 {
   "source_id": "libero",
   "display_name": "Libero",
-  "base_url": "https://example.com/libero",
+  "base_url": "https://img.kiosko.net",
   "discovery": {
-    "type": "html",
-    "front_page_url_pattern": "https://example.com/libero/{date}"
+    "type": "direct_image_url",
+    "front_page_url_pattern": "https://img.kiosko.net/{yyyy}/{mm}/{dd}/pe/pe_libero.750.jpg"
   },
   "selectors": {
     "front_page_image": ".frontpage img",

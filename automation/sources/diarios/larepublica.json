@@ -1,0 +1,23 @@
+{
+  "source_id": "larepublica",
+  "display_name": "La Republica",
+  "base_url": "https://img.kiosko.net",
+  "discovery": {
+    "type": "direct_image_url",
+    "front_page_url_pattern": "https://img.kiosko.net/{yyyy}/{mm}/{dd}/pe/pe_republica.750.jpg"
+  },
+  "selectors": {
+    "front_page_image": null,
+    "article_blocks": null
+  },
+  "storage": {
+    "folder_pattern": "data/raw/larepublica/{date}/"
+  },
+  "ocr_hints": {
+    "language": "spa"
+  },
+  "schedule": {
+    "timezone": "America/Lima",
+    "run_after": "05:30"
+  }
+}

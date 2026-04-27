@@ -145,7 +145,14 @@ def build_source_url(source: SourceConfig, *, job_date: str) -> str:
     publication_date = resolve_publication_date(source=source, job_date=job_date)
     if publication_date is None:
         return source.base_url
-    return str(pattern).format(date=publication_date)
+    year, month, day = publication_date.split("-")
+    return str(pattern).format(
+        date=publication_date,
+        yyyy=year,
+        mm=month,
+        dd=day,
+        yyyymmdd=f"{year}{month}{day}",
+    )
 
 
 def discover_source_assets(
@@ -174,6 +181,26 @@ def discover_source_assets(
             job_date=job_date,
             max_supporting_pages=max_supporting_pages,
         )
+
+    if str(source.discovery.get("type", "")).strip() == "direct_image_url":
+        resolved_source_url = source_url or build_source_url(source, job_date=job_date)
+        return {
+            "source_url": resolved_source_url,
+            "issue_date": publication_date,
+            "front_page_url": resolved_source_url,
+            "supporting_pages": [],
+            "headline_candidates": [],
+            "discovery_type": "direct_image_url",
+            "pages": [
+                {
+                    "role": "front_page",
+                    "label": "Portada",
+                    "page_number": 1,
+                    "source_url": resolved_source_url,
+                }
+            ],
+            "status": "ok",
+        }
 
     resolved_source_url = source_url or build_source_url(source, job_date=job_date)
     html_content = html if html is not None else fetch_html(resolved_source_url)

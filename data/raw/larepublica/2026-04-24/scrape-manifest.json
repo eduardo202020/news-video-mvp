@@ -1,0 +1,20 @@
+{
+  "source_id": "larepublica",
+  "display_name": "La Republica",
+  "date": "2026-04-24",
+  "issue_date": "2026-04-24",
+  "source_url": "https://img.kiosko.net/2026/04/24/pe/pe_republica.750.jpg",
+  "discovery_type": "direct_image_url",
+  "headline_candidates": [],
+  "pages": [
+    {
+      "role": "front_page",
+      "label": "Portada",
+      "page_number": 1,
+      "scale": null,
+      "source_url": "https://img.kiosko.net/2026/04/24/pe/pe_republica.750.jpg",
+      "local_path": "data/raw/larepublica/2026-04-24/front-page.jpg"
+    }
+  ],
+  "archived_at": "2026-04-27T05:42:06"
+}

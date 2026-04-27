@@ -1,0 +1,20 @@
+{
+  "source_id": "libero",
+  "display_name": "Libero",
+  "date": "2026-04-27",
+  "issue_date": "2026-04-27",
+  "source_url": "https://img.kiosko.net/2026/04/27/pe/pe_libero.750.jpg",
+  "discovery_type": "direct_image_url",
+  "headline_candidates": [],
+  "pages": [
+    {
+      "role": "front_page",
+      "label": "Portada",
+      "page_number": 1,
+      "scale": null,
+      "source_url": "https://img.kiosko.net/2026/04/27/pe/pe_libero.750.jpg",
+      "local_path": "data/raw/libero/2026-04-27/front-page.jpg"
+    }
+  ],
+  "archived_at": "2026-04-27T05:42:04"
+}
