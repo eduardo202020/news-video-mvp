@@ -439,14 +439,18 @@ Hoy el flujo activo y mas avanzado del repo es este:
 1. scrapear solo las portadas y crear un job por periodico
 2. usar un prompt manual en ChatGPT para detectar noticias principales de portada
 3. importar esa seleccion a los `job-manifest`
-4. descargar solo las paginas internas necesarias como contexto editorial
-5. usar un segundo prompt para obtener speeches editoriales breves por noticia
-6. convertir esos speeches en narrativa util para video, usando `story_type` para asignar narrador, `cover_region` para hacer zoom sobre la portada y una capa separada de `voz_en_off` para apertura, conectores y comentarios puente
+4. preparar el contexto editorial por fuente
+5. para diarios compatibles, descargar solo las paginas internas necesarias como contexto editorial
+6. para `Libero` y `La Republica`, usar la portada detectada y pedir investigacion web en ChatGPT porque no hay descarga interna soportada
+7. usar un segundo prompt para obtener speeches editoriales breves por noticia
+8. convertir esos speeches en narrativa util para video, usando `story_type` para asignar narrador, `cover_region` para hacer zoom sobre la portada y una capa separada de `voz_en_off` para apertura, conectores y comentarios puente
 
 Importante:
 
 - en el video final la idea actual es mostrar solo la portada
 - las paginas internas no son assets visuales finales; se descargan solo para entender mejor cada noticia
+- `Libero` y `La Republica` usan hoy fuentes `direct_image_url`, por eso la portada si se descarga pero las paginas internas no
+- en esos dos casos, el segundo prompt debe investigar en la web las historias detectadas desde la portada y devolver el mismo JSON narrativo
 - la unidad narrativa real ya no es la pagina, sino la noticia detectada en portada
 - el proyecto de ChatGPT que genera los speeches debe cargar las fuentes en `fuentes-chatgpt/`, que ya reflejan el casting actual de narradores y sus categorias
 
@@ -460,9 +464,21 @@ La app de Streamlit ya soporta este flujo semi-manual:
 4. `Copiar prompt`
 5. pegar la respuesta JSON de ChatGPT en `Importar Seleccion Batch`
 6. aplicar opcionalmente `Filtro editorial del lote`
-7. `Descargar paginas del lote`
-8. revisar `Ver resultado de descarga de paginas` con miniaturas
-9. usar los prompts por bloques de 2 periodicos para resumir las paginas descargadas
+7. `Preparar contexto del lote`
+8. revisar `Ver resultado de descarga de paginas` con miniaturas o mensajes de `investigacion web requerida`
+9. usar los prompts por bloques de 2 periodicos para resumir el contexto del lote
+
+Regla practica del segundo bloque:
+
+- si el bloque es solo de diarios normales, adjunta paginas internas
+- si el bloque es solo `Libero` y `La Republica`, adjunta solo sus portadas
+- si el bloque es mixto, adjunta paginas internas para los diarios normales y portadas para los diarios de investigacion web
+
+La UI ya cambia el boton del bloque segun el caso:
+
+- `Abrir carpeta de paginas bloque N`
+- `Abrir portadas bloque N`
+- `Abrir contexto bloque N`
 
 Abrir Streamlit:
 
@@ -497,18 +513,21 @@ Internamente, al importar, el pipeline conserva:
 
 ### Que hace hoy el segundo prompt
 
-El prompt que se usa sobre paginas internas ya no busca un resumen largo. Ahora produce:
+El prompt editorial ya no busca un resumen largo. Ahora produce:
 
 - un `speech` final breve por noticia
 - `narrator_profile_id`
 - `tone_notes`
 - `key_facts_used`
 - `safety_notes`
+- `support_visual` opcional para historias con contexto numerico
 - conservacion de `page_numbers`, `cover_region` y `story_type` por historia
 
 Ese prompt ya asume que:
 
-- las paginas internas sirven solo como contexto
+- las paginas internas sirven solo como contexto cuando existen
+- para `Libero` y `La Republica`, la portada y la investigacion web reemplazan a las paginas internas
+- cuando una historia necesita contexto numerico adicional, el modelo puede buscar datos verificables en la web y devolver un grafico simple estructurado
 - el speech final sera corto, tipo TikTok
 - luego el video debe hablar sobre la portada, no sobre las paginas interiores
 - la apertura y los cambios de periodico usan perfiles de `voz_en_off`, separados de los narradores principales de cada historia
@@ -518,7 +537,7 @@ Ese prompt ya asume que:
 
 Si quieres avanzar rapido con el flujo actual:
 
-1. trabaja desde Streamlit hasta descargar paginas
+1. trabaja desde Streamlit hasta `Preparar contexto del lote`
 2. usa los prompts generados por la misma app
 3. guarda los JSON devueltos por ChatGPT en `data/ocr-imports/`
 4. deja Remotion para la siguiente etapa, cuando ya exista la capa narrativa cerrada
@@ -535,9 +554,12 @@ Ya permite:
 - copiar el prompt dinamico de portadas
 - importar seleccion batch desde ChatGPT
 - aplicar filtro editorial por categoria, suplementos o palabras clave
-- descargar paginas del lote reutilizando las ya existentes cuando coinciden
+- preparar contexto del lote reutilizando paginas ya existentes cuando coinciden
+- detectar automaticamente que `Libero` y `La Republica` deben ir por investigacion web
 - mostrar miniaturas de paginas descargadas
+- marcar periodicos con `investigacion web requerida` cuando no hay paginas internas disponibles
 - generar prompts posteriores por bloques de 2 periodicos
+- abrir automaticamente paginas, portadas o contexto mixto segun el contenido real del bloque
 - importar desde Streamlit el JSON del segundo prompt con speeches editoriales por historia
 - ajustar manualmente `cover_region` por historia desde Streamlit
 - corregir enfoque por cualquier periodico del lote desde `Ajuste Manual de Enfoque del Lote`
@@ -565,6 +587,11 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 - descarga batch de paginas seleccionadas
 - reutilizacion de paginas ya descargadas cuando coincide la seleccion
 - miniaturas de paginas descargadas por periodico
+- soporte de fuentes `direct_image_url` para `Libero` y `La Republica` con investigacion web en lugar de descarga interna
+- prompts editoriales mixtos que combinan paginas internas y periodicos solo-portada en un mismo bloque
+- apertura contextual de carpetas por bloque: paginas, portadas o contexto mixto
+- soporte opcional de `support_visual` para graficos numericos por historia
+- render de graficos animados en Remotion para historias con contexto de crecimiento, avance, porcentajes, ranking o comparaciones
 - prompts posteriores por bloques de 2 periodicos para respetar el limite de imagenes de ChatGPT
 - speeches editoriales pensados para voz breve, no para nota larga
 - modo desarrollo en Streamlit para cachear respuestas pegadas de ChatGPT y recargarlas al reabrir la app

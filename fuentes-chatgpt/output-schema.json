@@ -36,7 +36,37 @@
                   "type": "array",
                   "items": {"type": "string"}
                 },
-                "safety_notes": {"type": "string"}
+                "safety_notes": {"type": "string"},
+                "support_visual": {
+                  "anyOf": [
+                    {"type": "null"},
+                    {
+                      "type": "object",
+                      "required": ["type", "chart_type", "title", "points"],
+                      "properties": {
+                        "type": {"type": "string"},
+                        "chart_type": {"type": "string"},
+                        "title": {"type": "string"},
+                        "subtitle": {"type": "string"},
+                        "unit": {"type": "string"},
+                        "highlight_label": {"type": "string"},
+                        "data_source_note": {"type": "string"},
+                        "points": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": ["label", "value"],
+                            "properties": {
+                              "label": {"type": "string"},
+                              "value": {"type": "number"},
+                              "note": {"type": "string"}
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
               }
             }
           }

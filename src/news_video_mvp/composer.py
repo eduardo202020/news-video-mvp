@@ -33,6 +33,7 @@ class VideoSegment:
     gesture_paths: list[Path] | None = None
     duration_seconds: float | None = None
     cover_region: dict[str, float] | None = None
+    support_visual: dict[str, object] | None = None
     segment_type: str | None = None
 
 
@@ -171,6 +172,7 @@ def compose_video_props(
                 "gestures": segment_gesture_assets,
                 "durationSeconds": segment.duration_seconds,
                 "coverRegion": segment.cover_region,
+                "supportVisual": segment.support_visual,
                 "segmentType": segment.segment_type or "story",
             }
         )

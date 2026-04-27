@@ -11,6 +11,7 @@ const normalizeSegment = (segment, fallbackStory) => ({
   gestures: segment.gestures?.length ? segment.gestures : fallbackStory.gestures,
   durationSeconds: segment.durationSeconds ?? null,
   coverRegion: segment.coverRegion ?? null,
+  supportVisual: segment.supportVisual ?? null,
   segmentType: segment.segmentType ?? "story"
 });
 

@@ -1320,6 +1320,70 @@ def _normalize_key_facts(value: object) -> list[str]:
     return key_facts[:3]
 
 
+def _normalize_numeric_chart_points(value: object) -> list[dict[str, object]]:
+    if not isinstance(value, list):
+        return []
+    points: list[dict[str, object]] = []
+    for item in value:
+        if not isinstance(item, dict):
+            continue
+        label = " ".join(str(item.get("label") or item.get("name") or "").split()).strip()
+        try:
+            numeric_value = float(item.get("value"))
+        except (TypeError, ValueError):
+            continue
+        if not label:
+            continue
+        point = {
+            "label": label,
+            "value": round(numeric_value, 4),
+        }
+        note = " ".join(str(item.get("note") or "").split()).strip()
+        if note:
+            point["note"] = note
+        points.append(point)
+    return points[:8]
+
+
+def _normalize_support_visual(value: object) -> dict[str, object] | None:
+    if not isinstance(value, dict):
+        return None
+
+    visual_type = " ".join(str(value.get("type") or value.get("visual_type") or "").split()).strip().casefold()
+    if visual_type not in {"numeric_chart", "animated_chart"}:
+        return None
+
+    chart_type = " ".join(str(value.get("chart_type") or value.get("chartType") or "").split()).strip().casefold()
+    if chart_type not in {"line", "bar", "area"}:
+        chart_type = "line"
+
+    title = " ".join(str(value.get("title") or "").split()).strip()
+    points = _normalize_numeric_chart_points(value.get("points") or value.get("data"))
+    if len(points) < 2:
+        return None
+
+    normalized = {
+        "type": "numeric_chart",
+        "chart_type": chart_type,
+        "title": title or "Contexto numerico",
+        "points": points,
+    }
+
+    optional_fields = {
+        "subtitle": value.get("subtitle"),
+        "y_axis_label": value.get("y_axis_label") or value.get("yAxisLabel"),
+        "unit": value.get("unit"),
+        "highlight_label": value.get("highlight_label") or value.get("highlightLabel"),
+        "data_source_note": value.get("data_source_note") or value.get("dataSourceNote"),
+    }
+    for key, raw_value in optional_fields.items():
+        normalized_value = " ".join(str(raw_value or "").split()).strip()
+        if normalized_value:
+            normalized[key] = normalized_value
+
+    return normalized
+
+
 def _build_cover_story_groups(candidates: list[dict[str, object]]) -> list[dict[str, object]]:
     grouped: dict[tuple[str, str, str], dict[str, object]] = {}
 
@@ -1432,6 +1496,7 @@ def _parse_story_narrative_payload(text: str) -> tuple[list[dict[str, object]], 
                     str(item.get("safety_notes") or item.get("notes") or "").split()
                 ).strip(),
                 "notes": " ".join(str(item.get("notes") or item.get("safety_notes") or "").split()).strip(),
+                "support_visual": _normalize_support_visual(item.get("support_visual") or item.get("supportVisual")),
             }
         )
 
@@ -1541,6 +1606,7 @@ def _merge_story_narrative_with_cover_context(
                 "narrator_map_id": narrator_config["map_id"],
                 "safety_notes": " ".join(str(item.get("safety_notes") or item.get("notes") or "").split()).strip(),
                 "notes": " ".join(str(item.get("notes") or "").split()).strip(),
+                "support_visual": _normalize_support_visual(item.get("support_visual") or item.get("supportVisual")),
             }
         )
     return merged
@@ -1594,6 +1660,7 @@ def _enrich_job_story_narrative_with_cover_context(job: dict[str, object]) -> li
                 "narrator_role": narrator_config["role"],
                 "tone_notes": tone_notes,
                 "narrator_map_id": narrator_config["map_id"],
+                "support_visual": _normalize_support_visual(story.get("support_visual") or story.get("supportVisual")),
             }
         )
     return enriched
@@ -1698,6 +1765,7 @@ def _build_story_narrative_manifest_payload(
                 "tone_notes": _normalize_key_facts(story.get("tone_notes")) or narrator_config["tone_notes"],
                 "safety_notes": " ".join(str(story.get("safety_notes") or "").split()).strip(),
                 "notes": " ".join(str(story.get("notes") or "").split()).strip(),
+                "support_visual": _normalize_support_visual(story.get("support_visual") or story.get("supportVisual")),
                 "narrator_profile_id": narrator_config["narrator_profile_id"],
                 "narrator_role": narrator_config["role"],
                 "narrator_map_id": narrator_config["map_id"],
@@ -2710,6 +2778,7 @@ def _build_daily_rundown_segment_specs(
                     "gestures_dir": visual_voice.gestures_dir,
                     "text": speech,
                     "cover_region": story.get("cover_region"),
+                    "support_visual": story.get("support_visual"),
                 }
             )
     _ = fallback_voice
@@ -2979,6 +3048,7 @@ def build_story_manifest_from_job(
                     "tone_notes": story.get("tone_notes") or [],
                     "safety_notes": story.get("safety_notes") or "",
                     "cover_region": story.get("cover_region"),
+                    "support_visual": story.get("support_visual"),
                     "segment_audio_file": story.get("segment_audio_file"),
                     "audio_file": job["voice"].get("audio_path"),
                     "subtitle_segments_file": job["subtitles"].get("segments_path"),
@@ -3248,6 +3318,7 @@ def build_daily_rundown_for_date(
                 gesture_paths=segment_gestures,
                 duration_seconds=_get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"])),
                 cover_region=segment.get("cover_region"),
+                support_visual=segment.get("support_visual"),
                 segment_type=str(segment.get("segment_type") or "story"),
             )
         )
@@ -3489,6 +3560,7 @@ def compose_job_for_preview(
                     else None
                 ),
                 cover_region=segment.get("cover_region"),
+                support_visual=segment.get("support_visual"),
                 segment_type=str(segment.get("segment_type") or "story"),
             )
         )

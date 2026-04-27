@@ -15,6 +15,7 @@ import {normalizeStory} from "./story/normalize.js";
 import {CaptionBar} from "./video/CaptionBar";
 import {CoverStage} from "./video/CoverStage";
 import {NarratorStage} from "./video/NarratorStage";
+import {SupportVisualStage} from "./video/SupportVisualStage";
 import {resolveTimeline} from "./video/timeline.js";
 
 const {fontFamily: subtitleFontFamily} = loadBarlowSemiCondensed("normal", {
@@ -170,6 +171,13 @@ export const NewsVideo = ({
         captionWords={timeline.captionWords}
         subtitleFontSize={timeline.subtitleFontSize}
         subtitleLineHeight={timeline.subtitleLineHeight}
+      />
+
+      <SupportVisualStage
+        supportVisual={timeline.currentSegment.supportVisual}
+        segmentFrame={timeline.segmentFrame}
+        fps={fps}
+        segmentDuration={timeline.segmentDuration}
       />
 
       <NarratorStage
