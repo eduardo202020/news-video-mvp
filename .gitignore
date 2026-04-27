@@ -15,3 +15,5 @@ output/*
 !output/.gitkeep
 remotion-app/node_modules/
 remotion-app/public/assets/generated/
+downloads/*.exe
+downloads/*.msi
