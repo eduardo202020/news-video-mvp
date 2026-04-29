@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-04-28-ojo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-28-ojo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Balcázar bajo presión por caso F-16",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Balcázar queda en el centro del ruido político: la nota cuestiona su rol en la comisión y la falta de explicaciones por los cazas F-16. Cuando el gasto militar entra sin claridad, la pregunta incómoda cae sola.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "compra de cazas F-16",
+        "ministros no dieron explicaciones al Congreso",
+        "cuestionamientos a Balcázar"
+      ],
+      "tone_notes": [
+        "crítico",
+        "político",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar irregularidades; se habla de cuestionamientos y falta de explicaciones.",
+      "cover_region": {
+        "x": 0.25,
+        "y": 0.19,
+        "width": 0.73,
+        "height": 0.76
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Policía mata a raquetero",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La versión policial sostiene que el agente actuó en defensa propia durante un asalto en Chorrillos. Un presunto delincuente murió y otro fue detenido; ahora el caso queda bajo revisión de las autoridades.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "asalto en Chorrillos",
+        "uso de arma de reglamento",
+        "un detenido"
+      ],
+      "tone_notes": [
+        "serio",
+        "cauteloso",
+        "policial"
+      ],
+      "safety_notes": "Se atribuye la información a la versión policial y se evita cerrar responsabilidad penal.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.55,
+        "width": 0.2,
+        "height": 0.2
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Golean a Chankas y Alianza celebra",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Sin vueltas: la goleada a Chankas sacude la punta y le abre una sonrisa a Alianza. En un torneo tan apretado, cada caída pesa doble y cada resultado ajeno también se festeja.",
+      "page_numbers": [
+        14
+      ],
+      "key_facts": [
+        "Chankas fue goleado",
+        "impacto en la punta",
+        "Alianza queda favorecido"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "ágil",
+        "competitivo"
+      ],
+      "safety_notes": "Se resume el efecto deportivo sin agregar tabla completa no visible en la página.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.27,
+        "width": 0.2,
+        "height": 0.25
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Melcochita niega romance con chibola",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Ojo con esto: Melcochita salió a negar un romance con Monserrat Seminario y asegura que ella trabajó para él. La farándula se encendió, pero él marca distancia y dice que no hay historia de amor.",
+      "page_numbers": [
+        16
+      ],
+      "key_facts": [
+        "Melcochita niega romance",
+        "Monserrat Seminario trabajó para él",
+        "tema de farándula"
+      ],
+      "tone_notes": [
+        "picante",
+        "ágil",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar rumores como hechos y se atribuye la negación al personaje mencionado.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.74,
+        "width": 0.22,
+        "height": 0.22
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

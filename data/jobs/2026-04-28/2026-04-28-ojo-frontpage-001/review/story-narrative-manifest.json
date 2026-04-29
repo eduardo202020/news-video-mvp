@@ -1,0 +1,157 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-28-ojo-frontpage-001",
+  "source_id": "ojo",
+  "source_name": "Ojo",
+  "date": "2026-04-28",
+  "front_page_image": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Balcázar bajo presión por caso F-16",
+      "story_type": "politica",
+      "summary": "Balcázar queda en el centro del ruido político: la nota cuestiona su rol en la comisión y la falta de explicaciones por los cazas F-16. Cuando el gasto militar entra sin claridad, la pregunta incómoda cae sola.",
+      "speech": "Balcázar queda en el centro del ruido político: la nota cuestiona su rol en la comisión y la falta de explicaciones por los cazas F-16. Cuando el gasto militar entra sin claridad, la pregunta incómoda cae sola.",
+      "page_numbers": [
+        2
+      ],
+      "cover_region": {
+        "x": 0.25,
+        "y": 0.19,
+        "width": 0.73,
+        "height": 0.76
+      },
+      "key_facts": [
+        "compra de cazas F-16",
+        "ministros no dieron explicaciones al Congreso",
+        "cuestionamientos a Balcázar"
+      ],
+      "tone_notes": [
+        "crítico",
+        "político",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar irregularidades; se habla de cuestionamientos y falta de explicaciones.",
+      "notes": "Se evita afirmar irregularidades; se habla de cuestionamientos y falta de explicaciones.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Policía mata a raquetero",
+      "story_type": "policial",
+      "summary": "La versión policial sostiene que el agente actuó en defensa propia durante un asalto en Chorrillos. Un presunto delincuente murió y otro fue detenido; ahora el caso queda bajo revisión de las autoridades.",
+      "speech": "La versión policial sostiene que el agente actuó en defensa propia durante un asalto en Chorrillos. Un presunto delincuente murió y otro fue detenido; ahora el caso queda bajo revisión de las autoridades.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.55,
+        "width": 0.2,
+        "height": 0.2
+      },
+      "key_facts": [
+        "asalto en Chorrillos",
+        "uso de arma de reglamento",
+        "un detenido"
+      ],
+      "tone_notes": [
+        "serio",
+        "cauteloso",
+        "policial"
+      ],
+      "safety_notes": "Se atribuye la información a la versión policial y se evita cerrar responsabilidad penal.",
+      "notes": "Se atribuye la información a la versión policial y se evita cerrar responsabilidad penal.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Golean a Chankas y Alianza celebra",
+      "story_type": "deportes",
+      "summary": "Sin vueltas: la goleada a Chankas sacude la punta y le abre una sonrisa a Alianza. En un torneo tan apretado, cada caída pesa doble y cada resultado ajeno también se festeja.",
+      "speech": "Sin vueltas: la goleada a Chankas sacude la punta y le abre una sonrisa a Alianza. En un torneo tan apretado, cada caída pesa doble y cada resultado ajeno también se festeja.",
+      "page_numbers": [
+        14
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.27,
+        "width": 0.2,
+        "height": 0.25
+      },
+      "key_facts": [
+        "Chankas fue goleado",
+        "impacto en la punta",
+        "Alianza queda favorecido"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "ágil",
+        "competitivo"
+      ],
+      "safety_notes": "Se resume el efecto deportivo sin agregar tabla completa no visible en la página.",
+      "notes": "Se resume el efecto deportivo sin agregar tabla completa no visible en la página.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Melcochita niega romance con chibola",
+      "story_type": "espectaculos",
+      "summary": "Ojo con esto: Melcochita salió a negar un romance con Monserrat Seminario y asegura que ella trabajó para él. La farándula se encendió, pero él marca distancia y dice que no hay historia de amor.",
+      "speech": "Ojo con esto: Melcochita salió a negar un romance con Monserrat Seminario y asegura que ella trabajó para él. La farándula se encendió, pero él marca distancia y dice que no hay historia de amor.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.74,
+        "width": 0.22,
+        "height": 0.22
+      },
+      "key_facts": [
+        "Melcochita niega romance",
+        "Monserrat Seminario trabajó para él",
+        "tema de farándula"
+      ],
+      "tone_notes": [
+        "picante",
+        "ágil",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar rumores como hechos y se atribuye la negación al personaje mencionado.",
+      "notes": "Se evita afirmar rumores como hechos y se atribuye la negación al personaje mencionado.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "segment_audio_file": null
+    }
+  ]
+}

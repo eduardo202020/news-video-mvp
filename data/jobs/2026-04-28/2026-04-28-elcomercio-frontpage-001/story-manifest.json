@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-04-28-elcomercio-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-28-elcomercio-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "El BCR no acepta presiones para decidir",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Julio Velarde reafirma la independencia del Banco Central de Reserva, asegurando que no cede a presiones externas. En tiempos de incertidumbre económica, la autonomía es clave para la estabilidad financiera del país.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "independencia del BCR",
+        "Velarde reafirma autonomía",
+        "presiones externas no influyen"
+      ],
+      "tone_notes": [
+        "serio",
+        "tecnico",
+        "elegante"
+      ],
+      "safety_notes": "Declaraciones del presidente del BCR sobre la situación financiera, sin mención de medidas inmediatas.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.25,
+        "width": 0.88,
+        "height": 0.37
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Antauro Humala reafirma coalición con Roberto Sánchez",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Antauro Humala confirma su coalición con Roberto Sánchez, un movimiento clave en la carrera electoral. El pacto se fortalece en medio de un panorama político fragmentado.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "coalición Humala-Sánchez",
+        "movimiento clave",
+        "panorama político fragmentado"
+      ],
+      "tone_notes": [
+        "político",
+        "resolutivo",
+        "decisivo"
+      ],
+      "safety_notes": "Se afirma el pacto político, pero no se detallan las implicaciones futuras.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.65,
+        "width": 0.9,
+        "height": 0.18
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "ProInversión pide no cambiar gerentes en Petro-Perú",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "ProInversión insta a mantener la estabilidad en la gestión de Petro-Perú, pidiendo no realizar cambios en la gerencia. Este llamado busca evitar la inestabilidad en la empresa estatal clave para la economía peruana.",
+      "page_numbers": [
+        8
+      ],
+      "key_facts": [
+        "ProInversión pide estabilidad",
+        "gerentes de Petro-Perú",
+        "inestabilidad en la empresa estatal"
+      ],
+      "tone_notes": [
+        "técnico",
+        "economía",
+        "precavido"
+      ],
+      "safety_notes": "Se presenta el contexto institucional, sin mencionar fechas exactas de cambios.",
+      "cover_region": {
+        "x": 0.72,
+        "y": 0.82,
+        "width": 0.27,
+        "height": 0.16
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "MML aun no habilita sistema digital de brevetes",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La Municipalidad de Lima sigue sin habilitar el sistema digital para trámites de brevetes, lo que genera demoras y malestar entre los ciudadanos. Un problema que afecta a miles de conductores cada día.",
+      "page_numbers": [
+        9
+      ],
+      "key_facts": [
+        "MML no habilita sistema digital",
+        "demoras en trámites",
+        "afectación a conductores"
+      ],
+      "tone_notes": [
+        "informativo",
+        "crítico",
+        "urgente"
+      ],
+      "safety_notes": "Se presenta el hecho sin detalles adicionales de los responsables.",
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.81,
+        "width": 0.27,
+        "height": 0.16
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

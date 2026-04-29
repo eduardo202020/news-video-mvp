@@ -1,0 +1,557 @@
+{
+  "job_id": "2026-04-28-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "date": "2026-04-28",
+  "source": {
+    "source_id": "elcomercio",
+    "source_config_path": "automation/sources/diarios/elcomercio.json",
+    "requested_date": "2026-04-28",
+    "issue_date": "2026-04-28",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026042800000000001001&page=1&scale=207",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026042800000000001001&page=1&scale=207",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/elcomercio.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042800000000001001&page=1&scale=207",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042800000000001001&page=3&scale=55",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042800000000001001&page=4&scale=55",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 8",
+        "page_number": 8,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042800000000001001&page=8&scale=55",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/pages/page-08.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042800000000001001&page=9&scale=55",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026042800000000001001&page=12&scale=55",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/pages/page-12.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      3,
+      4,
+      8,
+      9,
+      12
+    ],
+    "candidates": [
+      {
+        "headline": "El BCR no acepta presiones para decidir",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.25,
+          "width": 0.88,
+          "height": 0.37
+        },
+        "page_number": 3,
+        "evidence_line": "Tema del dia pagina 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Antauro Humala reafirma coalicion con Roberto Sanchez",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.6,
+          "width": 0.88,
+          "height": 0.18
+        },
+        "page_number": 4,
+        "evidence_line": "Pagina 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "MML aun no habilita sistema digital de brevetes",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.81,
+          "width": 0.27,
+          "height": 0.16
+        },
+        "page_number": 9,
+        "evidence_line": "Pagina 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Papa se reune con lideresa anglicana",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.34,
+          "y": 0.82,
+          "width": 0.28,
+          "height": 0.15
+        },
+        "page_number": 12,
+        "evidence_line": "Pagina 12",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "ProInversion pide no cambiar gerentes en Petro-Peru",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.68,
+          "y": 0.81,
+          "width": 0.27,
+          "height": 0.16
+        },
+        "page_number": 8,
+        "evidence_line": "Pagina 8",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      }
+    ],
+    "stories": [
+      {
+        "headline": "El BCR no acepta presiones para decidir",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.25,
+          "width": 0.88,
+          "height": 0.37
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "Tema del dia pagina 3",
+        "evidence_lines": [
+          "Tema del dia pagina 3"
+        ],
+        "confidence": 0.97
+      },
+      {
+        "headline": "Antauro Humala reafirma coalicion con Roberto Sanchez",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.6,
+          "width": 0.88,
+          "height": 0.18
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Pagina 4",
+        "evidence_lines": [
+          "Pagina 4"
+        ],
+        "confidence": 0.96
+      },
+      {
+        "headline": "ProInversion pide no cambiar gerentes en Petro-Peru",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.68,
+          "y": 0.81,
+          "width": 0.27,
+          "height": 0.16
+        },
+        "page_numbers": [
+          8
+        ],
+        "evidence": "Pagina 8",
+        "evidence_lines": [
+          "Pagina 8"
+        ],
+        "confidence": 0.92
+      },
+      {
+        "headline": "MML aun no habilita sistema digital de brevetes",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.81,
+          "width": 0.27,
+          "height": 0.16
+        },
+        "page_numbers": [
+          9
+        ],
+        "evidence": "Pagina 9",
+        "evidence_lines": [
+          "Pagina 9"
+        ],
+        "confidence": 0.93
+      },
+      {
+        "headline": "Papa se reune con lideresa anglicana",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.34,
+          "y": 0.82,
+          "width": 0.28,
+          "height": 0.15
+        },
+        "page_numbers": [
+          12
+        ],
+        "evidence": "Pagina 12",
+        "evidence_lines": [
+          "Pagina 12"
+        ],
+        "confidence": 0.91
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      3,
+      4,
+      8,
+      9,
+      12
+    ]
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "El BCR no acepta presiones para decidir",
+        "story_type": "economia",
+        "summary": "Julio Velarde reafirma la independencia del Banco Central de Reserva, asegurando que no cede a presiones externas. En tiempos de incertidumbre económica, la autonomía es clave para la estabilidad financiera del país.",
+        "speech": "Julio Velarde reafirma la independencia del Banco Central de Reserva, asegurando que no cede a presiones externas. En tiempos de incertidumbre económica, la autonomía es clave para la estabilidad financiera del país.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "serio",
+          "tecnico",
+          "elegante"
+        ],
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.25,
+          "width": 0.88,
+          "height": 0.37
+        },
+        "key_facts": [
+          "independencia del BCR",
+          "Velarde reafirma autonomía",
+          "presiones externas no influyen"
+        ],
+        "key_facts_used": [
+          "independencia del BCR",
+          "Velarde reafirma autonomía",
+          "presiones externas no influyen"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Declaraciones del presidente del BCR sobre la situación financiera, sin mención de medidas inmediatas.",
+        "notes": "Declaraciones del presidente del BCR sobre la situación financiera, sin mención de medidas inmediatas.",
+        "support_visual": null
+      },
+      {
+        "headline": "Antauro Humala reafirma coalición con Roberto Sánchez",
+        "story_type": "politica",
+        "summary": "Antauro Humala confirma su coalición con Roberto Sánchez, un movimiento clave en la carrera electoral. El pacto se fortalece en medio de un panorama político fragmentado.",
+        "speech": "Antauro Humala confirma su coalición con Roberto Sánchez, un movimiento clave en la carrera electoral. El pacto se fortalece en medio de un panorama político fragmentado.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "político",
+          "resolutivo",
+          "decisivo"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.65,
+          "width": 0.9,
+          "height": 0.18
+        },
+        "key_facts": [
+          "coalición Humala-Sánchez",
+          "movimiento clave",
+          "panorama político fragmentado"
+        ],
+        "key_facts_used": [
+          "coalición Humala-Sánchez",
+          "movimiento clave",
+          "panorama político fragmentado"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se afirma el pacto político, pero no se detallan las implicaciones futuras.",
+        "notes": "Se afirma el pacto político, pero no se detallan las implicaciones futuras.",
+        "support_visual": null
+      },
+      {
+        "headline": "ProInversión pide no cambiar gerentes en Petro-Perú",
+        "story_type": "economia",
+        "summary": "ProInversión insta a mantener la estabilidad en la gestión de Petro-Perú, pidiendo no realizar cambios en la gerencia. Este llamado busca evitar la inestabilidad en la empresa estatal clave para la economía peruana.",
+        "speech": "ProInversión insta a mantener la estabilidad en la gestión de Petro-Perú, pidiendo no realizar cambios en la gerencia. Este llamado busca evitar la inestabilidad en la empresa estatal clave para la economía peruana.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "técnico",
+          "economía",
+          "precavido"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.72,
+          "y": 0.82,
+          "width": 0.27,
+          "height": 0.16
+        },
+        "key_facts": [
+          "ProInversión pide estabilidad",
+          "gerentes de Petro-Perú",
+          "inestabilidad en la empresa estatal"
+        ],
+        "key_facts_used": [
+          "ProInversión pide estabilidad",
+          "gerentes de Petro-Perú",
+          "inestabilidad en la empresa estatal"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta el contexto institucional, sin mencionar fechas exactas de cambios.",
+        "notes": "Se presenta el contexto institucional, sin mencionar fechas exactas de cambios.",
+        "support_visual": null
+      },
+      {
+        "headline": "MML aun no habilita sistema digital de brevetes",
+        "story_type": "actualidad",
+        "summary": "La Municipalidad de Lima sigue sin habilitar el sistema digital para trámites de brevetes, lo que genera demoras y malestar entre los ciudadanos. Un problema que afecta a miles de conductores cada día.",
+        "speech": "La Municipalidad de Lima sigue sin habilitar el sistema digital para trámites de brevetes, lo que genera demoras y malestar entre los ciudadanos. Un problema que afecta a miles de conductores cada día.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "informativo",
+          "crítico",
+          "urgente"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.81,
+          "width": 0.27,
+          "height": 0.16
+        },
+        "key_facts": [
+          "MML no habilita sistema digital",
+          "demoras en trámites",
+          "afectación a conductores"
+        ],
+        "key_facts_used": [
+          "MML no habilita sistema digital",
+          "demoras en trámites",
+          "afectación a conductores"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta el hecho sin detalles adicionales de los responsables.",
+        "notes": "Se presenta el hecho sin detalles adicionales de los responsables.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Julio Velarde reafirma la independencia del Banco Central de Reserva, asegurando que no cede a presiones externas. En tiempos de incertidumbre económica, la autonomía es clave para la estabilidad financiera del país.\n\nAntauro Humala confirma su coalición con Roberto Sánchez, un movimiento clave en la carrera electoral. El pacto se fortalece en medio de un panorama político fragmentado.\n\nProInversión insta a mantener la estabilidad en la gestión de Petro-Perú, pidiendo no realizar cambios en la gerencia. Este llamado busca evitar la inestabilidad en la empresa estatal clave para la economía peruana.\n\nLa Municipalidad de Lima sigue sin habilitar el sistema digital para trámites de brevetes, lo que genera demoras y malestar entre los ciudadanos. Un problema que afecta a miles de conductores cada día.",
+    "approved_text": "Julio Velarde reafirma la independencia del Banco Central de Reserva, asegurando que no cede a presiones externas. En tiempos de incertidumbre económica, la autonomía es clave para la estabilidad financiera del país.\n\nAntauro Humala confirma su coalición con Roberto Sánchez, un movimiento clave en la carrera electoral. El pacto se fortalece en medio de un panorama político fragmentado.\n\nProInversión insta a mantener la estabilidad en la gestión de Petro-Perú, pidiendo no realizar cambios en la gerencia. Este llamado busca evitar la inestabilidad en la empresa estatal clave para la economía peruana.\n\nLa Municipalidad de Lima sigue sin habilitar el sistema digital para trámites de brevetes, lo que genera demoras y malestar entre los ciudadanos. Un problema que afecta a miles de conductores cada día.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-28-elcomercio-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-28T09:28:11",
+    "updated_at": "2026-04-28T09:52:31",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:28:11",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:28:30",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:28:31",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:01",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:01",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:27",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:37:06",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:48:17",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-28T09:52:02",
+        "details": "Enfoque manual actualizado para historia 2: Antauro Humala reafirma coalición con Roberto Sánchez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:52:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-28T09:52:31",
+        "details": "Enfoque manual actualizado para historia 3: ProInversión pide no cambiar gerentes en Petro-Perú."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:52:31",
+        "details": "Story manifest generado desde job manifest."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 28 de abril, abrimos el recorrido por las portadas con política, economía, seguridad, mundo y deporte. En una fecha ligada al Callao por la partida de la Kon Tiki, vamos diario por diario con lo central y sin rodeos.",
+    "date_reference": "Adonde.com efemerides abril28: en 1947 partio del Callao la balsa Kon Tiki hacia la Polinesia.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta una efemeride peruana vinculada al Callao con una jornada de portadas marcadas por politica, economia y actualidad nacional.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-28T09:35:27"
+  }
+}

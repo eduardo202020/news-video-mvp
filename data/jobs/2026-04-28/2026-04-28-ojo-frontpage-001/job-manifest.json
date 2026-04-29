@@ -1,0 +1,521 @@
+{
+  "job_id": "2026-04-28-ojo-frontpage-001",
+  "source_id": "ojo",
+  "date": "2026-04-28",
+  "source": {
+    "source_id": "ojo",
+    "source_config_path": "automation/sources/diarios/ojo.json",
+    "requested_date": "2026-04-28",
+    "issue_date": "2026-04-28",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026042800000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026042800000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/ojo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042800000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042800000000001001&page=2&scale=83",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042800000000001001&page=6&scale=83",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 14",
+        "page_number": 14,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042800000000001001&page=14&scale=83",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/pages/page-14.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042800000000001001&page=16&scale=83",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      2,
+      6,
+      14,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Balcazar esta pintado y cobra 50 mil soles",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.25,
+          "y": 0.19,
+          "width": 0.73,
+          "height": 0.76
+        },
+        "page_number": 2,
+        "evidence_line": "Politica pag. 2",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Golean Chankas y Alianza celebra",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.27,
+          "width": 0.2,
+          "height": 0.25
+        },
+        "page_number": 14,
+        "evidence_line": "Crack pag. 14",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Policia mata a raquetero",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.55,
+          "width": 0.2,
+          "height": 0.2
+        },
+        "page_number": 6,
+        "evidence_line": "Policial pag. 6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Melcochita niega romance con chibola",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.78,
+          "width": 0.22,
+          "height": 0.18
+        },
+        "page_number": 16,
+        "evidence_line": "Ojoshow pag. 16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Balcazar esta pintado y cobra 50 mil soles",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.25,
+          "y": 0.19,
+          "width": 0.73,
+          "height": 0.76
+        },
+        "page_numbers": [
+          2
+        ],
+        "evidence": "Politica pag. 2",
+        "evidence_lines": [
+          "Politica pag. 2"
+        ],
+        "confidence": 0.97
+      },
+      {
+        "headline": "Policia mata a raquetero",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.55,
+          "width": 0.2,
+          "height": 0.2
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "Policial pag. 6",
+        "evidence_lines": [
+          "Policial pag. 6"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "headline": "Golean Chankas y Alianza celebra",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.27,
+          "width": 0.2,
+          "height": 0.25
+        },
+        "page_numbers": [
+          14
+        ],
+        "evidence": "Crack pag. 14",
+        "evidence_lines": [
+          "Crack pag. 14"
+        ],
+        "confidence": 0.94
+      },
+      {
+        "headline": "Melcochita niega romance con chibola",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.74,
+          "width": 0.22,
+          "height": 0.22
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "Ojoshow pag. 16",
+        "evidence_lines": [
+          "Ojoshow pag. 16"
+        ],
+        "confidence": 0.88
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      6,
+      14,
+      16
+    ]
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Balcázar bajo presión por caso F-16",
+        "story_type": "politica",
+        "summary": "Balcázar queda en el centro del ruido político: la nota cuestiona su rol en la comisión y la falta de explicaciones por los cazas F-16. Cuando el gasto militar entra sin claridad, la pregunta incómoda cae sola.",
+        "speech": "Balcázar queda en el centro del ruido político: la nota cuestiona su rol en la comisión y la falta de explicaciones por los cazas F-16. Cuando el gasto militar entra sin claridad, la pregunta incómoda cae sola.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "crítico",
+          "político",
+          "prudente"
+        ],
+        "page_numbers": [
+          2
+        ],
+        "cover_region": {
+          "x": 0.25,
+          "y": 0.19,
+          "width": 0.73,
+          "height": 0.76
+        },
+        "key_facts": [
+          "compra de cazas F-16",
+          "ministros no dieron explicaciones al Congreso",
+          "cuestionamientos a Balcázar"
+        ],
+        "key_facts_used": [
+          "compra de cazas F-16",
+          "ministros no dieron explicaciones al Congreso",
+          "cuestionamientos a Balcázar"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita afirmar irregularidades; se habla de cuestionamientos y falta de explicaciones.",
+        "notes": "Se evita afirmar irregularidades; se habla de cuestionamientos y falta de explicaciones.",
+        "support_visual": null
+      },
+      {
+        "headline": "Policía mata a raquetero",
+        "story_type": "policial",
+        "summary": "La versión policial sostiene que el agente actuó en defensa propia durante un asalto en Chorrillos. Un presunto delincuente murió y otro fue detenido; ahora el caso queda bajo revisión de las autoridades.",
+        "speech": "La versión policial sostiene que el agente actuó en defensa propia durante un asalto en Chorrillos. Un presunto delincuente murió y otro fue detenido; ahora el caso queda bajo revisión de las autoridades.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "serio",
+          "cauteloso",
+          "policial"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.55,
+          "width": 0.2,
+          "height": 0.2
+        },
+        "key_facts": [
+          "asalto en Chorrillos",
+          "uso de arma de reglamento",
+          "un detenido"
+        ],
+        "key_facts_used": [
+          "asalto en Chorrillos",
+          "uso de arma de reglamento",
+          "un detenido"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se atribuye la información a la versión policial y se evita cerrar responsabilidad penal.",
+        "notes": "Se atribuye la información a la versión policial y se evita cerrar responsabilidad penal.",
+        "support_visual": null
+      },
+      {
+        "headline": "Golean a Chankas y Alianza celebra",
+        "story_type": "deportes",
+        "summary": "Sin vueltas: la goleada a Chankas sacude la punta y le abre una sonrisa a Alianza. En un torneo tan apretado, cada caída pesa doble y cada resultado ajeno también se festeja.",
+        "speech": "Sin vueltas: la goleada a Chankas sacude la punta y le abre una sonrisa a Alianza. En un torneo tan apretado, cada caída pesa doble y cada resultado ajeno también se festeja.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "ágil",
+          "competitivo"
+        ],
+        "page_numbers": [
+          14
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.27,
+          "width": 0.2,
+          "height": 0.25
+        },
+        "key_facts": [
+          "Chankas fue goleado",
+          "impacto en la punta",
+          "Alianza queda favorecido"
+        ],
+        "key_facts_used": [
+          "Chankas fue goleado",
+          "impacto en la punta",
+          "Alianza queda favorecido"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resume el efecto deportivo sin agregar tabla completa no visible en la página.",
+        "notes": "Se resume el efecto deportivo sin agregar tabla completa no visible en la página.",
+        "support_visual": null
+      },
+      {
+        "headline": "Melcochita niega romance con chibola",
+        "story_type": "espectaculos",
+        "summary": "Ojo con esto: Melcochita salió a negar un romance con Monserrat Seminario y asegura que ella trabajó para él. La farándula se encendió, pero él marca distancia y dice que no hay historia de amor.",
+        "speech": "Ojo con esto: Melcochita salió a negar un romance con Monserrat Seminario y asegura que ella trabajó para él. La farándula se encendió, pero él marca distancia y dice que no hay historia de amor.",
+        "narrator_profile_id": "reportero_magaly",
+        "narrator_role": "conductora_espectaculos",
+        "tone_notes": [
+          "picante",
+          "ágil",
+          "prudente"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.74,
+          "width": 0.22,
+          "height": 0.22
+        },
+        "key_facts": [
+          "Melcochita niega romance",
+          "Monserrat Seminario trabajó para él",
+          "tema de farándula"
+        ],
+        "key_facts_used": [
+          "Melcochita niega romance",
+          "Monserrat Seminario trabajó para él",
+          "tema de farándula"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita afirmar rumores como hechos y se atribuye la negación al personaje mencionado.",
+        "notes": "Se evita afirmar rumores como hechos y se atribuye la negación al personaje mencionado.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Balcázar queda en el centro del ruido político: la nota cuestiona su rol en la comisión y la falta de explicaciones por los cazas F-16. Cuando el gasto militar entra sin claridad, la pregunta incómoda cae sola.\n\nLa versión policial sostiene que el agente actuó en defensa propia durante un asalto en Chorrillos. Un presunto delincuente murió y otro fue detenido; ahora el caso queda bajo revisión de las autoridades.\n\nSin vueltas: la goleada a Chankas sacude la punta y le abre una sonrisa a Alianza. En un torneo tan apretado, cada caída pesa doble y cada resultado ajeno también se festeja.\n\nOjo con esto: Melcochita salió a negar un romance con Monserrat Seminario y asegura que ella trabajó para él. La farándula se encendió, pero él marca distancia y dice que no hay historia de amor.",
+    "approved_text": "Balcázar queda en el centro del ruido político: la nota cuestiona su rol en la comisión y la falta de explicaciones por los cazas F-16. Cuando el gasto militar entra sin claridad, la pregunta incómoda cae sola.\n\nLa versión policial sostiene que el agente actuó en defensa propia durante un asalto en Chorrillos. Un presunto delincuente murió y otro fue detenido; ahora el caso queda bajo revisión de las autoridades.\n\nSin vueltas: la goleada a Chankas sacude la punta y le abre una sonrisa a Alianza. En un torneo tan apretado, cada caída pesa doble y cada resultado ajeno también se festeja.\n\nOjo con esto: Melcochita salió a negar un romance con Monserrat Seminario y asegura que ella trabajó para él. La farándula se encendió, pero él marca distancia y dice que no hay historia de amor.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-04-28/2026-04-28-ojo-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-28-ojo-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-28T09:28:56",
+    "updated_at": "2026-04-28T09:54:31",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:28:56",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:29:22",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:29:23",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:01",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:01",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:27",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:36:17",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:39:15",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:39:17",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-28T09:54:11",
+        "details": "Enfoque manual actualizado para historia 3: Golean a Chankas y Alianza celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:54:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-28T09:54:31",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita niega romance con chibola."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:54:31",
+        "details": "Story manifest generado desde job manifest."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 28 de abril, abrimos el recorrido por las portadas con política, economía, seguridad, mundo y deporte. En una fecha ligada al Callao por la partida de la Kon Tiki, vamos diario por diario con lo central y sin rodeos.",
+    "date_reference": "Adonde.com efemerides abril28: en 1947 partio del Callao la balsa Kon Tiki hacia la Polinesia.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta una efemeride peruana vinculada al Callao con una jornada de portadas marcadas por politica, economia y actualidad nacional.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-28T09:35:27"
+  }
+}

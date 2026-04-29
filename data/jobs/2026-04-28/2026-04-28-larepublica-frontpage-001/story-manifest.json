@@ -1,0 +1,201 @@
+{
+  "story_id": "2026-04-28-larepublica-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-28-larepublica-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-28/2026-04-28-larepublica-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-28/2026-04-28-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Congresistas pro-reelección se quedaron fuera",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La derrota política se siente en el Congreso. Los congresistas que promovían la reelección inmediata se quedaron fuera del juego. Un golpe fuerte para los intereses que buscaban perpetuarse en el poder.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "key_facts": [
+        "reelección fallida",
+        "congresistas fuera",
+        "reformistas derrotados"
+      ],
+      "tone_notes": [
+        "directo",
+        "crítico",
+        "politico"
+      ],
+      "safety_notes": "No se afirman acusaciones sin pruebas; se usa lenguaje de análisis político.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.69,
+        "width": 0.26,
+        "height": 0.22
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-28/2026-04-28-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "No se dejen robar la esperanza",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La Comisión Episcopal hace un llamado claro: no dejemos que nos roben la esperanza. En medio de la polarización política, el mensaje es contundente: la unidad y la lucha contra la mentira son esenciales para no perder el rumbo.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "llamado de la Iglesia",
+        "crisis moral",
+        "importancia de la unidad"
+      ],
+      "tone_notes": [
+        "serio",
+        "alerta",
+        "inspirador"
+      ],
+      "safety_notes": "Mensaje general sin afirmaciones polémicas sobre individuos.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.2,
+        "width": 0.95,
+        "height": 0.45
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-28/2026-04-28-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Velarde afirma que el BCRP no acepta presiones",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La estabilidad económica está bajo la mirada de Velarde, quien reafirma que el Banco Central de Reserva del Perú no cede ante presiones externas. Con una economía marcada por los retos, la independencia es clave para preservar el rumbo.",
+      "page_numbers": [
+        11
+      ],
+      "key_facts": [
+        "declaraciones de Velarde",
+        "BCRP independiente",
+        "estabilidad económica"
+      ],
+      "tone_notes": [
+        "analítico",
+        "claro",
+        "serio"
+      ],
+      "safety_notes": "Cifras no confirmadas de manera explícita, se mantiene el contexto de declaración.",
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.9,
+        "width": 0.25,
+        "height": 0.1
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-28/2026-04-28-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Acribillan a jóvenes comuneros en Huancavelica",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El crimen en Huancavelica sacude a la región. Un ataque armado deja varios muertos, incluyendo jóvenes comuneros. La policía sigue investigando los motivos detrás de este violento suceso.",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "key_facts": [
+        "asesinato de comuneros",
+        "investigación policial",
+        "atentado armado"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "prudente"
+      ],
+      "safety_notes": "Se menciona el caso bajo investigación, evitando especulaciones sobre motivos.",
+      "cover_region": {
+        "x": 0.62,
+        "y": 0.69,
+        "width": 0.38,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-28/2026-04-28-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Policía fallece en operativo en Loreto",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El operativo en Loreto termina con una tragedia: un policía pierde la vida en el cumplimiento de su deber. Un duro recordatorio de los riesgos que enfrentan quienes luchan por la seguridad de todos.",
+      "page_numbers": [
+        14
+      ],
+      "key_facts": [
+        "muerte de policía",
+        "operativo en Loreto",
+        "riesgos para agentes"
+      ],
+      "tone_notes": [
+        "serio",
+        "respetuoso",
+        "concernido"
+      ],
+      "safety_notes": "Se mencionan los hechos verificables, sin entrar en detalles personales.",
+      "cover_region": {
+        "x": 0.6,
+        "y": 0.88,
+        "width": 0.22,
+        "height": 0.11
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

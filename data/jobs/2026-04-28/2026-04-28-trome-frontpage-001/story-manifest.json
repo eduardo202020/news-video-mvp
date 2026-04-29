@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-04-28-trome-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-28-trome-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-28/2026-04-28-trome-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-28/2026-04-28-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Policía mata a raquetero tras violento asalto",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Un violento asalto en Chorrillos terminó con un presunto raquetero muerto y otro intervenido. Según la versión policial, el agente disparó al ser encañonado; la investigación deberá cerrar los puntos pendientes.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "asalto en Chorrillos",
+        "agente disparó según versión policial",
+        "un muerto y un intervenido"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "prudente"
+      ],
+      "safety_notes": "Se usa lenguaje prudente y se atribuye el hecho a la versión policial disponible.",
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.79,
+        "width": 0.43,
+        "height": 0.18
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-28/2026-04-28-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Irán reta a Trump",
+      "story_type": "mundo",
+      "segment_type": "story",
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El tablero en Medio Oriente se le complica a Trump: Irán no cede, Yemen sigue golpeando y la Armada de Estados Unidos admite presión sobre sus reservas. La guerra no baja de intensidad; amenaza con estirarse.",
+      "page_numbers": [
+        9
+      ],
+      "key_facts": [
+        "Irán no se rinde",
+        "Yemen y Rusia aparecen en el contexto",
+        "EE.UU. bajo presión militar"
+      ],
+      "tone_notes": [
+        "enfático",
+        "internacional",
+        "alerta"
+      ],
+      "safety_notes": "Se resume el enfoque de la página sin afirmar escenarios no confirmados.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.15,
+        "width": 0.76,
+        "height": 0.62
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-28/2026-04-28-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Campaña por Día de la Madre mueve millones",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La campaña por el Día de la Madre no viene con flores solamente: pequeñas empresas esperan mover unos 3650 millones de soles. Moda, belleza y florerías afinan ofertas, porque el cariño también pasa por caja.",
+      "page_numbers": [
+        10
+      ],
+      "key_facts": [
+        "campaña por Día de la Madre",
+        "3650 millones de soles estimados",
+        "moda, belleza y florerías"
+      ],
+      "tone_notes": [
+        "ágil",
+        "económico",
+        "ligeramente irónico"
+      ],
+      "safety_notes": "Se toma la cifra presentada por la página y no se proyectan resultados adicionales.",
+      "cover_region": {
+        "x": 0.49,
+        "y": 0.82,
+        "width": 0.34,
+        "height": 0.15
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-28/2026-04-28-trome-frontpage-001/input/front-page.jpg",
+      "headline": "La U es un polvorín",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "En Universitario ya no hay margen para maquillajes: el club evalúa cortar refuerzos como Fotel, Silveira y Gaspar por bajo rendimiento. Cuando los fichajes no responden, la tabla también empieza a pasar factura.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "Universitario evalúa rescindir contratos",
+        "refuerzos cuestionados",
+        "bajo rendimiento"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "frontal",
+        "crítico"
+      ],
+      "safety_notes": "Se presenta como evaluación del club, no como decisión cerrada.",
+      "cover_region": {
+        "x": 0.8,
+        "y": 0.2,
+        "width": 0.2,
+        "height": 0.7
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

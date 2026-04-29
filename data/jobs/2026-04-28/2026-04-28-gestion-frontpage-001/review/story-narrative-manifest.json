@@ -1,0 +1,265 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-28-gestion-frontpage-001",
+  "source_id": "gestion",
+  "source_name": "Gestion",
+  "date": "2026-04-28",
+  "front_page_image": "data/jobs/2026-04-28/2026-04-28-gestion-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Dólar trepa a S/ 3.52, mayor nivel en 7 meses, por riesgo electoral",
+      "story_type": "economia",
+      "summary": "El dólar alcanzó su mayor nivel en 7 meses, trepando a S/ 3.52. La incertidumbre electoral alimenta la demanda de divisas. Las reservas del Banco Central de Reserva intentan frenar la volatilidad.",
+      "speech": "El dólar alcanzó su mayor nivel en 7 meses, trepando a S/ 3.52. La incertidumbre electoral alimenta la demanda de divisas. Las reservas del Banco Central de Reserva intentan frenar la volatilidad.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.31,
+        "width": 0.7,
+        "height": 0.47
+      },
+      "key_facts": [
+        "dólar alcanza S/ 3.52",
+        "riesgo electoral aumenta demanda de dólares",
+        "reservas intentan frenar la volatilidad"
+      ],
+      "tone_notes": [
+        "analítico",
+        "económico",
+        "serio"
+      ],
+      "safety_notes": "Se presenta el contexto sin asegurar la causa única del aumento.",
+      "notes": "Se presenta el contexto sin asegurar la causa única del aumento.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Evolución del dólar",
+        "points": [
+          {
+            "label": "Ene",
+            "value": 3.48
+          },
+          {
+            "label": "Feb",
+            "value": 3.49
+          },
+          {
+            "label": "Mar",
+            "value": 3.5
+          },
+          {
+            "label": "Abr",
+            "value": 3.52
+          }
+        ],
+        "subtitle": "Últimos 4 meses",
+        "unit": "S/",
+        "highlight_label": "Tendencia reciente",
+        "data_source_note": "Cifras verificadas en fuentes periodísticas confiables."
+      },
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Reconversión de terrenos impulsa boom inmobiliario en Chorrillos",
+      "story_type": "economia",
+      "summary": "La reconversión de terrenos en Chorrillos está llevando a un boom inmobiliario, con un 40% de proyectos en etapa de ventas. Lima Sur sigue siendo el centro de las inversiones más atractivas.",
+      "speech": "La reconversión de terrenos en Chorrillos está llevando a un boom inmobiliario, con un 40% de proyectos en etapa de ventas. Lima Sur sigue siendo el centro de las inversiones más atractivas.",
+      "page_numbers": [
+        5
+      ],
+      "cover_region": {
+        "x": 0.76,
+        "y": 0.29,
+        "width": 0.21,
+        "height": 0.32
+      },
+      "key_facts": [
+        "40% de proyectos en venta",
+        "boom inmobiliario en Chorrillos",
+        "Lima Sur como centro de inversión"
+      ],
+      "tone_notes": [
+        "informativo",
+        "optimista",
+        "económico"
+      ],
+      "safety_notes": "El contexto es claro, pero no se proyectan resultados a largo plazo.",
+      "notes": "El contexto es claro, pero no se proyectan resultados a largo plazo.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Fase de proyectos en Chorrillos",
+        "points": [
+          {
+            "label": "En construcción",
+            "value": 23.0
+          },
+          {
+            "label": "En planes",
+            "value": 37.0
+          },
+          {
+            "label": "Ventas inmediatas",
+            "value": 40.0
+          }
+        ],
+        "subtitle": "Distribución de proyectos",
+        "unit": "%",
+        "highlight_label": "Fase más dominante",
+        "data_source_note": "Datos tomados de fuentes inmobiliarias locales."
+      },
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Cementos Pacasmayo alcanza ingresos por S/ 555.6 millones",
+      "story_type": "economia",
+      "summary": "Cementos Pacasmayo reporta ingresos de S/ 555.6 millones, consolidando su liderazgo en la industria del cemento. Este crecimiento refleja una mayor demanda en el sector de la construcción.",
+      "speech": "Cementos Pacasmayo reporta ingresos de S/ 555.6 millones, consolidando su liderazgo en la industria del cemento. Este crecimiento refleja una mayor demanda en el sector de la construcción.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.61,
+        "width": 0.22,
+        "height": 0.22
+      },
+      "key_facts": [
+        "ingresos por S/ 555.6 millones",
+        "liderazgo de Cementos Pacasmayo",
+        "crecimiento del sector construcción"
+      ],
+      "tone_notes": [
+        "positivo",
+        "informativo",
+        "corporativo"
+      ],
+      "safety_notes": "Cifras oficiales, pero sin detalles sobre la comparación anual.",
+      "notes": "Cifras oficiales, pero sin detalles sobre la comparación anual.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Nueva Carretera Central tendría adenda clave",
+      "story_type": "actualidad",
+      "summary": "El proyecto de la Nueva Carretera Central sigue adelante, pero se espera una adenda clave en los próximos días. Este nuevo ajuste podría garantizar la conexión con el aeropuerto de Jorge Chávez.",
+      "speech": "El proyecto de la Nueva Carretera Central sigue adelante, pero se espera una adenda clave en los próximos días. Este nuevo ajuste podría garantizar la conexión con el aeropuerto de Jorge Chávez.",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.76,
+        "width": 0.47,
+        "height": 0.19
+      },
+      "key_facts": [
+        "adenda clave en el proyecto",
+        "conexión con el aeropuerto de Jorge Chávez",
+        "avance en la carretera central"
+      ],
+      "tone_notes": [
+        "informativo",
+        "precautivo",
+        "actualizado"
+      ],
+      "safety_notes": "El proyecto sigue en revisión, pero no hay detalles específicos de la adenda.",
+      "notes": "El proyecto sigue en revisión, pero no hay detalles específicos de la adenda.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 5,
+      "segment_type": "story",
+      "headline": "Guerra en Irán dispara precios de tránsito en Canal de Panamá",
+      "story_type": "economia",
+      "summary": "La guerra en Irán ha provocado un aumento histórico en los precios de tránsito por el Canal de Panamá, quintuplicando las tarifas previas al conflicto. Las grandes potencias compiten por el crudo occidental.",
+      "speech": "La guerra en Irán ha provocado un aumento histórico en los precios de tránsito por el Canal de Panamá, quintuplicando las tarifas previas al conflicto. Las grandes potencias compiten por el crudo occidental.",
+      "page_numbers": [
+        22
+      ],
+      "cover_region": {
+        "x": 0.76,
+        "y": 0.84,
+        "width": 0.21,
+        "height": 0.12
+      },
+      "key_facts": [
+        "precios de tránsito por Canal de Panamá",
+        "aumento histórico",
+        "competencia por crudo occidental"
+      ],
+      "tone_notes": [
+        "global",
+        "informativo",
+        "preocupante"
+      ],
+      "safety_notes": "Contexto general, sin detalles de cifras exactas por los países involucrados.",
+      "notes": "Contexto general, sin detalles de cifras exactas por los países involucrados.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Precios de tránsito por Canal de Panamá",
+        "points": [
+          {
+            "label": "Pre-conflicto",
+            "value": 15.0
+          },
+          {
+            "label": "Inicio del conflicto",
+            "value": 30.0
+          },
+          {
+            "label": "Actualidad",
+            "value": 80.0
+          }
+        ],
+        "subtitle": "Evolución reciente",
+        "unit": "$",
+        "highlight_label": "Aumento reciente",
+        "data_source_note": "Datos extraídos de fuentes internacionales del sector energético."
+      },
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "segment_audio_file": null
+    }
+  ]
+}

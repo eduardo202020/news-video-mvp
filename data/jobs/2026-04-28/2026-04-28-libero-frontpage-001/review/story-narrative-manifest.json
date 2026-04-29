@@ -1,0 +1,123 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-28-libero-frontpage-001",
+  "source_id": "libero",
+  "source_name": "Libero",
+  "date": "2026-04-28",
+  "front_page_image": "data/jobs/2026-04-28/2026-04-28-libero-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Cristal recibe a Junior por la Copa",
+      "story_type": "deportes",
+      "summary": "El partido se calienta: Cristal recibe a Junior por la Copa y las expectativas están por las nubes. Ambos equipos con sed de victoria, pero solo uno pasará a la siguiente fase. ¡La acción está garantizada!",
+      "speech": "El partido se calienta: Cristal recibe a Junior por la Copa y las expectativas están por las nubes. Ambos equipos con sed de victoria, pero solo uno pasará a la siguiente fase. ¡La acción está garantizada!",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.89,
+        "width": 0.25,
+        "height": 0.11
+      },
+      "key_facts": [
+        "Cristal vs Junior",
+        "Copa en juego",
+        "fase decisiva"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "emocionante",
+        "competitivo"
+      ],
+      "safety_notes": "No se afirman resultados hasta el desenlace del partido.",
+      "notes": "No se afirman resultados hasta el desenlace del partido.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Alianza festeja en la punta",
+      "story_type": "deportes",
+      "summary": "Alianza Lima festeja en lo más alto de la tabla. La goleada contra Los Chankas les asegura la punta, pero la competencia está apretada. Este triunfo puede ser solo el inicio de una lucha por el título.",
+      "speech": "Alianza Lima festeja en lo más alto de la tabla. La goleada contra Los Chankas les asegura la punta, pero la competencia está apretada. Este triunfo puede ser solo el inicio de una lucha por el título.",
+      "page_numbers": [
+        4,
+        5
+      ],
+      "cover_region": {
+        "x": 0.01,
+        "y": 0.07,
+        "width": 0.69,
+        "height": 0.8
+      },
+      "key_facts": [
+        "victoria de Alianza",
+        "goleada a Los Chankas",
+        "liderato en tabla"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "optimista",
+        "competitivo"
+      ],
+      "safety_notes": "Se confirma el impacto del resultado en la clasificación, pero no se proyecta el futuro.",
+      "notes": "Se confirma el impacto del resultado en la clasificación, pero no se proyecta el futuro.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Cremas buscan retorno de Bustos",
+      "story_type": "deportes",
+      "summary": "Universitario quiere recuperar a Bustos y su estilo de juego. La opción del regreso del técnico genera expectativas entre los hinchas, que esperan una mejora en la conducción del equipo.",
+      "speech": "Universitario quiere recuperar a Bustos y su estilo de juego. La opción del regreso del técnico genera expectativas entre los hinchas, que esperan una mejora en la conducción del equipo.",
+      "page_numbers": [
+        6,
+        7
+      ],
+      "cover_region": {
+        "x": 0.42,
+        "y": 0.88,
+        "width": 0.32,
+        "height": 0.12
+      },
+      "key_facts": [
+        "Bustos regresaría",
+        "Universitario en busca de renovación",
+        "expectativas altas"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "esperanzador",
+        "estratégico"
+      ],
+      "safety_notes": "Se menciona la especulación sobre su regreso sin confirmar detalles.",
+      "notes": "Se menciona la especulación sobre su regreso sin confirmar detalles.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    }
+  ]
+}

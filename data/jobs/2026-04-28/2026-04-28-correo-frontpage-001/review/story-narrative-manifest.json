@@ -1,0 +1,122 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-28-correo-frontpage-001",
+  "source_id": "correo",
+  "source_name": "Correo",
+  "date": "2026-04-28",
+  "front_page_image": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Juntos por el Perú busca desmarcarse de Antauro",
+      "story_type": "politica",
+      "summary": "Juntos por el Perú marca distancia con Antauro Humala. Con Roy Mendoza como vocero, recalcan que no hay acuerdo formal ni apoyo explícito. La estrategia busca claridad ante los electores.",
+      "speech": "Juntos por el Perú marca distancia con Antauro Humala. Con Roy Mendoza como vocero, recalcan que no hay acuerdo formal ni apoyo explícito. La estrategia busca claridad ante los electores.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.23,
+        "y": 0.14,
+        "width": 0.74,
+        "height": 0.82
+      },
+      "key_facts": [
+        "distanciamiento de Antauro",
+        "Juntos por el Perú",
+        "estrategia electoral"
+      ],
+      "tone_notes": [
+        "politico",
+        "analítico",
+        "formal"
+      ],
+      "safety_notes": "Sin acusaciones directas, solo declaraciones oficiales.",
+      "notes": "Sin acusaciones directas, solo declaraciones oficiales.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Extorsionadores amenazan colegios del Callao",
+      "story_type": "policial",
+      "summary": "Extorsionadores siguen sembrando miedo en los colegios del Callao. La policía ha emitido alertas, pero los afectados aún luchan por asegurar la seguridad de los estudiantes.",
+      "speech": "Extorsionadores siguen sembrando miedo en los colegios del Callao. La policía ha emitido alertas, pero los afectados aún luchan por asegurar la seguridad de los estudiantes.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.39,
+        "width": 0.18,
+        "height": 0.23
+      },
+      "key_facts": [
+        "extorsión en colegios",
+        "alerta policial",
+        "impacto en la comunidad educativa"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "informativo"
+      ],
+      "safety_notes": "Respetando los detalles verificados, sin especular.",
+      "notes": "Respetando los detalles verificados, sin especular.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Velarde destaca autonomía del BCR",
+      "story_type": "economia",
+      "summary": "El presidente del BCR, Julio Velarde, subraya que la autonomía del banco es clave para mantener la estabilidad económica. Recalca la independencia frente a presiones externas.",
+      "speech": "El presidente del BCR, Julio Velarde, subraya que la autonomía del banco es clave para mantener la estabilidad económica. Recalca la independencia frente a presiones externas.",
+      "page_numbers": [
+        12
+      ],
+      "cover_region": {
+        "x": 0.37,
+        "y": 0.03,
+        "width": 0.58,
+        "height": 0.1
+      },
+      "key_facts": [
+        "autonomía del BCR",
+        "julio velarde",
+        "estabilidad económica"
+      ],
+      "tone_notes": [
+        "tecnocrático",
+        "formal",
+        "informativo"
+      ],
+      "safety_notes": "Cita verificable, sin entrar en detalles no confirmados.",
+      "notes": "Cita verificable, sin entrar en detalles no confirmados.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    }
+  ]
+}

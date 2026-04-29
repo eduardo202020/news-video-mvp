@@ -1,0 +1,481 @@
+{
+  "job_id": "2026-04-28-correo-frontpage-001",
+  "source_id": "correo",
+  "date": "2026-04-28",
+  "source": {
+    "source_id": "correo",
+    "source_config_path": "automation/sources/diarios/correo.json",
+    "requested_date": "2026-04-28",
+    "issue_date": "2026-04-28",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042800000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026042800000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/correo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042800000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042800000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042800000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042800000000001001&page=7&scale=80",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042800000000001001&page=12&scale=80",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/input/pages/page-12.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026042800000000001001&page=16&scale=80",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      2,
+      3,
+      7,
+      12,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Juntos por el Peru busca desmarcarse de Antauro",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.23,
+          "y": 0.14,
+          "width": 0.74,
+          "height": 0.82
+        },
+        "page_number": 2,
+        "evidence_line": "Pags. 2 y 3 Tema del dia",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Juntos por el Peru busca desmarcarse de Antauro",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.23,
+          "y": 0.14,
+          "width": 0.74,
+          "height": 0.82
+        },
+        "page_number": 3,
+        "evidence_line": "Pags. 2 y 3 Tema del dia",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Velarde destaca autonomia del BCR",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.37,
+          "y": 0.03,
+          "width": 0.58,
+          "height": 0.1
+        },
+        "page_number": 12,
+        "evidence_line": "Pag. 12 Economia",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Extorsionadores amenazan colegios del Callao",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.39,
+          "width": 0.18,
+          "height": 0.23
+        },
+        "page_number": 7,
+        "evidence_line": "Pag. 7 Lima",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Chankas pierden por goleada ante ADT",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.65,
+          "width": 0.18,
+          "height": 0.29
+        },
+        "page_number": 16,
+        "evidence_line": "Pag. 16 Deportes",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Juntos por el Peru busca desmarcarse de Antauro",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.23,
+          "y": 0.14,
+          "width": 0.74,
+          "height": 0.82
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "Pags. 2 y 3 Tema del dia",
+        "evidence_lines": [
+          "Pags. 2 y 3 Tema del dia"
+        ],
+        "confidence": 0.98
+      },
+      {
+        "headline": "Extorsionadores amenazan colegios del Callao",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.39,
+          "width": 0.18,
+          "height": 0.23
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "Pag. 7 Lima",
+        "evidence_lines": [
+          "Pag. 7 Lima"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "headline": "Velarde destaca autonomia del BCR",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.37,
+          "y": 0.03,
+          "width": 0.58,
+          "height": 0.1
+        },
+        "page_numbers": [
+          12
+        ],
+        "evidence": "Pag. 12 Economia",
+        "evidence_lines": [
+          "Pag. 12 Economia"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "headline": "Chankas pierden por goleada ante ADT",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.65,
+          "width": 0.18,
+          "height": 0.29
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "Pag. 16 Deportes",
+        "evidence_lines": [
+          "Pag. 16 Deportes"
+        ],
+        "confidence": 0.92
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      3,
+      7,
+      12,
+      16
+    ]
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Juntos por el Perú busca desmarcarse de Antauro",
+        "story_type": "politica",
+        "summary": "Juntos por el Perú marca distancia con Antauro Humala. Con Roy Mendoza como vocero, recalcan que no hay acuerdo formal ni apoyo explícito. La estrategia busca claridad ante los electores.",
+        "speech": "Juntos por el Perú marca distancia con Antauro Humala. Con Roy Mendoza como vocero, recalcan que no hay acuerdo formal ni apoyo explícito. La estrategia busca claridad ante los electores.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "politico",
+          "analítico",
+          "formal"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.23,
+          "y": 0.14,
+          "width": 0.74,
+          "height": 0.82
+        },
+        "key_facts": [
+          "distanciamiento de Antauro",
+          "Juntos por el Perú",
+          "estrategia electoral"
+        ],
+        "key_facts_used": [
+          "distanciamiento de Antauro",
+          "Juntos por el Perú",
+          "estrategia electoral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Sin acusaciones directas, solo declaraciones oficiales.",
+        "notes": "Sin acusaciones directas, solo declaraciones oficiales.",
+        "support_visual": null
+      },
+      {
+        "headline": "Extorsionadores amenazan colegios del Callao",
+        "story_type": "policial",
+        "summary": "Extorsionadores siguen sembrando miedo en los colegios del Callao. La policía ha emitido alertas, pero los afectados aún luchan por asegurar la seguridad de los estudiantes.",
+        "speech": "Extorsionadores siguen sembrando miedo en los colegios del Callao. La policía ha emitido alertas, pero los afectados aún luchan por asegurar la seguridad de los estudiantes.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "directo",
+          "tenso",
+          "informativo"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.39,
+          "width": 0.18,
+          "height": 0.23
+        },
+        "key_facts": [
+          "extorsión en colegios",
+          "alerta policial",
+          "impacto en la comunidad educativa"
+        ],
+        "key_facts_used": [
+          "extorsión en colegios",
+          "alerta policial",
+          "impacto en la comunidad educativa"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Respetando los detalles verificados, sin especular.",
+        "notes": "Respetando los detalles verificados, sin especular.",
+        "support_visual": null
+      },
+      {
+        "headline": "Velarde destaca autonomía del BCR",
+        "story_type": "economia",
+        "summary": "El presidente del BCR, Julio Velarde, subraya que la autonomía del banco es clave para mantener la estabilidad económica. Recalca la independencia frente a presiones externas.",
+        "speech": "El presidente del BCR, Julio Velarde, subraya que la autonomía del banco es clave para mantener la estabilidad económica. Recalca la independencia frente a presiones externas.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "tecnocrático",
+          "formal",
+          "informativo"
+        ],
+        "page_numbers": [
+          12
+        ],
+        "cover_region": {
+          "x": 0.37,
+          "y": 0.03,
+          "width": 0.58,
+          "height": 0.1
+        },
+        "key_facts": [
+          "autonomía del BCR",
+          "julio velarde",
+          "estabilidad económica"
+        ],
+        "key_facts_used": [
+          "autonomía del BCR",
+          "julio velarde",
+          "estabilidad económica"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Cita verificable, sin entrar en detalles no confirmados.",
+        "notes": "Cita verificable, sin entrar en detalles no confirmados.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-28/2026-04-28-correo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Juntos por el Perú marca distancia con Antauro Humala. Con Roy Mendoza como vocero, recalcan que no hay acuerdo formal ni apoyo explícito. La estrategia busca claridad ante los electores.\n\nExtorsionadores siguen sembrando miedo en los colegios del Callao. La policía ha emitido alertas, pero los afectados aún luchan por asegurar la seguridad de los estudiantes.\n\nEl presidente del BCR, Julio Velarde, subraya que la autonomía del banco es clave para mantener la estabilidad económica. Recalca la independencia frente a presiones externas.",
+    "approved_text": "Juntos por el Perú marca distancia con Antauro Humala. Con Roy Mendoza como vocero, recalcan que no hay acuerdo formal ni apoyo explícito. La estrategia busca claridad ante los electores.\n\nExtorsionadores siguen sembrando miedo en los colegios del Callao. La policía ha emitido alertas, pero los afectados aún luchan por asegurar la seguridad de los estudiantes.\n\nEl presidente del BCR, Julio Velarde, subraya que la autonomía del banco es clave para mantener la estabilidad económica. Recalca la independencia frente a presiones externas.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-28T09:27:47",
+    "updated_at": "2026-04-28T09:50:14",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:27:47",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:28:11",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:28:11",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:01",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:01",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:27",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:37:28",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:50:14",
+        "details": "Se importaron 3 speech(es) editoriales."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 28 de abril, abrimos el recorrido por las portadas con política, economía, seguridad, mundo y deporte. En una fecha ligada al Callao por la partida de la Kon Tiki, vamos diario por diario con lo central y sin rodeos.",
+    "date_reference": "Adonde.com efemerides abril28: en 1947 partio del Callao la balsa Kon Tiki hacia la Polinesia.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta una efemeride peruana vinculada al Callao con una jornada de portadas marcadas por politica, economia y actualidad nacional.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-28T09:35:27"
+  }
+}

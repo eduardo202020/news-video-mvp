@@ -1,0 +1,118 @@
+{
+  "job_id": "2026-04-29-libero-frontpage-001",
+  "source_id": "libero",
+  "date": "2026-04-29",
+  "source": {
+    "source_id": "libero",
+    "source_config_path": "automation/sources/diarios/libero.json",
+    "requested_date": "2026-04-29",
+    "issue_date": "2026-04-29",
+    "publication_status": "available",
+    "discovery_type": "direct_image_url",
+    "front_page_url": "https://img.kiosko.net/2026/04/29/pe/pe_libero.750.jpg",
+    "discovered_pages_count": 1,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scraped",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://img.kiosko.net/2026/04/29/pe/pe_libero.750.jpg",
+    "source_url": "https://img.kiosko.net/2026/04/29/pe/pe_libero.750.jpg",
+    "source_config": "automation/sources/diarios/libero.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://img.kiosko.net/2026/04/29/pe/pe_libero.750.jpg",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": null,
+    "status": "not_started",
+    "selected_page_numbers": [],
+    "candidates": [],
+    "stories": [],
+    "notes": ""
+  },
+  "story_narrative": {
+    "provider": null,
+    "status": "not_started",
+    "source": "supporting_pages_manual",
+    "stories": [],
+    "manifest_path": null,
+    "notes": ""
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "",
+    "approved_text": "",
+    "review_notes": ""
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-29T17:42:17",
+    "updated_at": "2026-04-29T17:42:18",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-29T17:42:17",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-29T17:42:18",
+        "details": "Fuente analizada desde HTML; portada descubierta y 0 paginas de apoyo detectadas."
+      }
+    ]
+  }
+}

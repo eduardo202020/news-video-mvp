@@ -1,0 +1,157 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-28-trome-frontpage-001",
+  "source_id": "trome",
+  "source_name": "Trome",
+  "date": "2026-04-28",
+  "front_page_image": "data/jobs/2026-04-28/2026-04-28-trome-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Policía mata a raquetero tras violento asalto",
+      "story_type": "policial",
+      "summary": "Un violento asalto en Chorrillos terminó con un presunto raquetero muerto y otro intervenido. Según la versión policial, el agente disparó al ser encañonado; la investigación deberá cerrar los puntos pendientes.",
+      "speech": "Un violento asalto en Chorrillos terminó con un presunto raquetero muerto y otro intervenido. Según la versión policial, el agente disparó al ser encañonado; la investigación deberá cerrar los puntos pendientes.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.79,
+        "width": 0.43,
+        "height": 0.18
+      },
+      "key_facts": [
+        "asalto en Chorrillos",
+        "agente disparó según versión policial",
+        "un muerto y un intervenido"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "prudente"
+      ],
+      "safety_notes": "Se usa lenguaje prudente y se atribuye el hecho a la versión policial disponible.",
+      "notes": "Se usa lenguaje prudente y se atribuye el hecho a la versión policial disponible.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Irán reta a Trump",
+      "story_type": "mundo",
+      "summary": "El tablero en Medio Oriente se le complica a Trump: Irán no cede, Yemen sigue golpeando y la Armada de Estados Unidos admite presión sobre sus reservas. La guerra no baja de intensidad; amenaza con estirarse.",
+      "speech": "El tablero en Medio Oriente se le complica a Trump: Irán no cede, Yemen sigue golpeando y la Armada de Estados Unidos admite presión sobre sus reservas. La guerra no baja de intensidad; amenaza con estirarse.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.15,
+        "width": 0.76,
+        "height": 0.62
+      },
+      "key_facts": [
+        "Irán no se rinde",
+        "Yemen y Rusia aparecen en el contexto",
+        "EE.UU. bajo presión militar"
+      ],
+      "tone_notes": [
+        "enfático",
+        "internacional",
+        "alerta"
+      ],
+      "safety_notes": "Se resume el enfoque de la página sin afirmar escenarios no confirmados.",
+      "notes": "Se resume el enfoque de la página sin afirmar escenarios no confirmados.",
+      "support_visual": null,
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Campaña por Día de la Madre mueve millones",
+      "story_type": "economia",
+      "summary": "La campaña por el Día de la Madre no viene con flores solamente: pequeñas empresas esperan mover unos 3650 millones de soles. Moda, belleza y florerías afinan ofertas, porque el cariño también pasa por caja.",
+      "speech": "La campaña por el Día de la Madre no viene con flores solamente: pequeñas empresas esperan mover unos 3650 millones de soles. Moda, belleza y florerías afinan ofertas, porque el cariño también pasa por caja.",
+      "page_numbers": [
+        10
+      ],
+      "cover_region": {
+        "x": 0.49,
+        "y": 0.82,
+        "width": 0.34,
+        "height": 0.15
+      },
+      "key_facts": [
+        "campaña por Día de la Madre",
+        "3650 millones de soles estimados",
+        "moda, belleza y florerías"
+      ],
+      "tone_notes": [
+        "ágil",
+        "económico",
+        "ligeramente irónico"
+      ],
+      "safety_notes": "Se toma la cifra presentada por la página y no se proyectan resultados adicionales.",
+      "notes": "Se toma la cifra presentada por la página y no se proyectan resultados adicionales.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "La U es un polvorín",
+      "story_type": "deportes",
+      "summary": "En Universitario ya no hay margen para maquillajes: el club evalúa cortar refuerzos como Fotel, Silveira y Gaspar por bajo rendimiento. Cuando los fichajes no responden, la tabla también empieza a pasar factura.",
+      "speech": "En Universitario ya no hay margen para maquillajes: el club evalúa cortar refuerzos como Fotel, Silveira y Gaspar por bajo rendimiento. Cuando los fichajes no responden, la tabla también empieza a pasar factura.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.8,
+        "y": 0.2,
+        "width": 0.2,
+        "height": 0.7
+      },
+      "key_facts": [
+        "Universitario evalúa rescindir contratos",
+        "refuerzos cuestionados",
+        "bajo rendimiento"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "frontal",
+        "crítico"
+      ],
+      "safety_notes": "Se presenta como evaluación del club, no como decisión cerrada.",
+      "notes": "Se presenta como evaluación del club, no como decisión cerrada.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    }
+  ]
+}

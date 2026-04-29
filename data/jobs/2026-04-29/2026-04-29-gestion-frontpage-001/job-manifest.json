@@ -1,0 +1,145 @@
+{
+  "job_id": "2026-04-29-gestion-frontpage-001",
+  "source_id": "gestion",
+  "date": "2026-04-29",
+  "source": {
+    "source_id": "gestion",
+    "source_config_path": "automation/sources/diarios/gestion.json",
+    "requested_date": "2026-04-29",
+    "issue_date": "2026-04-29",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag62026042900000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scraped",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag62026042900000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/gestion.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042900000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042900000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042900000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eag62026042900000000001001&page=4&scale=80",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/pages/page-04.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": null,
+    "status": "not_started",
+    "selected_page_numbers": [],
+    "candidates": [],
+    "stories": [],
+    "notes": ""
+  },
+  "story_narrative": {
+    "provider": null,
+    "status": "not_started",
+    "source": "supporting_pages_manual",
+    "stories": [],
+    "manifest_path": null,
+    "notes": ""
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "",
+    "approved_text": "",
+    "review_notes": ""
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-29T17:41:51",
+    "updated_at": "2026-04-29T17:42:13",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-29T17:41:51",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-29T17:42:13",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-29T17:42:13",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      }
+    ]
+  }
+}

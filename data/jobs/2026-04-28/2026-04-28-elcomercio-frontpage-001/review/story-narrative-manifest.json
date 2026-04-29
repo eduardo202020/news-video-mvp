@@ -1,0 +1,157 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-28-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "source_name": "Elcomercio",
+  "date": "2026-04-28",
+  "front_page_image": "data/jobs/2026-04-28/2026-04-28-elcomercio-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "El BCR no acepta presiones para decidir",
+      "story_type": "economia",
+      "summary": "Julio Velarde reafirma la independencia del Banco Central de Reserva, asegurando que no cede a presiones externas. En tiempos de incertidumbre económica, la autonomía es clave para la estabilidad financiera del país.",
+      "speech": "Julio Velarde reafirma la independencia del Banco Central de Reserva, asegurando que no cede a presiones externas. En tiempos de incertidumbre económica, la autonomía es clave para la estabilidad financiera del país.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.25,
+        "width": 0.88,
+        "height": 0.37
+      },
+      "key_facts": [
+        "independencia del BCR",
+        "Velarde reafirma autonomía",
+        "presiones externas no influyen"
+      ],
+      "tone_notes": [
+        "serio",
+        "tecnico",
+        "elegante"
+      ],
+      "safety_notes": "Declaraciones del presidente del BCR sobre la situación financiera, sin mención de medidas inmediatas.",
+      "notes": "Declaraciones del presidente del BCR sobre la situación financiera, sin mención de medidas inmediatas.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Antauro Humala reafirma coalición con Roberto Sánchez",
+      "story_type": "politica",
+      "summary": "Antauro Humala confirma su coalición con Roberto Sánchez, un movimiento clave en la carrera electoral. El pacto se fortalece en medio de un panorama político fragmentado.",
+      "speech": "Antauro Humala confirma su coalición con Roberto Sánchez, un movimiento clave en la carrera electoral. El pacto se fortalece en medio de un panorama político fragmentado.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.65,
+        "width": 0.9,
+        "height": 0.18
+      },
+      "key_facts": [
+        "coalición Humala-Sánchez",
+        "movimiento clave",
+        "panorama político fragmentado"
+      ],
+      "tone_notes": [
+        "político",
+        "resolutivo",
+        "decisivo"
+      ],
+      "safety_notes": "Se afirma el pacto político, pero no se detallan las implicaciones futuras.",
+      "notes": "Se afirma el pacto político, pero no se detallan las implicaciones futuras.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "ProInversión pide no cambiar gerentes en Petro-Perú",
+      "story_type": "economia",
+      "summary": "ProInversión insta a mantener la estabilidad en la gestión de Petro-Perú, pidiendo no realizar cambios en la gerencia. Este llamado busca evitar la inestabilidad en la empresa estatal clave para la economía peruana.",
+      "speech": "ProInversión insta a mantener la estabilidad en la gestión de Petro-Perú, pidiendo no realizar cambios en la gerencia. Este llamado busca evitar la inestabilidad en la empresa estatal clave para la economía peruana.",
+      "page_numbers": [
+        8
+      ],
+      "cover_region": {
+        "x": 0.72,
+        "y": 0.82,
+        "width": 0.27,
+        "height": 0.16
+      },
+      "key_facts": [
+        "ProInversión pide estabilidad",
+        "gerentes de Petro-Perú",
+        "inestabilidad en la empresa estatal"
+      ],
+      "tone_notes": [
+        "técnico",
+        "economía",
+        "precavido"
+      ],
+      "safety_notes": "Se presenta el contexto institucional, sin mencionar fechas exactas de cambios.",
+      "notes": "Se presenta el contexto institucional, sin mencionar fechas exactas de cambios.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "MML aun no habilita sistema digital de brevetes",
+      "story_type": "actualidad",
+      "summary": "La Municipalidad de Lima sigue sin habilitar el sistema digital para trámites de brevetes, lo que genera demoras y malestar entre los ciudadanos. Un problema que afecta a miles de conductores cada día.",
+      "speech": "La Municipalidad de Lima sigue sin habilitar el sistema digital para trámites de brevetes, lo que genera demoras y malestar entre los ciudadanos. Un problema que afecta a miles de conductores cada día.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.81,
+        "width": 0.27,
+        "height": 0.16
+      },
+      "key_facts": [
+        "MML no habilita sistema digital",
+        "demoras en trámites",
+        "afectación a conductores"
+      ],
+      "tone_notes": [
+        "informativo",
+        "crítico",
+        "urgente"
+      ],
+      "safety_notes": "Se presenta el hecho sin detalles adicionales de los responsables.",
+      "notes": "Se presenta el hecho sin detalles adicionales de los responsables.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    }
+  ]
+}

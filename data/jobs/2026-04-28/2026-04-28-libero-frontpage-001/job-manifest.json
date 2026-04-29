@@ -1,0 +1,447 @@
+{
+  "job_id": "2026-04-28-libero-frontpage-001",
+  "source_id": "libero",
+  "date": "2026-04-28",
+  "source": {
+    "source_id": "libero",
+    "source_config_path": "automation/sources/diarios/libero.json",
+    "requested_date": "2026-04-28",
+    "issue_date": "2026-04-28",
+    "publication_status": "available",
+    "discovery_type": "direct_image_url",
+    "front_page_url": "https://img.kiosko.net/2026/04/28/pe/pe_libero.750.jpg",
+    "discovered_pages_count": 1,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-28/2026-04-28-libero-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://img.kiosko.net/2026/04/28/pe/pe_libero.750.jpg",
+    "source_url": "https://img.kiosko.net/2026/04/28/pe/pe_libero.750.jpg",
+    "source_config": "automation/sources/diarios/libero.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://img.kiosko.net/2026/04/28/pe/pe_libero.750.jpg",
+        "local_path": "data/jobs/2026-04-28/2026-04-28-libero-frontpage-001/input/front-page.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "candidates": [
+      {
+        "headline": "Alianza festeja en la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.07,
+          "width": 0.69,
+          "height": 0.77
+        },
+        "page_number": 4,
+        "evidence_line": "Pags. 4-5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Alianza festeja en la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.07,
+          "width": 0.69,
+          "height": 0.77
+        },
+        "page_number": 5,
+        "evidence_line": "Pags. 4-5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Cristal recibe a Junior por la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.83,
+          "width": 0.25,
+          "height": 0.12
+        },
+        "page_number": 3,
+        "evidence_line": "Pag. 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Cremas buscan retorno de Bustos",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.55,
+          "y": 0.83,
+          "width": 0.28,
+          "height": 0.12
+        },
+        "page_number": 6,
+        "evidence_line": "Pags. 6-7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Cremas buscan retorno de Bustos",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.55,
+          "y": 0.83,
+          "width": 0.28,
+          "height": 0.12
+        },
+        "page_number": 7,
+        "evidence_line": "Pags. 6-7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Cristal recibe a Junior por la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.89,
+          "width": 0.25,
+          "height": 0.11
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "Pag. 3",
+        "evidence_lines": [
+          "Pag. 3"
+        ],
+        "confidence": 0.94
+      },
+      {
+        "headline": "Alianza festeja en la punta",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.07,
+          "width": 0.69,
+          "height": 0.8
+        },
+        "page_numbers": [
+          4,
+          5
+        ],
+        "evidence": "Pags. 4-5",
+        "evidence_lines": [
+          "Pags. 4-5"
+        ],
+        "confidence": 0.98
+      },
+      {
+        "headline": "Cremas buscan retorno de Bustos",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.42,
+          "y": 0.88,
+          "width": 0.32,
+          "height": 0.12
+        },
+        "page_numbers": [
+          6,
+          7
+        ],
+        "evidence": "Pags. 6-7",
+        "evidence_lines": [
+          "Pags. 6-7"
+        ],
+        "confidence": 0.94
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada."
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Cristal recibe a Junior por la Copa",
+        "story_type": "deportes",
+        "summary": "El partido se calienta: Cristal recibe a Junior por la Copa y las expectativas están por las nubes. Ambos equipos con sed de victoria, pero solo uno pasará a la siguiente fase. ¡La acción está garantizada!",
+        "speech": "El partido se calienta: Cristal recibe a Junior por la Copa y las expectativas están por las nubes. Ambos equipos con sed de victoria, pero solo uno pasará a la siguiente fase. ¡La acción está garantizada!",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "emocionante",
+          "competitivo"
+        ],
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.89,
+          "width": 0.25,
+          "height": 0.11
+        },
+        "key_facts": [
+          "Cristal vs Junior",
+          "Copa en juego",
+          "fase decisiva"
+        ],
+        "key_facts_used": [
+          "Cristal vs Junior",
+          "Copa en juego",
+          "fase decisiva"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se afirman resultados hasta el desenlace del partido.",
+        "notes": "No se afirman resultados hasta el desenlace del partido.",
+        "support_visual": null
+      },
+      {
+        "headline": "Alianza festeja en la punta",
+        "story_type": "deportes",
+        "summary": "Alianza Lima festeja en lo más alto de la tabla. La goleada contra Los Chankas les asegura la punta, pero la competencia está apretada. Este triunfo puede ser solo el inicio de una lucha por el título.",
+        "speech": "Alianza Lima festeja en lo más alto de la tabla. La goleada contra Los Chankas les asegura la punta, pero la competencia está apretada. Este triunfo puede ser solo el inicio de una lucha por el título.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "optimista",
+          "competitivo"
+        ],
+        "page_numbers": [
+          4,
+          5
+        ],
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.07,
+          "width": 0.69,
+          "height": 0.8
+        },
+        "key_facts": [
+          "victoria de Alianza",
+          "goleada a Los Chankas",
+          "liderato en tabla"
+        ],
+        "key_facts_used": [
+          "victoria de Alianza",
+          "goleada a Los Chankas",
+          "liderato en tabla"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se confirma el impacto del resultado en la clasificación, pero no se proyecta el futuro.",
+        "notes": "Se confirma el impacto del resultado en la clasificación, pero no se proyecta el futuro.",
+        "support_visual": null
+      },
+      {
+        "headline": "Cremas buscan retorno de Bustos",
+        "story_type": "deportes",
+        "summary": "Universitario quiere recuperar a Bustos y su estilo de juego. La opción del regreso del técnico genera expectativas entre los hinchas, que esperan una mejora en la conducción del equipo.",
+        "speech": "Universitario quiere recuperar a Bustos y su estilo de juego. La opción del regreso del técnico genera expectativas entre los hinchas, que esperan una mejora en la conducción del equipo.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "esperanzador",
+          "estratégico"
+        ],
+        "page_numbers": [
+          6,
+          7
+        ],
+        "cover_region": {
+          "x": 0.42,
+          "y": 0.88,
+          "width": 0.32,
+          "height": 0.12
+        },
+        "key_facts": [
+          "Bustos regresaría",
+          "Universitario en busca de renovación",
+          "expectativas altas"
+        ],
+        "key_facts_used": [
+          "Bustos regresaría",
+          "Universitario en busca de renovación",
+          "expectativas altas"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se menciona la especulación sobre su regreso sin confirmar detalles.",
+        "notes": "Se menciona la especulación sobre su regreso sin confirmar detalles.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-28/2026-04-28-libero-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El partido se calienta: Cristal recibe a Junior por la Copa y las expectativas están por las nubes. Ambos equipos con sed de victoria, pero solo uno pasará a la siguiente fase. ¡La acción está garantizada!\n\nAlianza Lima festeja en lo más alto de la tabla. La goleada contra Los Chankas les asegura la punta, pero la competencia está apretada. Este triunfo puede ser solo el inicio de una lucha por el título.\n\nUniversitario quiere recuperar a Bustos y su estilo de juego. La opción del regreso del técnico genera expectativas entre los hinchas, que esperan una mejora en la conducción del equipo.",
+    "approved_text": "El partido se calienta: Cristal recibe a Junior por la Copa y las expectativas están por las nubes. Ambos equipos con sed de victoria, pero solo uno pasará a la siguiente fase. ¡La acción está garantizada!\n\nAlianza Lima festeja en lo más alto de la tabla. La goleada contra Los Chankas les asegura la punta, pero la competencia está apretada. Este triunfo puede ser solo el inicio de una lucha por el título.\n\nUniversitario quiere recuperar a Bustos y su estilo de juego. La opción del regreso del técnico genera expectativas entre los hinchas, que esperan una mejora en la conducción del equipo.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-04-28/2026-04-28-libero-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-28-libero-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-28T09:28:55",
+    "updated_at": "2026-04-28T09:53:45",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:28:55",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:28:56",
+        "details": "Fuente analizada desde HTML; portada descubierta y 0 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:01",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:01",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:27",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:35:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:44:21",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-28T09:53:05",
+        "details": "Enfoque manual actualizado para historia 1: Cristal recibe a Junior por la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:53:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-28T09:53:20",
+        "details": "Enfoque manual actualizado para historia 2: Alianza festeja en la punta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:53:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-28T09:53:45",
+        "details": "Enfoque manual actualizado para historia 3: Cremas buscan retorno de Bustos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-28T09:53:45",
+        "details": "Story manifest generado desde job manifest."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 28 de abril, abrimos el recorrido por las portadas con política, economía, seguridad, mundo y deporte. En una fecha ligada al Callao por la partida de la Kon Tiki, vamos diario por diario con lo central y sin rodeos.",
+    "date_reference": "Adonde.com efemerides abril28: en 1947 partio del Callao la balsa Kon Tiki hacia la Polinesia.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta una efemeride peruana vinculada al Callao con una jornada de portadas marcadas por politica, economia y actualidad nacional.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-28T09:35:27"
+  }
+}
