@@ -34,7 +34,6 @@ from .voice_generation import generate_voice_track, list_voicebox_profiles, tran
 
 NARRATOR_PROFILE_TO_VOICE_PROFILE = {
     "jaime_bayly": "jaime_bayly",
-    "ted": "ted",
     "reportera_magaly": "reportera_magaly",
     "reportero_panorama": "reportero_panorama",
     "reportero_magaly": "reportero_magaly",

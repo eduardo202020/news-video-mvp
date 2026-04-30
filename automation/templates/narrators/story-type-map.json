@@ -18,12 +18,10 @@
     ],
     "politica": [
       "beto_ortiz",
-      "jaime_bayly",
-      "ted"
+      "jaime_bayly"
     ],
     "economia": [
-      "jaime_bayly",
-      "ted"
+      "jaime_bayly"
     ],
     "deportes": [
       "mr_peet",
@@ -64,8 +62,7 @@
     "politica": {
       "narrator_profile_id": "beto_ortiz",
       "alternative_narrator_profile_ids": [
-        "jaime_bayly",
-        "ted"
+        "jaime_bayly"
       ],
       "role": "analista_politica",
       "tone_notes": [
@@ -110,9 +107,7 @@
     },
     "economia": {
       "narrator_profile_id": "jaime_bayly",
-      "alternative_narrator_profile_ids": [
-        "ted"
-      ],
+      "alternative_narrator_profile_ids": [],
       "role": "analista_economia",
       "tone_notes": [
         "didactico",

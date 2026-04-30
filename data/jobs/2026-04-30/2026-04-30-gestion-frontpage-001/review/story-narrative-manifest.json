@@ -155,11 +155,11 @@
       "safety_notes": "No se ha confirmado aún la cifra exacta de la inversión, pero es parte de una estrategia de expansión ya anunciada.",
       "notes": "No se ha confirmado aún la cifra exacta de la inversión, pero es parte de una estrategia de expansión ya anunciada.",
       "support_visual": null,
-      "narrator_profile_id": "ted",
+      "narrator_profile_id": "jaime_bayly",
       "narrator_role": "analista_economia",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "ted",
-      "narrator_name": "Ted",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
       "segment_audio_file": null
     },
     {
@@ -245,11 +245,11 @@
       "safety_notes": "La información proviene de estimaciones del Consejo Fiscal, no confirmadas por cifras oficiales aún.",
       "notes": "La información proviene de estimaciones del Consejo Fiscal, no confirmadas por cifras oficiales aún.",
       "support_visual": null,
-      "narrator_profile_id": "ted",
+      "narrator_profile_id": "jaime_bayly",
       "narrator_role": "analista_economia",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "ted",
-      "narrator_name": "Ted",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
       "segment_audio_file": null
     },
     {
