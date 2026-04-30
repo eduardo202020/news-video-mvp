@@ -56,10 +56,10 @@
         9
       ],
       "cover_region": {
-        "x": 0.25,
-        "y": 0.22,
-        "width": 0.73,
-        "height": 0.67
+        "x": 0.27,
+        "y": 0.24,
+        "width": 0.71,
+        "height": 0.6
       },
       "key_facts": [
         "caída del líder de narcotraficantes",
@@ -136,8 +136,8 @@
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
       "segment_audio_file": null
     },
     {
@@ -151,10 +151,10 @@
         8
       ],
       "cover_region": {
-        "x": 0.11,
-        "y": 0.89,
-        "width": 0.31,
-        "height": 0.1
+        "x": 0.0,
+        "y": 0.86,
+        "width": 0.5,
+        "height": 0.12
       },
       "key_facts": [
         "la ‘U’ debe ganar",
@@ -169,11 +169,11 @@
       "safety_notes": "Se enfoca en la reacción del equipo ante la salida de Barco y el compromiso por el próximo encuentro.",
       "notes": "Se enfoca en la reacción del equipo ante la salida de Barco y el compromiso por el próximo encuentro.",
       "support_visual": null,
-      "narrator_profile_id": "mr_peet",
+      "narrator_profile_id": "gonzalo_nunez",
       "narrator_role": "reportero_deportivo",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
       "segment_audio_file": null
     }
   ]

@@ -21,9 +21,9 @@
         3
       ],
       "cover_region": {
-        "x": 0.24,
-        "y": 0.84,
-        "width": 0.25,
+        "x": 0.05,
+        "y": 0.85,
+        "width": 0.55,
         "height": 0.13
       },
       "key_facts": [
@@ -54,13 +54,14 @@
       "summary": "El turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.",
       "speech": "El turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.",
       "page_numbers": [
-        4
+        2,
+        3
       ],
       "cover_region": {
-        "x": 0.09,
-        "y": 0.0,
-        "width": 0.32,
-        "height": 0.08
+        "x": 0.05,
+        "y": 0.85,
+        "width": 0.55,
+        "height": 0.13
       },
       "key_facts": [
         "promoción de nuevos atractivos turísticos",
@@ -93,10 +94,10 @@
         5
       ],
       "cover_region": {
-        "x": 0.78,
-        "y": 0.29,
+        "x": 0.77,
+        "y": 0.32,
         "width": 0.21,
-        "height": 0.23
+        "height": 0.27
       },
       "key_facts": [
         "más de 60% podría cambiar de marca",
@@ -151,10 +152,10 @@
         6
       ],
       "cover_region": {
-        "x": 0.78,
-        "y": 0.56,
+        "x": 0.77,
+        "y": 0.63,
         "width": 0.21,
-        "height": 0.23
+        "height": 0.27
       },
       "key_facts": [
         "ingreso de Modasa a Canadá",

@@ -42,14 +42,9 @@ NARRATOR_PROFILE_TO_VOICE_PROFILE = {
     "narrador_dbz": "narrador_dbz",
     "skipper": "skipper",
     "ironman": "ironman",
-    "rene_gastelumendi": "rene_gastelumendi",
-    "mavila_huertas": "mavila_huertas",
     "beto_ortiz": "beto_ortiz",
-    "magaly_medina": "magaly_medina",
-    "rodrigo_gonzalez": "rodrigo_gonzalez",
+    "mr_peet": "mr_peet",
     "gonzalo_nunez": "gonzalo_nunez",
-    "eddie_fleischman": "eddie_fleischman",
-    "julio_velarde": "julio_velarde",
 }
 DEFAULT_STORY_TYPE_NARRATOR_MAP_PATH = Path("automation/templates/narrators/story-type-map.json")
 
@@ -192,6 +187,37 @@ def _get_story_type_narrator_rotation_candidates(*, story_type: object, project_
 
     fallback = _slug_identifier(mapping.get("default_narrator_profile_id") or "rene_gastelumendi")
     return [fallback] if fallback else ["rene_gastelumendi"]
+
+
+def _apply_story_type_narrator_rotation(
+    *,
+    stories: list[dict[str, object]],
+    story_type: object,
+    project_dir: Path,
+) -> list[dict[str, object]]:
+    normalized_story_type = _normalize_story_type(story_type)
+    candidates = _get_story_type_narrator_rotation_candidates(
+        story_type=normalized_story_type,
+        project_dir=project_dir,
+    )
+    if len(candidates) <= 1:
+        return stories
+
+    rotated: list[dict[str, object]] = []
+    cursor = 0
+    for story in stories:
+        if _normalize_story_type(story.get("story_type") or "") != normalized_story_type:
+            rotated.append(story)
+            continue
+        narrator_id = candidates[cursor % len(candidates)]
+        cursor += 1
+        rotated.append(
+            {
+                **story,
+                "narrator_profile_id": narrator_id,
+            }
+        )
+    return rotated
 
 
 def _resolve_voice_profile_for_narrator(
@@ -1656,7 +1682,11 @@ def _merge_story_narrative_with_cover_context(
                 "support_visual": _normalize_support_visual(item.get("support_visual") or item.get("supportVisual")),
             }
         )
-    return merged
+    return _apply_story_type_narrator_rotation(
+        stories=merged,
+        story_type="deportes",
+        project_dir=project_dir,
+    )
 
 
 def _build_script_from_story_speeches(stories: list[dict[str, object]]) -> str:
@@ -1710,7 +1740,11 @@ def _enrich_job_story_narrative_with_cover_context(job: dict[str, object]) -> li
                 "support_visual": _normalize_support_visual(story.get("support_visual") or story.get("supportVisual")),
             }
         )
-    return enriched
+    return _apply_story_type_narrator_rotation(
+        stories=enriched,
+        story_type="deportes",
+        project_dir=project_dir,
+    )
 
 
 def _format_spanish_date(value: str) -> str:

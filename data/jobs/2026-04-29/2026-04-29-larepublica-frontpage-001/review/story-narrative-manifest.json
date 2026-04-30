@@ -21,10 +21,10 @@
         3
       ],
       "cover_region": {
-        "x": 0.06,
-        "y": 0.22,
-        "width": 0.58,
-        "height": 0.51
+        "x": 0.02,
+        "y": 0.26,
+        "width": 0.68,
+        "height": 0.49
       },
       "key_facts": [
         "Sánchez 32% y Keiko 31% a nivel nacional",
@@ -84,9 +84,9 @@
       ],
       "cover_region": {
         "x": 0.7,
-        "y": 0.5,
+        "y": 0.48,
         "width": 0.28,
-        "height": 0.25
+        "height": 0.17
       },
       "key_facts": [
         "jefa de observadores UE",
@@ -119,10 +119,10 @@
         10
       ],
       "cover_region": {
-        "x": 0.69,
-        "y": 0.57,
+        "x": 0.7,
+        "y": 0.69,
         "width": 0.28,
-        "height": 0.12
+        "height": 0.1
       },
       "key_facts": [
         "banca privada dispuesta a prestar hasta US$2.000 millones",
@@ -178,10 +178,10 @@
         13
       ],
       "cover_region": {
-        "x": 0.68,
-        "y": 0.19,
-        "width": 0.3,
-        "height": 0.18
+        "x": 0.7,
+        "y": 0.24,
+        "width": 0.28,
+        "height": 0.22
       },
       "key_facts": [
         "testimonio de Ricardo Acuña",
@@ -211,13 +211,14 @@
       "summary": "El Campo de Marte, pulmón de Jesús María, entra en alerta: vecinos denuncian meses sin riego y árboles con estrés hídrico. La remodelación puede modernizar, sí, pero no a costa de apagar el verde.",
       "speech": "El Campo de Marte, pulmón de Jesús María, entra en alerta: vecinos denuncian meses sin riego y árboles con estrés hídrico. La remodelación puede modernizar, sí, pero no a costa de apagar el verde.",
       "page_numbers": [
-        14
+        2,
+        3
       ],
       "cover_region": {
-        "x": 0.69,
-        "y": 0.82,
-        "width": 0.27,
-        "height": 0.13
+        "x": 0.02,
+        "y": 0.26,
+        "width": 0.68,
+        "height": 0.49
       },
       "key_facts": [
         "vecinos denuncian falta de riego",
@@ -250,10 +251,10 @@
         15
       ],
       "cover_region": {
-        "x": 0.69,
-        "y": 0.7,
-        "width": 0.27,
-        "height": 0.12
+        "x": 0.7,
+        "y": 0.8,
+        "width": 0.28,
+        "height": 0.1
       },
       "key_facts": [
         "Alexander Vinces Paiva falleció tras ataque",
@@ -288,8 +289,8 @@
       "cover_region": {
         "x": 0.0,
         "y": 0.0,
-        "width": 0.27,
-        "height": 0.06
+        "width": 0.33,
+        "height": 0.08
       },
       "key_facts": [
         "salida de Álvaro Barco",
@@ -307,8 +308,8 @@
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
       "segment_audio_file": null
     }
   ]

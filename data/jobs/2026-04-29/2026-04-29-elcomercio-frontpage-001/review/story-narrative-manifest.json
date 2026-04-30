@@ -20,10 +20,10 @@
         3
       ],
       "cover_region": {
-        "x": 0.75,
-        "y": 0.2,
-        "width": 0.23,
-        "height": 0.2
+        "x": 0.77,
+        "y": 0.34,
+        "width": 0.2,
+        "height": 0.18
       },
       "key_facts": [
         "Jorge Nieto, beneficiado con ampliación",
@@ -82,10 +82,10 @@
         4
       ],
       "cover_region": {
-        "x": 0.75,
-        "y": 0.42,
-        "width": 0.23,
-        "height": 0.17
+        "x": 0.77,
+        "y": 0.55,
+        "width": 0.2,
+        "height": 0.16
       },
       "key_facts": [
         "JNE defendió su actuación",
@@ -118,10 +118,10 @@
         5
       ],
       "cover_region": {
-        "x": 0.75,
-        "y": 0.61,
-        "width": 0.23,
-        "height": 0.14
+        "x": 0.77,
+        "y": 0.72,
+        "width": 0.2,
+        "height": 0.13
       },
       "key_facts": [
         "multas de ONPE",
@@ -151,13 +151,13 @@
       "summary": "La controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.",
       "speech": "La controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.",
       "page_numbers": [
-        6
+        3
       ],
       "cover_region": {
-        "x": 0.02,
-        "y": 0.2,
-        "width": 0.73,
-        "height": 0.42
+        "x": 0.77,
+        "y": 0.34,
+        "width": 0.2,
+        "height": 0.18
       },
       "key_facts": [
         "propuesta de cambio del capítulo económico",
@@ -190,9 +190,9 @@
         7
       ],
       "cover_region": {
-        "x": 0.06,
-        "y": 0.6,
-        "width": 0.67,
+        "x": 0.03,
+        "y": 0.68,
+        "width": 0.69,
         "height": 0.12
       },
       "key_facts": [

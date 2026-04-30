@@ -22,9 +22,9 @@
       ],
       "cover_region": {
         "x": 0.0,
-        "y": 0.82,
-        "width": 0.37,
-        "height": 0.17
+        "y": 0.76,
+        "width": 0.42,
+        "height": 0.2
       },
       "key_facts": [
         "salida de director deportivo",
@@ -42,8 +42,8 @@
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
       "segment_audio_file": null
     },
     {
@@ -59,9 +59,9 @@
       ],
       "cover_region": {
         "x": 0.0,
-        "y": 0.02,
-        "width": 0.69,
-        "height": 0.82
+        "y": 0.05,
+        "width": 0.7,
+        "height": 0.78
       },
       "key_facts": [
         "victoria de Sporting Cristal",
@@ -98,11 +98,11 @@
         "highlight_label": "Líder del grupo",
         "data_source_note": "Información sobre puntos obtenidos en la Copa Libertadores para el equipo."
       },
-      "narrator_profile_id": "mr_peet",
+      "narrator_profile_id": "gonzalo_nunez",
       "narrator_role": "reportero_deportivo",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
       "segment_audio_file": null
     },
     {
@@ -116,10 +116,10 @@
         12
       ],
       "cover_region": {
-        "x": 0.51,
-        "y": 0.82,
-        "width": 0.23,
-        "height": 0.14
+        "x": 0.56,
+        "y": 0.78,
+        "width": 0.28,
+        "height": 0.16
       },
       "key_facts": [
         "victoria de PSG",
@@ -137,8 +137,8 @@
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
       "segment_audio_file": null
     }
   ]

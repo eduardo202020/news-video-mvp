@@ -217,9 +217,9 @@
         "story_type": "politica",
         "cover_region": {
           "x": 0.77,
-          "y": 0.28,
-          "width": 0.22,
-          "height": 0.2
+          "y": 0.34,
+          "width": 0.2,
+          "height": 0.18
         },
         "page_numbers": [
           3
@@ -228,16 +228,17 @@
         "evidence_lines": [
           "PAGINA 3"
         ],
-        "confidence": 0.97
+        "confidence": 0.97,
+        "follow_up_enabled": true
       },
       {
         "headline": "JNE: retraso en mesas no fue decisivo",
         "story_type": "politica",
         "cover_region": {
           "x": 0.77,
-          "y": 0.49,
+          "y": 0.55,
           "width": 0.2,
-          "height": 0.18
+          "height": 0.16
         },
         "page_numbers": [
           4
@@ -246,14 +247,15 @@
         "evidence_lines": [
           "PAGINA 4"
         ],
-        "confidence": 0.96
+        "confidence": 0.96,
+        "follow_up_enabled": true
       },
       {
         "headline": "Multan a JPP por aportes de campaña",
         "story_type": "politica",
         "cover_region": {
           "x": 0.77,
-          "y": 0.7,
+          "y": 0.72,
           "width": 0.2,
           "height": 0.13
         },
@@ -264,7 +266,8 @@
         "evidence_lines": [
           "PAGINA 5"
         ],
-        "confidence": 0.94
+        "confidence": 0.94,
+        "follow_up_enabled": true
       },
       {
         "headline": "El capitulo economico ante inversionistas",
@@ -282,14 +285,15 @@
         "evidence_lines": [
           "PAGINA 6"
         ],
-        "confidence": 0.98
+        "confidence": 0.98,
+        "follow_up_enabled": true
       },
       {
         "headline": "Petro-Peru pide US$2,000 millones",
         "story_type": "economia",
         "cover_region": {
           "x": 0.03,
-          "y": 0.6,
+          "y": 0.68,
           "width": 0.69,
           "height": 0.12
         },
@@ -300,16 +304,17 @@
         "evidence_lines": [
           "PAGINA 7"
         ],
-        "confidence": 0.98
+        "confidence": 0.98,
+        "follow_up_enabled": true
       },
       {
         "headline": "PSG y Bayern dan semifinal de golazos",
         "story_type": "deportes",
         "cover_region": {
           "x": 0.03,
-          "y": 0.74,
+          "y": 0.78,
           "width": 0.73,
-          "height": 0.24
+          "height": 0.2
         },
         "page_numbers": [
           16
@@ -318,7 +323,8 @@
         "evidence_lines": [
           "PAGINA 16"
         ],
-        "confidence": 0.93
+        "confidence": 0.93,
+        "follow_up_enabled": true
       },
       {
         "headline": "Cristal vence a Junior en Libertadores",
@@ -336,7 +342,8 @@
         "evidence_lines": [
           "DT - PAGINA 17"
         ],
-        "confidence": 0.9
+        "confidence": 0.9,
+        "follow_up_enabled": true
       }
     ],
     "notes": "Paginas detectadas visualmente desde la portada.",
@@ -363,10 +370,10 @@
           3
         ],
         "cover_region": {
-          "x": 0.75,
-          "y": 0.2,
-          "width": 0.23,
-          "height": 0.2
+          "x": 0.77,
+          "y": 0.34,
+          "width": 0.2,
+          "height": 0.18
         },
         "key_facts": [
           "Jorge Nieto, beneficiado con ampliación",
@@ -407,8 +414,7 @@
           "unit": "%",
           "highlight_label": "Aumento de Nieto",
           "data_source_note": "Cifras de ECData, verificada en página 3."
-        },
-        "follow_up_enabled": true
+        }
       },
       {
         "headline": "JNE retrasó mesas y no fue decisivo",
@@ -426,10 +432,10 @@
           4
         ],
         "cover_region": {
-          "x": 0.75,
-          "y": 0.42,
-          "width": 0.23,
-          "height": 0.17
+          "x": 0.77,
+          "y": 0.55,
+          "width": 0.2,
+          "height": 0.16
         },
         "key_facts": [
           "JNE defendió su actuación",
@@ -444,8 +450,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se limita a las declaraciones del JNE. Se evita especular sobre efectos mayores sin evidencia directa.",
         "notes": "Se limita a las declaraciones del JNE. Se evita especular sobre efectos mayores sin evidencia directa.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Multan a JPP por aportes irregulares",
@@ -463,10 +468,10 @@
           5
         ],
         "cover_region": {
-          "x": 0.75,
-          "y": 0.61,
-          "width": 0.23,
-          "height": 0.14
+          "x": 0.77,
+          "y": 0.72,
+          "width": 0.2,
+          "height": 0.13
         },
         "key_facts": [
           "multas de ONPE",
@@ -481,8 +486,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se subraya la sanción aplicada. La investigación está en curso sin acusaciones definitivas.",
         "notes": "Se subraya la sanción aplicada. La investigación está en curso sin acusaciones definitivas.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Capítulo económico no debe tocarse",
@@ -497,13 +501,13 @@
           "persuasivo"
         ],
         "page_numbers": [
-          6
+          3
         ],
         "cover_region": {
-          "x": 0.02,
-          "y": 0.2,
-          "width": 0.73,
-          "height": 0.42
+          "x": 0.77,
+          "y": 0.34,
+          "width": 0.2,
+          "height": 0.18
         },
         "key_facts": [
           "propuesta de cambio del capítulo económico",
@@ -518,8 +522,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se presenta como un tema de debate político. No se afirman consecuencias definitivas.",
         "notes": "Se presenta como un tema de debate político. No se afirman consecuencias definitivas.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Petro-Perú pide US$ 2,000 millones",
@@ -537,9 +540,9 @@
           7
         ],
         "cover_region": {
-          "x": 0.06,
-          "y": 0.6,
-          "width": 0.67,
+          "x": 0.03,
+          "y": 0.68,
+          "width": 0.69,
           "height": 0.12
         },
         "key_facts": [
@@ -577,8 +580,7 @@
           "unit": "%",
           "highlight_label": "Menor presencia",
           "data_source_note": "Cifras verificadas con fuentes confiables, incluyendo La República."
-        },
-        "follow_up_enabled": true
+        }
       }
     ],
     "notes": "Speeches editoriales importados manualmente.",
@@ -628,7 +630,7 @@
   },
   "audit": {
     "created_at": "2026-04-29T17:41:33",
-    "updated_at": "2026-04-29T21:20:36",
+    "updated_at": "2026-04-29T21:38:22",
     "events": [
       {
         "stage": "discover",
@@ -10301,6 +10303,144 @@
         "status": "edited",
         "timestamp": "2026-04-29T21:20:36",
         "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:35:20",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:35:20",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:05",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:05",
+        "details": "Seguimiento de portada actualizado para historia 1: Nieto concentro votos en complementaria -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:05",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE: retraso en mesas no fue decisivo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:05",
+        "details": "Seguimiento de portada actualizado para historia 3: Multan a JPP por aportes de campaña -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:05",
+        "details": "Seguimiento de portada actualizado para historia 4: El capitulo economico ante inversionistas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:06",
+        "details": "Seguimiento de portada actualizado para historia 5: Petro-Peru pide US$2,000 millones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:06",
+        "details": "Seguimiento de portada actualizado para historia 6: PSG y Bayern dan semifinal de golazos -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:06",
+        "details": "Seguimiento de portada actualizado para historia 7: Cristal vence a Junior en Libertadores -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:09",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:10",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:10",
+        "details": "Seguimiento de portada actualizado para historia 1: Nieto concentro votos en complementaria -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:10",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE: retraso en mesas no fue decisivo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:10",
+        "details": "Seguimiento de portada actualizado para historia 3: Multan a JPP por aportes de campaña -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:10",
+        "details": "Seguimiento de portada actualizado para historia 4: El capitulo economico ante inversionistas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:10",
+        "details": "Seguimiento de portada actualizado para historia 5: Petro-Peru pide US$2,000 millones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:10",
+        "details": "Seguimiento de portada actualizado para historia 6: PSG y Bayern dan semifinal de golazos -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:10",
+        "details": "Seguimiento de portada actualizado para historia 7: Cristal vence a Junior en Libertadores -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:42",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:44",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:38:21",
+        "details": "Se importaron 5 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:38:22",
+        "details": "Revision de portada marcada como completa."
       }
     ]
   },
@@ -10311,6 +10451,6 @@
     "why_it_fits": "Conecta la fecha del lote con temas visibles de economia, politica y confianza publica en las portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-29T21:16:57"
+    "imported_at": "2026-04-29T21:35:20"
   }
 }

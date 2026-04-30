@@ -183,10 +183,10 @@
         "headline": "Keiko fuerte en Lima y Sanchez gana provincias",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.0,
+          "x": 0.02,
           "y": 0.26,
           "width": 0.68,
-          "height": 0.57
+          "height": 0.49
         },
         "page_numbers": [
           2,
@@ -204,9 +204,9 @@
         "story_type": "politica",
         "cover_region": {
           "x": 0.7,
-          "y": 0.5,
+          "y": 0.48,
           "width": 0.28,
-          "height": 0.25
+          "height": 0.17
         },
         "page_numbers": [
           6
@@ -223,7 +223,7 @@
         "story_type": "economia",
         "cover_region": {
           "x": 0.7,
-          "y": 0.77,
+          "y": 0.69,
           "width": 0.28,
           "height": 0.1
         },
@@ -244,7 +244,7 @@
           "x": 0.7,
           "y": 0.24,
           "width": 0.28,
-          "height": 0.24
+          "height": 0.22
         },
         "page_numbers": [
           12,
@@ -262,8 +262,8 @@
         "story_type": "policial",
         "cover_region": {
           "x": 0.7,
-          "y": 0.9,
-          "width": 0.16,
+          "y": 0.8,
+          "width": 0.28,
           "height": 0.1
         },
         "page_numbers": [
@@ -282,8 +282,8 @@
         "cover_region": {
           "x": 0.0,
           "y": 0.0,
-          "width": 0.39,
-          "height": 0.1
+          "width": 0.33,
+          "height": 0.08
         },
         "page_numbers": [
           18
@@ -321,10 +321,10 @@
           3
         ],
         "cover_region": {
-          "x": 0.06,
-          "y": 0.22,
-          "width": 0.58,
-          "height": 0.51
+          "x": 0.02,
+          "y": 0.26,
+          "width": 0.68,
+          "height": 0.49
         },
         "key_facts": [
           "Sánchez 32% y Keiko 31% a nivel nacional",
@@ -365,8 +365,7 @@
           "unit": "%",
           "highlight_label": "País dividido",
           "data_source_note": "Datos reportados por La República sobre la encuesta IEP."
-        },
-        "follow_up_enabled": true
+        }
       },
       {
         "headline": "Observadores UE no ven mala fe electoral",
@@ -385,9 +384,9 @@
         ],
         "cover_region": {
           "x": 0.7,
-          "y": 0.5,
+          "y": 0.48,
           "width": 0.28,
-          "height": 0.25
+          "height": 0.17
         },
         "key_facts": [
           "jefa de observadores UE",
@@ -402,8 +401,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se atribuye la evaluación a la misión de observación; no se afirma que todas las controversias estén cerradas.",
         "notes": "Se atribuye la evaluación a la misión de observación; no se afirma que todas las controversias estén cerradas.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Petroperú podría obtener préstamo privado",
@@ -421,10 +419,10 @@
           10
         ],
         "cover_region": {
-          "x": 0.69,
-          "y": 0.57,
+          "x": 0.7,
+          "y": 0.69,
           "width": 0.28,
-          "height": 0.12
+          "height": 0.1
         },
         "key_facts": [
           "banca privada dispuesta a prestar hasta US$2.000 millones",
@@ -461,8 +459,7 @@
           "unit": "%",
           "highlight_label": "Caída fuerte",
           "data_source_note": "Cifras reportadas por La República con fuente Petroperú."
-        },
-        "follow_up_enabled": true
+        }
       },
       {
         "headline": "Sobreviviente de matanza dice que lo obligaron a mentir",
@@ -481,10 +478,10 @@
           13
         ],
         "cover_region": {
-          "x": 0.68,
-          "y": 0.19,
-          "width": 0.3,
-          "height": 0.18
+          "x": 0.7,
+          "y": 0.24,
+          "width": 0.28,
+          "height": 0.22
         },
         "key_facts": [
           "testimonio de Ricardo Acuña",
@@ -499,8 +496,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se presenta como testimonio y denuncia, no como conclusión judicial. Se omiten detalles sensibles innecesarios.",
         "notes": "Se presenta como testimonio y denuncia, no como conclusión judicial. Se omiten detalles sensibles innecesarios.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Campo de Marte en riesgo por falta de riego",
@@ -515,13 +511,14 @@
           "ciudadano"
         ],
         "page_numbers": [
-          14
+          2,
+          3
         ],
         "cover_region": {
-          "x": 0.69,
-          "y": 0.82,
-          "width": 0.27,
-          "height": 0.13
+          "x": 0.02,
+          "y": 0.26,
+          "width": 0.68,
+          "height": 0.49
         },
         "key_facts": [
           "vecinos denuncian falta de riego",
@@ -536,8 +533,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se recoge el reclamo vecinal y la respuesta institucional sin resolver la controversia como hecho cerrado.",
         "notes": "Se recoge el reclamo vecinal y la respuesta institucional sin resolver la controversia como hecho cerrado.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Sicarios matan a profesor de artes marciales",
@@ -555,10 +551,10 @@
           15
         ],
         "cover_region": {
-          "x": 0.69,
-          "y": 0.7,
-          "width": 0.27,
-          "height": 0.12
+          "x": 0.7,
+          "y": 0.8,
+          "width": 0.28,
+          "height": 0.1
         },
         "key_facts": [
           "Alexander Vinces Paiva falleció tras ataque",
@@ -573,8 +569,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se evita morbo y no se atribuye móvil criminal sin confirmación.",
         "notes": "Se evita morbo y no se atribuye móvil criminal sin confirmación.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "La U despidió a Álvaro Barco",
@@ -594,8 +589,8 @@
         "cover_region": {
           "x": 0.0,
           "y": 0.0,
-          "width": 0.27,
-          "height": 0.06
+          "width": 0.33,
+          "height": 0.08
         },
         "key_facts": [
           "salida de Álvaro Barco",
@@ -610,8 +605,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se resume el comunicado y el contexto deportivo sin cargar responsabilidad personal no demostrada.",
         "notes": "Se resume el comunicado y el contexto deportivo sin cargar responsabilidad personal no demostrada.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       }
     ],
     "notes": "Speeches editoriales importados manualmente.",
@@ -661,7 +655,7 @@
   },
   "audit": {
     "created_at": "2026-04-29T17:42:13",
-    "updated_at": "2026-04-29T21:26:09",
+    "updated_at": "2026-04-29T21:38:06",
     "events": [
       {
         "stage": "discover",
@@ -17576,6 +17570,132 @@
         "status": "edited",
         "timestamp": "2026-04-29T21:26:09",
         "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:35:20",
+        "details": "Se importaron 8 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:35:20",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:22",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:22",
+        "details": "Seguimiento de portada actualizado para historia 1: Keiko fuerte en Lima y Sanchez gana provincias -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:22",
+        "details": "Seguimiento de portada actualizado para historia 2: Observadores UE no ven mala fe electoral -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:22",
+        "details": "Seguimiento de portada actualizado para historia 3: Petroperu podra obtener prestamo privado -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:22",
+        "details": "Seguimiento de portada actualizado para historia 4: Sobreviviente de matanza denuncia mentira forzada -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:22",
+        "details": "Seguimiento de portada actualizado para historia 5: Sicarios matan a profesor en el Callao -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:22",
+        "details": "Seguimiento de portada actualizado para historia 6: La U despidio a Alvaro Barco -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:27",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:27",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:27",
+        "details": "Seguimiento de portada actualizado para historia 1: Keiko fuerte en Lima y Sanchez gana provincias -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:27",
+        "details": "Seguimiento de portada actualizado para historia 2: Observadores UE no ven mala fe electoral -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:27",
+        "details": "Seguimiento de portada actualizado para historia 3: Petroperu podra obtener prestamo privado -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:27",
+        "details": "Seguimiento de portada actualizado para historia 4: Sobreviviente de matanza denuncia mentira forzada -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:27",
+        "details": "Seguimiento de portada actualizado para historia 5: Sicarios matan a profesor en el Callao -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:27",
+        "details": "Seguimiento de portada actualizado para historia 6: La U despidio a Alvaro Barco -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:50",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:36:51",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:37:04",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:38:06",
+        "details": "Se importaron 7 speech(es) editoriales."
       }
     ]
   },
@@ -17586,6 +17706,6 @@
     "why_it_fits": "Conecta la fecha del lote con temas visibles de economia, politica y confianza publica en las portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-29T21:16:57"
+    "imported_at": "2026-04-29T21:35:20"
   }
 }

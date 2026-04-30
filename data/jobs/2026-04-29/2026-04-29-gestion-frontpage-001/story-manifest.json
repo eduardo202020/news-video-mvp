@@ -40,8 +40,141 @@
       "cover_region": {
         "x": 0.24,
         "y": 0.84,
-        "width": 0.41,
+        "width": 0.25,
         "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Reactivación turística requiere mejorar transporte",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "promoción de nuevos atractivos turísticos",
+        "playas y norte peruano como oportunidad",
+        "necesidad de mejorar transporte e infraestructura"
+      ],
+      "tone_notes": [
+        "critico",
+        "economico",
+        "claro"
+      ],
+      "safety_notes": "Basado en la página interna 4 de Gestión; se resume el ángulo editorial sin agregar cifras no visibles.",
+      "cover_region": {
+        "x": 0.09,
+        "y": 0.0,
+        "width": 0.32,
+        "height": 0.08
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Consumidores cambiarían de marca por el Mundial",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El Mundial no solo mueve camisetas: también mueve marcas. Más del 60% de consumidores podría cambiar de producto por promociones, premios o coleccionables. La pelota también juega en la góndola.",
+      "page_numbers": [
+        5
+      ],
+      "key_facts": [
+        "más de 60% podría cambiar de marca",
+        "promociones y premios influyen",
+        "categorías de consumo masivo se activan"
+      ],
+      "tone_notes": [
+        "ligero",
+        "comercial",
+        "afilado"
+      ],
+      "safety_notes": "Basado en la página interna 5 de Gestión; las cifras provienen del estudio citado por el diario.",
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.29,
+        "width": 0.21,
+        "height": 0.23
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Promociones vs marca",
+        "points": [
+          {
+            "label": "Promo familiar",
+            "value": 62.7
+          },
+          {
+            "label": "Premios Mundial",
+            "value": 67.5
+          },
+          {
+            "label": "Coleccionables",
+            "value": 62.5
+          }
+        ],
+        "subtitle": "Consumidores que cambiarían por el Mundial",
+        "unit": "%",
+        "highlight_label": "Mayor incentivo",
+        "data_source_note": "Cifras visibles en la página interna 5 de Gestión, atribuidas a Worldpanel by Numerator."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Modasa ingresará a Canadá",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Modasa apunta al norte con una jugada grande: entra a Canadá con equipos de energía y hasta US$7 millones en expansión. Data centers, minería y comercio empujan una demanda que ya no espera.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "ingreso de Modasa a Canadá",
+        "inversión de hasta US$7 millones",
+        "demanda de data centers, minería y comercio"
+      ],
+      "tone_notes": [
+        "empresarial",
+        "dinamico",
+        "claro"
+      ],
+      "safety_notes": "Basado en la página interna 6 de Gestión; se mantienen las cifras visibles y el plan anunciado por la empresa.",
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.56,
+        "width": 0.21,
+        "height": 0.23
       },
       "support_visual": null,
       "segment_audio_file": null,
