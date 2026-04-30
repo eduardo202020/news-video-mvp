@@ -12,58 +12,32 @@
     {
       "story_index": 1,
       "segment_type": "story",
-      "headline": "Nieto concentró votos en jornada complementaria",
+      "headline": "Nieto concentró votos en complementaria",
       "story_type": "politica",
-      "summary": "Jorge Nieto, al alza, es el gran beneficiado del 13 de abril. Con el voto de la jornada complementaria, ha logrado una ventaja en distritos claves, mientras otros se estancan.",
-      "speech": "Jorge Nieto, al alza, es el gran beneficiado del 13 de abril. Con el voto de la jornada complementaria, ha logrado una ventaja en distritos claves, mientras otros se estancan.",
+      "summary": "El voto del 13 de abril dejó una lectura incómoda: Jorge Nieto fue quien más capitalizó la ampliación en los tres distritos pendientes. Con más información disponible, el tablero electoral ya no fue el mismo.",
+      "speech": "El voto del 13 de abril dejó una lectura incómoda: Jorge Nieto fue quien más capitalizó la ampliación en los tres distritos pendientes. Con más información disponible, el tablero electoral ya no fue el mismo.",
       "page_numbers": [
         3
       ],
       "cover_region": {
         "x": 0.77,
-        "y": 0.34,
+        "y": 0.28,
         "width": 0.2,
-        "height": 0.18
+        "height": 0.2
       },
       "key_facts": [
-        "Jorge Nieto, beneficiado con ampliación",
-        "ventaja en distritos claves",
-        "jornada complementaria"
+        "ampliacion del 13 de abril",
+        "tres distritos con votacion pendiente",
+        "Jorge Nieto como principal beneficiado"
       ],
       "tone_notes": [
-        "analitico",
-        "firme",
-        "directo"
+        "politico",
+        "incisivo",
+        "prudente"
       ],
-      "safety_notes": "Cifras sobre distribución del voto citadas desde página 3. El análisis muestra cómo el voto complementario benefició a Nieto.",
-      "notes": "Cifras sobre distribución del voto citadas desde página 3. El análisis muestra cómo el voto complementario benefició a Nieto.",
-      "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "bar",
-        "title": "Distribución del Voto",
-        "points": [
-          {
-            "label": "Nieto",
-            "value": 38.5
-          },
-          {
-            "label": "Sánchez",
-            "value": 30.1
-          },
-          {
-            "label": "Fujimori",
-            "value": 25.3
-          },
-          {
-            "label": "Castillo",
-            "value": 6.1
-          }
-        ],
-        "subtitle": "Voto entre el 12 y 13 de abril",
-        "unit": "%",
-        "highlight_label": "Aumento de Nieto",
-        "data_source_note": "Cifras de ECData, verificada en página 3."
-      },
+      "safety_notes": "Se describe el efecto electoral sin insinuar manipulacion ni intencionalidad.",
+      "notes": "Se describe el efecto electoral sin insinuar manipulacion ni intencionalidad.",
+      "support_visual": null,
       "narrator_profile_id": "beto_ortiz",
       "narrator_role": "analista_politica",
       "narrator_map_id": "default-story-type-narrators",
@@ -74,31 +48,31 @@
     {
       "story_index": 2,
       "segment_type": "story",
-      "headline": "JNE retrasó mesas y no fue decisivo",
+      "headline": "JNE: retraso en mesas no fue decisivo",
       "story_type": "politica",
-      "summary": "El Jurado Nacional de Elecciones se defiende tras los cuestionamientos por los retrasos en las mesas. Aseguran que no afectaron la participación, pero las dudas persisten.",
-      "speech": "El Jurado Nacional de Elecciones se defiende tras los cuestionamientos por los retrasos en las mesas. Aseguran que no afectaron la participación, pero las dudas persisten.",
+      "summary": "El JNE vuelve a marcar la cancha: los retrasos en instalación de mesas no habrían sido decisivos en el ausentismo. La discusión política sigue, pero el sustento técnico baja el volumen de la denuncia.",
+      "speech": "El JNE vuelve a marcar la cancha: los retrasos en instalación de mesas no habrían sido decisivos en el ausentismo. La discusión política sigue, pero el sustento técnico baja el volumen de la denuncia.",
       "page_numbers": [
         4
       ],
       "cover_region": {
         "x": 0.77,
-        "y": 0.55,
+        "y": 0.51,
         "width": 0.2,
         "height": 0.16
       },
       "key_facts": [
-        "JNE defendió su actuación",
-        "retrasos en mesas no afectaron participación",
-        "decisiones del JNE"
+        "conclusion del JNE",
+        "retrasos en mesas",
+        "ausentismo electoral"
       ],
       "tone_notes": [
-        "soberano",
-        "politico",
-        "neutral"
+        "critico",
+        "institucional",
+        "cauteloso"
       ],
-      "safety_notes": "Se limita a las declaraciones del JNE. Se evita especular sobre efectos mayores sin evidencia directa.",
-      "notes": "Se limita a las declaraciones del JNE. Se evita especular sobre efectos mayores sin evidencia directa.",
+      "safety_notes": "Se usa formulacion prudente porque la nota aborda una conclusion tecnica en medio de controversia politica.",
+      "notes": "Se usa formulacion prudente porque la nota aborda una conclusion tecnica en medio de controversia politica.",
       "support_visual": null,
       "narrator_profile_id": "beto_ortiz",
       "narrator_role": "analista_politica",
@@ -110,31 +84,31 @@
     {
       "story_index": 3,
       "segment_type": "story",
-      "headline": "Multan a JPP por aportes irregulares",
+      "headline": "Multan a JPP por aportes de campaña",
       "story_type": "politica",
-      "summary": "La ONPE sanciona a JPP por aportes ilegales. La multa responde a los desajustes en los reportes de financiamiento durante las elecciones pasadas.",
-      "speech": "La ONPE sanciona a JPP por aportes ilegales. La multa responde a los desajustes en los reportes de financiamiento durante las elecciones pasadas.",
+      "summary": "La ONPE sanciona a Juntos por el Perú por aportes de la campaña del 2021. No es una nota menor: cuando el dinero entra a la política, la trazabilidad importa tanto como el discurso.",
+      "speech": "La ONPE sanciona a Juntos por el Perú por aportes de la campaña del 2021. No es una nota menor: cuando el dinero entra a la política, la trazabilidad importa tanto como el discurso.",
       "page_numbers": [
         5
       ],
       "cover_region": {
         "x": 0.77,
-        "y": 0.72,
+        "y": 0.7,
         "width": 0.2,
         "height": 0.13
       },
       "key_facts": [
-        "multas de ONPE",
-        "aportaciones irregulares",
-        "elecciones pasadas"
+        "multa de la ONPE",
+        "aportes de campaña 2021",
+        "Juntos por el Peru"
       ],
       "tone_notes": [
         "directo",
-        "confrontacional",
-        "firme"
+        "fiscalizador",
+        "serio"
       ],
-      "safety_notes": "Se subraya la sanción aplicada. La investigación está en curso sin acusaciones definitivas.",
-      "notes": "Se subraya la sanción aplicada. La investigación está en curso sin acusaciones definitivas.",
+      "safety_notes": "Se evita afirmar delito; se presenta como sancion administrativa electoral.",
+      "notes": "Se evita afirmar delito; se presenta como sancion administrativa electoral.",
       "support_visual": null,
       "narrator_profile_id": "beto_ortiz",
       "narrator_role": "analista_politica",
@@ -146,34 +120,34 @@
     {
       "story_index": 4,
       "segment_type": "story",
-      "headline": "Capítulo económico no debe tocarse",
-      "story_type": "politica",
-      "summary": "La controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.",
-      "speech": "La controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.",
+      "headline": "El capítulo económico ante inversionistas",
+      "story_type": "economia",
+      "summary": "El presidente de la CCL lanza una advertencia simple: no tocar el capítulo económico. El mensaje para inversionistas es claro: en campaña se puede discutir todo, pero la estabilidad no debería jugarse a los dados.",
+      "speech": "El presidente de la CCL lanza una advertencia simple: no tocar el capítulo económico. El mensaje para inversionistas es claro: en campaña se puede discutir todo, pero la estabilidad no debería jugarse a los dados.",
       "page_numbers": [
-        3
+        6
       ],
       "cover_region": {
-        "x": 0.77,
-        "y": 0.34,
-        "width": 0.2,
-        "height": 0.18
+        "x": 0.03,
+        "y": 0.3,
+        "width": 0.67,
+        "height": 0.31
       },
       "key_facts": [
-        "propuesta de cambio del capítulo económico",
-        "impacto en la economía nacional",
-        "debate político en curso"
+        "entrevista al titular de la CCL",
+        "defensa del capitulo economico",
+        "mensaje a inversionistas"
       ],
       "tone_notes": [
-        "incisivo",
+        "analitico",
         "elegante",
-        "persuasivo"
+        "incisivo"
       ],
-      "safety_notes": "Se presenta como un tema de debate político. No se afirman consecuencias definitivas.",
-      "notes": "Se presenta como un tema de debate político. No se afirman consecuencias definitivas.",
+      "safety_notes": "Se resume una posicion empresarial sin presentarla como consenso absoluto.",
+      "notes": "Se resume una posicion empresarial sin presentarla como consenso absoluto.",
       "support_visual": null,
       "narrator_profile_id": "jaime_bayly",
-      "narrator_role": "analista_politica",
+      "narrator_role": "analista_economia",
       "narrator_map_id": "default-story-type-narrators",
       "voice_profile_id": "jaime_bayly",
       "narrator_name": "Jaime Bayly",
@@ -182,59 +156,73 @@
     {
       "story_index": 5,
       "segment_type": "story",
-      "headline": "Petro-Perú pide US$ 2,000 millones",
+      "headline": "Petro-Perú pide US$2,000 millones",
       "story_type": "economia",
-      "summary": "Petro-Perú recurre a la ayuda estatal nuevamente, solicitando US$2,000 millones para evitar la paralización de sus operaciones. La situación sigue siendo crítica.",
-      "speech": "Petro-Perú recurre a la ayuda estatal nuevamente, solicitando US$2,000 millones para evitar la paralización de sus operaciones. La situación sigue siendo crítica.",
+      "summary": "Petro-Perú mira otro salvavidas: hasta US$2,000 millones para evitar que la falta de caja golpee Talara y Conchán. El problema ya no es solo financiero; también amenaza el abastecimiento.",
+      "speech": "Petro-Perú mira otro salvavidas: hasta US$2,000 millones para evitar que la falta de caja golpee Talara y Conchán. El problema ya no es solo financiero; también amenaza el abastecimiento.",
       "page_numbers": [
         7
       ],
       "cover_region": {
         "x": 0.03,
-        "y": 0.68,
+        "y": 0.62,
         "width": 0.69,
         "height": 0.12
       },
       "key_facts": [
-        "Petro-Perú solicita US$2,000 millones",
-        "garantía estatal",
-        "riesgo de parálisis operativa"
+        "financiamiento de hasta US$2,000 millones",
+        "riesgo para Talara y Conchan",
+        "falta de recursos"
       ],
       "tone_notes": [
-        "serio",
-        "urgente",
-        "económico"
+        "sobrio",
+        "critico",
+        "claro"
       ],
-      "safety_notes": "Se informa sobre la solicitud de financiamiento de Petro-Perú. Se evitan detalles sobre su aceptación.",
-      "notes": "Se informa sobre la solicitud de financiamiento de Petro-Perú. Se evitan detalles sobre su aceptación.",
-      "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "line",
-        "title": "Participación de Petroperú",
-        "points": [
-          {
-            "label": "2013",
-            "value": 51.0
-          },
-          {
-            "label": "2025",
-            "value": 25.0
-          },
-          {
-            "label": "2026",
-            "value": 19.0
-          }
-        ],
-        "subtitle": "Mercado de combustibles",
-        "unit": "%",
-        "highlight_label": "Menor presencia",
-        "data_source_note": "Cifras verificadas con fuentes confiables, incluyendo La República."
-      },
+      "safety_notes": "Se redacta como riesgo informado por la nota, no como cierre definitivo de operaciones.",
+      "notes": "Se redacta como riesgo informado por la nota, no como cierre definitivo de operaciones.",
+      "support_visual": null,
       "narrator_profile_id": "jaime_bayly",
       "narrator_role": "analista_economia",
       "narrator_map_id": "default-story-type-narrators",
       "voice_profile_id": "jaime_bayly",
       "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 6,
+      "segment_type": "story",
+      "headline": "PSG y Bayern dan semifinal de golazos",
+      "story_type": "deportes",
+      "summary": "Partidazo de esos que se cuentan al día siguiente: PSG y Bayern dejaron nueve goles y una noche de Champions para guardar. Cuando una semifinal se juega así, el marcador también se vuelve espectáculo.",
+      "speech": "Partidazo de esos que se cuentan al día siguiente: PSG y Bayern dejaron nueve goles y una noche de Champions para guardar. Cuando una semifinal se juega así, el marcador también se vuelve espectáculo.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.72,
+        "width": 0.73,
+        "height": 0.24
+      },
+      "key_facts": [
+        "PSG vs Bayern",
+        "nueve goles",
+        "noche de Champions"
+      ],
+      "tone_notes": [
+        "emocionado",
+        "futbolero",
+        "agil"
+      ],
+      "safety_notes": "Se usa solo el resultado y el enfoque deportivo visible en la pagina interna.",
+      "notes": "Se usa solo el resultado y el enfoque deportivo visible en la pagina interna.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
       "segment_audio_file": null
     }
   ]

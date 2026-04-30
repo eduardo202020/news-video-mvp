@@ -197,8 +197,7 @@
         "evidence_lines": [
           "CRACK pag. 13"
         ],
-        "confidence": 0.96,
-        "follow_up_enabled": true
+        "confidence": 0.96
       },
       {
         "headline": "Monserrat es una ociosa",
@@ -221,7 +220,7 @@
       }
     ],
     "notes": "Paginas detectadas visualmente desde la portada.",
-    "focus_review_completed": true
+    "focus_review_completed": false
   },
   "story_narrative": {
     "provider": "chatgpt_plus_manual",
@@ -229,16 +228,16 @@
     "source": "supporting_pages_manual",
     "stories": [
       {
-        "headline": "Porky insiste con anular elecciones",
+        "headline": "Hara de todo por nuevas elecciones",
         "story_type": "politica",
-        "summary": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.",
-        "speech": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.",
+        "summary": "Rafael Lopez Aliaga insiste en anular las elecciones y eleva la tension politica. La propuesta reabre el debate sobre la legitimidad del proceso y pone al sistema bajo presion.",
+        "speech": "Rafael Lopez Aliaga insiste en anular las elecciones y eleva la tension politica. La propuesta reabre el debate sobre la legitimidad del proceso y pone al sistema bajo presion.",
         "narrator_profile_id": "beto_ortiz",
         "narrator_role": "analista_politica",
         "tone_notes": [
-          "incisivo",
-          "directo",
-          "político"
+          "critico",
+          "analitico",
+          "directo"
         ],
         "page_numbers": [
           2
@@ -250,31 +249,31 @@
           "height": 0.6
         },
         "key_facts": [
-          "Porky exige nuevas elecciones",
-          "JNE bajo presión",
-          "acusaciones sobre imparcialidad"
+          "pedido de nuevas elecciones",
+          "Lopez Aliaga",
+          "cuestionamiento electoral"
         ],
         "key_facts_used": [
-          "Porky exige nuevas elecciones",
-          "JNE bajo presión",
-          "acusaciones sobre imparcialidad"
+          "pedido de nuevas elecciones",
+          "Lopez Aliaga",
+          "cuestionamiento electoral"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Se presenta el punto de vista del candidato sin afirmar que sus acusaciones sean verificadas.",
-        "notes": "Se presenta el punto de vista del candidato sin afirmar que sus acusaciones sean verificadas.",
+        "safety_notes": "Se evita afirmar irregularidades no confirmadas como hechos.",
+        "notes": "Se evita afirmar irregularidades no confirmadas como hechos.",
         "support_visual": null
       },
       {
-        "headline": "Disparan a campeón de artes marciales",
+        "headline": "Matan a campeon de artes marciales",
         "story_type": "policial",
-        "summary": "Un asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.",
-        "speech": "Un asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.",
+        "summary": "Un campeon de artes marciales es asesinado a balazos en su academia. El crimen sacude a su entorno y vuelve a encender las alarmas por la violencia que no da tregua.",
+        "speech": "Un campeon de artes marciales es asesinado a balazos en su academia. El crimen sacude a su entorno y vuelve a encender las alarmas por la violencia que no da tregua.",
         "narrator_profile_id": "reportero_panorama",
         "narrator_role": "reportero_policial",
         "tone_notes": [
           "tenso",
-          "urgente",
-          "directo"
+          "directo",
+          "impactante"
         ],
         "page_numbers": [
           6
@@ -286,67 +285,67 @@
           "height": 0.2
         },
         "key_facts": [
-          "campeón de artes marciales asesinado",
-          "Policía en búsqueda de los culpables",
-          "balacera frente a la academia"
+          "asesinato en academia",
+          "victima deportista",
+          "uso de arma de fuego"
         ],
         "key_facts_used": [
-          "campeón de artes marciales asesinado",
-          "Policía en búsqueda de los culpables",
-          "balacera frente a la academia"
+          "asesinato en academia",
+          "victima deportista",
+          "uso de arma de fuego"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "La noticia se enfoca en los hechos y la búsqueda de los culpables, sin detalles adicionales sobre el crimen.",
-        "notes": "La noticia se enfoca en los hechos y la búsqueda de los culpables, sin detalles adicionales sobre el crimen.",
+        "safety_notes": "No se atribuyen responsables sin confirmacion oficial.",
+        "notes": "No se atribuyen responsables sin confirmacion oficial.",
         "support_visual": null
       },
       {
-        "headline": "U busca levantar cabeza",
+        "headline": "Ilusiones al bolso",
         "story_type": "deportes",
-        "summary": "La ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.",
-        "speech": "La ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.",
+        "summary": "Universitario se juega un duelo clave ante Nacional de Montevideo con la ilusion intacta. El equipo crema busca sumar afuera y meterse de lleno en la pelea del grupo.",
+        "speech": "Universitario se juega un duelo clave ante Nacional de Montevideo con la ilusion intacta. El equipo crema busca sumar afuera y meterse de lleno en la pelea del grupo.",
         "narrator_profile_id": "mr_peet",
         "narrator_role": "reportero_deportivo",
         "tone_notes": [
-          "motivacional",
           "emocionante",
-          "deportivo"
+          "expectante",
+          "competitivo"
         ],
         "page_numbers": [
-          13
+          2
         ],
         "cover_region": {
-          "x": 0.0,
-          "y": 0.75,
-          "width": 0.31,
-          "height": 0.24
+          "x": 0.29,
+          "y": 0.15,
+          "width": 0.69,
+          "height": 0.6
         },
         "key_facts": [
-          "salida de Barco",
-          "expectativa por partido de Libertadores",
-          "crisis deportiva en la U"
+          "partido ante Nacional",
+          "contexto de Copa Libertadores",
+          "objetivo de clasificacion"
         ],
         "key_facts_used": [
-          "salida de Barco",
-          "expectativa por partido de Libertadores",
-          "crisis deportiva en la U"
+          "partido ante Nacional",
+          "contexto de Copa Libertadores",
+          "objetivo de clasificacion"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Se resume el contexto deportivo sin inventar razones específicas para la crisis.",
-        "notes": "Se resume el contexto deportivo sin inventar razones específicas para la crisis.",
+        "safety_notes": "Sin resultados confirmados; enfoque previo al partido.",
+        "notes": "Sin resultados confirmados; enfoque previo al partido.",
         "support_visual": null
       },
       {
-        "headline": "Monserrat es una ociosa",
+        "headline": "Susan manda a trabajar a Monserrat",
         "story_type": "espectaculos",
-        "summary": "La controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
-        "speech": "La controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
+        "summary": "Susan arremete contra Monserrat y la acusa de no hacer nada en casa. El cruce sube de tono y revive tensiones familiares que ya son parte del show mediatico.",
+        "speech": "Susan arremete contra Monserrat y la acusa de no hacer nada en casa. El cruce sube de tono y revive tensiones familiares que ya son parte del show mediatico.",
         "narrator_profile_id": "reportero_magaly",
         "narrator_role": "conductora_espectaculos",
         "tone_notes": [
-          "controvertido",
-          "firme",
-          "espectacular"
+          "picante",
+          "directo",
+          "entretenido"
         ],
         "page_numbers": [
           16
@@ -358,18 +357,18 @@
           "height": 0.21
         },
         "key_facts": [
-          "acusaciones a Monserrat",
-          "dependencia económica de su familia",
-          "defensa pública de su estilo de vida"
+          "critica de Susan",
+          "conflicto con Monserrat",
+          "declaraciones publicas"
         ],
         "key_facts_used": [
-          "acusaciones a Monserrat",
-          "dependencia económica de su familia",
-          "defensa pública de su estilo de vida"
+          "critica de Susan",
+          "conflicto con Monserrat",
+          "declaraciones publicas"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Se enfoca en la opinión pública y la respuesta de Monserrat sin afirmar veracidad de los rumores.",
-        "notes": "Se enfoca en la opinión pública y la respuesta de Monserrat sin afirmar veracidad de los rumores.",
+        "safety_notes": "Se presentan declaraciones como dichos, no como hechos verificados.",
+        "notes": "Se presentan declaraciones como dichos, no como hechos verificados.",
         "support_visual": null
       }
     ],
@@ -380,8 +379,8 @@
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.\n\nUn asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.\n\nLa ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.\n\nLa controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
-    "approved_text": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.\n\nUn asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.\n\nLa ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.\n\nLa controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
+    "draft": "Rafael Lopez Aliaga insiste en anular las elecciones y eleva la tension politica. La propuesta reabre el debate sobre la legitimidad del proceso y pone al sistema bajo presion.\n\nUn campeon de artes marciales es asesinado a balazos en su academia. El crimen sacude a su entorno y vuelve a encender las alarmas por la violencia que no da tregua.\n\nUniversitario se juega un duelo clave ante Nacional de Montevideo con la ilusion intacta. El equipo crema busca sumar afuera y meterse de lleno en la pelea del grupo.\n\nSusan arremete contra Monserrat y la acusa de no hacer nada en casa. El cruce sube de tono y revive tensiones familiares que ya son parte del show mediatico.",
+    "approved_text": "Rafael Lopez Aliaga insiste en anular las elecciones y eleva la tension politica. La propuesta reabre el debate sobre la legitimidad del proceso y pone al sistema bajo presion.\n\nUn campeon de artes marciales es asesinado a balazos en su academia. El crimen sacude a su entorno y vuelve a encender las alarmas por la violencia que no da tregua.\n\nUniversitario se juega un duelo clave ante Nacional de Montevideo con la ilusion intacta. El equipo crema busca sumar afuera y meterse de lleno en la pelea del grupo.\n\nSusan arremete contra Monserrat y la acusa de no hacer nada en casa. El cruce sube de tono y revive tensiones familiares que ya son parte del show mediatico.",
     "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
     "inputs": {
       "story_narrative_source": "story_narrative.stories",
@@ -420,7 +419,7 @@
   },
   "audit": {
     "created_at": "2026-04-29T17:42:18",
-    "updated_at": "2026-04-29T21:37:49",
+    "updated_at": "2026-04-30T08:49:32",
     "events": [
       {
         "stage": "discover",
@@ -5089,6 +5088,492 @@
         "status": "completed",
         "timestamp": "2026-04-29T21:37:49",
         "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:04:57",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:04:57",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:11",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:11",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:11",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeon de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:11",
+        "details": "Seguimiento de portada actualizado para historia 3: La U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:12",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:16",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:16",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:17",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:17",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeon de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:17",
+        "details": "Seguimiento de portada actualizado para historia 3: La U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:17",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:27",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:31",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:18:53",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:18:55",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:22:41",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:07:54",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:07:55",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:07",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:07",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:07",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeon de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:08",
+        "details": "Seguimiento de portada actualizado para historia 3: La U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:08",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:18",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:19",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:19",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:19",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeon de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:19",
+        "details": "Seguimiento de portada actualizado para historia 3: La U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:19",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:24",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:27",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:09:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:13:02",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:13:02",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:13:39",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:13:39",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:13:39",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeon de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:13:40",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T08:49:31",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T08:49:31",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T08:49:31",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeon de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T08:49:32",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
       }
     ]
   },
@@ -5099,6 +5584,6 @@
     "why_it_fits": "Conecta la fecha del lote con temas visibles de economia, politica y confianza publica en las portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-29T21:35:20"
+    "imported_at": "2026-04-29T23:13:02"
   }
 }

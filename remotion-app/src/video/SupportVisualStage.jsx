@@ -21,8 +21,8 @@ const CHART_WIDTH = CARD_WIDTH - 44;
 const CHART_HEIGHT = CARD_HEIGHT - 176;
 const CARD_BG = "rgba(255,255,255,0.40)";
 const TEXT_PRIMARY = "#111827";
-const TEXT_SECONDARY = "rgba(17,24,39,0.82)";
-const TEXT_MUTED = "rgba(17,24,39,0.68)";
+const TEXT_SECONDARY = "#111827";
+const TEXT_MUTED = "#111827";
 
 const formatMetricValue = (value, unit) => {
   const rounded = Number.isInteger(value) ? `${value}` : `${value.toFixed(1)}`;
@@ -74,12 +74,12 @@ const AnimatedChart = ({supportVisual, segmentFrame, fps}) => {
         <CartesianGrid stroke="rgba(17,24,39,0.16)" vertical={false} />
         <XAxis
           dataKey="label"
-          tick={{fill: TEXT_SECONDARY, fontSize: 26, fontWeight: 800}}
+          tick={{fill: TEXT_SECONDARY, fontSize: 30, fontWeight: 800}}
           axisLine={false}
           tickLine={false}
         />
         <YAxis
-          tick={{fill: TEXT_MUTED, fontSize: 20, fontWeight: 700}}
+          tick={{fill: TEXT_MUTED, fontSize: 24, fontWeight: 700}}
           axisLine={false}
           tickLine={false}
           width={66}
@@ -95,7 +95,7 @@ const AnimatedChart = ({supportVisual, segmentFrame, fps}) => {
             dataKey="value"
             position="top"
             formatter={labelFormatter}
-            style={{fill: "#553300", fontSize: 21, fontWeight: 900}}
+            style={{fill: TEXT_PRIMARY, fontSize: 26, fontWeight: 900}}
           />
         </Bar>
       </BarChart>
@@ -114,12 +114,12 @@ const AnimatedChart = ({supportVisual, segmentFrame, fps}) => {
         <CartesianGrid stroke="rgba(17,24,39,0.16)" vertical={false} />
         <XAxis
           dataKey="label"
-          tick={{fill: TEXT_SECONDARY, fontSize: 26, fontWeight: 800}}
+          tick={{fill: TEXT_SECONDARY, fontSize: 30, fontWeight: 800}}
           axisLine={false}
           tickLine={false}
         />
         <YAxis
-          tick={{fill: TEXT_MUTED, fontSize: 20, fontWeight: 700}}
+          tick={{fill: TEXT_MUTED, fontSize: 24, fontWeight: 700}}
           axisLine={false}
           tickLine={false}
           width={66}
@@ -141,12 +141,12 @@ const AnimatedChart = ({supportVisual, segmentFrame, fps}) => {
       <CartesianGrid stroke="rgba(17,24,39,0.16)" vertical={false} />
       <XAxis
         dataKey="label"
-        tick={{fill: TEXT_SECONDARY, fontSize: 26, fontWeight: 800}}
+        tick={{fill: TEXT_SECONDARY, fontSize: 30, fontWeight: 800}}
         axisLine={false}
         tickLine={false}
       />
       <YAxis
-        tick={{fill: TEXT_MUTED, fontSize: 20, fontWeight: 700}}
+        tick={{fill: TEXT_MUTED, fontSize: 24, fontWeight: 700}}
         axisLine={false}
         tickLine={false}
         width={66}
@@ -164,7 +164,7 @@ const AnimatedChart = ({supportVisual, segmentFrame, fps}) => {
           dataKey="value"
           position="top"
           formatter={labelFormatter}
-          style={{fill: "#553300", fontSize: 21, fontWeight: 900}}
+          style={{fill: TEXT_PRIMARY, fontSize: 26, fontWeight: 900}}
         />
       </Line>
     </LineChart>
@@ -237,7 +237,7 @@ export const SupportVisualStage = ({supportVisual, segmentFrame, fps, segmentDur
           <div
             style={{
               color: TEXT_PRIMARY,
-              fontSize: 48,
+              fontSize: 54,
               fontWeight: 900,
               lineHeight: 1.05
             }}
@@ -249,7 +249,7 @@ export const SupportVisualStage = ({supportVisual, segmentFrame, fps, segmentDur
               style={{
                 marginTop: 6,
                 color: TEXT_SECONDARY,
-                fontSize: 26,
+                fontSize: 30,
                 fontWeight: 600,
                 lineHeight: 1.2
               }}
@@ -261,8 +261,8 @@ export const SupportVisualStage = ({supportVisual, segmentFrame, fps, segmentDur
         {supportVisual.highlight_label ? (
           <div
             style={{
-              color: "#8f6800",
-              fontSize: 22,
+              color: TEXT_PRIMARY,
+              fontSize: 26,
               fontWeight: 900,
               textTransform: "uppercase",
               letterSpacing: 0.8,
@@ -295,8 +295,8 @@ export const SupportVisualStage = ({supportVisual, segmentFrame, fps, segmentDur
             left: 24,
             right: 24,
             bottom: 14,
-            color: "rgba(17,24,39,0.72)",
-            fontSize: 18,
+            color: TEXT_PRIMARY,
+            fontSize: 21,
             fontWeight: 600,
             lineHeight: 1.2
           }}

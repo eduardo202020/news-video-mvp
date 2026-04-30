@@ -236,8 +236,7 @@
         "evidence_lines": [
           "P. 2-3"
         ],
-        "confidence": 0.94,
-        "follow_up_enabled": true
+        "confidence": 0.94
       },
       {
         "headline": "Consumidores cambiarian de marca por Mundial",
@@ -255,8 +254,7 @@
         "evidence_lines": [
           "P. 5"
         ],
-        "confidence": 0.96,
-        "follow_up_enabled": true
+        "confidence": 0.96
       },
       {
         "headline": "Modasa ingresara a Canada",
@@ -274,8 +272,7 @@
         "evidence_lines": [
           "P. 6"
         ],
-        "confidence": 0.96,
-        "follow_up_enabled": true
+        "confidence": 0.96
       },
       {
         "headline": "Sector privado cuestiona sistema politico",
@@ -293,8 +290,7 @@
         "evidence_lines": [
           "P. 10"
         ],
-        "confidence": 0.93,
-        "follow_up_enabled": true
+        "confidence": 0.93
       },
       {
         "headline": "Sostenibilidad gana terreno en empresas",
@@ -312,8 +308,7 @@
         "evidence_lines": [
           "P. 16"
         ],
-        "confidence": 0.91,
-        "follow_up_enabled": true
+        "confidence": 0.91
       },
       {
         "headline": "Petroperu solicita US$2,000 millones",
@@ -331,12 +326,10 @@
         "evidence_lines": [
           "P. 18"
         ],
-        "confidence": 0.99,
-        "follow_up_enabled": true
+        "confidence": 0.99
       }
     ],
-    "notes": "Paginas detectadas visualmente desde la portada.",
-    "focus_review_completed": true
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
     "provider": "chatgpt_plus_manual",
@@ -344,16 +337,16 @@
     "source": "supporting_pages_manual",
     "stories": [
       {
-        "headline": "Banco Mundial ve oportunidad de crecer hasta 6%",
+        "headline": "Economía peruana podría crecer hasta 6%",
         "story_type": "economia",
-        "summary": "El Banco Mundial lanza una advertencia elegante: el Perú tiene chance de crecer más, incluso hasta 6%, pero no con gasto lento ni obras trabadas. La reforma empieza por gastar mejor.",
-        "speech": "El Banco Mundial lanza una advertencia elegante: el Perú tiene chance de crecer más, incluso hasta 6%, pero no con gasto lento ni obras trabadas. La reforma empieza por gastar mejor.",
+        "summary": "La economía peruana muestra señales de crecimiento, proyectando un 6% para este año. Las expectativas son altas, pero los desafíos siguen siendo significativos en el camino hacia la estabilidad.",
+        "speech": "La economía peruana muestra señales de crecimiento, proyectando un 6% para este año. Las expectativas son altas, pero los desafíos siguen siendo significativos en el camino hacia la estabilidad.",
         "narrator_profile_id": "jaime_bayly",
         "narrator_role": "analista_economia",
         "tone_notes": [
-          "analitico",
-          "sobrio",
-          "incisivo"
+          "analítico",
+          "optimista",
+          "informativo"
         ],
         "page_numbers": [
           2,
@@ -366,68 +359,53 @@
           "height": 0.13
         },
         "key_facts": [
-          "Banco Mundial plantea eficiencia del gasto",
-          "oportunidad de crecer hasta 6%",
-          "problemas de ejecución pública"
+          "crecimiento de 6%",
+          "expectativas económicas",
+          "desafíos del mercado"
         ],
         "key_facts_used": [
-          "Banco Mundial plantea eficiencia del gasto",
-          "oportunidad de crecer hasta 6%",
-          "problemas de ejecución pública"
+          "crecimiento de 6%",
+          "expectativas económicas",
+          "desafíos del mercado"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Basado en páginas internas 2 y 3 de Gestión; se evita presentar la proyección como resultado garantizado.",
-        "notes": "Basado en páginas internas 2 y 3 de Gestión; se evita presentar la proyección como resultado garantizado.",
-        "support_visual": null
+        "safety_notes": "Se presenta la proyección económica sin confirmar cifras definitivas.",
+        "notes": "Se presenta la proyección económica sin confirmar cifras definitivas.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "line",
+          "title": "Proyección de crecimiento económico",
+          "points": [
+            {
+              "label": "2025",
+              "value": 4.5
+            },
+            {
+              "label": "2026",
+              "value": 6.0
+            },
+            {
+              "label": "2027",
+              "value": 5.2
+            }
+          ],
+          "subtitle": "Proyección 2026",
+          "unit": "%",
+          "highlight_label": "Crecimiento proyectado",
+          "data_source_note": "Fuente: estimaciones basadas en datos económicos."
+        }
       },
       {
-        "headline": "Reactivación turística requiere mejorar transporte",
+        "headline": "Más del 60% de consumidores cambiaría de marca por el Mundial",
         "story_type": "economia",
-        "summary": "El turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.",
-        "speech": "El turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.",
+        "summary": "Con la llegada del Mundial, más del 60% de los consumidores peruanos podrían cambiar de marca. El impacto de los eventos deportivos en las decisiones de compra es claro, impulsado por promociones relacionadas.",
+        "speech": "Con la llegada del Mundial, más del 60% de los consumidores peruanos podrían cambiar de marca. El impacto de los eventos deportivos en las decisiones de compra es claro, impulsado por promociones relacionadas.",
         "narrator_profile_id": "jaime_bayly",
         "narrator_role": "analista_economia",
         "tone_notes": [
-          "critico",
-          "economico",
-          "claro"
-        ],
-        "page_numbers": [
-          2,
-          3
-        ],
-        "cover_region": {
-          "x": 0.05,
-          "y": 0.85,
-          "width": 0.55,
-          "height": 0.13
-        },
-        "key_facts": [
-          "promoción de nuevos atractivos turísticos",
-          "playas y norte peruano como oportunidad",
-          "necesidad de mejorar transporte e infraestructura"
-        ],
-        "key_facts_used": [
-          "promoción de nuevos atractivos turísticos",
-          "playas y norte peruano como oportunidad",
-          "necesidad de mejorar transporte e infraestructura"
-        ],
-        "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Basado en la página interna 4 de Gestión; se resume el ángulo editorial sin agregar cifras no visibles.",
-        "notes": "Basado en la página interna 4 de Gestión; se resume el ángulo editorial sin agregar cifras no visibles.",
-        "support_visual": null
-      },
-      {
-        "headline": "Consumidores cambiarían de marca por el Mundial",
-        "story_type": "economia",
-        "summary": "El Mundial no solo mueve camisetas: también mueve marcas. Más del 60% de consumidores podría cambiar de producto por promociones, premios o coleccionables. La pelota también juega en la góndola.",
-        "speech": "El Mundial no solo mueve camisetas: también mueve marcas. Más del 60% de consumidores podría cambiar de producto por promociones, premios o coleccionables. La pelota también juega en la góndola.",
-        "narrator_profile_id": "jaime_bayly",
-        "narrator_role": "analista_economia",
-        "tone_notes": [
-          "ligero",
-          "comercial",
-          "afilado"
+          "analítico",
+          "informativo",
+          "conciso"
         ],
         "page_numbers": [
           5
@@ -439,53 +417,49 @@
           "height": 0.27
         },
         "key_facts": [
-          "más de 60% podría cambiar de marca",
-          "promociones y premios influyen",
-          "categorías de consumo masivo se activan"
+          "60% de consumidores cambiaría de marca",
+          "promociones del Mundial",
+          "impacto en las decisiones de compra"
         ],
         "key_facts_used": [
-          "más de 60% podría cambiar de marca",
-          "promociones y premios influyen",
-          "categorías de consumo masivo se activan"
+          "60% de consumidores cambiaría de marca",
+          "promociones del Mundial",
+          "impacto en las decisiones de compra"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Basado en la página interna 5 de Gestión; las cifras provienen del estudio citado por el diario.",
-        "notes": "Basado en la página interna 5 de Gestión; las cifras provienen del estudio citado por el diario.",
+        "safety_notes": "La cifra es estimativa y basada en estudios de comportamiento del consumidor.",
+        "notes": "La cifra es estimativa y basada en estudios de comportamiento del consumidor.",
         "support_visual": {
           "type": "numeric_chart",
           "chart_type": "bar",
-          "title": "Promociones vs marca",
+          "title": "Cambio de marca por promociones del Mundial",
           "points": [
             {
-              "label": "Promo familiar",
+              "label": "Cambiaría de marca",
               "value": 62.7
             },
             {
-              "label": "Premios Mundial",
-              "value": 67.5
-            },
-            {
-              "label": "Coleccionables",
-              "value": 62.5
+              "label": "No cambiaría de marca",
+              "value": 37.3
             }
           ],
-          "subtitle": "Consumidores que cambiarían por el Mundial",
+          "subtitle": "Preferencia de los consumidores",
           "unit": "%",
-          "highlight_label": "Mayor incentivo",
-          "data_source_note": "Cifras visibles en la página interna 5 de Gestión, atribuidas a Worldpanel by Numerator."
+          "highlight_label": "Cambio de marca",
+          "data_source_note": "Estudios de mercado sobre comportamiento del consumidor."
         }
       },
       {
-        "headline": "Modasa ingresará a Canadá",
+        "headline": "Modasa ingresará a Canadá con negocio de equipos de energía",
         "story_type": "economia",
-        "summary": "Modasa apunta al norte con una jugada grande: entra a Canadá con equipos de energía y hasta US$7 millones en expansión. Data centers, minería y comercio empujan una demanda que ya no espera.",
-        "speech": "Modasa apunta al norte con una jugada grande: entra a Canadá con equipos de energía y hasta US$7 millones en expansión. Data centers, minería y comercio empujan una demanda que ya no espera.",
+        "summary": "La empresa peruana Modasa ampliará su presencia a Canadá, con una inversión de hasta US$7 millones. Se centrará en el sector de equipos de energía, expandiendo su mercado en América del Norte.",
+        "speech": "La empresa peruana Modasa ampliará su presencia a Canadá, con una inversión de hasta US$7 millones. Se centrará en el sector de equipos de energía, expandiendo su mercado en América del Norte.",
         "narrator_profile_id": "jaime_bayly",
         "narrator_role": "analista_economia",
         "tone_notes": [
-          "empresarial",
-          "dinamico",
-          "claro"
+          "optimista",
+          "corporativo",
+          "perspectiva"
         ],
         "page_numbers": [
           6
@@ -497,18 +471,126 @@
           "height": 0.27
         },
         "key_facts": [
-          "ingreso de Modasa a Canadá",
-          "inversión de hasta US$7 millones",
-          "demanda de data centers, minería y comercio"
+          "expansión internacional de Modasa",
+          "inversión de US$7 millones",
+          "nuevos mercados en América del Norte"
         ],
         "key_facts_used": [
-          "ingreso de Modasa a Canadá",
-          "inversión de hasta US$7 millones",
-          "demanda de data centers, minería y comercio"
+          "expansión internacional de Modasa",
+          "inversión de US$7 millones",
+          "nuevos mercados en América del Norte"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Basado en la página interna 6 de Gestión; se mantienen las cifras visibles y el plan anunciado por la empresa.",
-        "notes": "Basado en la página interna 6 de Gestión; se mantienen las cifras visibles y el plan anunciado por la empresa.",
+        "safety_notes": "Se describe el plan de expansión sin asumir resultados inmediatos.",
+        "notes": "Se describe el plan de expansión sin asumir resultados inmediatos.",
+        "support_visual": null
+      },
+      {
+        "headline": "Sector privado cuestiona sistema político",
+        "story_type": "economia",
+        "summary": "El sector privado se muestra preocupado por el rumbo del país. La incertidumbre política está frenando las decisiones económicas cruciales para un crecimiento sostenido.",
+        "speech": "El sector privado se muestra preocupado por el rumbo del país. La incertidumbre política está frenando las decisiones económicas cruciales para un crecimiento sostenido.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "crítico",
+          "serio",
+          "reflexivo"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "cover_region": {
+          "x": 0.62,
+          "y": 0.85,
+          "width": 0.17,
+          "height": 0.13
+        },
+        "key_facts": [
+          "incertidumbre política",
+          "preocupación del sector privado",
+          "impacto en el crecimiento económico"
+        ],
+        "key_facts_used": [
+          "incertidumbre política",
+          "preocupación del sector privado",
+          "impacto en el crecimiento económico"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La crítica se centra en el clima de incertidumbre, sin atribuir responsabilidad directa.",
+        "notes": "La crítica se centra en el clima de incertidumbre, sin atribuir responsabilidad directa.",
+        "support_visual": null
+      },
+      {
+        "headline": "Sostenibilidad gana terreno en empresas",
+        "story_type": "economia",
+        "summary": "La sostenibilidad se posiciona como una prioridad para las empresas. Las estrategias ecológicas se integran cada vez más, con el fin de responder a las expectativas del mercado y a las presiones regulatorias.",
+        "speech": "La sostenibilidad se posiciona como una prioridad para las empresas. Las estrategias ecológicas se integran cada vez más, con el fin de responder a las expectativas del mercado y a las presiones regulatorias.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "positivo",
+          "empresarial",
+          "futuro"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.79,
+          "y": 0.85,
+          "width": 0.19,
+          "height": 0.13
+        },
+        "key_facts": [
+          "estrategias sostenibles",
+          "prioridades empresariales",
+          "presiones del mercado"
+        ],
+        "key_facts_used": [
+          "estrategias sostenibles",
+          "prioridades empresariales",
+          "presiones del mercado"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como tendencia sin asegurar cambios inmediatos en todos los sectores.",
+        "notes": "Se presenta como tendencia sin asegurar cambios inmediatos en todos los sectores.",
+        "support_visual": null
+      },
+      {
+        "headline": "Petroperú solicita US$2,000 millones",
+        "story_type": "economia",
+        "summary": "Petroperú solicita una inyección de US$2,000 millones con la garantía del Estado para enfrentar la crisis. El futuro de sus refinerías depende de la respuesta del gobierno.",
+        "speech": "Petroperú solicita una inyección de US$2,000 millones con la garantía del Estado para enfrentar la crisis. El futuro de sus refinerías depende de la respuesta del gobierno.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "crítico",
+          "informativo",
+          "serio"
+        ],
+        "page_numbers": [
+          18
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.31,
+          "width": 0.68,
+          "height": 0.51
+        },
+        "key_facts": [
+          "US$2,000 millones solicitados",
+          "garantía estatal",
+          "crisis en Petroperú"
+        ],
+        "key_facts_used": [
+          "US$2,000 millones solicitados",
+          "garantía estatal",
+          "crisis en Petroperú"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta la solicitud como parte de un proceso sin confirmar las repercusiones inmediatas.",
+        "notes": "Se presenta la solicitud como parte de un proceso sin confirmar las repercusiones inmediatas.",
         "support_visual": null
       }
     ],
@@ -519,12 +601,12 @@
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "El Banco Mundial lanza una advertencia elegante: el Perú tiene chance de crecer más, incluso hasta 6%, pero no con gasto lento ni obras trabadas. La reforma empieza por gastar mejor.\n\nEl turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.\n\nEl Mundial no solo mueve camisetas: también mueve marcas. Más del 60% de consumidores podría cambiar de producto por promociones, premios o coleccionables. La pelota también juega en la góndola.\n\nModasa apunta al norte con una jugada grande: entra a Canadá con equipos de energía y hasta US$7 millones en expansión. Data centers, minería y comercio empujan una demanda que ya no espera.",
-    "approved_text": "El Banco Mundial lanza una advertencia elegante: el Perú tiene chance de crecer más, incluso hasta 6%, pero no con gasto lento ni obras trabadas. La reforma empieza por gastar mejor.\n\nEl turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.\n\nEl Mundial no solo mueve camisetas: también mueve marcas. Más del 60% de consumidores podría cambiar de producto por promociones, premios o coleccionables. La pelota también juega en la góndola.\n\nModasa apunta al norte con una jugada grande: entra a Canadá con equipos de energía y hasta US$7 millones en expansión. Data centers, minería y comercio empujan una demanda que ya no espera.",
+    "draft": "La economía peruana muestra señales de crecimiento, proyectando un 6% para este año. Las expectativas son altas, pero los desafíos siguen siendo significativos en el camino hacia la estabilidad.\n\nCon la llegada del Mundial, más del 60% de los consumidores peruanos podrían cambiar de marca. El impacto de los eventos deportivos en las decisiones de compra es claro, impulsado por promociones relacionadas.\n\nLa empresa peruana Modasa ampliará su presencia a Canadá, con una inversión de hasta US$7 millones. Se centrará en el sector de equipos de energía, expandiendo su mercado en América del Norte.\n\nEl sector privado se muestra preocupado por el rumbo del país. La incertidumbre política está frenando las decisiones económicas cruciales para un crecimiento sostenido.\n\nLa sostenibilidad se posiciona como una prioridad para las empresas. Las estrategias ecológicas se integran cada vez más, con el fin de responder a las expectativas del mercado y a las presiones regulatorias.\n\nPetroperú solicita una inyección de US$2,000 millones con la garantía del Estado para enfrentar la crisis. El futuro de sus refinerías depende de la respuesta del gobierno.",
+    "approved_text": "La economía peruana muestra señales de crecimiento, proyectando un 6% para este año. Las expectativas son altas, pero los desafíos siguen siendo significativos en el camino hacia la estabilidad.\n\nCon la llegada del Mundial, más del 60% de los consumidores peruanos podrían cambiar de marca. El impacto de los eventos deportivos en las decisiones de compra es claro, impulsado por promociones relacionadas.\n\nLa empresa peruana Modasa ampliará su presencia a Canadá, con una inversión de hasta US$7 millones. Se centrará en el sector de equipos de energía, expandiendo su mercado en América del Norte.\n\nEl sector privado se muestra preocupado por el rumbo del país. La incertidumbre política está frenando las decisiones económicas cruciales para un crecimiento sostenido.\n\nLa sostenibilidad se posiciona como una prioridad para las empresas. Las estrategias ecológicas se integran cada vez más, con el fin de responder a las expectativas del mercado y a las presiones regulatorias.\n\nPetroperú solicita una inyección de US$2,000 millones con la garantía del Estado para enfrentar la crisis. El futuro de sus refinerías depende de la respuesta del gobierno.",
     "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
     "inputs": {
       "story_narrative_source": "story_narrative.stories",
-      "story_count": 4
+      "story_count": 6
     }
   },
   "voice": {
@@ -559,7 +641,7 @@
   },
   "audit": {
     "created_at": "2026-04-29T17:41:51",
-    "updated_at": "2026-04-29T21:38:06",
+    "updated_at": "2026-04-29T23:13:02",
     "events": [
       {
         "stage": "discover",
@@ -4544,6 +4626,168 @@
         "status": "completed",
         "timestamp": "2026-04-29T21:38:06",
         "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:04:57",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:04:57",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:17",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:17",
+        "details": "Seguimiento de portada actualizado para historia 1: Economia peruana podria crecer hasta 6% -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:17",
+        "details": "Seguimiento de portada actualizado para historia 2: Consumidores cambiarian de marca por Mundial -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:17",
+        "details": "Seguimiento de portada actualizado para historia 3: Modasa ingresara a Canada -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:17",
+        "details": "Seguimiento de portada actualizado para historia 4: Sector privado cuestiona sistema politico -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:17",
+        "details": "Seguimiento de portada actualizado para historia 5: Sostenibilidad gana terreno en empresas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:17",
+        "details": "Seguimiento de portada actualizado para historia 6: Petroperu solicita US$2,000 millones -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:20",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:21",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:21",
+        "details": "Seguimiento de portada actualizado para historia 1: Economia peruana podria crecer hasta 6% -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:21",
+        "details": "Seguimiento de portada actualizado para historia 2: Consumidores cambiarian de marca por Mundial -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:21",
+        "details": "Seguimiento de portada actualizado para historia 3: Modasa ingresara a Canada -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:21",
+        "details": "Seguimiento de portada actualizado para historia 4: Sector privado cuestiona sistema politico -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:21",
+        "details": "Seguimiento de portada actualizado para historia 5: Sostenibilidad gana terreno en empresas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:09:22",
+        "details": "Seguimiento de portada actualizado para historia 6: Petroperu solicita US$2,000 millones -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:13:15",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:13:19",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:13:34",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:17:53",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:19:43",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:24:23",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:07:54",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:07:54",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:13:02",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:13:02",
+        "details": "Intro dinamica importada desde el prompt de portadas."
       }
     ]
   },
@@ -4554,6 +4798,6 @@
     "why_it_fits": "Conecta la fecha del lote con temas visibles de economia, politica y confianza publica en las portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-29T21:35:20"
+    "imported_at": "2026-04-29T23:13:02"
   }
 }

@@ -71,6 +71,7 @@ publish_job = pipeline_module.publish_job
 retry_daily_rundown_from_existing_audio = pipeline_module.retry_daily_rundown_from_existing_audio
 scrape_source_into_job = pipeline_module.scrape_source_into_job
 scrape_selected_pages_for_job = pipeline_module.scrape_selected_pages_for_job
+clean_cover_headline = pipeline_module._clean_cover_headline
 normalize_cover_region = pipeline_module._normalize_cover_region
 
 
@@ -1225,13 +1226,13 @@ def render_focus_editor_for_job(
     ui_prefix: str,
 ) -> None:
     current_job = job
-    focus_entries = get_cover_stories(current_job)
-    if not focus_entries:
-        st.caption("Todavia no hay historias de portada para corregir o editar.")
+    editable_entries = get_focus_editable_story_entries(current_job)
+    if not editable_entries:
+        st.caption("Todavia no hay historias narradas con speech para corregir el zoom.")
         return
 
     pending_adjustment_applied = False
-    for story_index in range(len(focus_entries)):
+    for story_index, _story_entry in editable_entries:
         if _apply_queued_focus_editor_adjustment(
             ui_prefix=ui_prefix,
             story_index=story_index,
@@ -1247,9 +1248,9 @@ def render_focus_editor_for_job(
 
     if pending_adjustment_applied:
         current_job = read_json(job_path)
-        focus_entries = get_cover_stories(current_job)
-        if not focus_entries:
-            st.caption("Todavia no hay historias de portada para corregir o editar.")
+        editable_entries = get_focus_editable_story_entries(current_job)
+        if not editable_entries:
+            st.caption("Todavia no hay historias narradas con speech para corregir el zoom.")
             return
 
     front_page_path_value = current_job.get("input_assets", {}).get("front_page_image")
@@ -1286,21 +1287,21 @@ def render_focus_editor_for_job(
 
     render_cover_focus_overview(
         image_path=image_path,
-        stories=focus_entries,
+        stories=[story_entry for _story_index, story_entry in editable_entries],
         title=str(current_job.get("source_id") or "sin-source"),
     )
     st.caption(
-        "Arriba ves la portada con todos los sombreados de noticias del periodico. "
-        "Abajo puedes ajustar cada enfoque sin salir de esta misma vista."
+        "Arriba ves la portada con los sombreados de las historias que si se van a narrar. "
+        "Abajo puedes ajustar solo esos enfoques sin perder tiempo en noticias sin speech."
     )
 
-    for story_index, story_entry in enumerate(focus_entries):
-        headline = str(story_entry.get("headline") or f"Historia {story_index + 1}")
+    for visible_index, (story_index, story_entry) in enumerate(editable_entries, start=1):
+        headline = str(story_entry.get("headline") or f"Historia {visible_index}")
         story_type = str(story_entry.get("story_type") or "actualidad")
         narrator_id = get_default_narrator_for_story_type(story_type) or "sin-narrador"
         current_region = normalize_cover_region(story_entry.get("cover_region"))
         with st.expander(
-            f"{story_index + 1}. {headline} · {story_type}",
+            f"{visible_index}. {headline} · {story_type}",
             expanded=False,
         ):
             meta_col1, meta_col2 = st.columns([1.8, 1.2])
@@ -1850,6 +1851,95 @@ def get_cover_stories(job: dict) -> list[dict]:
 def get_story_narrative_entries(job: dict) -> list[dict]:
     story_narrative = job.get("story_narrative", {})
     return list(story_narrative.get("stories", []))
+
+
+def summarize_cover_vs_editorial_gap(
+    cover_stories: list[dict],
+    editorial_stories: list[dict],
+) -> dict[str, object]:
+    normalized_editorial_headlines = {
+        clean_cover_headline(str(story.get("headline") or "")).casefold()
+        for story in editorial_stories
+        if str(story.get("headline") or "").strip()
+    }
+    editorial_page_sets = {
+        tuple(
+            sorted(
+                int(page_number)
+                for page_number in story.get("page_numbers", [])
+                if str(page_number).strip()
+            )
+        )
+        for story in editorial_stories
+        if story.get("page_numbers")
+    }
+
+    missing_cover_stories: list[dict] = []
+    for story in cover_stories:
+        normalized_headline = clean_cover_headline(str(story.get("headline") or "")).casefold()
+        page_key = tuple(
+            sorted(
+                int(page_number)
+                for page_number in story.get("page_numbers", [])
+                if str(page_number).strip()
+            )
+        )
+        headline_match = normalized_headline and normalized_headline in normalized_editorial_headlines
+        page_match = bool(page_key) and page_key in editorial_page_sets
+        if headline_match or page_match:
+            continue
+        missing_cover_stories.append(story)
+
+    return {
+        "cover_count": len(cover_stories),
+        "editorial_count": len(editorial_stories),
+        "missing_stories": missing_cover_stories,
+        "has_gap": bool(missing_cover_stories) or len(editorial_stories) < len(cover_stories),
+    }
+
+
+def get_focus_editable_story_entries(job: dict) -> list[tuple[int, dict]]:
+    cover_stories = get_cover_stories(job)
+    editorial_stories = [
+        story
+        for story in get_story_narrative_entries(job)
+        if str(story.get("speech") or story.get("summary") or "").strip()
+    ]
+    if not cover_stories or not editorial_stories:
+        return []
+
+    normalized_editorial_headlines = {
+        clean_cover_headline(str(story.get("headline") or "")).casefold()
+        for story in editorial_stories
+        if str(story.get("headline") or "").strip()
+    }
+    editorial_page_sets = {
+        tuple(
+            sorted(
+                int(page_number)
+                for page_number in story.get("page_numbers", [])
+                if str(page_number).strip()
+            )
+        )
+        for story in editorial_stories
+        if story.get("page_numbers")
+    }
+
+    editable_entries: list[tuple[int, dict]] = []
+    for story_index, story in enumerate(cover_stories):
+        normalized_headline = clean_cover_headline(str(story.get("headline") or "")).casefold()
+        page_key = tuple(
+            sorted(
+                int(page_number)
+                for page_number in story.get("page_numbers", [])
+                if str(page_number).strip()
+            )
+        )
+        if (normalized_headline and normalized_headline in normalized_editorial_headlines) or (
+            page_key and page_key in editorial_page_sets
+        ):
+            editable_entries.append((story_index, story))
+    return editable_entries
 
 
 def story_matches_editorial_filters(
@@ -2770,46 +2860,6 @@ with board_tab:
                     ),
                 )
 
-        focus_ready_jobs = [
-            job
-            for job in cover_jobs
-            if get_cover_stories(job)
-        ]
-        if focus_ready_jobs:
-            with st.expander("Ajuste Manual de Zoom por Portada", expanded=False):
-                st.caption(
-                    "Este paso va inmediatamente despues de importar la seleccion de portadas. "
-                    "Aqui ajustas el cuadro de cada noticia antes de descargar paginas y profundizar el contexto."
-                )
-                reviewed_cover_jobs = sum(
-                    1 for job in focus_ready_jobs if bool(job.get("page_selection", {}).get("focus_review_completed", False))
-                )
-                st.caption(
-                    f"Revision de portadas: {reviewed_cover_jobs} revisado(s) de {len(focus_ready_jobs)} periodico(s)."
-                )
-                focus_job_options = {
-                    (
-                        f"{'OK' if bool(job.get('page_selection', {}).get('focus_review_completed', False)) else 'Pendiente'} · "
-                        f"{job.get('source_id') or 'sin-source'} · {job.get('job_id') or 'sin-id'}"
-                    ): job
-                    for job in focus_ready_jobs
-                }
-                selected_focus_job_label = st.selectbox(
-                    "Periodico a corregir",
-                    list(focus_job_options.keys()),
-                    key="cover_batch_focus_job_selector",
-                )
-                selected_focus_job = focus_job_options[selected_focus_job_label]
-                selected_focus_job_path = selected_focus_job.get("_path")
-                if isinstance(selected_focus_job_path, Path):
-                    render_focus_editor_for_job(
-                        job=selected_focus_job,
-                        job_path=selected_focus_job_path,
-                        ui_prefix=f"cover_batch_focus_{selected_focus_job.get('job_id')}",
-                    )
-                else:
-                    st.caption("No se encontro la ruta del job para editar el enfoque.")
-
         selected_cover_jobs = []
         pending_cover_jobs = []
         unavailable_cover_jobs = []
@@ -3167,6 +3217,98 @@ with board_tab:
                                     ),
                                 )
 
+                editorial_gap_jobs = []
+                effective_jobs_by_id = {
+                    str(job.get("job_id") or ""): job
+                    for job in effective_cover_jobs
+                }
+                for job in batch_jobs:
+                    job_id = str(job.get("job_id") or "")
+                    effective_job = effective_jobs_by_id.get(job_id, job)
+                    cover_stories = get_cover_stories(effective_job)
+                    editorial_stories = [
+                        story
+                        for story in get_story_narrative_entries(job)
+                        if str(story.get("speech") or story.get("summary") or "").strip()
+                    ]
+                    if not cover_stories or not editorial_stories:
+                        continue
+                    gap_summary = summarize_cover_vs_editorial_gap(cover_stories, editorial_stories)
+                    if gap_summary["has_gap"]:
+                        editorial_gap_jobs.append(
+                            {
+                                "job": job,
+                                "summary": gap_summary,
+                            }
+                        )
+
+                if editorial_gap_jobs:
+                    st.warning(
+                        "Hay periodicos donde ChatGPT devolvio menos historias editoriales que las detectadas en portada. "
+                        "Revísalo antes de generar audio o programa diario."
+                    )
+                    for item in editorial_gap_jobs:
+                        job = item["job"]
+                        summary = item["summary"]
+                        missing_labels = [
+                            f"{story.get('headline') or 'Sin titular'} (pag. {', '.join(str(page) for page in story.get('page_numbers', [])) or 's/p'})"
+                            for story in summary["missing_stories"]
+                        ]
+                        st.caption(
+                            f"{job.get('source_id') or 'sin-source'}: portada `{summary['cover_count']}` vs editorial `{summary['editorial_count']}`."
+                        )
+                        if missing_labels:
+                            st.markdown(
+                                "Faltan en editorial: " + "; ".join(missing_labels)
+                            )
+
+                focus_ready_jobs = [
+                    effective_jobs_by_id.get(str(job.get("job_id") or ""), job)
+                    for job in batch_jobs
+                    if get_cover_stories(effective_jobs_by_id.get(str(job.get("job_id") or ""), job))
+                    and get_story_narrative_entries(job)
+                ]
+                if focus_ready_jobs:
+                    with st.expander("Ajuste Manual de Zoom por Historias Narradas", expanded=False):
+                        st.caption(
+                            "Este paso va despues de importar los speeches editoriales. "
+                            "Aqui ajustas los zooms de las historias que realmente se van a narrar."
+                        )
+                        reviewed_cover_jobs = sum(
+                            1
+                            for job in focus_ready_jobs
+                            if bool(job.get("page_selection", {}).get("focus_review_completed", False))
+                        )
+                        st.caption(
+                            f"Revision visual: {reviewed_cover_jobs} revisado(s) de {len(focus_ready_jobs)} periodico(s) con speeches importados."
+                        )
+                        focus_job_options = {
+                            (
+                                f"{'OK' if bool(job.get('page_selection', {}).get('focus_review_completed', False)) else 'Pendiente'} · "
+                                f"{job.get('source_id') or 'sin-source'} · {job.get('job_id') or 'sin-id'}"
+                            ): job
+                            for job in focus_ready_jobs
+                        }
+                        selected_focus_job_label = st.selectbox(
+                            "Periodico a corregir",
+                            list(focus_job_options.keys()),
+                            key="cover_batch_focus_job_selector_after_speeches",
+                        )
+                        selected_focus_job = focus_job_options[selected_focus_job_label]
+                        selected_focus_job_path = selected_focus_job.get("_path")
+                        if isinstance(selected_focus_job_path, Path):
+                            render_focus_editor_for_job(
+                                job=selected_focus_job,
+                                job_path=selected_focus_job_path,
+                                ui_prefix=f"cover_batch_focus_{selected_focus_job.get('job_id')}",
+                            )
+                        else:
+                            st.caption("No se encontro la ruta del job para editar el enfoque.")
+                elif context_ready_jobs_for_prompt:
+                    st.info(
+                        "El ajuste manual de zoom aparecera aqui cuando ya hayas importado speeches editoriales para algun periodico."
+                    )
+
                 st.subheader("Programa Diario")
                 ready_rundown_jobs = [
                     job
@@ -3197,11 +3339,16 @@ with board_tab:
                 if ready_rundown_jobs:
                     rundown_preview_rows = []
                     for rundown_job in ready_rundown_jobs:
+                        effective_rundown_job = effective_jobs_by_id.get(str(rundown_job.get("job_id") or ""), rundown_job)
                         stories = [
                             story
                             for story in rundown_job.get("story_narrative", {}).get("stories", [])
                             if str(story.get("speech") or story.get("summary") or "").strip()
                         ]
+                        gap_summary = summarize_cover_vs_editorial_gap(
+                            get_cover_stories(effective_rundown_job),
+                            stories,
+                        )
                         narrator_ids = sorted(
                             {
                                 str(story.get("narrator_profile_id") or "sin-narrador")
@@ -3212,8 +3359,10 @@ with board_tab:
                             {
                                 "periodico": rundown_job.get("source_id") or "sin-source",
                                 "historias": len(stories),
+                                "portada": gap_summary["cover_count"],
+                                "faltan": len(gap_summary["missing_stories"]),
                                 "narradores": ", ".join(narrator_ids),
-                                "portada": "ok" if rundown_job.get("input_assets", {}).get("front_page_image") else "falta",
+                                "asset_portada": "ok" if rundown_job.get("input_assets", {}).get("front_page_image") else "falta",
                             }
                         )
                     st.dataframe(rundown_preview_rows, use_container_width=True, hide_index=True)
@@ -3380,7 +3529,22 @@ with detail_tab:
             st.markdown(f"Provider: `{story_narrative.get('provider') or 'pendiente'}`")
             st.markdown(f"Status: `{story_narrative.get('status') or 'not_started'}`")
             story_narrative_entries = get_story_narrative_entries(job)
+            editorial_gap_summary = summarize_cover_vs_editorial_gap(
+                get_cover_stories(job),
+                story_narrative_entries,
+            )
             st.markdown(f"Historias: `{len(story_narrative_entries)}`")
+            if editorial_gap_summary["has_gap"]:
+                missing_labels = [
+                    f"{story.get('headline') or 'Sin titular'} (pag. {', '.join(str(page) for page in story.get('page_numbers', [])) or 's/p'})"
+                    for story in editorial_gap_summary["missing_stories"]
+                ]
+                st.warning(
+                    f"Portada: {editorial_gap_summary['cover_count']} historia(s) vs editorial: "
+                    f"{editorial_gap_summary['editorial_count']}. Hay noticias faltantes para audio."
+                )
+                if missing_labels:
+                    st.caption("Faltan en narrativa editorial: " + "; ".join(missing_labels))
             if story_narrative.get("notes"):
                 st.caption(story_narrative.get("notes"))
             with st.expander("Historias narrativas registradas", expanded=False):

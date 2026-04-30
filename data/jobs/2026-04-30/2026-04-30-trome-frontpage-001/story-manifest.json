@@ -1,0 +1,180 @@
+{
+  "story_id": "2026-04-30-trome-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-30-trome-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/front-page.jpg",
+      "headline": "La Perlita brilla a nivel mundial",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta.",
+      "page_numbers": [
+        9
+      ],
+      "key_facts": [
+        "La Perla en Barranco",
+        "Conde Nast Traveler",
+        "Jeff Bezos"
+      ],
+      "tone_notes": [
+        "informativo",
+        "festejante",
+        "positivo"
+      ],
+      "safety_notes": "No se detallan cifras exactas de la clasificación, pero se destaca su prestigio internacional.",
+      "cover_region": {
+        "x": 0.08,
+        "y": 0.83,
+        "width": 0.46,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Irán vive infierno por guerra y escasez",
+      "story_type": "mundo",
+      "segment_type": "story",
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Irán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible.",
+      "page_numbers": [
+        10
+      ],
+      "key_facts": [
+        "guerra en Irán",
+        "escasez",
+        "más de un millón sin empleo"
+      ],
+      "tone_notes": [
+        "grave",
+        "alarmante",
+        "directo"
+      ],
+      "safety_notes": "Se menciona el contexto social sin entrar en detalles numéricos precisos sobre víctimas o daños.",
+      "cover_region": {
+        "x": 0.31,
+        "y": 0.19,
+        "width": 0.67,
+        "height": 0.61
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Triunfazo de la U en la Copa Libertadores",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema.",
+      "page_numbers": [
+        11
+      ],
+      "key_facts": [
+        "4-2 Universitario vs Nacional",
+        "Copa Libertadores",
+        "seguridad de clasificación"
+      ],
+      "tone_notes": [
+        "entusiasta",
+        "emocionante",
+        "futbolero"
+      ],
+      "safety_notes": "Se confirma el marcador y el impacto positivo para el club en la Libertadores.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.2,
+        "width": 0.31,
+        "height": 0.66
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Marcador final",
+        "points": [
+          {
+            "label": "Universitario",
+            "value": 4.0
+          },
+          {
+            "label": "Nacional",
+            "value": 2.0
+          }
+        ],
+        "subtitle": "Universitario vs Nacional",
+        "unit": "goles",
+        "highlight_label": "Triunfo crema",
+        "data_source_note": "Datos confirmados en la cobertura oficial del partido."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Jota no iría a una despedida de soltero",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Angie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula.",
+      "page_numbers": [
+        15
+      ],
+      "key_facts": [
+        "Jota Benz",
+        "Angie Arizaga",
+        "despedida de soltero"
+      ],
+      "tone_notes": [
+        "informativo",
+        "farandulero",
+        "irónico"
+      ],
+      "safety_notes": "Se resalta la declaración sin invadir la privacidad de la pareja.",
+      "cover_region": {
+        "x": 0.59,
+        "y": 0.83,
+        "width": 0.39,
+        "height": 0.14
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

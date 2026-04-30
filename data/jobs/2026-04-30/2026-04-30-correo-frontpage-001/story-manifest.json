@@ -1,0 +1,125 @@
+{
+  "story_id": "2026-04-30-correo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-30-correo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-30/2026-04-30-correo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-30/2026-04-30-correo-frontpage-001/input/front-page.jpg",
+      "headline": "JNJ inicia proceso para elegir nuevo jefe de ONPE",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La JNJ ha comenzado el proceso para elegir al nuevo jefe de la ONPE, que asumirá el cargo el 3 de julio. Esta decisión se toma en un contexto electoral complejo, donde la credibilidad del organismo está en juego.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "proceso de selección",
+        "nuevo jefe de la ONPE",
+        "3 de julio toma de posesión"
+      ],
+      "tone_notes": [
+        "informativo",
+        "serio",
+        "político"
+      ],
+      "safety_notes": "La elección es parte de un proceso formal, no se ha revelado aún al candidato final.",
+      "cover_region": {
+        "x": 0.37,
+        "y": 0.03,
+        "width": 0.3,
+        "height": 0.25
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-30/2026-04-30-correo-frontpage-001/input/front-page.jpg",
+      "headline": "La Fiscalía halló un pasaporte en la casa de Corvetto",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La Fiscalía ha encontrado un pasaporte en la casa de Piero Corvetto, quien estaba bajo investigación. Este hallazgo podría complicar su situación legal en el marco de las investigaciones por corrupción.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "pasaporte encontrado",
+        "Casa de Corvetto",
+        "bajo investigación"
+      ],
+      "tone_notes": [
+        "crítico",
+        "informativo",
+        "grave"
+      ],
+      "safety_notes": "Se menciona un hallazgo importante, pero no se ha comprobado aún su relevancia legal.",
+      "cover_region": {
+        "x": 0.69,
+        "y": 0.03,
+        "width": 0.29,
+        "height": 0.16
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-30/2026-04-30-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Sicarios asesinan en Trujillo a excandidato al Senado",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "En Trujillo, sicarios asesinaron al excandidato al Senado, Jorge Luis Alcalde. Los detectives de la policía no descartan que el crimen esté vinculado a un posible caso de extorsión.",
+      "page_numbers": [
+        10
+      ],
+      "key_facts": [
+        "asesinato de Jorge Luis Alcalde",
+        "Trujillo",
+        "posible extorsión"
+      ],
+      "tone_notes": [
+        "directo",
+        "crudo",
+        "policial"
+      ],
+      "safety_notes": "El caso está en investigación y no se confirma la motivación detrás del crimen.",
+      "cover_region": {
+        "x": 0.69,
+        "y": 0.2,
+        "width": 0.29,
+        "height": 0.08
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "story_id": "2026-04-30-elcomercio-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-30-elcomercio-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Nuevo jefe de la ONPE asumirá tras segunda vuelta",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La JNJ ha convocado el proceso de selección para el nuevo jefe de la ONPE, quien asumirá tras la segunda vuelta. Un cambio clave en un momento crítico para el país, donde la confianza electoral está en juego.",
+      "page_numbers": [
+        4,
+        5
+      ],
+      "key_facts": [
+        "proceso de selección",
+        "nuevo jefe de la ONPE",
+        "segunda vuelta electoral"
+      ],
+      "tone_notes": [
+        "informativo",
+        "formal",
+        "firme"
+      ],
+      "safety_notes": "No se confirma quién será el elegido, solo el procedimiento abierto.",
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.56,
+        "width": 0.72,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Israel y Alemania condenan ofensas de Balcázar",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El presidente Balcázar enfrenta fuertes condenas internacionales por sus comentarios sobre la guerra. Alemania e Israel exigen disculpas, y el gobierno está bajo presión para corregir su postura.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "condenas internacionales",
+        "comentarios de Balcázar",
+        "presión sobre el gobierno"
+      ],
+      "tone_notes": [
+        "incisivo",
+        "crítico",
+        "político"
+      ],
+      "safety_notes": "Se presenta como un conflicto diplomático, no como una sentencia oficial.",
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.28,
+        "width": 0.68,
+        "height": 0.27
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "La U vence a Nacional en la Libertadores",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Universitario sigue con vida en la Copa Libertadores tras vencer 4-2 a Nacional de Uruguay. La remontada en el Monumental reaviva la esperanza de los cremas en el torneo continental.",
+      "page_numbers": [
+        17
+      ],
+      "key_facts": [
+        "victoria 4-2",
+        "Universitario vs. Nacional",
+        "Copa Libertadores"
+      ],
+      "tone_notes": [
+        "emocionante",
+        "deportivo",
+        "futbolero"
+      ],
+      "safety_notes": "Se confirma el marcador y el contexto en el torneo, pero no se profundiza en detalles tácticos.",
+      "cover_region": {
+        "x": 0.22,
+        "y": 0.78,
+        "width": 0.49,
+        "height": 0.16
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Marcador final",
+        "points": [
+          {
+            "label": "Universitario",
+            "value": 4.0
+          },
+          {
+            "label": "Nacional",
+            "value": 2.0
+          }
+        ],
+        "subtitle": "Universitario vs Nacional",
+        "unit": "goles",
+        "highlight_label": "Triunfo crema",
+        "data_source_note": "Datos verificados en la cobertura oficial del partido."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

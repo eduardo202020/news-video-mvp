@@ -37,10 +37,10 @@
       ],
       "safety_notes": "Cifras sobre distribución del voto citadas desde página 3. El análisis muestra cómo el voto complementario benefició a Nieto.",
       "cover_region": {
-        "x": 0.75,
-        "y": 0.2,
-        "width": 0.23,
-        "height": 0.2
+        "x": 0.77,
+        "y": 0.34,
+        "width": 0.2,
+        "height": 0.18
       },
       "support_visual": {
         "type": "numeric_chart",
@@ -100,10 +100,10 @@
       ],
       "safety_notes": "Se limita a las declaraciones del JNE. Se evita especular sobre efectos mayores sin evidencia directa.",
       "cover_region": {
-        "x": 0.75,
-        "y": 0.42,
-        "width": 0.23,
-        "height": 0.17
+        "x": 0.77,
+        "y": 0.55,
+        "width": 0.2,
+        "height": 0.16
       },
       "support_visual": null,
       "segment_audio_file": null,
@@ -137,10 +137,10 @@
       ],
       "safety_notes": "Se subraya la sanción aplicada. La investigación está en curso sin acusaciones definitivas.",
       "cover_region": {
-        "x": 0.75,
-        "y": 0.61,
-        "width": 0.23,
-        "height": 0.14
+        "x": 0.77,
+        "y": 0.72,
+        "width": 0.2,
+        "height": 0.13
       },
       "support_visual": null,
       "segment_audio_file": null,
@@ -160,7 +160,7 @@
       "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
       "text": "La controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.",
       "page_numbers": [
-        6
+        3
       ],
       "key_facts": [
         "propuesta de cambio del capítulo económico",
@@ -174,10 +174,10 @@
       ],
       "safety_notes": "Se presenta como un tema de debate político. No se afirman consecuencias definitivas.",
       "cover_region": {
-        "x": 0.02,
-        "y": 0.2,
-        "width": 0.73,
-        "height": 0.42
+        "x": 0.77,
+        "y": 0.34,
+        "width": 0.2,
+        "height": 0.18
       },
       "support_visual": null,
       "segment_audio_file": null,
@@ -211,9 +211,9 @@
       ],
       "safety_notes": "Se informa sobre la solicitud de financiamiento de Petro-Perú. Se evitan detalles sobre su aceptación.",
       "cover_region": {
-        "x": 0.06,
-        "y": 0.6,
-        "width": 0.67,
+        "x": 0.03,
+        "y": 0.68,
+        "width": 0.69,
         "height": 0.12
       },
       "support_visual": {

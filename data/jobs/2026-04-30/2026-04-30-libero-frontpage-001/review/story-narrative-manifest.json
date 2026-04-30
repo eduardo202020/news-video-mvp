@@ -1,0 +1,159 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-30-libero-frontpage-001",
+  "source_id": "libero",
+  "source_name": "Libero",
+  "date": "2026-04-30",
+  "front_page_image": "data/jobs/2026-04-30/2026-04-30-libero-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Garra y triunfo de Universitario",
+      "story_type": "deportes",
+      "summary": "Partido bravo y reacción crema. Universitario venció 4-2 a Nacional en el Monumental y volvió a respirar en la Libertadores: cuando parecía cuesta arriba, apareció la garra copera.",
+      "speech": "Partido bravo y reacción crema. Universitario venció 4-2 a Nacional en el Monumental y volvió a respirar en la Libertadores: cuando parecía cuesta arriba, apareció la garra copera.",
+      "page_numbers": [
+        3,
+        4,
+        5
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.72,
+        "height": 0.73
+      },
+      "key_facts": [
+        "Universitario ganó 4-2",
+        "rival fue Nacional de Uruguay",
+        "partido por Copa Libertadores"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "emocional",
+        "copero"
+      ],
+      "safety_notes": "Contexto verificado vía web por falta de páginas internas disponibles. ([libero.pe](https://libero.pe/futbol-internacional/copa-libertadores/2026/04/28/universitario-vs-nacional-en-vivo-gratis-partido-de-copa-libertadores-via-espn-fox-sports-lbev-2182264?utm_source=chatgpt.com))",
+      "notes": "Contexto verificado vía web por falta de páginas internas disponibles. ([libero.pe](https://libero.pe/futbol-internacional/copa-libertadores/2026/04/28/universitario-vs-nacional-en-vivo-gratis-partido-de-copa-libertadores-via-espn-fox-sports-lbev-2182264?utm_source=chatgpt.com))",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Marcador final",
+        "points": [
+          {
+            "label": "Universitario",
+            "value": 4.0
+          },
+          {
+            "label": "Nacional",
+            "value": 2.0
+          }
+        ],
+        "subtitle": "Universitario vs. Nacional",
+        "unit": "goles",
+        "highlight_label": "Triunfo crema",
+        "data_source_note": "Resultado confirmado con cobertura web de Líbero e Infobae. ([libero.pe](https://libero.pe/futbol-internacional/copa-libertadores/2026/04/28/universitario-vs-nacional-en-vivo-gratis-partido-de-copa-libertadores-via-espn-fox-sports-lbev-2182264?utm_source=chatgpt.com))"
+      },
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Cienciano lo celebra",
+      "story_type": "deportes",
+      "summary": "Cienciano puso la altura y el carácter. Le ganó 1-0 a Atlético Mineiro en Cusco y el “Papá” celebró un triunfo de peso internacional, de esos que cambian el ánimo del grupo.",
+      "speech": "Cienciano puso la altura y el carácter. Le ganó 1-0 a Atlético Mineiro en Cusco y el “Papá” celebró un triunfo de peso internacional, de esos que cambian el ánimo del grupo.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.88,
+        "width": 0.27,
+        "height": 0.1
+      },
+      "key_facts": [
+        "Cienciano ganó 1-0",
+        "rival fue Atlético Mineiro",
+        "gol de Neri Bandiera"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "celebratorio",
+        "continental"
+      ],
+      "safety_notes": "Resultado y contexto verificados vía web por falta de páginas internas. ([bolavip.com](https://bolavip.com/pe/copa-sudamericana/cienciano-vs-atletico-mineiro-en-vivo-y-gratis-por-la-copa-sudamericana-2026-via-dsports-y-dgo-hora-alineaciones-minuto-a-minuto-goles-resumen))",
+      "notes": "Resultado y contexto verificados vía web por falta de páginas internas. ([bolavip.com](https://bolavip.com/pe/copa-sudamericana/cienciano-vs-atletico-mineiro-en-vivo-y-gratis-por-la-copa-sudamericana-2026-via-dsports-y-dgo-hora-alineaciones-minuto-a-minuto-goles-resumen))",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Triunfo en Cusco",
+        "points": [
+          {
+            "label": "Cienciano",
+            "value": 1.0
+          },
+          {
+            "label": "Mineiro",
+            "value": 0.0
+          }
+        ],
+        "subtitle": "Cienciano vs. Atlético Mineiro",
+        "unit": "goles",
+        "highlight_label": "Victoria del Papá",
+        "data_source_note": "Marcador confirmado con cobertura web deportiva. ([bolavip.com](https://bolavip.com/pe/copa-sudamericana/cienciano-vs-atletico-mineiro-en-vivo-y-gratis-por-la-copa-sudamericana-2026-via-dsports-y-dgo-hora-alineaciones-minuto-a-minuto-goles-resumen))"
+      },
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Guede ya tiene su oncena",
+      "story_type": "deportes",
+      "summary": "Guede ya ajusta piezas en Alianza. Con el duelo ante CD Moquegua en la mira, el técnico prepara su oncena y sabe que ser líder no alcanza: en Matute toca sostener el ritmo.",
+      "speech": "Guede ya ajusta piezas en Alianza. Con el duelo ante CD Moquegua en la mira, el técnico prepara su oncena y sabe que ser líder no alcanza: en Matute toca sostener el ritmo.",
+      "page_numbers": [
+        8
+      ],
+      "cover_region": {
+        "x": 0.46,
+        "y": 0.88,
+        "width": 0.31,
+        "height": 0.1
+      },
+      "key_facts": [
+        "Alianza prepara duelo ante CD Moquegua",
+        "partido programado en Matute",
+        "Guede viene de triunfo ante Grau"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "expectante",
+        "competitivo"
+      ],
+      "safety_notes": "Se evita afirmar una alineación exacta porque no hay página interna disponible; el contexto del próximo partido fue verificado vía web. ([bolavip.com](https://bolavip.com/pe/alianza-lima/la-decision-radical-de-pablo-guede-en-alianza-lima-luego-de-vencer-al-atletico-grau-y-ser-lideres-de-la-liga-1))",
+      "notes": "Se evita afirmar una alineación exacta porque no hay página interna disponible; el contexto del próximo partido fue verificado vía web. ([bolavip.com](https://bolavip.com/pe/alianza-lima/la-decision-radical-de-pablo-guede-en-alianza-lima-luego-de-vencer-al-atletico-grau-y-ser-lideres-de-la-liga-1))",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

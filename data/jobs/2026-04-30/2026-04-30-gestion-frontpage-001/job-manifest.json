@@ -1,0 +1,780 @@
+{
+  "job_id": "2026-04-30-gestion-frontpage-001",
+  "source_id": "gestion",
+  "date": "2026-04-30",
+  "source": {
+    "source_id": "gestion",
+    "source_config_path": "automation/sources/diarios/gestion.json",
+    "requested_date": "2026-04-30",
+    "issue_date": "2026-04-30",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/gestion.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=5&scale=80",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=7&scale=80",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=12&scale=80",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/pages/page-12.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 13",
+        "page_number": 13,
+        "source_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=13&scale=80",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/pages/page-13.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 22",
+        "page_number": 22,
+        "source_url": "https://t.prcdn.co/img?file=eag62026043000000000001001&page=22&scale=80",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/input/pages/page-22.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      2,
+      3,
+      5,
+      7,
+      12,
+      13,
+      22
+    ],
+    "candidates": [
+      {
+        "headline": "Opciones de inversión rinden debajo de la inflación",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.2,
+          "width": 0.69,
+          "height": 0.4
+        },
+        "page_number": 2,
+        "evidence_line": "P. 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Opciones de inversión rinden debajo de la inflación",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.2,
+          "width": 0.69,
+          "height": 0.4
+        },
+        "page_number": 3,
+        "evidence_line": "P. 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Peruanos cambiaron hábitos de compra por inseguridad",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.2,
+          "width": 0.2,
+          "height": 0.22
+        },
+        "page_number": 5,
+        "evidence_line": "P. 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      },
+      {
+        "headline": "Santiago Queirolo sumará hectáreas de uvas",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.52,
+          "width": 0.2,
+          "height": 0.27
+        },
+        "page_number": 7,
+        "evidence_line": "P. 7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "MEF mantiene crecimiento de 3.2%",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.68,
+          "width": 0.44,
+          "height": 0.25
+        },
+        "page_number": 12,
+        "evidence_line": "P. 12",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Se incumpliría regla de déficit fiscal",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.51,
+          "y": 0.68,
+          "width": 0.23,
+          "height": 0.24
+        },
+        "page_number": 13,
+        "evidence_line": "P. 13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Guerra prolongada en Irán",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.81,
+          "width": 0.2,
+          "height": 0.14
+        },
+        "page_number": 22,
+        "evidence_line": "P. 22",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Opciones de inversión rinden debajo de la inflación",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.2,
+          "width": 0.69,
+          "height": 0.4
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "P. 2-3",
+        "evidence_lines": [
+          "P. 2-3"
+        ],
+        "confidence": 0.98,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Peruanos cambiaron hábitos de compra por inseguridad",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.2,
+          "width": 0.2,
+          "height": 0.22
+        },
+        "page_numbers": [
+          5
+        ],
+        "evidence": "P. 5",
+        "evidence_lines": [
+          "P. 5"
+        ],
+        "confidence": 0.92,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Santiago Queirolo sumará hectáreas de uvas",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.52,
+          "width": 0.2,
+          "height": 0.27
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "P. 7",
+        "evidence_lines": [
+          "P. 7"
+        ],
+        "confidence": 0.91,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "MEF mantiene crecimiento de 3.2%",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.68,
+          "width": 0.44,
+          "height": 0.25
+        },
+        "page_numbers": [
+          12
+        ],
+        "evidence": "P. 12",
+        "evidence_lines": [
+          "P. 12"
+        ],
+        "confidence": 0.93,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Se incumpliría regla de déficit fiscal",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.51,
+          "y": 0.68,
+          "width": 0.23,
+          "height": 0.24
+        },
+        "page_numbers": [
+          13
+        ],
+        "evidence": "P. 13",
+        "evidence_lines": [
+          "P. 13"
+        ],
+        "confidence": 0.93,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Guerra prolongada en Irán",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.81,
+          "width": 0.2,
+          "height": 0.14
+        },
+        "page_numbers": [
+          22
+        ],
+        "evidence": "P. 22",
+        "evidence_lines": [
+          "P. 22"
+        ],
+        "confidence": 0.88,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      3,
+      5,
+      7,
+      12,
+      13,
+      22
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Nueve de cada 10 opciones de inversión ahora rinden por debajo de la inflación",
+        "story_type": "economia",
+        "summary": "El mercado de inversiones se ve golpeado por la inflación. Nueve de cada diez opciones de inversión están por debajo de los índices de crecimiento, lo que obliga a los inversionistas a replantear sus estrategias.",
+        "speech": "El mercado de inversiones se ve golpeado por la inflación. Nueve de cada diez opciones de inversión están por debajo de los índices de crecimiento, lo que obliga a los inversionistas a replantear sus estrategias.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "analítico",
+          "informativo",
+          "preocupante"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.2,
+          "width": 0.69,
+          "height": 0.4
+        },
+        "key_facts": [
+          "9 de 10 opciones rinden bajo inflación",
+          "mercado afectado",
+          "estrategias de inversión en revisión"
+        ],
+        "key_facts_used": [
+          "9 de 10 opciones rinden bajo inflación",
+          "mercado afectado",
+          "estrategias de inversión en revisión"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita dar consejos financieros; solo se presentan los datos del informe.",
+        "notes": "Se evita dar consejos financieros; solo se presentan los datos del informe.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "bar",
+          "title": "Rendimiento de inversiones vs. inflación",
+          "points": [
+            {
+              "label": "Inversiones en dólares",
+              "value": 2.5
+            },
+            {
+              "label": "Bonos del Gobierno",
+              "value": 3.2
+            },
+            {
+              "label": "Depósitos bancarios",
+              "value": 1.5
+            },
+            {
+              "label": "Acciones locales",
+              "value": 2.0
+            }
+          ],
+          "subtitle": "Comparativa de opciones de inversión",
+          "unit": "%",
+          "highlight_label": "Bajo rendimiento",
+          "data_source_note": "Datos del informe de McC&S Eifel y las proyecciones del mercado."
+        }
+      },
+      {
+        "headline": "Peruanos cambiaron hábitos de compra por inseguridad",
+        "story_type": "actualidad",
+        "summary": "La inseguridad está cambiando cómo los peruanos compran. El 79% ha modificado sus hábitos de compra en los últimos seis meses, afectando no solo el consumo, sino la percepción de seguridad en el comercio.",
+        "speech": "La inseguridad está cambiando cómo los peruanos compran. El 79% ha modificado sus hábitos de compra en los últimos seis meses, afectando no solo el consumo, sino la percepción de seguridad en el comercio.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "informativo",
+          "preocupante",
+          "clarificador"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.2,
+          "width": 0.2,
+          "height": 0.22
+        },
+        "key_facts": [
+          "79% cambió hábitos de compra",
+          "impacto de inseguridad en consumo",
+          "modificación de hábitos de compra"
+        ],
+        "key_facts_used": [
+          "79% cambió hábitos de compra",
+          "impacto de inseguridad en consumo",
+          "modificación de hábitos de compra"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se atribuyen causas sin verificación. Solo se presentan datos de la encuesta.",
+        "notes": "No se atribuyen causas sin verificación. Solo se presentan datos de la encuesta.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "bar",
+          "title": "Cambio de hábitos de compra",
+          "points": [
+            {
+              "label": "Cambio de hábitos",
+              "value": 79.0
+            },
+            {
+              "label": "No cambio de hábitos",
+              "value": 21.0
+            }
+          ],
+          "subtitle": "Impacto de la inseguridad en las decisiones de compra",
+          "unit": "%",
+          "highlight_label": "79% afectados",
+          "data_source_note": "Informe de la encuesta sobre hábitos de compra y percepción de seguridad."
+        },
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Santiago Queirolo sumará 40 nuevas hectáreas de uvas",
+        "story_type": "economia",
+        "summary": "Santiago Queirolo sigue ampliando su área agrícola. Con una inversión en nuevas hectáreas de uvas, la marca busca consolidarse aún más en el mercado de vinos premium. La expansión es clave para su crecimiento sostenido.",
+        "speech": "Santiago Queirolo sigue ampliando su área agrícola. Con una inversión en nuevas hectáreas de uvas, la marca busca consolidarse aún más en el mercado de vinos premium. La expansión es clave para su crecimiento sostenido.",
+        "narrator_profile_id": "ted",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "positivo",
+          "proactivo",
+          "crecimiento"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.52,
+          "width": 0.2,
+          "height": 0.27
+        },
+        "key_facts": [
+          "expansión agrícola",
+          "40 nuevas hectáreas",
+          "crecimiento de Santiago Queirolo"
+        ],
+        "key_facts_used": [
+          "expansión agrícola",
+          "40 nuevas hectáreas",
+          "crecimiento de Santiago Queirolo"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se ha confirmado aún la cifra exacta de la inversión, pero es parte de una estrategia de expansión ya anunciada.",
+        "notes": "No se ha confirmado aún la cifra exacta de la inversión, pero es parte de una estrategia de expansión ya anunciada.",
+        "support_visual": null
+      },
+      {
+        "headline": "MEF mantiene crecimiento de 3.2% y prevé que la inversión privada crezca 5.5%",
+        "story_type": "economia",
+        "summary": "El MEF es optimista para el futuro cercano. Con un crecimiento estimado del 3.2% este año, la previsión para la inversión privada es aún más alentadora, con un incremento proyectado del 5.5%.",
+        "speech": "El MEF es optimista para el futuro cercano. Con un crecimiento estimado del 3.2% este año, la previsión para la inversión privada es aún más alentadora, con un incremento proyectado del 5.5%.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "optimista",
+          "perspectivo",
+          "informativo"
+        ],
+        "page_numbers": [
+          12
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.68,
+          "width": 0.44,
+          "height": 0.25
+        },
+        "key_facts": [
+          "crecimiento estimado del 3.2%",
+          "inversión privada proyectada en 5.5%",
+          "previsión económica del MEF"
+        ],
+        "key_facts_used": [
+          "crecimiento estimado del 3.2%",
+          "inversión privada proyectada en 5.5%",
+          "previsión económica del MEF"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Las cifras están sujetas a revisión según los próximos datos económicos.",
+        "notes": "Las cifras están sujetas a revisión según los próximos datos económicos.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "line",
+          "title": "Crecimiento del PBI y de la inversión privada",
+          "points": [
+            {
+              "label": "PBI crecimiento",
+              "value": 3.2
+            },
+            {
+              "label": "Inversión privada",
+              "value": 5.5
+            }
+          ],
+          "subtitle": "Proyecciones para el 2026",
+          "unit": "%",
+          "highlight_label": "Crecimiento proyectado",
+          "data_source_note": "Cifras basadas en la proyección oficial del MEF."
+        }
+      },
+      {
+        "headline": "Se incumpliría regla de déficit fiscal este y los próximos tres años",
+        "story_type": "economia",
+        "summary": "El Consejo Fiscal alerta sobre el incumplimiento de la regla del déficit fiscal. Según el pronóstico, el país no alcanzará las metas previstas en los próximos tres años debido a la falta de disciplina fiscal.",
+        "speech": "El Consejo Fiscal alerta sobre el incumplimiento de la regla del déficit fiscal. Según el pronóstico, el país no alcanzará las metas previstas en los próximos tres años debido a la falta de disciplina fiscal.",
+        "narrator_profile_id": "ted",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "crítico",
+          "analítico",
+          "formal"
+        ],
+        "page_numbers": [
+          13
+        ],
+        "cover_region": {
+          "x": 0.51,
+          "y": 0.68,
+          "width": 0.23,
+          "height": 0.24
+        },
+        "key_facts": [
+          "incumplimiento regla déficit fiscal",
+          "alerta del Consejo Fiscal",
+          "perspectivas negativas de la economía"
+        ],
+        "key_facts_used": [
+          "incumplimiento regla déficit fiscal",
+          "alerta del Consejo Fiscal",
+          "perspectivas negativas de la economía"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La información proviene de estimaciones del Consejo Fiscal, no confirmadas por cifras oficiales aún.",
+        "notes": "La información proviene de estimaciones del Consejo Fiscal, no confirmadas por cifras oficiales aún.",
+        "support_visual": null
+      },
+      {
+        "headline": "Guerra prolongada en Irán",
+        "story_type": "mundo",
+        "summary": "La guerra en Irán parece estar lejos de terminar. El conflicto se prolongará más allá de lo esperado, con tensiones internacionales que podrían llevar a una escalada más peligrosa.",
+        "speech": "La guerra en Irán parece estar lejos de terminar. El conflicto se prolongará más allá de lo esperado, con tensiones internacionales que podrían llevar a una escalada más peligrosa.",
+        "narrator_profile_id": "narrador_dbz",
+        "narrator_role": "corresponsal_internacional",
+        "tone_notes": [
+          "dramático",
+          "internacional",
+          "grave"
+        ],
+        "page_numbers": [
+          22
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.81,
+          "width": 0.2,
+          "height": 0.14
+        },
+        "key_facts": [
+          "guerra prolongada en Irán",
+          "tensiones internacionales",
+          "posibilidad de escalada"
+        ],
+        "key_facts_used": [
+          "guerra prolongada en Irán",
+          "tensiones internacionales",
+          "posibilidad de escalada"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita especular sobre el desarrollo futuro del conflicto sin información verificable.",
+        "notes": "Se evita especular sobre el desarrollo futuro del conflicto sin información verificable.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-30/2026-04-30-gestion-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El mercado de inversiones se ve golpeado por la inflación. Nueve de cada diez opciones de inversión están por debajo de los índices de crecimiento, lo que obliga a los inversionistas a replantear sus estrategias.\n\nLa inseguridad está cambiando cómo los peruanos compran. El 79% ha modificado sus hábitos de compra en los últimos seis meses, afectando no solo el consumo, sino la percepción de seguridad en el comercio.\n\nSantiago Queirolo sigue ampliando su área agrícola. Con una inversión en nuevas hectáreas de uvas, la marca busca consolidarse aún más en el mercado de vinos premium. La expansión es clave para su crecimiento sostenido.\n\nEl MEF es optimista para el futuro cercano. Con un crecimiento estimado del 3.2% este año, la previsión para la inversión privada es aún más alentadora, con un incremento proyectado del 5.5%.\n\nEl Consejo Fiscal alerta sobre el incumplimiento de la regla del déficit fiscal. Según el pronóstico, el país no alcanzará las metas previstas en los próximos tres años debido a la falta de disciplina fiscal.\n\nLa guerra en Irán parece estar lejos de terminar. El conflicto se prolongará más allá de lo esperado, con tensiones internacionales que podrían llevar a una escalada más peligrosa.",
+    "approved_text": "El mercado de inversiones se ve golpeado por la inflación. Nueve de cada diez opciones de inversión están por debajo de los índices de crecimiento, lo que obliga a los inversionistas a replantear sus estrategias.\n\nLa inseguridad está cambiando cómo los peruanos compran. El 79% ha modificado sus hábitos de compra en los últimos seis meses, afectando no solo el consumo, sino la percepción de seguridad en el comercio.\n\nSantiago Queirolo sigue ampliando su área agrícola. Con una inversión en nuevas hectáreas de uvas, la marca busca consolidarse aún más en el mercado de vinos premium. La expansión es clave para su crecimiento sostenido.\n\nEl MEF es optimista para el futuro cercano. Con un crecimiento estimado del 3.2% este año, la previsión para la inversión privada es aún más alentadora, con un incremento proyectado del 5.5%.\n\nEl Consejo Fiscal alerta sobre el incumplimiento de la regla del déficit fiscal. Según el pronóstico, el país no alcanzará las metas previstas en los próximos tres años debido a la falta de disciplina fiscal.\n\nLa guerra en Irán parece estar lejos de terminar. El conflicto se prolongará más allá de lo esperado, con tensiones internacionales que podrían llevar a una escalada más peligrosa.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 6
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-30T08:50:55",
+    "updated_at": "2026-04-30T09:04:41",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:50:55",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:51:16",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:51:17",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:54:47",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:54:47",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:55:35",
+        "details": "Se descargaron 7 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:03:22",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:34",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:34",
+        "details": "Seguimiento de portada actualizado para historia 1: Opciones de inversión rinden debajo de la inflación -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:34",
+        "details": "Seguimiento de portada actualizado para historia 2: Peruanos cambiaron hábitos de compra por inseguridad -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:34",
+        "details": "Seguimiento de portada actualizado para historia 3: Santiago Queirolo sumará hectáreas de uvas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:34",
+        "details": "Seguimiento de portada actualizado para historia 4: MEF mantiene crecimiento de 3.2% -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:35",
+        "details": "Seguimiento de portada actualizado para historia 5: Se incumpliría regla de déficit fiscal -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:35",
+        "details": "Seguimiento de portada actualizado para historia 6: Guerra prolongada en Irán -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:41",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, jueves 30 de abril, revisamos portadas en una fecha que recuerda el asesinato del presidente Luis Miguel Sánchez Cerro en 1933. La agenda llega cargada de política, economía, seguridad y fútbol: vamos diario por diario, directo a lo central.",
+    "date_reference": "Adonde.com efemerides abril30: asesinato en 1933 de Luis Miguel Sánchez Cerro, presidente del Perú.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia peruana de memoria política y con el tono fuerte de las portadas del día.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-30T08:54:47"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-30-larepublica-frontpage-001",
+  "source_id": "larepublica",
+  "source_name": "Larepublica",
+  "date": "2026-04-30",
+  "front_page_image": "data/jobs/2026-04-30/2026-04-30-larepublica-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Comunidad Awajún protesta por contaminación de petróleo",
+      "story_type": "actualidad",
+      "summary": "En medio de la crisis ecológica, la comunidad Awajún alza la voz contra la contaminación petrolera en su territorio. El impacto ambiental es grave y la lucha sigue por la justicia en las zonas afectadas.",
+      "speech": "En medio de la crisis ecológica, la comunidad Awajún alza la voz contra la contaminación petrolera en su territorio. El impacto ambiental es grave y la lucha sigue por la justicia en las zonas afectadas.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.55,
+        "width": 0.92,
+        "height": 0.24
+      },
+      "key_facts": [
+        "protesta Awajún",
+        "contaminación de petróleo",
+        "pérdida de recursos naturales"
+      ],
+      "tone_notes": [
+        "serio",
+        "informativo",
+        "directo"
+      ],
+      "safety_notes": "Se evita entrar en detalles no verificables sobre daños específicos.",
+      "notes": "Se evita entrar en detalles no verificables sobre daños específicos.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "JNJ impondrá jefe de ONPE sin control civil",
+      "story_type": "politica",
+      "summary": "El debate sobre la elección del jefe de la ONPE sigue candente. La JNJ impondrá su decisión sin control civil, lo que abre nuevos cuestionamientos sobre la transparencia del proceso.",
+      "speech": "El debate sobre la elección del jefe de la ONPE sigue candente. La JNJ impondrá su decisión sin control civil, lo que abre nuevos cuestionamientos sobre la transparencia del proceso.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.22,
+        "width": 0.89,
+        "height": 0.33
+      },
+      "key_facts": [
+        "JNJ designará jefe de ONPE",
+        "sin control civil",
+        "implicancias políticas"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "incisivo",
+        "político"
+      ],
+      "safety_notes": "Se evita afirmar corrupción sin evidencia verificable.",
+      "notes": "Se evita afirmar corrupción sin evidencia verificable.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Jóvenes desconfían de cambios en Congreso bicameral",
+      "story_type": "politica",
+      "summary": "Los jóvenes se muestran escépticos ante los cambios propuestos al Congreso bicameral. La falta de confianza en las reformas persiste y la desconexión con la ciudadanía es cada vez más evidente.",
+      "speech": "Los jóvenes se muestran escépticos ante los cambios propuestos al Congreso bicameral. La falta de confianza en las reformas persiste y la desconexión con la ciudadanía es cada vez más evidente.",
+      "page_numbers": [
+        8
+      ],
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.84,
+        "width": 0.29,
+        "height": 0.1
+      },
+      "key_facts": [
+        "desconfianza jovenes",
+        "cambio Congreso bicameral",
+        "desconexión con la ciudadanía"
+      ],
+      "tone_notes": [
+        "analítico",
+        "crítico",
+        "realista"
+      ],
+      "safety_notes": "Se evita exagerar sobre el rechazo juvenil sin base directa.",
+      "notes": "Se evita exagerar sobre el rechazo juvenil sin base directa.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Asesinan a empresario y excandidato Jorge Alcalde",
+      "story_type": "policial",
+      "summary": "Un crimen atroz en la capital. El empresario y excandidato Jorge Alcalde fue asesinado en circunstancias que aún están bajo investigación. El caso pone de nuevo en la agenda la inseguridad en el país.",
+      "speech": "Un crimen atroz en la capital. El empresario y excandidato Jorge Alcalde fue asesinado en circunstancias que aún están bajo investigación. El caso pone de nuevo en la agenda la inseguridad en el país.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.37,
+        "y": 0.84,
+        "width": 0.27,
+        "height": 0.1
+      },
+      "key_facts": [
+        "asesinato de Jorge Alcalde",
+        "inseguridad",
+        "bajo investigación"
+      ],
+      "tone_notes": [
+        "tenso",
+        "cauteloso",
+        "periodístico"
+      ],
+      "safety_notes": "No se afirma autoría o motivos sin confirmación oficial.",
+      "notes": "No se afirma autoría o motivos sin confirmación oficial.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 5,
+      "segment_type": "story",
+      "headline": "Promesa de trabajo en Rusia terminó en el frente de guerra",
+      "story_type": "mundo",
+      "summary": "Una promesa de trabajo se convierte en una pesadilla. Jóvenes fueron engañados con falsas ofertas de empleo en Rusia y terminaron siendo enviados al frente de guerra. La explotación laboral cruza límites peligrosos.",
+      "speech": "Una promesa de trabajo se convierte en una pesadilla. Jóvenes fueron engañados con falsas ofertas de empleo en Rusia y terminaron siendo enviados al frente de guerra. La explotación laboral cruza límites peligrosos.",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "cover_region": {
+        "x": 0.72,
+        "y": 0.84,
+        "width": 0.25,
+        "height": 0.1
+      },
+      "key_facts": [
+        "trabajo en Rusia",
+        "frente de guerra",
+        "explotación laboral"
+      ],
+      "tone_notes": [
+        "dramático",
+        "informativo",
+        "preocupante"
+      ],
+      "safety_notes": "No se detallan identidades de las víctimas por respeto.",
+      "notes": "No se detallan identidades de las víctimas por respeto.",
+      "support_visual": null,
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "segment_audio_file": null
+    }
+  ]
+}

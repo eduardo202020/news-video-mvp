@@ -1,0 +1,1295 @@
+{
+  "job_id": "2026-04-30-trome-frontpage-001",
+  "source_id": "trome",
+  "date": "2026-04-30",
+  "source": {
+    "source_id": "trome",
+    "source_config_path": "automation/sources/diarios/trome.json",
+    "requested_date": "2026-04-30",
+    "issue_date": "2026-04-30",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026043000000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026043000000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/trome.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag82026043000000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eag82026043000000000001001&page=9&scale=82",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 10",
+        "page_number": 10,
+        "source_url": "https://t.prcdn.co/img?file=eag82026043000000000001001&page=10&scale=82",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/pages/page-10.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eag82026043000000000001001&page=11&scale=82",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/pages/page-11.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 15",
+        "page_number": 15,
+        "source_url": "https://t.prcdn.co/img?file=eag82026043000000000001001&page=15&scale=82",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/pages/page-15.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      9,
+      10,
+      11,
+      15
+    ],
+    "candidates": [
+      {
+        "headline": "Trump aplasta a Irán",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.31,
+          "y": 0.19,
+          "width": 0.67,
+          "height": 0.61
+        },
+        "page_number": 10,
+        "evidence_line": "Página 10",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Triunfazo de la U en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.2,
+          "width": 0.31,
+          "height": 0.66
+        },
+        "page_number": 11,
+        "evidence_line": "PÁGINA 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "La Perlita brilla a nivel mundial",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.08,
+          "y": 0.83,
+          "width": 0.46,
+          "height": 0.12
+        },
+        "page_number": 9,
+        "evidence_line": "PÁGINA 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "Angie prohíbe despedida de soltero a Jota",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.59,
+          "y": 0.83,
+          "width": 0.39,
+          "height": 0.14
+        },
+        "page_number": 15,
+        "evidence_line": "PÁGINA 15",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      }
+    ],
+    "stories": [
+      {
+        "headline": "La Perlita brilla a nivel mundial",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.08,
+          "y": 0.83,
+          "width": 0.46,
+          "height": 0.12
+        },
+        "page_numbers": [
+          9
+        ],
+        "evidence": "PÁGINA 9",
+        "evidence_lines": [
+          "PÁGINA 9"
+        ],
+        "confidence": 0.91,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Trump aplasta a Irán",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.31,
+          "y": 0.19,
+          "width": 0.67,
+          "height": 0.61
+        },
+        "page_numbers": [
+          10
+        ],
+        "evidence": "Página 10",
+        "evidence_lines": [
+          "Página 10"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Triunfazo de la U en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.2,
+          "width": 0.31,
+          "height": 0.66
+        },
+        "page_numbers": [
+          11
+        ],
+        "evidence": "PÁGINA 11",
+        "evidence_lines": [
+          "PÁGINA 11"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Angie prohíbe despedida de soltero a Jota",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.59,
+          "y": 0.83,
+          "width": 0.39,
+          "height": 0.14
+        },
+        "page_numbers": [
+          15
+        ],
+        "evidence": "PÁGINA 15",
+        "evidence_lines": [
+          "PÁGINA 15"
+        ],
+        "confidence": 0.92,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      9,
+      10,
+      11,
+      15
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "La Perlita brilla a nivel mundial",
+        "story_type": "actualidad",
+        "summary": "La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta.",
+        "speech": "La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "informativo",
+          "festejante",
+          "positivo"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.08,
+          "y": 0.83,
+          "width": 0.46,
+          "height": 0.12
+        },
+        "key_facts": [
+          "La Perla en Barranco",
+          "Conde Nast Traveler",
+          "Jeff Bezos"
+        ],
+        "key_facts_used": [
+          "La Perla en Barranco",
+          "Conde Nast Traveler",
+          "Jeff Bezos"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se detallan cifras exactas de la clasificación, pero se destaca su prestigio internacional.",
+        "notes": "No se detallan cifras exactas de la clasificación, pero se destaca su prestigio internacional.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Irán vive infierno por guerra y escasez",
+        "story_type": "mundo",
+        "summary": "Irán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible.",
+        "speech": "Irán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible.",
+        "narrator_profile_id": "narrador_dbz",
+        "narrator_role": "corresponsal_internacional",
+        "tone_notes": [
+          "grave",
+          "alarmante",
+          "directo"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "cover_region": {
+          "x": 0.31,
+          "y": 0.19,
+          "width": 0.67,
+          "height": 0.61
+        },
+        "key_facts": [
+          "guerra en Irán",
+          "escasez",
+          "más de un millón sin empleo"
+        ],
+        "key_facts_used": [
+          "guerra en Irán",
+          "escasez",
+          "más de un millón sin empleo"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se menciona el contexto social sin entrar en detalles numéricos precisos sobre víctimas o daños.",
+        "notes": "Se menciona el contexto social sin entrar en detalles numéricos precisos sobre víctimas o daños.",
+        "support_visual": null
+      },
+      {
+        "headline": "Triunfazo de la U en la Copa Libertadores",
+        "story_type": "deportes",
+        "summary": "¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema.",
+        "speech": "¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "entusiasta",
+          "emocionante",
+          "futbolero"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.2,
+          "width": 0.31,
+          "height": 0.66
+        },
+        "key_facts": [
+          "4-2 Universitario vs Nacional",
+          "Copa Libertadores",
+          "seguridad de clasificación"
+        ],
+        "key_facts_used": [
+          "4-2 Universitario vs Nacional",
+          "Copa Libertadores",
+          "seguridad de clasificación"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se confirma el marcador y el impacto positivo para el club en la Libertadores.",
+        "notes": "Se confirma el marcador y el impacto positivo para el club en la Libertadores.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "bar",
+          "title": "Marcador final",
+          "points": [
+            {
+              "label": "Universitario",
+              "value": 4.0
+            },
+            {
+              "label": "Nacional",
+              "value": 2.0
+            }
+          ],
+          "subtitle": "Universitario vs Nacional",
+          "unit": "goles",
+          "highlight_label": "Triunfo crema",
+          "data_source_note": "Datos confirmados en la cobertura oficial del partido."
+        }
+      },
+      {
+        "headline": "Jota no iría a una despedida de soltero",
+        "story_type": "espectaculos",
+        "summary": "Angie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula.",
+        "speech": "Angie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula.",
+        "narrator_profile_id": "reportero_magaly",
+        "narrator_role": "conductora_espectaculos",
+        "tone_notes": [
+          "informativo",
+          "farandulero",
+          "irónico"
+        ],
+        "page_numbers": [
+          15
+        ],
+        "cover_region": {
+          "x": 0.59,
+          "y": 0.83,
+          "width": 0.39,
+          "height": 0.14
+        },
+        "key_facts": [
+          "Jota Benz",
+          "Angie Arizaga",
+          "despedida de soltero"
+        ],
+        "key_facts_used": [
+          "Jota Benz",
+          "Angie Arizaga",
+          "despedida de soltero"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resalta la declaración sin invadir la privacidad de la pareja.",
+        "notes": "Se resalta la declaración sin invadir la privacidad de la pareja.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta.\n\nIrán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible.\n\n¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema.\n\nAngie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula.",
+    "approved_text": "La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta.\n\nIrán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible.\n\n¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema.\n\nAngie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-30-trome-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-30T08:51:45",
+    "updated_at": "2026-04-30T09:08:51",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:51:45",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:52:10",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:52:11",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:54:46",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:54:46",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:56:31",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:39",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:41",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:41",
+        "details": "Seguimiento de portada actualizado para historia 1: La Perlita brilla a nivel mundial -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:41",
+        "details": "Seguimiento de portada actualizado para historia 2: Trump aplasta a Irán -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:41",
+        "details": "Seguimiento de portada actualizado para historia 3: Triunfazo de la U en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:41",
+        "details": "Seguimiento de portada actualizado para historia 4: Angie prohíbe despedida de soltero a Jota -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:42",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:42",
+        "details": "Seguimiento de portada actualizado para historia 1: La Perlita brilla a nivel mundial -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:42",
+        "details": "Seguimiento de portada actualizado para historia 2: Trump aplasta a Irán -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:42",
+        "details": "Seguimiento de portada actualizado para historia 3: Triunfazo de la U en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:42",
+        "details": "Seguimiento de portada actualizado para historia 4: Angie prohíbe despedida de soltero a Jota -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:10",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:13",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:14",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:14",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:14",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:16",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:23",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:23",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:23",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:24",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:43",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:48",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:49",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:49",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 1: La Perlita brilla a nivel mundial."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 2: Trump aplasta a Irán."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 3: Triunfazo de la U en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:50",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:51",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:51",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:51",
+        "details": "Enfoque manual actualizado para historia 4: Angie prohíbe despedida de soltero a Jota."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:51",
+        "details": "Story manifest generado desde job manifest."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, jueves 30 de abril, revisamos portadas en una fecha que recuerda el asesinato del presidente Luis Miguel Sánchez Cerro en 1933. La agenda llega cargada de política, economía, seguridad y fútbol: vamos diario por diario, directo a lo central.",
+    "date_reference": "Adonde.com efemerides abril30: asesinato en 1933 de Luis Miguel Sánchez Cerro, presidente del Perú.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia peruana de memoria política y con el tono fuerte de las portadas del día.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-30T08:54:46"
+  }
+}

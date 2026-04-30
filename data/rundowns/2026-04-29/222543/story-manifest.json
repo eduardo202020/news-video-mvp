@@ -1,0 +1,825 @@
+{
+  "story_id": "2026-04-29-daily-rundown-222543",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-daily-rundown-222543.mp4",
+  "audio_path": "data/rundowns/2026-04-29/222543/narration.wav",
+  "subtitle_segments_path": "data/rundowns/2026-04-29/222543/subtitle-segments.json",
+  "segments": [
+    {
+      "newspaper_name": "Resumen de Portadas",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "29 de abril de 2026",
+      "story_type": "intro",
+      "segment_type": "intro",
+      "narrator_profile_id": "thanos",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Hola. Hoy, 29 de abril, revisamos las portadas con economia bajo presion, disputas electorales y una agenda deportiva intensa. En esta fecha, Adonde recuerda la intervencion de CLAE en 1993: una señal para mirar con lupa poder, dinero y promesas.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-01.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Correo",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "narrador_dbz",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Ahora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-02.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "JNE: ausentismo no justifica complementarias",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El JNE pone un freno al ruido postelectoral: según su análisis, mover horarios en mesas no incidió de forma decisiva en la participación. El ausentismo, dicen, responde a más factores que una sola demora.",
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.35,
+        "width": 0.16,
+        "height": 0.31
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-03.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Declaran en emergencia sistema vial de Lima",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Lima entra en emergencia vial por 180 días. La MML promete ordenar tránsito, señalización y mantenimiento, pero el reto es enorme: convertir el anuncio en calles menos caóticas y no en otra medida de papel.",
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.7,
+        "width": 0.16,
+        "height": 0.26
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-04.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Petroperú requiere más de US$2,000 millones",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Petroperú vuelve a prender las alarmas: sigue en rojo y busca más de US$2,000 millones para respirar. La promesa es no pedir aporte directo del Estado, pero la pregunta es quién carga el riesgo si todo sale mal.",
+      "cover_region": {
+        "x": 0.27,
+        "y": 0.25,
+        "width": 0.68,
+        "height": 0.62
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-05.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Álvaro Barco no va más en la U",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "La U mueve el tablero antes de un partido bravo. Álvaro Barco dejará la dirección deportiva y el club abre otro cambio interno, justo cuando los resultados y la presión de la tribuna no dan tregua.",
+      "cover_region": {
+        "x": 0.21,
+        "y": 0.92,
+        "width": 0.75,
+        "height": 0.07
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-06.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Elcomercio",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "skipper",
+      "voice_profile_id": "skipper",
+      "narrator_name": "Skipper",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Ahora entramos a Elcomercio. Primero miramos la portada completa y despues vamos con sus 6 historias mas fuertes.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-07.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Nieto concentró votos en complementaria",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El voto del 13 de abril dejó una lectura incómoda: Jorge Nieto fue quien más capitalizó la ampliación en los tres distritos pendientes. Con más información disponible, el tablero electoral ya no fue el mismo.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.28,
+        "width": 0.2,
+        "height": 0.2
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-08.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "JNE: retraso en mesas no fue decisivo",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El JNE vuelve a marcar la cancha: los retrasos en instalación de mesas no habrían sido decisivos en el ausentismo. La discusión política sigue, pero el sustento técnico baja el volumen de la denuncia.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.51,
+        "width": 0.2,
+        "height": 0.16
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-09.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Multan a JPP por aportes de campaña",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La ONPE sanciona a Juntos por el Perú por aportes de la campaña del 2021. No es una nota menor: cuando el dinero entra a la política, la trazabilidad importa tanto como el discurso.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.7,
+        "width": 0.2,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-10.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "El capítulo económico ante inversionistas",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El presidente de la CCL lanza una advertencia simple: no tocar el capítulo económico. El mensaje para inversionistas es claro: en campaña se puede discutir todo, pero la estabilidad no debería jugarse a los dados.",
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.3,
+        "width": 0.67,
+        "height": 0.31
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-11.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Petro-Perú pide US$2,000 millones",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Petro-Perú mira otro salvavidas: hasta US$2,000 millones para evitar que la falta de caja golpee Talara y Conchán. El problema ya no es solo financiero; también amenaza el abastecimiento.",
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.62,
+        "width": 0.69,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-12.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "PSG y Bayern dan semifinal de golazos",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Partidazo de esos que se cuentan al día siguiente: PSG y Bayern dejaron nueve goles y una noche de Champions para guardar. Cuando una semifinal se juega así, el marcador también se vuelve espectáculo.",
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.72,
+        "width": 0.73,
+        "height": 0.24
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-13.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Gestion",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "ironman",
+      "voice_profile_id": "ironman",
+      "narrator_name": "Ironman",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Ahora entramos a Gestion. Primero miramos la portada completa y despues vamos con sus 6 historias mas fuertes.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-14.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Economía peruana podría crecer hasta 6%",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La economía peruana muestra señales de crecimiento, proyectando un 6% para este año. Las expectativas son altas, pero los desafíos siguen siendo significativos en el camino hacia la estabilidad.",
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.85,
+        "width": 0.55,
+        "height": 0.13
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Proyección de crecimiento económico",
+        "points": [
+          {
+            "label": "2025",
+            "value": 4.5
+          },
+          {
+            "label": "2026",
+            "value": 6.0
+          },
+          {
+            "label": "2027",
+            "value": 5.2
+          }
+        ],
+        "subtitle": "Proyección 2026",
+        "unit": "%",
+        "highlight_label": "Crecimiento proyectado",
+        "data_source_note": "Fuente: estimaciones basadas en datos económicos."
+      },
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-15.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Más del 60% de consumidores cambiaría de marca por el Mundial",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Con la llegada del Mundial, más del 60% de los consumidores peruanos podrían cambiar de marca. El impacto de los eventos deportivos en las decisiones de compra es claro, impulsado por promociones relacionadas.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.32,
+        "width": 0.21,
+        "height": 0.27
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Cambio de marca por promociones del Mundial",
+        "points": [
+          {
+            "label": "Cambiaría de marca",
+            "value": 62.7
+          },
+          {
+            "label": "No cambiaría de marca",
+            "value": 37.3
+          }
+        ],
+        "subtitle": "Preferencia de los consumidores",
+        "unit": "%",
+        "highlight_label": "Cambio de marca",
+        "data_source_note": "Estudios de mercado sobre comportamiento del consumidor."
+      },
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-16.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Modasa ingresará a Canadá con negocio de equipos de energía",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La empresa peruana Modasa ampliará su presencia a Canadá, con una inversión de hasta US$7 millones. Se centrará en el sector de equipos de energía, expandiendo su mercado en América del Norte.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.63,
+        "width": 0.21,
+        "height": 0.27
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-17.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Sector privado cuestiona sistema político",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El sector privado se muestra preocupado por el rumbo del país. La incertidumbre política está frenando las decisiones económicas cruciales para un crecimiento sostenido.",
+      "cover_region": {
+        "x": 0.62,
+        "y": 0.85,
+        "width": 0.17,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-18.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Sostenibilidad gana terreno en empresas",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La sostenibilidad se posiciona como una prioridad para las empresas. Las estrategias ecológicas se integran cada vez más, con el fin de responder a las expectativas del mercado y a las presiones regulatorias.",
+      "cover_region": {
+        "x": 0.79,
+        "y": 0.85,
+        "width": 0.19,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-19.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Petroperú solicita US$2,000 millones",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Petroperú solicita una inyección de US$2,000 millones con la garantía del Estado para enfrentar la crisis. El futuro de sus refinerías depende de la respuesta del gobierno.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.31,
+        "width": 0.68,
+        "height": 0.51
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-20.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Ojo",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "thanos",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Ahora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-21.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Hara de todo por nuevas elecciones",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Rafael Lopez Aliaga insiste en anular las elecciones y eleva la tension politica. La propuesta reabre el debate sobre la legitimidad del proceso y pone al sistema bajo presion.",
+      "cover_region": {
+        "x": 0.29,
+        "y": 0.15,
+        "width": 0.69,
+        "height": 0.6
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-22.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Matan a campeon de artes marciales",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Un campeon de artes marciales es asesinado a balazos en su academia. El crimen sacude a su entorno y vuelve a encender las alarmas por la violencia que no da tregua.",
+      "cover_region": {
+        "x": 0.31,
+        "y": 0.77,
+        "width": 0.34,
+        "height": 0.2
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-23.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Ilusiones al bolso",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Universitario se juega un duelo clave ante Nacional de Montevideo con la ilusion intacta. El equipo crema busca sumar afuera y meterse de lleno en la pelea del grupo.",
+      "cover_region": {
+        "x": 0.29,
+        "y": 0.15,
+        "width": 0.69,
+        "height": 0.6
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-24.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Susan manda a trabajar a Monserrat",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Susan arremete contra Monserrat y la acusa de no hacer nada en casa. El cruce sube de tono y revive tensiones familiares que ya son parte del show mediatico.",
+      "cover_region": {
+        "x": 0.65,
+        "y": 0.77,
+        "width": 0.33,
+        "height": 0.21
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-25.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Trome",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "narrador_dbz",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Ahora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-26.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Porky exige nuevas elecciones",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Porky López Aliaga vuelve a hacer ruido: exige nuevas elecciones para aclarar la situación electoral. Las críticas al JNE y al sistema político siguen creciendo entre los sectores de oposición.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.86,
+        "width": 0.5,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-27.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Cayó narco como El Chapo",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El crimen organizado sigue siendo un flagelo en México. Un líder del Cártel de Jalisco, sucesor de ‘El Mencho’, fue capturado por la Marina, una victoria clave en la lucha contra el narcotráfico.",
+      "cover_region": {
+        "x": 0.27,
+        "y": 0.24,
+        "width": 0.71,
+        "height": 0.6
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-28.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Cristal avanza en la Copa",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Sporting Cristal demuestra su garra en la Copa Libertadores. Con una victoria 2-0 sobre Junior, el equipo asegura su lugar en el grupo y sigue soñando con la clasificación a la siguiente fase.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.24,
+        "width": 0.27,
+        "height": 0.64
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-29.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Pamela sin miedo a Dominguez",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Pamela Franco responde con firmeza: no le tiene miedo a Dominguez y está decidida a seguir su carrera, a pesar de las críticas. En un mundo donde las redes sociales se imponen, su postura es clara.",
+      "cover_region": {
+        "x": 0.48,
+        "y": 0.86,
+        "width": 0.5,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-30.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Libero",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "skipper",
+      "voice_profile_id": "skipper",
+      "narrator_name": "Skipper",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Ahora entramos a Libero. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-31.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Se hundio el barco crema",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Universitario vuelve a tropezar y el golpe pega fuerte en la interna. El equipo no levanta cabeza en el momento clave y la hinchada empieza a exigir respuestas inmediatas en pleno torneo.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.86,
+        "width": 0.42,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-32.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Cristal avanza en la Copa",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Sporting Cristal sufre en el arranque, pero termina imponiendo su juego y sigue firme en la Libertadores. Un triunfo clave que lo mantiene en pelea y refuerza su ambicion internacional.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.05,
+        "width": 0.7,
+        "height": 0.78
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-33.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg",
+      "headline": "PSG vence a Bayern en partidazo",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "En Europa se vivio un choque de gigantes: PSG derrota al Bayern en un duelo electrico. Los parisinos dan el golpe y se acercan a la gloria en una semifinal que tuvo de todo.",
+      "cover_region": {
+        "x": 0.46,
+        "y": 0.84,
+        "width": 0.28,
+        "height": 0.14
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-34.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Larepublica",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "ironman",
+      "voice_profile_id": "ironman",
+      "narrator_name": "Ironman",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Ahora entramos a Larepublica. Miramos la portada completa y vamos con su noticia clave.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-35.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Keiko fuerte en Lima y Sánchez gana en provincias",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La segunda vuelta de las elecciones se perfila con un empate técnico. Keiko se mantiene fuerte en Lima, mientras que Sánchez se impone en provincias. Todo está por definirse.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.26,
+        "width": 0.68,
+        "height": 0.49
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Distribución de votos en la segunda vuelta",
+        "points": [
+          {
+            "label": "Keiko Lima",
+            "value": 41.0
+          },
+          {
+            "label": "Sánchez provincias",
+            "value": 44.0
+          },
+          {
+            "label": "Sánchez Lima",
+            "value": 32.0
+          },
+          {
+            "label": "Keiko provincias",
+            "value": 29.0
+          }
+        ],
+        "subtitle": "Comparativa Lima y provincias",
+        "unit": "%",
+        "highlight_label": "Mayor votación",
+        "data_source_note": "Cifras obtenidas de encuestas recientes."
+      },
+      "segment_audio_file": "data/rundowns/2026-04-29/222543/audio/segment-36.wav",
+      "audio_file": "data/rundowns/2026-04-29/222543/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/222543/subtitle-segments.json"
+    }
+  ]
+}

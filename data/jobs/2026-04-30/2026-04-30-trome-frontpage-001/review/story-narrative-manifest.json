@@ -1,0 +1,175 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-30-trome-frontpage-001",
+  "source_id": "trome",
+  "source_name": "Trome",
+  "date": "2026-04-30",
+  "front_page_image": "data/jobs/2026-04-30/2026-04-30-trome-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "La Perlita brilla a nivel mundial",
+      "story_type": "actualidad",
+      "summary": "La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta.",
+      "speech": "La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.08,
+        "y": 0.83,
+        "width": 0.46,
+        "height": 0.12
+      },
+      "key_facts": [
+        "La Perla en Barranco",
+        "Conde Nast Traveler",
+        "Jeff Bezos"
+      ],
+      "tone_notes": [
+        "informativo",
+        "festejante",
+        "positivo"
+      ],
+      "safety_notes": "No se detallan cifras exactas de la clasificación, pero se destaca su prestigio internacional.",
+      "notes": "No se detallan cifras exactas de la clasificación, pero se destaca su prestigio internacional.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Irán vive infierno por guerra y escasez",
+      "story_type": "mundo",
+      "summary": "Irán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible.",
+      "speech": "Irán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible.",
+      "page_numbers": [
+        10
+      ],
+      "cover_region": {
+        "x": 0.31,
+        "y": 0.19,
+        "width": 0.67,
+        "height": 0.61
+      },
+      "key_facts": [
+        "guerra en Irán",
+        "escasez",
+        "más de un millón sin empleo"
+      ],
+      "tone_notes": [
+        "grave",
+        "alarmante",
+        "directo"
+      ],
+      "safety_notes": "Se menciona el contexto social sin entrar en detalles numéricos precisos sobre víctimas o daños.",
+      "notes": "Se menciona el contexto social sin entrar en detalles numéricos precisos sobre víctimas o daños.",
+      "support_visual": null,
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Triunfazo de la U en la Copa Libertadores",
+      "story_type": "deportes",
+      "summary": "¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema.",
+      "speech": "¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema.",
+      "page_numbers": [
+        11
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.2,
+        "width": 0.31,
+        "height": 0.66
+      },
+      "key_facts": [
+        "4-2 Universitario vs Nacional",
+        "Copa Libertadores",
+        "seguridad de clasificación"
+      ],
+      "tone_notes": [
+        "entusiasta",
+        "emocionante",
+        "futbolero"
+      ],
+      "safety_notes": "Se confirma el marcador y el impacto positivo para el club en la Libertadores.",
+      "notes": "Se confirma el marcador y el impacto positivo para el club en la Libertadores.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Marcador final",
+        "points": [
+          {
+            "label": "Universitario",
+            "value": 4.0
+          },
+          {
+            "label": "Nacional",
+            "value": 2.0
+          }
+        ],
+        "subtitle": "Universitario vs Nacional",
+        "unit": "goles",
+        "highlight_label": "Triunfo crema",
+        "data_source_note": "Datos confirmados en la cobertura oficial del partido."
+      },
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Jota no iría a una despedida de soltero",
+      "story_type": "espectaculos",
+      "summary": "Angie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula.",
+      "speech": "Angie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula.",
+      "page_numbers": [
+        15
+      ],
+      "cover_region": {
+        "x": 0.59,
+        "y": 0.83,
+        "width": 0.39,
+        "height": 0.14
+      },
+      "key_facts": [
+        "Jota Benz",
+        "Angie Arizaga",
+        "despedida de soltero"
+      ],
+      "tone_notes": [
+        "informativo",
+        "farandulero",
+        "irónico"
+      ],
+      "safety_notes": "Se resalta la declaración sin invadir la privacidad de la pareja.",
+      "notes": "Se resalta la declaración sin invadir la privacidad de la pareja.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "segment_audio_file": null
+    }
+  ]
+}

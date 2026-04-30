@@ -1,0 +1,22 @@
+{
+  "batch_date": "2026-04-30",
+  "responses": {},
+  "speech_block_layout": [
+    [
+      "2026-04-30-ojo-frontpage-001",
+      "2026-04-30-libero-frontpage-001"
+    ],
+    [
+      "2026-04-30-larepublica-frontpage-001",
+      "2026-04-30-gestion-frontpage-001"
+    ],
+    [
+      "2026-04-30-elcomercio-frontpage-001",
+      "2026-04-30-correo-frontpage-001"
+    ],
+    [
+      "2026-04-30-trome-frontpage-001"
+    ]
+  ],
+  "updated_at": "2026-04-30T08:56:32"
+}

@@ -74,10 +74,10 @@
       ],
       "safety_notes": "La noticia se basa en la información oficial de la Policía, sin entrar en detalles no confirmados.",
       "cover_region": {
-        "x": 0.25,
-        "y": 0.22,
-        "width": 0.73,
-        "height": 0.67
+        "x": 0.27,
+        "y": 0.24,
+        "width": 0.71,
+        "height": 0.6
       },
       "support_visual": null,
       "segment_audio_file": null,
@@ -92,9 +92,9 @@
       "segment_type": "story",
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
       "text": "Sporting Cristal sigue con paso firme en la Copa Libertadores. A pesar de las adversidades locales, el equipo se mantiene en lo más alto del grupo, sumando puntos importantes.",
       "page_numbers": [
         11,
@@ -150,11 +150,11 @@
       "headline": "¡ALMA, CORAZÓN Y GARRA!",
       "story_type": "deportes",
       "segment_type": "story",
-      "narrator_profile_id": "mr_peet",
+      "narrator_profile_id": "gonzalo_nunez",
       "narrator_role": "reportero_deportivo",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
       "text": "La ‘U’ está más que motivada. Con la salida de Barco, el equipo se prepara para su partido más importante de la Copa, buscando resurgir y darle esperanza a su hinchada.",
       "page_numbers": [
         8
@@ -171,10 +171,10 @@
       ],
       "safety_notes": "Se enfoca en la reacción del equipo ante la salida de Barco y el compromiso por el próximo encuentro.",
       "cover_region": {
-        "x": 0.11,
-        "y": 0.89,
-        "width": 0.31,
-        "height": 0.1
+        "x": 0.0,
+        "y": 0.86,
+        "width": 0.5,
+        "height": 0.12
       },
       "support_visual": null,
       "segment_audio_file": null,

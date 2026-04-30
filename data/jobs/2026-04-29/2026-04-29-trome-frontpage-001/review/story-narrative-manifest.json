@@ -14,8 +14,8 @@
       "segment_type": "story",
       "headline": "Porky exige nuevas elecciones",
       "story_type": "politica",
-      "summary": "Porky intensifica su lucha. Ahora asegura que los votos de la jornada complementaria deberían ser anulados. La disputa por la transparencia electoral se sigue intensificando.",
-      "speech": "Porky intensifica su lucha. Ahora asegura que los votos de la jornada complementaria deberían ser anulados. La disputa por la transparencia electoral se sigue intensificando.",
+      "summary": "Porky López Aliaga vuelve a hacer ruido: exige nuevas elecciones para aclarar la situación electoral. Las críticas al JNE y al sistema político siguen creciendo entre los sectores de oposición.",
+      "speech": "Porky López Aliaga vuelve a hacer ruido: exige nuevas elecciones para aclarar la situación electoral. Las críticas al JNE y al sistema político siguen creciendo entre los sectores de oposición.",
       "page_numbers": [
         8
       ],
@@ -26,17 +26,17 @@
         "height": 0.12
       },
       "key_facts": [
-        "Porky pide nuevas elecciones",
-        "acusa manipulación electoral",
-        "JNE en la mira"
+        "Porky exige nuevas elecciones",
+        "críticas al JNE",
+        "descontento político"
       ],
       "tone_notes": [
-        "afirmativo",
-        "político",
-        "directo"
+        "directo",
+        "crítico",
+        "firme"
       ],
-      "safety_notes": "Se limita a las declaraciones de Porky, sin asumir veracidad de las acusaciones.",
-      "notes": "Se limita a las declaraciones de Porky, sin asumir veracidad de las acusaciones.",
+      "safety_notes": "Se resume la postura sin afirmar ilegalidad en el proceso electoral.",
+      "notes": "Se resume la postura sin afirmar ilegalidad en el proceso electoral.",
       "support_visual": null,
       "narrator_profile_id": "beto_ortiz",
       "narrator_role": "analista_politica",
@@ -50,8 +50,8 @@
       "segment_type": "story",
       "headline": "Cayó narco como El Chapo",
       "story_type": "policial",
-      "summary": "El líder de una de las bandas más peligrosas de narcotráfico en el país ha caído. Este ‘El Chapo’ peruano, vinculado al crimen organizado, fue detenido tras un operativo de gran escala.",
-      "speech": "El líder de una de las bandas más peligrosas de narcotráfico en el país ha caído. Este ‘El Chapo’ peruano, vinculado al crimen organizado, fue detenido tras un operativo de gran escala.",
+      "summary": "El crimen organizado sigue siendo un flagelo en México. Un líder del Cártel de Jalisco, sucesor de ‘El Mencho’, fue capturado por la Marina, una victoria clave en la lucha contra el narcotráfico.",
+      "speech": "El crimen organizado sigue siendo un flagelo en México. Un líder del Cártel de Jalisco, sucesor de ‘El Mencho’, fue capturado por la Marina, una victoria clave en la lucha contra el narcotráfico.",
       "page_numbers": [
         9
       ],
@@ -62,17 +62,17 @@
         "height": 0.6
       },
       "key_facts": [
-        "caída del líder de narcotraficantes",
-        "operativo militar",
-        "bandas criminales desmanteladas"
+        "captura de líder del Cártel de Jalisco",
+        "operativo de la Marina",
+        "vínculos con ‘El Mencho’"
       ],
       "tone_notes": [
         "tenso",
-        "directo",
-        "informativo"
+        "informativo",
+        "cauteloso"
       ],
-      "safety_notes": "La noticia se basa en la información oficial de la Policía, sin entrar en detalles no confirmados.",
-      "notes": "La noticia se basa en la información oficial de la Policía, sin entrar en detalles no confirmados.",
+      "safety_notes": "Se mantiene un enfoque cauteloso respecto a la conexión directa con ‘El Mencho’.",
+      "notes": "Se mantiene un enfoque cauteloso respecto a la conexión directa con ‘El Mencho’.",
       "support_visual": null,
       "narrator_profile_id": "reportero_panorama",
       "narrator_role": "reportero_policial",
@@ -86,8 +86,8 @@
       "segment_type": "story",
       "headline": "Cristal avanza en la Copa",
       "story_type": "deportes",
-      "summary": "Sporting Cristal sigue con paso firme en la Copa Libertadores. A pesar de las adversidades locales, el equipo se mantiene en lo más alto del grupo, sumando puntos importantes.",
-      "speech": "Sporting Cristal sigue con paso firme en la Copa Libertadores. A pesar de las adversidades locales, el equipo se mantiene en lo más alto del grupo, sumando puntos importantes.",
+      "summary": "Sporting Cristal demuestra su garra en la Copa Libertadores. Con una victoria 2-0 sobre Junior, el equipo asegura su lugar en el grupo y sigue soñando con la clasificación a la siguiente fase.",
+      "speech": "Sporting Cristal demuestra su garra en la Copa Libertadores. Con una victoria 2-0 sobre Junior, el equipo asegura su lugar en el grupo y sigue soñando con la clasificación a la siguiente fase.",
       "page_numbers": [
         11,
         12
@@ -99,40 +99,18 @@
         "height": 0.64
       },
       "key_facts": [
-        "Sporting Cristal avanza en Copa",
-        "últimos partidos cruciales",
-        "equipos de primer nivel en su grupo"
+        "victoria 2-0 contra Junior",
+        "clasificación en la Copa Libertadores",
+        "puntos obtenidos en el grupo"
       ],
       "tone_notes": [
-        "motivacional",
-        "deportivo",
-        "claro"
+        "futbolero",
+        "emocionado",
+        "dinámico"
       ],
-      "safety_notes": "La noticia resalta el logro en Copa Libertadores sin entrar en detalles sobre la rivalidad con otros equipos.",
-      "notes": "La noticia resalta el logro en Copa Libertadores sin entrar en detalles sobre la rivalidad con otros equipos.",
-      "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "line",
-        "title": "Copa Libertadores Avance",
-        "points": [
-          {
-            "label": "Partido 1",
-            "value": 3.0
-          },
-          {
-            "label": "Partido 2",
-            "value": 3.0
-          },
-          {
-            "label": "Partido 3",
-            "value": 6.0
-          }
-        ],
-        "subtitle": "Posición en grupo de Cristal",
-        "unit": "Puntos",
-        "highlight_label": "Líder del grupo",
-        "data_source_note": "Datos reportados por Trome basados en el rendimiento de Cristal."
-      },
+      "safety_notes": "Se evita profundizar en detalles tácticos no confirmados del partido.",
+      "notes": "Se evita profundizar en detalles tácticos no confirmados del partido.",
+      "support_visual": null,
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
       "narrator_map_id": "default-story-type-narrators",
@@ -143,37 +121,37 @@
     {
       "story_index": 4,
       "segment_type": "story",
-      "headline": "¡ALMA, CORAZÓN Y GARRA!",
-      "story_type": "deportes",
-      "summary": "La ‘U’ está más que motivada. Con la salida de Barco, el equipo se prepara para su partido más importante de la Copa, buscando resurgir y darle esperanza a su hinchada.",
-      "speech": "La ‘U’ está más que motivada. Con la salida de Barco, el equipo se prepara para su partido más importante de la Copa, buscando resurgir y darle esperanza a su hinchada.",
+      "headline": "Pamela sin miedo a Dominguez",
+      "story_type": "espectaculos",
+      "summary": "Pamela Franco responde con firmeza: no le tiene miedo a Dominguez y está decidida a seguir su carrera, a pesar de las críticas. En un mundo donde las redes sociales se imponen, su postura es clara.",
+      "speech": "Pamela Franco responde con firmeza: no le tiene miedo a Dominguez y está decidida a seguir su carrera, a pesar de las críticas. En un mundo donde las redes sociales se imponen, su postura es clara.",
       "page_numbers": [
-        8
+        15
       ],
       "cover_region": {
-        "x": 0.0,
+        "x": 0.48,
         "y": 0.86,
         "width": 0.5,
         "height": 0.12
       },
       "key_facts": [
-        "la ‘U’ debe ganar",
-        "salida de Barco",
-        "crisis interna en el club"
+        "Pamela Franco responde a Dominguez",
+        "confianza personal",
+        "reacción a las críticas en redes sociales"
       ],
       "tone_notes": [
-        "emocional",
-        "motivacional",
-        "energético"
+        "picante",
+        "directo",
+        "sin rodeos"
       ],
-      "safety_notes": "Se enfoca en la reacción del equipo ante la salida de Barco y el compromiso por el próximo encuentro.",
-      "notes": "Se enfoca en la reacción del equipo ante la salida de Barco y el compromiso por el próximo encuentro.",
+      "safety_notes": "Se evita exponer detalles personales no confirmados o descalificaciones directas.",
+      "notes": "Se evita exponer detalles personales no confirmados o descalificaciones directas.",
       "support_visual": null,
-      "narrator_profile_id": "gonzalo_nunez",
-      "narrator_role": "reportero_deportivo",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
       "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "gonzalo_nunez",
-      "narrator_name": "gonzaloNuñes",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
       "segment_audio_file": null
     }
   ]

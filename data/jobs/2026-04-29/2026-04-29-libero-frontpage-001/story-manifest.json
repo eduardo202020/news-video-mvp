@@ -18,9 +18,9 @@
       "segment_type": "story",
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
       "text": "La Universidad decide dar un giro. La salida de su director deportivo, tras una serie de malos resultados, marca un cambio importante en la gestión del club. Ahora, la U tiene una nueva oportunidad.",
       "page_numbers": [
         4,
@@ -39,9 +39,9 @@
       "safety_notes": "Basado en páginas 4-5 de Libero, no se confirma aún el sucesor del cargo.",
       "cover_region": {
         "x": 0.0,
-        "y": 0.82,
-        "width": 0.37,
-        "height": 0.17
+        "y": 0.76,
+        "width": 0.42,
+        "height": 0.2
       },
       "support_visual": null,
       "segment_audio_file": null,
@@ -54,11 +54,11 @@
       "headline": "Sporting Cristal venció y avanza",
       "story_type": "deportes",
       "segment_type": "story",
-      "narrator_profile_id": "mr_peet",
+      "narrator_profile_id": "gonzalo_nunez",
       "narrator_role": "reportero_deportivo",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
       "text": "Sporting Cristal sigue su marcha en la Copa Libertadores. Con una victoria convincente ante Junior de Barranquilla, avanza con paso firme en su grupo, acumulando puntos vitales para avanzar.",
       "page_numbers": [
         6,
@@ -77,9 +77,9 @@
       "safety_notes": "Resumen de la victoria sin entrar en detalles específicos del partido.",
       "cover_region": {
         "x": 0.0,
-        "y": 0.02,
-        "width": 0.69,
-        "height": 0.82
+        "y": 0.05,
+        "width": 0.7,
+        "height": 0.78
       },
       "support_visual": {
         "type": "numeric_chart",
@@ -116,9 +116,9 @@
       "segment_type": "story",
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
-      "voice_profile_id": "voicebox-local",
-      "narrator_name": "Voicebox Narrator",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
       "text": "PSG sigue demostrando su poderío en la Champions League. Tras vencer a Bayern por 5-4 en un duelo increíble, avanzan con una sonrisa hacia las semifinales, buscando el título.",
       "page_numbers": [
         12
@@ -135,10 +135,10 @@
       ],
       "safety_notes": "Resumen de la victoria en la Champions sin añadir detalles adicionales sobre el partido.",
       "cover_region": {
-        "x": 0.51,
-        "y": 0.82,
-        "width": 0.23,
-        "height": 0.14
+        "x": 0.56,
+        "y": 0.78,
+        "width": 0.28,
+        "height": 0.16
       },
       "support_visual": null,
       "segment_audio_file": null,

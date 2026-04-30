@@ -12,10 +12,10 @@
     {
       "story_index": 1,
       "segment_type": "story",
-      "headline": "Porky insiste con anular elecciones",
+      "headline": "Hara de todo por nuevas elecciones",
       "story_type": "politica",
-      "summary": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.",
-      "speech": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.",
+      "summary": "Rafael Lopez Aliaga insiste en anular las elecciones y eleva la tension politica. La propuesta reabre el debate sobre la legitimidad del proceso y pone al sistema bajo presion.",
+      "speech": "Rafael Lopez Aliaga insiste en anular las elecciones y eleva la tension politica. La propuesta reabre el debate sobre la legitimidad del proceso y pone al sistema bajo presion.",
       "page_numbers": [
         2
       ],
@@ -26,17 +26,17 @@
         "height": 0.6
       },
       "key_facts": [
-        "Porky exige nuevas elecciones",
-        "JNE bajo presión",
-        "acusaciones sobre imparcialidad"
+        "pedido de nuevas elecciones",
+        "Lopez Aliaga",
+        "cuestionamiento electoral"
       ],
       "tone_notes": [
-        "incisivo",
-        "directo",
-        "político"
+        "critico",
+        "analitico",
+        "directo"
       ],
-      "safety_notes": "Se presenta el punto de vista del candidato sin afirmar que sus acusaciones sean verificadas.",
-      "notes": "Se presenta el punto de vista del candidato sin afirmar que sus acusaciones sean verificadas.",
+      "safety_notes": "Se evita afirmar irregularidades no confirmadas como hechos.",
+      "notes": "Se evita afirmar irregularidades no confirmadas como hechos.",
       "support_visual": null,
       "narrator_profile_id": "beto_ortiz",
       "narrator_role": "analista_politica",
@@ -48,10 +48,10 @@
     {
       "story_index": 2,
       "segment_type": "story",
-      "headline": "Disparan a campeón de artes marciales",
+      "headline": "Matan a campeon de artes marciales",
       "story_type": "policial",
-      "summary": "Un asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.",
-      "speech": "Un asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.",
+      "summary": "Un campeon de artes marciales es asesinado a balazos en su academia. El crimen sacude a su entorno y vuelve a encender las alarmas por la violencia que no da tregua.",
+      "speech": "Un campeon de artes marciales es asesinado a balazos en su academia. El crimen sacude a su entorno y vuelve a encender las alarmas por la violencia que no da tregua.",
       "page_numbers": [
         6
       ],
@@ -62,17 +62,17 @@
         "height": 0.2
       },
       "key_facts": [
-        "campeón de artes marciales asesinado",
-        "Policía en búsqueda de los culpables",
-        "balacera frente a la academia"
+        "asesinato en academia",
+        "victima deportista",
+        "uso de arma de fuego"
       ],
       "tone_notes": [
         "tenso",
-        "urgente",
-        "directo"
+        "directo",
+        "impactante"
       ],
-      "safety_notes": "La noticia se enfoca en los hechos y la búsqueda de los culpables, sin detalles adicionales sobre el crimen.",
-      "notes": "La noticia se enfoca en los hechos y la búsqueda de los culpables, sin detalles adicionales sobre el crimen.",
+      "safety_notes": "No se atribuyen responsables sin confirmacion oficial.",
+      "notes": "No se atribuyen responsables sin confirmacion oficial.",
       "support_visual": null,
       "narrator_profile_id": "reportero_panorama",
       "narrator_role": "reportero_policial",
@@ -84,31 +84,31 @@
     {
       "story_index": 3,
       "segment_type": "story",
-      "headline": "U busca levantar cabeza",
+      "headline": "Ilusiones al bolso",
       "story_type": "deportes",
-      "summary": "La ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.",
-      "speech": "La ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.",
+      "summary": "Universitario se juega un duelo clave ante Nacional de Montevideo con la ilusion intacta. El equipo crema busca sumar afuera y meterse de lleno en la pelea del grupo.",
+      "speech": "Universitario se juega un duelo clave ante Nacional de Montevideo con la ilusion intacta. El equipo crema busca sumar afuera y meterse de lleno en la pelea del grupo.",
       "page_numbers": [
-        13
+        2
       ],
       "cover_region": {
-        "x": 0.0,
-        "y": 0.75,
-        "width": 0.31,
-        "height": 0.24
+        "x": 0.29,
+        "y": 0.15,
+        "width": 0.69,
+        "height": 0.6
       },
       "key_facts": [
-        "salida de Barco",
-        "expectativa por partido de Libertadores",
-        "crisis deportiva en la U"
+        "partido ante Nacional",
+        "contexto de Copa Libertadores",
+        "objetivo de clasificacion"
       ],
       "tone_notes": [
-        "motivacional",
         "emocionante",
-        "deportivo"
+        "expectante",
+        "competitivo"
       ],
-      "safety_notes": "Se resume el contexto deportivo sin inventar razones específicas para la crisis.",
-      "notes": "Se resume el contexto deportivo sin inventar razones específicas para la crisis.",
+      "safety_notes": "Sin resultados confirmados; enfoque previo al partido.",
+      "notes": "Sin resultados confirmados; enfoque previo al partido.",
       "support_visual": null,
       "narrator_profile_id": "mr_peet",
       "narrator_role": "reportero_deportivo",
@@ -120,10 +120,10 @@
     {
       "story_index": 4,
       "segment_type": "story",
-      "headline": "Monserrat es una ociosa",
+      "headline": "Susan manda a trabajar a Monserrat",
       "story_type": "espectaculos",
-      "summary": "La controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
-      "speech": "La controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
+      "summary": "Susan arremete contra Monserrat y la acusa de no hacer nada en casa. El cruce sube de tono y revive tensiones familiares que ya son parte del show mediatico.",
+      "speech": "Susan arremete contra Monserrat y la acusa de no hacer nada en casa. El cruce sube de tono y revive tensiones familiares que ya son parte del show mediatico.",
       "page_numbers": [
         16
       ],
@@ -134,17 +134,17 @@
         "height": 0.21
       },
       "key_facts": [
-        "acusaciones a Monserrat",
-        "dependencia económica de su familia",
-        "defensa pública de su estilo de vida"
+        "critica de Susan",
+        "conflicto con Monserrat",
+        "declaraciones publicas"
       ],
       "tone_notes": [
-        "controvertido",
-        "firme",
-        "espectacular"
+        "picante",
+        "directo",
+        "entretenido"
       ],
-      "safety_notes": "Se enfoca en la opinión pública y la respuesta de Monserrat sin afirmar veracidad de los rumores.",
-      "notes": "Se enfoca en la opinión pública y la respuesta de Monserrat sin afirmar veracidad de los rumores.",
+      "safety_notes": "Se presentan declaraciones como dichos, no como hechos verificados.",
+      "notes": "Se presentan declaraciones como dichos, no como hechos verificados.",
       "support_visual": null,
       "narrator_profile_id": "reportero_magaly",
       "narrator_role": "conductora_espectaculos",

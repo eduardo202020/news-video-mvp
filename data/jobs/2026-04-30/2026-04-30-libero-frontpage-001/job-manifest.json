@@ -1,0 +1,1756 @@
+{
+  "job_id": "2026-04-30-libero-frontpage-001",
+  "source_id": "libero",
+  "date": "2026-04-30",
+  "source": {
+    "source_id": "libero",
+    "source_config_path": "automation/sources/diarios/libero.json",
+    "requested_date": "2026-04-30",
+    "issue_date": "2026-04-30",
+    "publication_status": "available",
+    "discovery_type": "direct_image_url",
+    "front_page_url": "https://img.kiosko.net/2026/04/30/pe/pe_libero.750.jpg",
+    "discovered_pages_count": 1,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-30/2026-04-30-libero-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://img.kiosko.net/2026/04/30/pe/pe_libero.750.jpg",
+    "source_url": "https://img.kiosko.net/2026/04/30/pe/pe_libero.750.jpg",
+    "source_config": "automation/sources/diarios/libero.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://img.kiosko.net/2026/04/30/pe/pe_libero.750.jpg",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-libero-frontpage-001/input/front-page.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "candidates": [
+      {
+        "headline": "Garra y triunfo de Universitario",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 0.72,
+          "height": 0.73
+        },
+        "page_number": 3,
+        "evidence_line": "PÁGS. 3 A 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Garra y triunfo de Universitario",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 0.72,
+          "height": 0.73
+        },
+        "page_number": 4,
+        "evidence_line": "PÁGS. 3 A 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Garra y triunfo de Universitario",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 0.72,
+          "height": 0.73
+        },
+        "page_number": 5,
+        "evidence_line": "PÁGS. 3 A 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Cienciano lo celebra",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.76,
+          "width": 0.27,
+          "height": 0.1
+        },
+        "page_number": 6,
+        "evidence_line": "PÁG. 6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "Guede ya tiene su oncena",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.5,
+          "y": 0.76,
+          "width": 0.19,
+          "height": 0.1
+        },
+        "page_number": 8,
+        "evidence_line": "PÁG. 8",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Garra y triunfo de Universitario",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 0.72,
+          "height": 0.73
+        },
+        "page_numbers": [
+          3,
+          4,
+          5
+        ],
+        "evidence": "PÁGS. 3 A 5",
+        "evidence_lines": [
+          "PÁGS. 3 A 5"
+        ],
+        "confidence": 0.98,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Cienciano lo celebra",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.88,
+          "width": 0.27,
+          "height": 0.1
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "PÁG. 6",
+        "evidence_lines": [
+          "PÁG. 6"
+        ],
+        "confidence": 0.9,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Guede ya tiene su oncena",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.46,
+          "y": 0.88,
+          "width": 0.31,
+          "height": 0.1
+        },
+        "page_numbers": [
+          8
+        ],
+        "evidence": "PÁG. 8",
+        "evidence_lines": [
+          "PÁG. 8"
+        ],
+        "confidence": 0.88,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Garra y triunfo de Universitario",
+        "story_type": "deportes",
+        "summary": "Partido bravo y reacción crema. Universitario venció 4-2 a Nacional en el Monumental y volvió a respirar en la Libertadores: cuando parecía cuesta arriba, apareció la garra copera.",
+        "speech": "Partido bravo y reacción crema. Universitario venció 4-2 a Nacional en el Monumental y volvió a respirar en la Libertadores: cuando parecía cuesta arriba, apareció la garra copera.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "emocional",
+          "copero"
+        ],
+        "page_numbers": [
+          3,
+          4,
+          5
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 0.72,
+          "height": 0.73
+        },
+        "key_facts": [
+          "Universitario ganó 4-2",
+          "rival fue Nacional de Uruguay",
+          "partido por Copa Libertadores"
+        ],
+        "key_facts_used": [
+          "Universitario ganó 4-2",
+          "rival fue Nacional de Uruguay",
+          "partido por Copa Libertadores"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Contexto verificado vía web por falta de páginas internas disponibles. ([libero.pe](https://libero.pe/futbol-internacional/copa-libertadores/2026/04/28/universitario-vs-nacional-en-vivo-gratis-partido-de-copa-libertadores-via-espn-fox-sports-lbev-2182264?utm_source=chatgpt.com))",
+        "notes": "Contexto verificado vía web por falta de páginas internas disponibles. ([libero.pe](https://libero.pe/futbol-internacional/copa-libertadores/2026/04/28/universitario-vs-nacional-en-vivo-gratis-partido-de-copa-libertadores-via-espn-fox-sports-lbev-2182264?utm_source=chatgpt.com))",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "bar",
+          "title": "Marcador final",
+          "points": [
+            {
+              "label": "Universitario",
+              "value": 4.0
+            },
+            {
+              "label": "Nacional",
+              "value": 2.0
+            }
+          ],
+          "subtitle": "Universitario vs. Nacional",
+          "unit": "goles",
+          "highlight_label": "Triunfo crema",
+          "data_source_note": "Resultado confirmado con cobertura web de Líbero e Infobae. ([libero.pe](https://libero.pe/futbol-internacional/copa-libertadores/2026/04/28/universitario-vs-nacional-en-vivo-gratis-partido-de-copa-libertadores-via-espn-fox-sports-lbev-2182264?utm_source=chatgpt.com))"
+        },
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Cienciano lo celebra",
+        "story_type": "deportes",
+        "summary": "Cienciano puso la altura y el carácter. Le ganó 1-0 a Atlético Mineiro en Cusco y el “Papá” celebró un triunfo de peso internacional, de esos que cambian el ánimo del grupo.",
+        "speech": "Cienciano puso la altura y el carácter. Le ganó 1-0 a Atlético Mineiro en Cusco y el “Papá” celebró un triunfo de peso internacional, de esos que cambian el ánimo del grupo.",
+        "narrator_profile_id": "gonzalo_nunez",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "futbolero",
+          "celebratorio",
+          "continental"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.88,
+          "width": 0.27,
+          "height": 0.1
+        },
+        "key_facts": [
+          "Cienciano ganó 1-0",
+          "rival fue Atlético Mineiro",
+          "gol de Neri Bandiera"
+        ],
+        "key_facts_used": [
+          "Cienciano ganó 1-0",
+          "rival fue Atlético Mineiro",
+          "gol de Neri Bandiera"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Resultado y contexto verificados vía web por falta de páginas internas. ([bolavip.com](https://bolavip.com/pe/copa-sudamericana/cienciano-vs-atletico-mineiro-en-vivo-y-gratis-por-la-copa-sudamericana-2026-via-dsports-y-dgo-hora-alineaciones-minuto-a-minuto-goles-resumen))",
+        "notes": "Resultado y contexto verificados vía web por falta de páginas internas. ([bolavip.com](https://bolavip.com/pe/copa-sudamericana/cienciano-vs-atletico-mineiro-en-vivo-y-gratis-por-la-copa-sudamericana-2026-via-dsports-y-dgo-hora-alineaciones-minuto-a-minuto-goles-resumen))",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "bar",
+          "title": "Triunfo en Cusco",
+          "points": [
+            {
+              "label": "Cienciano",
+              "value": 1.0
+            },
+            {
+              "label": "Mineiro",
+              "value": 0.0
+            }
+          ],
+          "subtitle": "Cienciano vs. Atlético Mineiro",
+          "unit": "goles",
+          "highlight_label": "Victoria del Papá",
+          "data_source_note": "Marcador confirmado con cobertura web deportiva. ([bolavip.com](https://bolavip.com/pe/copa-sudamericana/cienciano-vs-atletico-mineiro-en-vivo-y-gratis-por-la-copa-sudamericana-2026-via-dsports-y-dgo-hora-alineaciones-minuto-a-minuto-goles-resumen))"
+        },
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Guede ya tiene su oncena",
+        "story_type": "deportes",
+        "summary": "Guede ya ajusta piezas en Alianza. Con el duelo ante CD Moquegua en la mira, el técnico prepara su oncena y sabe que ser líder no alcanza: en Matute toca sostener el ritmo.",
+        "speech": "Guede ya ajusta piezas en Alianza. Con el duelo ante CD Moquegua en la mira, el técnico prepara su oncena y sabe que ser líder no alcanza: en Matute toca sostener el ritmo.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "expectante",
+          "competitivo"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.46,
+          "y": 0.88,
+          "width": 0.31,
+          "height": 0.1
+        },
+        "key_facts": [
+          "Alianza prepara duelo ante CD Moquegua",
+          "partido programado en Matute",
+          "Guede viene de triunfo ante Grau"
+        ],
+        "key_facts_used": [
+          "Alianza prepara duelo ante CD Moquegua",
+          "partido programado en Matute",
+          "Guede viene de triunfo ante Grau"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita afirmar una alineación exacta porque no hay página interna disponible; el contexto del próximo partido fue verificado vía web. ([bolavip.com](https://bolavip.com/pe/alianza-lima/la-decision-radical-de-pablo-guede-en-alianza-lima-luego-de-vencer-al-atletico-grau-y-ser-lideres-de-la-liga-1))",
+        "notes": "Se evita afirmar una alineación exacta porque no hay página interna disponible; el contexto del próximo partido fue verificado vía web. ([bolavip.com](https://bolavip.com/pe/alianza-lima/la-decision-radical-de-pablo-guede-en-alianza-lima-luego-de-vencer-al-atletico-grau-y-ser-lideres-de-la-liga-1))",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-30/2026-04-30-libero-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Partido bravo y reacción crema. Universitario venció 4-2 a Nacional en el Monumental y volvió a respirar en la Libertadores: cuando parecía cuesta arriba, apareció la garra copera.\n\nCienciano puso la altura y el carácter. Le ganó 1-0 a Atlético Mineiro en Cusco y el “Papá” celebró un triunfo de peso internacional, de esos que cambian el ánimo del grupo.\n\nGuede ya ajusta piezas en Alianza. Con el duelo ante CD Moquegua en la mira, el técnico prepara su oncena y sabe que ser líder no alcanza: en Matute toca sostener el ritmo.",
+    "approved_text": "Partido bravo y reacción crema. Universitario venció 4-2 a Nacional en el Monumental y volvió a respirar en la Libertadores: cuando parecía cuesta arriba, apareció la garra copera.\n\nCienciano puso la altura y el carácter. Le ganó 1-0 a Atlético Mineiro en Cusco y el “Papá” celebró un triunfo de peso internacional, de esos que cambian el ánimo del grupo.\n\nGuede ya ajusta piezas en Alianza. Con el duelo ante CD Moquegua en la mira, el técnico prepara su oncena y sabe que ser líder no alcanza: en Matute toca sostener el ritmo.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-04-30/2026-04-30-libero-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-30-libero-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-30T08:51:18",
+    "updated_at": "2026-04-30T09:08:18",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:51:18",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:51:20",
+        "details": "Fuente analizada desde HTML; portada descubierta y 0 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:54:47",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:54:47",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:59:47",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:34",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:34",
+        "details": "Seguimiento de portada actualizado para historia 1: Garra y triunfo de Universitario -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:34",
+        "details": "Seguimiento de portada actualizado para historia 2: Cienciano lo celebra -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:34",
+        "details": "Seguimiento de portada actualizado para historia 3: Guede ya tiene su oncena -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:13",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:15",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:16",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:18",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:20",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:23",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:24",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:25",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:26",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:26",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:26",
+        "details": "Seguimiento de portada actualizado para historia 1: Garra y triunfo de Universitario -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:27",
+        "details": "Seguimiento de portada actualizado para historia 2: Cienciano lo celebra -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:27",
+        "details": "Seguimiento de portada actualizado para historia 3: Guede ya tiene su oncena -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:32",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:34",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:34",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:35",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:36",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:36",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:36",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:37",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:38",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:38",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:38",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:39",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:40",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:40",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:40",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:41",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:42",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:42",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:42",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:44",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:44",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:44",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:44",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:46",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:47",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:47",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:47",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:48",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:49",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:53",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:07:56",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:07:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:00",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:03",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:04",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:04",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:04",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:04",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:07",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:07",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:08",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:08",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:09",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:10",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:10",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:10",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:11",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:12",
+        "details": "Enfoque manual actualizado para historia 1: Garra y triunfo de Universitario."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:12",
+        "details": "Enfoque manual actualizado para historia 2: Cienciano lo celebra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:12",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:13",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:15",
+        "details": "Enfoque manual actualizado para historia 3: Guede ya tiene su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:08:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:08:18",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, jueves 30 de abril, revisamos portadas en una fecha que recuerda el asesinato del presidente Luis Miguel Sánchez Cerro en 1933. La agenda llega cargada de política, economía, seguridad y fútbol: vamos diario por diario, directo a lo central.",
+    "date_reference": "Adonde.com efemerides abril30: asesinato en 1933 de Luis Miguel Sánchez Cerro, presidente del Perú.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia peruana de memoria política y con el tono fuerte de las portadas del día.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-30T08:54:47"
+  }
+}

@@ -12,10 +12,10 @@
     {
       "story_index": 1,
       "segment_type": "story",
-      "headline": "Keiko fuerte en Lima, Sánchez gana en provincias",
+      "headline": "Keiko fuerte en Lima y Sánchez gana en provincias",
       "story_type": "politica",
-      "summary": "El mapa electoral se parte en dos. Keiko domina Lima, pero Sánchez levanta fuera de la capital y el total nacional queda casi empatado: 32% contra 31%. La segunda vuelta arranca con el país dividido.",
-      "speech": "El mapa electoral se parte en dos. Keiko domina Lima, pero Sánchez levanta fuera de la capital y el total nacional queda casi empatado: 32% contra 31%. La segunda vuelta arranca con el país dividido.",
+      "summary": "La segunda vuelta de las elecciones se perfila con un empate técnico. Keiko se mantiene fuerte en Lima, mientras que Sánchez se impone en provincias. Todo está por definirse.",
+      "speech": "La segunda vuelta de las elecciones se perfila con un empate técnico. Keiko se mantiene fuerte en Lima, mientras que Sánchez se impone en provincias. Todo está por definirse.",
       "page_numbers": [
         2,
         3
@@ -27,289 +27,49 @@
         "height": 0.49
       },
       "key_facts": [
-        "Sánchez 32% y Keiko 31% a nivel nacional",
-        "Keiko lidera en Lima Metropolitana",
-        "Sánchez crece en Perú urbano y rural"
+        "Keiko gana en Lima",
+        "Sánchez gana en provincias",
+        "división de votos"
       ],
       "tone_notes": [
-        "critico",
-        "electoral",
-        "directo"
+        "análisis",
+        "conciso",
+        "informativo"
       ],
-      "safety_notes": "Encuesta atribuida al IEP para La República; se presenta como intención de voto, no como resultado electoral.",
-      "notes": "Encuesta atribuida al IEP para La República; se presenta como intención de voto, no como resultado electoral.",
+      "safety_notes": "Se describe la tendencia sin asumir resultados definitivos.",
+      "notes": "Se describe la tendencia sin asumir resultados definitivos.",
       "support_visual": {
         "type": "numeric_chart",
         "chart_type": "bar",
-        "title": "Intención de voto",
+        "title": "Distribución de votos en la segunda vuelta",
         "points": [
-          {
-            "label": "Sánchez nacional",
-            "value": 32.0
-          },
-          {
-            "label": "Keiko nacional",
-            "value": 31.0
-          },
           {
             "label": "Keiko Lima",
             "value": 41.0
           },
           {
-            "label": "Sánchez rural",
+            "label": "Sánchez provincias",
             "value": 44.0
+          },
+          {
+            "label": "Sánchez Lima",
+            "value": 32.0
+          },
+          {
+            "label": "Keiko provincias",
+            "value": 29.0
           }
         ],
-        "subtitle": "Encuesta IEP para segunda vuelta",
+        "subtitle": "Comparativa Lima y provincias",
         "unit": "%",
-        "highlight_label": "País dividido",
-        "data_source_note": "Datos reportados por La República sobre la encuesta IEP."
+        "highlight_label": "Mayor votación",
+        "data_source_note": "Cifras obtenidas de encuestas recientes."
       },
       "narrator_profile_id": "beto_ortiz",
       "narrator_role": "analista_politica",
       "narrator_map_id": "default-story-type-narrators",
       "voice_profile_id": "beto_ortiz",
       "narrator_name": "Beto Ortiz",
-      "segment_audio_file": null
-    },
-    {
-      "story_index": 2,
-      "segment_type": "story",
-      "headline": "Observadores UE no ven mala fe electoral",
-      "story_type": "politica",
-      "summary": "La observación europea enfría el discurso del fraude. Su jefa sostiene que no ve mala fe en las elecciones, y eso pone presión sobre quienes denuncian sin pruebas contundentes.",
-      "speech": "La observación europea enfría el discurso del fraude. Su jefa sostiene que no ve mala fe en las elecciones, y eso pone presión sobre quienes denuncian sin pruebas contundentes.",
-      "page_numbers": [
-        6
-      ],
-      "cover_region": {
-        "x": 0.7,
-        "y": 0.48,
-        "width": 0.28,
-        "height": 0.17
-      },
-      "key_facts": [
-        "jefa de observadores UE",
-        "no ve actos de mala fe",
-        "contexto de cuestionamientos electorales"
-      ],
-      "tone_notes": [
-        "incisivo",
-        "prudente",
-        "politico"
-      ],
-      "safety_notes": "Se atribuye la evaluación a la misión de observación; no se afirma que todas las controversias estén cerradas.",
-      "notes": "Se atribuye la evaluación a la misión de observación; no se afirma que todas las controversias estén cerradas.",
-      "support_visual": null,
-      "narrator_profile_id": "beto_ortiz",
-      "narrator_role": "analista_politica",
-      "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "beto_ortiz",
-      "narrator_name": "Beto Ortiz",
-      "segment_audio_file": null
-    },
-    {
-      "story_index": 3,
-      "segment_type": "story",
-      "headline": "Petroperú podría obtener préstamo privado",
-      "story_type": "economia",
-      "summary": "Petroperú toca la puerta de la banca privada para ganar oxígeno: hasta US$2.000 millones, con garantía contingente. No es un detalle menor; si el dinero se demora, Talara y Conchán entran en zona roja.",
-      "speech": "Petroperú toca la puerta de la banca privada para ganar oxígeno: hasta US$2.000 millones, con garantía contingente. No es un detalle menor; si el dinero se demora, Talara y Conchán entran en zona roja.",
-      "page_numbers": [
-        10
-      ],
-      "cover_region": {
-        "x": 0.7,
-        "y": 0.69,
-        "width": 0.28,
-        "height": 0.1
-      },
-      "key_facts": [
-        "banca privada dispuesta a prestar hasta US$2.000 millones",
-        "garantía contingente",
-        "riesgo para refinerías Talara y Conchán"
-      ],
-      "tone_notes": [
-        "afilado",
-        "economico",
-        "alerta"
-      ],
-      "safety_notes": "Se evita tratar el préstamo como aprobado; la nota habla de disposición bancaria y demora del Gobierno.",
-      "notes": "Se evita tratar el préstamo como aprobado; la nota habla de disposición bancaria y demora del Gobierno.",
-      "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "line",
-        "title": "Mercado de Petroperú",
-        "points": [
-          {
-            "label": "2013",
-            "value": 51.0
-          },
-          {
-            "label": "2025",
-            "value": 25.0
-          },
-          {
-            "label": "2026",
-            "value": 19.0
-          }
-        ],
-        "subtitle": "Participación en abastecimiento nacional",
-        "unit": "%",
-        "highlight_label": "Caída fuerte",
-        "data_source_note": "Cifras reportadas por La República con fuente Petroperú."
-      },
-      "narrator_profile_id": "jaime_bayly",
-      "narrator_role": "analista_economia",
-      "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "jaime_bayly",
-      "narrator_name": "Jaime Bayly",
-      "segment_audio_file": null
-    },
-    {
-      "story_index": 4,
-      "segment_type": "story",
-      "headline": "Sobreviviente de matanza dice que lo obligaron a mentir",
-      "story_type": "actualidad",
-      "summary": "Un sobreviviente de Colcabamba cambia el relato y denuncia presiones para declarar contra sí mismo. En un caso con muertos, versiones cruzadas y militares bajo escrutinio, lo mínimo es investigar sin atajos.",
-      "speech": "Un sobreviviente de Colcabamba cambia el relato y denuncia presiones para declarar contra sí mismo. En un caso con muertos, versiones cruzadas y militares bajo escrutinio, lo mínimo es investigar sin atajos.",
-      "page_numbers": [
-        12,
-        13
-      ],
-      "cover_region": {
-        "x": 0.7,
-        "y": 0.24,
-        "width": 0.28,
-        "height": 0.22
-      },
-      "key_facts": [
-        "testimonio de Ricardo Acuña",
-        "denuncia de presión para declarar",
-        "caso Colcabamba en Huancavelica"
-      ],
-      "tone_notes": [
-        "serio",
-        "firme",
-        "prudente"
-      ],
-      "safety_notes": "Se presenta como testimonio y denuncia, no como conclusión judicial. Se omiten detalles sensibles innecesarios.",
-      "notes": "Se presenta como testimonio y denuncia, no como conclusión judicial. Se omiten detalles sensibles innecesarios.",
-      "support_visual": null,
-      "narrator_profile_id": "thanos",
-      "narrator_role": "reportero_general",
-      "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "thanos",
-      "narrator_name": "Thanos",
-      "segment_audio_file": null
-    },
-    {
-      "story_index": 5,
-      "segment_type": "story",
-      "headline": "Campo de Marte en riesgo por falta de riego",
-      "story_type": "actualidad",
-      "summary": "El Campo de Marte, pulmón de Jesús María, entra en alerta: vecinos denuncian meses sin riego y árboles con estrés hídrico. La remodelación puede modernizar, sí, pero no a costa de apagar el verde.",
-      "speech": "El Campo de Marte, pulmón de Jesús María, entra en alerta: vecinos denuncian meses sin riego y árboles con estrés hídrico. La remodelación puede modernizar, sí, pero no a costa de apagar el verde.",
-      "page_numbers": [
-        2,
-        3
-      ],
-      "cover_region": {
-        "x": 0.02,
-        "y": 0.26,
-        "width": 0.68,
-        "height": 0.49
-      },
-      "key_facts": [
-        "vecinos denuncian falta de riego",
-        "árboles con estrés hídrico",
-        "obra de remodelación en Campo de Marte"
-      ],
-      "tone_notes": [
-        "claro",
-        "ambiental",
-        "ciudadano"
-      ],
-      "safety_notes": "Se recoge el reclamo vecinal y la respuesta institucional sin resolver la controversia como hecho cerrado.",
-      "notes": "Se recoge el reclamo vecinal y la respuesta institucional sin resolver la controversia como hecho cerrado.",
-      "support_visual": null,
-      "narrator_profile_id": "thanos",
-      "narrator_role": "reportero_general",
-      "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "thanos",
-      "narrator_name": "Thanos",
-      "segment_audio_file": null
-    },
-    {
-      "story_index": 6,
-      "segment_type": "story",
-      "headline": "Sicarios matan a profesor de artes marciales",
-      "story_type": "policial",
-      "summary": "El Callao suma otro crimen bajo investigación. Alexander Vinces, profesor de artes marciales, fue atacado al salir de su academia y un alumno quedó herido. La Policía aún busca el móvil.",
-      "speech": "El Callao suma otro crimen bajo investigación. Alexander Vinces, profesor de artes marciales, fue atacado al salir de su academia y un alumno quedó herido. La Policía aún busca el móvil.",
-      "page_numbers": [
-        15
-      ],
-      "cover_region": {
-        "x": 0.7,
-        "y": 0.8,
-        "width": 0.28,
-        "height": 0.1
-      },
-      "key_facts": [
-        "Alexander Vinces Paiva falleció tras ataque",
-        "alumno herido de gravedad",
-        "Policía investiga el móvil"
-      ],
-      "tone_notes": [
-        "tenso",
-        "directo",
-        "cauteloso"
-      ],
-      "safety_notes": "Se evita morbo y no se atribuye móvil criminal sin confirmación.",
-      "notes": "Se evita morbo y no se atribuye móvil criminal sin confirmación.",
-      "support_visual": null,
-      "narrator_profile_id": "reportero_panorama",
-      "narrator_role": "reportero_policial",
-      "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "reportero_panorama",
-      "narrator_name": "Reportero Panorama",
-      "segment_audio_file": null
-    },
-    {
-      "story_index": 7,
-      "segment_type": "story",
-      "headline": "La U despidió a Álvaro Barco",
-      "story_type": "deportes",
-      "summary": "Sin vueltas: la U movió el tablero. Álvaro Barco dejó la dirección deportiva en medio de malos resultados y críticas por fichajes. Ahora el club se juega algo más que un partido: se juega el rumbo.",
-      "speech": "Sin vueltas: la U movió el tablero. Álvaro Barco dejó la dirección deportiva en medio de malos resultados y críticas por fichajes. Ahora el club se juega algo más que un partido: se juega el rumbo.",
-      "page_numbers": [
-        18
-      ],
-      "cover_region": {
-        "x": 0.0,
-        "y": 0.0,
-        "width": 0.33,
-        "height": 0.08
-      },
-      "key_facts": [
-        "salida de Álvaro Barco",
-        "malos resultados",
-        "críticas por fichajes"
-      ],
-      "tone_notes": [
-        "deportivo",
-        "agil",
-        "frontal"
-      ],
-      "safety_notes": "Se resume el comunicado y el contexto deportivo sin cargar responsabilidad personal no demostrada.",
-      "notes": "Se resume el comunicado y el contexto deportivo sin cargar responsabilidad personal no demostrada.",
-      "support_visual": null,
-      "narrator_profile_id": "mr_peet",
-      "narrator_role": "reportero_deportivo",
-      "narrator_map_id": "default-story-type-narrators",
-      "voice_profile_id": "mr_peet",
-      "narrator_name": "MrPeet",
       "segment_audio_file": null
     }
   ]

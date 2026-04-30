@@ -1,0 +1,2048 @@
+{
+  "job_id": "2026-04-30-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "date": "2026-04-30",
+  "source": {
+    "source_id": "elcomercio",
+    "source_config_path": "automation/sources/diarios/elcomercio.json",
+    "requested_date": "2026-04-30",
+    "issue_date": "2026-04-30",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026043000000000001001&page=1&scale=207",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026043000000000001001&page=1&scale=207",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/elcomercio.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026043000000000001001&page=1&scale=207",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026043000000000001001&page=4&scale=55",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026043000000000001001&page=5&scale=55",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026043000000000001001&page=6&scale=55",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026043000000000001001&page=7&scale=55",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 17",
+        "page_number": 17,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026043000000000001001&page=17&scale=55",
+        "local_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/pages/page-17.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      4,
+      5,
+      6,
+      7,
+      17
+    ],
+    "candidates": [
+      {
+        "headline": "Israel y Alemania condenan ofensas de Balcázar",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.28,
+          "width": 0.68,
+          "height": 0.27
+        },
+        "page_number": 6,
+        "evidence_line": "PÁGINA 6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Nuevo jefe de la ONPE asumirá tras segunda vuelta",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.56,
+          "width": 0.58,
+          "height": 0.12
+        },
+        "page_number": 4,
+        "evidence_line": "PÁGS. 4 Y 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Nuevo jefe de la ONPE asumirá tras segunda vuelta",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.56,
+          "width": 0.58,
+          "height": 0.12
+        },
+        "page_number": 5,
+        "evidence_line": "PÁGS. 4 Y 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Perú puede perder grado de inversión",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.72,
+          "y": 0.68,
+          "width": 0.25,
+          "height": 0.12
+        },
+        "page_number": 7,
+        "evidence_line": "PÁGINA 7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "La U vence a Nacional en la Libertadores",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.22,
+          "y": 0.78,
+          "width": 0.49,
+          "height": 0.16
+        },
+        "page_number": 17,
+        "evidence_line": "PÁGINA 17",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Nuevo jefe de la ONPE asumirá tras segunda vuelta",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.56,
+          "width": 0.72,
+          "height": 0.12
+        },
+        "page_numbers": [
+          4,
+          5
+        ],
+        "evidence": "PÁGS. 4 Y 5",
+        "evidence_lines": [
+          "PÁGS. 4 Y 5"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Israel y Alemania condenan ofensas de Balcázar",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.28,
+          "width": 0.68,
+          "height": 0.27
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "PÁGINA 6",
+        "evidence_lines": [
+          "PÁGINA 6"
+        ],
+        "confidence": 0.98,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Perú puede perder grado de inversión",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.72,
+          "y": 0.68,
+          "width": 0.25,
+          "height": 0.12
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "PÁGINA 7",
+        "evidence_lines": [
+          "PÁGINA 7"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "La U vence a Nacional en la Libertadores",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.22,
+          "y": 0.78,
+          "width": 0.49,
+          "height": 0.16
+        },
+        "page_numbers": [
+          17
+        ],
+        "evidence": "PÁGINA 17",
+        "evidence_lines": [
+          "PÁGINA 17"
+        ],
+        "confidence": 0.92,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      4,
+      5,
+      6,
+      7,
+      17
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Nuevo jefe de la ONPE asumirá tras segunda vuelta",
+        "story_type": "politica",
+        "summary": "La JNJ ha convocado el proceso de selección para el nuevo jefe de la ONPE, quien asumirá tras la segunda vuelta. Un cambio clave en un momento crítico para el país, donde la confianza electoral está en juego.",
+        "speech": "La JNJ ha convocado el proceso de selección para el nuevo jefe de la ONPE, quien asumirá tras la segunda vuelta. Un cambio clave en un momento crítico para el país, donde la confianza electoral está en juego.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "informativo",
+          "formal",
+          "firme"
+        ],
+        "page_numbers": [
+          4,
+          5
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.56,
+          "width": 0.72,
+          "height": 0.12
+        },
+        "key_facts": [
+          "proceso de selección",
+          "nuevo jefe de la ONPE",
+          "segunda vuelta electoral"
+        ],
+        "key_facts_used": [
+          "proceso de selección",
+          "nuevo jefe de la ONPE",
+          "segunda vuelta electoral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se confirma quién será el elegido, solo el procedimiento abierto.",
+        "notes": "No se confirma quién será el elegido, solo el procedimiento abierto.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Israel y Alemania condenan ofensas de Balcázar",
+        "story_type": "politica",
+        "summary": "El presidente Balcázar enfrenta fuertes condenas internacionales por sus comentarios sobre la guerra. Alemania e Israel exigen disculpas, y el gobierno está bajo presión para corregir su postura.",
+        "speech": "El presidente Balcázar enfrenta fuertes condenas internacionales por sus comentarios sobre la guerra. Alemania e Israel exigen disculpas, y el gobierno está bajo presión para corregir su postura.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "incisivo",
+          "crítico",
+          "político"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.28,
+          "width": 0.68,
+          "height": 0.27
+        },
+        "key_facts": [
+          "condenas internacionales",
+          "comentarios de Balcázar",
+          "presión sobre el gobierno"
+        ],
+        "key_facts_used": [
+          "condenas internacionales",
+          "comentarios de Balcázar",
+          "presión sobre el gobierno"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como un conflicto diplomático, no como una sentencia oficial.",
+        "notes": "Se presenta como un conflicto diplomático, no como una sentencia oficial.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U vence a Nacional en la Libertadores",
+        "story_type": "deportes",
+        "summary": "Universitario sigue con vida en la Copa Libertadores tras vencer 4-2 a Nacional de Uruguay. La remontada en el Monumental reaviva la esperanza de los cremas en el torneo continental.",
+        "speech": "Universitario sigue con vida en la Copa Libertadores tras vencer 4-2 a Nacional de Uruguay. La remontada en el Monumental reaviva la esperanza de los cremas en el torneo continental.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "emocionante",
+          "deportivo",
+          "futbolero"
+        ],
+        "page_numbers": [
+          17
+        ],
+        "cover_region": {
+          "x": 0.22,
+          "y": 0.78,
+          "width": 0.49,
+          "height": 0.16
+        },
+        "key_facts": [
+          "victoria 4-2",
+          "Universitario vs. Nacional",
+          "Copa Libertadores"
+        ],
+        "key_facts_used": [
+          "victoria 4-2",
+          "Universitario vs. Nacional",
+          "Copa Libertadores"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se confirma el marcador y el contexto en el torneo, pero no se profundiza en detalles tácticos.",
+        "notes": "Se confirma el marcador y el contexto en el torneo, pero no se profundiza en detalles tácticos.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "bar",
+          "title": "Marcador final",
+          "points": [
+            {
+              "label": "Universitario",
+              "value": 4.0
+            },
+            {
+              "label": "Nacional",
+              "value": 2.0
+            }
+          ],
+          "subtitle": "Universitario vs Nacional",
+          "unit": "goles",
+          "highlight_label": "Triunfo crema",
+          "data_source_note": "Datos verificados en la cobertura oficial del partido."
+        },
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "La JNJ ha convocado el proceso de selección para el nuevo jefe de la ONPE, quien asumirá tras la segunda vuelta. Un cambio clave en un momento crítico para el país, donde la confianza electoral está en juego.\n\nEl presidente Balcázar enfrenta fuertes condenas internacionales por sus comentarios sobre la guerra. Alemania e Israel exigen disculpas, y el gobierno está bajo presión para corregir su postura.\n\nUniversitario sigue con vida en la Copa Libertadores tras vencer 4-2 a Nacional de Uruguay. La remontada en el Monumental reaviva la esperanza de los cremas en el torneo continental.",
+    "approved_text": "La JNJ ha convocado el proceso de selección para el nuevo jefe de la ONPE, quien asumirá tras la segunda vuelta. Un cambio clave en un momento crítico para el país, donde la confianza electoral está en juego.\n\nEl presidente Balcázar enfrenta fuertes condenas internacionales por sus comentarios sobre la guerra. Alemania e Israel exigen disculpas, y el gobierno está bajo presión para corregir su postura.\n\nUniversitario sigue con vida en la Copa Libertadores tras vencer 4-2 a Nacional de Uruguay. La remontada en el Monumental reaviva la esperanza de los cremas en el torneo continental.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-30-elcomercio-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-04-30T08:50:36",
+    "updated_at": "2026-04-30T09:06:31",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:50:36",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:50:54",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:50:55",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:54:47",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:54:47",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-30T08:55:54",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:04:47",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:48",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:48",
+        "details": "Seguimiento de portada actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:49",
+        "details": "Seguimiento de portada actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:49",
+        "details": "Seguimiento de portada actualizado para historia 4: La U vence a Nacional en la Libertadores -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:49",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:49",
+        "details": "Seguimiento de portada actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:49",
+        "details": "Seguimiento de portada actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:04:49",
+        "details": "Seguimiento de portada actualizado para historia 4: La U vence a Nacional en la Libertadores -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:30",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:30",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:33",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:33",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:33",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:35",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:36",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:36",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:36",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:38",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:38",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:39",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:39",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:40",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:41",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:41",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:41",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:42",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:43",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:44",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:44",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:44",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:44",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:45",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:46",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:46",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:47",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:48",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:48",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:48",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:49",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:49",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:50",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:50",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:51",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:51",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:53",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:55",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:56",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:56",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:56",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:57",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:05:59",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:05:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:12",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:14",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:16",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:18",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:20",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:23",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Enfoque manual actualizado para historia 2: Israel y Alemania condenan ofensas de Balcázar."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Enfoque manual actualizado para historia 4: La U vence a Nacional en la Libertadores."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:26",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:27",
+        "details": "Enfoque manual actualizado para historia 1: Nuevo jefe de la ONPE asumirá tras segunda vuelta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:06:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:06:31",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, jueves 30 de abril, revisamos portadas en una fecha que recuerda el asesinato del presidente Luis Miguel Sánchez Cerro en 1933. La agenda llega cargada de política, economía, seguridad y fútbol: vamos diario por diario, directo a lo central.",
+    "date_reference": "Adonde.com efemerides abril30: asesinato en 1933 de Luis Miguel Sánchez Cerro, presidente del Perú.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia peruana de memoria política y con el tono fuerte de las portadas del día.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-30T08:54:47"
+  }
+}

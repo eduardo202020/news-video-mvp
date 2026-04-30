@@ -148,8 +148,7 @@
         "evidence_lines": [
           "PAGS. 4-5"
         ],
-        "confidence": 0.97,
-        "follow_up_enabled": true
+        "confidence": 0.97
       },
       {
         "headline": "Cristal avanza en la Copa",
@@ -168,8 +167,7 @@
         "evidence_lines": [
           "PAGS. 6-7"
         ],
-        "confidence": 0.99,
-        "follow_up_enabled": true
+        "confidence": 0.99
       },
       {
         "headline": "PSG vence a Bayern en partidazo",
@@ -187,12 +185,10 @@
         "evidence_lines": [
           "PAG. 12"
         ],
-        "confidence": 0.95,
-        "follow_up_enabled": true
+        "confidence": 0.95
       }
     ],
-    "notes": "Paginas detectadas visualmente desde la portada.",
-    "focus_review_completed": true
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
     "provider": "chatgpt_plus_manual",
@@ -200,16 +196,16 @@
     "source": "supporting_pages_manual",
     "stories": [
       {
-        "headline": "La U sacó a su director deportivo",
+        "headline": "Se hundio el barco crema",
         "story_type": "deportes",
-        "summary": "La Universidad decide dar un giro. La salida de su director deportivo, tras una serie de malos resultados, marca un cambio importante en la gestión del club. Ahora, la U tiene una nueva oportunidad.",
-        "speech": "La Universidad decide dar un giro. La salida de su director deportivo, tras una serie de malos resultados, marca un cambio importante en la gestión del club. Ahora, la U tiene una nueva oportunidad.",
+        "summary": "Universitario vuelve a tropezar y el golpe pega fuerte en la interna. El equipo no levanta cabeza en el momento clave y la hinchada empieza a exigir respuestas inmediatas en pleno torneo.",
+        "speech": "Universitario vuelve a tropezar y el golpe pega fuerte en la interna. El equipo no levanta cabeza en el momento clave y la hinchada empieza a exigir respuestas inmediatas en pleno torneo.",
         "narrator_profile_id": "mr_peet",
         "narrator_role": "reportero_deportivo",
         "tone_notes": [
-          "deportivo",
-          "urgente",
-          "transición"
+          "intenso",
+          "critico",
+          "emocional"
         ],
         "page_numbers": [
           4,
@@ -217,36 +213,37 @@
         ],
         "cover_region": {
           "x": 0.0,
-          "y": 0.76,
+          "y": 0.86,
           "width": 0.42,
-          "height": 0.2
+          "height": 0.12
         },
         "key_facts": [
-          "salida de director deportivo",
-          "malos resultados en la temporada",
-          "nuevo ciclo para el club"
+          "derrota de Universitario",
+          "mal momento deportivo",
+          "presion de la hinchada"
         ],
         "key_facts_used": [
-          "salida de director deportivo",
-          "malos resultados en la temporada",
-          "nuevo ciclo para el club"
+          "derrota de Universitario",
+          "mal momento deportivo",
+          "presion de la hinchada"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Basado en páginas 4-5 de Libero, no se confirma aún el sucesor del cargo.",
-        "notes": "Basado en páginas 4-5 de Libero, no se confirma aún el sucesor del cargo.",
-        "support_visual": null
+        "safety_notes": "Se basa en el titular de portada; no se detallan cifras no verificadas.",
+        "notes": "Se basa en el titular de portada; no se detallan cifras no verificadas.",
+        "support_visual": null,
+        "follow_up_enabled": true
       },
       {
-        "headline": "Sporting Cristal venció y avanza",
+        "headline": "Cristal avanza en la Copa",
         "story_type": "deportes",
-        "summary": "Sporting Cristal sigue su marcha en la Copa Libertadores. Con una victoria convincente ante Junior de Barranquilla, avanza con paso firme en su grupo, acumulando puntos vitales para avanzar.",
-        "speech": "Sporting Cristal sigue su marcha en la Copa Libertadores. Con una victoria convincente ante Junior de Barranquilla, avanza con paso firme en su grupo, acumulando puntos vitales para avanzar.",
+        "summary": "Sporting Cristal sufre en el arranque, pero termina imponiendo su juego y sigue firme en la Libertadores. Un triunfo clave que lo mantiene en pelea y refuerza su ambicion internacional.",
+        "speech": "Sporting Cristal sufre en el arranque, pero termina imponiendo su juego y sigue firme en la Libertadores. Un triunfo clave que lo mantiene en pelea y refuerza su ambicion internacional.",
         "narrator_profile_id": "gonzalo_nunez",
         "narrator_role": "reportero_deportivo",
         "tone_notes": [
+          "emocionante",
           "positivo",
-          "motivacional",
-          "deportivo"
+          "ritmo alto"
         ],
         "page_numbers": [
           6,
@@ -259,77 +256,57 @@
           "height": 0.78
         },
         "key_facts": [
-          "victoria de Sporting Cristal",
-          "avance en Copa Libertadores",
-          "puntos cruciales obtenidos"
+          "victoria de Cristal",
+          "participacion en Libertadores",
+          "suma de puntos"
         ],
         "key_facts_used": [
-          "victoria de Sporting Cristal",
-          "avance en Copa Libertadores",
-          "puntos cruciales obtenidos"
+          "victoria de Cristal",
+          "participacion en Libertadores",
+          "suma de puntos"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Resumen de la victoria sin entrar en detalles específicos del partido.",
-        "notes": "Resumen de la victoria sin entrar en detalles específicos del partido.",
-        "support_visual": {
-          "type": "numeric_chart",
-          "chart_type": "bar",
-          "title": "Avance de Sporting Cristal",
-          "points": [
-            {
-              "label": "Partido 1",
-              "value": 3.0
-            },
-            {
-              "label": "Partido 2",
-              "value": 3.0
-            },
-            {
-              "label": "Partido 3",
-              "value": 6.0
-            }
-          ],
-          "subtitle": "Posición en el grupo de la Copa Libertadores",
-          "unit": "Puntos",
-          "highlight_label": "Líder del grupo",
-          "data_source_note": "Información sobre puntos obtenidos en la Copa Libertadores para el equipo."
-        }
+        "safety_notes": "Resultado descrito segun portada; sin cifras exactas confirmadas.",
+        "notes": "Resultado descrito segun portada; sin cifras exactas confirmadas.",
+        "support_visual": null,
+        "follow_up_enabled": true
       },
       {
-        "headline": "PSG venció a Bayern en Champions",
+        "headline": "PSG vence a Bayern en partidazo",
         "story_type": "deportes",
-        "summary": "PSG sigue demostrando su poderío en la Champions League. Tras vencer a Bayern por 5-4 en un duelo increíble, avanzan con una sonrisa hacia las semifinales, buscando el título.",
-        "speech": "PSG sigue demostrando su poderío en la Champions League. Tras vencer a Bayern por 5-4 en un duelo increíble, avanzan con una sonrisa hacia las semifinales, buscando el título.",
+        "summary": "En Europa se vivio un choque de gigantes: PSG derrota al Bayern en un duelo electrico. Los parisinos dan el golpe y se acercan a la gloria en una semifinal que tuvo de todo.",
+        "speech": "En Europa se vivio un choque de gigantes: PSG derrota al Bayern en un duelo electrico. Los parisinos dan el golpe y se acercan a la gloria en una semifinal que tuvo de todo.",
         "narrator_profile_id": "mr_peet",
         "narrator_role": "reportero_deportivo",
         "tone_notes": [
           "emocionante",
-          "deportivo",
-          "firme"
+          "global",
+          "dinamico"
         ],
         "page_numbers": [
           12
         ],
         "cover_region": {
-          "x": 0.56,
-          "y": 0.78,
+          "x": 0.46,
+          "y": 0.84,
           "width": 0.28,
-          "height": 0.16
+          "height": 0.14
         },
         "key_facts": [
           "victoria de PSG",
-          "avances en Champions League",
-          "5-4 ante Bayern Munich"
+          "partido ante Bayern",
+          "contexto de semifinal"
         ],
         "key_facts_used": [
           "victoria de PSG",
-          "avances en Champions League",
-          "5-4 ante Bayern Munich"
+          "partido ante Bayern",
+          "contexto de semifinal"
         ],
         "narrator_map_id": "default-story-type-narrators",
-        "safety_notes": "Resumen de la victoria en la Champions sin añadir detalles adicionales sobre el partido.",
-        "notes": "Resumen de la victoria en la Champions sin añadir detalles adicionales sobre el partido.",
-        "support_visual": null
+        "safety_notes": "Sin marcador exacto confirmado desde portada.",
+        "notes": "Sin marcador exacto confirmado desde portada.",
+        "support_visual": null,
+        "follow_up_enabled": true
       }
     ],
     "notes": "Speeches editoriales importados manualmente.",
@@ -339,8 +316,8 @@
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "La Universidad decide dar un giro. La salida de su director deportivo, tras una serie de malos resultados, marca un cambio importante en la gestión del club. Ahora, la U tiene una nueva oportunidad.\n\nSporting Cristal sigue su marcha en la Copa Libertadores. Con una victoria convincente ante Junior de Barranquilla, avanza con paso firme en su grupo, acumulando puntos vitales para avanzar.\n\nPSG sigue demostrando su poderío en la Champions League. Tras vencer a Bayern por 5-4 en un duelo increíble, avanzan con una sonrisa hacia las semifinales, buscando el título.",
-    "approved_text": "La Universidad decide dar un giro. La salida de su director deportivo, tras una serie de malos resultados, marca un cambio importante en la gestión del club. Ahora, la U tiene una nueva oportunidad.\n\nSporting Cristal sigue su marcha en la Copa Libertadores. Con una victoria convincente ante Junior de Barranquilla, avanza con paso firme en su grupo, acumulando puntos vitales para avanzar.\n\nPSG sigue demostrando su poderío en la Champions League. Tras vencer a Bayern por 5-4 en un duelo increíble, avanzan con una sonrisa hacia las semifinales, buscando el título.",
+    "draft": "Universitario vuelve a tropezar y el golpe pega fuerte en la interna. El equipo no levanta cabeza en el momento clave y la hinchada empieza a exigir respuestas inmediatas en pleno torneo.\n\nSporting Cristal sufre en el arranque, pero termina imponiendo su juego y sigue firme en la Libertadores. Un triunfo clave que lo mantiene en pelea y refuerza su ambicion internacional.\n\nEn Europa se vivio un choque de gigantes: PSG derrota al Bayern en un duelo electrico. Los parisinos dan el golpe y se acercan a la gloria en una semifinal que tuvo de todo.",
+    "approved_text": "Universitario vuelve a tropezar y el golpe pega fuerte en la interna. El equipo no levanta cabeza en el momento clave y la hinchada empieza a exigir respuestas inmediatas en pleno torneo.\n\nSporting Cristal sufre en el arranque, pero termina imponiendo su juego y sigue firme en la Libertadores. Un triunfo clave que lo mantiene en pelea y refuerza su ambicion internacional.\n\nEn Europa se vivio un choque de gigantes: PSG derrota al Bayern en un duelo electrico. Los parisinos dan el golpe y se acercan a la gloria en una semifinal que tuvo de todo.",
     "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
     "inputs": {
       "story_narrative_source": "story_narrative.stories",
@@ -379,7 +356,7 @@
   },
   "audit": {
     "created_at": "2026-04-29T17:42:17",
-    "updated_at": "2026-04-29T21:37:49",
+    "updated_at": "2026-04-29T23:13:03",
     "events": [
       {
         "stage": "discover",
@@ -1574,6 +1551,918 @@
         "status": "completed",
         "timestamp": "2026-04-29T21:37:49",
         "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:04:57",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:04:57",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:20",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:20",
+        "details": "Seguimiento de portada actualizado para historia 1: Se hundio el barco crema -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:20",
+        "details": "Seguimiento de portada actualizado para historia 2: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:20",
+        "details": "Seguimiento de portada actualizado para historia 3: PSG vence a Bayern en partidazo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:29",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:29",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:35",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:39",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:40",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:40",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:42",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:44",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:44",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:44",
+        "details": "Seguimiento de portada actualizado para historia 1: Se hundio el barco crema -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:44",
+        "details": "Seguimiento de portada actualizado para historia 2: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:44",
+        "details": "Seguimiento de portada actualizado para historia 3: PSG vence a Bayern en partidazo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:47",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:48",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:49",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:52",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:05:55",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:05:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:05",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:06",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:07",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:08",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:09",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:11",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:12",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:13",
+        "details": "Enfoque manual actualizado para historia 2: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Enfoque manual actualizado para historia 3: PSG vence a Bayern en partidazo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:15",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:16",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:18",
+        "details": "Enfoque manual actualizado para historia 1: Se hundio el barco crema."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:06:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T22:06:23",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:18:53",
+        "details": "Se importaron 1 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T22:22:41",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:07:55",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:07:55",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:23",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:23",
+        "details": "Seguimiento de portada actualizado para historia 1: Se hundio el barco crema -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:23",
+        "details": "Seguimiento de portada actualizado para historia 2: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:23",
+        "details": "Seguimiento de portada actualizado para historia 3: PSG vence a Bayern en partidazo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:28",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:35",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:35",
+        "details": "Seguimiento de portada actualizado para historia 1: Se hundio el barco crema -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:35",
+        "details": "Seguimiento de portada actualizado para historia 2: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:09:35",
+        "details": "Seguimiento de portada actualizado para historia 3: PSG vence a Bayern en partidazo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:12:55",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:12:55",
+        "details": "Seguimiento de portada actualizado para historia 1: Se hundio el barco crema -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:12:55",
+        "details": "Seguimiento de portada actualizado para historia 2: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T23:12:55",
+        "details": "Seguimiento de portada actualizado para historia 3: PSG vence a Bayern en partidazo -> seguir."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:13:02",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T23:13:03",
+        "details": "Intro dinamica importada desde el prompt de portadas."
       }
     ]
   },
@@ -1584,6 +2473,6 @@
     "why_it_fits": "Conecta la fecha del lote con temas visibles de economia, politica y confianza publica en las portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-29T21:35:20"
+    "imported_at": "2026-04-29T23:13:03"
   }
 }

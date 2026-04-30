@@ -1,0 +1,175 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-30-ojo-frontpage-001",
+  "source_id": "ojo",
+  "source_name": "Ojo",
+  "date": "2026-04-30",
+  "front_page_image": "data/jobs/2026-04-30/2026-04-30-ojo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Policía rescata a empresario secuestrado",
+      "story_type": "policial",
+      "summary": "Rescate con tensión en Lima. La policía liberó a un empresario secuestrado y el caso expone una modalidad que mezcla presión, cobros y miedo. La investigación sigue, pero la alerta ya está encendida.",
+      "speech": "Rescate con tensión en Lima. La policía liberó a un empresario secuestrado y el caso expone una modalidad que mezcla presión, cobros y miedo. La investigación sigue, pero la alerta ya está encendida.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.16,
+        "width": 1.0,
+        "height": 0.67
+      },
+      "key_facts": [
+        "empresario fue rescatado",
+        "exigían S/80 mil",
+        "familia pagó S/15 mil"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "cauteloso"
+      ],
+      "safety_notes": "Se omite nacionalidad de presuntos implicados y detalles de violencia; se mantiene cautela policial.",
+      "notes": "Se omite nacionalidad de presuntos implicados y detalles de violencia; se mantiene cautela policial.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Monto del secuestro",
+        "points": [
+          {
+            "label": "Exigían",
+            "value": 80.0
+          },
+          {
+            "label": "Pagaron",
+            "value": 15.0
+          }
+        ],
+        "subtitle": "Exigencia frente a pago reportado",
+        "unit": "S/ mil",
+        "highlight_label": "Diferencia",
+        "data_source_note": "Cifras tomadas de la página interna adjunta de Ojo."
+      },
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Regalos para mamá salen desde 5 soles",
+      "story_type": "actualidad",
+      "summary": "Gamarra entra en modo Día de la Madre con regalos desde 5 soles. Entre ofertas y público en aumento, el emporio apuesta por precios bajos para mover ventas en una de sus campañas más fuertes.",
+      "speech": "Gamarra entra en modo Día de la Madre con regalos desde 5 soles. Entre ofertas y público en aumento, el emporio apuesta por precios bajos para mover ventas en una de sus campañas más fuertes.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.67,
+        "y": 0.02,
+        "width": 0.31,
+        "height": 0.13
+      },
+      "key_facts": [
+        "campaña por Día de la Madre",
+        "precios desde S/5",
+        "ofertas en Gamarra"
+      ],
+      "tone_notes": [
+        "ágil",
+        "claro",
+        "comercial"
+      ],
+      "safety_notes": "Se resume la nota comercial sin afirmar cifras de ventas no visibles.",
+      "notes": "Se resume la nota comercial sin afirmar cifras de ventas no visibles.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Sueltan a la Culebra",
+      "story_type": "deportes",
+      "summary": "En La Victoria ya miran el mercado. Alianza no descarta vender a Eryc Castillo: la “Culebra” levantó su nivel y su cláusula ronda los US$1.5 millones.",
+      "speech": "En La Victoria ya miran el mercado. Alianza no descarta vender a Eryc Castillo: la “Culebra” levantó su nivel y su cláusula ronda los US$1.5 millones.",
+      "page_numbers": [
+        14
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.83,
+        "width": 0.32,
+        "height": 0.15
+      },
+      "key_facts": [
+        "Alianza evalúa ofertas",
+        "Eryc Castillo subió su rendimiento",
+        "cláusula cercana a US$1.5 millones"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "directo",
+        "mercado"
+      ],
+      "safety_notes": "Se habla de posibilidad de venta, no de operación cerrada.",
+      "notes": "Se habla de posibilidad de venta, no de operación cerrada.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Yahaira cuadra a Daniela",
+      "story_type": "espectaculos",
+      "summary": "Ojo con esto: Yahaira le respondió a Daniela y pidió no opinar a la ligera. La salsera dice que no se puede hablar sin fundamentos, y la farándula vuelve a prenderse con nombre propio.",
+      "speech": "Ojo con esto: Yahaira le respondió a Daniela y pidió no opinar a la ligera. La salsera dice que no se puede hablar sin fundamentos, y la farándula vuelve a prenderse con nombre propio.",
+      "page_numbers": [
+        17
+      ],
+      "cover_region": {
+        "x": 0.65,
+        "y": 0.83,
+        "width": 0.33,
+        "height": 0.14
+      },
+      "key_facts": [
+        "Yahaira respondió a Daniela",
+        "pidió no opinar sin fundamentos",
+        "tema ligado a garantías y demanda"
+      ],
+      "tone_notes": [
+        "picante",
+        "popular",
+        "ágil"
+      ],
+      "safety_notes": "Se atribuyen las afirmaciones a declaraciones de la protagonista y no se agregan rumores.",
+      "notes": "Se atribuyen las afirmaciones a declaraciones de la protagonista y no se agregan rumores.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "segment_audio_file": null
+    }
+  ]
+}
