@@ -1,9 +1,9 @@
 {
   "profile_id": "gonzalo_nunez",
-  "display_name": "Gonzalo Nunez",
+  "display_name": "gonzaloNuñes",
   "tts_provider": "voicebox_local",
   "tts_voice": "32ee760d-eec5-40a5-892f-c1839023235a",
-  "narrator_name": "Gonzalo Nunez",
+  "narrator_name": "gonzaloNuñes",
   "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
   "language": "es",
   "provider_settings": {

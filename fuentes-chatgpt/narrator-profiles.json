@@ -90,7 +90,7 @@
     "avoid": ["burlarse de victimas", "inventar detalles", "lenguaje vulgar", "humillacion gratuita"]
   },
   "mr_peet": {
-    "display_name": "Mr Peet",
+    "display_name": "MrPeet",
     "role": "comentarista deportivo principal",
     "tone": ["deportivo", "calido", "popular"],
     "pace": "alto",
@@ -99,7 +99,7 @@
     "avoid": ["fanatismo extremo", "insultos", "cargar una camiseta", "relleno"]
   },
   "gonzalo_nunez": {
-    "display_name": "Gonzalo Núñez",
+    "display_name": "gonzaloNuñes",
     "role": "comentarista deportivo frontal",
     "tone": ["pasional", "frontal", "confrontacional"],
     "pace": "alto",

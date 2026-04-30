@@ -1,0 +1,149 @@
+{
+  "story_id": "2026-04-29-libero-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-libero-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg",
+      "headline": "La U sacó a su director deportivo",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La Universidad decide dar un giro. La salida de su director deportivo, tras una serie de malos resultados, marca un cambio importante en la gestión del club. Ahora, la U tiene una nueva oportunidad.",
+      "page_numbers": [
+        4,
+        5
+      ],
+      "key_facts": [
+        "salida de director deportivo",
+        "malos resultados en la temporada",
+        "nuevo ciclo para el club"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "urgente",
+        "transición"
+      ],
+      "safety_notes": "Basado en páginas 4-5 de Libero, no se confirma aún el sucesor del cargo.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.82,
+        "width": 0.37,
+        "height": 0.17
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Sporting Cristal venció y avanza",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Sporting Cristal sigue su marcha en la Copa Libertadores. Con una victoria convincente ante Junior de Barranquilla, avanza con paso firme en su grupo, acumulando puntos vitales para avanzar.",
+      "page_numbers": [
+        6,
+        7
+      ],
+      "key_facts": [
+        "victoria de Sporting Cristal",
+        "avance en Copa Libertadores",
+        "puntos cruciales obtenidos"
+      ],
+      "tone_notes": [
+        "positivo",
+        "motivacional",
+        "deportivo"
+      ],
+      "safety_notes": "Resumen de la victoria sin entrar en detalles específicos del partido.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.02,
+        "width": 0.69,
+        "height": 0.82
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Avance de Sporting Cristal",
+        "points": [
+          {
+            "label": "Partido 1",
+            "value": 3.0
+          },
+          {
+            "label": "Partido 2",
+            "value": 3.0
+          },
+          {
+            "label": "Partido 3",
+            "value": 6.0
+          }
+        ],
+        "subtitle": "Posición en el grupo de la Copa Libertadores",
+        "unit": "Puntos",
+        "highlight_label": "Líder del grupo",
+        "data_source_note": "Información sobre puntos obtenidos en la Copa Libertadores para el equipo."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Libero",
+      "cover": "data/jobs/2026-04-29/2026-04-29-libero-frontpage-001/input/front-page.jpg",
+      "headline": "PSG venció a Bayern en Champions",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "PSG sigue demostrando su poderío en la Champions League. Tras vencer a Bayern por 5-4 en un duelo increíble, avanzan con una sonrisa hacia las semifinales, buscando el título.",
+      "page_numbers": [
+        12
+      ],
+      "key_facts": [
+        "victoria de PSG",
+        "avances en Champions League",
+        "5-4 ante Bayern Munich"
+      ],
+      "tone_notes": [
+        "emocionante",
+        "deportivo",
+        "firme"
+      ],
+      "safety_notes": "Resumen de la victoria en la Champions sin añadir detalles adicionales sobre el partido.",
+      "cover_region": {
+        "x": 0.51,
+        "y": 0.82,
+        "width": 0.23,
+        "height": 0.14
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

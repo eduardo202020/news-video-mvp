@@ -1,0 +1,51 @@
+{
+  "story_id": "2026-04-29-correo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-correo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Ausentismo no justifica elecciones complementarias",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El JNE se defiende de las críticas sobre la ampliación de las elecciones, afirmando que el ausentismo no justifica los comicios complementarios. La duda persiste sobre la transparencia.",
+      "page_numbers": [
+        5
+      ],
+      "key_facts": [
+        "JNE defiende decisión",
+        "ausentismo no justifica elecciones",
+        "sospechas sobre transparencia"
+      ],
+      "tone_notes": [
+        "directo",
+        "crítico",
+        "político"
+      ],
+      "safety_notes": "Se transmite la versión del JNE sin acusaciones no verificadas.",
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.39,
+        "width": 0.19,
+        "height": 0.28
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-29-correo-frontpage-001",
+  "source_id": "correo",
+  "source_name": "Correo",
+  "date": "2026-04-29",
+  "front_page_image": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Ausentismo no justifica elecciones complementarias",
+      "story_type": "politica",
+      "summary": "El JNE se defiende de las críticas sobre la ampliación de las elecciones, afirmando que el ausentismo no justifica los comicios complementarios. La duda persiste sobre la transparencia.",
+      "speech": "El JNE se defiende de las críticas sobre la ampliación de las elecciones, afirmando que el ausentismo no justifica los comicios complementarios. La duda persiste sobre la transparencia.",
+      "page_numbers": [
+        5
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.39,
+        "width": 0.17,
+        "height": 0.22
+      },
+      "key_facts": [
+        "JNE defiende decisión",
+        "ausentismo no justifica elecciones",
+        "sospechas sobre transparencia"
+      ],
+      "tone_notes": [
+        "directo",
+        "crítico",
+        "político"
+      ],
+      "safety_notes": "Se transmite la versión del JNE sin acusaciones no verificadas.",
+      "notes": "Se transmite la versión del JNE sin acusaciones no verificadas.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Declaran en emergencia sistema vial de Lima",
+      "story_type": "actualidad",
+      "summary": "La crisis vial en Lima alcanza niveles críticos. El gobierno declara emergencia y busca una solución, pero las calles siguen colapsadas con el caos del tránsito.",
+      "speech": "La crisis vial en Lima alcanza niveles críticos. El gobierno declara emergencia y busca una solución, pero las calles siguen colapsadas con el caos del tránsito.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.61,
+        "width": 0.17,
+        "height": 0.23
+      },
+      "key_facts": [
+        "emergencia vial declarada",
+        "caos en calles de Lima",
+        "problema del transporte urbano"
+      ],
+      "tone_notes": [
+        "serio",
+        "informativo",
+        "ciudadano"
+      ],
+      "safety_notes": "Se recoge la medida de emergencia. No se afirman soluciones inmediatas.",
+      "notes": "Se recoge la medida de emergencia. No se afirman soluciones inmediatas.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Petroperú requiere más de US$ 2,000 millones",
+      "story_type": "economia",
+      "summary": "Petroperú está de nuevo en busca de financiamiento, esta vez solicitando más de US$2,000 millones para cubrir sus necesidades operativas y evitar el colapso de sus refinerías.",
+      "speech": "Petroperú está de nuevo en busca de financiamiento, esta vez solicitando más de US$2,000 millones para cubrir sus necesidades operativas y evitar el colapso de sus refinerías.",
+      "page_numbers": [
+        12
+      ],
+      "cover_region": {
+        "x": 0.27,
+        "y": 0.09,
+        "width": 0.68,
+        "height": 0.77
+      },
+      "key_facts": [
+        "Petroperú pide US$2,000 millones",
+        "garantía estatal",
+        "operaciones de refinerías en riesgo"
+      ],
+      "tone_notes": [
+        "urgente",
+        "económico",
+        "pesimista"
+      ],
+      "safety_notes": "Se detalla la solicitud sin confirmar su aprobación. Basado en información de páginas internas de Correo.",
+      "notes": "Se detalla la solicitud sin confirmar su aprobación. Basado en información de páginas internas de Correo.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Participación de Petroperú",
+        "points": [
+          {
+            "label": "2013",
+            "value": 51.0
+          },
+          {
+            "label": "2025",
+            "value": 25.0
+          },
+          {
+            "label": "2026",
+            "value": 19.0
+          }
+        ],
+        "subtitle": "Mercado de combustibles",
+        "unit": "%",
+        "highlight_label": "Menor presencia",
+        "data_source_note": "Cifras verificadas, similares a las reportadas por La República."
+      },
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Álvaro Barco no va más en la U",
+      "story_type": "deportes",
+      "summary": "El cambio era inminente. La U anunció la salida de Álvaro Barco en medio de críticas por malos resultados y decisiones cuestionadas en su rol como director deportivo.",
+      "speech": "El cambio era inminente. La U anunció la salida de Álvaro Barco en medio de críticas por malos resultados y decisiones cuestionadas en su rol como director deportivo.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.21,
+        "y": 0.91,
+        "width": 0.76,
+        "height": 0.08
+      },
+      "key_facts": [
+        "salida de Álvaro Barco",
+        "críticas a la gestión",
+        "malos resultados deportivos"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "crítico",
+        "directo"
+      ],
+      "safety_notes": "Se presenta la información oficial sin invocar elementos no confirmados.",
+      "notes": "Se presenta la información oficial sin invocar elementos no confirmados.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "segment_audio_file": null
+    }
+  ]
+}

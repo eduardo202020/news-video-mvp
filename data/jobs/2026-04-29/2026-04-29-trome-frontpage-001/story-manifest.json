@@ -1,0 +1,185 @@
+{
+  "story_id": "2026-04-29-trome-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-trome-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Porky exige nuevas elecciones",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Porky intensifica su lucha. Ahora asegura que los votos de la jornada complementaria deberían ser anulados. La disputa por la transparencia electoral se sigue intensificando.",
+      "page_numbers": [
+        8
+      ],
+      "key_facts": [
+        "Porky pide nuevas elecciones",
+        "acusa manipulación electoral",
+        "JNE en la mira"
+      ],
+      "tone_notes": [
+        "afirmativo",
+        "político",
+        "directo"
+      ],
+      "safety_notes": "Se limita a las declaraciones de Porky, sin asumir veracidad de las acusaciones.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.86,
+        "width": 0.5,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Cayó narco como El Chapo",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El líder de una de las bandas más peligrosas de narcotráfico en el país ha caído. Este ‘El Chapo’ peruano, vinculado al crimen organizado, fue detenido tras un operativo de gran escala.",
+      "page_numbers": [
+        9
+      ],
+      "key_facts": [
+        "caída del líder de narcotraficantes",
+        "operativo militar",
+        "bandas criminales desmanteladas"
+      ],
+      "tone_notes": [
+        "tenso",
+        "directo",
+        "informativo"
+      ],
+      "safety_notes": "La noticia se basa en la información oficial de la Policía, sin entrar en detalles no confirmados.",
+      "cover_region": {
+        "x": 0.25,
+        "y": 0.22,
+        "width": 0.73,
+        "height": 0.67
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Cristal avanza en la Copa",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Sporting Cristal sigue con paso firme en la Copa Libertadores. A pesar de las adversidades locales, el equipo se mantiene en lo más alto del grupo, sumando puntos importantes.",
+      "page_numbers": [
+        11,
+        12
+      ],
+      "key_facts": [
+        "Sporting Cristal avanza en Copa",
+        "últimos partidos cruciales",
+        "equipos de primer nivel en su grupo"
+      ],
+      "tone_notes": [
+        "motivacional",
+        "deportivo",
+        "claro"
+      ],
+      "safety_notes": "La noticia resalta el logro en Copa Libertadores sin entrar en detalles sobre la rivalidad con otros equipos.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.24,
+        "width": 0.27,
+        "height": 0.64
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Copa Libertadores Avance",
+        "points": [
+          {
+            "label": "Partido 1",
+            "value": 3.0
+          },
+          {
+            "label": "Partido 2",
+            "value": 3.0
+          },
+          {
+            "label": "Partido 3",
+            "value": 6.0
+          }
+        ],
+        "subtitle": "Posición en grupo de Cristal",
+        "unit": "Puntos",
+        "highlight_label": "Líder del grupo",
+        "data_source_note": "Datos reportados por Trome basados en el rendimiento de Cristal."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
+      "headline": "¡ALMA, CORAZÓN Y GARRA!",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La ‘U’ está más que motivada. Con la salida de Barco, el equipo se prepara para su partido más importante de la Copa, buscando resurgir y darle esperanza a su hinchada.",
+      "page_numbers": [
+        8
+      ],
+      "key_facts": [
+        "la ‘U’ debe ganar",
+        "salida de Barco",
+        "crisis interna en el club"
+      ],
+      "tone_notes": [
+        "emocional",
+        "motivacional",
+        "energético"
+      ],
+      "safety_notes": "Se enfoca en la reacción del equipo ante la salida de Barco y el compromiso por el próximo encuentro.",
+      "cover_region": {
+        "x": 0.11,
+        "y": 0.89,
+        "width": 0.31,
+        "height": 0.1
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

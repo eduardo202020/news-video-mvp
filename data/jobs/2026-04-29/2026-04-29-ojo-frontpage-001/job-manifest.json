@@ -15,7 +15,7 @@
     "page_count_probe_path": null
   },
   "approval_mode": "semi_auto",
-  "status": "scraped",
+  "status": "scripted",
   "input_assets": {
     "front_page_image": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
     "front_page_url": "https://t.prcdn.co/img?file=eags2026042900000000001001&page=1&scale=300",
@@ -38,17 +38,24 @@
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 3",
-        "page_number": 3,
-        "source_url": "https://t.prcdn.co/img?file=eags2026042900000000001001&page=3&scale=83",
-        "local_path": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/pages/page-03.jpg"
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042900000000001001&page=6&scale=83",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/pages/page-06.jpg"
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 4",
-        "page_number": 4,
-        "source_url": "https://t.prcdn.co/img?file=eags2026042900000000001001&page=4&scale=83",
-        "local_path": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/pages/page-04.jpg"
+        "label": "Pagina 13",
+        "page_number": 13,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042900000000001001&page=13&scale=83",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/pages/page-13.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eags2026042900000000001001&page=16&scale=83",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/pages/page-16.jpg"
       }
     ]
   },
@@ -65,28 +72,325 @@
   },
   "page_selection": {
     "strategy": "cover_first",
-    "provider": null,
-    "status": "not_started",
-    "selected_page_numbers": [],
-    "candidates": [],
-    "stories": [],
-    "notes": ""
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      2,
+      6,
+      13,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Porky insiste con anular elecciones",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.29,
+          "y": 0.15,
+          "width": 0.69,
+          "height": 0.6
+        },
+        "page_number": 2,
+        "evidence_line": "POLITICA pag. 2",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.99
+      },
+      {
+        "headline": "La U busca levantar cabeza",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.75,
+          "width": 0.31,
+          "height": 0.24
+        },
+        "page_number": 13,
+        "evidence_line": "CRACK pag. 13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Disparan a campeon de artes marciales",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.31,
+          "y": 0.77,
+          "width": 0.34,
+          "height": 0.2
+        },
+        "page_number": 6,
+        "evidence_line": "POLICIAL pag. 6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Monserrat es una ociosa",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.65,
+          "y": 0.77,
+          "width": 0.33,
+          "height": 0.21
+        },
+        "page_number": 16,
+        "evidence_line": "OJOSHOW pag. 16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Porky insiste con anular elecciones",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.29,
+          "y": 0.15,
+          "width": 0.69,
+          "height": 0.62
+        },
+        "page_numbers": [
+          2
+        ],
+        "evidence": "POLITICA pag. 2",
+        "evidence_lines": [
+          "POLITICA pag. 2"
+        ],
+        "confidence": 0.99,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Disparan a campeon de artes marciales",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.31,
+          "y": 0.81,
+          "width": 0.28,
+          "height": 0.18
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "POLICIAL pag. 6",
+        "evidence_lines": [
+          "POLICIAL pag. 6"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U busca levantar cabeza",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.75,
+          "width": 0.31,
+          "height": 0.24
+        },
+        "page_numbers": [
+          13
+        ],
+        "evidence": "CRACK pag. 13",
+        "evidence_lines": [
+          "CRACK pag. 13"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Monserrat es una ociosa",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.59,
+          "y": 0.77,
+          "width": 0.37,
+          "height": 0.21
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "OJOSHOW pag. 16",
+        "evidence_lines": [
+          "OJOSHOW pag. 16"
+        ],
+        "confidence": 0.93,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "focus_review_completed": true
   },
   "story_narrative": {
-    "provider": null,
-    "status": "not_started",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
     "source": "supporting_pages_manual",
-    "stories": [],
-    "manifest_path": null,
-    "notes": ""
+    "stories": [
+      {
+        "headline": "Porky insiste con anular elecciones",
+        "story_type": "politica",
+        "summary": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.",
+        "speech": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "incisivo",
+          "directo",
+          "político"
+        ],
+        "page_numbers": [
+          2
+        ],
+        "cover_region": {
+          "x": 0.29,
+          "y": 0.15,
+          "width": 0.69,
+          "height": 0.62
+        },
+        "key_facts": [
+          "Porky exige nuevas elecciones",
+          "JNE bajo presión",
+          "acusaciones sobre imparcialidad"
+        ],
+        "key_facts_used": [
+          "Porky exige nuevas elecciones",
+          "JNE bajo presión",
+          "acusaciones sobre imparcialidad"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta el punto de vista del candidato sin afirmar que sus acusaciones sean verificadas.",
+        "notes": "Se presenta el punto de vista del candidato sin afirmar que sus acusaciones sean verificadas.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Disparan a campeón de artes marciales",
+        "story_type": "policial",
+        "summary": "Un asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.",
+        "speech": "Un asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "tenso",
+          "urgente",
+          "directo"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.34,
+          "y": 0.8,
+          "width": 0.34,
+          "height": 0.18
+        },
+        "key_facts": [
+          "campeón de artes marciales asesinado",
+          "Policía en búsqueda de los culpables",
+          "balacera frente a la academia"
+        ],
+        "key_facts_used": [
+          "campeón de artes marciales asesinado",
+          "Policía en búsqueda de los culpables",
+          "balacera frente a la academia"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La noticia se enfoca en los hechos y la búsqueda de los culpables, sin detalles adicionales sobre el crimen.",
+        "notes": "La noticia se enfoca en los hechos y la búsqueda de los culpables, sin detalles adicionales sobre el crimen.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "U busca levantar cabeza",
+        "story_type": "deportes",
+        "summary": "La ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.",
+        "speech": "La ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "motivacional",
+          "emocionante",
+          "deportivo"
+        ],
+        "page_numbers": [
+          13
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.78,
+          "width": 0.32,
+          "height": 0.2
+        },
+        "key_facts": [
+          "salida de Barco",
+          "expectativa por partido de Libertadores",
+          "crisis deportiva en la U"
+        ],
+        "key_facts_used": [
+          "salida de Barco",
+          "expectativa por partido de Libertadores",
+          "crisis deportiva en la U"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resume el contexto deportivo sin inventar razones específicas para la crisis.",
+        "notes": "Se resume el contexto deportivo sin inventar razones específicas para la crisis.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Monserrat es una ociosa",
+        "story_type": "espectaculos",
+        "summary": "La controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
+        "speech": "La controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
+        "narrator_profile_id": "reportero_magaly",
+        "narrator_role": "conductora_espectaculos",
+        "tone_notes": [
+          "controvertido",
+          "firme",
+          "espectacular"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.59,
+          "y": 0.77,
+          "width": 0.37,
+          "height": 0.21
+        },
+        "key_facts": [
+          "acusaciones a Monserrat",
+          "dependencia económica de su familia",
+          "defensa pública de su estilo de vida"
+        ],
+        "key_facts_used": [
+          "acusaciones a Monserrat",
+          "dependencia económica de su familia",
+          "defensa pública de su estilo de vida"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se enfoca en la opinión pública y la respuesta de Monserrat sin afirmar veracidad de los rumores.",
+        "notes": "Se enfoca en la opinión pública y la respuesta de Monserrat sin afirmar veracidad de los rumores.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/review/story-narrative-manifest.json"
   },
   "script": {
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "",
-    "approved_text": "",
-    "review_notes": ""
+    "draft": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.\n\nUn asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.\n\nLa ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.\n\nLa controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
+    "approved_text": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.\n\nUn asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.\n\nLa ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.\n\nLa controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
   },
   "voice": {
     "profile_id": "voicebox-local",
@@ -109,8 +413,8 @@
   },
   "video": {
     "template_id": "vertical-news",
-    "story_manifest_path": null,
-    "output_path": null
+    "story_manifest_path": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-29-ojo-frontpage-001.mp4"
   },
   "publication": {
     "profile_id": "tiktok",
@@ -120,7 +424,7 @@
   },
   "audit": {
     "created_at": "2026-04-29T17:42:18",
-    "updated_at": "2026-04-29T17:42:44",
+    "updated_at": "2026-04-29T21:21:57",
     "events": [
       {
         "stage": "discover",
@@ -139,7 +443,4324 @@
         "status": "completed",
         "timestamp": "2026-04-29T17:42:44",
         "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:18:49",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:18:49",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:20:53",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:27:38",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:27:38",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:33:41",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:33:44",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:39:27",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:39:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:40:31",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:40:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:41:30",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:41:30",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:48:49",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:25",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:25",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:26",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeón de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:26",
+        "details": "Seguimiento de portada actualizado para historia 3: U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:26",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:35",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:36",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:36",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:36",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeón de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:36",
+        "details": "Seguimiento de portada actualizado para historia 3: U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:36",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:41",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:44",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:44",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:44",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:44",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:45",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:45",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:47",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:49",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:51",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:52",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:53",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:56",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:57",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:57",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:58",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:54:59",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:05",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:09",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:12",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:15",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:17",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:18",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:19",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:20",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:22",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:27",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:28",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:29",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:29",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:30",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:30",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:30",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:30",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:30",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:30",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:30",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:30",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:32",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:38",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:49",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:52",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:56",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:55:58",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:55:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:01",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:13",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:15",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:18",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:19",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:20",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:30",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:30",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:31",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:35",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:36",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:36",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:36",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:36",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:37",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:39",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:42",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:52",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:54",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:57",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:56:59",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:56:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:40",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:41",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:42",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:46",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:46",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:46",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:49",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:51",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:57:54",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:57:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:58:01",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T19:58:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:58:14",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:58:34",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:59:57",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:00:21",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:14:48",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:14:48",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:09",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:09",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:09",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeón de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:09",
+        "details": "Seguimiento de portada actualizado para historia 3: U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:09",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:23",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:23",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:23",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:23",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeón de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:23",
+        "details": "Seguimiento de portada actualizado para historia 3: U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:23",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:27",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:29",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:29",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:31",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:32",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:34",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:35",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:36",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:38",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:47",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:48",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:50",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:51",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeón de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:59",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:15:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:02",
+        "details": "Enfoque manual actualizado para historia 3: U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:10",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:14",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:16",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:16",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:17",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:19",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:21",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:23",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:24",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:25",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:26",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:28",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:28",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:30",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:30",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:31",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:31",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:34",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:16:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:16:43",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:35:15",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:16",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:16",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:16",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeón de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:16",
+        "details": "Seguimiento de portada actualizado para historia 3: U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:16",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:35:19",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:47:19",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:47:30",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:48:36",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:48:37",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:51:42",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:51:42",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:52:21",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:54:24",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:54:25",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:54:25",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:54:25",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeón de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:54:25",
+        "details": "Seguimiento de portada actualizado para historia 3: U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:54:25",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:16:57",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:16:57",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:20:48",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:20:48",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:20:48",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeon de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:20:48",
+        "details": "Seguimiento de portada actualizado para historia 3: La U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:20:48",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:20:58",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:20:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:16",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:16",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:17",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky insiste con anular elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:17",
+        "details": "Seguimiento de portada actualizado para historia 2: Disparan a campeon de artes marciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:17",
+        "details": "Seguimiento de portada actualizado para historia 3: La U busca levantar cabeza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:17",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat es una ociosa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:19",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:21",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:23",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:24",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:24",
+        "details": "Enfoque manual actualizado para historia 2: Disparan a campeon de artes marciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:32",
+        "details": "Enfoque manual actualizado para historia 1: Porky insiste con anular elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:44",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:46",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:47",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:48",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:48",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:49",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:49",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:50",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Enfoque manual actualizado para historia 3: La U busca levantar cabeza."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:52",
+        "details": "Enfoque manual actualizado para historia 4: Monserrat es una ociosa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:21:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:21:57",
+        "details": "Revision de portada marcada como completa."
       }
     ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 29 de abril, revisamos las portadas con economia bajo presion, disputas electorales y una agenda deportiva intensa. En esta fecha, Adonde recuerda la intervencion de CLAE en 1993: una señal para mirar con lupa poder, dinero y promesas.",
+    "date_reference": "Adonde.com efemerides abril29: en 1993 la Superintendencia de Banca y Seguros intervino CLAE.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con temas visibles de economia, politica y confianza publica en las portadas.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-29T21:16:57"
   }
 }

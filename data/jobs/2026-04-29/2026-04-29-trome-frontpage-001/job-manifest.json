@@ -15,7 +15,7 @@
     "page_count_probe_path": null
   },
   "approval_mode": "semi_auto",
-  "status": "scraped",
+  "status": "scripted",
   "input_assets": {
     "front_page_image": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/front-page.jpg",
     "front_page_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=1&scale=300",
@@ -31,24 +31,38 @@
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 2",
-        "page_number": 2,
-        "source_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=2&scale=82",
-        "local_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/pages/page-02.jpg"
+        "label": "Pagina 8",
+        "page_number": 8,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=8&scale=82",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/pages/page-08.jpg"
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 3",
-        "page_number": 3,
-        "source_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=3&scale=82",
-        "local_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/pages/page-03.jpg"
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=9&scale=82",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/pages/page-09.jpg"
       },
       {
         "role": "supporting_page",
-        "label": "Pagina 4",
-        "page_number": 4,
-        "source_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=4&scale=82",
-        "local_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/pages/page-04.jpg"
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=11&scale=82",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/pages/page-11.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=12&scale=82",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/pages/page-12.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 15",
+        "page_number": 15,
+        "source_url": "https://t.prcdn.co/img?file=eag82026042900000000001001&page=15&scale=82",
+        "local_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/input/pages/page-15.jpg"
       }
     ]
   },
@@ -65,28 +79,363 @@
   },
   "page_selection": {
     "strategy": "cover_first",
-    "provider": null,
-    "status": "not_started",
-    "selected_page_numbers": [],
-    "candidates": [],
-    "stories": [],
-    "notes": ""
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      8,
+      9,
+      11,
+      12,
+      15
+    ],
+    "candidates": [
+      {
+        "headline": "Cayo narco como El Chapo",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.27,
+          "y": 0.24,
+          "width": 0.71,
+          "height": 0.6
+        },
+        "page_number": 9,
+        "evidence_line": "Pagina 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.99
+      },
+      {
+        "headline": "Cristal avanza en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.24,
+          "width": 0.27,
+          "height": 0.64
+        },
+        "page_number": 11,
+        "evidence_line": "PAGINAS 11 y 12",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Cristal avanza en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.24,
+          "width": 0.27,
+          "height": 0.64
+        },
+        "page_number": 12,
+        "evidence_line": "PAGINAS 11 y 12",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Porky exige nuevas elecciones",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.86,
+          "width": 0.5,
+          "height": 0.12
+        },
+        "page_number": 8,
+        "evidence_line": "PAGINA 8",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Pamela sin miedo a Dominguez",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.48,
+          "y": 0.86,
+          "width": 0.5,
+          "height": 0.12
+        },
+        "page_number": 15,
+        "evidence_line": "PAGINA 15",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Porky exige nuevas elecciones",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.86,
+          "width": 0.5,
+          "height": 0.12
+        },
+        "page_numbers": [
+          8
+        ],
+        "evidence": "PAGINA 8",
+        "evidence_lines": [
+          "PAGINA 8"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Cayo narco como El Chapo",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.27,
+          "y": 0.24,
+          "width": 0.71,
+          "height": 0.6
+        },
+        "page_numbers": [
+          9
+        ],
+        "evidence": "Pagina 9",
+        "evidence_lines": [
+          "Pagina 9"
+        ],
+        "confidence": 0.99,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Cristal avanza en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.24,
+          "width": 0.27,
+          "height": 0.64
+        },
+        "page_numbers": [
+          11,
+          12
+        ],
+        "evidence": "PAGINAS 11 y 12",
+        "evidence_lines": [
+          "PAGINAS 11 y 12"
+        ],
+        "confidence": 0.98,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Pamela sin miedo a Dominguez",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.48,
+          "y": 0.86,
+          "width": 0.5,
+          "height": 0.12
+        },
+        "page_numbers": [
+          15
+        ],
+        "evidence": "PAGINA 15",
+        "evidence_lines": [
+          "PAGINA 15"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "focus_review_completed": true
   },
   "story_narrative": {
-    "provider": null,
-    "status": "not_started",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
     "source": "supporting_pages_manual",
-    "stories": [],
-    "manifest_path": null,
-    "notes": ""
+    "stories": [
+      {
+        "headline": "Porky exige nuevas elecciones",
+        "story_type": "politica",
+        "summary": "Porky intensifica su lucha. Ahora asegura que los votos de la jornada complementaria deberían ser anulados. La disputa por la transparencia electoral se sigue intensificando.",
+        "speech": "Porky intensifica su lucha. Ahora asegura que los votos de la jornada complementaria deberían ser anulados. La disputa por la transparencia electoral se sigue intensificando.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "afirmativo",
+          "político",
+          "directo"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.86,
+          "width": 0.5,
+          "height": 0.12
+        },
+        "key_facts": [
+          "Porky pide nuevas elecciones",
+          "acusa manipulación electoral",
+          "JNE en la mira"
+        ],
+        "key_facts_used": [
+          "Porky pide nuevas elecciones",
+          "acusa manipulación electoral",
+          "JNE en la mira"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se limita a las declaraciones de Porky, sin asumir veracidad de las acusaciones.",
+        "notes": "Se limita a las declaraciones de Porky, sin asumir veracidad de las acusaciones.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Cayó narco como El Chapo",
+        "story_type": "policial",
+        "summary": "El líder de una de las bandas más peligrosas de narcotráfico en el país ha caído. Este ‘El Chapo’ peruano, vinculado al crimen organizado, fue detenido tras un operativo de gran escala.",
+        "speech": "El líder de una de las bandas más peligrosas de narcotráfico en el país ha caído. Este ‘El Chapo’ peruano, vinculado al crimen organizado, fue detenido tras un operativo de gran escala.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "tenso",
+          "directo",
+          "informativo"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.25,
+          "y": 0.22,
+          "width": 0.73,
+          "height": 0.67
+        },
+        "key_facts": [
+          "caída del líder de narcotraficantes",
+          "operativo militar",
+          "bandas criminales desmanteladas"
+        ],
+        "key_facts_used": [
+          "caída del líder de narcotraficantes",
+          "operativo militar",
+          "bandas criminales desmanteladas"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La noticia se basa en la información oficial de la Policía, sin entrar en detalles no confirmados.",
+        "notes": "La noticia se basa en la información oficial de la Policía, sin entrar en detalles no confirmados.",
+        "support_visual": null
+      },
+      {
+        "headline": "Cristal avanza en la Copa",
+        "story_type": "deportes",
+        "summary": "Sporting Cristal sigue con paso firme en la Copa Libertadores. A pesar de las adversidades locales, el equipo se mantiene en lo más alto del grupo, sumando puntos importantes.",
+        "speech": "Sporting Cristal sigue con paso firme en la Copa Libertadores. A pesar de las adversidades locales, el equipo se mantiene en lo más alto del grupo, sumando puntos importantes.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "motivacional",
+          "deportivo",
+          "claro"
+        ],
+        "page_numbers": [
+          11,
+          12
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.24,
+          "width": 0.27,
+          "height": 0.64
+        },
+        "key_facts": [
+          "Sporting Cristal avanza en Copa",
+          "últimos partidos cruciales",
+          "equipos de primer nivel en su grupo"
+        ],
+        "key_facts_used": [
+          "Sporting Cristal avanza en Copa",
+          "últimos partidos cruciales",
+          "equipos de primer nivel en su grupo"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La noticia resalta el logro en Copa Libertadores sin entrar en detalles sobre la rivalidad con otros equipos.",
+        "notes": "La noticia resalta el logro en Copa Libertadores sin entrar en detalles sobre la rivalidad con otros equipos.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "line",
+          "title": "Copa Libertadores Avance",
+          "points": [
+            {
+              "label": "Partido 1",
+              "value": 3.0
+            },
+            {
+              "label": "Partido 2",
+              "value": 3.0
+            },
+            {
+              "label": "Partido 3",
+              "value": 6.0
+            }
+          ],
+          "subtitle": "Posición en grupo de Cristal",
+          "unit": "Puntos",
+          "highlight_label": "Líder del grupo",
+          "data_source_note": "Datos reportados por Trome basados en el rendimiento de Cristal."
+        },
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "¡ALMA, CORAZÓN Y GARRA!",
+        "story_type": "deportes",
+        "summary": "La ‘U’ está más que motivada. Con la salida de Barco, el equipo se prepara para su partido más importante de la Copa, buscando resurgir y darle esperanza a su hinchada.",
+        "speech": "La ‘U’ está más que motivada. Con la salida de Barco, el equipo se prepara para su partido más importante de la Copa, buscando resurgir y darle esperanza a su hinchada.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "emocional",
+          "motivacional",
+          "energético"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.11,
+          "y": 0.89,
+          "width": 0.31,
+          "height": 0.1
+        },
+        "key_facts": [
+          "la ‘U’ debe ganar",
+          "salida de Barco",
+          "crisis interna en el club"
+        ],
+        "key_facts_used": [
+          "la ‘U’ debe ganar",
+          "salida de Barco",
+          "crisis interna en el club"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se enfoca en la reacción del equipo ante la salida de Barco y el compromiso por el próximo encuentro.",
+        "notes": "Se enfoca en la reacción del equipo ante la salida de Barco y el compromiso por el próximo encuentro.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/review/story-narrative-manifest.json"
   },
   "script": {
     "template_id": "default-anchor",
     "provider": "manual_or_external_ai",
     "model": null,
-    "draft": "",
-    "approved_text": "",
-    "review_notes": ""
+    "draft": "Porky intensifica su lucha. Ahora asegura que los votos de la jornada complementaria deberían ser anulados. La disputa por la transparencia electoral se sigue intensificando.\n\nEl líder de una de las bandas más peligrosas de narcotráfico en el país ha caído. Este ‘El Chapo’ peruano, vinculado al crimen organizado, fue detenido tras un operativo de gran escala.\n\nSporting Cristal sigue con paso firme en la Copa Libertadores. A pesar de las adversidades locales, el equipo se mantiene en lo más alto del grupo, sumando puntos importantes.\n\nLa ‘U’ está más que motivada. Con la salida de Barco, el equipo se prepara para su partido más importante de la Copa, buscando resurgir y darle esperanza a su hinchada.",
+    "approved_text": "Porky intensifica su lucha. Ahora asegura que los votos de la jornada complementaria deberían ser anulados. La disputa por la transparencia electoral se sigue intensificando.\n\nEl líder de una de las bandas más peligrosas de narcotráfico en el país ha caído. Este ‘El Chapo’ peruano, vinculado al crimen organizado, fue detenido tras un operativo de gran escala.\n\nSporting Cristal sigue con paso firme en la Copa Libertadores. A pesar de las adversidades locales, el equipo se mantiene en lo más alto del grupo, sumando puntos importantes.\n\nLa ‘U’ está más que motivada. Con la salida de Barco, el equipo se prepara para su partido más importante de la Copa, buscando resurgir y darle esperanza a su hinchada.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
   },
   "voice": {
     "profile_id": "voicebox-local",
@@ -109,8 +458,8 @@
   },
   "video": {
     "template_id": "vertical-news",
-    "story_manifest_path": null,
-    "output_path": null
+    "story_manifest_path": "data/jobs/2026-04-29/2026-04-29-trome-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-04-29-trome-frontpage-001.mp4"
   },
   "publication": {
     "profile_id": "tiktok",
@@ -120,7 +469,7 @@
   },
   "audit": {
     "created_at": "2026-04-29T17:42:44",
-    "updated_at": "2026-04-29T17:43:14",
+    "updated_at": "2026-04-29T21:20:48",
     "events": [
       {
         "stage": "discover",
@@ -139,7 +488,1624 @@
         "status": "completed",
         "timestamp": "2026-04-29T17:43:14",
         "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:18:49",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:18:49",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:20:35",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:27:38",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:27:38",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:33:41",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:33:44",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:39:27",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:39:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:40:31",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:40:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:41:30",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:41:30",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:48:49",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:50:39",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:50:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:50:43",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:50:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:51:24",
+        "details": "Enfoque manual actualizado para historia 4: ¡ALMA, CORAZÓN Y GARRA!."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T18:51:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:57:06",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:57:06",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:57:07",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:57:07",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:57:07",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:57:07",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:57:07",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:57:07",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:58:29",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:58:29",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:58:29",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:58:29",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:58:30",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:58:30",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:58:30",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T18:58:30",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:08:54",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:08:54",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:08:56",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:08:58",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:09:02",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:09:02",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:35",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:35",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:35",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:38",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:40",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:45",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:45",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:45",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T19:12:46",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:00:46",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:00:48",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:00:48",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:00:48",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:00:48",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:00:48",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:14:48",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:14:48",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:14:49",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:15:06",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:35:26",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:27",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:27",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:27",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:27",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:35:27",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:47:19",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:47:30",
+        "details": "Se importaron 0 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:48:49",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:48:49",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:51:42",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:51:42",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayó narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T20:51:43",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Domínguez -> seguir."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:52:09",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T20:54:04",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:16:57",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:16:57",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:57",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:57",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:57",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayo narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:58",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:58",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Dominguez -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:58",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:58",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky exige nuevas elecciones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:58",
+        "details": "Seguimiento de portada actualizado para historia 2: Cayo narco como El Chapo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:58",
+        "details": "Seguimiento de portada actualizado para historia 3: Cristal avanza en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:16:58",
+        "details": "Seguimiento de portada actualizado para historia 4: Pamela sin miedo a Dominguez -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:32",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:33",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:33",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:33",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 1: Porky exige nuevas elecciones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 2: Cayo narco como El Chapo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 3: Cristal avanza en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:44",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Enfoque manual actualizado para historia 4: Pamela sin miedo a Dominguez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-04-29T21:19:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:20:45",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-29T21:20:48",
+        "details": "Revision de portada marcada como completa."
       }
     ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 29 de abril, revisamos las portadas con economia bajo presion, disputas electorales y una agenda deportiva intensa. En esta fecha, Adonde recuerda la intervencion de CLAE en 1993: una señal para mirar con lupa poder, dinero y promesas.",
+    "date_reference": "Adonde.com efemerides abril29: en 1993 la Superintendencia de Banca y Seguros intervino CLAE.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con temas visibles de economia, politica y confianza publica en las portadas.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-04-29T21:16:57"
   }
 }

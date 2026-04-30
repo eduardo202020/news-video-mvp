@@ -1,0 +1,241 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-29-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "source_name": "Elcomercio",
+  "date": "2026-04-29",
+  "front_page_image": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Nieto concentró votos en jornada complementaria",
+      "story_type": "politica",
+      "summary": "Jorge Nieto, al alza, es el gran beneficiado del 13 de abril. Con el voto de la jornada complementaria, ha logrado una ventaja en distritos claves, mientras otros se estancan.",
+      "speech": "Jorge Nieto, al alza, es el gran beneficiado del 13 de abril. Con el voto de la jornada complementaria, ha logrado una ventaja en distritos claves, mientras otros se estancan.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.2,
+        "width": 0.23,
+        "height": 0.2
+      },
+      "key_facts": [
+        "Jorge Nieto, beneficiado con ampliación",
+        "ventaja en distritos claves",
+        "jornada complementaria"
+      ],
+      "tone_notes": [
+        "analitico",
+        "firme",
+        "directo"
+      ],
+      "safety_notes": "Cifras sobre distribución del voto citadas desde página 3. El análisis muestra cómo el voto complementario benefició a Nieto.",
+      "notes": "Cifras sobre distribución del voto citadas desde página 3. El análisis muestra cómo el voto complementario benefició a Nieto.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Distribución del Voto",
+        "points": [
+          {
+            "label": "Nieto",
+            "value": 38.5
+          },
+          {
+            "label": "Sánchez",
+            "value": 30.1
+          },
+          {
+            "label": "Fujimori",
+            "value": 25.3
+          },
+          {
+            "label": "Castillo",
+            "value": 6.1
+          }
+        ],
+        "subtitle": "Voto entre el 12 y 13 de abril",
+        "unit": "%",
+        "highlight_label": "Aumento de Nieto",
+        "data_source_note": "Cifras de ECData, verificada en página 3."
+      },
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "JNE retrasó mesas y no fue decisivo",
+      "story_type": "politica",
+      "summary": "El Jurado Nacional de Elecciones se defiende tras los cuestionamientos por los retrasos en las mesas. Aseguran que no afectaron la participación, pero las dudas persisten.",
+      "speech": "El Jurado Nacional de Elecciones se defiende tras los cuestionamientos por los retrasos en las mesas. Aseguran que no afectaron la participación, pero las dudas persisten.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.42,
+        "width": 0.23,
+        "height": 0.17
+      },
+      "key_facts": [
+        "JNE defendió su actuación",
+        "retrasos en mesas no afectaron participación",
+        "decisiones del JNE"
+      ],
+      "tone_notes": [
+        "soberano",
+        "politico",
+        "neutral"
+      ],
+      "safety_notes": "Se limita a las declaraciones del JNE. Se evita especular sobre efectos mayores sin evidencia directa.",
+      "notes": "Se limita a las declaraciones del JNE. Se evita especular sobre efectos mayores sin evidencia directa.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Multan a JPP por aportes irregulares",
+      "story_type": "politica",
+      "summary": "La ONPE sanciona a JPP por aportes ilegales. La multa responde a los desajustes en los reportes de financiamiento durante las elecciones pasadas.",
+      "speech": "La ONPE sanciona a JPP por aportes ilegales. La multa responde a los desajustes en los reportes de financiamiento durante las elecciones pasadas.",
+      "page_numbers": [
+        5
+      ],
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.61,
+        "width": 0.23,
+        "height": 0.14
+      },
+      "key_facts": [
+        "multas de ONPE",
+        "aportaciones irregulares",
+        "elecciones pasadas"
+      ],
+      "tone_notes": [
+        "directo",
+        "confrontacional",
+        "firme"
+      ],
+      "safety_notes": "Se subraya la sanción aplicada. La investigación está en curso sin acusaciones definitivas.",
+      "notes": "Se subraya la sanción aplicada. La investigación está en curso sin acusaciones definitivas.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Capítulo económico no debe tocarse",
+      "story_type": "politica",
+      "summary": "La controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.",
+      "speech": "La controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.2,
+        "width": 0.73,
+        "height": 0.42
+      },
+      "key_facts": [
+        "propuesta de cambio del capítulo económico",
+        "impacto en la economía nacional",
+        "debate político en curso"
+      ],
+      "tone_notes": [
+        "incisivo",
+        "elegante",
+        "persuasivo"
+      ],
+      "safety_notes": "Se presenta como un tema de debate político. No se afirman consecuencias definitivas.",
+      "notes": "Se presenta como un tema de debate político. No se afirman consecuencias definitivas.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 5,
+      "segment_type": "story",
+      "headline": "Petro-Perú pide US$ 2,000 millones",
+      "story_type": "economia",
+      "summary": "Petro-Perú recurre a la ayuda estatal nuevamente, solicitando US$2,000 millones para evitar la paralización de sus operaciones. La situación sigue siendo crítica.",
+      "speech": "Petro-Perú recurre a la ayuda estatal nuevamente, solicitando US$2,000 millones para evitar la paralización de sus operaciones. La situación sigue siendo crítica.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.6,
+        "width": 0.67,
+        "height": 0.12
+      },
+      "key_facts": [
+        "Petro-Perú solicita US$2,000 millones",
+        "garantía estatal",
+        "riesgo de parálisis operativa"
+      ],
+      "tone_notes": [
+        "serio",
+        "urgente",
+        "económico"
+      ],
+      "safety_notes": "Se informa sobre la solicitud de financiamiento de Petro-Perú. Se evitan detalles sobre su aceptación.",
+      "notes": "Se informa sobre la solicitud de financiamiento de Petro-Perú. Se evitan detalles sobre su aceptación.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Participación de Petroperú",
+        "points": [
+          {
+            "label": "2013",
+            "value": 51.0
+          },
+          {
+            "label": "2025",
+            "value": 25.0
+          },
+          {
+            "label": "2026",
+            "value": 19.0
+          }
+        ],
+        "subtitle": "Mercado de combustibles",
+        "unit": "%",
+        "highlight_label": "Menor presencia",
+        "data_source_note": "Cifras verificadas con fuentes confiables, incluyendo La República."
+      },
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    }
+  ]
+}

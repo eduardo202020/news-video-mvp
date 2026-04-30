@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-04-29-ojo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-ojo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Porky insiste con anular elecciones",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Porky sigue insistiendo en la anulación de las elecciones. Mientras acusa al JNE de actuar de forma parcial, el clima electoral sigue tenso con cada nuevo pronunciamiento.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "Porky exige nuevas elecciones",
+        "JNE bajo presión",
+        "acusaciones sobre imparcialidad"
+      ],
+      "tone_notes": [
+        "incisivo",
+        "directo",
+        "político"
+      ],
+      "safety_notes": "Se presenta el punto de vista del candidato sin afirmar que sus acusaciones sean verificadas.",
+      "cover_region": {
+        "x": 0.29,
+        "y": 0.15,
+        "width": 0.69,
+        "height": 0.62
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Disparan a campeón de artes marciales",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Un asesinato en pleno día conmociona a la comunidad deportiva. El campeón de artes marciales fue baleado frente a su academia, mientras la Policía busca pistas para dar con los culpables.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "campeón de artes marciales asesinado",
+        "Policía en búsqueda de los culpables",
+        "balacera frente a la academia"
+      ],
+      "tone_notes": [
+        "tenso",
+        "urgente",
+        "directo"
+      ],
+      "safety_notes": "La noticia se enfoca en los hechos y la búsqueda de los culpables, sin detalles adicionales sobre el crimen.",
+      "cover_region": {
+        "x": 0.34,
+        "y": 0.8,
+        "width": 0.34,
+        "height": 0.18
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "U busca levantar cabeza",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La ‘U’ está obligada a reaccionar. Tras la salida de Barco, el club se prepara para el crucial enfrentamiento en Copa Libertadores, con la esperanza de recuperar la confianza de su hinchada.",
+      "page_numbers": [
+        13
+      ],
+      "key_facts": [
+        "salida de Barco",
+        "expectativa por partido de Libertadores",
+        "crisis deportiva en la U"
+      ],
+      "tone_notes": [
+        "motivacional",
+        "emocionante",
+        "deportivo"
+      ],
+      "safety_notes": "Se resume el contexto deportivo sin inventar razones específicas para la crisis.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.78,
+        "width": 0.32,
+        "height": 0.2
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Monserrat es una ociosa",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La controversia continúa. Monserrat, acusada de no trabajar y depender de su familia, enfrenta críticas mientras sigue defendiendo su estilo de vida ante las cámaras.",
+      "page_numbers": [
+        16
+      ],
+      "key_facts": [
+        "acusaciones a Monserrat",
+        "dependencia económica de su familia",
+        "defensa pública de su estilo de vida"
+      ],
+      "tone_notes": [
+        "controvertido",
+        "firme",
+        "espectacular"
+      ],
+      "safety_notes": "Se enfoca en la opinión pública y la respuesta de Monserrat sin afirmar veracidad de los rumores.",
+      "cover_region": {
+        "x": 0.59,
+        "y": 0.77,
+        "width": 0.37,
+        "height": 0.21
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-04-29-gestion-frontpage-001",
+  "source_id": "gestion",
+  "source_name": "Gestion",
+  "date": "2026-04-29",
+  "front_page_image": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Banco Mundial ve oportunidad de crecer hasta 6%",
+      "story_type": "economia",
+      "summary": "El Banco Mundial lanza una advertencia elegante: el Perú tiene chance de crecer más, incluso hasta 6%, pero no con gasto lento ni obras trabadas. La reforma empieza por gastar mejor.",
+      "speech": "El Banco Mundial lanza una advertencia elegante: el Perú tiene chance de crecer más, incluso hasta 6%, pero no con gasto lento ni obras trabadas. La reforma empieza por gastar mejor.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.24,
+        "y": 0.84,
+        "width": 0.25,
+        "height": 0.13
+      },
+      "key_facts": [
+        "Banco Mundial plantea eficiencia del gasto",
+        "oportunidad de crecer hasta 6%",
+        "problemas de ejecución pública"
+      ],
+      "tone_notes": [
+        "analitico",
+        "sobrio",
+        "incisivo"
+      ],
+      "safety_notes": "Basado en páginas internas 2 y 3 de Gestión; se evita presentar la proyección como resultado garantizado.",
+      "notes": "Basado en páginas internas 2 y 3 de Gestión; se evita presentar la proyección como resultado garantizado.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Reactivación turística requiere mejorar transporte",
+      "story_type": "economia",
+      "summary": "El turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.",
+      "speech": "El turismo vende ilusión, pero la experiencia se juega en la ruta. Nuevos atractivos ayudan, sí; si el transporte no acompaña, la reactivación se queda bonita en el folleto y difícil en la vida real.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.09,
+        "y": 0.0,
+        "width": 0.32,
+        "height": 0.08
+      },
+      "key_facts": [
+        "promoción de nuevos atractivos turísticos",
+        "playas y norte peruano como oportunidad",
+        "necesidad de mejorar transporte e infraestructura"
+      ],
+      "tone_notes": [
+        "critico",
+        "economico",
+        "claro"
+      ],
+      "safety_notes": "Basado en la página interna 4 de Gestión; se resume el ángulo editorial sin agregar cifras no visibles.",
+      "notes": "Basado en la página interna 4 de Gestión; se resume el ángulo editorial sin agregar cifras no visibles.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Consumidores cambiarían de marca por el Mundial",
+      "story_type": "economia",
+      "summary": "El Mundial no solo mueve camisetas: también mueve marcas. Más del 60% de consumidores podría cambiar de producto por promociones, premios o coleccionables. La pelota también juega en la góndola.",
+      "speech": "El Mundial no solo mueve camisetas: también mueve marcas. Más del 60% de consumidores podría cambiar de producto por promociones, premios o coleccionables. La pelota también juega en la góndola.",
+      "page_numbers": [
+        5
+      ],
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.29,
+        "width": 0.21,
+        "height": 0.23
+      },
+      "key_facts": [
+        "más de 60% podría cambiar de marca",
+        "promociones y premios influyen",
+        "categorías de consumo masivo se activan"
+      ],
+      "tone_notes": [
+        "ligero",
+        "comercial",
+        "afilado"
+      ],
+      "safety_notes": "Basado en la página interna 5 de Gestión; las cifras provienen del estudio citado por el diario.",
+      "notes": "Basado en la página interna 5 de Gestión; las cifras provienen del estudio citado por el diario.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Promociones vs marca",
+        "points": [
+          {
+            "label": "Promo familiar",
+            "value": 62.7
+          },
+          {
+            "label": "Premios Mundial",
+            "value": 67.5
+          },
+          {
+            "label": "Coleccionables",
+            "value": 62.5
+          }
+        ],
+        "subtitle": "Consumidores que cambiarían por el Mundial",
+        "unit": "%",
+        "highlight_label": "Mayor incentivo",
+        "data_source_note": "Cifras visibles en la página interna 5 de Gestión, atribuidas a Worldpanel by Numerator."
+      },
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Modasa ingresará a Canadá",
+      "story_type": "economia",
+      "summary": "Modasa apunta al norte con una jugada grande: entra a Canadá con equipos de energía y hasta US$7 millones en expansión. Data centers, minería y comercio empujan una demanda que ya no espera.",
+      "speech": "Modasa apunta al norte con una jugada grande: entra a Canadá con equipos de energía y hasta US$7 millones en expansión. Data centers, minería y comercio empujan una demanda que ya no espera.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.56,
+        "width": 0.21,
+        "height": 0.23
+      },
+      "key_facts": [
+        "ingreso de Modasa a Canadá",
+        "inversión de hasta US$7 millones",
+        "demanda de data centers, minería y comercio"
+      ],
+      "tone_notes": [
+        "empresarial",
+        "dinamico",
+        "claro"
+      ],
+      "safety_notes": "Basado en la página interna 6 de Gestión; se mantienen las cifras visibles y el plan anunciado por la empresa.",
+      "notes": "Basado en la página interna 6 de Gestión; se mantienen las cifras visibles y el plan anunciado por la empresa.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    }
+  ]
+}

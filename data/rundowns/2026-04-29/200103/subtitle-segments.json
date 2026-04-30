@@ -1,0 +1,113 @@
+{
+  "policy_id": "default-2-lines",
+  "text_source": "daily_rundown",
+  "text": "Hola. Hoy, 29 de abril, revisamos las portadas con política, economía, seguridad y fútbol en primer plano. En una fecha que recuerda la intervención del CLAE en 1993, vamos diario por diario con lo central y sin rodeos.\n\nAhora entramos a Correo. Miramos la portada completa y vamos con su noticia clave.\n\nEl JNE se defiende de las críticas sobre la ampliación de las elecciones, afirmando que el ausentismo no justifica los comicios complementarios. La duda persiste sobre la transparencia.\n\nAhora entramos a Elcomercio. Miramos la portada completa y vamos con su noticia clave.\n\nJorge Nieto, al alza, es el gran beneficiado del 13 de abril. Con el voto de la jornada complementaria, ha logrado una ventaja en distritos claves, mientras otros se estancan.",
+  "audio_duration_seconds": 49.84,
+  "segments": [
+    {
+      "text": "Hola.\nHoy, 29 de abril,",
+      "start": 0.0,
+      "end": 1.625
+    },
+    {
+      "text": "revisamos las portadas\ncon política, economía,",
+      "start": 1.625,
+      "end": 4.875
+    },
+    {
+      "text": "seguridad y fútbol en\nprimer plano.",
+      "start": 4.875,
+      "end": 7.348
+    },
+    {
+      "text": "En una fecha que\nrecuerda la intervención",
+      "start": 7.348,
+      "end": 10.245
+    },
+    {
+      "text": "del CLAE en 1993, vamos\ndiario por diario con lo",
+      "start": 10.245,
+      "end": 13.636
+    },
+    {
+      "text": "central y sin rodeos.",
+      "start": 13.636,
+      "end": 15.12
+    },
+    {
+      "text": "Ahora entramos a Correo.\nMiramos la portada",
+      "start": 15.12,
+      "end": 18.348
+    },
+    {
+      "text": "completa y vamos con su\nnoticia clave.",
+      "start": 18.348,
+      "end": 21.2
+    },
+    {
+      "text": "El JNE se defiende de\nlas críticas sobre la",
+      "start": 21.2,
+      "end": 23.975
+    },
+    {
+      "text": "ampliación de las\nelecciones, afirmando",
+      "start": 23.975,
+      "end": 26.491
+    },
+    {
+      "text": "que el ausentismo no\njustifica los comicios",
+      "start": 26.491,
+      "end": 29.266
+    },
+    {
+      "text": "complementarios.\nLa duda persiste sobre",
+      "start": 29.266,
+      "end": 31.783
+    },
+    {
+      "text": "la transparencia.",
+      "start": 31.783,
+      "end": 32.88
+    },
+    {
+      "text": "Ahora entramos a\nElcomercio.",
+      "start": 32.88,
+      "end": 34.507
+    },
+    {
+      "text": "Miramos la portada\ncompleta y vamos con su",
+      "start": 34.507,
+      "end": 36.947
+    },
+    {
+      "text": "noticia clave.",
+      "start": 36.947,
+      "end": 37.76
+    },
+    {
+      "text": "Jorge Nieto, al alza, es\nel gran beneficiado del",
+      "start": 37.76,
+      "end": 41.151
+    },
+    {
+      "text": "13 de abril.\nCon el voto de la",
+      "start": 41.151,
+      "end": 43.27
+    },
+    {
+      "text": "jornada complementaria,\nha logrado una ventaja",
+      "start": 43.27,
+      "end": 46.52
+    },
+    {
+      "text": "en distritos claves,\nmientras otros se",
+      "start": 46.52,
+      "end": 49.204
+    },
+    {
+      "text": "estancan.",
+      "start": 49.204,
+      "end": 49.84
+    }
+  ]
+}

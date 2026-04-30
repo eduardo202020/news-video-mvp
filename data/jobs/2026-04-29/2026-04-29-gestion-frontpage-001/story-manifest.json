@@ -1,0 +1,52 @@
+{
+  "story_id": "2026-04-29-gestion-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-gestion-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Gestion",
+      "cover": "data/jobs/2026-04-29/2026-04-29-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Banco Mundial ve oportunidad de crecer hasta 6%",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El Banco Mundial lanza una advertencia elegante: el Perú tiene chance de crecer más, incluso hasta 6%, pero no con gasto lento ni obras trabadas. La reforma empieza por gastar mejor.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "key_facts": [
+        "Banco Mundial plantea eficiencia del gasto",
+        "oportunidad de crecer hasta 6%",
+        "problemas de ejecución pública"
+      ],
+      "tone_notes": [
+        "analitico",
+        "sobrio",
+        "incisivo"
+      ],
+      "safety_notes": "Basado en páginas internas 2 y 3 de Gestión; se evita presentar la proyección como resultado garantizado.",
+      "cover_region": {
+        "x": 0.24,
+        "y": 0.84,
+        "width": 0.41,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

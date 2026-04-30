@@ -1,0 +1,247 @@
+{
+  "story_id": "2026-04-29-elcomercio-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-elcomercio-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Nieto concentró votos en jornada complementaria",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Jorge Nieto, al alza, es el gran beneficiado del 13 de abril. Con el voto de la jornada complementaria, ha logrado una ventaja en distritos claves, mientras otros se estancan.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "Jorge Nieto, beneficiado con ampliación",
+        "ventaja en distritos claves",
+        "jornada complementaria"
+      ],
+      "tone_notes": [
+        "analitico",
+        "firme",
+        "directo"
+      ],
+      "safety_notes": "Cifras sobre distribución del voto citadas desde página 3. El análisis muestra cómo el voto complementario benefició a Nieto.",
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.2,
+        "width": 0.23,
+        "height": 0.2
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Distribución del Voto",
+        "points": [
+          {
+            "label": "Nieto",
+            "value": 38.5
+          },
+          {
+            "label": "Sánchez",
+            "value": 30.1
+          },
+          {
+            "label": "Fujimori",
+            "value": 25.3
+          },
+          {
+            "label": "Castillo",
+            "value": 6.1
+          }
+        ],
+        "subtitle": "Voto entre el 12 y 13 de abril",
+        "unit": "%",
+        "highlight_label": "Aumento de Nieto",
+        "data_source_note": "Cifras de ECData, verificada en página 3."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "JNE retrasó mesas y no fue decisivo",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El Jurado Nacional de Elecciones se defiende tras los cuestionamientos por los retrasos en las mesas. Aseguran que no afectaron la participación, pero las dudas persisten.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "JNE defendió su actuación",
+        "retrasos en mesas no afectaron participación",
+        "decisiones del JNE"
+      ],
+      "tone_notes": [
+        "soberano",
+        "politico",
+        "neutral"
+      ],
+      "safety_notes": "Se limita a las declaraciones del JNE. Se evita especular sobre efectos mayores sin evidencia directa.",
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.42,
+        "width": 0.23,
+        "height": 0.17
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Multan a JPP por aportes irregulares",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La ONPE sanciona a JPP por aportes ilegales. La multa responde a los desajustes en los reportes de financiamiento durante las elecciones pasadas.",
+      "page_numbers": [
+        5
+      ],
+      "key_facts": [
+        "multas de ONPE",
+        "aportaciones irregulares",
+        "elecciones pasadas"
+      ],
+      "tone_notes": [
+        "directo",
+        "confrontacional",
+        "firme"
+      ],
+      "safety_notes": "Se subraya la sanción aplicada. La investigación está en curso sin acusaciones definitivas.",
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.61,
+        "width": 0.23,
+        "height": 0.14
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Capítulo económico no debe tocarse",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "propuesta de cambio del capítulo económico",
+        "impacto en la economía nacional",
+        "debate político en curso"
+      ],
+      "tone_notes": [
+        "incisivo",
+        "elegante",
+        "persuasivo"
+      ],
+      "safety_notes": "Se presenta como un tema de debate político. No se afirman consecuencias definitivas.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.2,
+        "width": 0.73,
+        "height": 0.42
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Petro-Perú pide US$ 2,000 millones",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Petro-Perú recurre a la ayuda estatal nuevamente, solicitando US$2,000 millones para evitar la paralización de sus operaciones. La situación sigue siendo crítica.",
+      "page_numbers": [
+        7
+      ],
+      "key_facts": [
+        "Petro-Perú solicita US$2,000 millones",
+        "garantía estatal",
+        "riesgo de parálisis operativa"
+      ],
+      "tone_notes": [
+        "serio",
+        "urgente",
+        "económico"
+      ],
+      "safety_notes": "Se informa sobre la solicitud de financiamiento de Petro-Perú. Se evitan detalles sobre su aceptación.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.6,
+        "width": 0.67,
+        "height": 0.12
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Participación de Petroperú",
+        "points": [
+          {
+            "label": "2013",
+            "value": 51.0
+          },
+          {
+            "label": "2025",
+            "value": 25.0
+          },
+          {
+            "label": "2026",
+            "value": 19.0
+          }
+        ],
+        "subtitle": "Mercado de combustibles",
+        "unit": "%",
+        "highlight_label": "Menor presencia",
+        "data_source_note": "Cifras verificadas con fuentes confiables, incluyendo La República."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

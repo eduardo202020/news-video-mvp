@@ -13,7 +13,28 @@ import sys
 
 import streamlit as st
 import streamlit.components.v1 as components
+import streamlit.elements.image as st_image
 from PIL import Image
+from streamlit.elements.lib.image_utils import image_to_url as _streamlit_image_to_url
+from streamlit.elements.lib.layout_utils import LayoutConfig
+try:
+    from streamlit_drawable_canvas import st_canvas
+except Exception:  # pragma: no cover - optional dependency for richer editor
+    st_canvas = None
+
+
+if not hasattr(st_image, "image_to_url"):
+    def _compat_image_to_url(image, width, clamp, channels, output_format, image_id):
+        return _streamlit_image_to_url(
+            image=image,
+            layout_config=LayoutConfig(width=width),
+            clamp=clamp,
+            channels=channels,
+            output_format=output_format,
+            image_id=image_id,
+        )
+
+    st_image.image_to_url = _compat_image_to_url
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[2]
@@ -163,6 +184,84 @@ def load_chatgpt_response_cache_into_session(batch_date: str) -> int:
     for key, value in responses.items():
         st.session_state[str(key)] = str(value)
     return len(responses)
+
+
+def _normalize_speech_block_layout(raw_layout: object) -> list[list[str]]:
+    if not isinstance(raw_layout, list):
+        return []
+    normalized: list[list[str]] = []
+    for group in raw_layout:
+        if not isinstance(group, list):
+            continue
+        normalized_group = [str(item).strip() for item in group if str(item).strip()]
+        if normalized_group:
+            normalized.append(normalized_group)
+    return normalized
+
+
+def get_speech_block_layout(batch_date: str) -> list[list[str]]:
+    payload = read_chatgpt_response_cache(batch_date)
+    return _normalize_speech_block_layout(payload.get("speech_block_layout"))
+
+
+def save_speech_block_layout(batch_date: str, layout: list[list[str]]) -> Path:
+    payload = read_chatgpt_response_cache(batch_date)
+    payload["speech_block_layout"] = _normalize_speech_block_layout(layout)
+    return write_chatgpt_response_cache(batch_date, payload)
+
+
+def build_speech_block_layout(*, batch_date: str, jobs: list[dict], size: int = 2) -> list[list[dict]]:
+    if size <= 0:
+        return [jobs]
+    jobs_by_id = {str(job.get("job_id") or ""): job for job in jobs}
+    current_job_ids = [job_id for job_id in jobs_by_id if job_id]
+    cached_layout = get_speech_block_layout(batch_date)
+    cached_job_ids: list[str] = []
+    for group in cached_layout:
+        for job_id in group:
+            if job_id in jobs_by_id and job_id not in cached_job_ids:
+                cached_job_ids.append(job_id)
+    ordered_job_ids = cached_job_ids + [job_id for job_id in current_job_ids if job_id not in cached_job_ids]
+    normalized_layout = [
+        ordered_job_ids[index : index + size]
+        for index in range(0, len(ordered_job_ids), size)
+    ]
+    if normalized_layout != cached_layout:
+        save_speech_block_layout(batch_date, normalized_layout)
+    grouped_jobs: list[list[dict]] = []
+    for group in normalized_layout:
+        group_jobs = [jobs_by_id[job_id] for job_id in group if job_id in jobs_by_id]
+        if group_jobs:
+            grouped_jobs.append(group_jobs)
+    return grouped_jobs
+
+
+def build_speech_block_key(group_jobs: list[dict]) -> str:
+    parts = []
+    for job in group_jobs:
+        source_id = str(job.get("source_id") or "sin-source")
+        job_id = str(job.get("job_id") or "sin-id")
+        safe_source = "".join(char if char.isalnum() or char in {"-", "_"} else "-" for char in source_id)
+        safe_job_id = "".join(char if char.isalnum() or char in {"-", "_"} else "-" for char in job_id)
+        parts.append(f"{safe_source}--{safe_job_id}")
+    return "__".join(parts) or "bloque-vacio"
+
+
+def migrate_legacy_speech_block_cache(batch_date: str, grouped_jobs: list[list[dict]]) -> None:
+    payload = read_chatgpt_response_cache(batch_date)
+    responses = payload.get("responses", {})
+    if not isinstance(responses, dict):
+        return
+    changed = False
+    for group_index, group_jobs in enumerate(grouped_jobs, start=1):
+        legacy_key = f"detailed_news_import_payload_{group_index}"
+        block_key = f"detailed_news_import_payload_{build_speech_block_key(group_jobs)}"
+        if block_key not in responses and legacy_key in responses:
+            responses[block_key] = responses[legacy_key]
+            changed = True
+    if changed:
+        payload["responses"] = responses
+        write_chatgpt_response_cache(batch_date, payload)
 
 
 def rel(path: Path) -> str:
@@ -567,21 +666,22 @@ def update_job_story_cover_region(
     cover_region: dict[str, float] | None,
 ) -> tuple[dict, list[str]]:
     job = read_json(job_path)
-    stories = job.setdefault("story_narrative", {}).setdefault("stories", [])
-    if story_index < 0 or story_index >= len(stories):
+    normalized_cover_region = normalize_cover_region(cover_region) if cover_region else None
+    page_selection = job.setdefault("page_selection", {})
+    cover_stories = page_selection.setdefault("stories", [])
+    if story_index < 0 or story_index >= len(cover_stories):
         raise ValueError("La historia seleccionada ya no existe en el job-manifest.")
 
-    normalized_cover_region = normalize_cover_region(cover_region) if cover_region else None
-    stories[story_index]["cover_region"] = normalized_cover_region
+    cover_stories[story_index]["cover_region"] = normalized_cover_region
 
-    headline = str(stories[story_index].get("headline") or "").strip()
-    story_type = str(stories[story_index].get("story_type") or "").strip().lower()
-    for cover_story in job.get("page_selection", {}).get("stories", []):
+    headline = str(cover_stories[story_index].get("headline") or "").strip()
+    story_type = str(cover_stories[story_index].get("story_type") or "").strip().lower()
+    for narrative_story in job.get("story_narrative", {}).get("stories", []):
         if (
-            str(cover_story.get("headline") or "").strip() == headline
-            and str(cover_story.get("story_type") or "").strip().lower() == story_type
+            str(narrative_story.get("headline") or "").strip() == headline
+            and str(narrative_story.get("story_type") or "").strip().lower() == story_type
         ):
-            cover_story["cover_region"] = normalized_cover_region
+            narrative_story["cover_region"] = normalized_cover_region
 
     job.setdefault("audit", {})
     job["audit"].setdefault("events", [])
@@ -627,6 +727,249 @@ def update_job_story_cover_region(
     return read_json(job_path), notes
 
 
+def update_job_cover_story_follow_up(
+    *,
+    job_path: Path,
+    story_index: int,
+    follow_up_enabled: bool,
+) -> tuple[dict, list[str]]:
+    job = read_json(job_path)
+    page_selection = job.setdefault("page_selection", {})
+    stories = page_selection.setdefault("stories", [])
+    if story_index < 0 or story_index >= len(stories):
+        raise ValueError("La historia seleccionada ya no existe en page_selection.stories.")
+
+    stories[story_index]["follow_up_enabled"] = bool(follow_up_enabled)
+    headline = str(stories[story_index].get("headline") or "").strip()
+    story_type = str(stories[story_index].get("story_type") or "").strip().lower()
+
+    for narrative_story in job.get("story_narrative", {}).get("stories", []):
+        if (
+            str(narrative_story.get("headline") or "").strip() == headline
+            and str(narrative_story.get("story_type") or "").strip().lower() == story_type
+        ):
+            narrative_story["follow_up_enabled"] = bool(follow_up_enabled)
+
+    enabled_stories = [story for story in stories if bool(story.get("follow_up_enabled", True))]
+    page_selection["selected_page_numbers"] = sorted(
+        {
+            int(page_number)
+            for story in enabled_stories
+            for page_number in story.get("page_numbers", [])
+            if int(page_number) > 1
+        }
+    )
+
+    job.setdefault("audit", {})
+    job["audit"].setdefault("events", [])
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["audit"]["events"].append(
+        {
+            "stage": "cover_selection_ui",
+            "status": "edited",
+            "timestamp": timestamp,
+            "details": (
+                f"Seguimiento de portada actualizado para historia {story_index + 1}: "
+                f"{headline or 'sin titular'} -> {'seguir' if follow_up_enabled else 'descartar'}."
+            ),
+        }
+    )
+    job["audit"]["updated_at"] = timestamp
+    write_json(job_path, job)
+
+    return read_json(job_path), [
+        f"Historia {'incluida' if follow_up_enabled else 'excluida'} para las siguientes etapas."
+    ]
+
+
+def update_job_cover_review_status(
+    *,
+    job_path: Path,
+    reviewed: bool,
+) -> tuple[dict, list[str]]:
+    job = read_json(job_path)
+    page_selection = job.setdefault("page_selection", {})
+    page_selection["focus_review_completed"] = bool(reviewed)
+
+    job.setdefault("audit", {})
+    job["audit"].setdefault("events", [])
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["audit"]["events"].append(
+        {
+            "stage": "focus_review_ui",
+            "status": "edited",
+            "timestamp": timestamp,
+            "details": f"Revision de portada marcada como {'completa' if reviewed else 'pendiente'}.",
+        }
+    )
+    job["audit"]["updated_at"] = timestamp
+    write_json(job_path, job)
+    return read_json(job_path), [
+        "Periodico marcado como revisado." if reviewed else "Periodico marcado como pendiente."
+    ]
+
+
+def _recompute_selected_page_numbers(stories: list[dict]) -> list[int]:
+    return sorted(
+        {
+            int(page_number)
+            for story in stories
+            if bool(story.get("follow_up_enabled", True))
+            for page_number in story.get("page_numbers", [])
+            if int(page_number) > 1
+        }
+    )
+
+
+def _parse_page_numbers_text(value: str) -> list[int]:
+    page_numbers: list[int] = []
+    raw_parts = str(value or "").replace(";", ",").split(",")
+    for part in raw_parts:
+        chunk = part.strip()
+        if not chunk:
+            continue
+        try:
+            page_number = int(chunk)
+        except ValueError:
+            continue
+        if page_number > 1 and page_number not in page_numbers:
+            page_numbers.append(page_number)
+    return sorted(page_numbers)
+
+
+def update_job_cover_story_metadata(
+    *,
+    job_path: Path,
+    story_index: int,
+    headline: str,
+    story_type: str,
+    page_numbers_text: str,
+) -> tuple[dict, list[str]]:
+    job = read_json(job_path)
+    page_selection = job.setdefault("page_selection", {})
+    stories = page_selection.setdefault("stories", [])
+    if story_index < 0 or story_index >= len(stories):
+        raise ValueError("La historia seleccionada ya no existe en page_selection.stories.")
+
+    story = stories[story_index]
+    old_headline = str(story.get("headline") or "").strip()
+    old_story_type = str(story.get("story_type") or "").strip().lower()
+    story["headline"] = " ".join(str(headline or "").split()).strip()
+    story["story_type"] = str(story_type or "actualidad").strip() or "actualidad"
+    story["page_numbers"] = _parse_page_numbers_text(page_numbers_text)
+
+    for narrative_story in job.get("story_narrative", {}).get("stories", []):
+        if (
+            str(narrative_story.get("headline") or "").strip() == old_headline
+            and str(narrative_story.get("story_type") or "").strip().lower() == old_story_type
+        ):
+            narrative_story["headline"] = story["headline"]
+            narrative_story["story_type"] = story["story_type"]
+            narrative_story["page_numbers"] = list(story["page_numbers"])
+
+    page_selection["selected_page_numbers"] = _recompute_selected_page_numbers(stories)
+
+    job.setdefault("audit", {})
+    job["audit"].setdefault("events", [])
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["audit"]["events"].append(
+        {
+            "stage": "cover_selection_ui",
+            "status": "edited",
+            "timestamp": timestamp,
+            "details": f"Metadatos de portada actualizados para historia {story_index + 1}: {story['headline'] or 'sin titular'}.",
+        }
+    )
+    job["audit"]["updated_at"] = timestamp
+    write_json(job_path, job)
+    return read_json(job_path), ["Historia actualizada."]
+
+
+def add_job_cover_story(
+    *,
+    job_path: Path,
+    headline: str,
+    story_type: str,
+    page_numbers_text: str,
+) -> tuple[dict, list[str]]:
+    job = read_json(job_path)
+    page_selection = job.setdefault("page_selection", {})
+    stories = page_selection.setdefault("stories", [])
+    normalized_headline = " ".join(str(headline or "").split()).strip()
+    if not normalized_headline:
+        raise ValueError("La nueva historia necesita al menos un titular.")
+
+    stories.append(
+        {
+            "headline": normalized_headline,
+            "story_type": str(story_type or "actualidad").strip() or "actualidad",
+            "cover_region": None,
+            "follow_up_enabled": True,
+            "page_numbers": _parse_page_numbers_text(page_numbers_text),
+            "evidence": "",
+            "evidence_lines": [],
+            "confidence": 1.0,
+        }
+    )
+    page_selection["selected_page_numbers"] = _recompute_selected_page_numbers(stories)
+
+    job.setdefault("audit", {})
+    job["audit"].setdefault("events", [])
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["audit"]["events"].append(
+        {
+            "stage": "cover_selection_ui",
+            "status": "edited",
+            "timestamp": timestamp,
+            "details": f"Historia agregada manualmente desde portada: {normalized_headline}.",
+        }
+    )
+    job["audit"]["updated_at"] = timestamp
+    write_json(job_path, job)
+    return read_json(job_path), ["Historia agregada."]
+
+
+def remove_job_cover_story(
+    *,
+    job_path: Path,
+    story_index: int,
+) -> tuple[dict, list[str]]:
+    job = read_json(job_path)
+    page_selection = job.setdefault("page_selection", {})
+    stories = page_selection.setdefault("stories", [])
+    if story_index < 0 or story_index >= len(stories):
+        raise ValueError("La historia seleccionada ya no existe en page_selection.stories.")
+
+    story = stories.pop(story_index)
+    headline = str(story.get("headline") or "").strip()
+    story_type = str(story.get("story_type") or "").strip().lower()
+    narrative_stories = job.get("story_narrative", {}).get("stories", [])
+    job.setdefault("story_narrative", {})["stories"] = [
+        item
+        for item in narrative_stories
+        if not (
+            str(item.get("headline") or "").strip() == headline
+            and str(item.get("story_type") or "").strip().lower() == story_type
+        )
+    ]
+    page_selection["selected_page_numbers"] = _recompute_selected_page_numbers(stories)
+
+    job.setdefault("audit", {})
+    job["audit"].setdefault("events", [])
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    job["audit"]["events"].append(
+        {
+            "stage": "cover_selection_ui",
+            "status": "edited",
+            "timestamp": timestamp,
+            "details": f"Historia eliminada desde portada: {headline or 'sin titular'}.",
+        }
+    )
+    job["audit"]["updated_at"] = timestamp
+    write_json(job_path, job)
+    return read_json(job_path), ["Historia eliminada."]
+
+
 def render_cover_focus_preview(
     *,
     image_path: Path,
@@ -651,41 +994,228 @@ def render_cover_focus_preview(
           </div>
         </div>
         """
-        focus_center_x = (normalized["x"] + normalized["width"] / 2) * 100
-        focus_center_y = (normalized["y"] + normalized["height"] / 2) * 100
-        crop_html = f"""
-        <div style="position:relative;overflow:hidden;border-radius:14px;background:#0f1014;height:240px;">
-          <img src="{data_url}" style="position:absolute;left:{50 - focus_center_x:.3f}%;top:{50 - focus_center_y:.3f}%;
-               width:100%;height:100%;object-fit:contain;transform:scale({max(1.0, min(3.2, 0.9 / max(normalized['width'], normalized['height'], 0.08))):.3f});
-               transform-origin:center center;" />
-        </div>
-        """
     else:
         overlay_html = ""
-        crop_html = """
-        <div style="display:flex;align-items:center;justify-content:center;height:240px;border-radius:14px;
-                    background:#101116;color:#d8d8de;font:600 15px/1.4 sans-serif;">
-          Sin zoom. Se mostrara la portada completa.
-        </div>
-        """
     header_html = f"<div style='margin-bottom:10px;color:#f3f4f6;font:700 15px/1.3 sans-serif;'>{title}</div>" if title else ""
     html = f"""
-    <div style="display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.8fr);gap:16px;align-items:start;">
+    <div>
+      {header_html}
+      <div style="position:relative;width:{rendered_width}px;border-radius:16px;overflow:hidden;background:#0f1014;border:1px solid rgba(255,255,255,.08);">
+        <img src="{data_url}" style="display:block;width:{rendered_width}px;height:{rendered_height}px;" />
+        {overlay_html}
+      </div>
+    </div>
+    """
+    component_height = max(rendered_height + 90, 360)
+    components.html(html, height=component_height, scrolling=False)
+
+def render_cover_focus_overview(
+    *,
+    image_path: Path,
+    stories: list[dict],
+    title: str | None = None,
+) -> None:
+    preview_width = 720
+    data_url = image_to_data_url(image_path, max_width=preview_width)
+    rendered_width, rendered_height = get_scaled_dimensions(image_path, max_width=preview_width)
+    palette = [
+        "#ffca28",
+        "#00c2ff",
+        "#7cf29a",
+        "#ff7aa2",
+        "#c29bff",
+        "#ff9f43",
+        "#4dd4ac",
+        "#f87171",
+    ]
+    overlays: list[str] = []
+    legend_items: list[str] = []
+    for index, story in enumerate(stories):
+        normalized = normalize_cover_region(story.get("cover_region"))
+        headline = str(story.get("headline") or f"Historia {index + 1}")
+        story_type = str(story.get("story_type") or "actualidad")
+        page_numbers = [
+            int(page_number)
+            for page_number in story.get("page_numbers", [])
+            if int(page_number) > 1
+        ]
+        pages_label = ", ".join(str(page_number) for page_number in page_numbers) if page_numbers else "sin pagina"
+        color = palette[index % len(palette)]
+        label = f"{index + 1}"
+        legend_items.append(
+            f"""
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:8px 10px;border-radius:12px;
+                        background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.05);">
+              <div style="min-width:24px;height:24px;border-radius:999px;background:{color};color:#111;
+                          display:flex;align-items:center;justify-content:center;font:800 13px/1 sans-serif;">
+                {label}
+              </div>
+              <div style="color:#f3f4f6;font:600 13px/1.35 sans-serif;">
+                {headline}<br />
+                <span style="color:#b6bac5;font-weight:500;">{story_type} · pag. {pages_label}</span>
+              </div>
+            </div>
+            """
+        )
+        if not normalized:
+            continue
+        x = normalized["x"] * 100
+        y = normalized["y"] * 100
+        width = normalized["width"] * 100
+        height = normalized["height"] * 100
+        overlays.append(
+            f"""
+            <div style="position:absolute;left:{x:.3f}%;top:{y:.3f}%;width:{width:.3f}%;height:{height:.3f}%;
+                        border:3px solid {color};border-radius:12px;background:rgba(255,255,255,.03);
+                        box-shadow:inset 0 0 0 9999px rgba(255,255,255,.04);
+                        box-sizing:border-box;">
+              <div style="position:absolute;left:8px;top:8px;width:26px;height:26px;border-radius:999px;background:{color};
+                          color:#111;display:flex;align-items:center;justify-content:center;font:800 14px/1 sans-serif;">
+                {label}
+              </div>
+            </div>
+            """
+        )
+    header_html = f"<div style='margin-bottom:10px;color:#f3f4f6;font:700 15px/1.3 sans-serif;'>{title}</div>" if title else ""
+    html = f"""
+    <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.8fr);gap:16px;align-items:start;">
       <div>
         {header_html}
         <div style="position:relative;width:{rendered_width}px;border-radius:16px;overflow:hidden;background:#0f1014;border:1px solid rgba(255,255,255,.08);">
           <img src="{data_url}" style="display:block;width:{rendered_width}px;height:{rendered_height}px;" />
-          {overlay_html}
+          {''.join(overlays)}
         </div>
       </div>
       <div>
-        <div style="margin-bottom:10px;color:#f3f4f6;font:700 15px/1.3 sans-serif;">Vista aproximada del enfoque</div>
-        {crop_html}
+        <div style="margin-bottom:10px;color:#f3f4f6;font:700 15px/1.3 sans-serif;">Historias detectadas en esta portada</div>
+        <div style="display:grid;gap:8px;">
+          {''.join(legend_items)}
+        </div>
       </div>
     </div>
     """
-    component_height = max(rendered_height + 120, 520)
+    component_height = max(rendered_height + 80, 460)
     components.html(html, height=component_height, scrolling=False)
+
+
+def _normalize_focus_editor_region(
+    *,
+    x: float,
+    y: float,
+    width: float,
+    height: float,
+) -> dict[str, float]:
+    normalized_width = max(0.01, min(1.0, float(width)))
+    normalized_height = max(0.01, min(1.0, float(height)))
+    normalized_x = max(0.0, min(1.0 - normalized_width, float(x)))
+    normalized_y = max(0.0, min(1.0 - normalized_height, float(y)))
+    return {
+        "x": round(normalized_x, 4),
+        "y": round(normalized_y, 4),
+        "width": round(normalized_width, 4),
+        "height": round(normalized_height, 4),
+    }
+
+
+def _save_focus_editor_state(
+    *,
+    job_path: Path,
+    ui_prefix: str,
+    story_index: int,
+    sync_widget_state: bool = True,
+    rerun: bool = False,
+) -> None:
+    clear_key = f"{ui_prefix}_clear_{story_index}"
+    if bool(st.session_state.get(clear_key, False)):
+        preview_region = None
+    else:
+        preview_region = _normalize_focus_editor_region(
+            x=float(st.session_state.get(f"{ui_prefix}_x_{story_index}", 0.0)),
+            y=float(st.session_state.get(f"{ui_prefix}_y_{story_index}", 0.0)),
+            width=float(st.session_state.get(f"{ui_prefix}_w_{story_index}", 0.45)),
+            height=float(st.session_state.get(f"{ui_prefix}_h_{story_index}", 0.2)),
+        )
+        if sync_widget_state:
+            st.session_state[f"{ui_prefix}_x_{story_index}"] = preview_region["x"]
+            st.session_state[f"{ui_prefix}_y_{story_index}"] = preview_region["y"]
+            st.session_state[f"{ui_prefix}_w_{story_index}"] = preview_region["width"]
+            st.session_state[f"{ui_prefix}_h_{story_index}"] = preview_region["height"]
+
+    updated_job, sync_notes = update_job_story_cover_region(
+        job_path=job_path,
+        story_index=story_index,
+        cover_region=preview_region,
+    )
+    _ = updated_job
+    st.session_state[f"{ui_prefix}_focus_notes_{story_index}"] = sync_notes
+    st.session_state[f"{ui_prefix}_focus_status_{story_index}"] = "Enfoque guardado automaticamente."
+    if rerun:
+        st.rerun()
+
+
+def _adjust_focus_editor_state(
+    *,
+    ui_prefix: str,
+    story_index: int,
+    dx: float = 0.0,
+    dy: float = 0.0,
+    dw: float = 0.0,
+    dh: float = 0.0,
+) -> None:
+    current_region = _normalize_focus_editor_region(
+        x=float(st.session_state.get(f"{ui_prefix}_x_{story_index}", 0.0)),
+        y=float(st.session_state.get(f"{ui_prefix}_y_{story_index}", 0.0)),
+        width=float(st.session_state.get(f"{ui_prefix}_w_{story_index}", 0.45)),
+        height=float(st.session_state.get(f"{ui_prefix}_h_{story_index}", 0.2)),
+    )
+    updated_region = _normalize_focus_editor_region(
+        x=current_region["x"] + dx,
+        y=current_region["y"] + dy,
+        width=current_region["width"] + dw,
+        height=current_region["height"] + dh,
+    )
+    st.session_state[f"{ui_prefix}_x_{story_index}"] = updated_region["x"]
+    st.session_state[f"{ui_prefix}_y_{story_index}"] = updated_region["y"]
+    st.session_state[f"{ui_prefix}_w_{story_index}"] = updated_region["width"]
+    st.session_state[f"{ui_prefix}_h_{story_index}"] = updated_region["height"]
+
+
+def _queue_focus_editor_adjustment(
+    *,
+    ui_prefix: str,
+    story_index: int,
+    dx: float = 0.0,
+    dy: float = 0.0,
+    dw: float = 0.0,
+    dh: float = 0.0,
+) -> None:
+    st.session_state[f"{ui_prefix}_pending_adjustment_{story_index}"] = {
+        "dx": dx,
+        "dy": dy,
+        "dw": dw,
+        "dh": dh,
+    }
+    st.rerun()
+
+
+def _apply_queued_focus_editor_adjustment(
+    *,
+    ui_prefix: str,
+    story_index: int,
+) -> bool:
+    pending_key = f"{ui_prefix}_pending_adjustment_{story_index}"
+    pending = st.session_state.pop(pending_key, None)
+    if not isinstance(pending, dict):
+        return False
+    _adjust_focus_editor_state(
+        ui_prefix=ui_prefix,
+        story_index=story_index,
+        dx=float(pending.get("dx", 0.0)),
+        dy=float(pending.get("dy", 0.0)),
+        dw=float(pending.get("dw", 0.0)),
+        dh=float(pending.get("dh", 0.0)),
+    )
+    return True
 
 
 def render_focus_editor_for_job(
@@ -694,12 +1224,35 @@ def render_focus_editor_for_job(
     job_path: Path,
     ui_prefix: str,
 ) -> None:
-    focus_entries = get_story_narrative_entries(job)
+    current_job = job
+    focus_entries = get_cover_stories(current_job)
     if not focus_entries:
-        st.caption("Todavia no hay historias importadas para corregir el enfoque.")
+        st.caption("Todavia no hay historias de portada para corregir o editar.")
         return
 
-    front_page_path_value = job.get("input_assets", {}).get("front_page_image")
+    pending_adjustment_applied = False
+    for story_index in range(len(focus_entries)):
+        if _apply_queued_focus_editor_adjustment(
+            ui_prefix=ui_prefix,
+            story_index=story_index,
+        ):
+            _save_focus_editor_state(
+                job_path=job_path,
+                ui_prefix=ui_prefix,
+                story_index=story_index,
+                sync_widget_state=False,
+                rerun=False,
+            )
+            pending_adjustment_applied = True
+
+    if pending_adjustment_applied:
+        current_job = read_json(job_path)
+        focus_entries = get_cover_stories(current_job)
+        if not focus_entries:
+            st.caption("Todavia no hay historias de portada para corregir o editar.")
+            return
+
+    front_page_path_value = current_job.get("input_assets", {}).get("front_page_image")
     if not front_page_path_value:
         st.caption("Este job todavia no tiene portada para ajustar el enfoque.")
         return
@@ -708,98 +1261,285 @@ def render_focus_editor_for_job(
         st.caption("No se encontro la portada local para este job.")
         return
 
-    story_options = [
-        f"{index + 1}. {str(story.get('headline') or 'Sin titular')} · {str(story.get('story_type') or 'actualidad')}"
-        for index, story in enumerate(focus_entries)
-    ]
-    selected_story_label = st.selectbox(
-        "Historia a corregir",
-        story_options,
-        key=f"{ui_prefix}_story_selector",
+    reviewed_key = f"{ui_prefix}_reviewed"
+    reviewed_value = st.checkbox(
+        "Marcar este periodico como revisado",
+        value=bool(current_job.get("page_selection", {}).get("focus_review_completed", False)),
+        key=reviewed_key,
+        help="Usa esta marca para saber que portada ya corregiste y cual aun falta revisar.",
     )
-    story_index = story_options.index(selected_story_label)
-    story_entry = focus_entries[story_index]
-    headline = str(story_entry.get("headline") or f"Historia {story_index + 1}")
-    story_type = str(story_entry.get("story_type") or "actualidad")
-    narrator_id = str(story_entry.get("narrator_profile_id") or "sin-narrador")
-    current_region = normalize_cover_region(story_entry.get("cover_region"))
-    clear_focus = st.checkbox(
-        "Sin zoom",
-        value=current_region is None,
-        key=f"{ui_prefix}_clear_{story_index}",
-        help="Activa esto si prefieres mostrar la portada completa sin enfoque automatico para esta historia.",
-    )
-    editor_col1, editor_col2, editor_col3, editor_col4 = st.columns(4)
-    x_value = editor_col1.number_input(
-        "x",
-        min_value=0.0,
-        max_value=1.0,
-        value=float((current_region or {}).get("x", 0.0)),
-        step=0.01,
-        key=f"{ui_prefix}_x_{story_index}",
-        disabled=clear_focus,
-    )
-    y_value = editor_col2.number_input(
-        "y",
-        min_value=0.0,
-        max_value=1.0,
-        value=float((current_region or {}).get("y", 0.0)),
-        step=0.01,
-        key=f"{ui_prefix}_y_{story_index}",
-        disabled=clear_focus,
-    )
-    width_value = editor_col3.number_input(
-        "width",
-        min_value=0.01,
-        max_value=1.0,
-        value=float((current_region or {}).get("width", 0.45)),
-        step=0.01,
-        key=f"{ui_prefix}_w_{story_index}",
-        disabled=clear_focus,
-    )
-    height_value = editor_col4.number_input(
-        "height",
-        min_value=0.01,
-        max_value=1.0,
-        value=float((current_region or {}).get("height", 0.2)),
-        step=0.01,
-        key=f"{ui_prefix}_h_{story_index}",
-        disabled=clear_focus,
-    )
-    preview_region = None if clear_focus else {
-        "x": x_value,
-        "y": y_value,
-        "width": width_value,
-        "height": height_value,
-    }
-    st.caption(
-        f"{headline} · {story_type} · {narrator_id}. "
-        "La caja amarilla y la vista de la derecha se actualizan mientras cambias los valores."
-    )
-    render_cover_focus_preview(
-        image_path=image_path,
-        cover_region=preview_region,
-        title=str(job.get("source_id") or "sin-source"),
-    )
-    st.caption(
-        "Valores normalizados sobre la portada: `x` y `y` son la esquina superior izquierda; "
-        "`width` y `height` el tamano relativo del recorte."
-    )
-    if st.button("Guardar enfoque", key=f"{ui_prefix}_save_{story_index}", use_container_width=True):
+    reviewed_saved_key = f"{ui_prefix}_reviewed_saved"
+    if st.session_state.get(reviewed_saved_key) != reviewed_value:
         try:
-            updated_job, sync_notes = update_job_story_cover_region(
+            update_job_cover_review_status(
                 job_path=job_path,
-                story_index=story_index,
-                cover_region=preview_region,
+                reviewed=reviewed_value,
             )
-            st.session_state[f"{ui_prefix}_focus_notes_{story_index}"] = sync_notes
-            st.success("Enfoque guardado.")
-            st.rerun()
+            st.session_state[reviewed_saved_key] = reviewed_value
+            st.success(
+                "Periodico marcado como revisado."
+                if reviewed_value
+                else "Periodico marcado como pendiente."
+            )
         except Exception as exc:
             st.error(str(exc))
-    saved_notes = st.session_state.get(f"{ui_prefix}_focus_notes_{story_index}", [])
-    for note in saved_notes:
-        st.caption(note)
+
+    render_cover_focus_overview(
+        image_path=image_path,
+        stories=focus_entries,
+        title=str(current_job.get("source_id") or "sin-source"),
+    )
+    st.caption(
+        "Arriba ves la portada con todos los sombreados de noticias del periodico. "
+        "Abajo puedes ajustar cada enfoque sin salir de esta misma vista."
+    )
+
+    for story_index, story_entry in enumerate(focus_entries):
+        headline = str(story_entry.get("headline") or f"Historia {story_index + 1}")
+        story_type = str(story_entry.get("story_type") or "actualidad")
+        narrator_id = get_default_narrator_for_story_type(story_type) or "sin-narrador"
+        current_region = normalize_cover_region(story_entry.get("cover_region"))
+        with st.expander(
+            f"{story_index + 1}. {headline} · {story_type}",
+            expanded=False,
+        ):
+            meta_col1, meta_col2 = st.columns([1.8, 1.2])
+            edited_headline = meta_col1.text_input(
+                "Titular",
+                value=headline,
+                key=f"{ui_prefix}_headline_{story_index}",
+            )
+            edited_story_type = meta_col2.selectbox(
+                "Categoria",
+                ["actualidad", "politica", "policial", "deportes", "mundo", "economia", "espectaculos"],
+                index=["actualidad", "politica", "policial", "deportes", "mundo", "economia", "espectaculos"].index(
+                    story_type if story_type in {"actualidad", "politica", "policial", "deportes", "mundo", "economia", "espectaculos"} else "actualidad"
+                ),
+                key=f"{ui_prefix}_story_type_{story_index}",
+            )
+            page_numbers_text = st.text_input(
+                "Paginas asociadas",
+                value=", ".join(str(page) for page in story_entry.get("page_numbers", [])),
+                placeholder="2, 3, 8",
+                key=f"{ui_prefix}_pages_{story_index}",
+            )
+            action_cols = st.columns(2)
+            if action_cols[0].button(
+                "Guardar datos de noticia",
+                key=f"{ui_prefix}_save_story_meta_{story_index}",
+                use_container_width=True,
+            ):
+                try:
+                    update_job_cover_story_metadata(
+                        job_path=job_path,
+                        story_index=story_index,
+                        headline=edited_headline,
+                        story_type=edited_story_type,
+                        page_numbers_text=page_numbers_text,
+                    )
+                    st.success("Datos de la noticia actualizados.")
+                    st.rerun()
+                except Exception as exc:
+                    st.error(str(exc))
+            if action_cols[1].button(
+                "Quitar noticia",
+                key=f"{ui_prefix}_remove_story_{story_index}",
+                use_container_width=True,
+            ):
+                try:
+                    remove_job_cover_story(
+                        job_path=job_path,
+                        story_index=story_index,
+                    )
+                    st.success("Noticia eliminada.")
+                    st.rerun()
+                except Exception as exc:
+                    st.error(str(exc))
+            follow_up_enabled = st.checkbox(
+                "Seguir con esta noticia",
+                value=bool(story_entry.get("follow_up_enabled", True)),
+                key=f"{ui_prefix}_follow_up_{story_index}",
+                help="Si la desactivas, esta noticia deja de pasar a descarga de paginas y al siguiente prompt editorial.",
+            )
+            saved_follow_up_key = f"{ui_prefix}_follow_up_saved_{story_index}"
+            if st.session_state.get(saved_follow_up_key) != follow_up_enabled:
+                try:
+                    updated_job, sync_notes = update_job_cover_story_follow_up(
+                        job_path=job_path,
+                        story_index=story_index,
+                        follow_up_enabled=follow_up_enabled,
+                    )
+                    _ = updated_job
+                    st.session_state[saved_follow_up_key] = follow_up_enabled
+                    st.session_state[f"{ui_prefix}_follow_up_notes_{story_index}"] = sync_notes
+                    st.session_state[f"{ui_prefix}_focus_status_{story_index}"] = (
+                        "Historia incluida para continuar."
+                        if follow_up_enabled
+                        else "Historia excluida de las siguientes etapas."
+                    )
+                except Exception as exc:
+                    st.error(str(exc))
+            clear_focus = st.checkbox(
+                "Sin zoom",
+                value=current_region is None,
+                key=f"{ui_prefix}_clear_{story_index}",
+                help="Activa esto si prefieres mostrar la portada completa sin enfoque automatico para esta historia.",
+                on_change=_save_focus_editor_state,
+                kwargs={
+                    "job_path": job_path,
+                    "ui_prefix": ui_prefix,
+                    "story_index": story_index,
+                },
+            )
+            if f"{ui_prefix}_x_{story_index}" not in st.session_state:
+                st.session_state[f"{ui_prefix}_x_{story_index}"] = float((current_region or {}).get("x", 0.0))
+            if f"{ui_prefix}_y_{story_index}" not in st.session_state:
+                st.session_state[f"{ui_prefix}_y_{story_index}"] = float((current_region or {}).get("y", 0.0))
+            if f"{ui_prefix}_w_{story_index}" not in st.session_state:
+                st.session_state[f"{ui_prefix}_w_{story_index}"] = float((current_region or {}).get("width", 0.45))
+            if f"{ui_prefix}_h_{story_index}" not in st.session_state:
+                st.session_state[f"{ui_prefix}_h_{story_index}"] = float((current_region or {}).get("height", 0.2))
+            editor_col1, editor_col2, editor_col3, editor_col4 = st.columns(4)
+            x_value = editor_col1.number_input(
+                "x",
+                min_value=0.0,
+                max_value=1.0,
+                value=float(st.session_state.get(f"{ui_prefix}_x_{story_index}", 0.0)),
+                step=0.01,
+                key=f"{ui_prefix}_x_{story_index}",
+                disabled=clear_focus,
+                on_change=_save_focus_editor_state,
+                kwargs={
+                    "job_path": job_path,
+                    "ui_prefix": ui_prefix,
+                    "story_index": story_index,
+                },
+            )
+            y_value = editor_col2.number_input(
+                "y",
+                min_value=0.0,
+                max_value=1.0,
+                value=float(st.session_state.get(f"{ui_prefix}_y_{story_index}", 0.0)),
+                step=0.01,
+                key=f"{ui_prefix}_y_{story_index}",
+                disabled=clear_focus,
+                on_change=_save_focus_editor_state,
+                kwargs={
+                    "job_path": job_path,
+                    "ui_prefix": ui_prefix,
+                    "story_index": story_index,
+                },
+            )
+            width_value = editor_col3.number_input(
+                "width",
+                min_value=0.01,
+                max_value=1.0,
+                value=float(st.session_state.get(f"{ui_prefix}_w_{story_index}", 0.45)),
+                step=0.01,
+                key=f"{ui_prefix}_w_{story_index}",
+                disabled=clear_focus,
+                on_change=_save_focus_editor_state,
+                kwargs={
+                    "job_path": job_path,
+                    "ui_prefix": ui_prefix,
+                    "story_index": story_index,
+                },
+            )
+            height_value = editor_col4.number_input(
+                "height",
+                min_value=0.01,
+                max_value=1.0,
+                value=float(st.session_state.get(f"{ui_prefix}_h_{story_index}", 0.2)),
+                step=0.01,
+                key=f"{ui_prefix}_h_{story_index}",
+                disabled=clear_focus,
+                on_change=_save_focus_editor_state,
+                kwargs={
+                    "job_path": job_path,
+                    "ui_prefix": ui_prefix,
+                    "story_index": story_index,
+                },
+            )
+            preview_region = None if clear_focus else {
+                "x": x_value,
+                "y": y_value,
+                "width": width_value,
+                "height": height_value,
+            }
+            st.caption(
+                f"{headline} · {story_type} · {narrator_id}. "
+                "La caja y la vista aproximada se actualizan mientras cambias los valores. Cada ajuste se guarda automaticamente."
+            )
+            preview_col, controls_col = st.columns([1.35, 0.9])
+            with preview_col:
+                render_cover_focus_preview(
+                    image_path=image_path,
+                    cover_region=preview_region,
+                    title=f"{current_job.get('source_id') or 'sin-source'} · historia {story_index + 1}",
+                )
+            with controls_col:
+                st.markdown("**Mover caja**")
+                move_col1, move_col2 = st.columns(2)
+                if move_col1.button("Izquierda", key=f"{ui_prefix}_left_{story_index}", use_container_width=True, disabled=clear_focus):
+                    _queue_focus_editor_adjustment(ui_prefix=ui_prefix, story_index=story_index, dx=-0.02)
+                if move_col2.button("Derecha", key=f"{ui_prefix}_right_{story_index}", use_container_width=True, disabled=clear_focus):
+                    _queue_focus_editor_adjustment(ui_prefix=ui_prefix, story_index=story_index, dx=0.02)
+                move_col3, move_col4 = st.columns(2)
+                if move_col3.button("Arriba", key=f"{ui_prefix}_up_{story_index}", use_container_width=True, disabled=clear_focus):
+                    _queue_focus_editor_adjustment(ui_prefix=ui_prefix, story_index=story_index, dy=-0.02)
+                if move_col4.button("Abajo", key=f"{ui_prefix}_down_{story_index}", use_container_width=True, disabled=clear_focus):
+                    _queue_focus_editor_adjustment(ui_prefix=ui_prefix, story_index=story_index, dy=0.02)
+
+                st.markdown("**Tamano caja**")
+                size_col1, size_col2 = st.columns(2)
+                if size_col1.button("Ancho -", key=f"{ui_prefix}_narrow_{story_index}", use_container_width=True, disabled=clear_focus):
+                    _queue_focus_editor_adjustment(ui_prefix=ui_prefix, story_index=story_index, dw=-0.02)
+                if size_col2.button("Ancho +", key=f"{ui_prefix}_wider_{story_index}", use_container_width=True, disabled=clear_focus):
+                    _queue_focus_editor_adjustment(ui_prefix=ui_prefix, story_index=story_index, dw=0.02)
+                size_col3, size_col4 = st.columns(2)
+                if size_col3.button("Alto -", key=f"{ui_prefix}_shorter_{story_index}", use_container_width=True, disabled=clear_focus):
+                    _queue_focus_editor_adjustment(ui_prefix=ui_prefix, story_index=story_index, dh=-0.02)
+                if size_col4.button("Alto +", key=f"{ui_prefix}_taller_{story_index}", use_container_width=True, disabled=clear_focus):
+                    _queue_focus_editor_adjustment(ui_prefix=ui_prefix, story_index=story_index, dh=0.02)
+            status_message = str(st.session_state.get(f"{ui_prefix}_focus_status_{story_index}", "")).strip()
+            if status_message:
+                st.success(status_message)
+            follow_up_notes = st.session_state.get(f"{ui_prefix}_follow_up_notes_{story_index}", [])
+            for note in follow_up_notes:
+                st.caption(note)
+            saved_notes = st.session_state.get(f"{ui_prefix}_focus_notes_{story_index}", [])
+            for note in saved_notes:
+                st.caption(note)
+
+    with st.expander("Agregar noticia manualmente", expanded=False):
+        new_headline = st.text_input(
+            "Nuevo titular",
+            value="",
+            key=f"{ui_prefix}_new_headline",
+        )
+        new_story_type = st.selectbox(
+            "Categoria nueva",
+            ["actualidad", "politica", "policial", "deportes", "mundo", "economia", "espectaculos"],
+            key=f"{ui_prefix}_new_story_type",
+        )
+        new_page_numbers = st.text_input(
+            "Paginas asociadas de la nueva noticia",
+            value="",
+            placeholder="2, 3, 8",
+            key=f"{ui_prefix}_new_pages",
+        )
+        if st.button("Agregar noticia", key=f"{ui_prefix}_add_story", use_container_width=True):
+            try:
+                add_job_cover_story(
+                    job_path=job_path,
+                    headline=new_headline,
+                    story_type=new_story_type,
+                    page_numbers_text=new_page_numbers,
+                )
+                st.success("Nueva noticia agregada.")
+                st.rerun()
+            except Exception as exc:
+                st.error(str(exc))
 
 
 def run_action(label: str, action) -> None:
@@ -1068,6 +1808,7 @@ def build_story_groups_from_candidates(candidates: list[dict]) -> list[dict]:
                 "headline": headline,
                 "story_type": story_type,
                 "cover_region": cover_region,
+                "follow_up_enabled": True,
                 "page_numbers": [],
                 "evidence_lines": [],
                 "confidence": 0.0,
@@ -1118,6 +1859,9 @@ def story_matches_editorial_filters(
     excluded_keywords: list[str],
     exclude_supplements: bool,
 ) -> bool:
+    if not bool(story.get("follow_up_enabled", True)):
+        return False
+
     story_type = str(story.get("story_type") or "actualidad").strip().lower()
     if story_type in excluded_story_types:
         return False
@@ -2022,6 +2766,46 @@ with board_tab:
                     ),
                 )
 
+        focus_ready_jobs = [
+            job
+            for job in cover_jobs
+            if get_cover_stories(job)
+        ]
+        if focus_ready_jobs:
+            with st.expander("Ajuste Manual de Zoom por Portada", expanded=False):
+                st.caption(
+                    "Este paso va inmediatamente despues de importar la seleccion de portadas. "
+                    "Aqui ajustas el cuadro de cada noticia antes de descargar paginas y profundizar el contexto."
+                )
+                reviewed_cover_jobs = sum(
+                    1 for job in focus_ready_jobs if bool(job.get("page_selection", {}).get("focus_review_completed", False))
+                )
+                st.caption(
+                    f"Revision de portadas: {reviewed_cover_jobs} revisado(s) de {len(focus_ready_jobs)} periodico(s)."
+                )
+                focus_job_options = {
+                    (
+                        f"{'OK' if bool(job.get('page_selection', {}).get('focus_review_completed', False)) else 'Pendiente'} · "
+                        f"{job.get('source_id') or 'sin-source'} · {job.get('job_id') or 'sin-id'}"
+                    ): job
+                    for job in focus_ready_jobs
+                }
+                selected_focus_job_label = st.selectbox(
+                    "Periodico a corregir",
+                    list(focus_job_options.keys()),
+                    key="cover_batch_focus_job_selector",
+                )
+                selected_focus_job = focus_job_options[selected_focus_job_label]
+                selected_focus_job_path = selected_focus_job.get("_path")
+                if isinstance(selected_focus_job_path, Path):
+                    render_focus_editor_for_job(
+                        job=selected_focus_job,
+                        job_path=selected_focus_job_path,
+                        ui_prefix=f"cover_batch_focus_{selected_focus_job.get('job_id')}",
+                    )
+                else:
+                    st.caption("No se encontro la ruta del job para editar el enfoque.")
+
         selected_cover_jobs = []
         pending_cover_jobs = []
         unavailable_cover_jobs = []
@@ -2280,13 +3064,19 @@ with board_tab:
                                 st.caption("No se registraron paginas descargadas para este periodico.")
 
                 if context_ready_jobs_for_prompt:
-                    grouped_jobs = chunk_jobs(context_ready_jobs_for_prompt, size=2)
+                    grouped_jobs = build_speech_block_layout(
+                        batch_date=selected_batch_date,
+                        jobs=context_ready_jobs_for_prompt,
+                        size=2,
+                    )
+                    migrate_legacy_speech_block_cache(selected_batch_date, grouped_jobs)
                     st.subheader("Speeches por Bloques de 2 Periodicos")
                     st.caption(
                         "Se generaron prompts separados, con maximo 2 periodicos por bloque, para ajustarse mejor "
                         "al limite de imagenes de ChatGPT y mezclar, cuando haga falta, paginas internas con investigacion web."
                     )
                     for group_index, group_jobs in enumerate(grouped_jobs, start=1):
+                        block_key = build_speech_block_key(group_jobs)
                         detailed_prompt = build_detailed_news_prompt(group_jobs)
                         detailed_metadata = build_detailed_news_metadata(group_jobs)
                         detailed_seed_payload = build_detailed_news_seed_payload(group_jobs)
@@ -2297,7 +3087,7 @@ with board_tab:
                                 render_copy_button(
                                     label=f"Copiar prompt bloque {group_index}",
                                     text=detailed_prompt,
-                                    key=f"copy_detailed_news_prompt_{group_index}",
+                                    key=f"copy_detailed_news_prompt_{block_key}",
                                 )
                             with detailed_col2:
                                 context_button_label = get_group_context_button_label(
@@ -2307,7 +3097,7 @@ with board_tab:
                                 if st.button(
                                     context_button_label,
                                     use_container_width=True,
-                                    key=f"open_pages_group_{group_index}",
+                                    key=f"open_pages_group_{block_key}",
                                 ):
                                     run_action(
                                         f"Contexto visual del bloque {group_index} abierto.",
@@ -2322,15 +3112,15 @@ with board_tab:
                                 f"Metadatos de paginas bloque {group_index}",
                                 value=detailed_metadata,
                                 height=200,
-                                key=f"detailed_news_metadata_{group_index}",
+                                key=f"detailed_news_metadata_{block_key}",
                             )
                             st.text_area(
                                 f"Prompt de speeches bloque {group_index}",
                                 value=detailed_prompt,
                                 height=360,
-                                key=f"detailed_news_prompt_{group_index}",
+                                key=f"detailed_news_prompt_{block_key}",
                             )
-                            detailed_import_key = f"detailed_news_import_payload_{group_index}"
+                            detailed_import_key = f"detailed_news_import_payload_{block_key}"
                             narrative_batch_value = st.text_area(
                                 f"JSON editorial bloque {group_index}",
                                 value=get_chatgpt_response_cache_value(
@@ -2361,7 +3151,7 @@ with board_tab:
                                 f"Importar Speeches Editoriales bloque {group_index}",
                                 use_container_width=True,
                                 type="primary",
-                                key=f"import_detailed_news_payload_{group_index}",
+                                key=f"import_detailed_news_payload_{block_key}",
                             ):
                                 run_action(
                                     f"Speeches editoriales del bloque {group_index} importados.",
@@ -2423,26 +3213,6 @@ with board_tab:
                             }
                         )
                     st.dataframe(rundown_preview_rows, use_container_width=True, hide_index=True)
-                    with st.expander("Ajuste Manual de Enfoque del Lote", expanded=False):
-                        batch_focus_options = {
-                            f"{job.get('source_id') or 'sin-source'} · {job.get('job_id') or 'sin-id'}": job
-                            for job in ready_rundown_jobs
-                        }
-                        selected_focus_job_label = st.selectbox(
-                            "Periodico a corregir",
-                            list(batch_focus_options.keys()),
-                            key="batch_focus_job_selector",
-                        )
-                        selected_focus_job = batch_focus_options[selected_focus_job_label]
-                        selected_focus_job_path = selected_focus_job.get("_path")
-                        if isinstance(selected_focus_job_path, Path):
-                            render_focus_editor_for_job(
-                                job=selected_focus_job,
-                                job_path=selected_focus_job_path,
-                                ui_prefix=f"batch_focus_{selected_focus_job.get('job_id')}",
-                            )
-                        else:
-                            st.caption("No se encontro la ruta del job para editar el enfoque.")
                 available_seed_rundowns = discover_rundown_dirs_for_date(selected_batch_date)
                 suggested_seed_rundown = available_seed_rundowns[0] if available_seed_rundowns else None
                 reuse_preview_audio = False

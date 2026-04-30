@@ -110,13 +110,24 @@ def _resolve_story_narrator_config(
     story_types = mapping.get("story_types", {})
     configured = story_types.get(normalized_story_type, {}) if isinstance(story_types, dict) else {}
     configured_narrator = str(configured.get("narrator_profile_id") or "").strip()
-    resolved_narrator = (
-        _slug_identifier(narrator_profile_id)
-        if str(narrator_profile_id or "").strip()
-        else _slug_identifier(
-            configured_narrator or mapping.get("default_narrator_profile_id") or "rene_gastelumendi"
+    explicit_narrator = _slug_identifier(narrator_profile_id) if str(narrator_profile_id or "").strip() else ""
+    if normalized_story_type == "deportes":
+        sports_candidates = _get_story_type_narrator_rotation_candidates(
+            story_type=normalized_story_type,
+            project_dir=project_dir,
         )
-    )
+        if explicit_narrator and explicit_narrator in sports_candidates:
+            resolved_narrator = explicit_narrator
+        else:
+            resolved_narrator = sports_candidates[0]
+    else:
+        resolved_narrator = (
+            explicit_narrator
+            if explicit_narrator
+            else _slug_identifier(
+                configured_narrator or mapping.get("default_narrator_profile_id") or "rene_gastelumendi"
+            )
+        )
     tone_notes = _normalize_key_facts(configured.get("tone_notes"))
     return {
         "map_id": str(mapping.get("map_id") or "default-story-type-narrators"),
@@ -145,6 +156,42 @@ def _get_presenter_narrator_profile_ids(*, project_dir: Path) -> list[str]:
         if normalized:
             return normalized
     return [_get_presenter_narrator_profile_id(project_dir=project_dir)]
+
+
+def _get_story_type_narrator_rotation_candidates(*, story_type: object, project_dir: Path) -> list[str]:
+    mapping = _load_story_type_narrator_map(project_dir=project_dir)
+    normalized_story_type = _normalize_story_type(story_type)
+    story_types = mapping.get("story_types", {})
+    configured = story_types.get(normalized_story_type, {}) if isinstance(story_types, dict) else {}
+
+    candidates: list[str] = []
+    primary = _slug_identifier(configured.get("narrator_profile_id"))
+    if primary:
+        candidates.append(primary)
+
+    alternatives = configured.get("alternative_narrator_profile_ids")
+    if isinstance(alternatives, list):
+        for item in alternatives:
+            candidate = _slug_identifier(item)
+            if candidate and candidate not in candidates:
+                candidates.append(candidate)
+
+    if candidates:
+        return candidates
+
+    voice_categories = mapping.get("voice_categories", {})
+    configured_category = voice_categories.get(normalized_story_type) if isinstance(voice_categories, dict) else None
+    if isinstance(configured_category, list):
+        category_candidates = []
+        for item in configured_category:
+            candidate = _slug_identifier(item)
+            if candidate and candidate not in category_candidates:
+                category_candidates.append(candidate)
+        if category_candidates:
+            return category_candidates
+
+    fallback = _slug_identifier(mapping.get("default_narrator_profile_id") or "rene_gastelumendi")
+    return [fallback] if fallback else ["rene_gastelumendi"]
 
 
 def _resolve_voice_profile_for_narrator(
@@ -1744,6 +1791,8 @@ def _build_story_narrative_manifest_payload(
             narrator_profile_id=story.get("narrator_profile_id"),
             project_dir=project_dir,
         )
+        existing_segment_narrator = _slug_identifier(story_voice_segment.get("narrator_profile_id"))
+        can_reuse_voice_segment = existing_segment_narrator == narrator_config["narrator_profile_id"]
         segment_voice = None
         if fallback_voice_path is not None:
             segment_voice = _resolve_voice_profile_for_narrator(
@@ -1770,14 +1819,18 @@ def _build_story_narrative_manifest_payload(
                 "narrator_role": narrator_config["role"],
                 "narrator_map_id": narrator_config["map_id"],
                 "voice_profile_id": (
-                    str(story_voice_segment.get("voice_profile_id") or "")
+                    str(story_voice_segment.get("voice_profile_id") or "") if can_reuse_voice_segment else ""
                     or (segment_voice.profile_id if segment_voice is not None else "")
                 ),
                 "narrator_name": (
-                    str(story_voice_segment.get("narrator_name") or "")
+                    str(story_voice_segment.get("narrator_name") or "") if can_reuse_voice_segment else ""
                     or (segment_voice.narrator_name if segment_voice is not None else "")
                 ),
-                "segment_audio_file": str(story_voice_segment.get("audio_path") or "").strip() or None,
+                "segment_audio_file": (
+                    str(story_voice_segment.get("audio_path") or "").strip() or None
+                    if can_reuse_voice_segment
+                    else None
+                ),
             }
         )
 
@@ -2696,6 +2749,7 @@ def _build_daily_rundown_segment_specs(
 ) -> list[dict[str, object]]:
     fallback_voice = VoiceProfile.load(voice_profile_path)
     presenter_narrator_ids = _get_presenter_narrator_profile_ids(project_dir=project_dir)
+    story_type_rotation_cursors: dict[str, int] = {}
 
     def resolve_presenter_voice(sequence_index: int) -> tuple[str, VoiceProfile]:
         narrator_id = presenter_narrator_ids[sequence_index % len(presenter_narrator_ids)]
@@ -2704,6 +2758,25 @@ def _build_daily_rundown_segment_specs(
             fallback_voice_profile_path=voice_profile_path,
             project_dir=project_dir,
         )
+
+    def resolve_story_segment_narrator(story: dict[str, object]) -> str:
+        story_type = _normalize_story_type(story.get("story_type") or "actualidad")
+        configured_narrator_id = _slug_identifier(story.get("narrator_profile_id"))
+        if story_type != "deportes":
+            return configured_narrator_id or _resolve_story_narrator_config(
+                story_type=story_type,
+                narrator_profile_id=story.get("narrator_profile_id"),
+                project_dir=project_dir,
+            )["narrator_profile_id"]
+
+        rotation_candidates = _get_story_type_narrator_rotation_candidates(
+            story_type=story_type,
+            project_dir=project_dir,
+        )
+        cursor = story_type_rotation_cursors.get(story_type, 0)
+        narrator_id = rotation_candidates[cursor % len(rotation_candidates)]
+        story_type_rotation_cursors[story_type] = cursor + 1
+        return narrator_id
 
     intro_narrator_id, presenter_visual = resolve_presenter_voice(0)
     first_cover = str(jobs[0]["input_assets"]["front_page_image"])
@@ -2760,8 +2833,9 @@ def _build_daily_rundown_segment_specs(
         )
         for story in story_items:
             speech = " ".join(str(story.get("speech") or story.get("summary") or "").split()).strip()
+            story_narrator_id = resolve_story_segment_narrator(story)
             visual_voice = _resolve_voice_profile_for_narrator(
-                narrator_profile_id=story.get("narrator_profile_id"),
+                narrator_profile_id=story_narrator_id,
                 fallback_voice_profile_path=voice_profile_path,
                 project_dir=project_dir,
             )
@@ -2772,7 +2846,7 @@ def _build_daily_rundown_segment_specs(
                     "headline": story.get("headline") or "",
                     "story_type": story.get("story_type") or "actualidad",
                     "segment_type": "story",
-                    "narrator_profile_id": story.get("narrator_profile_id") or "",
+                    "narrator_profile_id": story_narrator_id,
                     "voice_profile_id": visual_voice.profile_id,
                     "narrator_name": visual_voice.narrator_name,
                     "gestures_dir": visual_voice.gestures_dir,

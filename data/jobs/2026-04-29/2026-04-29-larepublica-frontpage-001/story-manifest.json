@@ -1,0 +1,323 @@
+{
+  "story_id": "2026-04-29-larepublica-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-larepublica-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Keiko fuerte en Lima, Sánchez gana en provincias",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El mapa electoral se parte en dos. Keiko domina Lima, pero Sánchez levanta fuera de la capital y el total nacional queda casi empatado: 32% contra 31%. La segunda vuelta arranca con el país dividido.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "key_facts": [
+        "Sánchez 32% y Keiko 31% a nivel nacional",
+        "Keiko lidera en Lima Metropolitana",
+        "Sánchez crece en Perú urbano y rural"
+      ],
+      "tone_notes": [
+        "critico",
+        "electoral",
+        "directo"
+      ],
+      "safety_notes": "Encuesta atribuida al IEP para La República; se presenta como intención de voto, no como resultado electoral.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.22,
+        "width": 0.58,
+        "height": 0.51
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Intención de voto",
+        "points": [
+          {
+            "label": "Sánchez nacional",
+            "value": 32.0
+          },
+          {
+            "label": "Keiko nacional",
+            "value": 31.0
+          },
+          {
+            "label": "Keiko Lima",
+            "value": 41.0
+          },
+          {
+            "label": "Sánchez rural",
+            "value": 44.0
+          }
+        ],
+        "subtitle": "Encuesta IEP para segunda vuelta",
+        "unit": "%",
+        "highlight_label": "País dividido",
+        "data_source_note": "Datos reportados por La República sobre la encuesta IEP."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Observadores UE no ven mala fe electoral",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La observación europea enfría el discurso del fraude. Su jefa sostiene que no ve mala fe en las elecciones, y eso pone presión sobre quienes denuncian sin pruebas contundentes.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "jefa de observadores UE",
+        "no ve actos de mala fe",
+        "contexto de cuestionamientos electorales"
+      ],
+      "tone_notes": [
+        "incisivo",
+        "prudente",
+        "politico"
+      ],
+      "safety_notes": "Se atribuye la evaluación a la misión de observación; no se afirma que todas las controversias estén cerradas.",
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.5,
+        "width": 0.28,
+        "height": 0.25
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Petroperú podría obtener préstamo privado",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Petroperú toca la puerta de la banca privada para ganar oxígeno: hasta US$2.000 millones, con garantía contingente. No es un detalle menor; si el dinero se demora, Talara y Conchán entran en zona roja.",
+      "page_numbers": [
+        10
+      ],
+      "key_facts": [
+        "banca privada dispuesta a prestar hasta US$2.000 millones",
+        "garantía contingente",
+        "riesgo para refinerías Talara y Conchán"
+      ],
+      "tone_notes": [
+        "afilado",
+        "economico",
+        "alerta"
+      ],
+      "safety_notes": "Se evita tratar el préstamo como aprobado; la nota habla de disposición bancaria y demora del Gobierno.",
+      "cover_region": {
+        "x": 0.69,
+        "y": 0.57,
+        "width": 0.28,
+        "height": 0.12
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Mercado de Petroperú",
+        "points": [
+          {
+            "label": "2013",
+            "value": 51.0
+          },
+          {
+            "label": "2025",
+            "value": 25.0
+          },
+          {
+            "label": "2026",
+            "value": 19.0
+          }
+        ],
+        "subtitle": "Participación en abastecimiento nacional",
+        "unit": "%",
+        "highlight_label": "Caída fuerte",
+        "data_source_note": "Cifras reportadas por La República con fuente Petroperú."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Sobreviviente de matanza dice que lo obligaron a mentir",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Un sobreviviente de Colcabamba cambia el relato y denuncia presiones para declarar contra sí mismo. En un caso con muertos, versiones cruzadas y militares bajo escrutinio, lo mínimo es investigar sin atajos.",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "key_facts": [
+        "testimonio de Ricardo Acuña",
+        "denuncia de presión para declarar",
+        "caso Colcabamba en Huancavelica"
+      ],
+      "tone_notes": [
+        "serio",
+        "firme",
+        "prudente"
+      ],
+      "safety_notes": "Se presenta como testimonio y denuncia, no como conclusión judicial. Se omiten detalles sensibles innecesarios.",
+      "cover_region": {
+        "x": 0.68,
+        "y": 0.19,
+        "width": 0.3,
+        "height": 0.18
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Campo de Marte en riesgo por falta de riego",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El Campo de Marte, pulmón de Jesús María, entra en alerta: vecinos denuncian meses sin riego y árboles con estrés hídrico. La remodelación puede modernizar, sí, pero no a costa de apagar el verde.",
+      "page_numbers": [
+        14
+      ],
+      "key_facts": [
+        "vecinos denuncian falta de riego",
+        "árboles con estrés hídrico",
+        "obra de remodelación en Campo de Marte"
+      ],
+      "tone_notes": [
+        "claro",
+        "ambiental",
+        "ciudadano"
+      ],
+      "safety_notes": "Se recoge el reclamo vecinal y la respuesta institucional sin resolver la controversia como hecho cerrado.",
+      "cover_region": {
+        "x": 0.69,
+        "y": 0.82,
+        "width": 0.27,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Sicarios matan a profesor de artes marciales",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El Callao suma otro crimen bajo investigación. Alexander Vinces, profesor de artes marciales, fue atacado al salir de su academia y un alumno quedó herido. La Policía aún busca el móvil.",
+      "page_numbers": [
+        15
+      ],
+      "key_facts": [
+        "Alexander Vinces Paiva falleció tras ataque",
+        "alumno herido de gravedad",
+        "Policía investiga el móvil"
+      ],
+      "tone_notes": [
+        "tenso",
+        "directo",
+        "cauteloso"
+      ],
+      "safety_notes": "Se evita morbo y no se atribuye móvil criminal sin confirmación.",
+      "cover_region": {
+        "x": 0.69,
+        "y": 0.7,
+        "width": 0.27,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Larepublica",
+      "cover": "data/jobs/2026-04-29/2026-04-29-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "La U despidió a Álvaro Barco",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "voicebox-local",
+      "narrator_name": "Voicebox Narrator",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Sin vueltas: la U movió el tablero. Álvaro Barco dejó la dirección deportiva en medio de malos resultados y críticas por fichajes. Ahora el club se juega algo más que un partido: se juega el rumbo.",
+      "page_numbers": [
+        18
+      ],
+      "key_facts": [
+        "salida de Álvaro Barco",
+        "malos resultados",
+        "críticas por fichajes"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "agil",
+        "frontal"
+      ],
+      "safety_notes": "Se resume el comunicado y el contexto deportivo sin cargar responsabilidad personal no demostrada.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.27,
+        "height": 0.06
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

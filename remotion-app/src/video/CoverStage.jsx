@@ -20,14 +20,26 @@ const buildCoverFocusTransform = (coverRegion, focusProgress) => {
   const centerX = x + width / 2;
   const centerY = y + height / 2;
   const isBannerRegion = width > 0.5 && height < 0.18;
-  const isWideRegion = width > 0.5;
-  const paddedWidth = Math.min(1, width + (isBannerRegion ? 0.05 : isWideRegion ? 0.03 : 0.045));
-  const paddedHeight = Math.min(1, height + (isBannerRegion ? 0.05 : 0.045));
-  const largeRegionBoost = isBannerRegion ? 1.02 : isWideRegion ? 1.08 : width > 0.38 || height > 0.18 ? 1.04 : 1.1;
-  const horizontalFit = isBannerRegion ? 0.88 / paddedWidth : isWideRegion ? 0.92 / paddedWidth : 0.8 / paddedWidth;
-  const verticalFit = isBannerRegion ? 0.78 / paddedHeight : 0.64 / paddedHeight;
-  const baseScale = Math.min(horizontalFit, verticalFit);
-  const targetScale = Math.max(1, Math.min(isBannerRegion ? 2.15 : 2.75, baseScale * largeRegionBoost));
+  const isWideRegion = width > height * 1.08;
+  const isTallRegion = height > width * 1.08;
+  const horizontalContext = isBannerRegion ? 0.04 : isWideRegion ? 0.05 : isTallRegion ? 0.08 : 0.065;
+  const verticalContext = isBannerRegion ? 0.05 : isTallRegion ? 0.06 : isWideRegion ? 0.08 : 0.07;
+  const paddedWidth = Math.min(1, width + horizontalContext);
+  const paddedHeight = Math.min(1, height + verticalContext);
+
+  let baseScale;
+  if (isBannerRegion || isWideRegion) {
+    // Wide stories should almost fill the newspaper width while keeping a little context.
+    baseScale = 0.93 / paddedWidth;
+  } else if (isTallRegion) {
+    // Tall stories should almost fill the newspaper height while keeping top/bottom context.
+    baseScale = 0.9 / paddedHeight;
+  } else {
+    // Near-square stories should stay conservative and preserve context on both axes.
+    baseScale = Math.min(0.88 / paddedWidth, 0.84 / paddedHeight);
+  }
+
+  const targetScale = Math.max(1, Math.min(isBannerRegion ? 2.2 : 2.85, baseScale));
   const zoomScale = 1 + (targetScale - 1) * focusProgress;
   const maxTranslateX = Math.max(0, (CARD_WIDTH * (zoomScale - 1)) / 2);
   const maxTranslateY = Math.max(0, (COVER_HEIGHT * (zoomScale - 1)) / 2);

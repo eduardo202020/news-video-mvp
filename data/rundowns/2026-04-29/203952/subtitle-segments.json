@@ -1,0 +1,273 @@
+{
+  "policy_id": "default-2-lines",
+  "text_source": "daily_rundown",
+  "text": "Hola. Hoy, 29 de abril, revisamos las portadas con política, economía, seguridad y fútbol en primer plano. En una fecha que recuerda la intervención del CLAE en 1993, vamos diario por diario con lo central y sin rodeos.\n\nAhora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.\n\nEl JNE se defiende de las críticas sobre la ampliación de las elecciones, afirmando que el ausentismo no justifica los comicios complementarios. La duda persiste sobre la transparencia.\n\nLa crisis vial en Lima alcanza niveles críticos. El gobierno declara emergencia y busca una solución, pero las calles siguen colapsadas con el caos del tránsito.\n\nPetroperú está de nuevo en busca de financiamiento, esta vez solicitando más de US$2,000 millones para cubrir sus necesidades operativas y evitar el colapso de sus refinerías.\n\nEl cambio era inminente. La U anunció la salida de Álvaro Barco en medio de críticas por malos resultados y decisiones cuestionadas en su rol como director deportivo.\n\nAhora entramos a Elcomercio. Primero miramos la portada completa y despues vamos con sus 5 historias mas fuertes.\n\nJorge Nieto, al alza, es el gran beneficiado del 13 de abril. Con el voto de la jornada complementaria, ha logrado una ventaja en distritos claves, mientras otros se estancan.\n\nEl Jurado Nacional de Elecciones se defiende tras los cuestionamientos por los retrasos en las mesas. Aseguran que no afectaron la participación, pero las dudas persisten.\n\nLa ONPE sanciona a JPP por aportes ilegales. La multa responde a los desajustes en los reportes de financiamiento durante las elecciones pasadas.\n\nLa controversia crece sobre los planes de cambiar el capítulo económico. La propuesta genera incertidumbre en un momento crítico para la economía nacional.\n\nPetro-Perú recurre a la ayuda estatal nuevamente, solicitando US$2,000 millones para evitar la paralización de sus operaciones. La situación sigue siendo crítica.",
+  "audio_duration_seconds": 122.96,
+  "segments": [
+    {
+      "text": "Hola.\nHoy, 29 de abril,",
+      "start": 0.0,
+      "end": 1.496
+    },
+    {
+      "text": "revisamos las portadas\ncon política, economía,",
+      "start": 1.496,
+      "end": 4.488
+    },
+    {
+      "text": "seguridad y fútbol en\nprimer plano.",
+      "start": 4.488,
+      "end": 6.765
+    },
+    {
+      "text": "En una fecha que\nrecuerda la intervención",
+      "start": 6.765,
+      "end": 9.432
+    },
+    {
+      "text": "del CLAE en 1993, vamos\ndiario por diario con lo",
+      "start": 9.432,
+      "end": 12.554
+    },
+    {
+      "text": "central y sin rodeos.",
+      "start": 12.554,
+      "end": 13.92
+    },
+    {
+      "text": "Ahora entramos a Correo.\nPrimero miramos la",
+      "start": 13.92,
+      "end": 17.328
+    },
+    {
+      "text": "portada completa y\ndespues vamos con sus 4",
+      "start": 17.328,
+      "end": 20.656
+    },
+    {
+      "text": "historias mas fuertes.",
+      "start": 20.656,
+      "end": 22.4
+    },
+    {
+      "text": "El JNE se defiende de\nlas críticas sobre la",
+      "start": 22.4,
+      "end": 25.251
+    },
+    {
+      "text": "ampliación de las\nelecciones, afirmando",
+      "start": 25.251,
+      "end": 27.836
+    },
+    {
+      "text": "que el ausentismo no\njustifica los comicios",
+      "start": 27.836,
+      "end": 30.687
+    },
+    {
+      "text": "complementarios.\nLa duda persiste sobre",
+      "start": 30.687,
+      "end": 33.273
+    },
+    {
+      "text": "la transparencia.",
+      "start": 33.273,
+      "end": 34.4
+    },
+    {
+      "text": "La crisis vial en Lima\nalcanza niveles",
+      "start": 34.4,
+      "end": 37.072
+    },
+    {
+      "text": "críticos.\nEl gobierno declara",
+      "start": 37.072,
+      "end": 39.111
+    },
+    {
+      "text": "emergencia y busca una\nsolución, pero las",
+      "start": 39.111,
+      "end": 41.994
+    },
+    {
+      "text": "calles siguen colapsadas\ncon el caos del",
+      "start": 41.994,
+      "end": 44.807
+    },
+    {
+      "text": "tránsito.",
+      "start": 44.807,
+      "end": 45.44
+    },
+    {
+      "text": "Petroperú está de nuevo\nen busca de",
+      "start": 45.44,
+      "end": 47.487
+    },
+    {
+      "text": "financiamiento, esta vez\nsolicitando más de",
+      "start": 47.487,
+      "end": 50.001
+    },
+    {
+      "text": "US$2,000 millones para\ncubrir sus necesidades",
+      "start": 50.001,
+      "end": 52.633
+    },
+    {
+      "text": "operativas y evitar el\ncolapso de sus",
+      "start": 52.633,
+      "end": 54.797
+    },
+    {
+      "text": "refinerías.",
+      "start": 54.797,
+      "end": 55.44
+    },
+    {
+      "text": "El cambio era inminente.\nLa U anunció la salida",
+      "start": 55.44,
+      "end": 58.531
+    },
+    {
+      "text": "de Álvaro Barco en medio\nde críticas por malos",
+      "start": 58.531,
+      "end": 61.556
+    },
+    {
+      "text": "resultados y decisiones\ncuestionadas en su rol",
+      "start": 61.556,
+      "end": 64.582
+    },
+    {
+      "text": "como director deportivo.",
+      "start": 64.582,
+      "end": 66.16
+    },
+    {
+      "text": "Ahora entramos a\nElcomercio.",
+      "start": 66.16,
+      "end": 67.835
+    },
+    {
+      "text": "Primero miramos la\nportada completa y",
+      "start": 67.835,
+      "end": 70.048
+    },
+    {
+      "text": "despues vamos con sus 5\nhistorias mas fuertes.",
+      "start": 70.048,
+      "end": 72.8
+    },
+    {
+      "text": "Jorge Nieto, al alza, es\nel gran beneficiado del",
+      "start": 72.8,
+      "end": 75.899
+    },
+    {
+      "text": "13 de abril.\nCon el voto de la",
+      "start": 75.899,
+      "end": 77.836
+    },
+    {
+      "text": "jornada complementaria,\nha logrado una ventaja",
+      "start": 77.836,
+      "end": 80.806
+    },
+    {
+      "text": "en distritos claves,\nmientras otros se",
+      "start": 80.806,
+      "end": 83.259
+    },
+    {
+      "text": "estancan.",
+      "start": 83.259,
+      "end": 83.84
+    },
+    {
+      "text": "El Jurado Nacional de\nElecciones se defiende",
+      "start": 83.84,
+      "end": 86.58
+    },
+    {
+      "text": "tras los\ncuestionamientos por los",
+      "start": 86.58,
+      "end": 88.635
+    },
+    {
+      "text": "retrasos en las mesas.\nAseguran que no",
+      "start": 88.635,
+      "end": 91.002
+    },
+    {
+      "text": "afectaron la\nparticipación, pero las",
+      "start": 91.002,
+      "end": 93.244
+    },
+    {
+      "text": "dudas persisten.",
+      "start": 93.244,
+      "end": 94.24
+    },
+    {
+      "text": "La ONPE sanciona a JPP\npor aportes ilegales.",
+      "start": 94.24,
+      "end": 97.438
+    },
+    {
+      "text": "La multa responde a los\ndesajustes en los",
+      "start": 97.438,
+      "end": 100.417
+    },
+    {
+      "text": "reportes de\nfinanciamiento durante",
+      "start": 100.417,
+      "end": 102.888
+    },
+    {
+      "text": "las elecciones pasadas.",
+      "start": 102.888,
+      "end": 104.56
+    },
+    {
+      "text": "La controversia crece\nsobre los planes de",
+      "start": 104.56,
+      "end": 107.042
+    },
+    {
+      "text": "cambiar el capítulo\neconómico.",
+      "start": 107.042,
+      "end": 108.857
+    },
+    {
+      "text": "La propuesta genera\nincertidumbre en un",
+      "start": 108.857,
+      "end": 111.218
+    },
+    {
+      "text": "momento crítico para la\neconomía nacional.",
+      "start": 111.218,
+      "end": 113.76
+    },
+    {
+      "text": "Petro-Perú recurre a la\nayuda estatal",
+      "start": 113.76,
+      "end": 115.901
+    },
+    {
+      "text": "nuevamente, solicitando\nUS$2,000 millones para",
+      "start": 115.901,
+      "end": 118.563
+    },
+    {
+      "text": "evitar la paralización\nde sus operaciones.",
+      "start": 118.563,
+      "end": 120.993
+    },
+    {
+      "text": "La situación sigue\nsiendo crítica.",
+      "start": 120.993,
+      "end": 122.96
+    }
+  ]
+}

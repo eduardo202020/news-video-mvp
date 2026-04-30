@@ -1,0 +1,107 @@
+{
+  "story_id": "2026-04-29-daily-rundown-200103",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-29-daily-rundown-200103.mp4",
+  "audio_path": "data/rundowns/2026-04-29/200103/narration.wav",
+  "subtitle_segments_path": "data/rundowns/2026-04-29/200103/subtitle-segments.json",
+  "segments": [
+    {
+      "newspaper_name": "Resumen de Portadas",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "29 de abril de 2026",
+      "story_type": "intro",
+      "segment_type": "intro",
+      "narrator_profile_id": "thanos",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Hola. Hoy, 29 de abril, revisamos las portadas con política, economía, seguridad y fútbol en primer plano. En una fecha que recuerda la intervención del CLAE en 1993, vamos diario por diario con lo central y sin rodeos.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/200103/audio/segment-01.wav",
+      "audio_file": "data/rundowns/2026-04-29/200103/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/200103/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Correo",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "narrador_dbz",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Ahora entramos a Correo. Miramos la portada completa y vamos con su noticia clave.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/200103/audio/segment-02.wav",
+      "audio_file": "data/rundowns/2026-04-29/200103/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/200103/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-04-29/2026-04-29-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Ausentismo no justifica elecciones complementarias",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "El JNE se defiende de las críticas sobre la ampliación de las elecciones, afirmando que el ausentismo no justifica los comicios complementarios. La duda persiste sobre la transparencia.",
+      "cover_region": {
+        "x": 0.0399,
+        "y": 0.4098,
+        "width": 0.2001,
+        "height": 0.2203
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/200103/audio/segment-03.wav",
+      "audio_file": "data/rundowns/2026-04-29/200103/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/200103/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Paso a Elcomercio",
+      "story_type": "connector",
+      "segment_type": "connector",
+      "narrator_profile_id": "skipper",
+      "voice_profile_id": "skipper",
+      "narrator_name": "Skipper",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Ahora entramos a Elcomercio. Miramos la portada completa y vamos con su noticia clave.",
+      "cover_region": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/200103/audio/segment-04.wav",
+      "audio_file": "data/rundowns/2026-04-29/200103/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/200103/subtitle-segments.json"
+    },
+    {
+      "newspaper_name": "Elcomercio",
+      "cover": "data/jobs/2026-04-29/2026-04-29-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Nieto concentró votos en jornada complementaria",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Jorge Nieto, al alza, es el gran beneficiado del 13 de abril. Con el voto de la jornada complementaria, ha logrado una ventaja en distritos claves, mientras otros se estancan.",
+      "cover_region": {
+        "x": 0.75,
+        "y": 0.28,
+        "width": 0.23,
+        "height": 0.2
+      },
+      "support_visual": null,
+      "segment_audio_file": "data/rundowns/2026-04-29/200103/audio/segment-05.wav",
+      "audio_file": "data/rundowns/2026-04-29/200103/narration.wav",
+      "subtitle_segments_file": "data/rundowns/2026-04-29/200103/subtitle-segments.json"
+    }
+  ]
+}
