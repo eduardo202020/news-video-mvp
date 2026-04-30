@@ -28,6 +28,7 @@ La app en `automation/streamlit/app.py` permite:
 - revisar una bandeja de jobs
 - ver portada, OCR, titulares, guion, audio, subtitulos y preview
 - editar y aprobar guiones
+- revisar y corregir `support_visual` por historia antes del rundown
 - ejecutar etapas del pipeline desde botones
 - preparar e importar seleccion manual de paginas desde varias portadas
 - preparar publicacion declarativa
@@ -75,11 +76,12 @@ Si `data/jobs/` todavia esta vacio, la app igual abre y muestra el bloque `Crear
 6. usar `Cover Pages` para analizar OCR, importar JSON manual o descargar paginas seleccionadas
 7. ejecutar `Generate Draft`
 8. revisar y aprobar el guion
-9. ejecutar `Voice + Subtitle`
-10. ejecutar `Build Story Manifest`
-11. ejecutar `Compose Job para Preview`
-12. abrir `npm run dev` y revisar `NewsVideo-generated`
-13. preparar o confirmar la publicacion
+9. revisar `support_visual` si el bloque editorial genero metricas, scorecards o graficos
+10. ejecutar `Voice + Subtitle`
+11. ejecutar `Build Story Manifest`
+12. ejecutar `Compose Job para Preview`
+13. abrir `npm run dev` y revisar `NewsVideo-generated`
+14. preparar o confirmar la publicacion
 
 ## Relacion con Remotion
 

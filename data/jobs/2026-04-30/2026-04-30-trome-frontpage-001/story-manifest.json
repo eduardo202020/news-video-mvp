@@ -117,8 +117,7 @@
         "height": 0.66
       },
       "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "bar",
+        "type": "score_card",
         "title": "Marcador final",
         "points": [
           {

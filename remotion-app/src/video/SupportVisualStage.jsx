@@ -29,6 +29,75 @@ const formatMetricValue = (value, unit) => {
   return unit ? `${rounded}${unit}` : rounded;
 };
 
+const ScoreCard = ({supportVisual}) => {
+  const data = Array.isArray(supportVisual?.points) ? supportVisual.points.slice(0, 2) : [];
+  const left = data[0] ?? {label: "Local", value: 0};
+  const right = data[1] ?? {label: "Visita", value: 0};
+
+  return (
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr auto 1fr",
+        alignItems: "center",
+        width: "100%",
+        height: CARD_HEIGHT - 118,
+        gap: 24,
+        padding: "0 24px"
+      }}
+    >
+      <div style={{textAlign: "center"}}>
+        <div style={{fontSize: 38, fontWeight: 800, color: TEXT_PRIMARY, lineHeight: 1.1}}>
+          {left.label}
+        </div>
+        <div style={{fontSize: 136, fontWeight: 900, color: TEXT_PRIMARY, lineHeight: 1}}>
+          {formatMetricValue(Number(left.value), "")}
+        </div>
+      </div>
+      <div style={{fontSize: 74, fontWeight: 900, color: TEXT_PRIMARY, lineHeight: 1}}>
+        -
+      </div>
+      <div style={{textAlign: "center"}}>
+        <div style={{fontSize: 38, fontWeight: 800, color: TEXT_PRIMARY, lineHeight: 1.1}}>
+          {right.label}
+        </div>
+        <div style={{fontSize: 136, fontWeight: 900, color: TEXT_PRIMARY, lineHeight: 1}}>
+          {formatMetricValue(Number(right.value), "")}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const MetricCard = ({supportVisual}) => {
+  const data = Array.isArray(supportVisual?.points) ? supportVisual.points.slice(0, 1) : [];
+  const metric = data[0] ?? {label: "Dato", value: 0};
+  const unit = supportVisual?.unit ?? "";
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: CARD_HEIGHT - 118,
+        gap: 18,
+        padding: "0 24px",
+        textAlign: "center"
+      }}
+    >
+      <div style={{fontSize: 40, fontWeight: 800, color: TEXT_PRIMARY, lineHeight: 1.1}}>
+        {metric.label}
+      </div>
+      <div style={{fontSize: 154, fontWeight: 900, color: TEXT_PRIMARY, lineHeight: 0.95}}>
+        {formatMetricValue(Number(metric.value), unit)}
+      </div>
+    </div>
+  );
+};
+
 const AnimatedChart = ({supportVisual, segmentFrame, fps}) => {
   const data = Array.isArray(supportVisual?.points) ? supportVisual.points : [];
   const chartType = `${supportVisual?.chart_type ?? "line"}`.toLowerCase();
@@ -38,7 +107,7 @@ const AnimatedChart = ({supportVisual, segmentFrame, fps}) => {
     data,
     width: CHART_WIDTH,
     height: CHART_HEIGHT,
-    margin: {top: 12, right: 10, left: -12, bottom: 8}
+    margin: {top: 58, right: 10, left: -12, bottom: 20}
   };
 
   const labelFormatter = (value) => formatMetricValue(Number(value), unit);
@@ -172,7 +241,7 @@ const AnimatedChart = ({supportVisual, segmentFrame, fps}) => {
 };
 
 export const SupportVisualStage = ({supportVisual, segmentFrame, fps, segmentDuration}) => {
-  if (!supportVisual || supportVisual.type !== "numeric_chart") {
+  if (!supportVisual || !["numeric_chart", "score_card", "metric_card"].includes(supportVisual.type)) {
     return null;
   }
 
@@ -285,25 +354,15 @@ export const SupportVisualStage = ({supportVisual, segmentFrame, fps, segmentDur
           boxShadow: "none"
         }}
       >
-        <AnimatedChart supportVisual={supportVisual} segmentFrame={segmentFrame} fps={fps} />
+        {supportVisual.type === "score_card" ? (
+          <ScoreCard supportVisual={supportVisual} />
+        ) : supportVisual.type === "metric_card" ? (
+          <MetricCard supportVisual={supportVisual} />
+        ) : (
+          <AnimatedChart supportVisual={supportVisual} segmentFrame={segmentFrame} fps={fps} />
+        )}
       </div>
 
-      {supportVisual.data_source_note ? (
-        <div
-          style={{
-            position: "absolute",
-            left: 24,
-            right: 24,
-            bottom: 14,
-            color: TEXT_PRIMARY,
-            fontSize: 21,
-            fontWeight: 600,
-            lineHeight: 1.2
-          }}
-        >
-          {supportVisual.data_source_note}
-        </div>
-      ) : null}
     </div>
   );
 };

@@ -3,7 +3,7 @@
   "manifest_version": 1,
   "job_id": "2026-04-30-libero-frontpage-001",
   "source_id": "libero",
-  "source_name": "Libero",
+  "source_name": "Líbero",
   "date": "2026-04-30",
   "front_page_image": "data/jobs/2026-04-30/2026-04-30-libero-frontpage-001/input/front-page.jpg",
   "story_type_map_path": "automation/templates/narrators/story-type-map.json",
@@ -40,8 +40,7 @@
       "safety_notes": "Contexto verificado vía web por falta de páginas internas disponibles. ([libero.pe](https://libero.pe/futbol-internacional/copa-libertadores/2026/04/28/universitario-vs-nacional-en-vivo-gratis-partido-de-copa-libertadores-via-espn-fox-sports-lbev-2182264?utm_source=chatgpt.com))",
       "notes": "Contexto verificado vía web por falta de páginas internas disponibles. ([libero.pe](https://libero.pe/futbol-internacional/copa-libertadores/2026/04/28/universitario-vs-nacional-en-vivo-gratis-partido-de-copa-libertadores-via-espn-fox-sports-lbev-2182264?utm_source=chatgpt.com))",
       "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "bar",
+        "type": "score_card",
         "title": "Marcador final",
         "points": [
           {
@@ -77,7 +76,7 @@
       ],
       "cover_region": {
         "x": 0.02,
-        "y": 0.88,
+        "y": 0.76,
         "width": 0.27,
         "height": 0.1
       },
@@ -94,8 +93,7 @@
       "safety_notes": "Resultado y contexto verificados vía web por falta de páginas internas. ([bolavip.com](https://bolavip.com/pe/copa-sudamericana/cienciano-vs-atletico-mineiro-en-vivo-y-gratis-por-la-copa-sudamericana-2026-via-dsports-y-dgo-hora-alineaciones-minuto-a-minuto-goles-resumen))",
       "notes": "Resultado y contexto verificados vía web por falta de páginas internas. ([bolavip.com](https://bolavip.com/pe/copa-sudamericana/cienciano-vs-atletico-mineiro-en-vivo-y-gratis-por-la-copa-sudamericana-2026-via-dsports-y-dgo-hora-alineaciones-minuto-a-minuto-goles-resumen))",
       "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "bar",
+        "type": "score_card",
         "title": "Triunfo en Cusco",
         "points": [
           {
@@ -130,9 +128,9 @@
         8
       ],
       "cover_region": {
-        "x": 0.46,
-        "y": 0.88,
-        "width": 0.31,
+        "x": 0.5,
+        "y": 0.76,
+        "width": 0.19,
         "height": 0.1
       },
       "key_facts": [

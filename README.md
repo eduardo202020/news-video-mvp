@@ -523,6 +523,12 @@ El prompt editorial ya no busca un resumen largo. Ahora produce:
 - `support_visual` opcional para historias con contexto numerico
 - conservacion de `page_numbers`, `cover_region` y `story_type` por historia
 
+`support_visual` hoy puede resolverse como:
+
+- `metric_card` para una sola cifra importante
+- `score_card` para marcadores de partidos
+- `numeric_chart` solo cuando hace falta mostrar comparacion, crecimiento, caidas, ranking o series
+
 Ese prompt ya asume que:
 
 - las paginas internas sirven solo como contexto cuando existen
@@ -564,6 +570,7 @@ Ya permite:
 - ajustar manualmente `cover_region` por historia desde Streamlit
 - corregir enfoque por cualquier periodico del lote desde `Ajuste Manual de Enfoque del Lote`
 - ver una previsualizacion inmediata del recorte antes de guardar el zoom
+- revisar y editar `support_visual` por historia antes de construir el `programa diario`
 
 Si al abrirla aparece:
 
@@ -591,7 +598,9 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 - prompts editoriales mixtos que combinan paginas internas y periodicos solo-portada en un mismo bloque
 - apertura contextual de carpetas por bloque: paginas, portadas o contexto mixto
 - soporte opcional de `support_visual` para graficos numericos por historia
-- render de graficos animados en Remotion para historias con contexto de crecimiento, avance, porcentajes, ranking o comparaciones
+- soporte de `metric_card`, `score_card` y `numeric_chart` segun el tipo de contexto numerico
+- render de visuales en Remotion para cifras puntuales, marcadores deportivos y graficos comparativos o de tendencia
+- revision previa de visuales desde Streamlit antes de construir el `programa diario`
 - prompts posteriores por bloques de 2 periodicos para respetar el limite de imagenes de ChatGPT
 - speeches editoriales pensados para voz breve, no para nota larga
 - modo desarrollo en Streamlit para cachear respuestas pegadas de ChatGPT y recargarlas al reabrir la app
@@ -605,6 +614,7 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 - reintento del `programa diario` desde audios existentes, sin volver a generar TTS cuando ya existe una corrida previa
 - reutilizacion automatica del ultimo rundown del dia como semilla al reconstruir el `programa diario`
 - reconstruccion del `programa diario` respetando cambios guardados de `cover_region` aunque se reutilicen audios
+- cierre dinamico de despedida al final del `programa diario`
 - feedback por etapas durante la construccion del `programa diario`
 - sincronizacion del preview diario con `NewsVideo-generated` en Remotion
 - soporte de segmentos narrativos con intro, historias y conectores entre periodicos
@@ -615,7 +625,9 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 - subtitulos sincronizados por segmentos reales de audio, incluyendo conectores entre periodicos
 - subtitulos partidos en bloques practicos de hasta 2 lineas
 - ajuste visual del bloque de subtitulos para ancho, posicion y lectura
-- velocidad de voz configurable desde los perfiles TTS, con base actual de `1.4`
+- velocidad de voz configurable desde los perfiles TTS, con base actual de `1.3`
+- normalizacion del texto enviado a TTS para que montos como `US$` y `S/` se narren como dolares y soles
+- nombres editoriales de periodicos normalizados en el rundown, por ejemplo `La República`, `Líbero` y `Gestión`
 - optimizaciones visuales del preview para reducir costo de exportacion
 
 ## Lo que falta
@@ -628,7 +640,7 @@ todavia no existe ningun lote diario. Crea uno desde la misma UI o con CLI.
 ### Capa de video
 
 - seguir afinando el balance entre cantidad de palabras por bloque y comodidad de lectura en subtitulos
-- validar en renders largos la velocidad de voz `1.4x` y ajustar por narrador si hace falta
+- validar en renders largos la velocidad de voz `1.3x` y ajustar por narrador si hace falta
 - seguir afinando la intro de portadas para que la secuencia inicial quede cerrada visualmente
 - seguir afinando el comportamiento del zoom sobre portadas grandes o de composicion irregular
 - seguir puliendo la posicion relativa entre portadas, subtitulos y narrador para distintos diarios
@@ -698,7 +710,7 @@ Si ya existe una corrida previa del mismo dia, la app intenta reutilizar audios 
 - formato vertical: `1080 x 1920`
 - subtitulos maximo 2 lineas
 - audio principal en espanol
-- velocidad base de voz actual: `1.4`
+- velocidad base de voz actual: `1.3`
 - fondo musical suave en `public/assets/fondo-musical/`
 - el fallback de voz suele vivir en `voicebox-local.json`
 - los narradores editoriales reales se resuelven desde `automation/templates/narrators/story-type-map.json`
@@ -706,8 +718,8 @@ Si ya existe una corrida previa del mismo dia, la app intenta reutilizar audios 
 - el proyecto de ChatGPT consume sus fuentes desde `fuentes-chatgpt/`, no solo desde `proyect.md`
 - categorias activas hoy en el casting:
 - `voz_en_off`: `thanos`, `narrador_dbz`, `skipper`, `ironman`
-- `politica`: `beto_ortiz`, `jaime_bayly`, `ted`
-- `economia`: `jaime_bayly`, `ted`
+- `politica`: `beto_ortiz`, `jaime_bayly`
+- `economia`: `jaime_bayly`
 - `deportes`: `mr_peet`, `gonzalo_nunez`
 - `policial`: `reportero_panorama`
 - `espectaculos`: `reportero_magaly`, `reportera_magaly`

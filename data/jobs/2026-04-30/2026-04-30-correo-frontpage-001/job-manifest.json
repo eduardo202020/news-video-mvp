@@ -73,7 +73,7 @@
   "page_selection": {
     "strategy": "cover_first",
     "provider": "chatgpt_plus_manual",
-    "status": "downloaded",
+    "status": "approved_manual",
     "selected_page_numbers": [
       3,
       4,
@@ -159,8 +159,7 @@
         "evidence_lines": [
           "pág. 3 TEMA DEL DÍA"
         ],
-        "confidence": 0.96,
-        "follow_up_enabled": true
+        "confidence": 0.96
       },
       {
         "headline": "PJ evalúa impedimento de salida para Corvetto",
@@ -178,8 +177,7 @@
         "evidence_lines": [
           "pág. 4 POLÍTICA"
         ],
-        "confidence": 0.95,
-        "follow_up_enabled": true
+        "confidence": 0.95
       },
       {
         "headline": "Presidente da vergüenza por declaraciones sobre judíos",
@@ -215,18 +213,10 @@
         "evidence_lines": [
           "pág. 10 PERÚ"
         ],
-        "confidence": 0.94,
-        "follow_up_enabled": true
+        "confidence": 0.94
       }
     ],
-    "notes": "Paginas detectadas visualmente desde la portada.",
-    "downloaded_page_numbers": [
-      3,
-      4,
-      5,
-      10
-    ],
-    "focus_review_completed": true
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
     "provider": "chatgpt_plus_manual",
@@ -267,8 +257,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "La elección es parte de un proceso formal, no se ha revelado aún al candidato final.",
         "notes": "La elección es parte de un proceso formal, no se ha revelado aún al candidato final.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "La Fiscalía halló un pasaporte en la casa de Corvetto",
@@ -390,7 +379,7 @@
   },
   "audit": {
     "created_at": "2026-04-30T08:50:10",
-    "updated_at": "2026-04-30T09:08:52",
+    "updated_at": "2026-04-30T09:59:33",
     "events": [
       {
         "stage": "discover",
@@ -679,6 +668,102 @@
         "status": "edited",
         "timestamp": "2026-04-30T09:08:52",
         "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:33:22",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:40:13",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:40:13",
+        "details": "Seguimiento de portada actualizado para historia 1: JNJ inicia proceso para elegir nuevo jefe de ONPE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:40:13",
+        "details": "Seguimiento de portada actualizado para historia 2: PJ evalúa impedimento de salida para Corvetto -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:40:13",
+        "details": "Seguimiento de portada actualizado para historia 4: Excandidato al Congreso es asesinado en Trujillo -> seguir."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:41:26",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:41:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:47:26",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:47:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:47:39",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:47:39",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:49:55",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:55:29",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:55:29",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:59:33",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:59:33",
+        "details": "Intro dinamica importada desde el prompt de portadas."
       }
     ]
   },
@@ -689,6 +774,6 @@
     "why_it_fits": "Conecta la fecha del lote con una referencia peruana de memoria política y con el tono fuerte de las portadas del día.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-30T08:54:47"
+    "imported_at": "2026-04-30T09:59:33"
   }
 }

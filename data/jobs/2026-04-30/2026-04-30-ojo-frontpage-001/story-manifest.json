@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-04-30-ojo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-04-30-ojo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-04-30/2026-04-30-ojo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-30/2026-04-30-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Policía rescata a empresario secuestrado",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Rescate con tensión en Lima. La policía liberó a un empresario secuestrado y el caso expone una modalidad que mezcla presión, cobros y miedo. La investigación sigue, pero la alerta ya está encendida.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "empresario fue rescatado",
+        "exigían S/80 mil",
+        "familia pagó S/15 mil"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "cauteloso"
+      ],
+      "safety_notes": "Se omite nacionalidad de presuntos implicados y detalles de violencia; se mantiene cautela policial.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.16,
+        "width": 1.0,
+        "height": 0.67
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-30/2026-04-30-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Regalos para mamá salen desde 5 soles",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "Gamarra entra en modo Día de la Madre con regalos desde 5 soles. Entre ofertas y público en aumento, el emporio apuesta por precios bajos para mover ventas en una de sus campañas más fuertes.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "campaña por Día de la Madre",
+        "precios desde S/5",
+        "ofertas en Gamarra"
+      ],
+      "tone_notes": [
+        "ágil",
+        "claro",
+        "comercial"
+      ],
+      "safety_notes": "Se resume la nota comercial sin afirmar cifras de ventas no visibles.",
+      "cover_region": {
+        "x": 0.67,
+        "y": 0.02,
+        "width": 0.31,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-30/2026-04-30-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Sueltan a la Culebra",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "En La Victoria ya miran el mercado. Alianza no descarta vender a Eryc Castillo: la “Culebra” levantó su nivel y su cláusula ronda los US$1.5 millones.",
+      "page_numbers": [
+        14
+      ],
+      "key_facts": [
+        "Alianza evalúa ofertas",
+        "Eryc Castillo subió su rendimiento",
+        "cláusula cercana a US$1.5 millones"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "directo",
+        "mercado"
+      ],
+      "safety_notes": "Se habla de posibilidad de venta, no de operación cerrada.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.83,
+        "width": 0.32,
+        "height": 0.15
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-04-30/2026-04-30-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Yahaira cuadra a Daniela",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Ojo con esto: Yahaira le respondió a Daniela y pidió no opinar a la ligera. La salsera dice que no se puede hablar sin fundamentos, y la farándula vuelve a prenderse con nombre propio.",
+      "page_numbers": [
+        17
+      ],
+      "key_facts": [
+        "Yahaira respondió a Daniela",
+        "pidió no opinar sin fundamentos",
+        "tema ligado a garantías y demanda"
+      ],
+      "tone_notes": [
+        "picante",
+        "popular",
+        "ágil"
+      ],
+      "safety_notes": "Se atribuyen las afirmaciones a declaraciones de la protagonista y no se agregan rumores.",
+      "cover_region": {
+        "x": 0.65,
+        "y": 0.83,
+        "width": 0.33,
+        "height": 0.14
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

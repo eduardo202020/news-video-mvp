@@ -37,25 +37,7 @@
       ],
       "safety_notes": "Se omite nacionalidad de presuntos implicados y detalles de violencia; se mantiene cautela policial.",
       "notes": "Se omite nacionalidad de presuntos implicados y detalles de violencia; se mantiene cautela policial.",
-      "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "bar",
-        "title": "Monto del secuestro",
-        "points": [
-          {
-            "label": "Exigían",
-            "value": 80.0
-          },
-          {
-            "label": "Pagaron",
-            "value": 15.0
-          }
-        ],
-        "subtitle": "Exigencia frente a pago reportado",
-        "unit": "S/ mil",
-        "highlight_label": "Diferencia",
-        "data_source_note": "Cifras tomadas de la página interna adjunta de Ojo."
-      },
+      "support_visual": null,
       "narrator_profile_id": "reportero_panorama",
       "narrator_role": "reportero_policial",
       "narrator_map_id": "default-story-type-narrators",

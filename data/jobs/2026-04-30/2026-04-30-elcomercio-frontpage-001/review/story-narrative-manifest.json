@@ -3,7 +3,7 @@
   "manifest_version": 1,
   "job_id": "2026-04-30-elcomercio-frontpage-001",
   "source_id": "elcomercio",
-  "source_name": "Elcomercio",
+  "source_name": "El Comercio",
   "date": "2026-04-30",
   "front_page_image": "data/jobs/2026-04-30/2026-04-30-elcomercio-frontpage-001/input/front-page.jpg",
   "story_type_map_path": "automation/templates/narrators/story-type-map.json",
@@ -23,7 +23,7 @@
       "cover_region": {
         "x": 0.05,
         "y": 0.56,
-        "width": 0.72,
+        "width": 0.58,
         "height": 0.12
       },
       "key_facts": [
@@ -111,8 +111,7 @@
       "safety_notes": "Se confirma el marcador y el contexto en el torneo, pero no se profundiza en detalles tácticos.",
       "notes": "Se confirma el marcador y el contexto en el torneo, pero no se profundiza en detalles tácticos.",
       "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "bar",
+        "type": "score_card",
         "title": "Marcador final",
         "points": [
           {

@@ -110,8 +110,7 @@
       "safety_notes": "Se confirma el marcador y el impacto positivo para el club en la Libertadores.",
       "notes": "Se confirma el marcador y el impacto positivo para el club en la Libertadores.",
       "support_visual": {
-        "type": "numeric_chart",
-        "chart_type": "bar",
+        "type": "score_card",
         "title": "Marcador final",
         "points": [
           {

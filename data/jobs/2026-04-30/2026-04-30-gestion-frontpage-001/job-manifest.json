@@ -94,7 +94,7 @@
   "page_selection": {
     "strategy": "cover_first",
     "provider": "chatgpt_plus_manual",
-    "status": "downloaded",
+    "status": "approved_manual",
     "selected_page_numbers": [
       2,
       3,
@@ -229,8 +229,7 @@
         "evidence_lines": [
           "P. 2-3"
         ],
-        "confidence": 0.98,
-        "follow_up_enabled": true
+        "confidence": 0.98
       },
       {
         "headline": "Peruanos cambiaron hábitos de compra por inseguridad",
@@ -248,8 +247,7 @@
         "evidence_lines": [
           "P. 5"
         ],
-        "confidence": 0.92,
-        "follow_up_enabled": true
+        "confidence": 0.92
       },
       {
         "headline": "Santiago Queirolo sumará hectáreas de uvas",
@@ -267,8 +265,7 @@
         "evidence_lines": [
           "P. 7"
         ],
-        "confidence": 0.91,
-        "follow_up_enabled": true
+        "confidence": 0.91
       },
       {
         "headline": "MEF mantiene crecimiento de 3.2%",
@@ -286,8 +283,7 @@
         "evidence_lines": [
           "P. 12"
         ],
-        "confidence": 0.93,
-        "follow_up_enabled": true
+        "confidence": 0.93
       },
       {
         "headline": "Se incumpliría regla de déficit fiscal",
@@ -305,8 +301,7 @@
         "evidence_lines": [
           "P. 13"
         ],
-        "confidence": 0.93,
-        "follow_up_enabled": true
+        "confidence": 0.93
       },
       {
         "headline": "Guerra prolongada en Irán",
@@ -324,21 +319,10 @@
         "evidence_lines": [
           "P. 22"
         ],
-        "confidence": 0.88,
-        "follow_up_enabled": true
+        "confidence": 0.88
       }
     ],
-    "notes": "Paginas detectadas visualmente desde la portada.",
-    "downloaded_page_numbers": [
-      2,
-      3,
-      5,
-      7,
-      12,
-      13,
-      22
-    ],
-    "focus_review_completed": true
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
     "provider": "chatgpt_plus_manual",
@@ -468,7 +452,7 @@
         "story_type": "economia",
         "summary": "Santiago Queirolo sigue ampliando su área agrícola. Con una inversión en nuevas hectáreas de uvas, la marca busca consolidarse aún más en el mercado de vinos premium. La expansión es clave para su crecimiento sostenido.",
         "speech": "Santiago Queirolo sigue ampliando su área agrícola. Con una inversión en nuevas hectáreas de uvas, la marca busca consolidarse aún más en el mercado de vinos premium. La expansión es clave para su crecimiento sostenido.",
-        "narrator_profile_id": "jaime_bayly",
+        "narrator_profile_id": "ted",
         "narrator_role": "analista_economia",
         "tone_notes": [
           "positivo",
@@ -558,7 +542,7 @@
         "story_type": "economia",
         "summary": "El Consejo Fiscal alerta sobre el incumplimiento de la regla del déficit fiscal. Según el pronóstico, el país no alcanzará las metas previstas en los próximos tres años debido a la falta de disciplina fiscal.",
         "speech": "El Consejo Fiscal alerta sobre el incumplimiento de la regla del déficit fiscal. Según el pronóstico, el país no alcanzará las metas previstas en los próximos tres años debido a la falta de disciplina fiscal.",
-        "narrator_profile_id": "jaime_bayly",
+        "narrator_profile_id": "ted",
         "narrator_role": "analista_economia",
         "tone_notes": [
           "crítico",
@@ -674,7 +658,7 @@
   },
   "audit": {
     "created_at": "2026-04-30T08:50:55",
-    "updated_at": "2026-04-30T09:04:41",
+    "updated_at": "2026-04-30T09:59:33",
     "events": [
       {
         "stage": "discover",
@@ -765,6 +749,162 @@
         "status": "edited",
         "timestamp": "2026-04-30T09:04:41",
         "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:41:26",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:41:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:47:26",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:47:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:47:39",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:47:39",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:50:08",
+        "details": "Se importaron 6 speech(es) editoriales."
+      },
+      {
+        "stage": "support_visual_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:52:15",
+        "details": "Grafico editorial actualizado para Peruanos cambiaron hábitos de compra por inseguridad."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:52:17",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:52:17",
+        "details": "Seguimiento de portada actualizado para historia 1: Opciones de inversión rinden debajo de la inflación -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:52:17",
+        "details": "Seguimiento de portada actualizado para historia 2: Peruanos cambiaron hábitos de compra por inseguridad -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:52:17",
+        "details": "Seguimiento de portada actualizado para historia 3: Santiago Queirolo sumará hectáreas de uvas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:52:17",
+        "details": "Seguimiento de portada actualizado para historia 4: MEF mantiene crecimiento de 3.2% -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:52:17",
+        "details": "Seguimiento de portada actualizado para historia 5: Se incumpliría regla de déficit fiscal -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:52:17",
+        "details": "Seguimiento de portada actualizado para historia 6: Guerra prolongada en Irán -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:54:55",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:54:56",
+        "details": "Seguimiento de portada actualizado para historia 1: Opciones de inversión rinden debajo de la inflación -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:54:56",
+        "details": "Seguimiento de portada actualizado para historia 2: Peruanos cambiaron hábitos de compra por inseguridad -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:54:56",
+        "details": "Seguimiento de portada actualizado para historia 3: Santiago Queirolo sumará hectáreas de uvas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:54:56",
+        "details": "Seguimiento de portada actualizado para historia 4: MEF mantiene crecimiento de 3.2% -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:54:56",
+        "details": "Seguimiento de portada actualizado para historia 5: Se incumpliría regla de déficit fiscal -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-04-30T09:54:56",
+        "details": "Seguimiento de portada actualizado para historia 6: Guerra prolongada en Irán -> seguir."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:55:29",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:55:29",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:59:33",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-04-30T09:59:33",
+        "details": "Intro dinamica importada desde el prompt de portadas."
       }
     ]
   },
@@ -775,6 +915,6 @@
     "why_it_fits": "Conecta la fecha del lote con una referencia peruana de memoria política y con el tono fuerte de las portadas del día.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-04-30T08:54:47"
+    "imported_at": "2026-04-30T09:59:33"
   }
 }

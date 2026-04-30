@@ -253,6 +253,12 @@ def get_jobs_root(project_dir: Path | None = None) -> Path:
 
 
 SOURCE_RUNDOWN_ORDER = ["correo", "elcomercio", "gestion", "ojo", "trome", "libero"]
+SOURCE_DISPLAY_NAMES = {
+    "larepublica": "La República",
+    "libero": "Líbero",
+    "gestion": "Gestión",
+    "elcomercio": "El Comercio",
+}
 
 
 def build_job_id(*, job_date: str, source_id: str, suffix: str = "frontpage-001") -> str:
@@ -1417,29 +1423,82 @@ def _normalize_numeric_chart_points(value: object) -> list[dict[str, object]]:
     return points[:8]
 
 
+def _looks_like_score_card(*, value: dict[str, object], points: list[dict[str, object]]) -> bool:
+    if len(points) != 2:
+        return False
+    title_parts = [
+        str(value.get("title") or ""),
+        str(value.get("subtitle") or ""),
+        str(value.get("highlight_label") or value.get("highlightLabel") or ""),
+    ]
+    combined_title = " ".join(title_parts).casefold()
+    score_keywords = ("marcador", "score", "resultado final", "final del partido")
+    if any(keyword in combined_title for keyword in score_keywords):
+        return True
+
+    labels = [str(point.get("label") or "").strip() for point in points]
+    if any(not label for label in labels):
+        return False
+    if any(any(char.isdigit() for char in label) for label in labels):
+        return False
+
+    values = [float(point.get("value") or 0) for point in points]
+    if any(value < 0 or value > 20 or abs(value - round(value)) > 0.001 for value in values):
+        return False
+
+    unit = " ".join(str(value.get("unit") or "").split()).strip().casefold()
+    if unit in {"", "gol", "goles"}:
+        return True
+    return False
+
+
+def _looks_like_metric_card(*, value: dict[str, object], points: list[dict[str, object]]) -> bool:
+    visual_type = " ".join(str(value.get("type") or value.get("visual_type") or "").split()).strip().casefold()
+    if visual_type in {"metric_card", "metric", "number_card"}:
+        return True
+    if len(points) == 1:
+        return True
+    return False
+
+
 def _normalize_support_visual(value: object) -> dict[str, object] | None:
     if not isinstance(value, dict):
         return None
 
     visual_type = " ".join(str(value.get("type") or value.get("visual_type") or "").split()).strip().casefold()
-    if visual_type not in {"numeric_chart", "animated_chart"}:
+    if visual_type not in {"numeric_chart", "animated_chart", "score_card", "scorecard", "metric_card", "metric", "number_card"}:
         return None
-
-    chart_type = " ".join(str(value.get("chart_type") or value.get("chartType") or "").split()).strip().casefold()
-    if chart_type not in {"line", "bar", "area"}:
-        chart_type = "line"
 
     title = " ".join(str(value.get("title") or "").split()).strip()
     points = _normalize_numeric_chart_points(value.get("points") or value.get("data"))
-    if len(points) < 2:
+    if not points:
         return None
 
-    normalized = {
-        "type": "numeric_chart",
-        "chart_type": chart_type,
-        "title": title or "Contexto numerico",
-        "points": points,
-    }
+    if visual_type in {"score_card", "scorecard"} or _looks_like_score_card(value=value, points=points):
+        normalized = {
+            "type": "score_card",
+            "title": title or "Marcador",
+            "points": points[:2],
+        }
+    elif _looks_like_metric_card(value=value, points=points):
+        normalized = {
+            "type": "metric_card",
+            "title": title or "Dato clave",
+            "points": points[:1],
+        }
+    else:
+        if len(points) < 2:
+            return None
+        chart_type = " ".join(str(value.get("chart_type") or value.get("chartType") or "").split()).strip().casefold()
+        if chart_type not in {"line", "bar", "area"}:
+            chart_type = "line"
+
+        normalized = {
+            "type": "numeric_chart",
+            "chart_type": chart_type,
+            "title": title or "Contexto numerico",
+            "points": points,
+        }
 
     optional_fields = {
         "subtitle": value.get("subtitle"),
@@ -1775,6 +1834,15 @@ def _build_rundown_intro(*, job_date: str, source_names: list[str], story_count:
         f"Hola, hoy {date_text} revisamos las portadas de {source_text}. "
         f"Hay {story_count} temas clave para entender la agenda del dia: politica, actualidad, economia, deportes y policiales. "
         "Vamos diario por diario, con lo central y sin rodeos."
+    )
+
+
+def _build_rundown_outro(*, job_date: str, source_names: list[str], story_count: int) -> str:
+    date_text = _format_spanish_date(job_date)
+    return (
+        f"Hasta aqui el programa de hoy, {date_text}. "
+        f"Revisamos {len(source_names)} portadas y {story_count} temas que marcaron la agenda. "
+        "Gracias por acompanarnos. Nos vemos en la siguiente edicion con mas contexto y sin rodeos."
     )
 
 
@@ -2500,6 +2568,9 @@ def scrape_selected_pages_for_job(
 
 
 def _format_source_name(source_id: str) -> str:
+    normalized = _slug_identifier(source_id).replace("_", "")
+    if normalized in SOURCE_DISPLAY_NAMES:
+        return SOURCE_DISPLAY_NAMES[normalized]
     return source_id.replace("-", " ").title()
 
 
@@ -2888,6 +2959,26 @@ def _build_daily_rundown_segment_specs(
                     "support_visual": story.get("support_visual"),
                 }
             )
+    outro_narrator_id, outro_voice = resolve_presenter_voice(presenter_sequence_index)
+    segment_specs.append(
+        {
+            "newspaper_name": "Cierre",
+            "cover": str(jobs[-1]["input_assets"]["front_page_image"]),
+            "headline": "Cierre del programa",
+            "story_type": "outro",
+            "segment_type": "outro",
+            "narrator_profile_id": outro_narrator_id,
+            "voice_profile_id": outro_voice.profile_id,
+            "narrator_name": outro_voice.narrator_name,
+            "gestures_dir": outro_voice.gestures_dir,
+            "text": _build_rundown_outro(
+                job_date=str(jobs[0].get("date") or ""),
+                source_names=source_names,
+                story_count=story_count,
+            ),
+            "cover_region": None,
+        }
+    )
     _ = fallback_voice
     return segment_specs
 
@@ -3128,7 +3219,7 @@ def build_story_manifest_from_job(
             "El job-manifest no tiene `input_assets.front_page_image`; primero debes asociar o descargar la portada."
         )
 
-    source_name = job["source_id"].replace("-", " ").title()
+    source_name = _format_source_name(job["source_id"])
     if narrative_stories:
         manifest_segments = []
         for story in narrative_stories:
@@ -3505,12 +3596,32 @@ def retry_daily_rundown_from_existing_audio(
 
     segment_audio_paths: list[Path] = []
     for index, segment in enumerate(segment_specs, start=1):
-        if index > len(available_audio_paths):
-            raise ValueError(
-                f"Falta el audio existente `data/rundowns/{job_date}/{target_dir.name}/audio/segment-{index:02d}.wav`. "
-                "Este reintento solo funciona cuando todos los segmentos ya fueron generados."
-            )
-        segment_audio_path = available_audio_paths[index - 1]
+        if index <= len(available_audio_paths):
+            segment_audio_path = available_audio_paths[index - 1]
+            segment_audio_paths.append(segment_audio_path)
+            segment["segment_audio_file"] = segment_audio_path.resolve().relative_to(project_dir).as_posix()
+            segment["segment_type"] = str(segment.get("segment_type") or ("intro" if index == 1 else "story"))
+            continue
+        emit(
+            "audio",
+            f"Generando audio faltante {index}/{len(segment_specs)}: "
+            f"{segment.get('newspaper_name')} - {segment.get('headline')}",
+        )
+        tts_voice = _resolve_tts_profile_for_narrator(
+            narrator_profile_id=segment.get("narrator_profile_id"),
+            fallback_voice_profile_path=voice_profile_path,
+            project_dir=project_dir,
+        )
+        segment_audio_path = audio_dir / f"segment-{index:02d}.wav"
+        generate_voice_track(
+            text=str(segment["text"]),
+            provider=tts_voice.tts_provider,
+            output_path=segment_audio_path,
+            audio_file=None,
+            voice=tts_voice.tts_voice,
+            language=tts_voice.language,
+            provider_settings=tts_voice.provider_settings,
+        )
         segment_audio_paths.append(segment_audio_path)
         segment["segment_audio_file"] = segment_audio_path.resolve().relative_to(project_dir).as_posix()
         segment["segment_type"] = str(segment.get("segment_type") or ("intro" if index == 1 else "story"))

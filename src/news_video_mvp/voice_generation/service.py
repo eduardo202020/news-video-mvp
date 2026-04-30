@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin
@@ -10,6 +11,42 @@ from urllib.request import urlopen, Request, urlretrieve
 import time
 
 from ..tts import TTSGenerationError, prepare_audio
+
+
+_CURRENCY_PREFIX_RE = re.compile(
+    r"(?P<symbol>US\$|USD\s*|S\/|\$)\s*(?P<amount>\d[\d.,]*)"
+    r"(?:\s*(?P<scale>millones?|billones?|mil))?",
+    flags=re.IGNORECASE,
+)
+
+
+def _currency_label_for_symbol(symbol: str) -> str:
+    normalized = "".join(symbol.upper().split())
+    if normalized in {"US$", "USD", "$"}:
+        return "dolares"
+    if normalized == "S/":
+        return "soles"
+    return "unidades"
+
+
+def _currency_scale_requires_de(scale: str) -> bool:
+    normalized = scale.strip().lower()
+    return normalized.startswith("millon") or normalized.startswith("billon")
+
+
+def _prepare_tts_text(text: str) -> str:
+    def replace_currency(match: re.Match[str]) -> str:
+        amount = match.group("amount").strip()
+        scale = (match.group("scale") or "").strip()
+        currency = _currency_label_for_symbol(match.group("symbol"))
+        if scale:
+            connector = " de " if _currency_scale_requires_de(scale) else " "
+            return f"{amount} {scale}{connector}{currency}"
+        return f"{amount} {currency}"
+
+    normalized = _CURRENCY_PREFIX_RE.sub(replace_currency, text)
+    normalized = re.sub(r"\s{2,}", " ", normalized)
+    return normalized.strip()
 
 
 def _get_voicebox_api_url(provider_settings: dict[str, object] | None = None) -> str:
@@ -249,9 +286,10 @@ def generate_voice_track(
     language: str = "es",
     provider_settings: dict[str, object] | None = None,
 ) -> Path:
+    spoken_text = _prepare_tts_text(text)
     if provider == "voicebox_local":
         return synthesize_with_voicebox(
-            text=text,
+            text=spoken_text,
             output_path=output_path,
             profile_id=voice,
             language=language,
@@ -259,7 +297,7 @@ def generate_voice_track(
         )
 
     return prepare_audio(
-        text=text,
+        text=spoken_text,
         provider=provider,
         output_path=output_path,
         audio_file=audio_file,

@@ -3,7 +3,7 @@
   "manifest_version": 1,
   "job_id": "2026-04-30-larepublica-frontpage-001",
   "source_id": "larepublica",
-  "source_name": "Larepublica",
+  "source_name": "La República",
   "date": "2026-04-30",
   "front_page_image": "data/jobs/2026-04-30/2026-04-30-larepublica-frontpage-001/input/front-page.jpg",
   "story_type_map_path": "automation/templates/narrators/story-type-map.json",

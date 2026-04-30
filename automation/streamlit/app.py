@@ -4,6 +4,7 @@ from collections import Counter
 import copy
 from datetime import datetime
 import base64
+import html
 import importlib
 import json
 import os
@@ -73,6 +74,8 @@ scrape_source_into_job = pipeline_module.scrape_source_into_job
 scrape_selected_pages_for_job = pipeline_module.scrape_selected_pages_for_job
 clean_cover_headline = pipeline_module._clean_cover_headline
 normalize_cover_region = pipeline_module._normalize_cover_region
+normalize_support_visual = pipeline_module._normalize_support_visual
+format_source_name = pipeline_module._format_source_name
 
 
 DEFAULT_EDITORIAL_POLICY = PROJECT_DIR / "automation" / "rules" / "editorial-policy.json"
@@ -658,6 +661,233 @@ def update_job_script(job_path: Path, approved_text: str, review_notes: str, app
     )
     job["audit"]["updated_at"] = timestamp
     write_json(job_path, job)
+
+
+def update_job_story_support_visual(
+    *,
+    job_path: Path,
+    story_index: int,
+    support_visual: dict | None,
+) -> tuple[dict, list[str]]:
+    job = read_json(job_path)
+    story_narrative = job.setdefault("story_narrative", {})
+    stories = story_narrative.setdefault("stories", [])
+    if story_index < 0 or story_index >= len(stories):
+        raise ValueError("La historia seleccionada ya no existe en el job-manifest.")
+
+    normalized_support_visual = normalize_support_visual(support_visual) if support_visual else None
+    stories[story_index]["support_visual"] = normalized_support_visual
+
+    voice_profile_path = get_voice_profile_path(job.get("voice", {}).get("profile_id")) or default_voice_profile_path
+    pipeline_module._sync_story_narrative_manifest(
+        job=job,
+        job_manifest_path=job_path,
+        voice_profile_path=voice_profile_path,
+    )
+
+    job.setdefault("audit", {})
+    job["audit"].setdefault("events", [])
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    headline = str(stories[story_index].get("headline") or "").strip() or f"historia {story_index + 1}"
+    job["audit"]["events"].append(
+        {
+            "stage": "support_visual_review_ui",
+            "status": "edited",
+            "timestamp": timestamp,
+            "details": f"Grafico editorial actualizado para {headline}.",
+        }
+    )
+    job["audit"]["updated_at"] = timestamp
+    write_json(job_path, job)
+    return read_json(job_path), ["Grafico actualizado y sincronizado."]
+
+
+def render_support_visual_preview(support_visual: dict | None, *, key: str) -> None:
+    if not support_visual:
+        st.caption("Esta historia no tiene grafico de apoyo.")
+        return
+
+    points = [
+        {
+            "label": str(point.get("label") or "").strip(),
+            "value": float(point.get("value") or 0),
+        }
+        for point in support_visual.get("points", [])
+        if str(point.get("label") or "").strip()
+    ]
+    if len(points) < 2:
+        if str(support_visual.get("type") or "").strip().lower() != "metric_card":
+            st.caption("El grafico necesita al menos dos puntos validos para previsualizarse.")
+            return
+
+    if str(support_visual.get("type") or "").strip().lower() == "metric_card":
+        metric = points[0]
+        unit = html.escape(str(support_visual.get("unit") or ""))
+        value = float(metric["value"])
+        value_text = str(int(value)) if value.is_integer() else str(value)
+        components.html(
+            f"""
+            <div style="border:1px solid #d7dce3;border-radius:16px;padding:18px 20px;background:#ffffff;">
+              <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px;">
+                <div>
+                  <div style="font-size:24px;font-weight:900;color:#111827;line-height:1.05;">{html.escape(str(support_visual.get('title') or 'Dato clave'))}</div>
+                  <div style="font-size:14px;font-weight:600;color:#111827;margin-top:4px;">{html.escape(str(support_visual.get('subtitle') or ''))}</div>
+                </div>
+                <div style="font-size:13px;font-weight:900;color:#111827;text-transform:uppercase;">{html.escape(str(support_visual.get('highlight_label') or ''))}</div>
+              </div>
+              <div style="text-align:center;padding:18px 0 10px;">
+                <div style="font-size:28px;font-weight:800;color:#111827;">{html.escape(str(metric['label']))}</div>
+                <div style="font-size:84px;font-weight:900;color:#111827;line-height:1;">{html.escape(value_text)}{unit}</div>
+              </div>
+            </div>
+            """,
+            height=280,
+        )
+        return
+
+    if str(support_visual.get("type") or "").strip().lower() == "score_card":
+        left = points[0]
+        right = points[1]
+        components.html(
+            f"""
+            <div style="border:1px solid #d7dce3;border-radius:16px;padding:18px 20px;background:#ffffff;">
+              <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px;">
+                <div>
+                  <div style="font-size:24px;font-weight:900;color:#111827;line-height:1.05;">{html.escape(str(support_visual.get('title') or 'Marcador'))}</div>
+                  <div style="font-size:14px;font-weight:600;color:#111827;margin-top:4px;">{html.escape(str(support_visual.get('subtitle') or ''))}</div>
+                </div>
+                <div style="font-size:13px;font-weight:900;color:#111827;text-transform:uppercase;">{html.escape(str(support_visual.get('highlight_label') or ''))}</div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;padding:10px 0;">
+                <div style="text-align:center;">
+                  <div style="font-size:26px;font-weight:800;color:#111827;">{html.escape(str(left['label']))}</div>
+                  <div style="font-size:72px;font-weight:900;color:#111827;line-height:1;">{html.escape(str(int(left['value']) if float(left['value']).is_integer() else left['value']))}</div>
+                </div>
+                <div style="font-size:54px;font-weight:900;color:#111827;">-</div>
+                <div style="text-align:center;">
+                  <div style="font-size:26px;font-weight:800;color:#111827;">{html.escape(str(right['label']))}</div>
+                  <div style="font-size:72px;font-weight:900;color:#111827;line-height:1;">{html.escape(str(int(right['value']) if float(right['value']).is_integer() else right['value']))}</div>
+                </div>
+              </div>
+            </div>
+            """,
+            height=280,
+        )
+        return
+
+    width = 560
+    height = 280
+    margin_left = 52
+    margin_right = 18
+    margin_top = 18
+    margin_bottom = 52
+    plot_width = width - margin_left - margin_right
+    plot_height = height - margin_top - margin_bottom
+    values = [point["value"] for point in points]
+    max_value = max(values) if values else 1
+    max_value = max(max_value, 1)
+    step_x = plot_width / max(1, len(points) - 1)
+    chart_type = str(support_visual.get("chart_type") or "line").strip().lower()
+
+    svg_points: list[tuple[float, float]] = []
+    bar_width = max(20.0, min(54.0, plot_width / max(2, len(points) * 1.8)))
+    for index, point in enumerate(points):
+        x = margin_left + (index * step_x if len(points) > 1 else plot_width / 2)
+        value_ratio = float(point["value"]) / max_value if max_value else 0
+        y = margin_top + plot_height - (value_ratio * plot_height)
+        svg_points.append((x, y))
+
+    def fmt(number: float) -> str:
+        return f"{number:.2f}".rstrip("0").rstrip(".")
+
+    grid_lines = []
+    for ratio in (0.0, 0.25, 0.5, 0.75, 1.0):
+        y = margin_top + plot_height - (ratio * plot_height)
+        label_value = max_value * ratio
+        grid_lines.append(
+            f'<line x1="{margin_left}" y1="{y:.1f}" x2="{width - margin_right}" y2="{y:.1f}" '
+            'stroke="#d7dce3" stroke-width="1" />'
+            f'<text x="{margin_left - 8}" y="{y + 4:.1f}" text-anchor="end" fill="#111827" '
+            'font-size="12" font-weight="700">'
+            f"{html.escape(fmt(label_value))}</text>"
+        )
+
+    shapes = []
+    if chart_type == "bar":
+        for index, point in enumerate(points):
+            x = margin_left + index * (plot_width / max(1, len(points))) + 8
+            value_ratio = float(point["value"]) / max_value if max_value else 0
+            bar_height = value_ratio * plot_height
+            y = margin_top + plot_height - bar_height
+            shapes.append(
+                f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_width:.1f}" height="{bar_height:.1f}" '
+                'rx="8" fill="#f5c451" />'
+            )
+            shapes.append(
+                f'<text x="{x + (bar_width / 2):.1f}" y="{y - 8:.1f}" text-anchor="middle" fill="#111827" '
+                'font-size="14" font-weight="800">'
+                f"{html.escape(fmt(float(point['value'])))}"
+                "</text>"
+            )
+    else:
+        point_string = " ".join(f"{x:.1f},{y:.1f}" for x, y in svg_points)
+        if chart_type == "area":
+            area_points = (
+                f"{margin_left:.1f},{margin_top + plot_height:.1f} "
+                + point_string
+                + f" {width - margin_right:.1f},{margin_top + plot_height:.1f}"
+            )
+            shapes.append(
+                f'<polygon points="{area_points}" fill="rgba(245,196,81,0.30)" stroke="none" />'
+            )
+        shapes.append(
+            f'<polyline points="{point_string}" fill="none" stroke="#f5c451" stroke-width="4" '
+            'stroke-linecap="round" stroke-linejoin="round" />'
+        )
+        for (x, y), point in zip(svg_points, points):
+            shapes.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5" fill="#f5c451" />')
+            shapes.append(
+                f'<text x="{x:.1f}" y="{y - 10:.1f}" text-anchor="middle" fill="#111827" '
+                'font-size="14" font-weight="800">'
+                f"{html.escape(fmt(float(point['value'])))}"
+                "</text>"
+            )
+
+    x_labels = []
+    for (x, _), point in zip(svg_points, points):
+        x_labels.append(
+            f'<text x="{x:.1f}" y="{height - 18:.1f}" text-anchor="middle" fill="#111827" '
+            'font-size="13" font-weight="700">'
+            f"{html.escape(str(point['label']))}</text>"
+        )
+
+    title = html.escape(str(support_visual.get("title") or "Contexto numerico"))
+    subtitle = html.escape(str(support_visual.get("subtitle") or ""))
+    badge = html.escape(str(support_visual.get("highlight_label") or ""))
+    unit = html.escape(str(support_visual.get("unit") or ""))
+
+    components.html(
+        f"""
+        <div style="border:1px solid #d7dce3;border-radius:16px;padding:14px 16px;background:#ffffff;">
+          <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:8px;">
+            <div>
+              <div style="font-size:24px;font-weight:900;color:#111827;line-height:1.05;">{title}</div>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:4px;">{subtitle}</div>
+            </div>
+            <div style="font-size:13px;font-weight:900;color:#111827;text-transform:uppercase;">{badge}</div>
+          </div>
+          <svg width="100%" viewBox="0 0 {width} {height}" role="img" aria-label="{title}">
+            {''.join(grid_lines)}
+            {''.join(shapes)}
+            {''.join(x_labels)}
+          </svg>
+          <div style="display:flex;justify-content:flex-start;gap:12px;margin-top:8px;">
+            <div style="font-size:12px;font-weight:700;color:#111827;">Unidad: {unit or '-'}</div>
+          </div>
+        </div>
+        """,
+        height=420,
+    )
 
 
 def update_job_story_cover_region(
@@ -2188,10 +2418,13 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "- Prioriza brevedad y pegada: el video final debe sentirse agil, no recargado.",
         "- Evita contexto accesorio, repeticiones y cierres redundantes.",
         "- `key_facts_used` debe tener entre 1 y 3 puntos cortos, no parrafos.",
-        "- Si una historia gana claridad con contexto numerico verificable, puedes agregar un `support_visual` opcional de tipo grafico.",
-        "- Usa `support_visual` sobre todo en crecimiento, caidas, avances, encuestas, resultados, porcentajes, produccion, precios, inflacion, ranking, votos, goles, puntos o comparaciones temporales.",
+        "- Si una historia gana claridad con contexto numerico verificable, puedes agregar un `support_visual` opcional.",
+        "- Usa `support_visual` solo cuando el apoyo visual realmente aporte claridad. No generes graficos por inercia.",
+        "- Si solo necesitas destacar una cifra puntual, usa `type: metric_card` con un solo punto.",
+        "- Si solo necesitas mostrar el marcador de un partido, usa `type: score_card` con exactamente 2 puntos, uno por equipo.",
+        "- Usa `type: numeric_chart` solo para crecimiento, caidas, avances, encuestas, estadisticas, ranking, comparaciones o cambios en el tiempo.",
         "- Si agregas `support_visual`, busca en la web datos numericos confiables y devuelve entre 2 y 6 puntos simples en `points`.",
-        "- `support_visual.chart_type` debe ser `line`, `bar` o `area`.",
+        "- Para series, comparaciones o tendencias usa `type: numeric_chart` con `chart_type` igual a `line`, `bar` o `area`.",
         "- Si no hay contexto numerico fuerte, omite `support_visual` o devuelvelo como `null`.",
         "- Usa `headline_hint` como base del `headline` final. Puedes limpiarlo o resumirlo levemente, pero no lo reemplaces por otra noticia distinta.",
         "- Respeta `story_type`, `headline` y `cover_region` ya detectados desde la portada; solo corrige si el contexto fuerte disponible muestra claramente que estaban mal.",
@@ -3309,6 +3542,102 @@ with board_tab:
                         "El ajuste manual de zoom aparecera aqui cuando ya hayas importado speeches editoriales para algun periodico."
                     )
 
+                st.subheader("Revision de Graficos")
+                support_visual_entries: list[tuple[dict, Path, int, dict]] = []
+                for support_job in batch_jobs:
+                    support_job_path = support_job.get("_path")
+                    if not isinstance(support_job_path, Path):
+                        continue
+                    for story_index, story in enumerate(get_story_narrative_entries(support_job)):
+                        if not str(story.get("speech") or story.get("summary") or "").strip():
+                            continue
+                        if not story.get("support_visual"):
+                            continue
+                        support_visual_entries.append((support_job, support_job_path, story_index, story))
+                if support_visual_entries:
+                    st.caption(
+                        "Aqui puedes revisar los graficos numericos ya generados y corregir su JSON antes de construir el programa diario."
+                    )
+                    for support_job, support_job_path, story_index, story in support_visual_entries:
+                        story_label = (
+                            f"{format_source_name(str(support_job.get('source_id') or 'sin-source'))} · "
+                            f"{story.get('headline') or f'Historia {story_index + 1}'}"
+                        )
+                        with st.expander(story_label, expanded=False):
+                            preview_col, editor_col = st.columns([1.05, 0.95])
+                            with preview_col:
+                                render_support_visual_preview(
+                                    story.get("support_visual"),
+                                    key=f"support_visual_preview_{support_job.get('job_id')}_{story_index}",
+                                )
+                            with editor_col:
+                                st.markdown(
+                                    f"Tipo: `{story.get('story_type') or 'actualidad'}`  \n"
+                                    f"Narrador: `{story.get('narrator_profile_id') or 'sin-narrador'}`"
+                                )
+                                support_visual_value = st.text_area(
+                                    "JSON del grafico",
+                                    value=json.dumps(
+                                        story.get("support_visual"),
+                                        ensure_ascii=False,
+                                        indent=2,
+                                    ),
+                                    height=320,
+                                    key=f"support_visual_editor_{support_job.get('job_id')}_{story_index}",
+                                )
+                                save_col, clear_col = st.columns(2)
+                                with save_col:
+                                    if st.button(
+                                        "Guardar Grafico",
+                                        use_container_width=True,
+                                        key=f"save_support_visual_{support_job.get('job_id')}_{story_index}",
+                                    ):
+                                        stripped_support_visual = support_visual_value.strip()
+                                        if not stripped_support_visual:
+                                            parsed_support_visual = None
+                                            updated_job, notes = update_job_story_support_visual(
+                                                job_path=support_job_path,
+                                                story_index=story_index,
+                                                support_visual=parsed_support_visual,
+                                            )
+                                            st.session_state["last_support_visual_update"] = {
+                                                "job_id": updated_job.get("job_id"),
+                                                "notes": notes,
+                                            }
+                                            st.success("Grafico actualizado.")
+                                            st.rerun()
+                                        try:
+                                            parsed_support_visual = json.loads(stripped_support_visual)
+                                        except json.JSONDecodeError as exc:
+                                            st.error(f"JSON invalido: {exc}")
+                                        else:
+                                            updated_job, notes = update_job_story_support_visual(
+                                                job_path=support_job_path,
+                                                story_index=story_index,
+                                                support_visual=parsed_support_visual,
+                                            )
+                                            st.session_state["last_support_visual_update"] = {
+                                                "job_id": updated_job.get("job_id"),
+                                                "notes": notes,
+                                            }
+                                            st.success("Grafico actualizado.")
+                                            st.rerun()
+                                with clear_col:
+                                    if st.button(
+                                        "Quitar Grafico",
+                                        use_container_width=True,
+                                        key=f"clear_support_visual_{support_job.get('job_id')}_{story_index}",
+                                    ):
+                                        update_job_story_support_visual(
+                                            job_path=support_job_path,
+                                            story_index=story_index,
+                                            support_visual=None,
+                                        )
+                                        st.success("Grafico eliminado.")
+                                        st.rerun()
+                else:
+                    st.caption("Todavia no hay graficos generados en este lote para revisar.")
+
                 st.subheader("Programa Diario")
                 ready_rundown_jobs = [
                     job
@@ -3357,7 +3686,7 @@ with board_tab:
                         )
                         rundown_preview_rows.append(
                             {
-                                "periodico": rundown_job.get("source_id") or "sin-source",
+                                "periodico": format_source_name(str(rundown_job.get("source_id") or "sin-source")),
                                 "historias": len(stories),
                                 "portada": gap_summary["cover_count"],
                                 "faltan": len(gap_summary["missing_stories"]),
