@@ -1,0 +1,192 @@
+{
+  "story_id": "2026-05-01-ojo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-01-ojo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-01/2026-05-01-ojo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-05-01/2026-05-01-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Corvetto no podrá salir del país",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "La justicia le puso candado al viaje: Corvetto no podrá salir del país por 18 meses mientras se revisan presuntas irregularidades electorales. El exjefe de la ONPE queda bajo la lupa.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "impedimento de salida del país",
+        "plazo de 18 meses",
+        "investigación por presuntas irregularidades electorales"
+      ],
+      "tone_notes": [
+        "critico",
+        "incisivo",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar delitos; la medida se narra como decisión judicial dentro de una investigación.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.18,
+        "width": 0.96,
+        "height": 0.62
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-05-01/2026-05-01-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Chambas celebran su día",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "El Día del Trabajo llega con una foto clara: más de 17,5 millones de peruanos tienen empleo. El reto, como siempre, es que la chamba no sea solo cantidad, sino estabilidad y mejores condiciones.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "más de 17,5 millones de personas ocupadas",
+        "Día Internacional del Trabajo",
+        "servicios concentra la mayor parte del empleo"
+      ],
+      "tone_notes": [
+        "claro",
+        "social",
+        "firme"
+      ],
+      "safety_notes": "Se usan cifras visibles en la página interna atribuidas al INEI.",
+      "cover_region": {
+        "x": 0.68,
+        "y": 0.03,
+        "width": 0.31,
+        "height": 0.14
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Empleo por actividad",
+        "points": [
+          {
+            "label": "Servicios",
+            "value": 41.7
+          },
+          {
+            "label": "Agro/pesca/minería",
+            "value": 24.0
+          },
+          {
+            "label": "Comercio",
+            "value": 19.0
+          },
+          {
+            "label": "Manufactura",
+            "value": 8.6
+          },
+          {
+            "label": "Construcción",
+            "value": 6.7
+          }
+        ],
+        "subtitle": "Distribución de población ocupada",
+        "unit": "%",
+        "highlight_label": "Servicios lidera",
+        "data_source_note": "Página interna de Ojo con datos atribuidos al INEI."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-05-01/2026-05-01-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Cuadran a Fossati",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "En Universitario, el mensaje fue sin anestesia: Velasco dejó mal parado a Fossati y la interna crema vuelve a sonar fuerte. Ahora el club mira opciones y el técnico que llegue deberá entrar con respaldo real.",
+      "page_numbers": [
+        13
+      ],
+      "key_facts": [
+        "Velasco cuestiona a Fossati",
+        "Universitario evalúa nuevo técnico",
+        "se mencionan opciones extranjeras"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "frontal",
+        "con ritmo"
+      ],
+      "safety_notes": "Se resume como lectura deportiva de declaraciones dirigenciales; no se afirma una ruptura no sustentada.",
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.79,
+        "width": 0.44,
+        "height": 0.19
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-05-01/2026-05-01-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Melcochita no cumple con hijas",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Monserrat puso el tema sobre la mesa: dice que Melcochita no cumple con el alquiler ni la alimentación de sus hijas. La historia sigue caliente, pero aquí toca separar denuncia, versión y prueba.",
+      "page_numbers": [
+        16
+      ],
+      "key_facts": [
+        "Monserrat acusa a Melcochita",
+        "menciona alquiler y alimentación",
+        "relación terminó hace dos meses"
+      ],
+      "tone_notes": [
+        "picante",
+        "agil",
+        "prudente"
+      ],
+      "safety_notes": "Se presenta como versión de Monserrat y no como hecho probado.",
+      "cover_region": {
+        "x": 0.54,
+        "y": 0.83,
+        "width": 0.45,
+        "height": 0.15
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

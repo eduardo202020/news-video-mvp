@@ -1,0 +1,85 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-01-libero-frontpage-001",
+  "source_id": "libero",
+  "source_name": "Líbero",
+  "date": "2026-05-01",
+  "front_page_image": "data/jobs/2026-05-01/2026-05-01-libero-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Universitario sueña con la Copa",
+      "story_type": "deportes",
+      "summary": "Universitario da un paso firme en su camino hacia la Copa Libertadores. Después de ganar a Nacional, el sueño sigue vivo y la próxima parada es Chile. El equipo se mantiene motivado, con la vista en los octavos.",
+      "speech": "Universitario da un paso firme en su camino hacia la Copa Libertadores. Después de ganar a Nacional, el sueño sigue vivo y la próxima parada es Chile. El equipo se mantiene motivado, con la vista en los octavos.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.12,
+        "width": 0.75,
+        "height": 0.71
+      },
+      "key_facts": [
+        "victoria contra Nacional",
+        "objetivo: clasificación a octavos de Libertadores",
+        "próximo partido en Chile"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "agil",
+        "motivador"
+      ],
+      "safety_notes": "No se asume clasificación, solo se destacan los objetivos del equipo.",
+      "notes": "No se asume clasificación, solo se destacan los objetivos del equipo.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Zé Ricardo está molesto",
+      "story_type": "deportes",
+      "summary": "Zé Ricardo no oculta su frustración con la situación del equipo. Tras una derrota que duele, el técnico pone en tela de juicio algunos aspectos y exige más compromiso de sus jugadores.",
+      "speech": "Zé Ricardo no oculta su frustración con la situación del equipo. Tras una derrota que duele, el técnico pone en tela de juicio algunos aspectos y exige más compromiso de sus jugadores.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.49,
+        "y": 0.86,
+        "width": 0.24,
+        "height": 0.14
+      },
+      "key_facts": [
+        "molestia de Zé Ricardo",
+        "derrota que afecta al equipo",
+        "exigencias del técnico"
+      ],
+      "tone_notes": [
+        "tenso",
+        "frontal",
+        "energético"
+      ],
+      "safety_notes": "Se presenta como frustración del técnico, no se afirma falta de resultados sin contexto.",
+      "notes": "Se presenta como frustración del técnico, no se afirma falta de resultados sin contexto.",
+      "support_visual": null,
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "segment_audio_file": null
+    }
+  ]
+}

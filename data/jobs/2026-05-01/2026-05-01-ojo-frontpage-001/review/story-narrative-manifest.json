@@ -1,0 +1,187 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-01-ojo-frontpage-001",
+  "source_id": "ojo",
+  "source_name": "Ojo",
+  "date": "2026-05-01",
+  "front_page_image": "data/jobs/2026-05-01/2026-05-01-ojo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Corvetto no podrá salir del país",
+      "story_type": "politica",
+      "summary": "La justicia le puso candado al viaje: Corvetto no podrá salir del país por 18 meses mientras se revisan presuntas irregularidades electorales. El exjefe de la ONPE queda bajo la lupa.",
+      "speech": "La justicia le puso candado al viaje: Corvetto no podrá salir del país por 18 meses mientras se revisan presuntas irregularidades electorales. El exjefe de la ONPE queda bajo la lupa.",
+      "page_numbers": [
+        2
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.18,
+        "width": 0.96,
+        "height": 0.62
+      },
+      "key_facts": [
+        "impedimento de salida del país",
+        "plazo de 18 meses",
+        "investigación por presuntas irregularidades electorales"
+      ],
+      "tone_notes": [
+        "critico",
+        "incisivo",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar delitos; la medida se narra como decisión judicial dentro de una investigación.",
+      "notes": "Se evita afirmar delitos; la medida se narra como decisión judicial dentro de una investigación.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Chambas celebran su día",
+      "story_type": "actualidad",
+      "summary": "El Día del Trabajo llega con una foto clara: más de 17,5 millones de peruanos tienen empleo. El reto, como siempre, es que la chamba no sea solo cantidad, sino estabilidad y mejores condiciones.",
+      "speech": "El Día del Trabajo llega con una foto clara: más de 17,5 millones de peruanos tienen empleo. El reto, como siempre, es que la chamba no sea solo cantidad, sino estabilidad y mejores condiciones.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.68,
+        "y": 0.03,
+        "width": 0.31,
+        "height": 0.14
+      },
+      "key_facts": [
+        "más de 17,5 millones de personas ocupadas",
+        "Día Internacional del Trabajo",
+        "servicios concentra la mayor parte del empleo"
+      ],
+      "tone_notes": [
+        "claro",
+        "social",
+        "firme"
+      ],
+      "safety_notes": "Se usan cifras visibles en la página interna atribuidas al INEI.",
+      "notes": "Se usan cifras visibles en la página interna atribuidas al INEI.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Empleo por actividad",
+        "points": [
+          {
+            "label": "Servicios",
+            "value": 41.7
+          },
+          {
+            "label": "Agro/pesca/minería",
+            "value": 24.0
+          },
+          {
+            "label": "Comercio",
+            "value": 19.0
+          },
+          {
+            "label": "Manufactura",
+            "value": 8.6
+          },
+          {
+            "label": "Construcción",
+            "value": 6.7
+          }
+        ],
+        "subtitle": "Distribución de población ocupada",
+        "unit": "%",
+        "highlight_label": "Servicios lidera",
+        "data_source_note": "Página interna de Ojo con datos atribuidos al INEI."
+      },
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Cuadran a Fossati",
+      "story_type": "deportes",
+      "summary": "En Universitario, el mensaje fue sin anestesia: Velasco dejó mal parado a Fossati y la interna crema vuelve a sonar fuerte. Ahora el club mira opciones y el técnico que llegue deberá entrar con respaldo real.",
+      "speech": "En Universitario, el mensaje fue sin anestesia: Velasco dejó mal parado a Fossati y la interna crema vuelve a sonar fuerte. Ahora el club mira opciones y el técnico que llegue deberá entrar con respaldo real.",
+      "page_numbers": [
+        13
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.79,
+        "width": 0.44,
+        "height": 0.19
+      },
+      "key_facts": [
+        "Velasco cuestiona a Fossati",
+        "Universitario evalúa nuevo técnico",
+        "se mencionan opciones extranjeras"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "frontal",
+        "con ritmo"
+      ],
+      "safety_notes": "Se resume como lectura deportiva de declaraciones dirigenciales; no se afirma una ruptura no sustentada.",
+      "notes": "Se resume como lectura deportiva de declaraciones dirigenciales; no se afirma una ruptura no sustentada.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Melcochita no cumple con hijas",
+      "story_type": "espectaculos",
+      "summary": "Monserrat puso el tema sobre la mesa: dice que Melcochita no cumple con el alquiler ni la alimentación de sus hijas. La historia sigue caliente, pero aquí toca separar denuncia, versión y prueba.",
+      "speech": "Monserrat puso el tema sobre la mesa: dice que Melcochita no cumple con el alquiler ni la alimentación de sus hijas. La historia sigue caliente, pero aquí toca separar denuncia, versión y prueba.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.54,
+        "y": 0.83,
+        "width": 0.45,
+        "height": 0.15
+      },
+      "key_facts": [
+        "Monserrat acusa a Melcochita",
+        "menciona alquiler y alimentación",
+        "relación terminó hace dos meses"
+      ],
+      "tone_notes": [
+        "picante",
+        "agil",
+        "prudente"
+      ],
+      "safety_notes": "Se presenta como versión de Monserrat y no como hecho probado.",
+      "notes": "Se presenta como versión de Monserrat y no como hecho probado.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -438,7 +438,7 @@
   },
   "audit": {
     "created_at": "2026-04-30T08:51:45",
-    "updated_at": "2026-04-30T09:59:40",
+    "updated_at": "2026-05-01T08:08:42",
     "events": [
       {
         "stage": "discover",
@@ -1866,6 +1866,36 @@
         "stage": "cover_selection_ui",
         "status": "edited",
         "timestamp": "2026-04-30T09:59:40",
+        "details": "Seguimiento de portada actualizado para historia 4: Angie prohíbe despedida de soltero a Jota -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T08:08:42",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T08:08:42",
+        "details": "Seguimiento de portada actualizado para historia 1: La Perlita brilla a nivel mundial -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T08:08:42",
+        "details": "Seguimiento de portada actualizado para historia 2: Trump aplasta a Irán -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T08:08:42",
+        "details": "Seguimiento de portada actualizado para historia 3: Triunfazo de la U en la Copa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T08:08:42",
         "details": "Seguimiento de portada actualizado para historia 4: Angie prohíbe despedida de soltero a Jota -> seguir."
       }
     ]

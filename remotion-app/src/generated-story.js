@@ -1,534 +1,215 @@
 export const generatedStory = {
-  "id": "2026-04-30-daily-rundown-090910",
+  "id": "2026-05-01-daily-rundown-082535",
   "newspaperName": "Resumen de Portadas",
-  "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_00.jpg",
-  "backgroundSrc": "assets/generated/2026-04-30-daily-rundown-090910/background.jpg",
-  "audioSrc": "assets/generated/2026-04-30-daily-rundown-090910/audio.wav",
-  "durationInFrames": 12689,
+  "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_00.jpg",
+  "backgroundSrc": "assets/generated/2026-05-01-daily-rundown-082535/background.jpg",
+  "audioSrc": "assets/generated/2026-05-01-daily-rundown-082535/audio.wav",
+  "durationInFrames": 9715,
   "fps": 30,
   "narratorName": "Thanos",
-  "text": "Hola. Hoy, jueves 30 de abril, revisamos portadas en una fecha que recuerda el asesinato del presidente Luis Miguel Sánchez Cerro en 1933. La agenda llega cargada de política, economía, seguridad y fútbol: vamos diario por diario, directo a lo central. Ahora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes. La JNJ ha comenzado el proceso para elegir al nuevo jefe de la ONPE, que asumirá el cargo el 3 de julio. Esta decisión se toma en un contexto electoral complejo, donde la credibilidad del organismo está en juego. La Fiscalía ha encontrado un pasaporte en la casa de Piero Corvetto, quien estaba bajo investigación. Este hallazgo podría complicar su situación legal en el marco de las investigaciones por corrupción. En Trujillo, sicarios asesinaron al excandidato al Senado, Jorge Luis Alcalde. Los detectives de la policía no descartan que el crimen esté vinculado a un posible caso de extorsión. Ahora entramos a El Comercio. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes. La JNJ ha convocado el proceso de selección para el nuevo jefe de la ONPE, quien asumirá tras la segunda vuelta. Un cambio clave en un momento crítico para el país, donde la confianza electoral está en juego. El presidente Balcázar enfrenta fuertes condenas internacionales por sus comentarios sobre la guerra. Alemania e Israel exigen disculpas, y el gobierno está bajo presión para corregir su postura. Universitario sigue con vida en la Copa Libertadores tras vencer 4-2 a Nacional de Uruguay. La remontada en el Monumental reaviva la esperanza de los cremas en el torneo continental. Ahora entramos a Gestión. Primero miramos la portada completa y despues vamos con sus 6 historias mas fuertes. El mercado de inversiones se ve golpeado por la inflación. Nueve de cada diez opciones de inversión están por debajo de los índices de crecimiento, lo que obliga a los inversionistas a replantear sus estrategias. La inseguridad está cambiando cómo los peruanos compran. El 79% ha modificado sus hábitos de compra en los últimos seis meses, afectando no solo el consumo, sino la percepción de seguridad en el comercio. Santiago Queirolo sigue ampliando su área agrícola. Con una inversión en nuevas hectáreas de uvas, la marca busca consolidarse aún más en el mercado de vinos premium. La expansión es clave para su crecimiento sostenido. El MEF es optimista para el futuro cercano. Con un crecimiento estimado del 3.2% este año, la previsión para la inversión privada es aún más alentadora, con un incremento proyectado del 5.5%. El Consejo Fiscal alerta sobre el incumplimiento de la regla del déficit fiscal. Según el pronóstico, el país no alcanzará las metas previstas en los próximos tres años debido a la falta de disciplina fiscal. La guerra en Irán parece estar lejos de terminar. El conflicto se prolongará más allá de lo esperado, con tensiones internacionales que podrían llevar a una escalada más peligrosa. Ahora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. Rescate con tensión en Lima. La policía liberó a un empresario secuestrado y el caso expone una modalidad que mezcla presión, cobros y miedo. La investigación sigue, pero la alerta ya está encendida. Gamarra entra en modo Día de la Madre con regalos desde 5 soles. Entre ofertas y público en aumento, el emporio apuesta por precios bajos para mover ventas en una de sus campañas más fuertes. En La Victoria ya miran el mercado. Alianza no descarta vender a Eryc Castillo: la “Culebra” levantó su nivel y su cláusula ronda los US$1.5 millones. Ojo con esto: Yahaira le respondió a Daniela y pidió no opinar a la ligera. La salsera dice que no se puede hablar sin fundamentos, y la farándula vuelve a prenderse con nombre propio. Ahora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta. Irán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible. ¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema. Angie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula. Ahora entramos a Líbero. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes. Partido bravo y reacción crema. Universitario venció 4-2 a Nacional en el Monumental y volvió a respirar en la Libertadores: cuando parecía cuesta arriba, apareció la garra copera. Cienciano puso la altura y el carácter. Le ganó 1-0 a Atlético Mineiro en Cusco y el “Papá” celebró un triunfo de peso internacional, de esos que cambian el ánimo del grupo. Guede ya ajusta piezas en Alianza. Con el duelo ante CD Moquegua en la mira, el técnico prepara su oncena y sabe que ser líder no alcanza: en Matute toca sostener el ritmo. Ahora entramos a La República. Primero miramos la portada completa y despues vamos con sus 5 historias mas fuertes. En medio de la crisis ecológica, la comunidad Awajún alza la voz contra la contaminación petrolera en su territorio. El impacto ambiental es grave y la lucha sigue por la justicia en las zonas afectadas. El debate sobre la elección del jefe de la ONPE sigue candente. La JNJ impondrá su decisión sin control civil, lo que abre nuevos cuestionamientos sobre la transparencia del proceso. Los jóvenes se muestran escépticos ante los cambios propuestos al Congreso bicameral. La falta de confianza en las reformas persiste y la desconexión con la ciudadanía es cada vez más evidente. Un crimen atroz en la capital. El empresario y excandidato Jorge Alcalde fue asesinado en circunstancias que aún están bajo investigación. El caso pone de nuevo en la agenda la inseguridad en el país. Una promesa de trabajo se convierte en una pesadilla. Jóvenes fueron engañados con falsas ofertas de empleo en Rusia y terminaron siendo enviados al frente de guerra. La explotación laboral cruza límites peligrosos. Hasta aqui el programa de hoy, 30 de abril de 2026. Revisamos 7 portadas y 28 temas que marcaron la agenda. Gracias por acompanarnos. Nos vemos en la siguiente edicion con mas contexto y sin rodeos.",
+  "text": "Hola. Hoy, viernes 1 de mayo, Día del Trabajo en el Perú, revisamos las portadas con una agenda marcada por política, justicia electoral, economía y fútbol. Vamos diario por diario con lo central y sin rodeos. Ahora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes. La alianza entre Antauro y Roberto Sánchez ha dado que hablar. En 2024, ambos se ofrecieron como aliados en la lucha política. Las primeras señales fueron las caravanas, pero el impacto real será en las urnas. El impedimento de salida de Corvetto sube la apuesta judicial: el exfuncionario de la ONPE enfrenta la presión mientras el proceso electoral sigue bajo el radar de las autoridades. Fossati, en su última polémica, habría solicitado vehículos de alta gama como parte de su contrato. En Universitario, la noticia genera más preguntas sobre la gestión interna. Ahora entramos a El Comercio. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. Los gremios empresariales piden auditoría externa a los sistemas de la ONPE, ante dudas sobre la transparencia del proceso electoral. La tensión crece en medio de una creciente crisis de confianza. El Jurado Nacional de Elecciones ratifica la multa a César Tito Rojas por falsificación de información. Esta medida agrava la situación del candidato y refuerza las sospechas sobre su campaña. Coroccohuayco promete ser un motor de desarrollo económico. La inversión que comenzará en 2028 aspira a generar miles de empleos y aportar al crecimiento del sector minero en el país. El Banco Central de Reserva de Perú lanza una moneda conmemorativa por sus 200 años. Un gesto de reconocimiento a la alianza con EE.UU. que busca fortalecer la relación económica. Ahora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. La justicia le puso candado al viaje: Corvetto no podrá salir del país por 18 meses mientras se revisan presuntas irregularidades electorales. El exjefe de la ONPE queda bajo la lupa. El Día del Trabajo llega con una foto clara: más de 17,5 millones de peruanos tienen empleo. El reto, como siempre, es que la chamba no sea solo cantidad, sino estabilidad y mejores condiciones. En Universitario, el mensaje fue sin anestesia: Velasco dejó mal parado a Fossati y la interna crema vuelve a sonar fuerte. Ahora el club mira opciones y el técnico que llegue deberá entrar con respaldo real. Monserrat puso el tema sobre la mesa: dice que Melcochita no cumple con el alquiler ni la alimentación de sus hijas. La historia sigue caliente, pero aquí toca separar denuncia, versión y prueba. Ahora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes. Golpe judicial para Corvetto: un juez ordenó impedimento de salida por 18 meses mientras avanzan las investigaciones por el caos electoral. La frontera se cierra, y la presión sobre la ONPE vuelve a subir. La campaña por el Día de la Madre viene con caja fuerte: comercios calculan un movimiento de S/4,500 millones. Celulares, ropa, calzado y perfumes aparecen entre los regalos que más jalan. Paolo Guerrero no quiere pausa ni dosificación. Con 42 años, pide jugar ante Moquegua y también frente a Cristal; Alianza tendrá que medir si el deseo alcanza para sostener el ritmo. Monserrat volvió a encender la farándula: acusa a Melcochita de no cubrir alquiler ni alimentación de sus hijas. Él sostiene otra versión, y el cruce ya se volvió un nuevo capítulo familiar en pantalla. Ahora entramos a Líbero. Primero miramos la portada completa y despues vamos con sus 2 historias mas fuertes. Universitario da un paso firme en su camino hacia la Copa Libertadores. Después de ganar a Nacional, el sueño sigue vivo y la próxima parada es Chile. El equipo se mantiene motivado, con la vista en los octavos. Zé Ricardo no oculta su frustración con la situación del equipo. Tras una derrota que duele, el técnico pone en tela de juicio algunos aspectos y exige más compromiso de sus jugadores. Ahora entramos a La República. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes. La Junta Nacional de Justicia se enfrenta al Poder Judicial con una decisión histórica: anular el nombramiento de un juez que habló de corrupción en el sistema judicial. El golpe es fuerte, pero la pregunta es ¿qué sigue? La presión sobre Corvetto aumenta con la prohibición judicial de salir del país. La investigación electoral sigue su curso, y el exjefe de la ONPE ahora enfrenta nuevas restricciones mientras la incertidumbre crece. José Domingo Pérez, conocido por su rol en la lucha anticorrupción, se une ahora a la campaña política de Roberto Sánchez. El movimiento genera expectativas y provoca debates sobre su papel en la política actual. Hasta aqui el programa de hoy, 1 de mayo de 2026. Revisamos 6 portadas y 20 temas que marcaron la agenda. Gracias por acompanarnos. Nos vemos en la siguiente edicion con mas contexto y sin rodeos.",
   "gestures": [
-    "assets/generated/2026-04-30-daily-rundown-090910/gestures/gesture_00.png",
-    "assets/generated/2026-04-30-daily-rundown-090910/gestures/gesture_01.png",
-    "assets/generated/2026-04-30-daily-rundown-090910/gestures/gesture_02.png",
-    "assets/generated/2026-04-30-daily-rundown-090910/gestures/gesture_03.png",
-    "assets/generated/2026-04-30-daily-rundown-090910/gestures/gesture_04.png",
-    "assets/generated/2026-04-30-daily-rundown-090910/gestures/gesture_05.png"
+    "assets/generated/2026-05-01-daily-rundown-082535/gestures/gesture_00.png",
+    "assets/generated/2026-05-01-daily-rundown-082535/gestures/gesture_01.png",
+    "assets/generated/2026-05-01-daily-rundown-082535/gestures/gesture_02.png",
+    "assets/generated/2026-05-01-daily-rundown-082535/gestures/gesture_03.png",
+    "assets/generated/2026-05-01-daily-rundown-082535/gestures/gesture_04.png",
+    "assets/generated/2026-05-01-daily-rundown-082535/gestures/gesture_05.png"
   ],
   "segments": [
     {
       "newspaperName": "Resumen de Portadas",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_00.jpg",
-      "headline": "30 de abril de 2026",
-      "text": "Hola. Hoy, jueves 30 de abril, revisamos portadas en una fecha que recuerda el asesinato del presidente Luis Miguel Sánchez Cerro en 1933. La agenda llega cargada de política, economía, seguridad y fútbol: vamos diario por diario, directo a lo central.",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_00.jpg",
+      "headline": "1 de mayo de 2026",
+      "text": "Hola. Hoy, viernes 1 de mayo, Día del Trabajo en el Perú, revisamos las portadas con una agenda marcada por política, justicia electoral, economía y fútbol. Vamos diario por diario con lo central y sin rodeos.",
       "narratorName": "Thanos",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_00/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_00/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_00/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_00/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_00/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_00/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_00/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_00/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_00/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_00/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_00/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_00/gesture_05.png"
       ],
-      "durationSeconds": 16.72,
+      "durationSeconds": 13.2,
       "coverRegion": null,
       "supportVisual": null,
       "segmentType": "intro"
     },
     {
       "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_01.jpg",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_01.jpg",
       "headline": "Paso a Correo",
       "text": "Ahora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes.",
       "narratorName": "Narrador DBZ",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_01/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_01/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_01/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_01/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_01/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_01/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_01/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_01/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_01/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_01/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_01/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_01/gesture_05.png"
       ],
-      "durationSeconds": 8.32,
+      "durationSeconds": 8.08,
       "coverRegion": null,
       "supportVisual": null,
       "segmentType": "connector"
     },
     {
       "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_02.jpg",
-      "headline": "JNJ inicia proceso para elegir nuevo jefe de ONPE",
-      "text": "La JNJ ha comenzado el proceso para elegir al nuevo jefe de la ONPE, que asumirá el cargo el 3 de julio. Esta decisión se toma en un contexto electoral complejo, donde la credibilidad del organismo está en juego.",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_02.jpg",
+      "headline": "Juntos por Antauro",
+      "text": "La alianza entre Antauro y Roberto Sánchez ha dado que hablar. En 2024, ambos se ofrecieron como aliados en la lucha política. Las primeras señales fueron las caravanas, pero el impacto real será en las urnas.",
       "narratorName": "Beto Ortiz",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_02/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_02/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_02/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_02/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_02/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_02/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_02/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_02/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_02/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_02/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_02/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_02/gesture_05.png"
       ],
-      "durationSeconds": 14.88,
-      "coverRegion": {
-        "x": 0.37,
-        "y": 0.03,
-        "width": 0.3,
-        "height": 0.25
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_03.jpg",
-      "headline": "La Fiscalía halló un pasaporte en la casa de Corvetto",
-      "text": "La Fiscalía ha encontrado un pasaporte en la casa de Piero Corvetto, quien estaba bajo investigación. Este hallazgo podría complicar su situación legal en el marco de las investigaciones por corrupción.",
-      "narratorName": "Jaime Bayly",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_03/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_03/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_03/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_03/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_03/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_03/gesture_05.png"
-      ],
-      "durationSeconds": 11.92,
-      "coverRegion": {
-        "x": 0.69,
-        "y": 0.03,
-        "width": 0.29,
-        "height": 0.16
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Correo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_04.jpg",
-      "headline": "Sicarios asesinan en Trujillo a excandidato al Senado",
-      "text": "En Trujillo, sicarios asesinaron al excandidato al Senado, Jorge Luis Alcalde. Los detectives de la policía no descartan que el crimen esté vinculado a un posible caso de extorsión.",
-      "narratorName": "Reportero Panorama",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_04/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_04/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_04/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_04/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_04/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_04/gesture_05.png"
-      ],
-      "durationSeconds": 13.84,
-      "coverRegion": {
-        "x": 0.69,
-        "y": 0.2,
-        "width": 0.29,
-        "height": 0.08
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "El Comercio",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_05.jpg",
-      "headline": "Paso a El Comercio",
-      "text": "Ahora entramos a El Comercio. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes.",
-      "narratorName": "Skipper",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_05/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_05/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_05/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_05/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_05/gesture_04.png"
-      ],
-      "durationSeconds": 7.920041666666667,
-      "coverRegion": null,
-      "supportVisual": null,
-      "segmentType": "connector"
-    },
-    {
-      "newspaperName": "El Comercio",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_06.jpg",
-      "headline": "Nuevo jefe de la ONPE asumirá tras segunda vuelta",
-      "text": "La JNJ ha convocado el proceso de selección para el nuevo jefe de la ONPE, quien asumirá tras la segunda vuelta. Un cambio clave en un momento crítico para el país, donde la confianza electoral está en juego.",
-      "narratorName": "Beto Ortiz",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_06/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_06/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_06/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_06/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_06/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_06/gesture_05.png"
-      ],
-      "durationSeconds": 15.44,
-      "coverRegion": {
-        "x": 0.05,
-        "y": 0.56,
-        "width": 0.58,
-        "height": 0.12
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "El Comercio",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_07.jpg",
-      "headline": "Israel y Alemania condenan ofensas de Balcázar",
-      "text": "El presidente Balcázar enfrenta fuertes condenas internacionales por sus comentarios sobre la guerra. Alemania e Israel exigen disculpas, y el gobierno está bajo presión para corregir su postura.",
-      "narratorName": "Jaime Bayly",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_07/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_07/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_07/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_07/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_07/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_07/gesture_05.png"
-      ],
-      "durationSeconds": 11.52,
-      "coverRegion": {
-        "x": 0.04,
-        "y": 0.28,
-        "width": 0.68,
-        "height": 0.27
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "El Comercio",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_08.jpg",
-      "headline": "La U vence a Nacional en la Libertadores",
-      "text": "Universitario sigue con vida en la Copa Libertadores tras vencer 4-2 a Nacional de Uruguay. La remontada en el Monumental reaviva la esperanza de los cremas en el torneo continental.",
-      "narratorName": "MrPeet",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_08/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_08/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_08/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_08/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_08/gesture_04.png"
-      ],
-      "durationSeconds": 9.36,
+      "durationSeconds": 15.92,
       "coverRegion": {
         "x": 0.22,
-        "y": 0.78,
-        "width": 0.49,
-        "height": 0.16
+        "y": 0.11,
+        "width": 0.76,
+        "height": 0.82
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "Gestión",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_09.jpg",
-      "headline": "Paso a Gestión",
-      "text": "Ahora entramos a Gestión. Primero miramos la portada completa y despues vamos con sus 6 historias mas fuertes.",
-      "narratorName": "Ironman",
+      "newspaperName": "Correo",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_03.jpg",
+      "headline": "Piero Corvetto impedido de salir del país",
+      "text": "El impedimento de salida de Corvetto sube la apuesta judicial: el exfuncionario de la ONPE enfrenta la presión mientras el proceso electoral sigue bajo el radar de las autoridades.",
+      "narratorName": "Beto Ortiz",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_09/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_09/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_09/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_09/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_09/gesture_04.png"
-      ],
-      "durationSeconds": 5.92,
-      "coverRegion": null,
-      "supportVisual": null,
-      "segmentType": "connector"
-    },
-    {
-      "newspaperName": "Gestión",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_10.jpg",
-      "headline": "Nueve de cada 10 opciones de inversión ahora rinden por debajo de la inflación",
-      "text": "El mercado de inversiones se ve golpeado por la inflación. Nueve de cada diez opciones de inversión están por debajo de los índices de crecimiento, lo que obliga a los inversionistas a replantear sus estrategias.",
-      "narratorName": "Jaime Bayly",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_10/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_10/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_10/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_10/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_10/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_10/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_03/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_03/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_03/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_03/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_03/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_03/gesture_05.png"
       ],
       "durationSeconds": 11.84,
       "coverRegion": {
         "x": 0.05,
-        "y": 0.2,
-        "width": 0.69,
-        "height": 0.4
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Gestión",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_11.jpg",
-      "headline": "Peruanos cambiaron hábitos de compra por inseguridad",
-      "text": "La inseguridad está cambiando cómo los peruanos compran. El 79% ha modificado sus hábitos de compra en los últimos seis meses, afectando no solo el consumo, sino la percepción de seguridad en el comercio.",
-      "narratorName": "Thanos",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_11/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_11/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_11/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_11/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_11/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_11/gesture_05.png"
-      ],
-      "durationSeconds": 14.48,
-      "coverRegion": {
-        "x": 0.77,
-        "y": 0.2,
-        "width": 0.2,
-        "height": 0.22
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Gestión",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_12.jpg",
-      "headline": "Santiago Queirolo sumará 40 nuevas hectáreas de uvas",
-      "text": "Santiago Queirolo sigue ampliando su área agrícola. Con una inversión en nuevas hectáreas de uvas, la marca busca consolidarse aún más en el mercado de vinos premium. La expansión es clave para su crecimiento sostenido.",
-      "narratorName": "Voicebox Narrator",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_12/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_12/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_12/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_12/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_12/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_12/gesture_05.png"
-      ],
-      "durationSeconds": 11.52,
-      "coverRegion": {
-        "x": 0.77,
-        "y": 0.52,
-        "width": 0.2,
-        "height": 0.27
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Gestión",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_13.jpg",
-      "headline": "MEF mantiene crecimiento de 3.2% y prevé que la inversión privada crezca 5.5%",
-      "text": "El MEF es optimista para el futuro cercano. Con un crecimiento estimado del 3.2% este año, la previsión para la inversión privada es aún más alentadora, con un incremento proyectado del 5.5%.",
-      "narratorName": "Jaime Bayly",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_13/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_13/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_13/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_13/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_13/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_13/gesture_05.png"
-      ],
-      "durationSeconds": 12.48,
-      "coverRegion": {
-        "x": 0.04,
-        "y": 0.68,
-        "width": 0.44,
+        "y": 0.38,
+        "width": 0.15,
         "height": 0.25
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "Gestión",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_14.jpg",
-      "headline": "Se incumpliría regla de déficit fiscal este y los próximos tres años",
-      "text": "El Consejo Fiscal alerta sobre el incumplimiento de la regla del déficit fiscal. Según el pronóstico, el país no alcanzará las metas previstas en los próximos tres años debido a la falta de disciplina fiscal.",
-      "narratorName": "Voicebox Narrator",
+      "newspaperName": "Correo",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_04.jpg",
+      "headline": "Velasco: Fossati pidió autos de alta gama",
+      "text": "Fossati, en su última polémica, habría solicitado vehículos de alta gama como parte de su contrato. En Universitario, la noticia genera más preguntas sobre la gestión interna.",
+      "narratorName": "MrPeet",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_14/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_14/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_14/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_14/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_14/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_14/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_04/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_04/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_04/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_04/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_04/gesture_04.png"
       ],
-      "durationSeconds": 9.76,
+      "durationSeconds": 8.88,
       "coverRegion": {
-        "x": 0.51,
+        "x": 0.05,
         "y": 0.68,
-        "width": 0.23,
-        "height": 0.24
+        "width": 0.15,
+        "height": 0.25
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "Gestión",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_15.jpg",
-      "headline": "Guerra prolongada en Irán",
-      "text": "La guerra en Irán parece estar lejos de terminar. El conflicto se prolongará más allá de lo esperado, con tensiones internacionales que podrían llevar a una escalada más peligrosa.",
-      "narratorName": "Narrador DBZ",
+      "newspaperName": "El Comercio",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_05.jpg",
+      "headline": "Paso a El Comercio",
+      "text": "Ahora entramos a El Comercio. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
+      "narratorName": "Skipper",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_15/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_15/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_15/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_15/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_15/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_15/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_05/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_05/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_05/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_05/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_05/gesture_04.png"
       ],
-      "durationSeconds": 12.32,
-      "coverRegion": {
-        "x": 0.77,
-        "y": 0.81,
-        "width": 0.2,
-        "height": 0.14
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_16.jpg",
-      "headline": "Paso a Ojo",
-      "text": "Ahora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
-      "narratorName": "Thanos",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_16/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_16/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_16/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_16/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_16/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_16/gesture_05.png"
-      ],
-      "durationSeconds": 6.32,
+      "durationSeconds": 6.88,
       "coverRegion": null,
       "supportVisual": null,
       "segmentType": "connector"
     },
     {
-      "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_17.jpg",
-      "headline": "Policía rescata a empresario secuestrado",
-      "text": "Rescate con tensión en Lima. La policía liberó a un empresario secuestrado y el caso expone una modalidad que mezcla presión, cobros y miedo. La investigación sigue, pero la alerta ya está encendida.",
-      "narratorName": "Reportero Panorama",
+      "newspaperName": "El Comercio",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_06.jpg",
+      "headline": "Gremios demandan auditoría a sistemas de la ONPE",
+      "text": "Los gremios empresariales piden auditoría externa a los sistemas de la ONPE, ante dudas sobre la transparencia del proceso electoral. La tensión crece en medio de una creciente crisis de confianza.",
+      "narratorName": "Beto Ortiz",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_17/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_17/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_17/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_17/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_17/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_17/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_06/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_06/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_06/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_06/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_06/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_06/gesture_05.png"
       ],
-      "durationSeconds": 16.8,
+      "durationSeconds": 14.24,
       "coverRegion": {
-        "x": 0.0,
-        "y": 0.16,
-        "width": 1.0,
-        "height": 0.67
+        "x": 0.05,
+        "y": 0.26,
+        "width": 0.67,
+        "height": 0.33
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_18.jpg",
-      "headline": "Regalos para mamá salen desde 5 soles",
-      "text": "Gamarra entra en modo Día de la Madre con regalos desde 5 soles. Entre ofertas y público en aumento, el emporio apuesta por precios bajos para mover ventas en una de sus campañas más fuertes.",
-      "narratorName": "Thanos",
+      "newspaperName": "El Comercio",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_07.jpg",
+      "headline": "JNE confirma multa a César Tito Rojas",
+      "text": "El Jurado Nacional de Elecciones ratifica la multa a César Tito Rojas por falsificación de información. Esta medida agrava la situación del candidato y refuerza las sospechas sobre su campaña.",
+      "narratorName": "Beto Ortiz",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_18/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_18/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_18/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_18/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_18/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_18/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_07/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_07/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_07/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_07/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_07/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_07/gesture_05.png"
       ],
-      "durationSeconds": 10.8,
+      "durationSeconds": 13.68,
       "coverRegion": {
-        "x": 0.67,
-        "y": 0.02,
-        "width": 0.31,
-        "height": 0.13
+        "x": 0.76,
+        "y": 0.29,
+        "width": 0.22,
+        "height": 0.26
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_19.jpg",
-      "headline": "Sueltan a la Culebra",
-      "text": "En La Victoria ya miran el mercado. Alianza no descarta vender a Eryc Castillo: la “Culebra” levantó su nivel y su cláusula ronda los US$1.5 millones.",
-      "narratorName": "gonzaloNuñes",
+      "newspaperName": "El Comercio",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_08.jpg",
+      "headline": "Proyecto Coroccohuayco produciría desde 2028",
+      "text": "Coroccohuayco promete ser un motor de desarrollo económico. La inversión que comenzará en 2028 aspira a generar miles de empleos y aportar al crecimiento del sector minero en el país.",
+      "narratorName": "Jaime Bayly",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_19/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_19/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_19/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_19/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_19/gesture_04.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_08/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_08/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_08/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_08/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_08/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_08/gesture_05.png"
       ],
-      "durationSeconds": 10.8,
+      "durationSeconds": 11.36,
       "coverRegion": {
-        "x": 0.0,
-        "y": 0.83,
-        "width": 0.32,
-        "height": 0.15
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Ojo",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_20.jpg",
-      "headline": "Yahaira cuadra a Daniela",
-      "text": "Ojo con esto: Yahaira le respondió a Daniela y pidió no opinar a la ligera. La salsera dice que no se puede hablar sin fundamentos, y la farándula vuelve a prenderse con nombre propio.",
-      "narratorName": "Reportero Magaly",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_20/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_20/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_20/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_20/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_20/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_20/gesture_05.png"
-      ],
-      "durationSeconds": 11.84,
-      "coverRegion": {
-        "x": 0.65,
-        "y": 0.83,
-        "width": 0.33,
-        "height": 0.14
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_21.jpg",
-      "headline": "Paso a Trome",
-      "text": "Ahora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
-      "narratorName": "Narrador DBZ",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_21/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_21/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_21/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_21/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_21/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_21/gesture_05.png"
-      ],
-      "durationSeconds": 8.16,
-      "coverRegion": null,
-      "supportVisual": null,
-      "segmentType": "connector"
-    },
-    {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_22.jpg",
-      "headline": "La Perlita brilla a nivel mundial",
-      "text": "La Perla, restaurante de Barranco, recibe un reconocimiento mundial tras ser destacado por Conde Nast Traveler. El local que cautivó a Jeff Bezos ahora brilla entre los mejores restaurantes del planeta.",
-      "narratorName": "Thanos",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_22/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_22/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_22/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_22/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_22/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_22/gesture_05.png"
-      ],
-      "durationSeconds": 13.36,
-      "coverRegion": {
-        "x": 0.08,
-        "y": 0.83,
+        "x": 0.05,
+        "y": 0.88,
         "width": 0.46,
         "height": 0.12
       },
@@ -536,175 +217,185 @@ export const generatedStory = {
       "segmentType": "story"
     },
     {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_23.jpg",
-      "headline": "Irán vive infierno por guerra y escasez",
-      "text": "Irán atraviesa un caos por la guerra y escasez. Los disturbios internos crecen mientras la crisis económica se intensifica, dejando a millones sin empleo. La situación parece cada vez más insostenible.",
-      "narratorName": "Narrador DBZ",
+      "newspaperName": "El Comercio",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_09.jpg",
+      "headline": "BCR lanza moneda por 200 años con EE.UU",
+      "text": "El Banco Central de Reserva de Perú lanza una moneda conmemorativa por sus 200 años. Un gesto de reconocimiento a la alianza con EE.UU. que busca fortalecer la relación económica.",
+      "narratorName": "Jaime Bayly",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_23/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_23/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_23/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_23/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_23/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_23/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_09/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_09/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_09/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_09/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_09/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_09/gesture_05.png"
       ],
-      "durationSeconds": 14.32,
+      "durationSeconds": 10.64,
       "coverRegion": {
-        "x": 0.31,
-        "y": 0.19,
-        "width": 0.67,
-        "height": 0.61
+        "x": 0.05,
+        "y": 0.59,
+        "width": 0.68,
+        "height": 0.28
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_24.jpg",
-      "headline": "Triunfazo de la U en la Copa Libertadores",
-      "text": "¡A puro corazón! Universitario goleó 4-2 a Nacional de Uruguay y asegura su clasificación en la Copa Libertadores. Un triunfo que llena de esperanza a la hinchada crema.",
-      "narratorName": "MrPeet",
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_10.jpg",
+      "headline": "Paso a Ojo",
+      "text": "Ahora entramos a Ojo. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
+      "narratorName": "Ironman",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_24/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_24/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_24/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_24/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_24/gesture_04.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_10/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_10/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_10/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_10/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_10/gesture_04.png"
       ],
-      "durationSeconds": 9.92,
-      "coverRegion": {
-        "x": 0.0,
-        "y": 0.2,
-        "width": 0.31,
-        "height": 0.66
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Trome",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_25.jpg",
-      "headline": "Jota no iría a una despedida de soltero",
-      "text": "Angie Arizaga revela que su pareja, Jota Benz, no iría a una despedida de soltero. La discusión sobre la relación sigue siendo tema de conversación entre los fanáticos de la farándula.",
-      "narratorName": "Reportero Magaly",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_25/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_25/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_25/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_25/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_25/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_25/gesture_05.png"
-      ],
-      "durationSeconds": 11.68,
-      "coverRegion": {
-        "x": 0.59,
-        "y": 0.83,
-        "width": 0.39,
-        "height": 0.14
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Líbero",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_26.jpg",
-      "headline": "Paso a Líbero",
-      "text": "Ahora entramos a Líbero. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes.",
-      "narratorName": "Skipper",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_26/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_26/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_26/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_26/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_26/gesture_04.png"
-      ],
-      "durationSeconds": 6.8,
+      "durationSeconds": 5.76,
       "coverRegion": null,
       "supportVisual": null,
       "segmentType": "connector"
     },
     {
-      "newspaperName": "Líbero",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_27.jpg",
-      "headline": "Garra y triunfo de Universitario",
-      "text": "Partido bravo y reacción crema. Universitario venció 4-2 a Nacional en el Monumental y volvió a respirar en la Libertadores: cuando parecía cuesta arriba, apareció la garra copera.",
-      "narratorName": "gonzaloNuñes",
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_11.jpg",
+      "headline": "Corvetto no podrá salir del país",
+      "text": "La justicia le puso candado al viaje: Corvetto no podrá salir del país por 18 meses mientras se revisan presuntas irregularidades electorales. El exjefe de la ONPE queda bajo la lupa.",
+      "narratorName": "Beto Ortiz",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_27/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_27/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_27/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_27/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_27/gesture_04.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_11/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_11/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_11/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_11/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_11/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_11/gesture_05.png"
       ],
-      "durationSeconds": 10.96,
-      "coverRegion": {
-        "x": 0.0,
-        "y": 0.0,
-        "width": 0.72,
-        "height": 0.73
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "Líbero",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_28.jpg",
-      "headline": "Cienciano lo celebra",
-      "text": "Cienciano puso la altura y el carácter. Le ganó 1-0 a Atlético Mineiro en Cusco y el “Papá” celebró un triunfo de peso internacional, de esos que cambian el ánimo del grupo.",
-      "narratorName": "MrPeet",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_28/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_28/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_28/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_28/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_28/gesture_04.png"
-      ],
-      "durationSeconds": 8.64,
+      "durationSeconds": 12.96,
       "coverRegion": {
         "x": 0.02,
-        "y": 0.76,
-        "width": 0.27,
-        "height": 0.1
+        "y": 0.18,
+        "width": 0.96,
+        "height": 0.62
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "Líbero",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_29.jpg",
-      "headline": "Guede ya tiene su oncena",
-      "text": "Guede ya ajusta piezas en Alianza. Con el duelo ante CD Moquegua en la mira, el técnico prepara su oncena y sabe que ser líder no alcanza: en Matute toca sostener el ritmo.",
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_12.jpg",
+      "headline": "Chambas celebran su día",
+      "text": "El Día del Trabajo llega con una foto clara: más de 17,5 millones de peruanos tienen empleo. El reto, como siempre, es que la chamba no sea solo cantidad, sino estabilidad y mejores condiciones.",
+      "narratorName": "Thanos",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_12/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_12/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_12/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_12/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_12/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_12/gesture_05.png"
+      ],
+      "durationSeconds": 11.68,
+      "coverRegion": {
+        "x": 0.68,
+        "y": 0.03,
+        "width": 0.31,
+        "height": 0.14
+      },
+      "supportVisual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Empleo por actividad",
+        "points": [
+          {
+            "label": "Servicios",
+            "value": 41.7
+          },
+          {
+            "label": "Agro/pesca/minería",
+            "value": 24.0
+          },
+          {
+            "label": "Comercio",
+            "value": 19.0
+          },
+          {
+            "label": "Manufactura",
+            "value": 8.6
+          },
+          {
+            "label": "Construcción",
+            "value": 6.7
+          }
+        ],
+        "subtitle": "Distribución de población ocupada",
+        "unit": "%",
+        "highlight_label": "Servicios lidera",
+        "data_source_note": "Página interna de Ojo con datos atribuidos al INEI."
+      },
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_13.jpg",
+      "headline": "Cuadran a Fossati",
+      "text": "En Universitario, el mensaje fue sin anestesia: Velasco dejó mal parado a Fossati y la interna crema vuelve a sonar fuerte. Ahora el club mira opciones y el técnico que llegue deberá entrar con respaldo real.",
       "narratorName": "gonzaloNuñes",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_29/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_29/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_29/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_29/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_29/gesture_04.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_13/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_13/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_13/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_13/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_13/gesture_04.png"
       ],
-      "durationSeconds": 10.0,
+      "durationSeconds": 13.76,
       "coverRegion": {
-        "x": 0.5,
-        "y": 0.76,
-        "width": 0.19,
-        "height": 0.1
+        "x": 0.04,
+        "y": 0.79,
+        "width": 0.44,
+        "height": 0.19
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "La República",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_30.jpg",
-      "headline": "Paso a La República",
-      "text": "Ahora entramos a La República. Primero miramos la portada completa y despues vamos con sus 5 historias mas fuertes.",
-      "narratorName": "Ironman",
+      "newspaperName": "Ojo",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_14.jpg",
+      "headline": "Melcochita no cumple con hijas",
+      "text": "Monserrat puso el tema sobre la mesa: dice que Melcochita no cumple con el alquiler ni la alimentación de sus hijas. La historia sigue caliente, pero aquí toca separar denuncia, versión y prueba.",
+      "narratorName": "Reportero Magaly",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_30/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_30/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_30/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_30/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_30/gesture_04.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_14/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_14/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_14/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_14/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_14/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_14/gesture_05.png"
+      ],
+      "durationSeconds": 12.4,
+      "coverRegion": {
+        "x": 0.54,
+        "y": 0.83,
+        "width": 0.45,
+        "height": 0.15
+      },
+      "supportVisual": null,
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_15.jpg",
+      "headline": "Paso a Trome",
+      "text": "Ahora entramos a Trome. Primero miramos la portada completa y despues vamos con sus 4 historias mas fuertes.",
+      "narratorName": "Thanos",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_15/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_15/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_15/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_15/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_15/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_15/gesture_05.png"
       ],
       "durationSeconds": 6.96,
       "coverRegion": null,
@@ -712,140 +403,269 @@ export const generatedStory = {
       "segmentType": "connector"
     },
     {
-      "newspaperName": "La República",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_31.jpg",
-      "headline": "Comunidad Awajún protesta por contaminación de petróleo",
-      "text": "En medio de la crisis ecológica, la comunidad Awajún alza la voz contra la contaminación petrolera en su territorio. El impacto ambiental es grave y la lucha sigue por la justicia en las zonas afectadas.",
-      "narratorName": "Thanos",
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_16.jpg",
+      "headline": "Cierran fronteras a Corvetto",
+      "text": "Golpe judicial para Corvetto: un juez ordenó impedimento de salida por 18 meses mientras avanzan las investigaciones por el caos electoral. La frontera se cierra, y la presión sobre la ONPE vuelve a subir.",
+      "narratorName": "Beto Ortiz",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_31/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_31/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_31/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_31/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_31/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_31/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_16/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_16/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_16/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_16/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_16/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_16/gesture_05.png"
       ],
-      "durationSeconds": 13.28,
+      "durationSeconds": 15.52,
       "coverRegion": {
-        "x": 0.04,
-        "y": 0.55,
-        "width": 0.92,
+        "x": 0.02,
+        "y": 0.21,
+        "width": 0.76,
+        "height": 0.62
+      },
+      "supportVisual": null,
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_17.jpg",
+      "headline": "Ventas crecerán por Día de la Madre",
+      "text": "La campaña por el Día de la Madre viene con caja fuerte: comercios calculan un movimiento de S/4,500 millones. Celulares, ropa, calzado y perfumes aparecen entre los regalos que más jalan.",
+      "narratorName": "Jaime Bayly",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_17/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_17/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_17/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_17/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_17/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_17/gesture_05.png"
+      ],
+      "durationSeconds": 12.4,
+      "coverRegion": {
+        "x": 0.22,
+        "y": 0.82,
+        "width": 0.55,
+        "height": 0.13
+      },
+      "supportVisual": null,
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_18.jpg",
+      "headline": "Paolo Guerrero pide seguir titular en Alianza",
+      "text": "Paolo Guerrero no quiere pausa ni dosificación. Con 42 años, pide jugar ante Moquegua y también frente a Cristal; Alianza tendrá que medir si el deseo alcanza para sostener el ritmo.",
+      "narratorName": "MrPeet",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_18/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_18/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_18/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_18/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_18/gesture_04.png"
+      ],
+      "durationSeconds": 11.04,
+      "coverRegion": {
+        "x": 0.79,
+        "y": 0.24,
+        "width": 0.19,
+        "height": 0.47
+      },
+      "supportVisual": null,
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Trome",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_19.jpg",
+      "headline": "Monserrat acusa a Melcochita",
+      "text": "Monserrat volvió a encender la farándula: acusa a Melcochita de no cubrir alquiler ni alimentación de sus hijas. Él sostiene otra versión, y el cruce ya se volvió un nuevo capítulo familiar en pantalla.",
+      "narratorName": "Reportero Magaly",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_19/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_19/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_19/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_19/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_19/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_19/gesture_05.png"
+      ],
+      "durationSeconds": 13.84,
+      "coverRegion": {
+        "x": 0.78,
+        "y": 0.74,
+        "width": 0.2,
         "height": 0.24
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
-      "newspaperName": "La República",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_32.jpg",
-      "headline": "JNJ impondrá jefe de ONPE sin control civil",
-      "text": "El debate sobre la elección del jefe de la ONPE sigue candente. La JNJ impondrá su decisión sin control civil, lo que abre nuevos cuestionamientos sobre la transparencia del proceso.",
-      "narratorName": "Beto Ortiz",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_32/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_32/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_32/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_32/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_32/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_32/gesture_05.png"
-      ],
-      "durationSeconds": 11.6,
-      "coverRegion": {
-        "x": 0.03,
-        "y": 0.22,
-        "width": 0.89,
-        "height": 0.33
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "La República",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_33.jpg",
-      "headline": "Jóvenes desconfían de cambios en Congreso bicameral",
-      "text": "Los jóvenes se muestran escépticos ante los cambios propuestos al Congreso bicameral. La falta de confianza en las reformas persiste y la desconexión con la ciudadanía es cada vez más evidente.",
-      "narratorName": "Jaime Bayly",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_33/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_33/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_33/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_33/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_33/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_33/gesture_05.png"
-      ],
-      "durationSeconds": 10.32,
-      "coverRegion": {
-        "x": 0.03,
-        "y": 0.84,
-        "width": 0.29,
-        "height": 0.1
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "La República",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_34.jpg",
-      "headline": "Asesinan a empresario y excandidato Jorge Alcalde",
-      "text": "Un crimen atroz en la capital. El empresario y excandidato Jorge Alcalde fue asesinado en circunstancias que aún están bajo investigación. El caso pone de nuevo en la agenda la inseguridad en el país.",
-      "narratorName": "Reportero Panorama",
-      "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_34/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_34/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_34/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_34/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_34/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_34/gesture_05.png"
-      ],
-      "durationSeconds": 14.72,
-      "coverRegion": {
-        "x": 0.37,
-        "y": 0.84,
-        "width": 0.27,
-        "height": 0.1
-      },
-      "supportVisual": null,
-      "segmentType": "story"
-    },
-    {
-      "newspaperName": "La República",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_35.jpg",
-      "headline": "Promesa de trabajo en Rusia terminó en el frente de guerra",
-      "text": "Una promesa de trabajo se convierte en una pesadilla. Jóvenes fueron engañados con falsas ofertas de empleo en Rusia y terminaron siendo enviados al frente de guerra. La explotación laboral cruza límites peligrosos.",
+      "newspaperName": "Líbero",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_20.jpg",
+      "headline": "Paso a Líbero",
+      "text": "Ahora entramos a Líbero. Primero miramos la portada completa y despues vamos con sus 2 historias mas fuertes.",
       "narratorName": "Narrador DBZ",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_35/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_35/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_35/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_35/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_35/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_35/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_20/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_20/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_20/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_20/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_20/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_20/gesture_05.png"
+      ],
+      "durationSeconds": 7.52,
+      "coverRegion": null,
+      "supportVisual": null,
+      "segmentType": "connector"
+    },
+    {
+      "newspaperName": "Líbero",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_21.jpg",
+      "headline": "Universitario sueña con la Copa",
+      "text": "Universitario da un paso firme en su camino hacia la Copa Libertadores. Después de ganar a Nacional, el sueño sigue vivo y la próxima parada es Chile. El equipo se mantiene motivado, con la vista en los octavos.",
+      "narratorName": "gonzaloNuñes",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_21/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_21/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_21/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_21/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_21/gesture_04.png"
+      ],
+      "durationSeconds": 12.88,
+      "coverRegion": {
+        "x": 0.02,
+        "y": 0.12,
+        "width": 0.75,
+        "height": 0.71
+      },
+      "supportVisual": null,
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "Líbero",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_22.jpg",
+      "headline": "Zé Ricardo está molesto",
+      "text": "Zé Ricardo no oculta su frustración con la situación del equipo. Tras una derrota que duele, el técnico pone en tela de juicio algunos aspectos y exige más compromiso de sus jugadores.",
+      "narratorName": "MrPeet",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_22/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_22/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_22/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_22/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_22/gesture_04.png"
+      ],
+      "durationSeconds": 8.72,
+      "coverRegion": {
+        "x": 0.49,
+        "y": 0.86,
+        "width": 0.24,
+        "height": 0.14
+      },
+      "supportVisual": null,
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "La República",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_23.jpg",
+      "headline": "Paso a La República",
+      "text": "Ahora entramos a La República. Primero miramos la portada completa y despues vamos con sus 3 historias mas fuertes.",
+      "narratorName": "Skipper",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_23/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_23/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_23/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_23/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_23/gesture_04.png"
+      ],
+      "durationSeconds": 7.28,
+      "coverRegion": null,
+      "supportVisual": null,
+      "segmentType": "connector"
+    },
+    {
+      "newspaperName": "La República",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_24.jpg",
+      "headline": "JNJ golpea al Poder Judicial",
+      "text": "La Junta Nacional de Justicia se enfrenta al Poder Judicial con una decisión histórica: anular el nombramiento de un juez que habló de corrupción en el sistema judicial. El golpe es fuerte, pero la pregunta es ¿qué sigue?",
+      "narratorName": "Beto Ortiz",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_24/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_24/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_24/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_24/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_24/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_24/gesture_05.png"
       ],
       "durationSeconds": 14.96,
       "coverRegion": {
-        "x": 0.72,
-        "y": 0.84,
-        "width": 0.25,
-        "height": 0.1
+        "x": 0.03,
+        "y": 0.22,
+        "width": 0.71,
+        "height": 0.36
+      },
+      "supportVisual": null,
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "La República",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_25.jpg",
+      "headline": "Corvetto se allana y juez le prohíbe salir del país",
+      "text": "La presión sobre Corvetto aumenta con la prohibición judicial de salir del país. La investigación electoral sigue su curso, y el exjefe de la ONPE ahora enfrenta nuevas restricciones mientras la incertidumbre crece.",
+      "narratorName": "Beto Ortiz",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_25/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_25/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_25/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_25/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_25/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_25/gesture_05.png"
+      ],
+      "durationSeconds": 15.52,
+      "coverRegion": {
+        "x": 0.68,
+        "y": 0.49,
+        "width": 0.29,
+        "height": 0.19
+      },
+      "supportVisual": null,
+      "segmentType": "story"
+    },
+    {
+      "newspaperName": "La República",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_26.jpg",
+      "headline": "José Domingo Pérez se une a campaña de Roberto Sánchez",
+      "text": "José Domingo Pérez, conocido por su rol en la lucha anticorrupción, se une ahora a la campaña política de Roberto Sánchez. El movimiento genera expectativas y provoca debates sobre su papel en la política actual.",
+      "narratorName": "Beto Ortiz",
+      "gestures": [
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_26/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_26/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_26/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_26/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_26/gesture_04.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_26/gesture_05.png"
+      ],
+      "durationSeconds": 14.08,
+      "coverRegion": {
+        "x": 0.68,
+        "y": 0.72,
+        "width": 0.29,
+        "height": 0.25
       },
       "supportVisual": null,
       "segmentType": "story"
     },
     {
       "newspaperName": "Cierre",
-      "coverSrc": "assets/generated/2026-04-30-daily-rundown-090910/covers/cover_36.jpg",
+      "coverSrc": "assets/generated/2026-05-01-daily-rundown-082535/covers/cover_27.jpg",
       "headline": "Cierre del programa",
-      "text": "Hasta aqui el programa de hoy, 30 de abril de 2026. Revisamos 7 portadas y 28 temas que marcaron la agenda. Gracias por acompanarnos. Nos vemos en la siguiente edicion con mas contexto y sin rodeos.",
-      "narratorName": "Thanos",
+      "text": "Hasta aqui el programa de hoy, 1 de mayo de 2026. Revisamos 6 portadas y 20 temas que marcaron la agenda. Gracias por acompanarnos. Nos vemos en la siguiente edicion con mas contexto y sin rodeos.",
+      "narratorName": "Ironman",
       "gestures": [
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_36/gesture_00.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_36/gesture_01.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_36/gesture_02.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_36/gesture_03.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_36/gesture_04.png",
-        "assets/generated/2026-04-30-daily-rundown-090910/segment_gestures/segment_36/gesture_05.png"
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_27/gesture_00.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_27/gesture_01.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_27/gesture_02.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_27/gesture_03.png",
+        "assets/generated/2026-05-01-daily-rundown-082535/segment_gestures/segment_27/gesture_04.png"
       ],
-      "durationSeconds": 12.48,
+      "durationSeconds": 11.84,
       "coverRegion": null,
       "supportVisual": null,
       "segmentType": "outro"
@@ -853,884 +673,664 @@ export const generatedStory = {
   ],
   "subtitleSegments": [
     {
-      "text": "Hola.\nHoy, jueves 30 de abril,",
+      "text": "Hola.\nHoy, viernes 1 de mayo,",
       "start": 0.0,
-      "end": 2.031
+      "end": 1.876
     },
     {
-      "text": "revisamos portadas en\nuna fecha que recuerda",
-      "start": 2.031,
-      "end": 5.009
+      "text": "Día del Trabajo en el\nPerú, revisamos las",
+      "start": 1.876,
+      "end": 4.529
     },
     {
-      "text": "el asesinato del\npresidente Luis Miguel",
-      "start": 5.009,
-      "end": 7.649
+      "text": "portadas con una agenda\nmarcada por política,",
+      "start": 4.529,
+      "end": 7.441
     },
     {
-      "text": "Sánchez Cerro en 1933.\nLa agenda llega cargada",
-      "start": 7.649,
-      "end": 10.763
+      "text": "justicia electoral,\neconomía y fútbol.",
+      "start": 7.441,
+      "end": 9.9
     },
     {
-      "text": "de política, economía,\nseguridad y fútbol:",
-      "start": 10.763,
-      "end": 13.606
+      "text": "Vamos diario por diario\ncon lo central y sin",
+      "start": 9.9,
+      "end": 12.747
     },
     {
-      "text": "vamos diario por diario,\ndirecto a lo central.",
-      "start": 13.606,
-      "end": 16.72
+      "text": "rodeos.",
+      "start": 12.747,
+      "end": 13.2
     },
     {
       "text": "Ahora entramos a Correo.\nPrimero miramos la",
-      "start": 16.72,
-      "end": 20.064
+      "start": 13.2,
+      "end": 16.447
     },
     {
       "text": "portada completa y\ndespues vamos con sus 3",
-      "start": 20.064,
-      "end": 23.329
+      "start": 16.447,
+      "end": 19.619
     },
     {
       "text": "historias mas fuertes.",
-      "start": 23.329,
-      "end": 25.04
+      "start": 19.619,
+      "end": 21.28
     },
     {
-      "text": "La JNJ ha comenzado el\nproceso para elegir al",
-      "start": 25.04,
-      "end": 28.259
+      "text": "La alianza entre Antauro\ny Roberto Sánchez ha",
+      "start": 21.28,
+      "end": 24.775
     },
     {
-      "text": "nuevo jefe de la ONPE,\nque asumirá el cargo el",
-      "start": 28.259,
-      "end": 31.55
+      "text": "dado que hablar.\nEn 2024, ambos se",
+      "start": 24.775,
+      "end": 27.415
     },
     {
-      "text": "3 de julio.\nEsta decisión se toma en",
-      "start": 31.55,
-      "end": 34.125
+      "text": "ofrecieron como aliados\nen la lucha política.",
+      "start": 27.415,
+      "end": 30.91
     },
     {
-      "text": "un contexto electoral\ncomplejo, donde la",
-      "start": 34.125,
-      "end": 36.987
+      "text": "Las primeras señales\nfueron las caravanas,",
+      "start": 30.91,
+      "end": 34.171
     },
     {
-      "text": "credibilidad del\norganismo está en juego.",
-      "start": 36.987,
-      "end": 39.92
+      "text": "pero el impacto real\nserá en las urnas.",
+      "start": 34.171,
+      "end": 37.2
     },
     {
-      "text": "La Fiscalía ha\nencontrado un pasaporte",
-      "start": 39.92,
-      "end": 42.208
+      "text": "El impedimento de salida\nde Corvetto sube la",
+      "start": 37.2,
+      "end": 40.16
     },
     {
-      "text": "en la casa de Piero\nCorvetto, quien estaba",
-      "start": 42.208,
-      "end": 44.736
+      "text": "apuesta judicial: el\nexfuncionario de la ONPE",
+      "start": 40.16,
+      "end": 43.187
     },
     {
-      "text": "bajo investigación.\nEste hallazgo podría",
-      "start": 44.736,
-      "end": 47.144
+      "text": "enfrenta la presión\nmientras el proceso",
+      "start": 43.187,
+      "end": 45.811
     },
     {
-      "text": "complicar su situación\nlegal en el marco de las",
-      "start": 47.144,
-      "end": 49.974
+      "text": "electoral sigue bajo el\nradar de las",
+      "start": 45.811,
+      "end": 48.233
     },
     {
-      "text": "investigaciones por\ncorrupción.",
-      "start": 49.974,
-      "end": 51.84
+      "text": "autoridades.",
+      "start": 48.233,
+      "end": 49.04
     },
     {
-      "text": "En Trujillo, sicarios\nasesinaron al",
-      "start": 51.84,
-      "end": 54.577
+      "text": "Fossati, en su última\npolémica, habría",
+      "start": 49.04,
+      "end": 51.013
     },
     {
-      "text": "excandidato al Senado,\nJorge Luis Alcalde.",
-      "start": 54.577,
-      "end": 57.861
+      "text": "solicitado vehículos de\nalta gama como parte de",
+      "start": 51.013,
+      "end": 53.454
     },
     {
-      "text": "Los detectives de la\npolicía no descartan que",
-      "start": 57.861,
-      "end": 61.379
+      "text": "su contrato.\nEn Universitario, la",
+      "start": 53.454,
+      "end": 55.168
     },
     {
-      "text": "el crimen esté vinculado\na un posible caso de",
-      "start": 61.379,
-      "end": 64.898
+      "text": "noticia genera más\npreguntas sobre la",
+      "start": 55.168,
+      "end": 57.089
     },
     {
-      "text": "extorsión.",
-      "start": 64.898,
-      "end": 65.68
+      "text": "gestión interna.",
+      "start": 57.089,
+      "end": 57.92
     },
     {
       "text": "Ahora entramos a El\nComercio.",
-      "start": 65.68,
-      "end": 67.731
+      "start": 57.92,
+      "end": 59.701
     },
     {
       "text": "Primero miramos la\nportada completa y",
-      "start": 67.731,
-      "end": 70.347
+      "start": 59.701,
+      "end": 61.974
     },
     {
-      "text": "despues vamos con sus 3\nhistorias mas fuertes.",
-      "start": 70.347,
-      "end": 73.6
+      "text": "despues vamos con sus 4\nhistorias mas fuertes.",
+      "start": 61.974,
+      "end": 64.8
     },
     {
-      "text": "La JNJ ha convocado el\nproceso de selección",
-      "start": 73.6,
-      "end": 76.855
+      "text": "Los gremios\nempresariales piden",
+      "start": 64.8,
+      "end": 67.087
     },
     {
-      "text": "para el nuevo jefe de la\nONPE, quien asumirá tras",
-      "start": 76.855,
-      "end": 80.563
+      "text": "auditoría externa a los\nsistemas de la ONPE,",
+      "start": 67.087,
+      "end": 70.334
     },
     {
-      "text": "la segunda vuelta.\nUn cambio clave en un",
-      "start": 80.563,
-      "end": 83.591
+      "text": "ante dudas sobre la\ntransparencia del",
+      "start": 70.334,
+      "end": 73.064
     },
     {
-      "text": "momento crítico para el\npaís, donde la confianza",
-      "start": 83.591,
-      "end": 87.224
+      "text": "proceso electoral.\nLa tensión crece en",
+      "start": 73.064,
+      "end": 75.867
     },
     {
-      "text": "electoral está en juego.",
-      "start": 87.224,
-      "end": 89.04
+      "text": "medio de una creciente\ncrisis de confianza.",
+      "start": 75.867,
+      "end": 79.04
     },
     {
-      "text": "El presidente Balcázar\nenfrenta fuertes",
-      "start": 89.04,
-      "end": 91.392
+      "text": "El Jurado Nacional de\nElecciones ratifica la",
+      "start": 79.04,
+      "end": 82.242
     },
     {
-      "text": "condenas internacionales\npor sus comentarios",
-      "start": 91.392,
-      "end": 94.046
+      "text": "multa a César Tito Rojas\npor falsificación de",
+      "start": 82.242,
+      "end": 85.516
     },
     {
-      "text": "sobre la guerra.\nAlemania e Israel exigen",
-      "start": 94.046,
-      "end": 96.519
+      "text": "información.\nEsta medida agrava la",
+      "start": 85.516,
+      "end": 87.99
     },
     {
-      "text": "disculpas, y el gobierno\nestá bajo presión para",
-      "start": 96.519,
-      "end": 99.354
+      "text": "situación del candidato\ny refuerza las sospechas",
+      "start": 87.99,
+      "end": 91.483
     },
     {
-      "text": "corregir su postura.",
-      "start": 99.354,
-      "end": 100.56
+      "text": "sobre su campaña.",
+      "start": 91.483,
+      "end": 92.72
     },
     {
-      "text": "Universitario sigue con\nvida en la Copa",
-      "start": 100.56,
-      "end": 102.611
+      "text": "Coroccohuayco promete\nser un motor de",
+      "start": 92.72,
+      "end": 95.068
     },
     {
-      "text": "Libertadores tras vencer\n4-2 a Nacional de",
-      "start": 102.611,
-      "end": 104.819
+      "text": "desarrollo económico.\nLa inversión que",
+      "start": 95.068,
+      "end": 97.48
     },
     {
-      "text": "Uruguay.\nLa remontada en el",
-      "start": 104.819,
-      "end": 106.239
+      "text": "comenzará en 2028 aspira\na generar miles de",
+      "start": 97.48,
+      "end": 100.209
     },
     {
-      "text": "Monumental reaviva la\nesperanza de los cremas",
-      "start": 106.239,
-      "end": 108.605
+      "text": "empleos y aportar al\ncrecimiento del sector",
+      "start": 100.209,
+      "end": 102.938
     },
     {
-      "text": "en el torneo\ncontinental.",
-      "start": 108.605,
-      "end": 109.92
+      "text": "minero en el país.",
+      "start": 102.938,
+      "end": 104.08
     },
     {
-      "text": "Ahora entramos a\nGestión.",
-      "start": 109.92,
-      "end": 111.29
+      "text": "El Banco Central de\nReserva de Perú lanza",
+      "start": 104.08,
+      "end": 106.559
     },
     {
-      "text": "Primero miramos la\nportada completa y",
-      "start": 111.29,
-      "end": 113.319
+      "text": "una moneda conmemorativa\npor sus 200 años.",
+      "start": 106.559,
+      "end": 109.098
     },
     {
-      "text": "despues vamos con sus 6\nhistorias mas fuertes.",
-      "start": 113.319,
-      "end": 115.84
+      "text": "Un gesto de\nreconocimiento a la",
+      "start": 109.098,
+      "end": 110.972
     },
     {
-      "text": "El mercado de\ninversiones se ve",
-      "start": 115.84,
-      "end": 117.613
+      "text": "alianza con EE.\nUU.",
+      "start": 110.972,
+      "end": 112.12
     },
     {
-      "text": "golpeado por la\ninflación.",
-      "start": 117.613,
-      "end": 119.1
-    },
-    {
-      "text": "Nueve de cada diez\nopciones de inversión",
-      "start": 119.1,
-      "end": 121.388
-    },
-    {
-      "text": "están por debajo de los\níndices de crecimiento,",
-      "start": 121.388,
-      "end": 124.077
-    },
-    {
-      "text": "lo que obliga a los\ninversionistas a",
-      "start": 124.077,
-      "end": 126.136
-    },
-    {
-      "text": "replantear sus\nestrategias.",
-      "start": 126.136,
-      "end": 127.68
-    },
-    {
-      "text": "La inseguridad está\ncambiando cómo los",
-      "start": 127.68,
-      "end": 130.431
-    },
-    {
-      "text": "peruanos compran.\nEl 79% ha modificado sus",
-      "start": 130.431,
-      "end": 133.472
-    },
-    {
-      "text": "hábitos de compra en los\núltimos seis meses,",
-      "start": 133.472,
-      "end": 136.658
-    },
-    {
-      "text": "afectando no solo el\nconsumo, sino la",
-      "start": 136.658,
-      "end": 139.336
-    },
-    {
-      "text": "percepción de seguridad\nen el comercio.",
-      "start": 139.336,
-      "end": 142.16
-    },
-    {
-      "text": "Santiago Queirolo sigue\nampliando su área",
-      "start": 142.16,
-      "end": 144.367
-    },
-    {
-      "text": "agrícola.\nCon una inversión en",
-      "start": 144.367,
-      "end": 145.982
-    },
-    {
-      "text": "nuevas hectáreas de\nuvas, la marca busca",
-      "start": 145.982,
-      "end": 148.135
-    },
-    {
-      "text": "consolidarse aún más en\nel mercado de vinos",
-      "start": 148.135,
-      "end": 150.45
-    },
-    {
-      "text": "premium.\nLa expansión es clave",
-      "start": 150.45,
-      "end": 152.065
-    },
-    {
-      "text": "para su crecimiento\nsostenido.",
-      "start": 152.065,
-      "end": 153.68
-    },
-    {
-      "text": "El MEF es optimista para\nel futuro cercano.",
-      "start": 153.68,
-      "end": 156.535
-    },
-    {
-      "text": "Con un crecimiento\nestimado del 3.",
-      "start": 156.535,
-      "end": 158.792
-    },
-    {
-      "text": "2% este año, la\nprevisión para la",
-      "start": 158.792,
-      "end": 160.982
-    },
-    {
-      "text": "inversión privada es aún\nmás alentadora, con un",
-      "start": 160.982,
-      "end": 164.102
-    },
-    {
-      "text": "incremento proyectado\ndel 5.",
-      "start": 164.102,
-      "end": 165.961
-    },
-    {
-      "text": "5%.",
-      "start": 165.961,
-      "end": 166.16
-    },
-    {
-      "text": "El Consejo Fiscal alerta\nsobre el incumplimiento",
-      "start": 166.16,
-      "end": 168.457
-    },
-    {
-      "text": "de la regla del déficit\nfiscal.",
-      "start": 168.457,
-      "end": 169.94
-    },
-    {
-      "text": "Según el pronóstico, el\npaís no alcanzará las",
-      "start": 169.94,
-      "end": 172.093
-    },
-    {
-      "text": "metas previstas en los\npróximos tres años",
-      "start": 172.093,
-      "end": 174.054
-    },
-    {
-      "text": "debido a la falta de\ndisciplina fiscal.",
-      "start": 174.054,
-      "end": 175.92
-    },
-    {
-      "text": "La guerra en Irán parece\nestar lejos de terminar.",
-      "start": 175.92,
-      "end": 179.35
-    },
-    {
-      "text": "El conflicto se\nprolongará más allá de",
-      "start": 179.35,
-      "end": 182.01
-    },
-    {
-      "text": "lo esperado, con\ntensiones",
-      "start": 182.01,
-      "end": 183.83
-    },
-    {
-      "text": "internacionales que\npodrían llevar a una",
-      "start": 183.83,
-      "end": 186.63
-    },
-    {
-      "text": "escalada más peligrosa.",
-      "start": 186.63,
-      "end": 188.24
+      "text": "que busca fortalecer la\nrelación económica.",
+      "start": 112.12,
+      "end": 114.72
     },
     {
       "text": "Ahora entramos a Ojo.\nPrimero miramos la",
-      "start": 188.24,
-      "end": 190.671
+      "start": 114.72,
+      "end": 116.935
     },
     {
       "text": "portada completa y\ndespues vamos con sus 4",
-      "start": 190.671,
-      "end": 193.223
+      "start": 116.935,
+      "end": 119.262
     },
     {
       "text": "historias mas fuertes.",
-      "start": 193.223,
-      "end": 194.56
+      "start": 119.262,
+      "end": 120.48
     },
     {
-      "text": "Rescate con tensión en\nLima.",
-      "start": 194.56,
-      "end": 196.972
+      "text": "La justicia le puso\ncandado al viaje:",
+      "start": 120.48,
+      "end": 123.159
     },
     {
-      "text": "La policía liberó a un\nempresario secuestrado y",
-      "start": 196.972,
-      "end": 201.022
+      "text": "Corvetto no podrá salir\ndel país por 18 meses",
+      "start": 123.159,
+      "end": 126.417
     },
     {
-      "text": "el caso expone una\nmodalidad que mezcla",
-      "start": 201.022,
-      "end": 204.382
+      "text": "mientras se revisan\npresuntas",
+      "start": 126.417,
+      "end": 128.517
     },
     {
-      "text": "presión, cobros y miedo.\nLa investigación sigue,",
-      "start": 204.382,
-      "end": 208.517
+      "text": "irregularidades\nelectorales.",
+      "start": 128.517,
+      "end": 130.544
     },
     {
-      "text": "pero la alerta ya está\nencendida.",
-      "start": 208.517,
-      "end": 211.36
+      "text": "El exjefe de la ONPE\nqueda bajo la lupa.",
+      "start": 130.544,
+      "end": 133.44
     },
     {
-      "text": "Gamarra entra en modo\nDía de la Madre con",
-      "start": 211.36,
-      "end": 213.728
+      "text": "El Día del Trabajo llega\ncon una foto clara: más",
+      "start": 133.44,
+      "end": 136.391
     },
     {
-      "text": "regalos desde 5 soles.\nEntre ofertas y público",
-      "start": 213.728,
-      "end": 216.385
+      "text": "de 17,5 millones de\nperuanos tienen empleo.",
+      "start": 136.391,
+      "end": 139.034
     },
     {
-      "text": "en aumento, el emporio\napuesta por precios",
-      "start": 216.385,
-      "end": 218.81
+      "text": "El reto, como siempre,\nes que la chamba no sea",
+      "start": 139.034,
+      "end": 141.862
     },
     {
-      "text": "bajos para mover ventas\nen una de sus campañas",
-      "start": 218.81,
-      "end": 221.467
+      "text": "solo cantidad, sino\nestabilidad y mejores",
+      "start": 141.862,
+      "end": 144.382
     },
     {
-      "text": "más fuertes.",
-      "start": 221.467,
-      "end": 222.16
+      "text": "condiciones.",
+      "start": 144.382,
+      "end": 145.12
     },
     {
-      "text": "En La Victoria ya miran\nel mercado.",
-      "start": 222.16,
-      "end": 224.714
+      "text": "En Universitario, el\nmensaje fue sin",
+      "start": 145.12,
+      "end": 147.548
     },
     {
-      "text": "Alianza no descarta\nvender a Eryc Castillo:",
-      "start": 224.714,
-      "end": 227.852
+      "text": "anestesia: Velasco dejó\nmal parado a Fossati y",
+      "start": 147.548,
+      "end": 150.651
     },
     {
-      "text": "la “Culebra” levantó su\nnivel y su cláusula",
-      "start": 227.852,
-      "end": 230.99
+      "text": "la interna crema vuelve\na sonar fuerte.",
+      "start": 150.651,
+      "end": 153.282
     },
     {
-      "text": "ronda los US$1.\n5 millones.",
-      "start": 230.99,
-      "end": 232.96
+      "text": "Ahora el club mira\nopciones y el técnico",
+      "start": 153.282,
+      "end": 155.98
     },
     {
-      "text": "Ojo con esto: Yahaira le\nrespondió a Daniela y",
-      "start": 232.96,
-      "end": 235.986
+      "text": "que llegue deberá entrar\ncon respaldo real.",
+      "start": 155.98,
+      "end": 158.88
     },
     {
-      "text": "pidió no opinar a la\nligera.",
-      "start": 235.986,
-      "end": 237.828
+      "text": "Monserrat puso el tema\nsobre la mesa: dice que",
+      "start": 158.88,
+      "end": 161.866
     },
     {
-      "text": "La salsera dice que no\nse puede hablar sin",
-      "start": 237.828,
-      "end": 240.59
+      "text": "Melcochita no cumple con\nel alquiler ni la",
+      "start": 161.866,
+      "end": 164.593
     },
     {
-      "text": "fundamentos, y la\nfarándula vuelve a",
-      "start": 240.59,
-      "end": 242.958
+      "text": "alimentación de sus\nhijas.",
+      "start": 164.593,
+      "end": 166.281
     },
     {
-      "text": "prenderse con nombre\npropio.",
-      "start": 242.958,
-      "end": 244.8
+      "text": "La historia sigue\ncaliente, pero aquí toca",
+      "start": 166.281,
+      "end": 169.008
+    },
+    {
+      "text": "separar denuncia,\nversión y prueba.",
+      "start": 169.008,
+      "end": 171.28
     },
     {
       "text": "Ahora entramos a Trome.\nPrimero miramos la",
-      "start": 244.8,
-      "end": 248.033
+      "start": 171.28,
+      "end": 174.038
     },
     {
       "text": "portada completa y\ndespues vamos con sus 4",
-      "start": 248.033,
-      "end": 251.266
+      "start": 174.038,
+      "end": 176.795
     },
     {
       "text": "historias mas fuertes.",
-      "start": 251.266,
-      "end": 252.96
+      "start": 176.795,
+      "end": 178.24
     },
     {
-      "text": "La Perla, restaurante de\nBarranco, recibe un",
-      "start": 252.96,
-      "end": 255.929
+      "text": "Golpe judicial para\nCorvetto: un juez ordenó",
+      "start": 178.24,
+      "end": 181.637
     },
     {
-      "text": "reconocimiento mundial\ntras ser destacado por",
-      "start": 255.929,
-      "end": 258.965
+      "text": "impedimento de salida\npor 18 meses mientras",
+      "start": 181.637,
+      "end": 184.958
     },
     {
-      "text": "Conde Nast Traveler.\nEl local que cautivó a",
-      "start": 258.965,
-      "end": 261.867
+      "text": "avanzan las\ninvestigaciones por el",
+      "start": 184.958,
+      "end": 187.583
     },
     {
-      "text": "Jeff Bezos ahora brilla\nentre los mejores",
-      "start": 261.867,
-      "end": 264.633
+      "text": "caos electoral.\nLa frontera se cierra, y",
+      "start": 187.583,
+      "end": 190.671
     },
     {
-      "text": "restaurantes del\nplaneta.",
-      "start": 264.633,
-      "end": 266.32
+      "text": "la presión sobre la ONPE\nvuelve a subir.",
+      "start": 190.671,
+      "end": 193.76
     },
     {
-      "text": "Irán atraviesa un caos\npor la guerra y escasez.",
-      "start": 266.32,
-      "end": 269.736
+      "text": "La campaña por el Día de\nla Madre viene con caja",
+      "start": 193.76,
+      "end": 196.995
     },
     {
-      "text": "Los disturbios internos\ncrecen mientras la",
-      "start": 269.736,
-      "end": 272.789
+      "text": "fuerte: comercios\ncalculan un movimiento",
+      "start": 196.995,
+      "end": 199.69
     },
     {
-      "text": "crisis económica se\nintensifica, dejando a",
-      "start": 272.789,
-      "end": 275.842
+      "text": "de S/4,500 millones.\nCelulares, ropa, calzado",
+      "start": 199.69,
+      "end": 202.723
     },
     {
-      "text": "millones sin empleo.\nLa situación parece cada",
-      "start": 275.842,
-      "end": 279.114
+      "text": "y perfumes aparecen\nentre los regalos que",
+      "start": 202.723,
+      "end": 205.486
     },
     {
-      "text": "vez más insostenible.",
-      "start": 279.114,
-      "end": 280.64
+      "text": "más jalan.",
+      "start": 205.486,
+      "end": 206.16
     },
     {
-      "text": "¡A puro corazón!\nUniversitario goleó 4-2",
-      "start": 280.64,
-      "end": 283.03
+      "text": "Paolo Guerrero no quiere\npausa ni dosificación.",
+      "start": 206.16,
+      "end": 209.059
     },
     {
-      "text": "a Nacional de Uruguay y\nasegura su clasificación",
-      "start": 283.03,
-      "end": 285.899
+      "text": "Con 42 años, pide jugar\nante Moquegua y también",
+      "start": 209.059,
+      "end": 211.958
     },
     {
-      "text": "en la Copa Libertadores.\nUn triunfo que llena de",
-      "start": 285.899,
-      "end": 288.767
+      "text": "frente a Cristal;\nAlianza tendrá que medir",
+      "start": 211.958,
+      "end": 214.548
     },
     {
-      "text": "esperanza a la hinchada\ncrema.",
-      "start": 288.767,
-      "end": 290.56
+      "text": "si el deseo alcanza para\nsostener el ritmo.",
+      "start": 214.548,
+      "end": 217.2
     },
     {
-      "text": "Angie Arizaga revela que\nsu pareja, Jota Benz, no",
-      "start": 290.56,
-      "end": 293.74
+      "text": "Monserrat volvió a\nencender la farándula:",
+      "start": 217.2,
+      "end": 220.08
     },
     {
-      "text": "iría a una despedida de\nsoltero.",
-      "start": 293.74,
-      "end": 295.816
+      "text": "acusa a Melcochita de no\ncubrir alquiler ni",
+      "start": 220.08,
+      "end": 223.101
     },
     {
-      "text": "La discusión sobre la\nrelación sigue siendo",
-      "start": 295.816,
-      "end": 298.606
+      "text": "alimentación de sus\nhijas.",
+      "start": 223.101,
+      "end": 224.928
     },
     {
-      "text": "tema de conversación\nentre los fanáticos de",
-      "start": 298.606,
-      "end": 301.396
+      "text": "Él sostiene otra\nversión, y el cruce ya",
+      "start": 224.928,
+      "end": 227.668
     },
     {
-      "text": "la farándula.",
-      "start": 301.396,
-      "end": 302.24
+      "text": "se volvió un nuevo\ncapítulo familiar en",
+      "start": 227.668,
+      "end": 230.408
+    },
+    {
+      "text": "pantalla.",
+      "start": 230.408,
+      "end": 231.04
     },
     {
       "text": "Ahora entramos a Líbero.\nPrimero miramos la",
-      "start": 302.24,
-      "end": 304.973
+      "start": 231.04,
+      "end": 234.062
     },
     {
-      "text": "portada completa y\ndespues vamos con sus 3",
-      "start": 304.973,
-      "end": 307.642
+      "text": "portada completa y\ndespues vamos con sus 2",
+      "start": 234.062,
+      "end": 237.014
     },
     {
       "text": "historias mas fuertes.",
-      "start": 307.642,
-      "end": 309.04
+      "start": 237.014,
+      "end": 238.56
     },
     {
-      "text": "Partido bravo y reacción\ncrema.",
-      "start": 309.04,
-      "end": 310.97
+      "text": "Universitario da un paso\nfirme en su camino hacia",
+      "start": 238.56,
+      "end": 241.609
     },
     {
-      "text": "Universitario venció 4-2\na Nacional en el",
-      "start": 310.97,
-      "end": 313.524
+      "text": "la Copa Libertadores.\nDespués de ganar a",
+      "start": 241.609,
+      "end": 244.098
     },
     {
-      "text": "Monumental y volvió a\nrespirar en la",
-      "start": 313.524,
-      "end": 315.765
+      "text": "Nacional, el sueño sigue\nvivo y la próxima parada",
+      "start": 244.098,
+      "end": 247.147
     },
     {
-      "text": "Libertadores: cuando\nparecía cuesta arriba,",
-      "start": 315.765,
-      "end": 318.443
+      "text": "es Chile.\nEl equipo se mantiene",
+      "start": 247.147,
+      "end": 249.076
     },
     {
-      "text": "apareció la garra\ncopera.",
-      "start": 318.443,
-      "end": 320.0
+      "text": "motivado, con la vista\nen los octavos.",
+      "start": 249.076,
+      "end": 251.44
     },
     {
-      "text": "Cienciano puso la altura\ny el carácter.",
-      "start": 320.0,
-      "end": 321.994
+      "text": "Zé Ricardo no oculta su\nfrustración con la",
+      "start": 251.44,
+      "end": 253.475
     },
     {
-      "text": "Le ganó 1-0 a Atlético\nMineiro en Cusco y el",
-      "start": 321.994,
-      "end": 324.243
+      "text": "situación del equipo.\nTras una derrota que",
+      "start": 253.475,
+      "end": 255.509
     },
     {
-      "text": "“Papá” celebró un\ntriunfo de peso",
-      "start": 324.243,
-      "end": 325.93
+      "text": "duele, el técnico pone\nen tela de juicio",
+      "start": 255.509,
+      "end": 257.447
     },
     {
-      "text": "internacional, de esos\nque cambian el ánimo del",
-      "start": 325.93,
-      "end": 328.333
+      "text": "algunos aspectos y exige\nmás compromiso de sus",
+      "start": 257.447,
+      "end": 259.676
     },
     {
-      "text": "grupo.",
-      "start": 328.333,
-      "end": 328.64
-    },
-    {
-      "text": "Guede ya ajusta piezas\nen Alianza.",
-      "start": 328.64,
-      "end": 330.664
-    },
-    {
-      "text": "Con el duelo ante CD\nMoquegua en la mira, el",
-      "start": 330.664,
-      "end": 333.283
-    },
-    {
-      "text": "técnico prepara su\noncena y sabe que ser",
-      "start": 333.283,
-      "end": 335.664
-    },
-    {
-      "text": "líder no alcanza: en\nMatute toca sostener el",
-      "start": 335.664,
-      "end": 338.283
-    },
-    {
-      "text": "ritmo.",
-      "start": 338.283,
-      "end": 338.64
+      "text": "jugadores.",
+      "start": 259.676,
+      "end": 260.16
     },
     {
       "text": "Ahora entramos a La\nRepública.",
-      "start": 338.64,
-      "end": 340.488
+      "start": 260.16,
+      "end": 262.093
     },
     {
       "text": "Primero miramos la\nportada completa y",
-      "start": 340.488,
-      "end": 342.767
+      "start": 262.093,
+      "end": 264.476
     },
     {
-      "text": "despues vamos con sus 5\nhistorias mas fuertes.",
-      "start": 342.767,
-      "end": 345.6
+      "text": "despues vamos con sus 3\nhistorias mas fuertes.",
+      "start": 264.476,
+      "end": 267.44
     },
     {
-      "text": "En medio de la crisis\necológica, la comunidad",
-      "start": 345.6,
-      "end": 348.603
+      "text": "La Junta Nacional de\nJusticia se enfrenta al",
+      "start": 267.44,
+      "end": 270.487
     },
     {
-      "text": "Awajún alza la voz\ncontra la contaminación",
-      "start": 348.603,
-      "end": 351.406
+      "text": "Poder Judicial con una\ndecisión histórica:",
+      "start": 270.487,
+      "end": 273.396
     },
     {
-      "text": "petrolera en su\nterritorio.",
-      "start": 351.406,
-      "end": 353.208
+      "text": "anular el nombramiento\nde un juez que habló de",
+      "start": 273.396,
+      "end": 276.582
     },
     {
-      "text": "El impacto ambiental es\ngrave y la lucha sigue",
-      "start": 353.208,
-      "end": 356.277
+      "text": "corrupción en el sistema\njudicial.",
+      "start": 276.582,
+      "end": 278.937
     },
     {
-      "text": "por la justicia en las\nzonas afectadas.",
-      "start": 356.277,
-      "end": 358.88
+      "text": "El golpe es fuerte, pero\nla pregunta es ¿qué",
+      "start": 278.937,
+      "end": 281.984
     },
     {
-      "text": "El debate sobre la\nelección del jefe de la",
-      "start": 358.88,
-      "end": 361.617
+      "text": "sigue?",
+      "start": 281.984,
+      "end": 282.4
     },
     {
-      "text": "ONPE sigue candente.\nLa JNJ impondrá su",
-      "start": 361.617,
-      "end": 364.159
+      "text": "La presión sobre\nCorvetto aumenta con la",
+      "start": 282.4,
+      "end": 285.356
     },
     {
-      "text": "decisión sin control\ncivil, lo que abre",
-      "start": 364.159,
-      "end": 366.7
+      "text": "prohibición judicial de\nsalir del país.",
+      "start": 285.356,
+      "end": 288.238
     },
     {
-      "text": "nuevos cuestionamientos\nsobre la transparencia",
-      "start": 366.7,
-      "end": 369.698
+      "text": "La investigación\nelectoral sigue su",
+      "start": 288.238,
+      "end": 290.825
     },
     {
-      "text": "del proceso.",
-      "start": 369.698,
-      "end": 370.48
+      "text": "curso, y el exjefe de la\nONPE ahora enfrenta",
+      "start": 290.825,
+      "end": 294.077
     },
     {
-      "text": "Los jóvenes se muestran\nescépticos ante los",
-      "start": 370.48,
-      "end": 372.828
+      "text": "nuevas restricciones\nmientras la",
+      "start": 294.077,
+      "end": 296.442
     },
     {
-      "text": "cambios propuestos al\nCongreso bicameral.",
-      "start": 372.828,
-      "end": 375.067
+      "text": "incertidumbre crece.",
+      "start": 296.442,
+      "end": 297.92
     },
     {
-      "text": "La falta de confianza en\nlas reformas persiste y",
-      "start": 375.067,
-      "end": 377.688
+      "text": "José Domingo Pérez,\nconocido por su rol en",
+      "start": 297.92,
+      "end": 300.763
     },
     {
-      "text": "la desconexión con la\nciudadanía es cada vez",
-      "start": 377.688,
-      "end": 380.09
+      "text": "la lucha anticorrupción,\nse une ahora a la",
+      "start": 300.763,
+      "end": 303.606
     },
     {
-      "text": "más evidente.",
-      "start": 380.09,
-      "end": 380.8
+      "text": "campaña política de\nRoberto Sánchez.",
+      "start": 303.606,
+      "end": 306.043
     },
     {
-      "text": "Un crimen atroz en la\ncapital.",
-      "start": 380.8,
-      "end": 383.065
+      "text": "El movimiento genera\nexpectativas y provoca",
+      "start": 306.043,
+      "end": 308.954
     },
     {
-      "text": "El empresario y\nexcandidato Jorge",
-      "start": 383.065,
-      "end": 385.556
+      "text": "debates sobre su papel\nen la política actual.",
+      "start": 308.954,
+      "end": 312.0
     },
     {
-      "text": "Alcalde fue asesinado en\ncircunstancias que aún",
-      "start": 385.556,
-      "end": 389.104
+      "text": "Hasta aqui el programa\nde hoy, 1 de mayo de",
+      "start": 312.0,
+      "end": 314.666
     },
     {
-      "text": "están bajo\ninvestigación.",
-      "start": 389.104,
-      "end": 390.991
+      "text": "2026.\nRevisamos 6 portadas y",
+      "start": 314.666,
+      "end": 316.401
     },
     {
-      "text": "El caso pone de nuevo en\nla agenda la inseguridad",
-      "start": 390.991,
-      "end": 394.69
-    },
-    {
-      "text": "en el país.",
-      "start": 394.69,
-      "end": 395.52
-    },
-    {
-      "text": "Una promesa de trabajo\nse convierte en una",
-      "start": 395.52,
-      "end": 398.512
-    },
-    {
-      "text": "pesadilla.\nJóvenes fueron engañados",
-      "start": 398.512,
-      "end": 401.005
-    },
-    {
-      "text": "con falsas ofertas de\nempleo en Rusia y",
-      "start": 401.005,
-      "end": 403.784
-    },
-    {
-      "text": "terminaron siendo\nenviados al frente de",
-      "start": 403.784,
-      "end": 406.562
-    },
-    {
-      "text": "guerra.\nLa explotación laboral",
-      "start": 406.562,
-      "end": 408.699
-    },
-    {
-      "text": "cruza límites\npeligrosos.",
-      "start": 408.699,
-      "end": 410.48
-    },
-    {
-      "text": "Hasta aqui el programa\nde hoy, 30 de abril de",
-      "start": 410.48,
-      "end": 413.39
-    },
-    {
-      "text": "2026.\nRevisamos 7 portadas y",
-      "start": 413.39,
-      "end": 415.2
-    },
-    {
-      "text": "28 temas que marcaron la\nagenda.",
-      "start": 415.2,
-      "end": 417.27
+      "text": "20 temas que marcaron la\nagenda.",
+      "start": 316.401,
+      "end": 318.385
     },
     {
       "text": "Gracias por\nacompanarnos.",
-      "start": 417.27,
-      "end": 418.886
+      "start": 318.385,
+      "end": 319.935
     },
     {
       "text": "Nos vemos en la\nsiguiente edicion con",
-      "start": 418.886,
-      "end": 421.279
+      "start": 319.935,
+      "end": 322.228
     },
     {
       "text": "mas contexto y sin\nrodeos.",
-      "start": 421.279,
-      "end": 422.96
+      "start": 322.228,
+      "end": 323.84
     }
   ]
 };

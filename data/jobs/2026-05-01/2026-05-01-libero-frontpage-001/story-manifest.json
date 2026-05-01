@@ -1,0 +1,88 @@
+{
+  "story_id": "2026-05-01-libero-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-01-libero-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-01/2026-05-01-libero-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-01/2026-05-01-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Universitario sueña con la Copa",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Universitario da un paso firme en su camino hacia la Copa Libertadores. Después de ganar a Nacional, el sueño sigue vivo y la próxima parada es Chile. El equipo se mantiene motivado, con la vista en los octavos.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "victoria contra Nacional",
+        "objetivo: clasificación a octavos de Libertadores",
+        "próximo partido en Chile"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "agil",
+        "motivador"
+      ],
+      "safety_notes": "No se asume clasificación, solo se destacan los objetivos del equipo.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.12,
+        "width": 0.75,
+        "height": 0.71
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-01/2026-05-01-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Zé Ricardo está molesto",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Zé Ricardo no oculta su frustración con la situación del equipo. Tras una derrota que duele, el técnico pone en tela de juicio algunos aspectos y exige más compromiso de sus jugadores.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "molestia de Zé Ricardo",
+        "derrota que afecta al equipo",
+        "exigencias del técnico"
+      ],
+      "tone_notes": [
+        "tenso",
+        "frontal",
+        "energético"
+      ],
+      "safety_notes": "Se presenta como frustración del técnico, no se afirma falta de resultados sin contexto.",
+      "cover_region": {
+        "x": 0.49,
+        "y": 0.86,
+        "width": 0.24,
+        "height": 0.14
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

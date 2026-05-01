@@ -1,0 +1,122 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-01-correo-frontpage-001",
+  "source_id": "correo",
+  "source_name": "Correo",
+  "date": "2026-05-01",
+  "front_page_image": "data/jobs/2026-05-01/2026-05-01-correo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Juntos por Antauro",
+      "story_type": "politica",
+      "summary": "La alianza entre Antauro y Roberto Sánchez ha dado que hablar. En 2024, ambos se ofrecieron como aliados en la lucha política. Las primeras señales fueron las caravanas, pero el impacto real será en las urnas.",
+      "speech": "La alianza entre Antauro y Roberto Sánchez ha dado que hablar. En 2024, ambos se ofrecieron como aliados en la lucha política. Las primeras señales fueron las caravanas, pero el impacto real será en las urnas.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.22,
+        "y": 0.11,
+        "width": 0.76,
+        "height": 0.82
+      },
+      "key_facts": [
+        "Antauro y Roberto Sánchez comparten actividades",
+        "27 de septiembre de 2024",
+        "caravanas y propuestas conjuntas"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "provocador",
+        "energético"
+      ],
+      "safety_notes": "No se afirman intenciones específicas más allá de lo declarado públicamente.",
+      "notes": "No se afirman intenciones específicas más allá de lo declarado públicamente.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Piero Corvetto impedido de salir del país",
+      "story_type": "politica",
+      "summary": "El impedimento de salida de Corvetto sube la apuesta judicial: el exfuncionario de la ONPE enfrenta la presión mientras el proceso electoral sigue bajo el radar de las autoridades.",
+      "speech": "El impedimento de salida de Corvetto sube la apuesta judicial: el exfuncionario de la ONPE enfrenta la presión mientras el proceso electoral sigue bajo el radar de las autoridades.",
+      "page_numbers": [
+        5
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.38,
+        "width": 0.15,
+        "height": 0.25
+      },
+      "key_facts": [
+        "prohibición judicial de salir del país",
+        "investigación por irregularidades electorales",
+        "moción de la fiscalía"
+      ],
+      "tone_notes": [
+        "incisivo",
+        "crítico",
+        "grave"
+      ],
+      "safety_notes": "Se evita asegurar culpabilidad; la noticia se limita a la decisión judicial y las condiciones actuales.",
+      "notes": "Se evita asegurar culpabilidad; la noticia se limita a la decisión judicial y las condiciones actuales.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Velasco: Fossati pidió autos de alta gama",
+      "story_type": "deportes",
+      "summary": "Fossati, en su última polémica, habría solicitado vehículos de alta gama como parte de su contrato. En Universitario, la noticia genera más preguntas sobre la gestión interna.",
+      "speech": "Fossati, en su última polémica, habría solicitado vehículos de alta gama como parte de su contrato. En Universitario, la noticia genera más preguntas sobre la gestión interna.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.68,
+        "width": 0.15,
+        "height": 0.25
+      },
+      "key_facts": [
+        "Fossati pidió autos de alta gama",
+        "controversia interna en Universitario",
+        "gestión de contrataciones"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "directo",
+        "con tensión"
+      ],
+      "safety_notes": "Se maneja como información sobre la solicitud de Fossati; no se asume culpabilidad ni mala fe.",
+      "notes": "Se maneja como información sobre la solicitud de Fossati; no se asume culpabilidad ni mala fe.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-05-01-trome-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-01-trome-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-01/2026-05-01-trome-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-05-01/2026-05-01-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Cierran fronteras a Corvetto",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Golpe judicial para Corvetto: un juez ordenó impedimento de salida por 18 meses mientras avanzan las investigaciones por el caos electoral. La frontera se cierra, y la presión sobre la ONPE vuelve a subir.",
+      "page_numbers": [
+        8
+      ],
+      "key_facts": [
+        "juez ordenó impedimento de salida",
+        "medida por 18 meses",
+        "investigación vinculada al proceso electoral"
+      ],
+      "tone_notes": [
+        "critico",
+        "directo",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar delitos; se presenta como medida judicial e investigación en curso.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.21,
+        "width": 0.76,
+        "height": 0.62
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-05-01/2026-05-01-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Ventas crecerán por Día de la Madre",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "text": "La campaña por el Día de la Madre viene con caja fuerte: comercios calculan un movimiento de S/4,500 millones. Celulares, ropa, calzado y perfumes aparecen entre los regalos que más jalan.",
+      "page_numbers": [
+        10
+      ],
+      "key_facts": [
+        "movimiento comercial estimado en S/4,500 millones",
+        "Día de la Madre impulsa ventas",
+        "celulares, ropa, calzado y perfumes entre favoritos"
+      ],
+      "tone_notes": [
+        "analitico",
+        "claro",
+        "ligeramente ironico"
+      ],
+      "safety_notes": "Cifra y categorías tomadas de la página interna; no se proyectan resultados fuera de lo informado.",
+      "cover_region": {
+        "x": 0.22,
+        "y": 0.82,
+        "width": 0.55,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-05-01/2026-05-01-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Paolo Guerrero pide seguir titular en Alianza",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "text": "Paolo Guerrero no quiere pausa ni dosificación. Con 42 años, pide jugar ante Moquegua y también frente a Cristal; Alianza tendrá que medir si el deseo alcanza para sostener el ritmo.",
+      "page_numbers": [
+        11
+      ],
+      "key_facts": [
+        "Paolo Guerrero tiene 42 años",
+        "pide jugar ante Moquegua",
+        "también quiere estar frente a Cristal"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "agil",
+        "popular"
+      ],
+      "safety_notes": "Se resume el enfoque deportivo de la página; no se atribuyen decisiones técnicas no confirmadas.",
+      "cover_region": {
+        "x": 0.79,
+        "y": 0.24,
+        "width": 0.19,
+        "height": 0.47
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-05-01/2026-05-01-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Monserrat acusa a Melcochita",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "text": "Monserrat volvió a encender la farándula: acusa a Melcochita de no cubrir alquiler ni alimentación de sus hijas. Él sostiene otra versión, y el cruce ya se volvió un nuevo capítulo familiar en pantalla.",
+      "page_numbers": [
+        17
+      ],
+      "key_facts": [
+        "Monserrat acusa a Melcochita",
+        "menciona alquiler y alimentación",
+        "hay versiones enfrentadas"
+      ],
+      "tone_notes": [
+        "picante",
+        "popular",
+        "cuidadoso"
+      ],
+      "safety_notes": "Se presenta como acusación de Monserrat y se evita afirmar incumplimientos como hechos probados.",
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.74,
+        "width": 0.2,
+        "height": 0.24
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

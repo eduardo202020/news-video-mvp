@@ -1,0 +1,157 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-01-trome-frontpage-001",
+  "source_id": "trome",
+  "source_name": "Trome",
+  "date": "2026-05-01",
+  "front_page_image": "data/jobs/2026-05-01/2026-05-01-trome-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Cierran fronteras a Corvetto",
+      "story_type": "politica",
+      "summary": "Golpe judicial para Corvetto: un juez ordenó impedimento de salida por 18 meses mientras avanzan las investigaciones por el caos electoral. La frontera se cierra, y la presión sobre la ONPE vuelve a subir.",
+      "speech": "Golpe judicial para Corvetto: un juez ordenó impedimento de salida por 18 meses mientras avanzan las investigaciones por el caos electoral. La frontera se cierra, y la presión sobre la ONPE vuelve a subir.",
+      "page_numbers": [
+        8
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.21,
+        "width": 0.76,
+        "height": 0.62
+      },
+      "key_facts": [
+        "juez ordenó impedimento de salida",
+        "medida por 18 meses",
+        "investigación vinculada al proceso electoral"
+      ],
+      "tone_notes": [
+        "critico",
+        "directo",
+        "prudente"
+      ],
+      "safety_notes": "Se evita afirmar delitos; se presenta como medida judicial e investigación en curso.",
+      "notes": "Se evita afirmar delitos; se presenta como medida judicial e investigación en curso.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Ventas crecerán por Día de la Madre",
+      "story_type": "economia",
+      "summary": "La campaña por el Día de la Madre viene con caja fuerte: comercios calculan un movimiento de S/4,500 millones. Celulares, ropa, calzado y perfumes aparecen entre los regalos que más jalan.",
+      "speech": "La campaña por el Día de la Madre viene con caja fuerte: comercios calculan un movimiento de S/4,500 millones. Celulares, ropa, calzado y perfumes aparecen entre los regalos que más jalan.",
+      "page_numbers": [
+        10
+      ],
+      "cover_region": {
+        "x": 0.22,
+        "y": 0.82,
+        "width": 0.55,
+        "height": 0.13
+      },
+      "key_facts": [
+        "movimiento comercial estimado en S/4,500 millones",
+        "Día de la Madre impulsa ventas",
+        "celulares, ropa, calzado y perfumes entre favoritos"
+      ],
+      "tone_notes": [
+        "analitico",
+        "claro",
+        "ligeramente ironico"
+      ],
+      "safety_notes": "Cifra y categorías tomadas de la página interna; no se proyectan resultados fuera de lo informado.",
+      "notes": "Cifra y categorías tomadas de la página interna; no se proyectan resultados fuera de lo informado.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Paolo Guerrero pide seguir titular en Alianza",
+      "story_type": "deportes",
+      "summary": "Paolo Guerrero no quiere pausa ni dosificación. Con 42 años, pide jugar ante Moquegua y también frente a Cristal; Alianza tendrá que medir si el deseo alcanza para sostener el ritmo.",
+      "speech": "Paolo Guerrero no quiere pausa ni dosificación. Con 42 años, pide jugar ante Moquegua y también frente a Cristal; Alianza tendrá que medir si el deseo alcanza para sostener el ritmo.",
+      "page_numbers": [
+        11
+      ],
+      "cover_region": {
+        "x": 0.79,
+        "y": 0.24,
+        "width": 0.19,
+        "height": 0.47
+      },
+      "key_facts": [
+        "Paolo Guerrero tiene 42 años",
+        "pide jugar ante Moquegua",
+        "también quiere estar frente a Cristal"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "agil",
+        "popular"
+      ],
+      "safety_notes": "Se resume el enfoque deportivo de la página; no se atribuyen decisiones técnicas no confirmadas.",
+      "notes": "Se resume el enfoque deportivo de la página; no se atribuyen decisiones técnicas no confirmadas.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Monserrat acusa a Melcochita",
+      "story_type": "espectaculos",
+      "summary": "Monserrat volvió a encender la farándula: acusa a Melcochita de no cubrir alquiler ni alimentación de sus hijas. Él sostiene otra versión, y el cruce ya se volvió un nuevo capítulo familiar en pantalla.",
+      "speech": "Monserrat volvió a encender la farándula: acusa a Melcochita de no cubrir alquiler ni alimentación de sus hijas. Él sostiene otra versión, y el cruce ya se volvió un nuevo capítulo familiar en pantalla.",
+      "page_numbers": [
+        17
+      ],
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.74,
+        "width": 0.2,
+        "height": 0.24
+      },
+      "key_facts": [
+        "Monserrat acusa a Melcochita",
+        "menciona alquiler y alimentación",
+        "hay versiones enfrentadas"
+      ],
+      "tone_notes": [
+        "picante",
+        "popular",
+        "cuidadoso"
+      ],
+      "safety_notes": "Se presenta como acusación de Monserrat y se evita afirmar incumplimientos como hechos probados.",
+      "notes": "Se presenta como acusación de Monserrat y se evita afirmar incumplimientos como hechos probados.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "segment_audio_file": null
+    }
+  ]
+}
