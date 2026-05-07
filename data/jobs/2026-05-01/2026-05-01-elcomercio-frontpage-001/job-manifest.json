@@ -94,7 +94,7 @@
   "page_selection": {
     "strategy": "cover_first",
     "provider": "chatgpt_plus_manual",
-    "status": "downloaded",
+    "status": "approved_manual",
     "selected_page_numbers": [
       3,
       4,
@@ -217,7 +217,7 @@
         "story_type": "politica",
         "cover_region": {
           "x": 0.05,
-          "y": 0.26,
+          "y": 0.18,
           "width": 0.67,
           "height": 0.33
         },
@@ -236,8 +236,8 @@
         "headline": "JNE confirma multa a César Tito Rojas",
         "story_type": "politica",
         "cover_region": {
-          "x": 0.76,
-          "y": 0.29,
+          "x": 0.74,
+          "y": 0.19,
           "width": 0.22,
           "height": 0.26
         },
@@ -256,9 +256,9 @@
         "story_type": "economia",
         "cover_region": {
           "x": 0.05,
-          "y": 0.88,
+          "y": 0.78,
           "width": 0.46,
-          "height": 0.12
+          "height": 0.16
         },
         "page_numbers": [
           8
@@ -275,9 +275,9 @@
         "story_type": "economia",
         "cover_region": {
           "x": 0.05,
-          "y": 0.59,
+          "y": 0.53,
           "width": 0.68,
-          "height": 0.28
+          "height": 0.2
         },
         "page_numbers": [
           9
@@ -327,16 +327,7 @@
       }
     ],
     "notes": "Paginas detectadas visualmente desde la portada.",
-    "downloaded_page_numbers": [
-      3,
-      4,
-      6,
-      8,
-      9,
-      10,
-      11
-    ],
-    "focus_review_completed": true
+    "focus_review_completed": false
   },
   "story_narrative": {
     "provider": "chatgpt_plus_manual",
@@ -361,7 +352,7 @@
         ],
         "cover_region": {
           "x": 0.05,
-          "y": 0.26,
+          "y": 0.18,
           "width": 0.67,
           "height": 0.33
         },
@@ -397,8 +388,8 @@
           6
         ],
         "cover_region": {
-          "x": 0.76,
-          "y": 0.29,
+          "x": 0.74,
+          "y": 0.19,
           "width": 0.22,
           "height": 0.26
         },
@@ -435,9 +426,9 @@
         ],
         "cover_region": {
           "x": 0.05,
-          "y": 0.88,
+          "y": 0.78,
           "width": 0.46,
-          "height": 0.12
+          "height": 0.16
         },
         "key_facts": [
           "proyecto Coroccohuayco",
@@ -472,9 +463,9 @@
         ],
         "cover_region": {
           "x": 0.05,
-          "y": 0.59,
+          "y": 0.53,
           "width": 0.68,
-          "height": 0.28
+          "height": 0.2
         },
         "key_facts": [
           "lanza moneda conmemorativa",
@@ -540,7 +531,7 @@
   },
   "audit": {
     "created_at": "2026-05-01T08:09:09",
-    "updated_at": "2026-05-01T08:22:13",
+    "updated_at": "2026-05-07T09:11:39",
     "events": [
       {
         "stage": "discover",
@@ -2857,6 +2848,702 @@
         "status": "edited",
         "timestamp": "2026-05-01T08:22:13",
         "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:00",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:00",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:29",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Seguimiento de portada actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE confirma multa a César Tito Rojas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Seguimiento de portada actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028 -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Seguimiento de portada actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Seguimiento de portada actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE confirma multa a César Tito Rojas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:31",
+        "details": "Seguimiento de portada actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028 -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:32",
+        "details": "Seguimiento de portada actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:51",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 2: JNE confirma multa a César Tito Rojas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:52",
+        "details": "Enfoque manual actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:50:49",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:50:49",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:51:21",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:22",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:22",
+        "details": "Seguimiento de portada actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:22",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE confirma multa a César Tito Rojas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:22",
+        "details": "Seguimiento de portada actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028 -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:22",
+        "details": "Seguimiento de portada actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:23",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:23",
+        "details": "Seguimiento de portada actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:23",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE confirma multa a César Tito Rojas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:23",
+        "details": "Seguimiento de portada actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028 -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:51:23",
+        "details": "Seguimiento de portada actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T15:02:50",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T15:02:50",
+        "details": "Seguimiento de portada actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T15:02:50",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE confirma multa a César Tito Rojas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T15:02:50",
+        "details": "Seguimiento de portada actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028 -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T15:02:50",
+        "details": "Seguimiento de portada actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T09:11:39",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T09:11:39",
+        "details": "Seguimiento de portada actualizado para historia 1: Gremios demandan auditoría a sistemas de la ONPE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T09:11:39",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE confirma multa a César Tito Rojas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T09:11:39",
+        "details": "Seguimiento de portada actualizado para historia 3: Proyecto Coroccohuayco produciría desde 2028 -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T09:11:39",
+        "details": "Seguimiento de portada actualizado para historia 4: BCR lanza moneda por 200 años con EE.UU -> seguir."
       }
     ]
   },
@@ -2867,6 +3554,6 @@
     "why_it_fits": "Conecta la fecha del lote con una referencia laboral visible también en algunas portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-05-01T08:12:26"
+    "imported_at": "2026-05-01T11:50:49"
   }
 }

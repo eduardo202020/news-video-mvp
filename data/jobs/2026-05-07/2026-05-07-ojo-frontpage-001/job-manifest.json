@@ -1,0 +1,554 @@
+{
+  "job_id": "2026-05-07-ojo-frontpage-001",
+  "source_id": "ojo",
+  "date": "2026-05-07",
+  "source": {
+    "source_id": "ojo",
+    "source_config_path": "automation/sources/diarios/ojo.json",
+    "requested_date": "2026-05-07",
+    "issue_date": "2026-05-07",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026050700000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-07/2026-05-07-ojo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026050700000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/ojo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050700000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-ojo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050700000000001001&page=3&scale=83",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-ojo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050700000000001001&page=5&scale=83",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-ojo-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 13",
+        "page_number": 13,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050700000000001001&page=13&scale=83",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-ojo-frontpage-001/input/pages/page-13.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 18",
+        "page_number": 18,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050700000000001001&page=18&scale=83",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-ojo-frontpage-001/input/pages/page-18.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      3,
+      5,
+      13,
+      18
+    ],
+    "candidates": [
+      {
+        "headline": "Atrapen al asesino de Yajaira",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.18,
+          "width": 0.92,
+          "height": 0.64
+        },
+        "page_number": 3,
+        "evidence_line": "IMPACTO pag. 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Regalos baratitos para mama",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.72,
+          "y": 0.02,
+          "width": 0.27,
+          "height": 0.11
+        },
+        "page_number": 5,
+        "evidence_line": "METROLIMA pag. 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "La U va por su revancha",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.84,
+          "width": 0.41,
+          "height": 0.13
+        },
+        "page_number": 13,
+        "evidence_line": "CRACK pag. 13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.78
+      },
+      {
+        "headline": "Melcochita con depa de soltero",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.64,
+          "y": 0.84,
+          "width": 0.33,
+          "height": 0.13
+        },
+        "page_number": 18,
+        "evidence_line": "OJOSHOW pag. 18",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.86
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Atrapen al asesino de Yajaira",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.18,
+          "width": 0.92,
+          "height": 0.64
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "IMPACTO pag. 3",
+        "evidence_lines": [
+          "IMPACTO pag. 3"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Regalos baratitos para mama",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.72,
+          "y": 0.02,
+          "width": 0.27,
+          "height": 0.11
+        },
+        "page_numbers": [
+          5
+        ],
+        "evidence": "METROLIMA pag. 5",
+        "evidence_lines": [
+          "METROLIMA pag. 5"
+        ],
+        "confidence": 0.91,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U va por su revancha",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.84,
+          "width": 0.41,
+          "height": 0.13
+        },
+        "page_numbers": [
+          13
+        ],
+        "evidence": "CRACK pag. 13",
+        "evidence_lines": [
+          "CRACK pag. 13"
+        ],
+        "confidence": 0.78,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Melcochita con depa de soltero",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.64,
+          "y": 0.84,
+          "width": 0.33,
+          "height": 0.13
+        },
+        "page_numbers": [
+          18
+        ],
+        "evidence": "OJOSHOW pag. 18",
+        "evidence_lines": [
+          "OJOSHOW pag. 18"
+        ],
+        "confidence": 0.86,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      3,
+      5,
+      13,
+      18
+    ],
+    "focus_review_completed": false
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Atrapen al asesino de Yajaira",
+        "story_type": "policial",
+        "summary": "El caso de Yajaira golpea fuerte. Su familia pide que Luis Flores Julca, presunto feminicida, sea incluido en Los Mas Buscados, mientras el sospechoso sigue profugo y la indignacion crece.",
+        "speech": "El caso de Yajaira golpea fuerte. Su familia pide que Luis Flores Julca, presunto feminicida, sea incluido en Los Mas Buscados, mientras el sospechoso sigue profugo y la indignacion crece.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "serio",
+          "cauteloso",
+          "humano"
+        ],
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.18,
+          "width": 0.92,
+          "height": 0.64
+        },
+        "key_facts": [
+          "familia pide ubicar al presunto feminicida",
+          "Luis Flores Julca sigue profugo",
+          "solicitan incluirlo en Los Mas Buscados"
+        ],
+        "key_facts_used": [
+          "familia pide ubicar al presunto feminicida",
+          "Luis Flores Julca sigue profugo",
+          "solicitan incluirlo en Los Mas Buscados"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se usa 'presunto' y 'sospechoso' para no afirmar culpabilidad antes de una sentencia.",
+        "notes": "Se usa 'presunto' y 'sospechoso' para no afirmar culpabilidad antes de una sentencia.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Regalos baratitos para mama",
+        "story_type": "actualidad",
+        "summary": "El Centro de Lima se llena por el regalo ideal para mama. Hay flores, peluches, ropa y detalles desde precios bajos, mientras los comerciantes apuestan por una campaña fuerte hasta el domingo.",
+        "speech": "El Centro de Lima se llena por el regalo ideal para mama. Hay flores, peluches, ropa y detalles desde precios bajos, mientras los comerciantes apuestan por una campaña fuerte hasta el domingo.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "cercano",
+          "util",
+          "ligero"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "cover_region": {
+          "x": 0.72,
+          "y": 0.02,
+          "width": 0.27,
+          "height": 0.11
+        },
+        "key_facts": [
+          "alta afluencia en el Centro de Lima",
+          "regalos desde precios accesibles",
+          "campaña por el Dia de la Madre"
+        ],
+        "key_facts_used": [
+          "alta afluencia en el Centro de Lima",
+          "regalos desde precios accesibles",
+          "campaña por el Dia de la Madre"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se mencionan precios de forma general porque varian segun puesto y producto.",
+        "notes": "Se mencionan precios de forma general porque varian segun puesto y producto.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U va por su revancha",
+        "story_type": "deportes",
+        "summary": "Sin vueltas: la U sale a buscar revancha ante Coquimbo. Los chilenos ya golpearon en Lima y ahora Universitario necesita responder fuera de casa para seguir con vida en la pelea copera.",
+        "speech": "Sin vueltas: la U sale a buscar revancha ante Coquimbo. Los chilenos ya golpearon en Lima y ahora Universitario necesita responder fuera de casa para seguir con vida en la pelea copera.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "popular",
+          "futbolero",
+          "con presion de partido"
+        ],
+        "page_numbers": [
+          13
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.84,
+          "width": 0.41,
+          "height": 0.13
+        },
+        "key_facts": [
+          "Universitario enfrenta a Coquimbo",
+          "Coquimbo gano en la ida",
+          "partido clave por Copa"
+        ],
+        "key_facts_used": [
+          "Universitario enfrenta a Coquimbo",
+          "Coquimbo gano en la ida",
+          "partido clave por Copa"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se agregan datos de resultado posterior; se trabaja con el contexto previo al partido.",
+        "notes": "No se agregan datos de resultado posterior; se trabaja con el contexto previo al partido.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Melcochita con depa de soltero",
+        "story_type": "espectaculos",
+        "summary": "Ojo con Melcochita, porque volvio a Lima con nueva etapa: depa de soltero y cero ganas de enamorarse. Dice que esta tranquilo y que, por ahora, prefiere cuidar su paz.",
+        "speech": "Ojo con Melcochita, porque volvio a Lima con nueva etapa: depa de soltero y cero ganas de enamorarse. Dice que esta tranquilo y que, por ahora, prefiere cuidar su paz.",
+        "narrator_profile_id": "reportero_magaly",
+        "narrator_role": "conductora_espectaculos",
+        "tone_notes": [
+          "picante",
+          "agil",
+          "sin crueldad"
+        ],
+        "page_numbers": [
+          18
+        ],
+        "cover_region": {
+          "x": 0.64,
+          "y": 0.84,
+          "width": 0.33,
+          "height": 0.13
+        },
+        "key_facts": [
+          "Melcochita esta en Lima",
+          "vive en departamento de soltero",
+          "dice que no quiere volver a enamorarse"
+        ],
+        "key_facts_used": [
+          "Melcochita esta en Lima",
+          "vive en departamento de soltero",
+          "dice que no quiere volver a enamorarse"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita especular sobre su vida privada mas alla de lo declarado en la nota.",
+        "notes": "Se evita especular sobre su vida privada mas alla de lo declarado en la nota.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-07/2026-05-07-ojo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El caso de Yajaira golpea fuerte. Su familia pide que Luis Flores Julca, presunto feminicida, sea incluido en Los Mas Buscados, mientras el sospechoso sigue profugo y la indignacion crece.\n\nEl Centro de Lima se llena por el regalo ideal para mama. Hay flores, peluches, ropa y detalles desde precios bajos, mientras los comerciantes apuestan por una campaña fuerte hasta el domingo.\n\nSin vueltas: la U sale a buscar revancha ante Coquimbo. Los chilenos ya golpearon en Lima y ahora Universitario necesita responder fuera de casa para seguir con vida en la pelea copera.\n\nOjo con Melcochita, porque volvio a Lima con nueva etapa: depa de soltero y cero ganas de enamorarse. Dice que esta tranquilo y que, por ahora, prefiere cuidar su paz.",
+    "approved_text": "El caso de Yajaira golpea fuerte. Su familia pide que Luis Flores Julca, presunto feminicida, sea incluido en Los Mas Buscados, mientras el sospechoso sigue profugo y la indignacion crece.\n\nEl Centro de Lima se llena por el regalo ideal para mama. Hay flores, peluches, ropa y detalles desde precios bajos, mientras los comerciantes apuestan por una campaña fuerte hasta el domingo.\n\nSin vueltas: la U sale a buscar revancha ante Coquimbo. Los chilenos ya golpearon en Lima y ahora Universitario necesita responder fuera de casa para seguir con vida en la pelea copera.\n\nOjo con Melcochita, porque volvio a Lima con nueva etapa: depa de soltero y cero ganas de enamorarse. Dice que esta tranquilo y que, por ahora, prefiere cuidar su paz.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-07T09:12:44",
+    "updated_at": "2026-05-07T12:57:47",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:12:44",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:13:06",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:13:06",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:27",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:39:02",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:42:00",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:31",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:31",
+        "details": "Seguimiento de portada actualizado para historia 1: Atrapen al asesino de Yajaira -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:31",
+        "details": "Seguimiento de portada actualizado para historia 2: Regalos baratitos para mama -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:31",
+        "details": "Seguimiento de portada actualizado para historia 3: La U va por su revancha -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:31",
+        "details": "Seguimiento de portada actualizado para historia 4: Melcochita con depa de soltero -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:46",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:46",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:46",
+        "details": "Seguimiento de portada actualizado para historia 1: Atrapen al asesino de Yajaira -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:47",
+        "details": "Seguimiento de portada actualizado para historia 2: Regalos baratitos para mama -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:47",
+        "details": "Seguimiento de portada actualizado para historia 3: La U va por su revancha -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:47",
+        "details": "Seguimiento de portada actualizado para historia 4: Melcochita con depa de soltero -> seguir."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, jueves 7 de mayo de 2026, revisamos las portadas con política electoral, economía, policiales y fútbol. En la fecha en que se recuerda la muerte de Manuel Candamo, repasamos diario por diario lo central del día.",
+    "date_reference": "Adonde.com efemerides mayo07: muerte de Manuel Candamo Iriarte en 1904.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta una efemeride peruana con una jornada marcada por politica, justicia, economia y agenda publica.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-07T12:38:27"
+  }
+}

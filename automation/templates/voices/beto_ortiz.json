@@ -4,7 +4,7 @@
   "tts_provider": "voicebox_local",
   "tts_voice": "9df58df3-53f3-42ed-964f-2af89e27cba0",
   "narrator_name": "Beto Ortiz",
-  "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",

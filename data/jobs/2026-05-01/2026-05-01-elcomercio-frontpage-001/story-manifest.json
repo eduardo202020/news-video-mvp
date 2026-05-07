@@ -20,7 +20,7 @@
       "narrator_role": "analista_politica",
       "voice_profile_id": "beto_ortiz",
       "narrator_name": "Beto Ortiz",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
       "text": "Los gremios empresariales piden auditoría externa a los sistemas de la ONPE, ante dudas sobre la transparencia del proceso electoral. La tensión crece en medio de una creciente crisis de confianza.",
       "page_numbers": [
         3,
@@ -39,7 +39,7 @@
       "safety_notes": "No se afirma que los sistemas sean fraudulentos, solo que la solicitud de auditoría refleja la falta de confianza.",
       "cover_region": {
         "x": 0.05,
-        "y": 0.26,
+        "y": 0.18,
         "width": 0.67,
         "height": 0.33
       },
@@ -58,7 +58,7 @@
       "narrator_role": "analista_politica",
       "voice_profile_id": "beto_ortiz",
       "narrator_name": "Beto Ortiz",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
       "text": "El Jurado Nacional de Elecciones ratifica la multa a César Tito Rojas por falsificación de información. Esta medida agrava la situación del candidato y refuerza las sospechas sobre su campaña.",
       "page_numbers": [
         6
@@ -75,8 +75,8 @@
       ],
       "safety_notes": "Se explica el caso sin emitir juicios personales; solo se presenta la decisión del JNE.",
       "cover_region": {
-        "x": 0.76,
-        "y": 0.29,
+        "x": 0.74,
+        "y": 0.19,
         "width": 0.22,
         "height": 0.26
       },
@@ -95,7 +95,7 @@
       "narrator_role": "analista_economia",
       "voice_profile_id": "jaime_bayly",
       "narrator_name": "Jaime Bayly",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/jaime_bayly",
       "text": "Coroccohuayco promete ser un motor de desarrollo económico. La inversión que comenzará en 2028 aspira a generar miles de empleos y aportar al crecimiento del sector minero en el país.",
       "page_numbers": [
         8
@@ -113,9 +113,9 @@
       "safety_notes": "No se asegura el éxito del proyecto, solo se presentan las expectativas basadas en las proyecciones.",
       "cover_region": {
         "x": 0.05,
-        "y": 0.88,
+        "y": 0.78,
         "width": 0.46,
-        "height": 0.12
+        "height": 0.16
       },
       "support_visual": null,
       "segment_audio_file": null,
@@ -132,7 +132,7 @@
       "narrator_role": "analista_economia",
       "voice_profile_id": "jaime_bayly",
       "narrator_name": "Jaime Bayly",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/jaime_bayly",
       "text": "El Banco Central de Reserva de Perú lanza una moneda conmemorativa por sus 200 años. Un gesto de reconocimiento a la alianza con EE.UU. que busca fortalecer la relación económica.",
       "page_numbers": [
         9
@@ -150,9 +150,9 @@
       "safety_notes": "No se menciona ningún aspecto político controversial sobre la relación económica.",
       "cover_region": {
         "x": 0.05,
-        "y": 0.59,
+        "y": 0.53,
         "width": 0.68,
-        "height": 0.28
+        "height": 0.2
       },
       "support_visual": null,
       "segment_audio_file": null,

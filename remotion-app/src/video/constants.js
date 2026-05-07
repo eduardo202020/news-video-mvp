@@ -4,3 +4,4 @@ export const PAGE_TURN_FRAMES = 16;
 export const SEGMENT_GAP_FRAMES = 10;
 export const SUBTITLE_TOP = 1098;
 export const SUBTITLE_SIDE = 6;
+export const SHOW_NARRATOR_ANCHOR_GUIDE = false;

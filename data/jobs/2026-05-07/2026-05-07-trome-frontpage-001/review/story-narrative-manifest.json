@@ -1,0 +1,121 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-07-trome-frontpage-001",
+  "source_id": "trome",
+  "source_name": "Trome",
+  "date": "2026-05-07",
+  "front_page_image": "data/jobs/2026-05-07/2026-05-07-trome-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Crecen ventas por el Dia de la Madre",
+      "story_type": "economia",
+      "summary": "El Dia de la Madre mueve la caja fuerte del comercio. Centros comerciales proyectan ventas por S/ 4,756 millones, con celulares, carteras, flores y delivery peleando por el regalo de ultimo minuto.",
+      "speech": "El Dia de la Madre mueve la caja fuerte del comercio. Centros comerciales proyectan ventas por S/ 4,756 millones, con celulares, carteras, flores y delivery peleando por el regalo de ultimo minuto.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.18,
+        "y": 0.76,
+        "width": 0.18,
+        "height": 0.15
+      },
+      "key_facts": [
+        "ventas proyectadas por S/ 4,756 millones",
+        "alta demanda por regalos para mama",
+        "centros comerciales y delivery empujan la campaña"
+      ],
+      "tone_notes": [
+        "analitico",
+        "agil",
+        "con impacto economico"
+      ],
+      "safety_notes": "Se usa la cifra visible en la pagina interna y se evita proyectar resultados no confirmados.",
+      "notes": "Se usa la cifra visible en la pagina interna y se evita proyectar resultados no confirmados.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Apuntan a capitan por robo de lingotes de oro",
+      "story_type": "policial",
+      "summary": "La investigacion apunta a un capitan de la PNP vinculado al caso de lingotes cambiados por cobre. En el registro aparecen S/ 9.7 millones en efectivo y un patrimonio bajo la lupa.",
+      "speech": "La investigacion apunta a un capitan de la PNP vinculado al caso de lingotes cambiados por cobre. En el registro aparecen S/ 9.7 millones en efectivo y un patrimonio bajo la lupa.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.34,
+        "y": 0.18,
+        "width": 0.61,
+        "height": 0.73
+      },
+      "key_facts": [
+        "capitan de la PNP bajo investigacion",
+        "S/ 9.7 millones en efectivo",
+        "caso de lingotes cambiados por cobre"
+      ],
+      "tone_notes": [
+        "tenso",
+        "cauteloso",
+        "de investigacion"
+      ],
+      "safety_notes": "Se evita presentarlo como culpable; la redaccion mantiene el caso como investigacion en curso.",
+      "notes": "Se evita presentarlo como culpable; la redaccion mantiene el caso como investigacion en curso.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "La U va por el golpe en la Copa",
+      "story_type": "deportes",
+      "summary": "Partido clave para Universitario. La U visita a Coquimbo Unido con la necesidad de cobrarse la revancha y sostenerse en la Copa, en una noche donde cada detalle puede cambiar el grupo.",
+      "speech": "Partido clave para Universitario. La U visita a Coquimbo Unido con la necesidad de cobrarse la revancha y sostenerse en la Copa, en una noche donde cada detalle puede cambiar el grupo.",
+      "page_numbers": [
+        11
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.22,
+        "width": 0.29,
+        "height": 0.55
+      },
+      "key_facts": [
+        "Universitario visita a Coquimbo Unido",
+        "partido por Copa Libertadores",
+        "busca revancha tras la ida"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "directo",
+        "competitivo"
+      ],
+      "safety_notes": "Se resume el contexto deportivo visible sin agregar marcador actualizado.",
+      "notes": "Se resume el contexto deportivo visible sin agregar marcador actualizado.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

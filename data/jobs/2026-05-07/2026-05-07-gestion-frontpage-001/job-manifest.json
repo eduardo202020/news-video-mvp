@@ -1,0 +1,1409 @@
+{
+  "job_id": "2026-05-07-gestion-frontpage-001",
+  "source_id": "gestion",
+  "date": "2026-05-07",
+  "source": {
+    "source_id": "gestion",
+    "source_config_path": "automation/sources/diarios/gestion.json",
+    "requested_date": "2026-05-07",
+    "issue_date": "2026-05-07",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/gestion.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 5",
+        "page_number": 5,
+        "source_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=5&scale=80",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/pages/page-05.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 8",
+        "page_number": 8,
+        "source_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=8&scale=80",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/pages/page-08.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 10",
+        "page_number": 10,
+        "source_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=10&scale=80",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/pages/page-10.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=12&scale=80",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/pages/page-12.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 22",
+        "page_number": 22,
+        "source_url": "https://t.prcdn.co/img?file=eag62026050700000000001001&page=22&scale=80",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/pages/page-22.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      2,
+      3,
+      5,
+      8,
+      10,
+      12,
+      22
+    ],
+    "candidates": [
+      {
+        "headline": "Dolar retrocede por posible acuerdo sobre Iran",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.29,
+          "width": 0.68,
+          "height": 0.46
+        },
+        "page_number": 2,
+        "evidence_line": "P. 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Dolar retrocede por posible acuerdo sobre Iran",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.29,
+          "width": 0.68,
+          "height": 0.46
+        },
+        "page_number": 3,
+        "evidence_line": "P. 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Siderperu suspende proyecto de US$ 45 millones",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.29,
+          "width": 0.21,
+          "height": 0.2
+        },
+        "page_number": 5,
+        "evidence_line": "P. 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Glencore integrara Quechua a Antapaccay",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.53,
+          "width": 0.21,
+          "height": 0.24
+        },
+        "page_number": 8,
+        "evidence_line": "P. 8",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Sunafil se enfocara en sectores clave",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.75,
+          "width": 0.68,
+          "height": 0.13
+        },
+        "page_number": 10,
+        "evidence_line": "P. 10",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Francia apoyaria al Peru contra mineria ilegal",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.91,
+          "width": 0.69,
+          "height": 0.06
+        },
+        "page_number": 12,
+        "evidence_line": "P. 12",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "China consolida su poder blando",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.79,
+          "y": 0.82,
+          "width": 0.19,
+          "height": 0.14
+        },
+        "page_number": 22,
+        "evidence_line": "P. 22",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Dolar retrocede por posible acuerdo sobre Iran",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.29,
+          "width": 0.68,
+          "height": 0.46
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "P. 2-3",
+        "evidence_lines": [
+          "P. 2-3"
+        ],
+        "confidence": 0.98,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Siderperu suspende proyecto de US$ 45 millones",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.29,
+          "width": 0.21,
+          "height": 0.2
+        },
+        "page_numbers": [
+          5
+        ],
+        "evidence": "P. 5",
+        "evidence_lines": [
+          "P. 5"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Glencore integrara Quechua a Antapaccay",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.53,
+          "width": 0.21,
+          "height": 0.24
+        },
+        "page_numbers": [
+          8
+        ],
+        "evidence": "P. 8",
+        "evidence_lines": [
+          "P. 8"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Sunafil se enfocara en sectores clave",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.75,
+          "width": 0.68,
+          "height": 0.13
+        },
+        "page_numbers": [
+          10
+        ],
+        "evidence": "P. 10",
+        "evidence_lines": [
+          "P. 10"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Francia apoyaria al Peru contra mineria ilegal",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.91,
+          "width": 0.69,
+          "height": 0.06
+        },
+        "page_numbers": [
+          12
+        ],
+        "evidence": "P. 12",
+        "evidence_lines": [
+          "P. 12"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "headline": "China consolida su poder blando",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.79,
+          "y": 0.82,
+          "width": 0.19,
+          "height": 0.14
+        },
+        "page_numbers": [
+          22
+        ],
+        "evidence": "P. 22",
+        "evidence_lines": [
+          "P. 22"
+        ],
+        "confidence": 0.88
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      3,
+      5,
+      8,
+      10,
+      12,
+      22
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Dólar retrocede por posible acuerdo sobre Irán",
+        "story_type": "economia",
+        "summary": "El dólar retrocede tras la expectativa de un acuerdo para poner fin a la guerra en Irán. Esta incertidumbre política también tiene un impacto en los mercados globales, que reflejan cautela frente al futuro económico.",
+        "speech": "El dólar retrocede tras la expectativa de un acuerdo para poner fin a la guerra en Irán. Esta incertidumbre política también tiene un impacto en los mercados globales, que reflejan cautela frente al futuro económico.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "serio",
+          "informativo",
+          "preciso"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.29,
+          "width": 0.68,
+          "height": 0.46
+        },
+        "key_facts": [
+          "dólar retrocede",
+          "acuerdo sobre Irán",
+          "impacto en mercados"
+        ],
+        "key_facts_used": [
+          "dólar retrocede",
+          "acuerdo sobre Irán",
+          "impacto en mercados"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La información sobre la guerra en Irán no se detalla completamente en las fuentes disponibles.",
+        "notes": "La información sobre la guerra en Irán no se detalla completamente en las fuentes disponibles.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "line",
+          "title": "Evolución del Dólar",
+          "points": [
+            {
+              "label": "Inicio de mayo",
+              "value": 3.52
+            },
+            {
+              "label": "Final de mayo",
+              "value": 3.46
+            },
+            {
+              "label": "Actualidad",
+              "value": 3.48
+            }
+          ],
+          "subtitle": "Impacto de las negociaciones sobre el valor del dólar",
+          "unit": "S/ por USD",
+          "highlight_label": "Dólar retrocediendo",
+          "data_source_note": "Datos verificados a partir de la portada del periódico."
+        }
+      },
+      {
+        "headline": "Siderperu suspende proyecto de US$ 45 millones",
+        "story_type": "economia",
+        "summary": "Siderperu decide suspender un proyecto de US$ 45 millones debido a la competencia desigual que enfrenta con empresas extranjeras. Un paso que refleja las presiones del mercado en el sector siderúrgico.",
+        "speech": "Siderperu decide suspender un proyecto de US$ 45 millones debido a la competencia desigual que enfrenta con empresas extranjeras. Un paso que refleja las presiones del mercado en el sector siderúrgico.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "analítico",
+          "contextual",
+          "formal"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.29,
+          "width": 0.21,
+          "height": 0.2
+        },
+        "key_facts": [
+          "proyecto suspendido",
+          "US$ 45 millones",
+          "competencia desigual"
+        ],
+        "key_facts_used": [
+          "proyecto suspendido",
+          "US$ 45 millones",
+          "competencia desigual"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se especifican los detalles exactos de la competencia en el reporte original.",
+        "notes": "No se especifican los detalles exactos de la competencia en el reporte original.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Glencore integrará Quechua a Antapaccay",
+        "story_type": "economia",
+        "summary": "Glencore incorpora el proyecto Quechua al complejo Antapaccay. Un movimiento clave para la minería en el sur del país, que promete fortalecer la producción de cobre.",
+        "speech": "Glencore incorpora el proyecto Quechua al complejo Antapaccay. Un movimiento clave para la minería en el sur del país, que promete fortalecer la producción de cobre.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "informativo",
+          "directo",
+          "preciso"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.53,
+          "width": 0.21,
+          "height": 0.24
+        },
+        "key_facts": [
+          "Glencore",
+          "Quechua",
+          "Antapaccay"
+        ],
+        "key_facts_used": [
+          "Glencore",
+          "Quechua",
+          "Antapaccay"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Los detalles sobre la integración específica del proyecto no están completamente desglosados.",
+        "notes": "Los detalles sobre la integración específica del proyecto no están completamente desglosados.",
+        "support_visual": null
+      },
+      {
+        "headline": "Sunafil se enfocará en sectores clave",
+        "story_type": "economia",
+        "summary": "Sunafil anuncia su enfoque en sectores clave como la agroindustria, minería y comercio. Este enfoque responde a la necesidad de fortalecer la fiscalización laboral en sectores estratégicos.",
+        "speech": "Sunafil anuncia su enfoque en sectores clave como la agroindustria, minería y comercio. Este enfoque responde a la necesidad de fortalecer la fiscalización laboral en sectores estratégicos.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "informativo",
+          "estratégico",
+          "claro"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.75,
+          "width": 0.68,
+          "height": 0.13
+        },
+        "key_facts": [
+          "Sunafil",
+          "sectores clave",
+          "fiscalización laboral"
+        ],
+        "key_facts_used": [
+          "Sunafil",
+          "sectores clave",
+          "fiscalización laboral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se describe el enfoque sin detalles específicos sobre las estrategias exactas de implementación.",
+        "notes": "Se describe el enfoque sin detalles específicos sobre las estrategias exactas de implementación.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El dólar retrocede tras la expectativa de un acuerdo para poner fin a la guerra en Irán. Esta incertidumbre política también tiene un impacto en los mercados globales, que reflejan cautela frente al futuro económico.\n\nSiderperu decide suspender un proyecto de US$ 45 millones debido a la competencia desigual que enfrenta con empresas extranjeras. Un paso que refleja las presiones del mercado en el sector siderúrgico.\n\nGlencore incorpora el proyecto Quechua al complejo Antapaccay. Un movimiento clave para la minería en el sur del país, que promete fortalecer la producción de cobre.\n\nSunafil anuncia su enfoque en sectores clave como la agroindustria, minería y comercio. Este enfoque responde a la necesidad de fortalecer la fiscalización laboral en sectores estratégicos.",
+    "approved_text": "El dólar retrocede tras la expectativa de un acuerdo para poner fin a la guerra en Irán. Esta incertidumbre política también tiene un impacto en los mercados globales, que reflejan cautela frente al futuro económico.\n\nSiderperu decide suspender un proyecto de US$ 45 millones debido a la competencia desigual que enfrenta con empresas extranjeras. Un paso que refleja las presiones del mercado en el sector siderúrgico.\n\nGlencore incorpora el proyecto Quechua al complejo Antapaccay. Un movimiento clave para la minería en el sur del país, que promete fortalecer la producción de cobre.\n\nSunafil anuncia su enfoque en sectores clave como la agroindustria, minería y comercio. Este enfoque responde a la necesidad de fortalecer la fiscalización laboral en sectores estratégicos.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-07-gestion-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-07T09:12:17",
+    "updated_at": "2026-05-07T12:51:34",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:12:17",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:12:40",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:12:41",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:27",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:39:26",
+        "details": "Se descargaron 7 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:48:26",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:27",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:27",
+        "details": "Seguimiento de portada actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:28",
+        "details": "Seguimiento de portada actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:28",
+        "details": "Seguimiento de portada actualizado para historia 3: Glencore integrara Quechua a Antapaccay -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:28",
+        "details": "Seguimiento de portada actualizado para historia 4: Sunafil se enfocara en sectores clave -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:28",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:28",
+        "details": "Seguimiento de portada actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:28",
+        "details": "Seguimiento de portada actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:28",
+        "details": "Seguimiento de portada actualizado para historia 3: Glencore integrara Quechua a Antapaccay -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:48:28",
+        "details": "Seguimiento de portada actualizado para historia 4: Sunafil se enfocara en sectores clave -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:44",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:45",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:50:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:09",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:13",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 1: Dolar retrocede por posible acuerdo sobre Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 2: Siderperu suspende proyecto de US$ 45 millones."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:33",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 3: Glencore integrara Quechua a Antapaccay."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Enfoque manual actualizado para historia 4: Sunafil se enfocara en sectores clave."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:51:34",
+        "details": "Story manifest generado desde job manifest."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, jueves 7 de mayo de 2026, revisamos las portadas con política electoral, economía, policiales y fútbol. En la fecha en que se recuerda la muerte de Manuel Candamo, repasamos diario por diario lo central del día.",
+    "date_reference": "Adonde.com efemerides mayo07: muerte de Manuel Candamo Iriarte en 1904.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta una efemeride peruana con una jornada marcada por politica, justicia, economia y agenda publica.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-07T12:38:27"
+  }
+}

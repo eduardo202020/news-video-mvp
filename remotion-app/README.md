@@ -92,9 +92,9 @@ Contiene las piezas visuales separadas para iterar mas facil:
 
 Presentadores actuales:
 
-- `Cuy-01` -> `public/assets/gestures/cuy/01`
-- `Cuy-02` -> `public/assets/gestures/cuy/02`
-- `Cuy-Depor` -> `public/assets/gestures/cuy/depor`
+- `Thanos` -> `public/assets/gestures/cuy/thanos`
+- `Reportera Magaly` -> `public/assets/gestures/cuy/reportera_magaly`
+- `MrPeet` -> `public/assets/gestures/cuy/mr_peet`
 
 ## Flujo recomendado
 
@@ -106,9 +106,9 @@ Presentadores actuales:
 
 Secuencia estable actual en Studio:
 
-1. `Trome` con `Cuy-01`
-2. `Ojo` con `Cuy-02`
-3. `Libero` con `Cuy-Depor`
+1. `Trome` con `Thanos`
+2. `Ojo` con `Reportera Magaly`
+3. `Libero` con `MrPeet`
 
 ## Composiciones importantes
 

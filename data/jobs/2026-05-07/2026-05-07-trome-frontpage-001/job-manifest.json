@@ -1,0 +1,2825 @@
+{
+  "job_id": "2026-05-07-trome-frontpage-001",
+  "source_id": "trome",
+  "date": "2026-05-07",
+  "source": {
+    "source_id": "trome",
+    "source_config_path": "automation/sources/diarios/trome.json",
+    "requested_date": "2026-05-07",
+    "issue_date": "2026-05-07",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026050700000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-07/2026-05-07-trome-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026050700000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/trome.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050700000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-trome-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 7",
+        "page_number": 7,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050700000000001001&page=7&scale=82",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-trome-frontpage-001/input/pages/page-07.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050700000000001001&page=9&scale=82",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-trome-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050700000000001001&page=11&scale=82",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-trome-frontpage-001/input/pages/page-11.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      7,
+      9,
+      11
+    ],
+    "candidates": [
+      {
+        "headline": "Apuntan a capitán por robo de lingotes de oro",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.34,
+          "y": 0.18,
+          "width": 0.61,
+          "height": 0.73
+        },
+        "page_number": 9,
+        "evidence_line": "Pagina 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "La U va por el golpe en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.22,
+          "width": 0.29,
+          "height": 0.55
+        },
+        "page_number": 11,
+        "evidence_line": "Pagina 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.86
+      },
+      {
+        "headline": "Crecen ventas por el Dia de la Madre",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.18,
+          "y": 0.82,
+          "width": 0.18,
+          "height": 0.15
+        },
+        "page_number": 7,
+        "evidence_line": "Pagina 7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.82
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Crecen ventas por el Dia de la Madre",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.18,
+          "y": 0.76,
+          "width": 0.18,
+          "height": 0.15
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "Pagina 7",
+        "evidence_lines": [
+          "Pagina 7"
+        ],
+        "confidence": 0.82,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Apuntan a capitán por robo de lingotes de oro",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.34,
+          "y": 0.18,
+          "width": 0.61,
+          "height": 0.73
+        },
+        "page_numbers": [
+          9
+        ],
+        "evidence": "Pagina 9",
+        "evidence_lines": [
+          "Pagina 9"
+        ],
+        "confidence": 0.97,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U va por el golpe en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.22,
+          "width": 0.29,
+          "height": 0.55
+        },
+        "page_numbers": [
+          11
+        ],
+        "evidence": "Pagina 11",
+        "evidence_lines": [
+          "Pagina 11"
+        ],
+        "confidence": 0.86,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      7,
+      9,
+      11
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Crecen ventas por el Dia de la Madre",
+        "story_type": "economia",
+        "summary": "El Dia de la Madre mueve la caja fuerte del comercio. Centros comerciales proyectan ventas por S/ 4,756 millones, con celulares, carteras, flores y delivery peleando por el regalo de ultimo minuto.",
+        "speech": "El Dia de la Madre mueve la caja fuerte del comercio. Centros comerciales proyectan ventas por S/ 4,756 millones, con celulares, carteras, flores y delivery peleando por el regalo de ultimo minuto.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "analitico",
+          "agil",
+          "con impacto economico"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.18,
+          "y": 0.76,
+          "width": 0.18,
+          "height": 0.15
+        },
+        "key_facts": [
+          "ventas proyectadas por S/ 4,756 millones",
+          "alta demanda por regalos para mama",
+          "centros comerciales y delivery empujan la campaña"
+        ],
+        "key_facts_used": [
+          "ventas proyectadas por S/ 4,756 millones",
+          "alta demanda por regalos para mama",
+          "centros comerciales y delivery empujan la campaña"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se usa la cifra visible en la pagina interna y se evita proyectar resultados no confirmados.",
+        "notes": "Se usa la cifra visible en la pagina interna y se evita proyectar resultados no confirmados.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Apuntan a capitan por robo de lingotes de oro",
+        "story_type": "policial",
+        "summary": "La investigacion apunta a un capitan de la PNP vinculado al caso de lingotes cambiados por cobre. En el registro aparecen S/ 9.7 millones en efectivo y un patrimonio bajo la lupa.",
+        "speech": "La investigacion apunta a un capitan de la PNP vinculado al caso de lingotes cambiados por cobre. En el registro aparecen S/ 9.7 millones en efectivo y un patrimonio bajo la lupa.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "tenso",
+          "cauteloso",
+          "de investigacion"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.34,
+          "y": 0.18,
+          "width": 0.61,
+          "height": 0.73
+        },
+        "key_facts": [
+          "capitan de la PNP bajo investigacion",
+          "S/ 9.7 millones en efectivo",
+          "caso de lingotes cambiados por cobre"
+        ],
+        "key_facts_used": [
+          "capitan de la PNP bajo investigacion",
+          "S/ 9.7 millones en efectivo",
+          "caso de lingotes cambiados por cobre"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita presentarlo como culpable; la redaccion mantiene el caso como investigacion en curso.",
+        "notes": "Se evita presentarlo como culpable; la redaccion mantiene el caso como investigacion en curso.",
+        "support_visual": null
+      },
+      {
+        "headline": "La U va por el golpe en la Copa",
+        "story_type": "deportes",
+        "summary": "Partido clave para Universitario. La U visita a Coquimbo Unido con la necesidad de cobrarse la revancha y sostenerse en la Copa, en una noche donde cada detalle puede cambiar el grupo.",
+        "speech": "Partido clave para Universitario. La U visita a Coquimbo Unido con la necesidad de cobrarse la revancha y sostenerse en la Copa, en una noche donde cada detalle puede cambiar el grupo.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "futbolero",
+          "directo",
+          "competitivo"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.22,
+          "width": 0.29,
+          "height": 0.55
+        },
+        "key_facts": [
+          "Universitario visita a Coquimbo Unido",
+          "partido por Copa Libertadores",
+          "busca revancha tras la ida"
+        ],
+        "key_facts_used": [
+          "Universitario visita a Coquimbo Unido",
+          "partido por Copa Libertadores",
+          "busca revancha tras la ida"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resume el contexto deportivo visible sin agregar marcador actualizado.",
+        "notes": "Se resume el contexto deportivo visible sin agregar marcador actualizado.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-07/2026-05-07-trome-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El Dia de la Madre mueve la caja fuerte del comercio. Centros comerciales proyectan ventas por S/ 4,756 millones, con celulares, carteras, flores y delivery peleando por el regalo de ultimo minuto.\n\nLa investigacion apunta a un capitan de la PNP vinculado al caso de lingotes cambiados por cobre. En el registro aparecen S/ 9.7 millones en efectivo y un patrimonio bajo la lupa.\n\nPartido clave para Universitario. La U visita a Coquimbo Unido con la necesidad de cobrarse la revancha y sostenerse en la Copa, en una noche donde cada detalle puede cambiar el grupo.",
+    "approved_text": "El Dia de la Madre mueve la caja fuerte del comercio. Centros comerciales proyectan ventas por S/ 4,756 millones, con celulares, carteras, flores y delivery peleando por el regalo de ultimo minuto.\n\nLa investigacion apunta a un capitan de la PNP vinculado al caso de lingotes cambiados por cobre. En el registro aparecen S/ 9.7 millones en efectivo y un patrimonio bajo la lupa.\n\nPartido clave para Universitario. La U visita a Coquimbo Unido con la necesidad de cobrarse la revancha y sostenerse en la Copa, en una noche donde cada detalle puede cambiar el grupo.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-07/2026-05-07-trome-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-07-trome-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-07T09:13:06",
+    "updated_at": "2026-05-07T12:57:28",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:13:06",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:13:30",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:13:30",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:27",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:47",
+        "details": "Se descargaron 3 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:42:00",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:42:01",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:42:01",
+        "details": "Seguimiento de portada actualizado para historia 1: Crecen ventas por el Dia de la Madre -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:42:01",
+        "details": "Seguimiento de portada actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:42:01",
+        "details": "Seguimiento de portada actualizado para historia 3: La U va por el golpe en la Copa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:42:03",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:42:03",
+        "details": "Seguimiento de portada actualizado para historia 1: Crecen ventas por el Dia de la Madre -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:42:04",
+        "details": "Seguimiento de portada actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:42:04",
+        "details": "Seguimiento de portada actualizado para historia 3: La U va por el golpe en la Copa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:24",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:07",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:07",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:09",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:11",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:11",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:12",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:13",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:13",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:14",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:14",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:16",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:24",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:27",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:31",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:35",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:38",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:41",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:43",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:45",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:46",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:53",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:58",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:59",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:56:59",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:56:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:01",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:04",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:05",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:05",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:05",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:05",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:06",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:07",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:07",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:07",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:07",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:09",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:10",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:19",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:21",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:22",
+        "details": "Enfoque manual actualizado para historia 1: Crecen ventas por el Dia de la Madre."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:22",
+        "details": "Enfoque manual actualizado para historia 2: Apuntan a capitán por robo de lingotes de oro."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:22",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:24",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:25",
+        "details": "Enfoque manual actualizado para historia 3: La U va por el golpe en la Copa."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:57:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:57:28",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, jueves 7 de mayo de 2026, revisamos las portadas con política electoral, economía, policiales y fútbol. En la fecha en que se recuerda la muerte de Manuel Candamo, repasamos diario por diario lo central del día.",
+    "date_reference": "Adonde.com efemerides mayo07: muerte de Manuel Candamo Iriarte en 1904.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta una efemeride peruana con una jornada marcada por politica, justicia, economia y agenda publica.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-07T12:38:27"
+  }
+}

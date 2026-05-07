@@ -22,7 +22,7 @@
       ],
       "cover_region": {
         "x": 0.05,
-        "y": 0.26,
+        "y": 0.18,
         "width": 0.67,
         "height": 0.33
       },
@@ -57,8 +57,8 @@
         6
       ],
       "cover_region": {
-        "x": 0.76,
-        "y": 0.29,
+        "x": 0.74,
+        "y": 0.19,
         "width": 0.22,
         "height": 0.26
       },
@@ -94,9 +94,9 @@
       ],
       "cover_region": {
         "x": 0.05,
-        "y": 0.88,
+        "y": 0.78,
         "width": 0.46,
-        "height": 0.12
+        "height": 0.16
       },
       "key_facts": [
         "proyecto Coroccohuayco",
@@ -130,9 +130,9 @@
       ],
       "cover_region": {
         "x": 0.05,
-        "y": 0.59,
+        "y": 0.53,
         "width": 0.68,
-        "height": 0.28
+        "height": 0.2
       },
       "key_facts": [
         "lanza moneda conmemorativa",

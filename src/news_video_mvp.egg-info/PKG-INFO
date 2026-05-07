@@ -133,9 +133,9 @@ Cuando corre la CLI:
 
 Secuencia demo actual:
 
-1. `Trome` con `Cuy-01`
-2. `Ojo` con `Cuy-02`
-3. `Libero` con `Cuy-Depor`
+1. `Trome` con `Thanos`
+2. `Ojo` con `Reportera Magaly`
+3. `Libero` con `MrPeet`
 
 ### 3. Revisar visualmente en Studio
 
@@ -211,9 +211,9 @@ npm install
 - cambio de narrador por segmento si la historia lo define
 - transicion tipo cambio de pagina entre periodicos
 - presentadores actuales:
-  - `Cuy-01` en `public/assets/gestures/cuy/01`
-  - `Cuy-02` en `public/assets/gestures/cuy/02`
-  - `Cuy-Depor` en `public/assets/gestures/cuy/depor`
+  - `Thanos` en `public/assets/gestures/cuy/thanos`
+  - `Reportera Magaly` en `public/assets/gestures/cuy/reportera_magaly`
+  - `MrPeet` en `public/assets/gestures/cuy/mr_peet`
 - ultima secuencia editorial base:
   - `Trome -> Ojo -> Libero`
 

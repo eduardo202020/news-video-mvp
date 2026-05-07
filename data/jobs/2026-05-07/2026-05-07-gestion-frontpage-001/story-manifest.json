@@ -1,0 +1,185 @@
+{
+  "story_id": "2026-05-07-gestion-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-07-gestion-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Gestión",
+      "cover": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Dólar retrocede por posible acuerdo sobre Irán",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/jaime_bayly",
+      "text": "El dólar retrocede tras la expectativa de un acuerdo para poner fin a la guerra en Irán. Esta incertidumbre política también tiene un impacto en los mercados globales, que reflejan cautela frente al futuro económico.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "key_facts": [
+        "dólar retrocede",
+        "acuerdo sobre Irán",
+        "impacto en mercados"
+      ],
+      "tone_notes": [
+        "serio",
+        "informativo",
+        "preciso"
+      ],
+      "safety_notes": "La información sobre la guerra en Irán no se detalla completamente en las fuentes disponibles.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.29,
+        "width": 0.68,
+        "height": 0.46
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "line",
+        "title": "Evolución del Dólar",
+        "points": [
+          {
+            "label": "Inicio de mayo",
+            "value": 3.52
+          },
+          {
+            "label": "Final de mayo",
+            "value": 3.46
+          },
+          {
+            "label": "Actualidad",
+            "value": 3.48
+          }
+        ],
+        "subtitle": "Impacto de las negociaciones sobre el valor del dólar",
+        "unit": "S/ por USD",
+        "highlight_label": "Dólar retrocediendo",
+        "data_source_note": "Datos verificados a partir de la portada del periódico."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Gestión",
+      "cover": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Siderperu suspende proyecto de US$ 45 millones",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/jaime_bayly",
+      "text": "Siderperu decide suspender un proyecto de US$ 45 millones debido a la competencia desigual que enfrenta con empresas extranjeras. Un paso que refleja las presiones del mercado en el sector siderúrgico.",
+      "page_numbers": [
+        5
+      ],
+      "key_facts": [
+        "proyecto suspendido",
+        "US$ 45 millones",
+        "competencia desigual"
+      ],
+      "tone_notes": [
+        "analítico",
+        "contextual",
+        "formal"
+      ],
+      "safety_notes": "No se especifican los detalles exactos de la competencia en el reporte original.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.29,
+        "width": 0.21,
+        "height": 0.2
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Gestión",
+      "cover": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Glencore integrará Quechua a Antapaccay",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/jaime_bayly",
+      "text": "Glencore incorpora el proyecto Quechua al complejo Antapaccay. Un movimiento clave para la minería en el sur del país, que promete fortalecer la producción de cobre.",
+      "page_numbers": [
+        8
+      ],
+      "key_facts": [
+        "Glencore",
+        "Quechua",
+        "Antapaccay"
+      ],
+      "tone_notes": [
+        "informativo",
+        "directo",
+        "preciso"
+      ],
+      "safety_notes": "Los detalles sobre la integración específica del proyecto no están completamente desglosados.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.53,
+        "width": 0.21,
+        "height": 0.24
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Gestión",
+      "cover": "data/jobs/2026-05-07/2026-05-07-gestion-frontpage-001/input/front-page.jpg",
+      "headline": "Sunafil se enfocará en sectores clave",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/jaime_bayly",
+      "text": "Sunafil anuncia su enfoque en sectores clave como la agroindustria, minería y comercio. Este enfoque responde a la necesidad de fortalecer la fiscalización laboral en sectores estratégicos.",
+      "page_numbers": [
+        10
+      ],
+      "key_facts": [
+        "Sunafil",
+        "sectores clave",
+        "fiscalización laboral"
+      ],
+      "tone_notes": [
+        "informativo",
+        "estratégico",
+        "claro"
+      ],
+      "safety_notes": "Se describe el enfoque sin detalles específicos sobre las estrategias exactas de implementación.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.75,
+        "width": 0.68,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

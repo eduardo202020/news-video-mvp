@@ -10,6 +10,8 @@ const normalizeSegment = (segment, fallbackStory) => ({
   narratorName: segment.narratorName ?? fallbackStory.narratorName,
   gestures: segment.gestures?.length ? segment.gestures : fallbackStory.gestures,
   durationSeconds: segment.durationSeconds ?? null,
+  audioDurationSeconds: segment.audioDurationSeconds ?? segment.durationSeconds ?? null,
+  pauseAfterSeconds: segment.pauseAfterSeconds ?? 0,
   coverRegion: segment.coverRegion ?? null,
   supportVisual: segment.supportVisual ?? null,
   segmentType: segment.segmentType ?? "story"
@@ -18,6 +20,7 @@ const normalizeSegment = (segment, fallbackStory) => ({
 export const normalizeStory = (story) => {
   const baseStory = {
     ...story,
+    assetVersion: story.assetVersion ?? null,
     fps: story.fps ?? VIDEO_SPEC.fps,
     musicSrc: story.musicSrc ?? DEFAULT_MUSIC_SRC,
     musicVolume: story.musicVolume ?? DEFAULT_MUSIC_VOLUME

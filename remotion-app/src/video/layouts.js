@@ -6,21 +6,28 @@ export const NARRATOR_LAYOUTS = {
     height: 880,
     scaleBoost: 1
   },
-  "cuy-01": {
+  "thanos": {
     right: -26,
     bottom: 0,
     width: 690,
     height: 940,
     scaleBoost: 1.06
   },
-  "cuy-02": {
+  "reportera_magaly": {
     right: -18,
     bottom: 0,
     width: 560,
     height: 790,
     scaleBoost: 0.92
   },
-  "cuy-depor": {
+  "mr_peet": {
+    right: -22,
+    bottom: 0,
+    width: 650,
+    height: 760,
+    scaleBoost: 0.98
+  },
+  "gonzalo_nunez": {
     right: -22,
     bottom: 0,
     width: 650,

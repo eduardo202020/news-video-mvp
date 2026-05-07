@@ -381,7 +381,7 @@ Transcribir un audio del job con Voicebox:
 ```powershell
 news-video-mvp-automation transcribe-job `
   --job-manifest .\data\jobs\2026-04-18\2026-04-18-voicebox-test\job-manifest.json `
-  --voice-profile .\automation\templates\voices\voicebox-local.json
+  --voice-profile .\automation\templates\voices\thanos.json
 ```
 
 Usar Voicebox local para la voz:
@@ -389,7 +389,7 @@ Usar Voicebox local para la voz:
 ```powershell
 news-video-mvp-automation voice-job `
   --job-manifest .\data\jobs\2026-04-13\2026-04-13-ojo-frontpage-001\job-manifest.json `
-  --voice-profile .\automation\templates\voices\voicebox-local.json `
+  --voice-profile .\automation\templates\voices\thanos.json `
   --subtitle-policy .\automation\rules\subtitle-policy.json
 ```
 
@@ -397,8 +397,8 @@ Notas para Voicebox:
 
 - instala y abre Voicebox local antes de ejecutar `voice-job`
 - por defecto se usa `http://localhost:17493`
-- los perfiles en `automation/templates/voices/` ya pueden apuntar a voces clonadas distintas por narrador, no solo al fallback `voicebox-local`
-- cambia `tts_voice` en [voicebox-local.json](C:/Users/pc/Documents/proyectos/news-video-mvp/automation/templates/voices/voicebox-local.json:1) o en el perfil del narrador por el `profile_id` real de tu voz clonada
+- los perfiles en `automation/templates/voices/` ya pueden apuntar a voces clonadas distintas por narrador, sin depender de un fallback generico
+- cambia `tts_voice` en [thanos.json](C:/Users/pc/Documents/proyectos/news-video-mvp/automation/templates/voices/thanos.json:1) o en el perfil del narrador por el `profile_id` real de tu voz clonada
 - si tu instancia usa otra URL, ajusta `provider_settings.api_url` o la variable `VOICEBOX_API_URL`
 - si alguna voz tarda mucho, sube `generation_timeout_seconds` en `provider_settings`
 - `transcribe-job` usa el audio del job por defecto, o uno externo con `--audio-file`
@@ -712,7 +712,7 @@ Si ya existe una corrida previa del mismo dia, la app intenta reutilizar audios 
 - audio principal en espanol
 - velocidad base de voz actual: `1.3`
 - fondo musical suave en `public/assets/fondo-musical/`
-- el fallback de voz suele vivir en `voicebox-local.json`
+- si necesitas un perfil base, usa uno vigente como `thanos.json`
 - los narradores editoriales reales se resuelven desde `automation/templates/narrators/story-type-map.json`
 - cada narrador puede usar su propio perfil de Voicebox en `automation/templates/voices/`
 - el proyecto de ChatGPT consume sus fuentes desde `fuentes-chatgpt/`, no solo desde `proyect.md`

@@ -1,0 +1,963 @@
+{
+  "job_id": "2026-05-07-libero-frontpage-001",
+  "source_id": "libero",
+  "date": "2026-05-07",
+  "source": {
+    "source_id": "libero",
+    "source_config_path": "automation/sources/diarios/libero.json",
+    "requested_date": "2026-05-07",
+    "issue_date": "2026-05-07",
+    "publication_status": "available",
+    "discovery_type": "direct_image_url",
+    "front_page_url": "https://img.kiosko.net/2026/05/07/pe/pe_libero.750.jpg",
+    "discovered_pages_count": 1,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-07/2026-05-07-libero-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://img.kiosko.net/2026/05/07/pe/pe_libero.750.jpg",
+    "source_url": "https://img.kiosko.net/2026/05/07/pe/pe_libero.750.jpg",
+    "source_config": "automation/sources/diarios/libero.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://img.kiosko.net/2026/05/07/pe/pe_libero.750.jpg",
+        "local_path": "data/jobs/2026-05-07/2026-05-07-libero-frontpage-001/input/front-page.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      2,
+      4,
+      5,
+      8,
+      9
+    ],
+    "candidates": [
+      {
+        "headline": "Crema, tu puedes",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.08,
+          "width": 0.7,
+          "height": 0.75
+        },
+        "page_number": 4,
+        "evidence_line": "PAGS. 4-5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Crema, tu puedes",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.08,
+          "width": 0.7,
+          "height": 0.75
+        },
+        "page_number": 5,
+        "evidence_line": "PAGS. 4-5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Guede define su oncena",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.84,
+          "width": 0.39,
+          "height": 0.12
+        },
+        "page_number": 8,
+        "evidence_line": "PAGS. 8-9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Guede define su oncena",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.84,
+          "width": 0.39,
+          "height": 0.12
+        },
+        "page_number": 9,
+        "evidence_line": "PAGS. 8-9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "PSG a la final de Champions",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.49,
+          "y": 0.84,
+          "width": 0.25,
+          "height": 0.12
+        },
+        "page_number": 2,
+        "evidence_line": "PAG. 2",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      }
+    ],
+    "stories": [
+      {
+        "headline": "PSG a la final de Champions",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.49,
+          "y": 0.84,
+          "width": 0.25,
+          "height": 0.12
+        },
+        "page_numbers": [
+          2
+        ],
+        "evidence": "PAG. 2",
+        "evidence_lines": [
+          "PAG. 2"
+        ],
+        "confidence": 0.91,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Crema, tu puedes",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.08,
+          "width": 0.7,
+          "height": 0.75
+        },
+        "page_numbers": [
+          4,
+          5
+        ],
+        "evidence": "PAGS. 4-5",
+        "evidence_lines": [
+          "PAGS. 4-5"
+        ],
+        "confidence": 0.98
+      },
+      {
+        "headline": "Guede define su oncena",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.88,
+          "width": 0.39,
+          "height": 0.12
+        },
+        "page_numbers": [
+          8,
+          9
+        ],
+        "evidence": "PAGS. 8-9",
+        "evidence_lines": [
+          "PAGS. 8-9"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Crema Tú Puedes",
+        "story_type": "actualidad",
+        "cover_region": null,
+        "follow_up_enabled": true,
+        "page_numbers": [
+          4,
+          5
+        ],
+        "evidence": "",
+        "evidence_lines": [],
+        "confidence": 1.0
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "PSG clasifica a la final de la Champions",
+        "story_type": "deportes",
+        "summary": "El PSG dejo fuera al Bayern y se metio a la final de la Champions tras una llave intensa y cargada de polemica. El equipo frances vuelve a ilusionarse con levantar por fin la copa mas importante de Europa.",
+        "speech": "El PSG dejo fuera al Bayern y se metio a la final de la Champions tras una llave intensa y cargada de polemica. El equipo frances vuelve a ilusionarse con levantar por fin la copa mas importante de Europa.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "emocionado",
+          "agil",
+          "deportivo"
+        ],
+        "page_numbers": [
+          2
+        ],
+        "cover_region": {
+          "x": 0.49,
+          "y": 0.84,
+          "width": 0.25,
+          "height": 0.12
+        },
+        "key_facts": [
+          "PSG elimino al Bayern",
+          "clasificacion a la final",
+          "llave con polemicas"
+        ],
+        "key_facts_used": [
+          "PSG elimino al Bayern",
+          "clasificacion a la final",
+          "llave con polemicas"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resume el resultado principal visible desde portada y contexto deportivo verificable.",
+        "notes": "Se resume el resultado principal visible desde portada y contexto deportivo verificable.",
+        "support_visual": {
+          "type": "score_card",
+          "title": "Semifinal de Champions League",
+          "points": [
+            {
+              "label": "PSG",
+              "value": 1.0
+            },
+            {
+              "label": "Bayern",
+              "value": 0.0
+            }
+          ],
+          "subtitle": "Resultado global de la serie"
+        }
+      },
+      {
+        "headline": "Universitario busca la hazana en Chile",
+        "story_type": "deportes",
+        "summary": "Universitario se juega una noche clave ante Coquimbo Unido por la Libertadores. La 'U' necesita sumar para sostener sus opciones y la hinchada crema ya vive un partido de presion total.",
+        "speech": "Universitario se juega una noche clave ante Coquimbo Unido por la Libertadores. La 'U' necesita sumar para sostener sus opciones y la hinchada crema ya vive un partido de presion total.",
+        "narrator_profile_id": "gonzalo_nunez",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "intenso",
+          "motivador",
+          "deportivo"
+        ],
+        "page_numbers": [
+          2
+        ],
+        "cover_region": {
+          "x": 0.49,
+          "y": 0.84,
+          "width": 0.25,
+          "height": 0.12
+        },
+        "key_facts": [
+          "Universitario enfrenta a Coquimbo Unido",
+          "partido clave por Libertadores",
+          "obligacion de sumar"
+        ],
+        "key_facts_used": [
+          "Universitario enfrenta a Coquimbo Unido",
+          "partido clave por Libertadores",
+          "obligacion de sumar"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se incluyen marcadores no confirmados previos al partido.",
+        "notes": "No se incluyen marcadores no confirmados previos al partido.",
+        "support_visual": {
+          "type": "metric_card",
+          "title": "Hora del partido",
+          "points": [
+            {
+              "label": "Kickoff",
+              "value": 7.0
+            }
+          ],
+          "subtitle": "Encuentro clave para Universitario",
+          "unit": "pm",
+          "highlight_label": "Inicio",
+          "data_source_note": "Horario mostrado en portada del diario."
+        }
+      },
+      {
+        "headline": "Guede define el once para Cristal",
+        "story_type": "deportes",
+        "summary": "Pablo Guede ajusta los ultimos detalles en Sporting Cristal pensando en el choque del fin de semana. El tecnico busca equilibrio y una reaccion inmediata en un momento de alta exigencia.",
+        "speech": "Pablo Guede ajusta los ultimos detalles en Sporting Cristal pensando en el choque del fin de semana. El tecnico busca equilibrio y una reaccion inmediata en un momento de alta exigencia.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "analitico",
+          "deportivo",
+          "dinamico"
+        ],
+        "page_numbers": [
+          8,
+          9
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.84,
+          "width": 0.39,
+          "height": 0.12
+        },
+        "key_facts": [
+          "Guede prepara alineacion",
+          "Cristal define oncena",
+          "partido importante el fin de semana"
+        ],
+        "key_facts_used": [
+          "Guede prepara alineacion",
+          "Cristal define oncena",
+          "partido importante el fin de semana"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La portada no detalla la alineacion completa; se mantiene redaccion prudente.",
+        "notes": "La portada no detalla la alineacion completa; se mantiene redaccion prudente.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-07/2026-05-07-libero-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El PSG dejo fuera al Bayern y se metio a la final de la Champions tras una llave intensa y cargada de polemica. El equipo frances vuelve a ilusionarse con levantar por fin la copa mas importante de Europa.\n\nUniversitario se juega una noche clave ante Coquimbo Unido por la Libertadores. La 'U' necesita sumar para sostener sus opciones y la hinchada crema ya vive un partido de presion total.\n\nPablo Guede ajusta los ultimos detalles en Sporting Cristal pensando en el choque del fin de semana. El tecnico busca equilibrio y una reaccion inmediata en un momento de alta exigencia.",
+    "approved_text": "El PSG dejo fuera al Bayern y se metio a la final de la Champions tras una llave intensa y cargada de polemica. El equipo frances vuelve a ilusionarse con levantar por fin la copa mas importante de Europa.\n\nUniversitario se juega una noche clave ante Coquimbo Unido por la Libertadores. La 'U' necesita sumar para sostener sus opciones y la hinchada crema ya vive un partido de presion total.\n\nPablo Guede ajusta los ultimos detalles en Sporting Cristal pensando en el choque del fin de semana. El tecnico busca equilibrio y una reaccion inmediata en un momento de alta exigencia.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 3
+    }
+  },
+  "voice": {
+    "profile_id": "voicebox-local",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-07/2026-05-07-libero-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-07-libero-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-07T09:12:42",
+    "updated_at": "2026-05-07T12:55:33",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:12:42",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-07T09:12:44",
+        "details": "Fuente analizada desde HTML; portada descubierta y 0 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:27",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:38:27",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:21",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Seguimiento de portada actualizado para historia 1: PSG a la final de Champions -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:23",
+        "details": "Seguimiento de portada actualizado para historia 3: Guede define su oncena -> seguir."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:45:26",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:27",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:27",
+        "details": "Seguimiento de portada actualizado para historia 1: PSG a la final de Champions -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:45:27",
+        "details": "Seguimiento de portada actualizado para historia 3: Guede define su oncena -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:54:51",
+        "details": "Historia agregada manualmente desde portada: Crema Tú Puedes."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:05",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:05",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:08",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:09",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:09",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:09",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:11",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:12",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:12",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:18",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:19",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:19",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:19",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:20",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:21",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:21",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:22",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:23",
+        "details": "Enfoque manual actualizado para historia 1: PSG a la final de Champions."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:23",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:24",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:25",
+        "details": "Enfoque manual actualizado para historia 3: Guede define su oncena."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-07T12:55:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-07T12:55:33",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, jueves 7 de mayo de 2026, revisamos las portadas con política electoral, economía, policiales y fútbol. En la fecha en que se recuerda la muerte de Manuel Candamo, repasamos diario por diario lo central del día.",
+    "date_reference": "Adonde.com efemerides mayo07: muerte de Manuel Candamo Iriarte en 1904.",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta una efemeride peruana con una jornada marcada por politica, justicia, economia y agenda publica.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-07T12:38:27"
+  }
+}

@@ -73,7 +73,7 @@
   "page_selection": {
     "strategy": "cover_first",
     "provider": "chatgpt_plus_manual",
-    "status": "downloaded",
+    "status": "approved_manual",
     "selected_page_numbers": [
       2,
       3,
@@ -160,8 +160,7 @@
         "evidence_lines": [
           "págs. 2 y 3 TEMA DEL DÍA"
         ],
-        "confidence": 0.97,
-        "follow_up_enabled": true
+        "confidence": 0.97
       },
       {
         "headline": "Piero Corvetto impedido de salir del país",
@@ -179,8 +178,7 @@
         "evidence_lines": [
           "pág. 5 POLÍTICA"
         ],
-        "confidence": 0.95,
-        "follow_up_enabled": true
+        "confidence": 0.95
       },
       {
         "headline": "Velasco: Fossati pidió autos de alta gama",
@@ -198,18 +196,10 @@
         "evidence_lines": [
           "pág. 16 DEPORTES"
         ],
-        "confidence": 0.94,
-        "follow_up_enabled": true
+        "confidence": 0.94
       }
     ],
-    "notes": "Paginas detectadas visualmente desde la portada.",
-    "downloaded_page_numbers": [
-      2,
-      3,
-      5,
-      16
-    ],
-    "focus_review_completed": true
+    "notes": "Paginas detectadas visualmente desde la portada."
   },
   "story_narrative": {
     "provider": "chatgpt_plus_manual",
@@ -251,8 +241,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "No se afirman intenciones específicas más allá de lo declarado públicamente.",
         "notes": "No se afirman intenciones específicas más allá de lo declarado públicamente.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Piero Corvetto impedido de salir del país",
@@ -288,8 +277,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se evita asegurar culpabilidad; la noticia se limita a la decisión judicial y las condiciones actuales.",
         "notes": "Se evita asegurar culpabilidad; la noticia se limita a la decisión judicial y las condiciones actuales.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Velasco: Fossati pidió autos de alta gama",
@@ -325,8 +313,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se maneja como información sobre la solicitud de Fossati; no se asume culpabilidad ni mala fe.",
         "notes": "Se maneja como información sobre la solicitud de Fossati; no se asume culpabilidad ni mala fe.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       }
     ],
     "notes": "Speeches editoriales importados manualmente.",
@@ -376,7 +363,7 @@
   },
   "audit": {
     "created_at": "2026-05-01T08:08:44",
-    "updated_at": "2026-05-01T08:24:49",
+    "updated_at": "2026-05-01T11:51:21",
     "events": [
       {
         "stage": "discover",
@@ -665,6 +652,42 @@
         "status": "edited",
         "timestamp": "2026-05-01T08:24:49",
         "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:00",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:00",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:29",
+        "details": "Se importaron 3 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:50:49",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:50:49",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:51:21",
+        "details": "Se importaron 3 speech(es) editoriales."
       }
     ]
   },
@@ -675,6 +698,6 @@
     "why_it_fits": "Conecta la fecha del lote con una referencia laboral visible también en algunas portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-05-01T08:12:26"
+    "imported_at": "2026-05-01T11:50:49"
   }
 }

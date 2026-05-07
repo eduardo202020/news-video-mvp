@@ -83,8 +83,8 @@ def _load_story_type_narrator_map(*, project_dir: Path) -> dict[str, object]:
     if not mapping_path.exists():
         return {
             "map_id": "missing-story-type-map",
-            "default_narrator_profile_id": "rene_gastelumendi",
-            "presenter_narrator_profile_id": "mavila_huertas",
+            "default_narrator_profile_id": "thanos",
+            "presenter_narrator_profile_id": "thanos",
             "story_types": {},
         }
     payload = read_json(mapping_path)
@@ -119,14 +119,14 @@ def _resolve_story_narrator_config(
             explicit_narrator
             if explicit_narrator
             else _slug_identifier(
-                configured_narrator or mapping.get("default_narrator_profile_id") or "rene_gastelumendi"
+                configured_narrator or mapping.get("default_narrator_profile_id") or "thanos"
             )
         )
     tone_notes = _normalize_key_facts(configured.get("tone_notes"))
     return {
         "map_id": str(mapping.get("map_id") or "default-story-type-narrators"),
         "story_type": normalized_story_type,
-        "narrator_profile_id": resolved_narrator or "rene_gastelumendi",
+        "narrator_profile_id": resolved_narrator or "thanos",
         "role": str(configured.get("role") or "reportero_general"),
         "tone_notes": tone_notes,
     }
@@ -134,7 +134,7 @@ def _resolve_story_narrator_config(
 
 def _get_presenter_narrator_profile_id(*, project_dir: Path) -> str:
     mapping = _load_story_type_narrator_map(project_dir=project_dir)
-    return _slug_identifier(mapping.get("presenter_narrator_profile_id") or "mavila_huertas")
+    return _slug_identifier(mapping.get("presenter_narrator_profile_id") or "thanos")
 
 
 def _get_presenter_narrator_profile_ids(*, project_dir: Path) -> list[str]:
@@ -184,8 +184,8 @@ def _get_story_type_narrator_rotation_candidates(*, story_type: object, project_
         if category_candidates:
             return category_candidates
 
-    fallback = _slug_identifier(mapping.get("default_narrator_profile_id") or "rene_gastelumendi")
-    return [fallback] if fallback else ["rene_gastelumendi"]
+    fallback = _slug_identifier(mapping.get("default_narrator_profile_id") or "thanos")
+    return [fallback] if fallback else ["thanos"]
 
 
 def _apply_story_type_narrator_rotation(
@@ -259,6 +259,7 @@ SOURCE_DISPLAY_NAMES = {
     "gestion": "Gestión",
     "elcomercio": "El Comercio",
 }
+DAILY_RUNDOWN_GAP_SECONDS = 1.0
 
 
 def build_job_id(*, job_date: str, source_id: str, suffix: str = "frontpage-001") -> str:
@@ -2840,7 +2841,7 @@ def _build_rundown_subtitle_segments(
                     "end": round(cursor + subtitle.end, 3),
                 }
             )
-        cursor += segment_duration
+        cursor += segment_duration + float(segment.get("pause_after_seconds") or 0.0)
 
     return full_text, subtitle_segments, round(cursor, 3)
 
@@ -2980,6 +2981,13 @@ def _build_daily_rundown_segment_specs(
         }
     )
     _ = fallback_voice
+    for index, segment in enumerate(segment_specs):
+        is_last_segment = index == len(segment_specs) - 1
+        should_pause_after = not is_last_segment and str(segment.get("segment_type") or "") in {
+            "story",
+            "connector",
+        }
+        segment["pause_after_seconds"] = DAILY_RUNDOWN_GAP_SECONDS if should_pause_after else 0.0
     return segment_specs
 
 
@@ -3443,7 +3451,11 @@ def build_daily_rundown_for_date(
 
     audio_path = target_dir / "narration.wav"
     emit("audio", f"Uniendo {len(segment_audio_paths)} audios en narration.wav.")
-    concatenate_wav_files(segment_audio_paths, audio_path)
+    concatenate_wav_files(
+        segment_audio_paths,
+        audio_path,
+        pause_after_seconds=[float(segment.get("pause_after_seconds") or 0.0) for segment in segment_specs],
+    )
     total_duration = _get_wav_duration_seconds(audio_path)
     emit("audio", f"Audio final listo: {round(total_duration, 2)} segundos.")
     emit("subtitulos", "Generando subtitulos del programa completo.")
@@ -3514,7 +3526,12 @@ def build_daily_rundown_for_date(
                 text=str(segment["text"]),
                 narrator_name=str(segment["narrator_name"]),
                 gesture_paths=segment_gestures,
-                duration_seconds=_get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"])),
+                duration_seconds=(
+                    _get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"]))
+                    + float(segment.get("pause_after_seconds") or 0.0)
+                ),
+                audio_duration_seconds=_get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"])),
+                pause_after_seconds=float(segment.get("pause_after_seconds") or 0.0),
                 cover_region=segment.get("cover_region"),
                 support_visual=segment.get("support_visual"),
                 segment_type=str(segment.get("segment_type") or "story"),
@@ -3634,7 +3651,11 @@ def retry_daily_rundown_from_existing_audio(
     story_id = f"{job_date}-daily-rundown-{run_stamp}"
     audio_path = target_dir / "narration.wav"
     emit("audio", f"Uniendo {len(segment_audio_paths)} audios existentes en narration.wav.")
-    concatenate_wav_files(segment_audio_paths, audio_path)
+    concatenate_wav_files(
+        segment_audio_paths,
+        audio_path,
+        pause_after_seconds=[float(segment.get("pause_after_seconds") or 0.0) for segment in segment_specs],
+    )
     total_duration = _get_wav_duration_seconds(audio_path)
     emit("audio", f"Audio final listo: {round(total_duration, 2)} segundos.")
 
@@ -3703,7 +3724,12 @@ def retry_daily_rundown_from_existing_audio(
                 text=str(segment["text"]),
                 narrator_name=str(segment["narrator_name"]),
                 gesture_paths=segment_gestures,
-                duration_seconds=_get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"])),
+                duration_seconds=(
+                    _get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"]))
+                    + float(segment.get("pause_after_seconds") or 0.0)
+                ),
+                audio_duration_seconds=_get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"])),
+                pause_after_seconds=float(segment.get("pause_after_seconds") or 0.0),
                 cover_region=segment.get("cover_region"),
                 segment_type=str(segment.get("segment_type") or "story"),
             )
@@ -3772,11 +3798,22 @@ def compose_job_for_preview(
                 text=segment["text"],
                 narrator_name=segment.get("narrator_name"),
                 gesture_paths=gesture_paths,
-                duration_seconds=(
+                duration_seconds=float(segment.get("duration_seconds"))
+                if segment.get("duration_seconds") is not None
+                else (
+                    _get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"]))
+                    + float(segment.get("pause_after_seconds") or 0.0)
+                    if segment.get("segment_audio_file")
+                    else None
+                ),
+                audio_duration_seconds=float(segment.get("audio_duration_seconds"))
+                if segment.get("audio_duration_seconds") is not None
+                else (
                     _get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"]))
                     if segment.get("segment_audio_file")
                     else None
                 ),
+                pause_after_seconds=float(segment.get("pause_after_seconds") or 0.0),
                 cover_region=segment.get("cover_region"),
                 support_visual=segment.get("support_visual"),
                 segment_type=str(segment.get("segment_type") or "story"),

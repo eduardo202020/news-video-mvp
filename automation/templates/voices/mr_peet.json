@@ -4,7 +4,7 @@
   "tts_provider": "voicebox_local",
   "tts_voice": "70ec3a75-c024-4cad-a8ed-75e04b0f291e",
   "narrator_name": "MrPeet",
-  "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",

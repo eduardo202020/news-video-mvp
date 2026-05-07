@@ -1,0 +1,126 @@
+{
+  "story_id": "2026-05-01-larepublica-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-01-larepublica-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-01/2026-05-01-larepublica-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "La República",
+      "cover": "data/jobs/2026-05-01/2026-05-01-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "JNJ golpea al Poder Judicial",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "La Junta Nacional de Justicia se enfrenta al Poder Judicial con una decisión histórica: anular el nombramiento de un juez que habló de corrupción en el sistema judicial. El golpe es fuerte, pero la pregunta es ¿qué sigue?",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "decisión de la JNJ",
+        "anulación de nombramiento de juez",
+        "acusaciones de corrupción en el sistema judicial"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "critico",
+        "provocador"
+      ],
+      "safety_notes": "No se afirman delitos, se mencionan denuncias dentro de un proceso judicial.",
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.22,
+        "width": 0.71,
+        "height": 0.36
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "La República",
+      "cover": "data/jobs/2026-05-01/2026-05-01-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Corvetto se allana y juez le prohíbe salir del país",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "La presión sobre Corvetto aumenta con la prohibición judicial de salir del país. La investigación electoral sigue su curso, y el exjefe de la ONPE ahora enfrenta nuevas restricciones mientras la incertidumbre crece.",
+      "page_numbers": [
+        7
+      ],
+      "key_facts": [
+        "prohibición de salida del país",
+        "medida judicial de 18 meses",
+        "investigación electoral"
+      ],
+      "tone_notes": [
+        "incisivo",
+        "grave",
+        "prudente"
+      ],
+      "safety_notes": "La noticia se presenta con cautela para evitar afirmar delitos sin sustento judicial.",
+      "cover_region": {
+        "x": 0.68,
+        "y": 0.49,
+        "width": 0.29,
+        "height": 0.19
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "La República",
+      "cover": "data/jobs/2026-05-01/2026-05-01-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "José Domingo Pérez se une a campaña de Roberto Sánchez",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "José Domingo Pérez, conocido por su rol en la lucha anticorrupción, se une ahora a la campaña política de Roberto Sánchez. El movimiento genera expectativas y provoca debates sobre su papel en la política actual.",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "key_facts": [
+        "José Domingo Pérez se une a Roberto Sánchez",
+        "figura pública conocida en lucha anticorrupción",
+        "impacto político de su respaldo"
+      ],
+      "tone_notes": [
+        "crítico",
+        "interrogante",
+        "evidente"
+      ],
+      "safety_notes": "Se evita suponer motivaciones, solo se presenta como hecho público.",
+      "cover_region": {
+        "x": 0.68,
+        "y": 0.72,
+        "width": 0.29,
+        "height": 0.25
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

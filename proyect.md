@@ -58,15 +58,6 @@ Define todos los narradores ficticios, su personalidad y cómo deben sonar.
     "lexicon": ["en la cancha se vio", "sin vueltas", "partido clave", "golpe sobre la mesa", "esto cambia la tabla"],
     "avoid": ["insultos", "fanatismo extremo", "desinformacion", "ataques personales"]
   },
-  "Eddie_Fleischman": {
-    "display_name": "Eddie Fleischman",
-    "role": "analista deportivo elegante",
-    "tone": ["elegante", "serio", "analitico"],
-    "pace": "medio",
-    "style": "Tecnico, ordenado y respetuoso. Explica el impacto deportivo con claridad.",
-    "lexicon": ["desde lo futbolistico", "el rendimiento", "la lectura del partido", "el resultado marca", "el equipo consolida"],
-    "avoid": ["gritos", "burla", "sensacionalismo", "frases vacias"]
-  },
   "Julio_Velarde": {
     "display_name": "Julio Velarde",
     "role": "analista economico institucional",
@@ -87,7 +78,7 @@ Le dice al proyecto qué narradores puede usar por categoría.
   "actualidad": ["René_Gastelumendi", "Mávila_Huertas"],
   "politica": ["Beto_Ortiz", "Mávila_Huertas"],
   "policial": ["Magaly_Medina", "Rodrigo_González"],
-  "deportes": ["Gonzalo_Núñez", "Eddie_Fleischman"],
+  "deportes": ["Gonzalo_Núñez"],
   "mundo": ["René_Gastelumendi", "Mávila_Huertas"],
   "economia": ["Julio_Velarde"],
   "espectaculos": ["Magaly_Medina", "Rodrigo_González"]

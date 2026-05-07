@@ -1,0 +1,265 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-07-larepublica-frontpage-001",
+  "source_id": "larepublica",
+  "source_name": "La República",
+  "date": "2026-05-07",
+  "front_page_image": "data/jobs/2026-05-07/2026-05-07-larepublica-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "JNE asegura que auditoria no frena elecciones",
+      "story_type": "politica",
+      "summary": "El Jurado Nacional de Elecciones salio a marcar distancia de la polemica: la auditoria en curso no paralizara el proceso electoral. El mensaje busca evitar mas dudas en un escenario ya tensionado.",
+      "speech": "El Jurado Nacional de Elecciones salio a marcar distancia de la polemica: la auditoria en curso no paralizara el proceso electoral. El mensaje busca evitar mas dudas en un escenario ya tensionado.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.51,
+        "width": 0.27,
+        "height": 0.15
+      },
+      "key_facts": [
+        "JNE aclara continuidad electoral",
+        "auditoria sigue en marcha",
+        "buscan evitar incertidumbre"
+      ],
+      "tone_notes": [
+        "serio",
+        "politico",
+        "prudente"
+      ],
+      "safety_notes": "No se atribuyen irregularidades no confirmadas.",
+      "notes": "No se atribuyen irregularidades no confirmadas.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "JNJ cambia composicion de la Corte Penal Nacional",
+      "story_type": "politica",
+      "summary": "Una entrevista personal cambio el cuadro de meritos y la Junta Nacional de Justicia termino redefiniendo la composicion de la Corte Penal Nacional. El movimiento impacta casos sensibles como Lava Jato y crimen organizado.",
+      "speech": "Una entrevista personal cambio el cuadro de meritos y la Junta Nacional de Justicia termino redefiniendo la composicion de la Corte Penal Nacional. El movimiento impacta casos sensibles como Lava Jato y crimen organizado.",
+      "page_numbers": [
+        5
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.25,
+        "width": 0.62,
+        "height": 0.36
+      },
+      "key_facts": [
+        "cambio en cuadro de meritos",
+        "nuevos jueces en Corte Penal",
+        "impacto en casos complejos"
+      ],
+      "tone_notes": [
+        "critico",
+        "analitico",
+        "sobrio"
+      ],
+      "safety_notes": "Se evita insinuar ilegalidades no confirmadas en el proceso.",
+      "notes": "Se evita insinuar ilegalidades no confirmadas en el proceso.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Iglesia investiga al sacerdote Omar Sanchez",
+      "story_type": "politica",
+      "summary": "La Conferencia Episcopal inicio una investigacion contra el sacerdote Omar Sanchez. El caso vuelve a poner presion sobre la respuesta institucional de la Iglesia frente a denuncias internas.",
+      "speech": "La Conferencia Episcopal inicio una investigacion contra el sacerdote Omar Sanchez. El caso vuelve a poner presion sobre la respuesta institucional de la Iglesia frente a denuncias internas.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.68,
+        "width": 0.27,
+        "height": 0.1
+      },
+      "key_facts": [
+        "investigacion eclesiastica",
+        "caso Omar Sanchez",
+        "accion de la Conferencia Episcopal"
+      ],
+      "tone_notes": [
+        "delicado",
+        "serio",
+        "cauteloso"
+      ],
+      "safety_notes": "Se mantiene cautela porque la investigacion sigue en curso.",
+      "notes": "Se mantiene cautela porque la investigacion sigue en curso.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Francke cuestiona designaciones en el BCR",
+      "story_type": "economia",
+      "summary": "Pedro Francke cuestiono el nombramiento de directores politicos en el Banco Central de Reserva y advirtio riesgos para la autonomia tecnica de la entidad. El debate vuelve al centro de la agenda economica.",
+      "speech": "Pedro Francke cuestiono el nombramiento de directores politicos en el Banco Central de Reserva y advirtio riesgos para la autonomia tecnica de la entidad. El debate vuelve al centro de la agenda economica.",
+      "page_numbers": [
+        10
+      ],
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.3,
+        "width": 0.27,
+        "height": 0.17
+      },
+      "key_facts": [
+        "criticas a designaciones en el BCR",
+        "debate sobre autonomia",
+        "opiniones de Pedro Francke"
+      ],
+      "tone_notes": [
+        "critico",
+        "economico",
+        "reflexivo"
+      ],
+      "safety_notes": "Se resume la posicion publica mostrada en portada.",
+      "notes": "Se resume la posicion publica mostrada en portada.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 5,
+      "segment_type": "story",
+      "headline": "BCP recibe autorizacion para compra en Estados Unidos",
+      "story_type": "economia",
+      "summary": "La SBS autorizo al BCP a concretar la compra de un banco en Estados Unidos. La operacion fortalece la expansion internacional del grupo financiero peruano en un mercado altamente competitivo.",
+      "speech": "La SBS autorizo al BCP a concretar la compra de un banco en Estados Unidos. La operacion fortalece la expansion internacional del grupo financiero peruano en un mercado altamente competitivo.",
+      "page_numbers": [
+        11
+      ],
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.79,
+        "width": 0.27,
+        "height": 0.09
+      },
+      "key_facts": [
+        "autorizacion de la SBS",
+        "compra de banco en Estados Unidos",
+        "expansion internacional del BCP"
+      ],
+      "tone_notes": [
+        "economico",
+        "informativo",
+        "agil"
+      ],
+      "safety_notes": "La portada no precisa el monto de la operacion.",
+      "notes": "La portada no precisa el monto de la operacion.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 6,
+      "segment_type": "story",
+      "headline": "MINSA alerta aumento del virus Coxsackie",
+      "story_type": "actualidad",
+      "summary": "El Ministerio de Salud alerto un incremento de casos del virus Coxsackie en menores. La enfermedad provoca fiebre y lesiones dolorosas, mientras las autoridades piden reforzar higiene y vigilancia familiar.",
+      "speech": "El Ministerio de Salud alerto un incremento de casos del virus Coxsackie en menores. La enfermedad provoca fiebre y lesiones dolorosas, mientras las autoridades piden reforzar higiene y vigilancia familiar.",
+      "page_numbers": [
+        14
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.72,
+        "width": 0.62,
+        "height": 0.22
+      },
+      "key_facts": [
+        "incremento del virus Coxsackie",
+        "afecta principalmente a menores",
+        "alerta sanitaria del MINSA"
+      ],
+      "tone_notes": [
+        "preventivo",
+        "claro",
+        "serio"
+      ],
+      "safety_notes": "Se describen solo sintomas y alertas sanitarias generales verificables.",
+      "notes": "Se describen solo sintomas y alertas sanitarias generales verificables.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 7,
+      "segment_type": "story",
+      "headline": "Murio Ted Turner, pionero de la television global",
+      "story_type": "mundo",
+      "summary": "Murio Ted Turner, fundador de CNN y figura clave en la expansion de las noticias 24 horas. Su legado transformo la manera de consumir informacion en tiempo real alrededor del mundo.",
+      "speech": "Murio Ted Turner, fundador de CNN y figura clave en la expansion de las noticias 24 horas. Su legado transformo la manera de consumir informacion en tiempo real alrededor del mundo.",
+      "page_numbers": [
+        17
+      ],
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.87,
+        "width": 0.27,
+        "height": 0.1
+      },
+      "key_facts": [
+        "fallecimiento de Ted Turner",
+        "fundador de CNN",
+        "impacto en noticias globales"
+      ],
+      "tone_notes": [
+        "solemne",
+        "internacional",
+        "narrativo"
+      ],
+      "safety_notes": "Se resume el legado publico atribuido al empresario y comunicador.",
+      "notes": "Se resume el legado publico atribuido al empresario y comunicador.",
+      "support_visual": null,
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "segment_audio_file": null
+    }
+  ]
+}

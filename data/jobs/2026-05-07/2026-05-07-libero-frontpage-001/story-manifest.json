@@ -1,0 +1,153 @@
+{
+  "story_id": "2026-05-07-libero-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-07-libero-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-07/2026-05-07-libero-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-07/2026-05-07-libero-frontpage-001/input/front-page.jpg",
+      "headline": "PSG clasifica a la final de la Champions",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
+      "text": "El PSG dejo fuera al Bayern y se metio a la final de la Champions tras una llave intensa y cargada de polemica. El equipo frances vuelve a ilusionarse con levantar por fin la copa mas importante de Europa.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "PSG elimino al Bayern",
+        "clasificacion a la final",
+        "llave con polemicas"
+      ],
+      "tone_notes": [
+        "emocionado",
+        "agil",
+        "deportivo"
+      ],
+      "safety_notes": "Se resume el resultado principal visible desde portada y contexto deportivo verificable.",
+      "cover_region": {
+        "x": 0.49,
+        "y": 0.84,
+        "width": 0.25,
+        "height": 0.12
+      },
+      "support_visual": {
+        "type": "score_card",
+        "title": "Semifinal de Champions League",
+        "points": [
+          {
+            "label": "PSG",
+            "value": 1.0
+          },
+          {
+            "label": "Bayern",
+            "value": 0.0
+          }
+        ],
+        "subtitle": "Resultado global de la serie"
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-07/2026-05-07-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Universitario busca la hazana en Chile",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/gonzalo_nunez",
+      "text": "Universitario se juega una noche clave ante Coquimbo Unido por la Libertadores. La 'U' necesita sumar para sostener sus opciones y la hinchada crema ya vive un partido de presion total.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "Universitario enfrenta a Coquimbo Unido",
+        "partido clave por Libertadores",
+        "obligacion de sumar"
+      ],
+      "tone_notes": [
+        "intenso",
+        "motivador",
+        "deportivo"
+      ],
+      "safety_notes": "No se incluyen marcadores no confirmados previos al partido.",
+      "cover_region": {
+        "x": 0.49,
+        "y": 0.84,
+        "width": 0.25,
+        "height": 0.12
+      },
+      "support_visual": {
+        "type": "metric_card",
+        "title": "Hora del partido",
+        "points": [
+          {
+            "label": "Kickoff",
+            "value": 7.0
+          }
+        ],
+        "subtitle": "Encuentro clave para Universitario",
+        "unit": "pm",
+        "highlight_label": "Inicio",
+        "data_source_note": "Horario mostrado en portada del diario."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-07/2026-05-07-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Guede define el once para Cristal",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
+      "text": "Pablo Guede ajusta los ultimos detalles en Sporting Cristal pensando en el choque del fin de semana. El tecnico busca equilibrio y una reaccion inmediata en un momento de alta exigencia.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "key_facts": [
+        "Guede prepara alineacion",
+        "Cristal define oncena",
+        "partido importante el fin de semana"
+      ],
+      "tone_notes": [
+        "analitico",
+        "deportivo",
+        "dinamico"
+      ],
+      "safety_notes": "La portada no detalla la alineacion completa; se mantiene redaccion prudente.",
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.84,
+        "width": 0.39,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

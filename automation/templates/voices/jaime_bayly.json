@@ -4,7 +4,7 @@
   "tts_provider": "voicebox_local",
   "tts_voice": "62fff8ea-729f-4b17-a677-55738ac661c9",
   "narrator_name": "Jaime Bayly",
-  "gestures_dir": "remotion-app/public/assets/gestures/cuy/01",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/jaime_bayly",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",

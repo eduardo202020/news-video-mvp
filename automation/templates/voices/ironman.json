@@ -4,7 +4,7 @@
   "tts_provider": "voicebox_local",
   "tts_voice": "50f50fa3-6b92-4c44-8a5c-ab039b50295e",
   "narrator_name": "Ironman",
-  "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/ironman",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",

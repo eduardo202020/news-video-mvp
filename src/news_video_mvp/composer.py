@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 import subprocess
 from tempfile import TemporaryDirectory
+import time
 import wave
 import shutil as which_shutil
 
@@ -32,6 +33,8 @@ class VideoSegment:
     narrator_name: str | None = None
     gesture_paths: list[Path] | None = None
     duration_seconds: float | None = None
+    audio_duration_seconds: float | None = None
+    pause_after_seconds: float | None = None
     cover_region: dict[str, float] | None = None
     support_visual: dict[str, object] | None = None
     segment_type: str | None = None
@@ -171,6 +174,8 @@ def compose_video_props(
                 "narratorName": segment.narrator_name or spec.narrator_name,
                 "gestures": segment_gesture_assets,
                 "durationSeconds": segment.duration_seconds,
+                "audioDurationSeconds": segment.audio_duration_seconds,
+                "pauseAfterSeconds": segment.pause_after_seconds,
                 "coverRegion": segment.cover_region,
                 "supportVisual": segment.support_visual,
                 "segmentType": segment.segment_type or "story",
@@ -184,6 +189,7 @@ def compose_video_props(
 
     props = {
         "id": story_id,
+        "assetVersion": str(int(time.time() * 1000)),
         "newspaperName": segment_props[0]["newspaperName"],
         "coverSrc": segment_props[0]["coverSrc"],
         "backgroundSrc": _to_static_path(background_asset, public_dir),
@@ -280,15 +286,25 @@ def _cleanup_generated_assets(generated_dir: Path, keep_story_id: str) -> None:
         shutil.rmtree(path, ignore_errors=True)
 
 
-def concatenate_wav_files(audio_paths: list[Path], output_path: Path) -> Path:
+def concatenate_wav_files(
+    audio_paths: list[Path],
+    output_path: Path,
+    *,
+    pause_after_seconds: list[float] | None = None,
+) -> Path:
     if not audio_paths:
         raise VideoRenderError("No hay audios para concatenar.")
+    if pause_after_seconds is not None and len(pause_after_seconds) != len(audio_paths):
+        raise VideoRenderError("La lista `pause_after_seconds` debe tener el mismo largo que `audio_paths`.")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with wave.open(str(audio_paths[0]), "rb") as first_wav:
         params = first_wav.getparams()
         frames = [first_wav.readframes(first_wav.getnframes())]
         format_params = params[:3] + params[4:6]
+        frame_rate = first_wav.getframerate()
+        sample_width = first_wav.getsampwidth()
+        channel_count = first_wav.getnchannels()
 
     for audio_path in audio_paths[1:]:
         with wave.open(str(audio_path), "rb") as wav_file:
@@ -300,9 +316,15 @@ def concatenate_wav_files(audio_paths: list[Path], output_path: Path) -> Path:
                 )
             frames.append(wav_file.readframes(wav_file.getnframes()))
 
+    pause_values = pause_after_seconds or [0.0] * len(audio_paths)
     with wave.open(str(output_path), "wb") as output_wav:
         output_wav.setparams(params)
-        for chunk in frames:
+        for chunk, pause_seconds in zip(frames, pause_values, strict=True):
             output_wav.writeframes(chunk)
+            silent_frame_count = max(0, int(round(float(pause_seconds or 0.0) * frame_rate)))
+            if silent_frame_count <= 0:
+                continue
+            silence = b"\x00" * silent_frame_count * sample_width * channel_count
+            output_wav.writeframes(silence)
 
     return output_path

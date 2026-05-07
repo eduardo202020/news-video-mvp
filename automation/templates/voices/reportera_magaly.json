@@ -4,7 +4,7 @@
   "tts_provider": "voicebox_local",
   "tts_voice": "8598e772-c919-411b-aa84-7e83e48ca4cf",
   "narrator_name": "Reportera Magaly",
-  "gestures_dir": "remotion-app/public/assets/gestures/cuy/02",
+  "gestures_dir": "remotion-app/public/assets/gestures/cuy/reportera_magaly",
   "language": "es",
   "provider_settings": {
     "api_url": "http://localhost:17493",

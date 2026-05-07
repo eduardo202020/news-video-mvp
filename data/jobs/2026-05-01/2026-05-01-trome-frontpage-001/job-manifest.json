@@ -73,7 +73,7 @@
   "page_selection": {
     "strategy": "cover_first",
     "provider": "chatgpt_plus_manual",
-    "status": "downloaded",
+    "status": "approved_manual",
     "selected_page_numbers": [
       8,
       10,
@@ -221,13 +221,7 @@
       }
     ],
     "notes": "Paginas detectadas visualmente desde la portada.",
-    "downloaded_page_numbers": [
-      8,
-      10,
-      11,
-      17
-    ],
-    "focus_review_completed": true
+    "focus_review_completed": false
   },
   "story_narrative": {
     "provider": "chatgpt_plus_manual",
@@ -268,8 +262,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se evita afirmar delitos; se presenta como medida judicial e investigación en curso.",
         "notes": "Se evita afirmar delitos; se presenta como medida judicial e investigación en curso.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Ventas crecerán por Día de la Madre",
@@ -305,8 +298,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Cifra y categorías tomadas de la página interna; no se proyectan resultados fuera de lo informado.",
         "notes": "Cifra y categorías tomadas de la página interna; no se proyectan resultados fuera de lo informado.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       },
       {
         "headline": "Paolo Guerrero pide seguir titular en Alianza",
@@ -378,8 +370,7 @@
         "narrator_map_id": "default-story-type-narrators",
         "safety_notes": "Se presenta como acusación de Monserrat y se evita afirmar incumplimientos como hechos probados.",
         "notes": "Se presenta como acusación de Monserrat y se evita afirmar incumplimientos como hechos probados.",
-        "support_visual": null,
-        "follow_up_enabled": true
+        "support_visual": null
       }
     ],
     "notes": "Speeches editoriales importados manualmente.",
@@ -429,7 +420,7 @@
   },
   "audit": {
     "created_at": "2026-05-01T08:09:45",
-    "updated_at": "2026-05-01T08:20:28",
+    "updated_at": "2026-05-01T11:51:09",
     "events": [
       {
         "stage": "discover",
@@ -784,6 +775,168 @@
         "status": "completed",
         "timestamp": "2026-05-01T08:20:28",
         "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:00",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:45:00",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:01",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:01",
+        "details": "Seguimiento de portada actualizado para historia 1: Cierran fronteras a Corvetto -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:01",
+        "details": "Seguimiento de portada actualizado para historia 2: Ventas crecerán por Día de la Madre -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:01",
+        "details": "Seguimiento de portada actualizado para historia 3: Paolo Vieito pide seguir titular en Alianza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:01",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat acusa a Melcochita -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:01",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:01",
+        "details": "Seguimiento de portada actualizado para historia 1: Cierran fronteras a Corvetto -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:01",
+        "details": "Seguimiento de portada actualizado para historia 2: Ventas crecerán por Día de la Madre -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:02",
+        "details": "Seguimiento de portada actualizado para historia 3: Paolo Vieito pide seguir titular en Alianza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:45:02",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat acusa a Melcochita -> seguir."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:46:04",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:46:14",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:50:49",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:50:49",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:50",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:50",
+        "details": "Seguimiento de portada actualizado para historia 1: Cierran fronteras a Corvetto -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:50",
+        "details": "Seguimiento de portada actualizado para historia 2: Ventas crecerán por Día de la Madre -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:50",
+        "details": "Seguimiento de portada actualizado para historia 3: Paolo Vieito pide seguir titular en Alianza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:50",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat acusa a Melcochita -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:58",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:58",
+        "details": "Seguimiento de portada actualizado para historia 1: Cierran fronteras a Corvetto -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:59",
+        "details": "Seguimiento de portada actualizado para historia 2: Ventas crecerán por Día de la Madre -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:59",
+        "details": "Seguimiento de portada actualizado para historia 3: Paolo Vieito pide seguir titular en Alianza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-01T11:50:59",
+        "details": "Seguimiento de portada actualizado para historia 4: Monserrat acusa a Melcochita -> seguir."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-01T11:51:09",
+        "details": "Se importaron 4 speech(es) editoriales."
       }
     ]
   },
@@ -794,6 +947,6 @@
     "why_it_fits": "Conecta la fecha del lote con una referencia laboral visible también en algunas portadas.",
     "provider": "chatgpt_plus_manual",
     "source": "cover_batch_prompt",
-    "imported_at": "2026-05-01T08:12:26"
+    "imported_at": "2026-05-01T11:50:49"
   }
 }

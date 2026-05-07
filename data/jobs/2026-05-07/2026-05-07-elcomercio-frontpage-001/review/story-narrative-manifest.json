@@ -1,0 +1,157 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-07-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "source_name": "El Comercio",
+  "date": "2026-05-07",
+  "front_page_image": "data/jobs/2026-05-07/2026-05-07-elcomercio-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Gremios piden auditoría de sistemas de la ONPE",
+      "story_type": "politica",
+      "summary": "Los gremios exigen que la ONPE realice una auditoría exhaustiva a sus sistemas. Un llamado a la transparencia en medio de la creciente desconfianza en los resultados electorales.",
+      "speech": "Los gremios exigen que la ONPE realice una auditoría exhaustiva a sus sistemas. Un llamado a la transparencia en medio de la creciente desconfianza en los resultados electorales.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.34,
+        "width": 0.76,
+        "height": 0.36
+      },
+      "key_facts": [
+        "gremios piden auditoría",
+        "ONPE",
+        "desconfianza en resultados"
+      ],
+      "tone_notes": [
+        "serio",
+        "formal",
+        "resolutivo"
+      ],
+      "safety_notes": "Se mantiene el enfoque en la solicitud de auditoría, sin detalles adicionales sobre los argumentos de los gremios.",
+      "notes": "Se mantiene el enfoque en la solicitud de auditoría, sin detalles adicionales sobre los argumentos de los gremios.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "JNJ inicia proceso disciplinario a Piero Corvetto",
+      "story_type": "politica",
+      "summary": "La JNJ inicia proceso disciplinario contra Piero Corvetto por presunta falta grave. Una medida que podría marcar el rumbo de la ONPE y la confianza pública en el sistema electoral.",
+      "speech": "La JNJ inicia proceso disciplinario contra Piero Corvetto por presunta falta grave. Una medida que podría marcar el rumbo de la ONPE y la confianza pública en el sistema electoral.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.73,
+        "y": 0.69,
+        "width": 0.25,
+        "height": 0.1
+      },
+      "key_facts": [
+        "JNJ",
+        "proceso disciplinario",
+        "Piero Corvetto"
+      ],
+      "tone_notes": [
+        "formal",
+        "preciso",
+        "contextual"
+      ],
+      "safety_notes": "El proceso disciplinario está en marcha, pero no se menciona aún el desenlace.",
+      "notes": "El proceso disciplinario está en marcha, pero no se menciona aún el desenlace.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Denuncia fiscal contra Sánchez sería vista la próxima semana",
+      "story_type": "politica",
+      "summary": "La denuncia fiscal contra Sánchez está programada para la próxima semana. Este caso podría tener implicaciones importantes para la política peruana en un momento crítico.",
+      "speech": "La denuncia fiscal contra Sánchez está programada para la próxima semana. Este caso podría tener implicaciones importantes para la política peruana en un momento crítico.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.72,
+        "y": 0.38,
+        "width": 0.24,
+        "height": 0.11
+      },
+      "key_facts": [
+        "denuncia fiscal",
+        "Sánchez",
+        "próxima semana"
+      ],
+      "tone_notes": [
+        "informativo",
+        "resolutivo",
+        "serio"
+      ],
+      "safety_notes": "La denuncia sigue su curso legal, pero el caso aún está en una fase preliminar.",
+      "notes": "La denuncia sigue su curso legal, pero el caso aún está en una fase preliminar.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Fallece Ted Turner, fundador de CNN",
+      "story_type": "mundo",
+      "summary": "Ted Turner, el pionero de las noticias en tiempo real con la creación de CNN, fallece a los 87 años. Un legado que marcó la historia del periodismo y la televisión global.",
+      "speech": "Ted Turner, el pionero de las noticias en tiempo real con la creación de CNN, fallece a los 87 años. Un legado que marcó la historia del periodismo y la televisión global.",
+      "page_numbers": [
+        12
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.82,
+        "width": 0.67,
+        "height": 0.17
+      },
+      "key_facts": [
+        "fallecimiento",
+        "Ted Turner",
+        "fundador de CNN"
+      ],
+      "tone_notes": [
+        "serio",
+        "respetuoso",
+        "histórico"
+      ],
+      "safety_notes": "Se menciona el impacto de Turner sin entrar en detalles personales sobre su fallecimiento.",
+      "notes": "Se menciona el impacto de Turner sin entrar en detalles personales sobre su fallecimiento.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    }
+  ]
+}

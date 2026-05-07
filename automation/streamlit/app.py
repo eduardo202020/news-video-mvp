@@ -933,7 +933,7 @@ def update_job_story_cover_region(
 
     notes: list[str] = []
     voice_profile_path = get_voice_profile_path(job.get("voice", {}).get("profile_id")) or (
-        VOICE_PROFILES_DIR / "voicebox-local.json"
+        VOICE_PROFILES_DIR / "thanos.json"
     )
     story_manifest_value = str(job.get("video", {}).get("story_manifest_path") or "").strip()
     resolved_story_manifest_path = PROJECT_DIR / story_manifest_value if story_manifest_value else None
@@ -2458,7 +2458,7 @@ def build_detailed_news_prompt(jobs: list[dict]) -> str:
         "        {",
         '          "headline": "Corvetto fuera de la ONPE por caos electoral",',
         '          "story_type": "politica",',
-        '          "narrator_profile_id": "mavila_huertas",',
+        '          "narrator_profile_id": "thanos",',
         '          "speech": "La salida de Corvetto deja una señal fuerte en plena resaca electoral. Si el caos ya golpeo la confianza en la ONPE, lo que viene exige explicaciones firmes y una reorganizacion sin margen para mas errores.",',
         '          "tone_notes": ["serio", "contextual", "prudente"],',
         '          "key_facts_used": ["salida de Corvetto", "caos electoral", "presion sobre la ONPE"],',
@@ -2817,7 +2817,7 @@ st.caption("Panel operativo para revisar jobs, ejecutar etapas y monitorear el p
 all_jobs = list_jobs()
 available_source_configs = discover_source_configs()
 available_source_ids = [path.stem for path in available_source_configs]
-default_voice_profile_path = VOICE_PROFILES_DIR / "voicebox-local.json"
+default_voice_profile_path = VOICE_PROFILES_DIR / "thanos.json"
 
 with st.expander("Scrapear Periodicos", expanded=not all_jobs):
     st.caption(
@@ -2828,7 +2828,7 @@ with st.expander("Scrapear Periodicos", expanded=not all_jobs):
         batch_date = st.date_input("Fecha del lote", value=datetime.now().date(), format="YYYY-MM-DD")
     with batch_col2:
         voice_profile_options = [path.stem for path in sorted(VOICE_PROFILES_DIR.glob("*.json"))]
-        default_voice_profile = "voicebox-local" if "voicebox-local" in voice_profile_options else (
+        default_voice_profile = "thanos" if "thanos" in voice_profile_options else (
             voice_profile_options[0] if voice_profile_options else ""
         )
         batch_voice_profile = st.selectbox(

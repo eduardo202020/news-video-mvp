@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-05-07-elcomercio-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-07-elcomercio-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-07/2026-05-07-elcomercio-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "El Comercio",
+      "cover": "data/jobs/2026-05-07/2026-05-07-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Gremios piden auditoría de sistemas de la ONPE",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "Los gremios exigen que la ONPE realice una auditoría exhaustiva a sus sistemas. Un llamado a la transparencia en medio de la creciente desconfianza en los resultados electorales.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "gremios piden auditoría",
+        "ONPE",
+        "desconfianza en resultados"
+      ],
+      "tone_notes": [
+        "serio",
+        "formal",
+        "resolutivo"
+      ],
+      "safety_notes": "Se mantiene el enfoque en la solicitud de auditoría, sin detalles adicionales sobre los argumentos de los gremios.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.34,
+        "width": 0.76,
+        "height": 0.36
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "El Comercio",
+      "cover": "data/jobs/2026-05-07/2026-05-07-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "JNJ inicia proceso disciplinario a Piero Corvetto",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "La JNJ inicia proceso disciplinario contra Piero Corvetto por presunta falta grave. Una medida que podría marcar el rumbo de la ONPE y la confianza pública en el sistema electoral.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "JNJ",
+        "proceso disciplinario",
+        "Piero Corvetto"
+      ],
+      "tone_notes": [
+        "formal",
+        "preciso",
+        "contextual"
+      ],
+      "safety_notes": "El proceso disciplinario está en marcha, pero no se menciona aún el desenlace.",
+      "cover_region": {
+        "x": 0.73,
+        "y": 0.69,
+        "width": 0.25,
+        "height": 0.1
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "El Comercio",
+      "cover": "data/jobs/2026-05-07/2026-05-07-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Denuncia fiscal contra Sánchez sería vista la próxima semana",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "La denuncia fiscal contra Sánchez está programada para la próxima semana. Este caso podría tener implicaciones importantes para la política peruana en un momento crítico.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "denuncia fiscal",
+        "Sánchez",
+        "próxima semana"
+      ],
+      "tone_notes": [
+        "informativo",
+        "resolutivo",
+        "serio"
+      ],
+      "safety_notes": "La denuncia sigue su curso legal, pero el caso aún está en una fase preliminar.",
+      "cover_region": {
+        "x": 0.72,
+        "y": 0.38,
+        "width": 0.24,
+        "height": 0.11
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "El Comercio",
+      "cover": "data/jobs/2026-05-07/2026-05-07-elcomercio-frontpage-001/input/front-page.jpg",
+      "headline": "Fallece Ted Turner, fundador de CNN",
+      "story_type": "mundo",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "corresponsal_internacional",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/thanos",
+      "text": "Ted Turner, el pionero de las noticias en tiempo real con la creación de CNN, fallece a los 87 años. Un legado que marcó la historia del periodismo y la televisión global.",
+      "page_numbers": [
+        12
+      ],
+      "key_facts": [
+        "fallecimiento",
+        "Ted Turner",
+        "fundador de CNN"
+      ],
+      "tone_notes": [
+        "serio",
+        "respetuoso",
+        "histórico"
+      ],
+      "safety_notes": "Se menciona el impacto de Turner sin entrar en detalles personales sobre su fallecimiento.",
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.82,
+        "width": 0.67,
+        "height": 0.17
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

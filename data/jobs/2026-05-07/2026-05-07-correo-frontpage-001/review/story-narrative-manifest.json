@@ -1,0 +1,158 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-07-correo-frontpage-001",
+  "source_id": "correo",
+  "source_name": "Correo",
+  "date": "2026-05-07",
+  "front_page_image": "data/jobs/2026-05-07/2026-05-07-correo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Ex-JNJ ratificó a Corvetto pese a cuestionamientos",
+      "story_type": "politica",
+      "summary": "La pregunta incómoda ya no está solo en Corvetto. Correo apunta a los exmiembros de la JNJ que lo ratificaron pese a cuestionamientos; ahora toca explicar quién sostuvo esa decisión y por qué.",
+      "speech": "La pregunta incómoda ya no está solo en Corvetto. Correo apunta a los exmiembros de la JNJ que lo ratificaron pese a cuestionamientos; ahora toca explicar quién sostuvo esa decisión y por qué.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.82,
+        "width": 0.32,
+        "height": 0.15
+      },
+      "key_facts": [
+        "exintegrantes de la JNJ ratificaron a Corvetto",
+        "hubo cuestionamientos previos a su continuidad",
+        "la JNJ abrió investigación disciplinaria"
+      ],
+      "tone_notes": [
+        "crítico",
+        "incisivo",
+        "prudente"
+      ],
+      "safety_notes": "Se evita validar la palabra cómplices como acusación penal; se resume la ratificación y el cuestionamiento político.",
+      "notes": "Se evita validar la palabra cómplices como acusación penal; se resume la ratificación y el cuestionamiento político.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Auditoría antes de la proclamación",
+      "story_type": "politica",
+      "summary": "La proclamación llega con presión encima. Gremios como la SNI piden auditar la ONPE antes del cierre electoral, mientras el JNE revisa actas observadas; sin confianza, no hay calma política.",
+      "speech": "La proclamación llega con presión encima. Gremios como la SNI piden auditar la ONPE antes del cierre electoral, mientras el JNE revisa actas observadas; sin confianza, no hay calma política.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.25,
+        "y": 0.12,
+        "width": 0.71,
+        "height": 0.66
+      },
+      "key_facts": [
+        "gremios piden auditoría a la ONPE",
+        "cuestionan irregularidades en sufragios",
+        "JNE revisa actas observadas"
+      ],
+      "tone_notes": [
+        "directo",
+        "político",
+        "serio"
+      ],
+      "safety_notes": "Se presenta como pedido de auditoría y cuestionamiento de gremios, no como prueba de fraude.",
+      "notes": "Se presenta como pedido de auditoría y cuestionamiento de gremios, no como prueba de fraude.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Casos de enfermedad de boca, pies y manos",
+      "story_type": "actualidad",
+      "summary": "Alerta sanitaria en Lima: el Minsa reporta más de 140 casos de coxsackie, sobre todo en menores de cinco años. No es para alarmarse, pero sí para actuar: higiene, cuidado y vigilancia en colegios.",
+      "speech": "Alerta sanitaria en Lima: el Minsa reporta más de 140 casos de coxsackie, sobre todo en menores de cinco años. No es para alarmarse, pero sí para actuar: higiene, cuidado y vigilancia en colegios.",
+      "page_numbers": [
+        7
+      ],
+      "cover_region": {
+        "x": 0.4,
+        "y": 0.83,
+        "width": 0.29,
+        "height": 0.14
+      },
+      "key_facts": [
+        "más de 140 casos en Lima Metropolitana",
+        "80% de contagios en menores de cinco años",
+        "virus conocido como mano, pie y boca"
+      ],
+      "tone_notes": [
+        "claro",
+        "preventivo",
+        "sereno"
+      ],
+      "safety_notes": "Se usa enfoque preventivo; no se exagera la gravedad clínica ni se reemplaza orientación médica.",
+      "notes": "Se usa enfoque preventivo; no se exagera la gravedad clínica ni se reemplaza orientación médica.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "La U enfrenta a Coquimbo por Libertadores",
+      "story_type": "deportes",
+      "summary": "Partido clave para la U, sin vueltas. Esta noche visita a Coquimbo por la Libertadores con una deuda pesada: seis partidos seguidos sin ganar. Triunfar lo mete otra vez en carrera; perder, complica todo.",
+      "speech": "Partido clave para la U, sin vueltas. Esta noche visita a Coquimbo por la Libertadores con una deuda pesada: seis partidos seguidos sin ganar. Triunfar lo mete otra vez en carrera; perder, complica todo.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.83,
+        "width": 0.27,
+        "height": 0.14
+      },
+      "key_facts": [
+        "Universitario visita a Coquimbo Unido",
+        "partido por Copa Libertadores",
+        "la U acumula seis partidos sin ganar en el torneo"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "ágil",
+        "competitivo"
+      ],
+      "safety_notes": "Se limita al contexto deportivo visible y no se carga favoritismo extremo.",
+      "notes": "Se limita al contexto deportivo visible y no se carga favoritismo extremo.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

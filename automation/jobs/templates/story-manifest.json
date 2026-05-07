@@ -12,8 +12,8 @@
     {
       "newspaper_name": "Libero",
       "cover": "data/jobs/2026-04-13/2026-04-13-libero-frontpage-001/input/front-page.jpg",
-      "narrator_name": "Cuy-Depor",
-      "gestures_dir": "remotion-app/public/assets/gestures/cuy/depor",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
       "text": "Texto aprobado para el narrador.",
       "audio_file": null,
       "subtitle_segments_file": null

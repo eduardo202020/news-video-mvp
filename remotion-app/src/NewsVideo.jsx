@@ -16,6 +16,7 @@ import {CaptionBar} from "./video/CaptionBar";
 import {CoverStage} from "./video/CoverStage";
 import {NarratorStage} from "./video/NarratorStage";
 import {SupportVisualStage} from "./video/SupportVisualStage";
+import {withAssetVersion} from "./video/asset-src";
 import {resolveTimeline} from "./video/timeline.js";
 
 const {fontFamily: subtitleFontFamily} = loadBarlowSemiCondensed("normal", {
@@ -124,6 +125,7 @@ export const NewsVideo = ({
     }
   );
   const bedVolume = (story.musicVolume ?? DEFAULT_MUSIC_VOLUME) * musicFade;
+  const assetVersion = story.assetVersion ?? null;
 
   return (
     <AbsoluteFill
@@ -132,12 +134,12 @@ export const NewsVideo = ({
         fontFamily: `"${subtitleFontFamily}", Arial, sans-serif`
       }}
     >
-      <Audio src={staticFile(story.audioSrc)} />
+      <Audio src={staticFile(withAssetVersion(story.audioSrc, assetVersion))} />
       <Audio src={staticFile(story.musicSrc ?? DEFAULT_MUSIC_SRC)} volume={bedVolume} loop />
 
       <AbsoluteFill>
         <Img
-          src={staticFile(story.backgroundSrc)}
+          src={staticFile(withAssetVersion(story.backgroundSrc, assetVersion))}
           style={{
             width: "112%",
             height: "100%",
@@ -158,6 +160,7 @@ export const NewsVideo = ({
         newspaperCoverStack={story.newspaperCoverStack}
         currentSegment={timeline.currentSegment}
         nextSegment={timeline.nextSegment}
+        assetVersion={assetVersion}
         segmentFrame={timeline.segmentFrame}
         segmentDuration={timeline.segmentDuration}
         isTransitioning={timeline.isTransitioning}
@@ -182,6 +185,7 @@ export const NewsVideo = ({
 
       <NarratorStage
         gestureSrc={timeline.activeGestureSrc}
+        assetVersion={assetVersion}
         narratorVariant={timeline.activeNarratorName}
         narratorTranslateY={narratorTranslateY}
         narratorScale={narratorScale}

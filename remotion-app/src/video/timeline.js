@@ -2,6 +2,8 @@ import {interpolate} from "remotion";
 import {PAGE_TURN_FRAMES} from "./constants.js";
 import {buildWordHighlights} from "./helpers.js";
 
+const GESTURE_SWITCH_SECONDS = 0.8;
+
 export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
   const sequence = story.segments;
   const transitionFlags = sequence.map((segment, index) => {
@@ -42,6 +44,11 @@ export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
   const localBlockStart = segmentStarts[activeIndex];
   const segmentFrame = frame - localBlockStart;
   const segmentDuration = resolvedDurations[activeIndex];
+  const spokenSegmentDuration = Math.max(
+    1,
+    Math.round((currentSegment.audioDurationSeconds ?? currentSegment.durationSeconds ?? 0) * fps)
+  );
+  const isInSegmentPause = segmentFrame >= spokenSegmentDuration && segmentDuration > spokenSegmentDuration;
   const shouldTransition = transitionFlags[activeIndex];
   const isTransitioning =
     shouldTransition && activeIndex < sequence.length - 1 && segmentFrame >= segmentDuration - PAGE_TURN_FRAMES;
@@ -64,7 +71,7 @@ export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
       const startFrame = Math.round((item.start ?? 0) * fps);
       const endFrame = Math.max(startFrame + 1, Math.round((item.end ?? 0) * fps));
       return frame >= startFrame && frame < endFrame;
-    }) ?? subtitleSegments[subtitleSegments.length - 1] ?? null;
+    }) ?? null;
   const subtitleStartFrame = activeSubtitle ? Math.round((activeSubtitle.start ?? 0) * fps) : 0;
   const subtitleEndFrame = activeSubtitle
     ? Math.max(subtitleStartFrame + 1, Math.round((activeSubtitle.end ?? 0) * fps))
@@ -72,10 +79,14 @@ export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
   const subtitleProgress = activeSubtitle
     ? Math.max(0, Math.min(1, (frame - subtitleStartFrame) / Math.max(1, subtitleEndFrame - subtitleStartFrame)))
     : Math.max(0, Math.min(1, segmentFrame / Math.max(1, segmentDuration)));
-  const captionText = activeSubtitle?.text ?? currentSegment.text;
+  const captionText = isInSegmentPause ? "" : activeSubtitle?.text ?? currentSegment.text;
 
   const activeGestures = currentSegment.gestures?.length ? currentSegment.gestures : story.gestures;
-  const gestureIndex = Math.floor(frame / fps) % activeGestures.length;
+  const gestureIntervalFrames = Math.max(1, Math.round(fps * GESTURE_SWITCH_SECONDS));
+  const gestureFrame = isInSegmentPause
+    ? Math.max(0, spokenSegmentDuration - 1)
+    : Math.max(0, Math.min(segmentFrame, spokenSegmentDuration - 1));
+  const gestureIndex = Math.floor(gestureFrame / gestureIntervalFrames) % activeGestures.length;
   const activeNarratorName = currentSegment.narratorName ?? story.narratorName;
   const subtitleLength = captionText.length;
 

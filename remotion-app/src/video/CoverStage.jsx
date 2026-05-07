@@ -7,6 +7,7 @@ import {
 } from "@remotion/animation-utils";
 import {Img, interpolate, staticFile} from "remotion";
 import {CARD_WIDTH, COVER_HEIGHT} from "./constants";
+import {withAssetVersion} from "./asset-src";
 
 const buildCoverFocusTransform = (coverRegion, focusProgress) => {
   if (!coverRegion) {
@@ -55,6 +56,7 @@ export const CoverStage = ({
   newspaperCoverStack,
   currentSegment,
   nextSegment,
+  assetVersion,
   segmentFrame,
   segmentDuration,
   isTransitioning,
@@ -171,7 +173,7 @@ export const CoverStage = ({
                 }}
               >
                 <Img
-                  src={staticFile(item.coverSrc)}
+                  src={staticFile(withAssetVersion(item.coverSrc, assetVersion))}
                   style={{
                     width: CARD_WIDTH,
                     height: COVER_HEIGHT,
@@ -209,7 +211,7 @@ export const CoverStage = ({
           }}
         >
         <Img
-          src={staticFile(currentSegment.coverSrc)}
+          src={staticFile(withAssetVersion(currentSegment.coverSrc, assetVersion))}
           style={{
             width: CARD_WIDTH,
             height: COVER_HEIGHT,
@@ -234,7 +236,7 @@ export const CoverStage = ({
           }}
         >
           <Img
-            src={staticFile(nextSegment.coverSrc)}
+            src={staticFile(withAssetVersion(nextSegment.coverSrc, assetVersion))}
             style={{
               width: CARD_WIDTH,
               height: COVER_HEIGHT,

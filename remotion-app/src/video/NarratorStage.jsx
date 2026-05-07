@@ -2,9 +2,12 @@ import React from "react";
 import {makeTransform, scale, translateX, translateY} from "@remotion/animation-utils";
 import {Img, staticFile} from "remotion";
 import {getNarratorLayout} from "./layouts";
+import {SHOW_NARRATOR_ANCHOR_GUIDE} from "./constants";
+import {withAssetVersion} from "./asset-src";
 
 export const NarratorStage = ({
   gestureSrc,
+  assetVersion,
   narratorVariant,
   narratorTranslateY,
   narratorScale,
@@ -14,7 +17,7 @@ export const NarratorStage = ({
   narratorSegmentOpacity
 }) => {
   const layout = getNarratorLayout(narratorVariant);
-  const gestureUrl = staticFile(gestureSrc);
+  const gestureUrl = staticFile(withAssetVersion(gestureSrc, assetVersion));
   const narratorTransform = makeTransform([
     translateX(narratorSegmentTranslateX),
     translateY(narratorTranslateY + narratorSegmentTranslateY),
@@ -34,6 +37,21 @@ export const NarratorStage = ({
         transformOrigin: "bottom right"
       }}
     >
+      {SHOW_NARRATOR_ANCHOR_GUIDE ? (
+        <div
+          style={{
+            position: "absolute",
+            right: 0,
+            bottom: 0,
+            width: 36,
+            height: 36,
+            borderRight: "3px solid rgba(255, 80, 80, 0.95)",
+            borderBottom: "3px solid rgba(255, 80, 80, 0.95)",
+            pointerEvents: "none",
+            zIndex: 2
+          }}
+        />
+      ) : null}
       <Img
         src={gestureUrl}
         style={{

@@ -62,9 +62,9 @@ automation/
     video/
       vertical-news.json
     voices/
-      cuy-01.json
-      cuy-02.json
-      cuy-depor.json
+      thanos.json
+      reportera_magaly.json
+      mr_peet.json
 ```
 
 ## Contratos principales
@@ -200,10 +200,9 @@ Hoy la automatizacion ya permite:
 
 Las siguientes mejoras encajan bien sobre esta base:
 
-1. OCR real desde libreria o servicio
-2. aprobacion y creacion de jobs desde Streamlit
-3. alineacion real audio-subtitulo
-4. integracion con una API real de publicacion
+1. dejar un espacio de 1 segundo entre noticias y entre cambios de periodico para evitar que se pisen audios cercanos
+2. construir las imagenes de los reporteros como dibujos, con al menos 5 variantes por reportero, para alternarlas cada segundo en video y dar sensacion de movimiento
+3. definir un prompt adecuado por reportero para generar sus imagenes en estilo dibujo segun su identidad visual
 
 ## Documentacion relacionada
 
