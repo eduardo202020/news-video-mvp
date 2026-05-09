@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-05-09-larepublica-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-09-larepublica-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "La República",
+      "cover": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Piero Corvetto responde al JNE",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "Piero Corvetto tiene mucho que explicar. Responde al JNE y da detalles sobre el proceso electoral, generando más dudas sobre la transparencia. Esto no es solo política, es una crisis de confianza.",
+      "page_numbers": [
+        7
+      ],
+      "key_facts": [
+        "respuestas de Corvetto",
+        "respuestas al JNE",
+        "crisis de confianza electoral"
+      ],
+      "tone_notes": [
+        "crítico",
+        "analítico",
+        "incisivo"
+      ],
+      "safety_notes": "No se afirman irregularidades sin pruebas, solo se cuestiona el proceso.",
+      "cover_region": {
+        "x": 0.81,
+        "y": 0.24,
+        "width": 0.19,
+        "height": 0.34
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "La República",
+      "cover": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Fonavistas cobrarán Reintegro 5",
+      "story_type": "economia",
+      "segment_type": "story",
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/jaime_bayly",
+      "text": "El Reintegro 5 llega como un alivio para miles de fonavistas. Un beneficio que podría aliviar la situación financiera de muchos, pero aún queda por ver cómo impactará en el largo plazo.",
+      "page_numbers": [
+        10
+      ],
+      "key_facts": [
+        "Fonavistas cobrarán Reintegro 5",
+        "impacto económico esperado",
+        "beneficio temporal"
+      ],
+      "tone_notes": [
+        "informativo",
+        "reflexivo",
+        "precavido"
+      ],
+      "safety_notes": "No se promete un cambio profundo, solo se informa del beneficio anunciado.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.41,
+        "width": 0.21,
+        "height": 0.16
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "La República",
+      "cover": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "Minsa confirma alerta preventiva por hantavirus",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/thanos",
+      "text": "La alerta por hantavirus se extiende a aeropuertos y puertos. Con un foco preventivo, el Minsa busca evitar la propagación del virus, mientras se mantiene la vigilancia ante posibles casos.",
+      "page_numbers": [
+        15
+      ],
+      "key_facts": [
+        "alerta por hantavirus",
+        "prevención en aeropuertos y puertos",
+        "vigilancia del Minsa"
+      ],
+      "tone_notes": [
+        "serio",
+        "precautorio",
+        "responsable"
+      ],
+      "safety_notes": "No se afirma que el virus haya causado muertes hasta el momento.",
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.21,
+        "width": 0.75,
+        "height": 0.4
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "La República",
+      "cover": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/input/front-page.jpg",
+      "headline": "EE.UU. inutiliza petroleros de Irán",
+      "story_type": "mundo",
+      "segment_type": "story",
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/narrador_dbz",
+      "text": "Un nuevo golpe a la economía de Irán. EE.UU. ha inutilizado varios de sus petroleros, afectando no solo su capacidad de exportación, sino también la geopolítica de la región.",
+      "page_numbers": [
+        16
+      ],
+      "key_facts": [
+        "EE.UU. inutiliza petroleros",
+        "daño a economía de Irán",
+        "tensión geopolítica"
+      ],
+      "tone_notes": [
+        "internacional",
+        "informativo",
+        "tenso"
+      ],
+      "safety_notes": "Se reporta como medida preventiva, sin confirmar todos los detalles del impacto total.",
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.6,
+        "width": 0.21,
+        "height": 0.16
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

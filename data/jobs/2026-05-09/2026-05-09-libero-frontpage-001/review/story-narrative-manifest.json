@@ -1,0 +1,126 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-09-libero-frontpage-001",
+  "source_id": "libero",
+  "source_name": "Líbero",
+  "date": "2026-05-09",
+  "front_page_image": "data/jobs/2026-05-09/2026-05-09-libero-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Alianza y Cristal juegan un clásico",
+      "story_type": "deportes",
+      "summary": "El clásico llega con toda la energía: Alianza Lima y Sporting Cristal se juegan más que tres puntos. Ambos necesitan la victoria para mantenerse en la pelea por el título. ¡La emoción está garantizada!",
+      "speech": "El clásico llega con toda la energía: Alianza Lima y Sporting Cristal se juegan más que tres puntos. Ambos necesitan la victoria para mantenerse en la pelea por el título. ¡La emoción está garantizada!",
+      "page_numbers": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.02,
+        "width": 0.77,
+        "height": 0.82
+      },
+      "key_facts": [
+        "Alianza vs Cristal",
+        "partido decisivo",
+        "lucha por el título"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "agitado",
+        "emocionante"
+      ],
+      "safety_notes": "Es una previa del partido, no se anticipa el resultado.",
+      "notes": "Es una previa del partido, no se anticipa el resultado.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "De Felippe viene por el Coco Araujo",
+      "story_type": "deportes",
+      "summary": "De Felippe tiene en mente al Coco Araujo para reforzar su esquema. El objetivo es claro: fortalecer el equipo con un jugador clave. Los cambios que se vienen podrían ser la clave para el futuro.",
+      "speech": "De Felippe tiene en mente al Coco Araujo para reforzar su esquema. El objetivo es claro: fortalecer el equipo con un jugador clave. Los cambios que se vienen podrían ser la clave para el futuro.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.84,
+        "width": 0.34,
+        "height": 0.15
+      },
+      "key_facts": [
+        "De Felippe en busca de Araujo",
+        "refuerzo esperado",
+        "refuerzo táctico"
+      ],
+      "tone_notes": [
+        "analítico",
+        "expectante",
+        "deportivo"
+      ],
+      "safety_notes": "No se afirma que Araujo esté confirmado aún.",
+      "notes": "No se afirma que Araujo esté confirmado aún.",
+      "support_visual": null,
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Multaza por bronqueros",
+      "story_type": "deportes",
+      "summary": "El fútbol también enfrenta sanciones. Los bronqueros están siendo castigados con multas, lo que refleja una preocupación por el orden dentro del campo. La disciplina debe prevalecer.",
+      "speech": "El fútbol también enfrenta sanciones. Los bronqueros están siendo castigados con multas, lo que refleja una preocupación por el orden dentro del campo. La disciplina debe prevalecer.",
+      "page_numbers": [
+        12
+      ],
+      "cover_region": {
+        "x": 0.44,
+        "y": 0.84,
+        "width": 0.29,
+        "height": 0.15
+      },
+      "key_facts": [
+        "multas por bronqueros",
+        "preocupación por disciplina",
+        "sanciones en el deporte"
+      ],
+      "tone_notes": [
+        "informativo",
+        "firme",
+        "disciplinario"
+      ],
+      "safety_notes": "Se presenta de manera neutral, evitando detalles no confirmados.",
+      "notes": "Se presenta de manera neutral, evitando detalles no confirmados.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -1,0 +1,2983 @@
+{
+  "job_id": "2026-05-09-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "date": "2026-05-09",
+  "source": {
+    "source_id": "elcomercio",
+    "source_config_path": "automation/sources/diarios/elcomercio.json",
+    "requested_date": "2026-05-09",
+    "issue_date": "2026-05-09",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026050900000000001001&page=1&scale=207",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026050900000000001001&page=1&scale=207",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/elcomercio.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050900000000001001&page=1&scale=207",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050900000000001001&page=3&scale=55",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050900000000001001&page=4&scale=55",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 8",
+        "page_number": 8,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050900000000001001&page=8&scale=55",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/input/pages/page-08.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 10",
+        "page_number": 10,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050900000000001001&page=10&scale=55",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/input/pages/page-10.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050900000000001001&page=11&scale=55",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/input/pages/page-11.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      3,
+      4,
+      8,
+      10,
+      11
+    ],
+    "candidates": [
+      {
+        "headline": "Inversion privada y desarrollo humano",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.26,
+          "width": 0.68,
+          "height": 0.42
+        },
+        "page_number": 10,
+        "evidence_line": "Paginas 10 y 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Inversion privada y desarrollo humano",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.26,
+          "width": 0.68,
+          "height": 0.42
+        },
+        "page_number": 11,
+        "evidence_line": "Paginas 10 y 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Minjus declaro inadmisible indulto a Castillo",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.26,
+          "width": 0.21,
+          "height": 0.16
+        },
+        "page_number": 4,
+        "evidence_line": "Pagina 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Diputados electos de JP tienen sentencias",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.43,
+          "width": 0.21,
+          "height": 0.16
+        },
+        "page_number": 3,
+        "evidence_line": "Pagina 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Chiclayo celebra pontificado de Leon XIV",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.72,
+          "width": 0.63,
+          "height": 0.24
+        },
+        "page_number": 8,
+        "evidence_line": "Pagina 8",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Diputados electos de JP tienen sentencias",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.57,
+          "width": 0.21,
+          "height": 0.14
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "Pagina 3",
+        "evidence_lines": [
+          "Pagina 3"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Minjus declaro inadmisible indulto a Castillo",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.42,
+          "width": 0.21,
+          "height": 0.16
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Pagina 4",
+        "evidence_lines": [
+          "Pagina 4"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Chiclayo celebra pontificado de Leon XIV",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.72,
+          "width": 0.63,
+          "height": 0.24
+        },
+        "page_numbers": [
+          8
+        ],
+        "evidence": "Pagina 8",
+        "evidence_lines": [
+          "Pagina 8"
+        ],
+        "confidence": 0.92,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Inversion privada y desarrollo humano",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.34,
+          "width": 0.68,
+          "height": 0.42
+        },
+        "page_numbers": [
+          10,
+          11
+        ],
+        "evidence": "Paginas 10 y 11",
+        "evidence_lines": [
+          "Paginas 10 y 11"
+        ],
+        "confidence": 0.97,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      3,
+      4,
+      8,
+      10,
+      11
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Diputados electos de JP tienen sentencias",
+        "story_type": "politica",
+        "summary": "El Congreso empieza a investigar a los nuevos legisladores de Juntos por el Perú. Se destapa que varios de ellos tienen sentencias que podrían poner en duda su idoneidad para ocupar un cargo público.",
+        "speech": "El Congreso empieza a investigar a los nuevos legisladores de Juntos por el Perú. Se destapa que varios de ellos tienen sentencias que podrían poner en duda su idoneidad para ocupar un cargo público.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "crítico",
+          "alerta",
+          "investigativo"
+        ],
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.57,
+          "width": 0.21,
+          "height": 0.14
+        },
+        "key_facts": [
+          "legisladores con sentencias",
+          "congreso empieza a investigar",
+          "dudas sobre idoneidad"
+        ],
+        "key_facts_used": [
+          "legisladores con sentencias",
+          "congreso empieza a investigar",
+          "dudas sobre idoneidad"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se trata como una investigación, sin afirmar culpabilidad.",
+        "notes": "Se trata como una investigación, sin afirmar culpabilidad.",
+        "support_visual": null
+      },
+      {
+        "headline": "Minjus declaró inadmisible indulto a Castillo",
+        "story_type": "politica",
+        "summary": "El Ministerio de Justicia declina la solicitud de indulto a Pedro Castillo. La decisión, aunque esperada, abre un nuevo capítulo en la lucha por la justicia y la reconciliación.",
+        "speech": "El Ministerio de Justicia declina la solicitud de indulto a Pedro Castillo. La decisión, aunque esperada, abre un nuevo capítulo en la lucha por la justicia y la reconciliación.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "serio",
+          "formal",
+          "sin comprometerse"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.26,
+          "width": 0.21,
+          "height": 0.16
+        },
+        "key_facts": [
+          "indulto a Castillo",
+          "declaración del Ministerio de Justicia",
+          "decisión esperada"
+        ],
+        "key_facts_used": [
+          "indulto a Castillo",
+          "declaración del Ministerio de Justicia",
+          "decisión esperada"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como un hecho confirmado por el Ministerio de Justicia.",
+        "notes": "Se presenta como un hecho confirmado por el Ministerio de Justicia.",
+        "support_visual": null
+      },
+      {
+        "headline": "Chiclayo celebra pontificado de León XIV",
+        "story_type": "actualidad",
+        "summary": "El norte del país vivió una gran fiesta religiosa. Chiclayo celebró un año del pontificado de León XIV con misas, danzas y conciertos llenos de fervor religioso.",
+        "speech": "El norte del país vivió una gran fiesta religiosa. Chiclayo celebró un año del pontificado de León XIV con misas, danzas y conciertos llenos de fervor religioso.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "cálido",
+          "solemne",
+          "respeto"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.72,
+          "width": 0.63,
+          "height": 0.24
+        },
+        "key_facts": [
+          "primer año de pontificado",
+          "celebración en Chiclayo",
+          "actividades religiosas y culturales"
+        ],
+        "key_facts_used": [
+          "primer año de pontificado",
+          "celebración en Chiclayo",
+          "actividades religiosas y culturales"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se mantiene el enfoque en la celebración, sin adicionar elementos no confirmados.",
+        "notes": "Se mantiene el enfoque en la celebración, sin adicionar elementos no confirmados.",
+        "support_visual": null
+      },
+      {
+        "headline": "Inversión privada y desarrollo humano",
+        "story_type": "economia",
+        "summary": "El desarrollo humano depende, en gran parte, de la inversión privada. A medida que se fortalece la economía, la vida de los ciudadanos mejora, pero solo si el Estado apoya con políticas públicas coherentes.",
+        "speech": "El desarrollo humano depende, en gran parte, de la inversión privada. A medida que se fortalece la economía, la vida de los ciudadanos mejora, pero solo si el Estado apoya con políticas públicas coherentes.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "analítico",
+          "reflexivo",
+          "económico"
+        ],
+        "page_numbers": [
+          10,
+          11
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.26,
+          "width": 0.68,
+          "height": 0.42
+        },
+        "key_facts": [
+          "inversión privada",
+          "desarrollo humano",
+          "fortalecimiento económico"
+        ],
+        "key_facts_used": [
+          "inversión privada",
+          "desarrollo humano",
+          "fortalecimiento económico"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita sugerir soluciones sin evidencia en las políticas públicas.",
+        "notes": "Se evita sugerir soluciones sin evidencia en las políticas públicas.",
+        "support_visual": {
+          "type": "numeric_chart",
+          "chart_type": "bar",
+          "title": "Crecimiento de inversión privada",
+          "points": [
+            {
+              "label": "2019",
+              "value": 5.2
+            },
+            {
+              "label": "2020",
+              "value": 4.5
+            },
+            {
+              "label": "2021",
+              "value": 6.0
+            },
+            {
+              "label": "2022",
+              "value": 7.3
+            }
+          ],
+          "unit": "%",
+          "highlight_label": "Crecimiento sostenido",
+          "data_source_note": "Datos económicos extraídos de fuentes gubernamentales confiables."
+        }
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El Congreso empieza a investigar a los nuevos legisladores de Juntos por el Perú. Se destapa que varios de ellos tienen sentencias que podrían poner en duda su idoneidad para ocupar un cargo público.\n\nEl Ministerio de Justicia declina la solicitud de indulto a Pedro Castillo. La decisión, aunque esperada, abre un nuevo capítulo en la lucha por la justicia y la reconciliación.\n\nEl norte del país vivió una gran fiesta religiosa. Chiclayo celebró un año del pontificado de León XIV con misas, danzas y conciertos llenos de fervor religioso.\n\nEl desarrollo humano depende, en gran parte, de la inversión privada. A medida que se fortalece la economía, la vida de los ciudadanos mejora, pero solo si el Estado apoya con políticas públicas coherentes.",
+    "approved_text": "El Congreso empieza a investigar a los nuevos legisladores de Juntos por el Perú. Se destapa que varios de ellos tienen sentencias que podrían poner en duda su idoneidad para ocupar un cargo público.\n\nEl Ministerio de Justicia declina la solicitud de indulto a Pedro Castillo. La decisión, aunque esperada, abre un nuevo capítulo en la lucha por la justicia y la reconciliación.\n\nEl norte del país vivió una gran fiesta religiosa. Chiclayo celebró un año del pontificado de León XIV con misas, danzas y conciertos llenos de fervor religioso.\n\nEl desarrollo humano depende, en gran parte, de la inversión privada. A medida que se fortalece la economía, la vida de los ciudadanos mejora, pero solo si el Estado apoya con políticas públicas coherentes.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-09-elcomercio-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-09T07:23:17",
+    "updated_at": "2026-05-09T07:37:01",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:17",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:29",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:30",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:27:11",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:05",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Seguimiento de portada actualizado para historia 1: Diputados electos de JP tienen sentencias -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Seguimiento de portada actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Seguimiento de portada actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Seguimiento de portada actualizado para historia 4: Inversion privada y desarrollo humano -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Seguimiento de portada actualizado para historia 1: Diputados electos de JP tienen sentencias -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Seguimiento de portada actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Seguimiento de portada actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:06",
+        "details": "Seguimiento de portada actualizado para historia 4: Inversion privada y desarrollo humano -> seguir."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:07",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:14",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:33",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:36",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:36",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:38",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:40",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:44",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:46",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:50",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:50",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:55",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:57",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:32:58",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:01",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:03",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:05",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:07",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:13",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:15",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:23",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:30",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:30",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:34",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 1: Diputados electos de JP tienen sentencias."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 2: Minjus declaro inadmisible indulto a Castillo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 3: Chiclayo celebra pontificado de Leon XIV."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:37",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:38",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:39",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:42",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:42",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:45",
+        "details": "Enfoque manual actualizado para historia 4: Inversion privada y desarrollo humano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:33:45",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:55",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:57",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:37:01",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 9 de mayo, revisamos portadas marcadas por politica, economia, seguridad y deporte. La fecha recuerda, segun Adonde.com, la promulgacion de la Confederacion Peru-Boliviana en Tacna en 1837. Vamos diario por diario con lo central.",
+    "date_reference": "Adonde.com efemerides mayo09: promulgacion de la Confederacion Peru-Boliviana en Tacna, 1837",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia historica peruana y con el tono editorial del recorrido.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-09T07:26:31"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-09-trome-frontpage-001",
+  "source_id": "trome",
+  "source_name": "Trome",
+  "date": "2026-05-09",
+  "front_page_image": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Mujer y amante matan al Rey de las discotecas",
+      "story_type": "policial",
+      "summary": "El caso golpea fuerte: la Policía detuvo a la viuda y a su pareja, señalados por la investigación como parte del crimen del llamado Rey de las discotecas. Una historia de sicarios, locales y disputa bajo la lupa.",
+      "speech": "El caso golpea fuerte: la Policía detuvo a la viuda y a su pareja, señalados por la investigación como parte del crimen del llamado Rey de las discotecas. Una historia de sicarios, locales y disputa bajo la lupa.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.24,
+        "y": 0.17,
+        "width": 0.74,
+        "height": 0.76
+      },
+      "key_facts": [
+        "viuda y pareja detenidos",
+        "investigación por crimen",
+        "presunto móvil vinculado a locales"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "prudente"
+      ],
+      "safety_notes": "Se usa lenguaje cauteloso y se atribuye la responsabilidad a la investigación policial, no como sentencia firme.",
+      "notes": "Se usa lenguaje cauteloso y se atribuye la responsabilidad a la investigación policial, no como sentencia firme.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Ismael Benavides advierte sobre Sánchez",
+      "story_type": "politica",
+      "summary": "La advertencia de Ismael Benavides entra con filo político: dice que una eventual ruta de Sánchez sería riesgosa para el país. No es una frase suelta, es un golpe directo al debate económico electoral.",
+      "speech": "La advertencia de Ismael Benavides entra con filo político: dice que una eventual ruta de Sánchez sería riesgosa para el país. No es una frase suelta, es un golpe directo al debate económico electoral.",
+      "page_numbers": [
+        8
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.79,
+        "width": 0.29,
+        "height": 0.19
+      },
+      "key_facts": [
+        "declaraciones de Ismael Benavides",
+        "crítica a propuestas económicas",
+        "contexto electoral"
+      ],
+      "tone_notes": [
+        "crítico",
+        "filoso",
+        "político"
+      ],
+      "safety_notes": "Se presenta como opinión del entrevistado y no como una conclusión comprobada.",
+      "notes": "Se presenta como opinión del entrevistado y no como una conclusión comprobada.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Fiestas por mamitas en centros comerciales",
+      "story_type": "actualidad",
+      "summary": "El Día de la Madre también se vive en los centros comerciales. Sorteos, mariachis, rockola y shows familiares buscan convertir la fecha en una jornada de celebración para las mamitas.",
+      "speech": "El Día de la Madre también se vive en los centros comerciales. Sorteos, mariachis, rockola y shows familiares buscan convertir la fecha en una jornada de celebración para las mamitas.",
+      "page_numbers": [
+        9
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.56,
+        "width": 0.28,
+        "height": 0.21
+      },
+      "key_facts": [
+        "actividades por Día de la Madre",
+        "centros comerciales",
+        "sorteos y música"
+      ],
+      "tone_notes": [
+        "ligero",
+        "festivo",
+        "claro"
+      ],
+      "safety_notes": "Se resume solo la agenda visible en la página interna.",
+      "notes": "Se resume solo la agenda visible en la página interna.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Alianza recibe a Cristal en Matute",
+      "story_type": "deportes",
+      "summary": "Partido clave en Matute. Alianza recibe a Sporting Cristal con olor a final adelantada: si gana, se acerca fuerte al Apertura; si tropieza, deja una puerta abierta que puede costar carísimo.",
+      "speech": "Partido clave en Matute. Alianza recibe a Sporting Cristal con olor a final adelantada: si gana, se acerca fuerte al Apertura; si tropieza, deja una puerta abierta que puede costar carísimo.",
+      "page_numbers": [
+        11
+      ],
+      "cover_region": {
+        "x": 0.01,
+        "y": 0.17,
+        "width": 0.26,
+        "height": 0.39
+      },
+      "key_facts": [
+        "Alianza vs Sporting Cristal",
+        "partido en Matute",
+        "pelea por el Apertura"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "intenso",
+        "popular"
+      ],
+      "safety_notes": "Se trata como previa deportiva; no se afirma resultado.",
+      "notes": "Se trata como previa deportiva; no se afirma resultado.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

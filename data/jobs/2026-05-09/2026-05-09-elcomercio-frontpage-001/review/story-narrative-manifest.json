@@ -1,0 +1,183 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-09-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "source_name": "El Comercio",
+  "date": "2026-05-09",
+  "front_page_image": "data/jobs/2026-05-09/2026-05-09-elcomercio-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Diputados electos de JP tienen sentencias",
+      "story_type": "politica",
+      "summary": "El Congreso empieza a investigar a los nuevos legisladores de Juntos por el Perú. Se destapa que varios de ellos tienen sentencias que podrían poner en duda su idoneidad para ocupar un cargo público.",
+      "speech": "El Congreso empieza a investigar a los nuevos legisladores de Juntos por el Perú. Se destapa que varios de ellos tienen sentencias que podrían poner en duda su idoneidad para ocupar un cargo público.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.57,
+        "width": 0.21,
+        "height": 0.14
+      },
+      "key_facts": [
+        "legisladores con sentencias",
+        "congreso empieza a investigar",
+        "dudas sobre idoneidad"
+      ],
+      "tone_notes": [
+        "crítico",
+        "alerta",
+        "investigativo"
+      ],
+      "safety_notes": "Se trata como una investigación, sin afirmar culpabilidad.",
+      "notes": "Se trata como una investigación, sin afirmar culpabilidad.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Minjus declaró inadmisible indulto a Castillo",
+      "story_type": "politica",
+      "summary": "El Ministerio de Justicia declina la solicitud de indulto a Pedro Castillo. La decisión, aunque esperada, abre un nuevo capítulo en la lucha por la justicia y la reconciliación.",
+      "speech": "El Ministerio de Justicia declina la solicitud de indulto a Pedro Castillo. La decisión, aunque esperada, abre un nuevo capítulo en la lucha por la justicia y la reconciliación.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.26,
+        "width": 0.21,
+        "height": 0.16
+      },
+      "key_facts": [
+        "indulto a Castillo",
+        "declaración del Ministerio de Justicia",
+        "decisión esperada"
+      ],
+      "tone_notes": [
+        "serio",
+        "formal",
+        "sin comprometerse"
+      ],
+      "safety_notes": "Se presenta como un hecho confirmado por el Ministerio de Justicia.",
+      "notes": "Se presenta como un hecho confirmado por el Ministerio de Justicia.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Chiclayo celebra pontificado de León XIV",
+      "story_type": "actualidad",
+      "summary": "El norte del país vivió una gran fiesta religiosa. Chiclayo celebró un año del pontificado de León XIV con misas, danzas y conciertos llenos de fervor religioso.",
+      "speech": "El norte del país vivió una gran fiesta religiosa. Chiclayo celebró un año del pontificado de León XIV con misas, danzas y conciertos llenos de fervor religioso.",
+      "page_numbers": [
+        8
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.72,
+        "width": 0.63,
+        "height": 0.24
+      },
+      "key_facts": [
+        "primer año de pontificado",
+        "celebración en Chiclayo",
+        "actividades religiosas y culturales"
+      ],
+      "tone_notes": [
+        "cálido",
+        "solemne",
+        "respeto"
+      ],
+      "safety_notes": "Se mantiene el enfoque en la celebración, sin adicionar elementos no confirmados.",
+      "notes": "Se mantiene el enfoque en la celebración, sin adicionar elementos no confirmados.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Inversión privada y desarrollo humano",
+      "story_type": "economia",
+      "summary": "El desarrollo humano depende, en gran parte, de la inversión privada. A medida que se fortalece la economía, la vida de los ciudadanos mejora, pero solo si el Estado apoya con políticas públicas coherentes.",
+      "speech": "El desarrollo humano depende, en gran parte, de la inversión privada. A medida que se fortalece la economía, la vida de los ciudadanos mejora, pero solo si el Estado apoya con políticas públicas coherentes.",
+      "page_numbers": [
+        10,
+        11
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.26,
+        "width": 0.68,
+        "height": 0.42
+      },
+      "key_facts": [
+        "inversión privada",
+        "desarrollo humano",
+        "fortalecimiento económico"
+      ],
+      "tone_notes": [
+        "analítico",
+        "reflexivo",
+        "económico"
+      ],
+      "safety_notes": "Se evita sugerir soluciones sin evidencia en las políticas públicas.",
+      "notes": "Se evita sugerir soluciones sin evidencia en las políticas públicas.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Crecimiento de inversión privada",
+        "points": [
+          {
+            "label": "2019",
+            "value": 5.2
+          },
+          {
+            "label": "2020",
+            "value": 4.5
+          },
+          {
+            "label": "2021",
+            "value": 6.0
+          },
+          {
+            "label": "2022",
+            "value": 7.3
+          }
+        ],
+        "unit": "%",
+        "highlight_label": "Crecimiento sostenido",
+        "data_source_note": "Datos económicos extraídos de fuentes gubernamentales confiables."
+      },
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    }
+  ]
+}

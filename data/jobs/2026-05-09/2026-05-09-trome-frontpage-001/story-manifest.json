@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-05-09-trome-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-09-trome-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Mujer y amante matan al Rey de las discotecas",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/reportero_panorama",
+      "text": "El caso golpea fuerte: la Policía detuvo a la viuda y a su pareja, señalados por la investigación como parte del crimen del llamado Rey de las discotecas. Una historia de sicarios, locales y disputa bajo la lupa.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "viuda y pareja detenidos",
+        "investigación por crimen",
+        "presunto móvil vinculado a locales"
+      ],
+      "tone_notes": [
+        "directo",
+        "tenso",
+        "prudente"
+      ],
+      "safety_notes": "Se usa lenguaje cauteloso y se atribuye la responsabilidad a la investigación policial, no como sentencia firme.",
+      "cover_region": {
+        "x": 0.24,
+        "y": 0.17,
+        "width": 0.74,
+        "height": 0.76
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Ismael Benavides advierte sobre Sánchez",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "La advertencia de Ismael Benavides entra con filo político: dice que una eventual ruta de Sánchez sería riesgosa para el país. No es una frase suelta, es un golpe directo al debate económico electoral.",
+      "page_numbers": [
+        8
+      ],
+      "key_facts": [
+        "declaraciones de Ismael Benavides",
+        "crítica a propuestas económicas",
+        "contexto electoral"
+      ],
+      "tone_notes": [
+        "crítico",
+        "filoso",
+        "político"
+      ],
+      "safety_notes": "Se presenta como opinión del entrevistado y no como una conclusión comprobada.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.79,
+        "width": 0.29,
+        "height": 0.19
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Fiestas por mamitas en centros comerciales",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/thanos",
+      "text": "El Día de la Madre también se vive en los centros comerciales. Sorteos, mariachis, rockola y shows familiares buscan convertir la fecha en una jornada de celebración para las mamitas.",
+      "page_numbers": [
+        9
+      ],
+      "key_facts": [
+        "actividades por Día de la Madre",
+        "centros comerciales",
+        "sorteos y música"
+      ],
+      "tone_notes": [
+        "ligero",
+        "festivo",
+        "claro"
+      ],
+      "safety_notes": "Se resume solo la agenda visible en la página interna.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.56,
+        "width": 0.28,
+        "height": 0.21
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Trome",
+      "cover": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/front-page.jpg",
+      "headline": "Alianza recibe a Cristal en Matute",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
+      "text": "Partido clave en Matute. Alianza recibe a Sporting Cristal con olor a final adelantada: si gana, se acerca fuerte al Apertura; si tropieza, deja una puerta abierta que puede costar carísimo.",
+      "page_numbers": [
+        11
+      ],
+      "key_facts": [
+        "Alianza vs Sporting Cristal",
+        "partido en Matute",
+        "pelea por el Apertura"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "intenso",
+        "popular"
+      ],
+      "safety_notes": "Se trata como previa deportiva; no se afirma resultado.",
+      "cover_region": {
+        "x": 0.01,
+        "y": 0.17,
+        "width": 0.26,
+        "height": 0.39
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

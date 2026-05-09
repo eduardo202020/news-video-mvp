@@ -1,0 +1,130 @@
+{
+  "story_id": "2026-05-09-libero-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-09-libero-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-09/2026-05-09-libero-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-09/2026-05-09-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Alianza y Cristal juegan un clásico",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
+      "text": "El clásico llega con toda la energía: Alianza Lima y Sporting Cristal se juegan más que tres puntos. Ambos necesitan la victoria para mantenerse en la pelea por el título. ¡La emoción está garantizada!",
+      "page_numbers": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "key_facts": [
+        "Alianza vs Cristal",
+        "partido decisivo",
+        "lucha por el título"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "agitado",
+        "emocionante"
+      ],
+      "safety_notes": "Es una previa del partido, no se anticipa el resultado.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.02,
+        "width": 0.77,
+        "height": 0.82
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-09/2026-05-09-libero-frontpage-001/input/front-page.jpg",
+      "headline": "De Felippe viene por el Coco Araujo",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "gonzalo_nunez",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "gonzalo_nunez",
+      "narrator_name": "gonzaloNuñes",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/gonzalo_nunez",
+      "text": "De Felippe tiene en mente al Coco Araujo para reforzar su esquema. El objetivo es claro: fortalecer el equipo con un jugador clave. Los cambios que se vienen podrían ser la clave para el futuro.",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "key_facts": [
+        "De Felippe en busca de Araujo",
+        "refuerzo esperado",
+        "refuerzo táctico"
+      ],
+      "tone_notes": [
+        "analítico",
+        "expectante",
+        "deportivo"
+      ],
+      "safety_notes": "No se afirma que Araujo esté confirmado aún.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.84,
+        "width": 0.34,
+        "height": 0.15
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-09/2026-05-09-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Multaza por bronqueros",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
+      "text": "El fútbol también enfrenta sanciones. Los bronqueros están siendo castigados con multas, lo que refleja una preocupación por el orden dentro del campo. La disciplina debe prevalecer.",
+      "page_numbers": [
+        12
+      ],
+      "key_facts": [
+        "multas por bronqueros",
+        "preocupación por disciplina",
+        "sanciones en el deporte"
+      ],
+      "tone_notes": [
+        "informativo",
+        "firme",
+        "disciplinario"
+      ],
+      "safety_notes": "Se presenta de manera neutral, evitando detalles no confirmados.",
+      "cover_region": {
+        "x": 0.44,
+        "y": 0.84,
+        "width": 0.29,
+        "height": 0.15
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

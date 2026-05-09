@@ -1,0 +1,158 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-09-correo-frontpage-001",
+  "source_id": "correo",
+  "source_name": "Correo",
+  "date": "2026-05-09",
+  "front_page_image": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Porky reduce distancia con Roberto Sánchez",
+      "story_type": "politica",
+      "summary": "La contienda se pone más reñida. El avance de Porky sobre Roberto Sánchez reduce la diferencia a menos de 20,000 votos. ¿Será que la última esperanza será una serie de milagros?",
+      "speech": "La contienda se pone más reñida. El avance de Porky sobre Roberto Sánchez reduce la diferencia a menos de 20,000 votos. ¿Será que la última esperanza será una serie de milagros?",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.37,
+        "y": 0.04,
+        "width": 0.3,
+        "height": 0.23
+      },
+      "key_facts": [
+        "diferencia de 18,000 votos",
+        "Porky reduce la brecha",
+        "Roberto Sánchez aún lidera"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "crítico",
+        "incisivo"
+      ],
+      "safety_notes": "Se presenta como un análisis de la situación sin afirmar el resultado final.",
+      "notes": "Se presenta como un análisis de la situación sin afirmar el resultado final.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "López Aliaga lanza amenaza por presunto fraude",
+      "story_type": "politica",
+      "summary": "La acusación de fraude por parte de López Aliaga sube la temperatura en la carrera presidencial. Dice que no dudará en movilizar al pueblo si se confirma el fraude electoral.",
+      "speech": "La acusación de fraude por parte de López Aliaga sube la temperatura en la carrera presidencial. Dice que no dudará en movilizar al pueblo si se confirma el fraude electoral.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.31,
+        "width": 0.93,
+        "height": 0.65
+      },
+      "key_facts": [
+        "López Aliaga lanza amenaza",
+        "fraude presunto",
+        "movilización popular como amenaza"
+      ],
+      "tone_notes": [
+        "provocador",
+        "filoso",
+        "directo"
+      ],
+      "safety_notes": "La acusación es presentada como una advertencia política sin comprobarse.",
+      "notes": "La acusación es presentada como una advertencia política sin comprobarse.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Papa de corazón peruano cumple un año",
+      "story_type": "actualidad",
+      "summary": "Un año de papado peruano. La celebración de su primer aniversario en el norte del país, en Chiclayo, destaca la conexión del Papa con el pueblo peruano, especialmente en su tierra natal.",
+      "speech": "Un año de papado peruano. La celebración de su primer aniversario en el norte del país, en Chiclayo, destaca la conexión del Papa con el pueblo peruano, especialmente en su tierra natal.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.69,
+        "y": 0.04,
+        "width": 0.15,
+        "height": 0.24
+      },
+      "key_facts": [
+        "primer año de papado",
+        "celebraciones en Chiclayo",
+        "festejos religiosos y culturales"
+      ],
+      "tone_notes": [
+        "solemne",
+        "respetuoso",
+        "informativo"
+      ],
+      "safety_notes": "Se mantiene el tono solemne y de respeto por las festividades sin hacer suposiciones.",
+      "notes": "Se mantiene el tono solemne y de respeto por las festividades sin hacer suposiciones.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Alianza y Cristal protagonizan duelo de la fecha",
+      "story_type": "deportes",
+      "summary": "El clásico más esperado del Apertura se juega en Matute. Alianza Lima y Sporting Cristal se enfrentan en un duelo clave para las aspiraciones del título.",
+      "speech": "El clásico más esperado del Apertura se juega en Matute. Alianza Lima y Sporting Cristal se enfrentan en un duelo clave para las aspiraciones del título.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.85,
+        "y": 0.04,
+        "width": 0.14,
+        "height": 0.24
+      },
+      "key_facts": [
+        "Alianza Lima vs Sporting Cristal",
+        "partido decisivo",
+        "duelo clave para el Apertura"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "emocionante",
+        "dinámico"
+      ],
+      "safety_notes": "Se presenta como previa del partido, sin anticipar el resultado final.",
+      "notes": "Se presenta como previa del partido, sin anticipar el resultado final.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -1,0 +1,2076 @@
+{
+  "job_id": "2026-05-09-larepublica-frontpage-001",
+  "source_id": "larepublica",
+  "date": "2026-05-09",
+  "source": {
+    "source_id": "larepublica",
+    "source_config_path": "automation/sources/diarios/larepublica.json",
+    "requested_date": "2026-05-09",
+    "issue_date": "2026-05-09",
+    "publication_status": "available",
+    "discovery_type": "direct_image_url",
+    "front_page_url": "https://img.kiosko.net/2026/05/09/pe/pe_republica.750.jpg",
+    "discovered_pages_count": 1,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://img.kiosko.net/2026/05/09/pe/pe_republica.750.jpg",
+    "source_url": "https://img.kiosko.net/2026/05/09/pe/pe_republica.750.jpg",
+    "source_config": "automation/sources/diarios/larepublica.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://img.kiosko.net/2026/05/09/pe/pe_republica.750.jpg",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/input/front-page.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      7,
+      10,
+      15,
+      16,
+      18
+    ],
+    "candidates": [
+      {
+        "headline": "Minsa confirma alerta preventiva por hantavirus",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.19,
+          "width": 0.69,
+          "height": 0.38
+        },
+        "page_number": 15,
+        "evidence_line": "Buscan por todos lados a contagiados -> 15",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.98
+      },
+      {
+        "headline": "Piero Corvetto responde al JNE",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.18,
+          "width": 0.21,
+          "height": 0.22
+        },
+        "page_number": 7,
+        "evidence_line": "Politica -> 7",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Fonavistas cobraran Reintegro 5",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.41,
+          "width": 0.21,
+          "height": 0.16
+        },
+        "page_number": 10,
+        "evidence_line": "Economia -> 10",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "EE.UU. inutiliza petroleros de Iran",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.6,
+          "width": 0.21,
+          "height": 0.16
+        },
+        "page_number": 16,
+        "evidence_line": "Mundo -> 16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      },
+      {
+        "headline": "Alianza y Cristal en clasico moderno",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.0,
+          "width": 0.34,
+          "height": 0.08
+        },
+        "page_number": 18,
+        "evidence_line": "Deportes -> 18",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.88
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Piero Corvetto responde al JNE",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.81,
+          "y": 0.24,
+          "width": 0.19,
+          "height": 0.34
+        },
+        "page_numbers": [
+          7
+        ],
+        "evidence": "Politica -> 7",
+        "evidence_lines": [
+          "Politica -> 7"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Fonavistas cobraran Reintegro 5",
+        "story_type": "economia",
+        "cover_region": {
+          "x": 0.81,
+          "y": 0.61,
+          "width": 0.19,
+          "height": 0.18
+        },
+        "page_numbers": [
+          10
+        ],
+        "evidence": "Economia -> 10",
+        "evidence_lines": [
+          "Economia -> 10"
+        ],
+        "confidence": 0.93,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Minsa confirma alerta preventiva por hantavirus",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.21,
+          "width": 0.75,
+          "height": 0.4
+        },
+        "page_numbers": [
+          15
+        ],
+        "evidence": "Buscan por todos lados a contagiados -> 15",
+        "evidence_lines": [
+          "Buscan por todos lados a contagiados -> 15"
+        ],
+        "confidence": 0.98,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "EE.UU. inutiliza petroleros de Iran",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.81,
+          "y": 0.8,
+          "width": 0.19,
+          "height": 0.2
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "Mundo -> 16",
+        "evidence_lines": [
+          "Mundo -> 16"
+        ],
+        "confidence": 0.91,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Alianza y Cristal en clasico moderno",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.0,
+          "width": 0.34,
+          "height": 0.08
+        },
+        "page_numbers": [
+          18
+        ],
+        "evidence": "Deportes -> 18",
+        "evidence_lines": [
+          "Deportes -> 18"
+        ],
+        "confidence": 0.88
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Piero Corvetto responde al JNE",
+        "story_type": "politica",
+        "summary": "Piero Corvetto tiene mucho que explicar. Responde al JNE y da detalles sobre el proceso electoral, generando más dudas sobre la transparencia. Esto no es solo política, es una crisis de confianza.",
+        "speech": "Piero Corvetto tiene mucho que explicar. Responde al JNE y da detalles sobre el proceso electoral, generando más dudas sobre la transparencia. Esto no es solo política, es una crisis de confianza.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "crítico",
+          "analítico",
+          "incisivo"
+        ],
+        "page_numbers": [
+          7
+        ],
+        "cover_region": {
+          "x": 0.81,
+          "y": 0.24,
+          "width": 0.19,
+          "height": 0.34
+        },
+        "key_facts": [
+          "respuestas de Corvetto",
+          "respuestas al JNE",
+          "crisis de confianza electoral"
+        ],
+        "key_facts_used": [
+          "respuestas de Corvetto",
+          "respuestas al JNE",
+          "crisis de confianza electoral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se afirman irregularidades sin pruebas, solo se cuestiona el proceso.",
+        "notes": "No se afirman irregularidades sin pruebas, solo se cuestiona el proceso.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Fonavistas cobrarán Reintegro 5",
+        "story_type": "economia",
+        "summary": "El Reintegro 5 llega como un alivio para miles de fonavistas. Un beneficio que podría aliviar la situación financiera de muchos, pero aún queda por ver cómo impactará en el largo plazo.",
+        "speech": "El Reintegro 5 llega como un alivio para miles de fonavistas. Un beneficio que podría aliviar la situación financiera de muchos, pero aún queda por ver cómo impactará en el largo plazo.",
+        "narrator_profile_id": "jaime_bayly",
+        "narrator_role": "analista_economia",
+        "tone_notes": [
+          "informativo",
+          "reflexivo",
+          "precavido"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.41,
+          "width": 0.21,
+          "height": 0.16
+        },
+        "key_facts": [
+          "Fonavistas cobrarán Reintegro 5",
+          "impacto económico esperado",
+          "beneficio temporal"
+        ],
+        "key_facts_used": [
+          "Fonavistas cobrarán Reintegro 5",
+          "impacto económico esperado",
+          "beneficio temporal"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se promete un cambio profundo, solo se informa del beneficio anunciado.",
+        "notes": "No se promete un cambio profundo, solo se informa del beneficio anunciado.",
+        "support_visual": null
+      },
+      {
+        "headline": "Minsa confirma alerta preventiva por hantavirus",
+        "story_type": "actualidad",
+        "summary": "La alerta por hantavirus se extiende a aeropuertos y puertos. Con un foco preventivo, el Minsa busca evitar la propagación del virus, mientras se mantiene la vigilancia ante posibles casos.",
+        "speech": "La alerta por hantavirus se extiende a aeropuertos y puertos. Con un foco preventivo, el Minsa busca evitar la propagación del virus, mientras se mantiene la vigilancia ante posibles casos.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "serio",
+          "precautorio",
+          "responsable"
+        ],
+        "page_numbers": [
+          15
+        ],
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.21,
+          "width": 0.75,
+          "height": 0.4
+        },
+        "key_facts": [
+          "alerta por hantavirus",
+          "prevención en aeropuertos y puertos",
+          "vigilancia del Minsa"
+        ],
+        "key_facts_used": [
+          "alerta por hantavirus",
+          "prevención en aeropuertos y puertos",
+          "vigilancia del Minsa"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "No se afirma que el virus haya causado muertes hasta el momento.",
+        "notes": "No se afirma que el virus haya causado muertes hasta el momento.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "EE.UU. inutiliza petroleros de Irán",
+        "story_type": "mundo",
+        "summary": "Un nuevo golpe a la economía de Irán. EE.UU. ha inutilizado varios de sus petroleros, afectando no solo su capacidad de exportación, sino también la geopolítica de la región.",
+        "speech": "Un nuevo golpe a la economía de Irán. EE.UU. ha inutilizado varios de sus petroleros, afectando no solo su capacidad de exportación, sino también la geopolítica de la región.",
+        "narrator_profile_id": "narrador_dbz",
+        "narrator_role": "corresponsal_internacional",
+        "tone_notes": [
+          "internacional",
+          "informativo",
+          "tenso"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.6,
+          "width": 0.21,
+          "height": 0.16
+        },
+        "key_facts": [
+          "EE.UU. inutiliza petroleros",
+          "daño a economía de Irán",
+          "tensión geopolítica"
+        ],
+        "key_facts_used": [
+          "EE.UU. inutiliza petroleros",
+          "daño a economía de Irán",
+          "tensión geopolítica"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se reporta como medida preventiva, sin confirmar todos los detalles del impacto total.",
+        "notes": "Se reporta como medida preventiva, sin confirmar todos los detalles del impacto total.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Piero Corvetto tiene mucho que explicar. Responde al JNE y da detalles sobre el proceso electoral, generando más dudas sobre la transparencia. Esto no es solo política, es una crisis de confianza.\n\nEl Reintegro 5 llega como un alivio para miles de fonavistas. Un beneficio que podría aliviar la situación financiera de muchos, pero aún queda por ver cómo impactará en el largo plazo.\n\nLa alerta por hantavirus se extiende a aeropuertos y puertos. Con un foco preventivo, el Minsa busca evitar la propagación del virus, mientras se mantiene la vigilancia ante posibles casos.\n\nUn nuevo golpe a la economía de Irán. EE.UU. ha inutilizado varios de sus petroleros, afectando no solo su capacidad de exportación, sino también la geopolítica de la región.",
+    "approved_text": "Piero Corvetto tiene mucho que explicar. Responde al JNE y da detalles sobre el proceso electoral, generando más dudas sobre la transparencia. Esto no es solo política, es una crisis de confianza.\n\nEl Reintegro 5 llega como un alivio para miles de fonavistas. Un beneficio que podría aliviar la situación financiera de muchos, pero aún queda por ver cómo impactará en el largo plazo.\n\nLa alerta por hantavirus se extiende a aeropuertos y puertos. Con un foco preventivo, el Minsa busca evitar la propagación del virus, mientras se mantiene la vigilancia ante posibles casos.\n\nUn nuevo golpe a la economía de Irán. EE.UU. ha inutilizado varios de sus petroleros, afectando no solo su capacidad de exportación, sino también la geopolítica de la región.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-09/2026-05-09-larepublica-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-09-larepublica-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-09T07:23:30",
+    "updated_at": "2026-05-09T07:36:40",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:30",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:31",
+        "details": "Fuente analizada desde HTML; portada descubierta y 0 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:29:27",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:29:29",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Seguimiento de portada actualizado para historia 1: Piero Corvetto responde al JNE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Seguimiento de portada actualizado para historia 2: Fonavistas cobraran Reintegro 5 -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Seguimiento de portada actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Seguimiento de portada actualizado para historia 4: EE.UU. inutiliza petroleros de Iran -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:13",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:13",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:13",
+        "details": "Seguimiento de portada actualizado para historia 1: Piero Corvetto responde al JNE -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:13",
+        "details": "Seguimiento de portada actualizado para historia 2: Fonavistas cobraran Reintegro 5 -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:13",
+        "details": "Seguimiento de portada actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:14",
+        "details": "Seguimiento de portada actualizado para historia 4: EE.UU. inutiliza petroleros de Iran -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:19",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:21",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:25",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:25",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:27",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:29",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:29",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:33",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:35",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:37",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:39",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:41",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:43",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:58",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:34:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:00",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:02",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:04",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:05",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:07",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:09",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:09",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:11",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:13",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:16",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:19",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:21",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:23",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:26",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:26",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:33",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:35",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:37",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:37",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:39",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:39",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:41",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:43",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:53",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:54",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:55",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:55",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:56",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:59",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:35:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:35:59",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:00",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 1: Piero Corvetto responde al JNE."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 2: Fonavistas cobraran Reintegro 5."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 3: Minsa confirma alerta preventiva por hantavirus."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:01",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:03",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:05",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:05",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:05",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:05",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:06",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:07",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:07",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:07",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:08",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:08",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:10",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:10",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:10",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:11",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:13",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:13",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:15",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:17",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:18",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:19",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:21",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:23",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:23",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:27",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:29",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:29",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:31",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:33",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:33",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:35",
+        "details": "Enfoque manual actualizado para historia 4: EE.UU. inutiliza petroleros de Iran."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:36:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:40",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 9 de mayo, revisamos portadas marcadas por politica, economia, seguridad y deporte. La fecha recuerda, segun Adonde.com, la promulgacion de la Confederacion Peru-Boliviana en Tacna en 1837. Vamos diario por diario con lo central.",
+    "date_reference": "Adonde.com efemerides mayo09: promulgacion de la Confederacion Peru-Boliviana en Tacna, 1837",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia historica peruana y con el tono editorial del recorrido.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-09T07:26:31"
+  }
+}

@@ -1,0 +1,910 @@
+{
+  "job_id": "2026-05-09-trome-frontpage-001",
+  "source_id": "trome",
+  "date": "2026-05-09",
+  "source": {
+    "source_id": "trome",
+    "source_config_path": "automation/sources/diarios/trome.json",
+    "requested_date": "2026-05-09",
+    "issue_date": "2026-05-09",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026050900000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026050900000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/trome.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050900000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050900000000001001&page=4&scale=82",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 8",
+        "page_number": 8,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050900000000001001&page=8&scale=82",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/pages/page-08.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050900000000001001&page=9&scale=82",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050900000000001001&page=11&scale=82",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/input/pages/page-11.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      4,
+      8,
+      9,
+      11
+    ],
+    "candidates": [
+      {
+        "headline": "Mujer y amante matan al rey de las discotecas",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.24,
+          "y": 0.17,
+          "width": 0.74,
+          "height": 0.76
+        },
+        "page_number": 4,
+        "evidence_line": "Pagina 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Alianza recibe a Cristal en Matute",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.17,
+          "width": 0.34,
+          "height": 0.39
+        },
+        "page_number": 11,
+        "evidence_line": "Pagina 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Fiestas por mamitas en centros comerciales",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.56,
+          "width": 0.28,
+          "height": 0.21
+        },
+        "page_number": 9,
+        "evidence_line": "Pagina 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      },
+      {
+        "headline": "Ismael Benavides advierte sobre Sanchez",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.79,
+          "width": 0.29,
+          "height": 0.19
+        },
+        "page_number": 8,
+        "evidence_line": "Pagina 8",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Mujer y amante matan al rey de las discotecas",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.24,
+          "y": 0.19,
+          "width": 0.74,
+          "height": 0.76
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Pagina 4",
+        "evidence_lines": [
+          "Pagina 4"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Ismael Benavides advierte sobre Sanchez",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.79,
+          "width": 0.29,
+          "height": 0.19
+        },
+        "page_numbers": [
+          8
+        ],
+        "evidence": "Pagina 8",
+        "evidence_lines": [
+          "Pagina 8"
+        ],
+        "confidence": 0.91,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Fiestas por mamitas en centros comerciales",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.56,
+          "width": 0.28,
+          "height": 0.21
+        },
+        "page_numbers": [
+          9
+        ],
+        "evidence": "Pagina 9",
+        "evidence_lines": [
+          "Pagina 9"
+        ],
+        "confidence": 0.9,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Alianza recibe a Cristal en Matute",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.17,
+          "width": 0.26,
+          "height": 0.39
+        },
+        "page_numbers": [
+          11
+        ],
+        "evidence": "Pagina 11",
+        "evidence_lines": [
+          "Pagina 11"
+        ],
+        "confidence": 0.93,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      4,
+      8,
+      9,
+      11
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Mujer y amante matan al Rey de las discotecas",
+        "story_type": "policial",
+        "summary": "El caso golpea fuerte: la Policía detuvo a la viuda y a su pareja, señalados por la investigación como parte del crimen del llamado Rey de las discotecas. Una historia de sicarios, locales y disputa bajo la lupa.",
+        "speech": "El caso golpea fuerte: la Policía detuvo a la viuda y a su pareja, señalados por la investigación como parte del crimen del llamado Rey de las discotecas. Una historia de sicarios, locales y disputa bajo la lupa.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "directo",
+          "tenso",
+          "prudente"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.24,
+          "y": 0.17,
+          "width": 0.74,
+          "height": 0.76
+        },
+        "key_facts": [
+          "viuda y pareja detenidos",
+          "investigación por crimen",
+          "presunto móvil vinculado a locales"
+        ],
+        "key_facts_used": [
+          "viuda y pareja detenidos",
+          "investigación por crimen",
+          "presunto móvil vinculado a locales"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se usa lenguaje cauteloso y se atribuye la responsabilidad a la investigación policial, no como sentencia firme.",
+        "notes": "Se usa lenguaje cauteloso y se atribuye la responsabilidad a la investigación policial, no como sentencia firme.",
+        "support_visual": null
+      },
+      {
+        "headline": "Ismael Benavides advierte sobre Sánchez",
+        "story_type": "politica",
+        "summary": "La advertencia de Ismael Benavides entra con filo político: dice que una eventual ruta de Sánchez sería riesgosa para el país. No es una frase suelta, es un golpe directo al debate económico electoral.",
+        "speech": "La advertencia de Ismael Benavides entra con filo político: dice que una eventual ruta de Sánchez sería riesgosa para el país. No es una frase suelta, es un golpe directo al debate económico electoral.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "crítico",
+          "filoso",
+          "político"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.79,
+          "width": 0.29,
+          "height": 0.19
+        },
+        "key_facts": [
+          "declaraciones de Ismael Benavides",
+          "crítica a propuestas económicas",
+          "contexto electoral"
+        ],
+        "key_facts_used": [
+          "declaraciones de Ismael Benavides",
+          "crítica a propuestas económicas",
+          "contexto electoral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como opinión del entrevistado y no como una conclusión comprobada.",
+        "notes": "Se presenta como opinión del entrevistado y no como una conclusión comprobada.",
+        "support_visual": null
+      },
+      {
+        "headline": "Fiestas por mamitas en centros comerciales",
+        "story_type": "actualidad",
+        "summary": "El Día de la Madre también se vive en los centros comerciales. Sorteos, mariachis, rockola y shows familiares buscan convertir la fecha en una jornada de celebración para las mamitas.",
+        "speech": "El Día de la Madre también se vive en los centros comerciales. Sorteos, mariachis, rockola y shows familiares buscan convertir la fecha en una jornada de celebración para las mamitas.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "ligero",
+          "festivo",
+          "claro"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.56,
+          "width": 0.28,
+          "height": 0.21
+        },
+        "key_facts": [
+          "actividades por Día de la Madre",
+          "centros comerciales",
+          "sorteos y música"
+        ],
+        "key_facts_used": [
+          "actividades por Día de la Madre",
+          "centros comerciales",
+          "sorteos y música"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resume solo la agenda visible en la página interna.",
+        "notes": "Se resume solo la agenda visible en la página interna.",
+        "support_visual": null
+      },
+      {
+        "headline": "Alianza recibe a Cristal en Matute",
+        "story_type": "deportes",
+        "summary": "Partido clave en Matute. Alianza recibe a Sporting Cristal con olor a final adelantada: si gana, se acerca fuerte al Apertura; si tropieza, deja una puerta abierta que puede costar carísimo.",
+        "speech": "Partido clave en Matute. Alianza recibe a Sporting Cristal con olor a final adelantada: si gana, se acerca fuerte al Apertura; si tropieza, deja una puerta abierta que puede costar carísimo.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "futbolero",
+          "intenso",
+          "popular"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.17,
+          "width": 0.26,
+          "height": 0.39
+        },
+        "key_facts": [
+          "Alianza vs Sporting Cristal",
+          "partido en Matute",
+          "pelea por el Apertura"
+        ],
+        "key_facts_used": [
+          "Alianza vs Sporting Cristal",
+          "partido en Matute",
+          "pelea por el Apertura"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se trata como previa deportiva; no se afirma resultado.",
+        "notes": "Se trata como previa deportiva; no se afirma resultado.",
+        "support_visual": null
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El caso golpea fuerte: la Policía detuvo a la viuda y a su pareja, señalados por la investigación como parte del crimen del llamado Rey de las discotecas. Una historia de sicarios, locales y disputa bajo la lupa.\n\nLa advertencia de Ismael Benavides entra con filo político: dice que una eventual ruta de Sánchez sería riesgosa para el país. No es una frase suelta, es un golpe directo al debate económico electoral.\n\nEl Día de la Madre también se vive en los centros comerciales. Sorteos, mariachis, rockola y shows familiares buscan convertir la fecha en una jornada de celebración para las mamitas.\n\nPartido clave en Matute. Alianza recibe a Sporting Cristal con olor a final adelantada: si gana, se acerca fuerte al Apertura; si tropieza, deja una puerta abierta que puede costar carísimo.",
+    "approved_text": "El caso golpea fuerte: la Policía detuvo a la viuda y a su pareja, señalados por la investigación como parte del crimen del llamado Rey de las discotecas. Una historia de sicarios, locales y disputa bajo la lupa.\n\nLa advertencia de Ismael Benavides entra con filo político: dice que una eventual ruta de Sánchez sería riesgosa para el país. No es una frase suelta, es un golpe directo al debate económico electoral.\n\nEl Día de la Madre también se vive en los centros comerciales. Sorteos, mariachis, rockola y shows familiares buscan convertir la fecha en una jornada de celebración para las mamitas.\n\nPartido clave en Matute. Alianza recibe a Sporting Cristal con olor a final adelantada: si gana, se acerca fuerte al Apertura; si tropieza, deja una puerta abierta que puede costar carísimo.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-09/2026-05-09-trome-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-09-trome-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-09T07:23:54",
+    "updated_at": "2026-05-09T07:31:27",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:54",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:24:13",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:24:13",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:30",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:50",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:28:38",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:39",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:39",
+        "details": "Seguimiento de portada actualizado para historia 1: Mujer y amante matan al rey de las discotecas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:39",
+        "details": "Seguimiento de portada actualizado para historia 2: Ismael Benavides advierte sobre Sanchez -> seguir."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:28:40",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:40",
+        "details": "Seguimiento de portada actualizado para historia 2: Ismael Benavides advierte sobre Sanchez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:41",
+        "details": "Seguimiento de portada actualizado para historia 3: Fiestas por mamitas en centros comerciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:41",
+        "details": "Seguimiento de portada actualizado para historia 4: Alianza recibe a Cristal en Matute -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:41",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:41",
+        "details": "Seguimiento de portada actualizado para historia 1: Mujer y amante matan al rey de las discotecas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:41",
+        "details": "Seguimiento de portada actualizado para historia 2: Ismael Benavides advierte sobre Sanchez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:42",
+        "details": "Seguimiento de portada actualizado para historia 3: Fiestas por mamitas en centros comerciales -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:28:42",
+        "details": "Seguimiento de portada actualizado para historia 4: Alianza recibe a Cristal en Matute -> seguir."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:28:43",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:30:17",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:30:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:30:19",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:30:19",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:30:20",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:30:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:30:21",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:30:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:30:27",
+        "details": "Enfoque manual actualizado para historia 3: Fiestas por mamitas en centros comerciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:30:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:30:34",
+        "details": "Enfoque manual actualizado para historia 2: Ismael Benavides advierte sobre Sanchez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:30:34",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:30:41",
+        "details": "Enfoque manual actualizado para historia 1: Mujer y amante matan al rey de las discotecas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:30:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:30:45",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:25",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 1: Mujer y amante matan al rey de las discotecas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 1: Mujer y amante matan al rey de las discotecas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 1: Mujer y amante matan al rey de las discotecas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 1: Mujer y amante matan al rey de las discotecas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 1: Mujer y amante matan al rey de las discotecas."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 2: Ismael Benavides advierte sobre Sanchez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 2: Ismael Benavides advierte sobre Sanchez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 2: Ismael Benavides advierte sobre Sanchez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 2: Ismael Benavides advierte sobre Sanchez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 2: Ismael Benavides advierte sobre Sanchez."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 3: Fiestas por mamitas en centros comerciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 3: Fiestas por mamitas en centros comerciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 3: Fiestas por mamitas en centros comerciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 3: Fiestas por mamitas en centros comerciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 3: Fiestas por mamitas en centros comerciales."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Enfoque manual actualizado para historia 4: Alianza recibe a Cristal en Matute."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:31:27",
+        "details": "Story manifest generado desde job manifest."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 9 de mayo, revisamos portadas marcadas por politica, economia, seguridad y deporte. La fecha recuerda, segun Adonde.com, la promulgacion de la Confederacion Peru-Boliviana en Tacna en 1837. Vamos diario por diario con lo central.",
+    "date_reference": "Adonde.com efemerides mayo09: promulgacion de la Confederacion Peru-Boliviana en Tacna, 1837",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia historica peruana y con el tono editorial del recorrido.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-09T07:26:31"
+  }
+}

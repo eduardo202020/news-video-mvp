@@ -1,0 +1,575 @@
+{
+  "job_id": "2026-05-09-ojo-frontpage-001",
+  "source_id": "ojo",
+  "date": "2026-05-09",
+  "source": {
+    "source_id": "ojo",
+    "source_config_path": "automation/sources/diarios/ojo.json",
+    "requested_date": "2026-05-09",
+    "issue_date": "2026-05-09",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026050900000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-09/2026-05-09-ojo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026050900000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/ojo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050900000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-ojo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050900000000001001&page=3&scale=83",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-ojo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050900000000001001&page=4&scale=83",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-ojo-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050900000000001001&page=6&scale=83",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-ojo-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 13",
+        "page_number": 13,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050900000000001001&page=13&scale=83",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-ojo-frontpage-001/input/pages/page-13.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      3,
+      4,
+      6,
+      13
+    ],
+    "candidates": [
+      {
+        "headline": "Con musica y baile festejan al papa",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.12,
+          "width": 1.0,
+          "height": 0.62
+        },
+        "page_number": 3,
+        "evidence_line": "Impacto pag. 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Alianza busca otro triunfo ante Cristal",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.74,
+          "width": 0.26,
+          "height": 0.24
+        },
+        "page_number": 13,
+        "evidence_line": "Crack pag. 13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Mamitas celebran su dia",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.33,
+          "y": 0.78,
+          "width": 0.33,
+          "height": 0.2
+        },
+        "page_number": 4,
+        "evidence_line": "Metrolima pag. 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.89
+      },
+      {
+        "headline": "Mujer mato a rey de discotecas",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.75,
+          "width": 0.33,
+          "height": 0.24
+        },
+        "page_number": 6,
+        "evidence_line": "Policial pag. 6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Con musica y baile festejan al papa",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.12,
+          "width": 1.0,
+          "height": 0.62
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "Impacto pag. 3",
+        "evidence_lines": [
+          "Impacto pag. 3"
+        ],
+        "confidence": 0.97,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Mamitas celebran su dia",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.33,
+          "y": 0.78,
+          "width": 0.33,
+          "height": 0.2
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Metrolima pag. 4",
+        "evidence_lines": [
+          "Metrolima pag. 4"
+        ],
+        "confidence": 0.89,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Mujer mato a rey de discotecas",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.75,
+          "width": 0.33,
+          "height": 0.24
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "Policial pag. 6",
+        "evidence_lines": [
+          "Policial pag. 6"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Alianza busca otro triunfo ante Cristal",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.74,
+          "width": 0.26,
+          "height": 0.24
+        },
+        "page_numbers": [
+          13
+        ],
+        "evidence": "Crack pag. 13",
+        "evidence_lines": [
+          "Crack pag. 13"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      3,
+      4,
+      6,
+      13
+    ],
+    "focus_review_completed": false
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Con música y baile festejan al Papa León XIV",
+        "story_type": "actualidad",
+        "summary": "Chiclayo volvió a mirar al Papa León XIV con fiesta y memoria. Hubo misas, baile, música y homenajes para recordar el primer año de su elección como pontífice con raíces peruanas.",
+        "speech": "Chiclayo volvió a mirar al Papa León XIV con fiesta y memoria. Hubo misas, baile, música y homenajes para recordar el primer año de su elección como pontífice con raíces peruanas.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "solemne",
+          "cálido",
+          "informativo"
+        ],
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.12,
+          "width": 1.0,
+          "height": 0.62
+        },
+        "key_facts": [
+          "celebraciones en Chiclayo",
+          "primer año del pontificado",
+          "misas y actividades culturales"
+        ],
+        "key_facts_used": [
+          "celebraciones en Chiclayo",
+          "primer año del pontificado",
+          "misas y actividades culturales"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se mantiene el enfoque religioso y conmemorativo sin agregar datos externos.",
+        "notes": "Se mantiene el enfoque religioso y conmemorativo sin agregar datos externos.",
+        "support_visual": null
+      },
+      {
+        "headline": "Mamitas celebran su día",
+        "story_type": "actualidad",
+        "summary": "Las mamitas del Canevaro tuvieron su homenaje con música, baile y teatro. Una celebración sencilla, pero cargada de emoción, que puso en primer plano a las adultas mayores por el Día de la Madre.",
+        "speech": "Las mamitas del Canevaro tuvieron su homenaje con música, baile y teatro. Una celebración sencilla, pero cargada de emoción, que puso en primer plano a las adultas mayores por el Día de la Madre.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "humano",
+          "cercano",
+          "emotivo"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.33,
+          "y": 0.78,
+          "width": 0.33,
+          "height": 0.2
+        },
+        "key_facts": [
+          "homenaje en Canevaro",
+          "música y baile",
+          "Día de la Madre"
+        ],
+        "key_facts_used": [
+          "homenaje en Canevaro",
+          "música y baile",
+          "Día de la Madre"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resume el evento social visible en la página interna.",
+        "notes": "Se resume el evento social visible en la página interna.",
+        "support_visual": null
+      },
+      {
+        "headline": "Mujer mató a Rey de discotecas",
+        "story_type": "policial",
+        "summary": "La investigación apunta a un plan armado desde el entorno de la víctima. La viuda y su pareja fueron detenidos, mientras la Policía sostiene que el crimen del Rey de las discotecas habría sido por el control de locales.",
+        "speech": "La investigación apunta a un plan armado desde el entorno de la víctima. La viuda y su pareja fueron detenidos, mientras la Policía sostiene que el crimen del Rey de las discotecas habría sido por el control de locales.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "cauteloso",
+          "tenso",
+          "de investigación"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.66,
+          "y": 0.75,
+          "width": 0.33,
+          "height": 0.24
+        },
+        "key_facts": [
+          "viuda y pareja detenidos",
+          "presunto plan criminal",
+          "disputa por locales"
+        ],
+        "key_facts_used": [
+          "viuda y pareja detenidos",
+          "presunto plan criminal",
+          "disputa por locales"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se usa 'habría' y se atribuye la versión a la investigación policial.",
+        "notes": "Se usa 'habría' y se atribuye la versión a la investigación policial.",
+        "support_visual": null
+      },
+      {
+        "headline": "Alianza busca otro triunfo ante Cristal",
+        "story_type": "deportes",
+        "summary": "Alianza y Cristal se cruzan en un duelo que puede mover el Apertura. Los íntimos llegan con la obligación de ganar en casa, pero al frente está un rival que no viene a regalar nada.",
+        "speech": "Alianza y Cristal se cruzan en un duelo que puede mover el Apertura. Los íntimos llegan con la obligación de ganar en casa, pero al frente está un rival que no viene a regalar nada.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "ágil",
+          "competitivo",
+          "futbolero"
+        ],
+        "page_numbers": [
+          13
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.74,
+          "width": 0.26,
+          "height": 0.24
+        },
+        "key_facts": [
+          "Alianza vs Cristal",
+          "duelo por el Apertura",
+          "partido clave"
+        ],
+        "key_facts_used": [
+          "Alianza vs Cristal",
+          "duelo por el Apertura",
+          "partido clave"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se mantiene como previa del partido y no se anticipa resultado.",
+        "notes": "Se mantiene como previa del partido y no se anticipa resultado.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-09/2026-05-09-ojo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Chiclayo volvió a mirar al Papa León XIV con fiesta y memoria. Hubo misas, baile, música y homenajes para recordar el primer año de su elección como pontífice con raíces peruanas.\n\nLas mamitas del Canevaro tuvieron su homenaje con música, baile y teatro. Una celebración sencilla, pero cargada de emoción, que puso en primer plano a las adultas mayores por el Día de la Madre.\n\nLa investigación apunta a un plan armado desde el entorno de la víctima. La viuda y su pareja fueron detenidos, mientras la Policía sostiene que el crimen del Rey de las discotecas habría sido por el control de locales.\n\nAlianza y Cristal se cruzan en un duelo que puede mover el Apertura. Los íntimos llegan con la obligación de ganar en casa, pero al frente está un rival que no viene a regalar nada.",
+    "approved_text": "Chiclayo volvió a mirar al Papa León XIV con fiesta y memoria. Hubo misas, baile, música y homenajes para recordar el primer año de su elección como pontífice con raíces peruanas.\n\nLas mamitas del Canevaro tuvieron su homenaje con música, baile y teatro. Una celebración sencilla, pero cargada de emoción, que puso en primer plano a las adultas mayores por el Día de la Madre.\n\nLa investigación apunta a un plan armado desde el entorno de la víctima. La viuda y su pareja fueron detenidos, mientras la Policía sostiene que el crimen del Rey de las discotecas habría sido por el control de locales.\n\nAlianza y Cristal se cruzan en un duelo que puede mover el Apertura. Los íntimos llegan con la obligación de ganar en casa, pero al frente está un rival que no viene a regalar nada.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-09T07:23:33",
+    "updated_at": "2026-05-09T07:36:54",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:33",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:54",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:54",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:59",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:28:38",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:28:40",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:28:43",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:44",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:44",
+        "details": "Seguimiento de portada actualizado para historia 1: Con musica y baile festejan al papa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:44",
+        "details": "Seguimiento de portada actualizado para historia 2: Mamitas celebran su dia -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:44",
+        "details": "Seguimiento de portada actualizado para historia 3: Mujer mato a rey de discotecas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:44",
+        "details": "Seguimiento de portada actualizado para historia 4: Alianza busca otro triunfo ante Cristal -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:54",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:54",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:54",
+        "details": "Seguimiento de portada actualizado para historia 1: Con musica y baile festejan al papa -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:54",
+        "details": "Seguimiento de portada actualizado para historia 2: Mamitas celebran su dia -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:54",
+        "details": "Seguimiento de portada actualizado para historia 3: Mujer mato a rey de discotecas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:36:54",
+        "details": "Seguimiento de portada actualizado para historia 4: Alianza busca otro triunfo ante Cristal -> seguir."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 9 de mayo, revisamos portadas marcadas por politica, economia, seguridad y deporte. La fecha recuerda, segun Adonde.com, la promulgacion de la Confederacion Peru-Boliviana en Tacna en 1837. Vamos diario por diario con lo central.",
+    "date_reference": "Adonde.com efemerides mayo09: promulgacion de la Confederacion Peru-Boliviana en Tacna, 1837",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia historica peruana y con el tono editorial del recorrido.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-09T07:26:31"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-09-ojo-frontpage-001",
+  "source_id": "ojo",
+  "source_name": "Ojo",
+  "date": "2026-05-09",
+  "front_page_image": "data/jobs/2026-05-09/2026-05-09-ojo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Con música y baile festejan al Papa León XIV",
+      "story_type": "actualidad",
+      "summary": "Chiclayo volvió a mirar al Papa León XIV con fiesta y memoria. Hubo misas, baile, música y homenajes para recordar el primer año de su elección como pontífice con raíces peruanas.",
+      "speech": "Chiclayo volvió a mirar al Papa León XIV con fiesta y memoria. Hubo misas, baile, música y homenajes para recordar el primer año de su elección como pontífice con raíces peruanas.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.12,
+        "width": 1.0,
+        "height": 0.62
+      },
+      "key_facts": [
+        "celebraciones en Chiclayo",
+        "primer año del pontificado",
+        "misas y actividades culturales"
+      ],
+      "tone_notes": [
+        "solemne",
+        "cálido",
+        "informativo"
+      ],
+      "safety_notes": "Se mantiene el enfoque religioso y conmemorativo sin agregar datos externos.",
+      "notes": "Se mantiene el enfoque religioso y conmemorativo sin agregar datos externos.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Mamitas celebran su día",
+      "story_type": "actualidad",
+      "summary": "Las mamitas del Canevaro tuvieron su homenaje con música, baile y teatro. Una celebración sencilla, pero cargada de emoción, que puso en primer plano a las adultas mayores por el Día de la Madre.",
+      "speech": "Las mamitas del Canevaro tuvieron su homenaje con música, baile y teatro. Una celebración sencilla, pero cargada de emoción, que puso en primer plano a las adultas mayores por el Día de la Madre.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.33,
+        "y": 0.78,
+        "width": 0.33,
+        "height": 0.2
+      },
+      "key_facts": [
+        "homenaje en Canevaro",
+        "música y baile",
+        "Día de la Madre"
+      ],
+      "tone_notes": [
+        "humano",
+        "cercano",
+        "emotivo"
+      ],
+      "safety_notes": "Se resume el evento social visible en la página interna.",
+      "notes": "Se resume el evento social visible en la página interna.",
+      "support_visual": null,
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Mujer mató a Rey de discotecas",
+      "story_type": "policial",
+      "summary": "La investigación apunta a un plan armado desde el entorno de la víctima. La viuda y su pareja fueron detenidos, mientras la Policía sostiene que el crimen del Rey de las discotecas habría sido por el control de locales.",
+      "speech": "La investigación apunta a un plan armado desde el entorno de la víctima. La viuda y su pareja fueron detenidos, mientras la Policía sostiene que el crimen del Rey de las discotecas habría sido por el control de locales.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.66,
+        "y": 0.75,
+        "width": 0.33,
+        "height": 0.24
+      },
+      "key_facts": [
+        "viuda y pareja detenidos",
+        "presunto plan criminal",
+        "disputa por locales"
+      ],
+      "tone_notes": [
+        "cauteloso",
+        "tenso",
+        "de investigación"
+      ],
+      "safety_notes": "Se usa 'habría' y se atribuye la versión a la investigación policial.",
+      "notes": "Se usa 'habría' y se atribuye la versión a la investigación policial.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Alianza busca otro triunfo ante Cristal",
+      "story_type": "deportes",
+      "summary": "Alianza y Cristal se cruzan en un duelo que puede mover el Apertura. Los íntimos llegan con la obligación de ganar en casa, pero al frente está un rival que no viene a regalar nada.",
+      "speech": "Alianza y Cristal se cruzan en un duelo que puede mover el Apertura. Los íntimos llegan con la obligación de ganar en casa, pero al frente está un rival que no viene a regalar nada.",
+      "page_numbers": [
+        13
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.74,
+        "width": 0.26,
+        "height": 0.24
+      },
+      "key_facts": [
+        "Alianza vs Cristal",
+        "duelo por el Apertura",
+        "partido clave"
+      ],
+      "tone_notes": [
+        "ágil",
+        "competitivo",
+        "futbolero"
+      ],
+      "safety_notes": "Se mantiene como previa del partido y no se anticipa resultado.",
+      "notes": "Se mantiene como previa del partido y no se anticipa resultado.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

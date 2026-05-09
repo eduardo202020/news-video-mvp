@@ -1,0 +1,595 @@
+{
+  "job_id": "2026-05-09-correo-frontpage-001",
+  "source_id": "correo",
+  "date": "2026-05-09",
+  "source": {
+    "source_id": "correo",
+    "source_config_path": "automation/sources/diarios/correo.json",
+    "requested_date": "2026-05-09",
+    "issue_date": "2026-05-09",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026050900000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eagb2026050900000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/correo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026050900000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026050900000000001001&page=2&scale=80",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026050900000000001001&page=3&scale=80",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026050900000000001001&page=4&scale=80",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 6",
+        "page_number": 6,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026050900000000001001&page=6&scale=80",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/input/pages/page-06.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eagb2026050900000000001001&page=16&scale=80",
+        "local_path": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      2,
+      3,
+      4,
+      6,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Porky reduce distancia con Roberto Sanchez",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.37,
+          "y": 0.04,
+          "width": 0.3,
+          "height": 0.23
+        },
+        "page_number": 2,
+        "evidence_line": "Pags. 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Porky reduce distancia con Roberto Sanchez",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.37,
+          "y": 0.04,
+          "width": 0.3,
+          "height": 0.23
+        },
+        "page_number": 3,
+        "evidence_line": "Pags. 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Lopez Aliaga lanza amenaza por presunto fraude",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.31,
+          "width": 0.93,
+          "height": 0.65
+        },
+        "page_number": 4,
+        "evidence_line": "Pag. 4 Politica",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Papa de corazon peruano cumple un año",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.69,
+          "y": 0.04,
+          "width": 0.15,
+          "height": 0.24
+        },
+        "page_number": 6,
+        "evidence_line": "Pag. 6 Lima",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Alianza y Cristal protagonizan duelo de la fecha",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.85,
+          "y": 0.04,
+          "width": 0.14,
+          "height": 0.24
+        },
+        "page_number": 16,
+        "evidence_line": "Pag. 16 Deportes",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Porky reduce distancia con Roberto Sanchez",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.37,
+          "y": 0.04,
+          "width": 0.3,
+          "height": 0.23
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "Pags. 2-3",
+        "evidence_lines": [
+          "Pags. 2-3"
+        ],
+        "confidence": 0.97,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Lopez Aliaga lanza amenaza por presunto fraude",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.31,
+          "width": 0.93,
+          "height": 0.65
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Pag. 4 Politica",
+        "evidence_lines": [
+          "Pag. 4 Politica"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Papa de corazon peruano cumple un año",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.69,
+          "y": 0.04,
+          "width": 0.15,
+          "height": 0.24
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "Pag. 6 Lima",
+        "evidence_lines": [
+          "Pag. 6 Lima"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Alianza y Cristal protagonizan duelo de la fecha",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.85,
+          "y": 0.04,
+          "width": 0.14,
+          "height": 0.24
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "Pag. 16 Deportes",
+        "evidence_lines": [
+          "Pag. 16 Deportes"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      3,
+      4,
+      6,
+      16
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Porky reduce distancia con Roberto Sánchez",
+        "story_type": "politica",
+        "summary": "La contienda se pone más reñida. El avance de Porky sobre Roberto Sánchez reduce la diferencia a menos de 20,000 votos. ¿Será que la última esperanza será una serie de milagros?",
+        "speech": "La contienda se pone más reñida. El avance de Porky sobre Roberto Sánchez reduce la diferencia a menos de 20,000 votos. ¿Será que la última esperanza será una serie de milagros?",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "confrontacional",
+          "crítico",
+          "incisivo"
+        ],
+        "page_numbers": [
+          2,
+          3
+        ],
+        "cover_region": {
+          "x": 0.37,
+          "y": 0.04,
+          "width": 0.3,
+          "height": 0.23
+        },
+        "key_facts": [
+          "diferencia de 18,000 votos",
+          "Porky reduce la brecha",
+          "Roberto Sánchez aún lidera"
+        ],
+        "key_facts_used": [
+          "diferencia de 18,000 votos",
+          "Porky reduce la brecha",
+          "Roberto Sánchez aún lidera"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como un análisis de la situación sin afirmar el resultado final.",
+        "notes": "Se presenta como un análisis de la situación sin afirmar el resultado final.",
+        "support_visual": null
+      },
+      {
+        "headline": "López Aliaga lanza amenaza por presunto fraude",
+        "story_type": "politica",
+        "summary": "La acusación de fraude por parte de López Aliaga sube la temperatura en la carrera presidencial. Dice que no dudará en movilizar al pueblo si se confirma el fraude electoral.",
+        "speech": "La acusación de fraude por parte de López Aliaga sube la temperatura en la carrera presidencial. Dice que no dudará en movilizar al pueblo si se confirma el fraude electoral.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "provocador",
+          "filoso",
+          "directo"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.31,
+          "width": 0.93,
+          "height": 0.65
+        },
+        "key_facts": [
+          "López Aliaga lanza amenaza",
+          "fraude presunto",
+          "movilización popular como amenaza"
+        ],
+        "key_facts_used": [
+          "López Aliaga lanza amenaza",
+          "fraude presunto",
+          "movilización popular como amenaza"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "La acusación es presentada como una advertencia política sin comprobarse.",
+        "notes": "La acusación es presentada como una advertencia política sin comprobarse.",
+        "support_visual": null
+      },
+      {
+        "headline": "Papa de corazón peruano cumple un año",
+        "story_type": "actualidad",
+        "summary": "Un año de papado peruano. La celebración de su primer aniversario en el norte del país, en Chiclayo, destaca la conexión del Papa con el pueblo peruano, especialmente en su tierra natal.",
+        "speech": "Un año de papado peruano. La celebración de su primer aniversario en el norte del país, en Chiclayo, destaca la conexión del Papa con el pueblo peruano, especialmente en su tierra natal.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "solemne",
+          "respetuoso",
+          "informativo"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.69,
+          "y": 0.04,
+          "width": 0.15,
+          "height": 0.24
+        },
+        "key_facts": [
+          "primer año de papado",
+          "celebraciones en Chiclayo",
+          "festejos religiosos y culturales"
+        ],
+        "key_facts_used": [
+          "primer año de papado",
+          "celebraciones en Chiclayo",
+          "festejos religiosos y culturales"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se mantiene el tono solemne y de respeto por las festividades sin hacer suposiciones.",
+        "notes": "Se mantiene el tono solemne y de respeto por las festividades sin hacer suposiciones.",
+        "support_visual": null
+      },
+      {
+        "headline": "Alianza y Cristal protagonizan duelo de la fecha",
+        "story_type": "deportes",
+        "summary": "El clásico más esperado del Apertura se juega en Matute. Alianza Lima y Sporting Cristal se enfrentan en un duelo clave para las aspiraciones del título.",
+        "speech": "El clásico más esperado del Apertura se juega en Matute. Alianza Lima y Sporting Cristal se enfrentan en un duelo clave para las aspiraciones del título.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "futbolero",
+          "emocionante",
+          "dinámico"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.85,
+          "y": 0.04,
+          "width": 0.14,
+          "height": 0.24
+        },
+        "key_facts": [
+          "Alianza Lima vs Sporting Cristal",
+          "partido decisivo",
+          "duelo clave para el Apertura"
+        ],
+        "key_facts_used": [
+          "Alianza Lima vs Sporting Cristal",
+          "partido decisivo",
+          "duelo clave para el Apertura"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como previa del partido, sin anticipar el resultado final.",
+        "notes": "Se presenta como previa del partido, sin anticipar el resultado final.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-09/2026-05-09-correo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "La contienda se pone más reñida. El avance de Porky sobre Roberto Sánchez reduce la diferencia a menos de 20,000 votos. ¿Será que la última esperanza será una serie de milagros?\n\nLa acusación de fraude por parte de López Aliaga sube la temperatura en la carrera presidencial. Dice que no dudará en movilizar al pueblo si se confirma el fraude electoral.\n\nUn año de papado peruano. La celebración de su primer aniversario en el norte del país, en Chiclayo, destaca la conexión del Papa con el pueblo peruano, especialmente en su tierra natal.\n\nEl clásico más esperado del Apertura se juega en Matute. Alianza Lima y Sporting Cristal se enfrentan en un duelo clave para las aspiraciones del título.",
+    "approved_text": "La contienda se pone más reñida. El avance de Porky sobre Roberto Sánchez reduce la diferencia a menos de 20,000 votos. ¿Será que la última esperanza será una serie de milagros?\n\nLa acusación de fraude por parte de López Aliaga sube la temperatura en la carrera presidencial. Dice que no dudará en movilizar al pueblo si se confirma el fraude electoral.\n\nUn año de papado peruano. La celebración de su primer aniversario en el norte del país, en Chiclayo, destaca la conexión del Papa con el pueblo peruano, especialmente en su tierra natal.\n\nEl clásico más esperado del Apertura se juega en Matute. Alianza Lima y Sporting Cristal se enfrentan en un duelo clave para las aspiraciones del título.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-09T07:22:58",
+    "updated_at": "2026-05-09T07:34:04",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:22:58",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:17",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:23:17",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:26",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:26:31",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:27:23",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:05",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-09T07:32:07",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:54",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:54",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky reduce distancia con Roberto Sanchez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:54",
+        "details": "Seguimiento de portada actualizado para historia 2: Lopez Aliaga lanza amenaza por presunto fraude -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:54",
+        "details": "Seguimiento de portada actualizado para historia 3: Papa de corazon peruano cumple un año -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:33:54",
+        "details": "Seguimiento de portada actualizado para historia 4: Alianza y Cristal protagonizan duelo de la fecha -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:00",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Seguimiento de portada actualizado para historia 1: Porky reduce distancia con Roberto Sanchez -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Seguimiento de portada actualizado para historia 2: Lopez Aliaga lanza amenaza por presunto fraude -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Seguimiento de portada actualizado para historia 3: Papa de corazon peruano cumple un año -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-09T07:34:04",
+        "details": "Seguimiento de portada actualizado para historia 4: Alianza y Cristal protagonizan duelo de la fecha -> seguir."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 9 de mayo, revisamos portadas marcadas por politica, economia, seguridad y deporte. La fecha recuerda, segun Adonde.com, la promulgacion de la Confederacion Peru-Boliviana en Tacna en 1837. Vamos diario por diario con lo central.",
+    "date_reference": "Adonde.com efemerides mayo09: promulgacion de la Confederacion Peru-Boliviana en Tacna, 1837",
+    "source_scope": "peru",
+    "why_it_fits": "Conecta la fecha del lote con una referencia historica peruana y con el tono editorial del recorrido.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-09T07:26:31"
+  }
+}
