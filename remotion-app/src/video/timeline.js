@@ -4,6 +4,43 @@ import {buildWordHighlights} from "./helpers.js";
 
 const GESTURE_SWITCH_SECONDS = 0.8;
 
+const hashString = (value) => {
+  const text = String(value ?? "");
+  let hash = 2166136261;
+
+  for (let index = 0; index < text.length; index += 1) {
+    hash ^= text.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return hash >>> 0;
+};
+
+const createSeededRandom = (seed) => {
+  let state = seed >>> 0;
+
+  return () => {
+    state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+    return state / 4294967296;
+  };
+};
+
+const shuffleGestures = (gestures, seedSource) => {
+  if (!Array.isArray(gestures) || gestures.length <= 1) {
+    return Array.isArray(gestures) ? gestures : [];
+  }
+
+  const shuffled = [...gestures];
+  const random = createSeededRandom(hashString(seedSource));
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+
+  return shuffled;
+};
+
 export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
   const sequence = story.segments;
   const transitionFlags = sequence.map((segment, index) => {
@@ -81,7 +118,14 @@ export const resolveTimeline = ({frame, fps, durationInFrames, story}) => {
     : Math.max(0, Math.min(1, segmentFrame / Math.max(1, segmentDuration)));
   const captionText = isInSegmentPause ? "" : activeSubtitle?.text ?? currentSegment.text;
 
-  const activeGestures = currentSegment.gestures?.length ? currentSegment.gestures : story.gestures;
+  const baseGestures = currentSegment.gestures?.length ? currentSegment.gestures : story.gestures;
+  const gestureSeed = [
+    activeIndex,
+    currentSegment.narratorName ?? story.narratorName,
+    currentSegment.headline ?? "",
+    currentSegment.text ?? ""
+  ].join("|");
+  const activeGestures = shuffleGestures(baseGestures, gestureSeed);
   const gestureIntervalFrames = Math.max(1, Math.round(fps * GESTURE_SWITCH_SECONDS));
   const gestureFrame = isInSegmentPause
     ? Math.max(0, spokenSegmentDuration - 1)

@@ -15,7 +15,7 @@
     "page_count_probe_path": null
   },
   "approval_mode": "semi_auto",
-  "status": "scripted",
+  "status": "composed",
   "input_assets": {
     "front_page_image": "data/jobs/2026-05-08/2026-05-08-correo-frontpage-001/input/front-page.jpg",
     "front_page_url": "https://t.prcdn.co/img?file=eagb2026050800000000001001&page=1&scale=300",
@@ -547,8 +547,9 @@
   },
   "video": {
     "template_id": "vertical-news",
-    "story_manifest_path": "data/jobs/2026-05-08/2026-05-08-correo-frontpage-001/story-manifest.json",
-    "output_path": "output/2026-05-08-correo-frontpage-001.mp4"
+    "story_manifest_path": "data/rundowns/2026-05-08/195046/story-manifest.json",
+    "output_path": "output/2026-05-08-correo-frontpage-001.mp4",
+    "preview_composition_id": "NewsVideo-generated"
   },
   "publication": {
     "profile_id": "tiktok",
@@ -558,7 +559,7 @@
   },
   "audit": {
     "created_at": "2026-05-08T19:32:37",
-    "updated_at": "2026-05-08T20:09:55",
+    "updated_at": "2026-05-08T21:33:36",
     "events": [
       {
         "stage": "discover",
@@ -1255,6 +1256,18 @@
         "status": "edited",
         "timestamp": "2026-05-08T20:09:55",
         "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "support_visual_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T21:25:28",
+        "details": "Grafico editorial actualizado para Dramáticas cifras de pobreza en Lima."
+      },
+      {
+        "stage": "compose_preview",
+        "status": "completed",
+        "timestamp": "2026-05-08T21:33:36",
+        "details": "Assets sincronizados y generated-story.js actualizado para previsualizacion en Remotion."
       }
     ]
   },

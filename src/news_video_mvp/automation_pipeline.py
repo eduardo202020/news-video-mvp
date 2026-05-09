@@ -3731,6 +3731,7 @@ def retry_daily_rundown_from_existing_audio(
                 audio_duration_seconds=_get_wav_duration_seconds(project_dir / str(segment["segment_audio_file"])),
                 pause_after_seconds=float(segment.get("pause_after_seconds") or 0.0),
                 cover_region=segment.get("cover_region"),
+                support_visual=segment.get("support_visual"),
                 segment_type=str(segment.get("segment_type") or "story"),
             )
         )
