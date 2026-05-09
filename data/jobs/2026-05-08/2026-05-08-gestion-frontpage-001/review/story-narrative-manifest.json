@@ -1,0 +1,180 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-08-gestion-frontpage-001",
+  "source_id": "gestion",
+  "source_name": "Gestión",
+  "date": "2026-05-08",
+  "front_page_image": "data/jobs/2026-05-08/2026-05-08-gestion-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Financiamiento de Petroperú quedaría a cargo de ProInversión",
+      "story_type": "economia",
+      "summary": "El futuro financiero de Petroperú se someterá a una reestructuración que llevará a ProInversión a encargarse de su financiamiento. El Gobierno busca optimizar recursos en un momento crítico.",
+      "speech": "El futuro financiero de Petroperú se someterá a una reestructuración que llevará a ProInversión a encargarse de su financiamiento. El Gobierno busca optimizar recursos en un momento crítico.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.27,
+        "width": 0.7,
+        "height": 0.52
+      },
+      "key_facts": [
+        "Petroperú se sometería a reestructuración",
+        "ProInversión como responsable",
+        "optimización de recursos en Petroperú"
+      ],
+      "tone_notes": [
+        "informativo",
+        "analítico",
+        "económico"
+      ],
+      "safety_notes": "La información proviene de la entrevista oficial sin confirmar todos los aspectos detallados.",
+      "notes": "La información proviene de la entrevista oficial sin confirmar todos los aspectos detallados.",
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Reestructuración de Petroperú",
+        "points": [
+          {
+            "label": "2023",
+            "value": 350.0
+          },
+          {
+            "label": "2024",
+            "value": 500.0
+          },
+          {
+            "label": "2025",
+            "value": 600.0
+          }
+        ],
+        "subtitle": "Estructura de financiamiento",
+        "unit": "USD",
+        "highlight_label": "Monto total proyectado",
+        "data_source_note": "Datos proporcionados por la fuente oficial."
+      },
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Meliá evalúa nuevos proyectos hoteleros",
+      "story_type": "economia",
+      "summary": "La cadena Meliá considera expandir su presencia en Perú, evaluando entre cuatro y seis nuevos proyectos hoteleros para los próximos años.",
+      "speech": "La cadena Meliá considera expandir su presencia en Perú, evaluando entre cuatro y seis nuevos proyectos hoteleros para los próximos años.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.28,
+        "width": 0.18,
+        "height": 0.24
+      },
+      "key_facts": [
+        "Meliá evalúa proyectos hoteleros",
+        "expansión de presencia en Perú",
+        "nuevos proyectos en los próximos años"
+      ],
+      "tone_notes": [
+        "empresarial",
+        "propositivo",
+        "de análisis"
+      ],
+      "safety_notes": "Se presenta la evaluación sin confirmar la aprobación de los proyectos.",
+      "notes": "Se presenta la evaluación sin confirmar la aprobación de los proyectos.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Gremios aéreos llevan cobro de TUUA al Poder Judicial",
+      "story_type": "economia",
+      "summary": "El cobro del TUUA por parte de las aerolíneas está siendo cuestionado en los tribunales. Los gremios aéreos llevan el caso al Poder Judicial, mientras la comunidad reclama mayor transparencia.",
+      "speech": "El cobro del TUUA por parte de las aerolíneas está siendo cuestionado en los tribunales. Los gremios aéreos llevan el caso al Poder Judicial, mientras la comunidad reclama mayor transparencia.",
+      "page_numbers": [
+        13
+      ],
+      "cover_region": {
+        "x": 0.54,
+        "y": 0.78,
+        "width": 0.25,
+        "height": 0.18
+      },
+      "key_facts": [
+        "TUUA cuestionado judicialmente",
+        "gremios aéreos demandan",
+        "reclamos por transparencia en cobros"
+      ],
+      "tone_notes": [
+        "serio",
+        "legales",
+        "controvertido"
+      ],
+      "safety_notes": "Se presenta como un hecho de negligencia sin imputar responsabilidades legales.",
+      "notes": "Se presenta como un hecho de negligencia sin imputar responsabilidades legales.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Prueba en transferencias bancarias no reconocidas",
+      "story_type": "economia",
+      "summary": "Los bancos enfrentan nuevos desafíos al no reconocer las transferencias hechas a través de apps. La evidencia será clave para proteger a los usuarios de fraudes en el futuro.",
+      "speech": "Los bancos enfrentan nuevos desafíos al no reconocer las transferencias hechas a través de apps. La evidencia será clave para proteger a los usuarios de fraudes en el futuro.",
+      "page_numbers": [
+        14
+      ],
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.85,
+        "width": 0.2,
+        "height": 0.14
+      },
+      "key_facts": [
+        "pruebas de transferencias no reconocidas",
+        "riesgos de fraudes financieros",
+        "necesidad de protección en apps bancarias"
+      ],
+      "tone_notes": [
+        "alerta",
+        "económico",
+        "preciso"
+      ],
+      "safety_notes": "Se evita hacer suposiciones sin evidencia concreta de fraude.",
+      "notes": "Se evita hacer suposiciones sin evidencia concreta de fraude.",
+      "support_visual": null,
+      "narrator_profile_id": "jaime_bayly",
+      "narrator_role": "analista_economia",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "jaime_bayly",
+      "narrator_name": "Jaime Bayly",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "job_id": "2026-05-08-libero-frontpage-001",
+  "source_id": "libero",
+  "date": "2026-05-08",
+  "source": {
+    "source_id": "libero",
+    "source_config_path": "automation/sources/diarios/libero.json",
+    "requested_date": "2026-05-08",
+    "issue_date": "2026-05-08",
+    "publication_status": "available",
+    "discovery_type": "direct_image_url",
+    "front_page_url": "https://img.kiosko.net/2026/05/08/pe/pe_libero.750.jpg",
+    "discovered_pages_count": 1,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-08/2026-05-08-libero-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://img.kiosko.net/2026/05/08/pe/pe_libero.750.jpg",
+    "source_url": "https://img.kiosko.net/2026/05/08/pe/pe_libero.750.jpg",
+    "source_config": "automation/sources/diarios/libero.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://img.kiosko.net/2026/05/08/pe/pe_libero.750.jpg",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-libero-frontpage-001/input/front-page.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      4,
+      5,
+      10
+    ],
+    "candidates": [
+      {
+        "headline": "Universitario sufre ante Coquimbo",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.02,
+          "width": 0.69,
+          "height": 0.86
+        },
+        "page_number": 4,
+        "evidence_line": "Págs. 4 y 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "Universitario sufre ante Coquimbo",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.02,
+          "width": 0.69,
+          "height": 0.86
+        },
+        "page_number": 5,
+        "evidence_line": "Págs. 4 y 5",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Zé Ricardo pide refuerzos",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.48,
+          "y": 0.86,
+          "width": 0.24,
+          "height": 0.12
+        },
+        "page_number": 10,
+        "evidence_line": "Pág. 10",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.91
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Universitario sufre ante Coquimbo",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.02,
+          "width": 0.69,
+          "height": 0.86
+        },
+        "page_numbers": [
+          4,
+          5
+        ],
+        "evidence": "Págs. 4 y 5",
+        "evidence_lines": [
+          "Págs. 4 y 5"
+        ],
+        "confidence": 0.97,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Zé Ricardo pide refuerzos",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.48,
+          "y": 0.86,
+          "width": 0.24,
+          "height": 0.12
+        },
+        "page_numbers": [
+          10
+        ],
+        "evidence": "Pág. 10",
+        "evidence_lines": [
+          "Pág. 10"
+        ],
+        "confidence": 0.91
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Universitario sufre ante Coquimbo",
+        "story_type": "deportes",
+        "summary": "Otra caída dolorosa para Universitario. Después de ponerse en ventaja, los cremas no pudieron mantener el marcador y cayeron 2-1 ante Coquimbo, complicando su paso en la Copa Libertadores.",
+        "speech": "Otra caída dolorosa para Universitario. Después de ponerse en ventaja, los cremas no pudieron mantener el marcador y cayeron 2-1 ante Coquimbo, complicando su paso en la Copa Libertadores.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "directo",
+          "competitivo"
+        ],
+        "page_numbers": [
+          4,
+          5
+        ],
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.02,
+          "width": 0.69,
+          "height": 0.86
+        },
+        "key_facts": [
+          "Universitario perdió 2-1",
+          "Coquimbo remontó el partido",
+          "complicación para la clasificación"
+        ],
+        "key_facts_used": [
+          "Universitario perdió 2-1",
+          "Coquimbo remontó el partido",
+          "complicación para la clasificación"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Basado en el resultado visible en la portada, sin agregar detalles no confirmados.",
+        "notes": "Basado en el resultado visible en la portada, sin agregar detalles no confirmados.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-08/2026-05-08-libero-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "Otra caída dolorosa para Universitario. Después de ponerse en ventaja, los cremas no pudieron mantener el marcador y cayeron 2-1 ante Coquimbo, complicando su paso en la Copa Libertadores.",
+    "approved_text": "Otra caída dolorosa para Universitario. Después de ponerse en ventaja, los cremas no pudieron mantener el marcador y cayeron 2-1 ante Coquimbo, complicando su paso en la Copa Libertadores.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 1
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-08/2026-05-08-libero-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-08-libero-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-08T19:33:56",
+    "updated_at": "2026-05-08T19:45:42",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:33:56",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:33:57",
+        "details": "Fuente analizada desde HTML; portada descubierta y 0 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Se importaron 3 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:13",
+        "details": "Se importaron 1 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:19",
+        "details": "Se importaron 1 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:20",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:20",
+        "details": "Seguimiento de portada actualizado para historia 1: Universitario sufre ante Coquimbo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:21",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:21",
+        "details": "Seguimiento de portada actualizado para historia 1: Universitario sufre ante Coquimbo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:44:59",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:05",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:22",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:24",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:26",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:27",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:29",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:29",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:31",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:31",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:35",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:38",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:38",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:45:42",
+        "details": "Enfoque manual actualizado para historia 1: Universitario sufre ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:45:42",
+        "details": "Story manifest generado desde job manifest."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 8 de mayo, abrimos el recorrido por portadas en una fecha ligada al Día Mundial de la Cruz Roja y la Media Luna Roja: humanidad ante la crisis. Política, economía, seguridad y fútbol marcan la agenda.",
+    "date_reference": "Día Mundial de la Cruz Roja y de la Media Luna Roja, 8 de mayo",
+    "source_scope": "world",
+    "why_it_fits": "Conecta una referencia humanitaria mundial con una jornada de portadas marcada por conflictos, política, seguridad y deporte.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-08T19:37:25"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-08-larepublica-frontpage-001",
+  "source_id": "larepublica",
+  "source_name": "La República",
+  "date": "2026-05-08",
+  "front_page_image": "data/jobs/2026-05-08/2026-05-08-larepublica-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Congreso consuma venganza contra Delia Espinoza",
+      "story_type": "politica",
+      "summary": "El Congreso no da tregua. La venganza contra Delia Espinoza se consolida con nuevas maniobras legislativas, mientras la exdecana sigue denunciando irregularidades detrás de esta presión.",
+      "speech": "El Congreso no da tregua. La venganza contra Delia Espinoza se consolida con nuevas maniobras legislativas, mientras la exdecana sigue denunciando irregularidades detrás de esta presión.",
+      "page_numbers": [
+        6
+      ],
+      "cover_region": {
+        "x": 0.04,
+        "y": 0.2,
+        "width": 0.72,
+        "height": 0.72
+      },
+      "key_facts": [
+        "presión política sobre Delia Espinoza",
+        "venganza institucional",
+        "denuncias de irregularidades"
+      ],
+      "tone_notes": [
+        "crítico",
+        "incisivo",
+        "directo"
+      ],
+      "safety_notes": "Se presenta como una disputa política sin asumir delitos no probados.",
+      "notes": "Se presenta como una disputa política sin asumir delitos no probados.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "Chalecos antibalas comprados por Santiváñez están abandonados",
+      "story_type": "politica",
+      "summary": "Otro escándalo más sobre la gestión de Santiváñez. Los chalecos antibalas comprados con dinero público están guardados en almacenes, sin ser distribuidos ni utilizados por las fuerzas del orden.",
+      "speech": "Otro escándalo más sobre la gestión de Santiváñez. Los chalecos antibalas comprados con dinero público están guardados en almacenes, sin ser distribuidos ni utilizados por las fuerzas del orden.",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.68,
+        "width": 0.2,
+        "height": 0.13
+      },
+      "key_facts": [
+        "chalecos antibalas comprados",
+        "productos abandonados",
+        "dinero público desperdiciado"
+      ],
+      "tone_notes": [
+        "directo",
+        "acusador",
+        "reflexivo"
+      ],
+      "safety_notes": "Se presenta como un hecho de negligencia sin imputar responsabilidades legales.",
+      "notes": "Se presenta como un hecho de negligencia sin imputar responsabilidades legales.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "León XIV cumple un año de papado",
+      "story_type": "mundo",
+      "summary": "Un año del papado de León XIV, marcando una época de cambios dentro de la iglesia. Mientras el Papa reafirma su compromiso con la paz, el mundo observa su camino hacia el futuro de la religión.",
+      "speech": "Un año del papado de León XIV, marcando una época de cambios dentro de la iglesia. Mientras el Papa reafirma su compromiso con la paz, el mundo observa su camino hacia el futuro de la religión.",
+      "page_numbers": [
+        17
+      ],
+      "cover_region": {
+        "x": 0.78,
+        "y": 0.26,
+        "width": 0.2,
+        "height": 0.22
+      },
+      "key_facts": [
+        "aniversario del papado de León XIV",
+        "mensaje de paz y reconciliación",
+        "nueva etapa para la iglesia"
+      ],
+      "tone_notes": [
+        "serio",
+        "global",
+        "elevado"
+      ],
+      "safety_notes": "Se menciona el aniversario sin atribuirle efectos concretos o controversiales.",
+      "notes": "Se menciona el aniversario sin atribuirle efectos concretos o controversiales.",
+      "support_visual": null,
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "La U cayó ante Coquimbo",
+      "story_type": "deportes",
+      "summary": "Universitario sufrió otra derrota en la Copa. Después de un buen inicio, Coquimbo le dio vuelta el marcador, dejando a los cremas con pocas opciones de clasificación.",
+      "speech": "Universitario sufrió otra derrota en la Copa. Después de un buen inicio, Coquimbo le dio vuelta el marcador, dejando a los cremas con pocas opciones de clasificación.",
+      "page_numbers": [
+        18
+      ],
+      "cover_region": {
+        "x": 0.03,
+        "y": 0.01,
+        "width": 0.42,
+        "height": 0.1
+      },
+      "key_facts": [
+        "Universitario perdió ante Coquimbo",
+        "giro inesperado en el marcador",
+        "dificultad para la clasificación"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "frontal",
+        "directo"
+      ],
+      "safety_notes": "Se refleja el marcador y contexto del partido sin agregar elementos no confirmados.",
+      "notes": "Se refleja el marcador y contexto del partido sin agregar elementos no confirmados.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "story_id": "2026-05-08-ojo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-08-ojo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "La hacen larga con resultados",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "La pregunta incómoda sigue abierta: ¿por qué aún no cierran los resultados? La ONPE promete terminar el conteo, pero cada día de espera golpea la confianza y alimenta más dudas.",
+      "page_numbers": [
+        2
+      ],
+      "key_facts": [
+        "una semana sin resultados completos",
+        "ONPE promete cerrar el conteo",
+        "dudas sobre el proceso"
+      ],
+      "tone_notes": [
+        "crítico",
+        "político",
+        "prudente"
+      ],
+      "safety_notes": "Se cuestiona la demora sin afirmar fraude ni irregularidades no probadas.",
+      "cover_region": {
+        "x": 0.68,
+        "y": 0.03,
+        "width": 0.3,
+        "height": 0.16
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "50 mil soles por asesino de cosmiatra",
+      "story_type": "policial",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/reportero_panorama",
+      "text": "La búsqueda entra a una fase clave. El Ministerio del Interior ofrece 50 mil soles por información sobre Luis André Flores Julca, requerido por el caso de la cosmiatra Yajaira Sigüeñas.",
+      "page_numbers": [
+        3
+      ],
+      "key_facts": [
+        "recompensa de 50 mil soles",
+        "búsqueda de Luis André Flores Julca",
+        "caso de Yajaira Sigüeñas"
+      ],
+      "tone_notes": [
+        "serio",
+        "cauteloso",
+        "informativo"
+      ],
+      "safety_notes": "Se evita describir el crimen y se usa la condición de requerido por la justicia.",
+      "cover_region": {
+        "x": 0.01,
+        "y": 0.2,
+        "width": 0.97,
+        "height": 0.66
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "La U no estuvo a la altura",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
+      "text": "Debacle crema en la Copa. Universitario se puso arriba, pero no sostuvo el partido y terminó cayendo 2-1 ante Coquimbo, una derrota que deja más preguntas que respuestas.",
+      "page_numbers": [
+        13
+      ],
+      "key_facts": [
+        "Universitario perdió 2-1",
+        "Coquimbo remontó",
+        "la U empezó ganando"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "frontal",
+        "ágil"
+      ],
+      "safety_notes": "Comentario deportivo basado en el marcador y desarrollo visible de la nota.",
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.86,
+        "width": 0.46,
+        "height": 0.13
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Ojo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/front-page.jpg",
+      "headline": "Melcochita demanda a Monserrat",
+      "story_type": "espectaculos",
+      "segment_type": "story",
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/reportero_magaly",
+      "text": "Ojo con esta bronca familiar. Melcochita dice que demandó a Monserrat por un carro que, según él, no le quieren devolver; ella responde y el tema ya se prendió en la farándula.",
+      "page_numbers": [
+        16
+      ],
+      "key_facts": [
+        "Melcochita afirma que demandó a Monserrat",
+        "disputa por un carro",
+        "Monserrat dio su versión"
+      ],
+      "tone_notes": [
+        "picante",
+        "ágil",
+        "prudente"
+      ],
+      "safety_notes": "Se presenta como disputa declarada por las partes, sin asumir responsabilidad legal.",
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.87,
+        "width": 0.29,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

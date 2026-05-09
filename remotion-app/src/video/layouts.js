@@ -7,11 +7,11 @@ export const NARRATOR_LAYOUTS = {
     scaleBoost: 1
   },
   "thanos": {
-    right: -26,
+    right: -12,
     bottom: 0,
-    width: 690,
-    height: 940,
-    scaleBoost: 1.06
+    width: 570,
+    height: 780,
+    scaleBoost: 0.94
   },
   "reportera_magaly": {
     right: -18,

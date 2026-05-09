@@ -1,0 +1,157 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-08-ojo-frontpage-001",
+  "source_id": "ojo",
+  "source_name": "Ojo",
+  "date": "2026-05-08",
+  "front_page_image": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "La hacen larga con resultados",
+      "story_type": "politica",
+      "summary": "La pregunta incómoda sigue abierta: ¿por qué aún no cierran los resultados? La ONPE promete terminar el conteo, pero cada día de espera golpea la confianza y alimenta más dudas.",
+      "speech": "La pregunta incómoda sigue abierta: ¿por qué aún no cierran los resultados? La ONPE promete terminar el conteo, pero cada día de espera golpea la confianza y alimenta más dudas.",
+      "page_numbers": [
+        2
+      ],
+      "cover_region": {
+        "x": 0.68,
+        "y": 0.03,
+        "width": 0.3,
+        "height": 0.16
+      },
+      "key_facts": [
+        "una semana sin resultados completos",
+        "ONPE promete cerrar el conteo",
+        "dudas sobre el proceso"
+      ],
+      "tone_notes": [
+        "crítico",
+        "político",
+        "prudente"
+      ],
+      "safety_notes": "Se cuestiona la demora sin afirmar fraude ni irregularidades no probadas.",
+      "notes": "Se cuestiona la demora sin afirmar fraude ni irregularidades no probadas.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "50 mil soles por asesino de cosmiatra",
+      "story_type": "policial",
+      "summary": "La búsqueda entra a una fase clave. El Ministerio del Interior ofrece 50 mil soles por información sobre Luis André Flores Julca, requerido por el caso de la cosmiatra Yajaira Sigüeñas.",
+      "speech": "La búsqueda entra a una fase clave. El Ministerio del Interior ofrece 50 mil soles por información sobre Luis André Flores Julca, requerido por el caso de la cosmiatra Yajaira Sigüeñas.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.01,
+        "y": 0.2,
+        "width": 0.97,
+        "height": 0.66
+      },
+      "key_facts": [
+        "recompensa de 50 mil soles",
+        "búsqueda de Luis André Flores Julca",
+        "caso de Yajaira Sigüeñas"
+      ],
+      "tone_notes": [
+        "serio",
+        "cauteloso",
+        "informativo"
+      ],
+      "safety_notes": "Se evita describir el crimen y se usa la condición de requerido por la justicia.",
+      "notes": "Se evita describir el crimen y se usa la condición de requerido por la justicia.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_panorama",
+      "narrator_role": "reportero_policial",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_panorama",
+      "narrator_name": "Reportero Panorama",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "La U no estuvo a la altura",
+      "story_type": "deportes",
+      "summary": "Debacle crema en la Copa. Universitario se puso arriba, pero no sostuvo el partido y terminó cayendo 2-1 ante Coquimbo, una derrota que deja más preguntas que respuestas.",
+      "speech": "Debacle crema en la Copa. Universitario se puso arriba, pero no sostuvo el partido y terminó cayendo 2-1 ante Coquimbo, una derrota que deja más preguntas que respuestas.",
+      "page_numbers": [
+        13
+      ],
+      "cover_region": {
+        "x": 0.0,
+        "y": 0.86,
+        "width": 0.46,
+        "height": 0.13
+      },
+      "key_facts": [
+        "Universitario perdió 2-1",
+        "Coquimbo remontó",
+        "la U empezó ganando"
+      ],
+      "tone_notes": [
+        "futbolero",
+        "frontal",
+        "ágil"
+      ],
+      "safety_notes": "Comentario deportivo basado en el marcador y desarrollo visible de la nota.",
+      "notes": "Comentario deportivo basado en el marcador y desarrollo visible de la nota.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Melcochita demanda a Monserrat",
+      "story_type": "espectaculos",
+      "summary": "Ojo con esta bronca familiar. Melcochita dice que demandó a Monserrat por un carro que, según él, no le quieren devolver; ella responde y el tema ya se prendió en la farándula.",
+      "speech": "Ojo con esta bronca familiar. Melcochita dice que demandó a Monserrat por un carro que, según él, no le quieren devolver; ella responde y el tema ya se prendió en la farándula.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.7,
+        "y": 0.87,
+        "width": 0.29,
+        "height": 0.12
+      },
+      "key_facts": [
+        "Melcochita afirma que demandó a Monserrat",
+        "disputa por un carro",
+        "Monserrat dio su versión"
+      ],
+      "tone_notes": [
+        "picante",
+        "ágil",
+        "prudente"
+      ],
+      "safety_notes": "Se presenta como disputa declarada por las partes, sin asumir responsabilidad legal.",
+      "notes": "Se presenta como disputa declarada por las partes, sin asumir responsabilidad legal.",
+      "support_visual": null,
+      "narrator_profile_id": "reportero_magaly",
+      "narrator_role": "conductora_espectaculos",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "reportero_magaly",
+      "narrator_name": "Reportero Magaly",
+      "segment_audio_file": null
+    }
+  ]
+}

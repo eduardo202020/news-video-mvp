@@ -1,0 +1,1046 @@
+{
+  "job_id": "2026-05-08-ojo-frontpage-001",
+  "source_id": "ojo",
+  "date": "2026-05-08",
+  "source": {
+    "source_id": "ojo",
+    "source_config_path": "automation/sources/diarios/ojo.json",
+    "requested_date": "2026-05-08",
+    "issue_date": "2026-05-08",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026050800000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eags2026050800000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/ojo.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050800000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 2",
+        "page_number": 2,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050800000000001001&page=2&scale=83",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/pages/page-02.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050800000000001001&page=3&scale=83",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 13",
+        "page_number": 13,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050800000000001001&page=13&scale=83",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/pages/page-13.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eags2026050800000000001001&page=16&scale=83",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      2,
+      3,
+      13,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "50 mil soles por asesino de cosmiatra",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.2,
+          "width": 0.97,
+          "height": 0.66
+        },
+        "page_number": 3,
+        "evidence_line": "Impacto pág. 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.97
+      },
+      {
+        "headline": "La hacen larga con resultados",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.68,
+          "y": 0.03,
+          "width": 0.3,
+          "height": 0.16
+        },
+        "page_number": 2,
+        "evidence_line": "Política pág. 2",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "La U no estuvo a la altura",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.86,
+          "width": 0.46,
+          "height": 0.13
+        },
+        "page_number": 13,
+        "evidence_line": "Crack pág. 13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Melcochita demanda a Monserrat",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.7,
+          "y": 0.87,
+          "width": 0.29,
+          "height": 0.12
+        },
+        "page_number": 16,
+        "evidence_line": "Ojoshow pág. 16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      }
+    ],
+    "stories": [
+      {
+        "headline": "La hacen larga con resultados",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.68,
+          "y": 0.03,
+          "width": 0.3,
+          "height": 0.16
+        },
+        "page_numbers": [
+          2
+        ],
+        "evidence": "Política pág. 2",
+        "evidence_lines": [
+          "Política pág. 2"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "50 mil soles por asesino de cosmiatra",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.2,
+          "width": 0.97,
+          "height": 0.66
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "Impacto pág. 3",
+        "evidence_lines": [
+          "Impacto pág. 3"
+        ],
+        "confidence": 0.97,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U no estuvo a la altura",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.86,
+          "width": 0.46,
+          "height": 0.13
+        },
+        "page_numbers": [
+          13
+        ],
+        "evidence": "Crack pág. 13",
+        "evidence_lines": [
+          "Crack pág. 13"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Melcochita demanda a Monserrat",
+        "story_type": "espectaculos",
+        "cover_region": {
+          "x": 0.7,
+          "y": 0.87,
+          "width": 0.29,
+          "height": 0.12
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "Ojoshow pág. 16",
+        "evidence_lines": [
+          "Ojoshow pág. 16"
+        ],
+        "confidence": 0.93,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      2,
+      3,
+      13,
+      16
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "La hacen larga con resultados",
+        "story_type": "politica",
+        "summary": "La pregunta incómoda sigue abierta: ¿por qué aún no cierran los resultados? La ONPE promete terminar el conteo, pero cada día de espera golpea la confianza y alimenta más dudas.",
+        "speech": "La pregunta incómoda sigue abierta: ¿por qué aún no cierran los resultados? La ONPE promete terminar el conteo, pero cada día de espera golpea la confianza y alimenta más dudas.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "crítico",
+          "político",
+          "prudente"
+        ],
+        "page_numbers": [
+          2
+        ],
+        "cover_region": {
+          "x": 0.68,
+          "y": 0.03,
+          "width": 0.3,
+          "height": 0.16
+        },
+        "key_facts": [
+          "una semana sin resultados completos",
+          "ONPE promete cerrar el conteo",
+          "dudas sobre el proceso"
+        ],
+        "key_facts_used": [
+          "una semana sin resultados completos",
+          "ONPE promete cerrar el conteo",
+          "dudas sobre el proceso"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se cuestiona la demora sin afirmar fraude ni irregularidades no probadas.",
+        "notes": "Se cuestiona la demora sin afirmar fraude ni irregularidades no probadas.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "50 mil soles por asesino de cosmiatra",
+        "story_type": "policial",
+        "summary": "La búsqueda entra a una fase clave. El Ministerio del Interior ofrece 50 mil soles por información sobre Luis André Flores Julca, requerido por el caso de la cosmiatra Yajaira Sigüeñas.",
+        "speech": "La búsqueda entra a una fase clave. El Ministerio del Interior ofrece 50 mil soles por información sobre Luis André Flores Julca, requerido por el caso de la cosmiatra Yajaira Sigüeñas.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "serio",
+          "cauteloso",
+          "informativo"
+        ],
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.01,
+          "y": 0.2,
+          "width": 0.97,
+          "height": 0.66
+        },
+        "key_facts": [
+          "recompensa de 50 mil soles",
+          "búsqueda de Luis André Flores Julca",
+          "caso de Yajaira Sigüeñas"
+        ],
+        "key_facts_used": [
+          "recompensa de 50 mil soles",
+          "búsqueda de Luis André Flores Julca",
+          "caso de Yajaira Sigüeñas"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita describir el crimen y se usa la condición de requerido por la justicia.",
+        "notes": "Se evita describir el crimen y se usa la condición de requerido por la justicia.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U no estuvo a la altura",
+        "story_type": "deportes",
+        "summary": "Debacle crema en la Copa. Universitario se puso arriba, pero no sostuvo el partido y terminó cayendo 2-1 ante Coquimbo, una derrota que deja más preguntas que respuestas.",
+        "speech": "Debacle crema en la Copa. Universitario se puso arriba, pero no sostuvo el partido y terminó cayendo 2-1 ante Coquimbo, una derrota que deja más preguntas que respuestas.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "futbolero",
+          "frontal",
+          "ágil"
+        ],
+        "page_numbers": [
+          13
+        ],
+        "cover_region": {
+          "x": 0.0,
+          "y": 0.86,
+          "width": 0.46,
+          "height": 0.13
+        },
+        "key_facts": [
+          "Universitario perdió 2-1",
+          "Coquimbo remontó",
+          "la U empezó ganando"
+        ],
+        "key_facts_used": [
+          "Universitario perdió 2-1",
+          "Coquimbo remontó",
+          "la U empezó ganando"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Comentario deportivo basado en el marcador y desarrollo visible de la nota.",
+        "notes": "Comentario deportivo basado en el marcador y desarrollo visible de la nota.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Melcochita demanda a Monserrat",
+        "story_type": "espectaculos",
+        "summary": "Ojo con esta bronca familiar. Melcochita dice que demandó a Monserrat por un carro que, según él, no le quieren devolver; ella responde y el tema ya se prendió en la farándula.",
+        "speech": "Ojo con esta bronca familiar. Melcochita dice que demandó a Monserrat por un carro que, según él, no le quieren devolver; ella responde y el tema ya se prendió en la farándula.",
+        "narrator_profile_id": "reportero_magaly",
+        "narrator_role": "conductora_espectaculos",
+        "tone_notes": [
+          "picante",
+          "ágil",
+          "prudente"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.7,
+          "y": 0.87,
+          "width": 0.29,
+          "height": 0.12
+        },
+        "key_facts": [
+          "Melcochita afirma que demandó a Monserrat",
+          "disputa por un carro",
+          "Monserrat dio su versión"
+        ],
+        "key_facts_used": [
+          "Melcochita afirma que demandó a Monserrat",
+          "disputa por un carro",
+          "Monserrat dio su versión"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como disputa declarada por las partes, sin asumir responsabilidad legal.",
+        "notes": "Se presenta como disputa declarada por las partes, sin asumir responsabilidad legal.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "La pregunta incómoda sigue abierta: ¿por qué aún no cierran los resultados? La ONPE promete terminar el conteo, pero cada día de espera golpea la confianza y alimenta más dudas.\n\nLa búsqueda entra a una fase clave. El Ministerio del Interior ofrece 50 mil soles por información sobre Luis André Flores Julca, requerido por el caso de la cosmiatra Yajaira Sigüeñas.\n\nDebacle crema en la Copa. Universitario se puso arriba, pero no sostuvo el partido y terminó cayendo 2-1 ante Coquimbo, una derrota que deja más preguntas que respuestas.\n\nOjo con esta bronca familiar. Melcochita dice que demandó a Monserrat por un carro que, según él, no le quieren devolver; ella responde y el tema ya se prendió en la farándula.",
+    "approved_text": "La pregunta incómoda sigue abierta: ¿por qué aún no cierran los resultados? La ONPE promete terminar el conteo, pero cada día de espera golpea la confianza y alimenta más dudas.\n\nLa búsqueda entra a una fase clave. El Ministerio del Interior ofrece 50 mil soles por información sobre Luis André Flores Julca, requerido por el caso de la cosmiatra Yajaira Sigüeñas.\n\nDebacle crema en la Copa. Universitario se puso arriba, pero no sostuvo el partido y terminó cayendo 2-1 ante Coquimbo, una derrota que deja más preguntas que respuestas.\n\nOjo con esta bronca familiar. Melcochita dice que demandó a Monserrat por un carro que, según él, no le quieren devolver; ella responde y el tema ya se prendió en la farándula.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-08/2026-05-08-ojo-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-08-ojo-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-08T19:33:57",
+    "updated_at": "2026-05-08T19:42:58",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:33:57",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:34:23",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:34:24",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:38:09",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:40:57",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:36",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:36",
+        "details": "Seguimiento de portada actualizado para historia 1: La hacen larga con resultados -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:36",
+        "details": "Seguimiento de portada actualizado para historia 2: 50 mil soles por asesino de cosmiatra -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:36",
+        "details": "Seguimiento de portada actualizado para historia 3: La U no estuvo a la altura -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:37",
+        "details": "Seguimiento de portada actualizado para historia 4: Melcochita demanda a Monserrat -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:44",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:45",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:45",
+        "details": "Seguimiento de portada actualizado para historia 1: La hacen larga con resultados -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:45",
+        "details": "Seguimiento de portada actualizado para historia 2: 50 mil soles por asesino de cosmiatra -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:45",
+        "details": "Seguimiento de portada actualizado para historia 3: La U no estuvo a la altura -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:45",
+        "details": "Seguimiento de portada actualizado para historia 4: Melcochita demanda a Monserrat -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:15",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 1: La hacen larga con resultados."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:16",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 2: 50 mil soles por asesino de cosmiatra."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 3: La U no estuvo a la altura."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:17",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:18",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:18",
+        "details": "Enfoque manual actualizado para historia 4: Melcochita demanda a Monserrat."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:18",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:47",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:42:58",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 8 de mayo, abrimos el recorrido por portadas en una fecha ligada al Día Mundial de la Cruz Roja y la Media Luna Roja: humanidad ante la crisis. Política, economía, seguridad y fútbol marcan la agenda.",
+    "date_reference": "Día Mundial de la Cruz Roja y de la Media Luna Roja, 8 de mayo",
+    "source_scope": "world",
+    "why_it_fits": "Conecta una referencia humanitaria mundial con una jornada de portadas marcada por conflictos, política, seguridad y deporte.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-08T19:37:25"
+  }
+}

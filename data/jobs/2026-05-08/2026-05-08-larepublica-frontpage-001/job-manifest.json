@@ -1,0 +1,595 @@
+{
+  "job_id": "2026-05-08-larepublica-frontpage-001",
+  "source_id": "larepublica",
+  "date": "2026-05-08",
+  "source": {
+    "source_id": "larepublica",
+    "source_config_path": "automation/sources/diarios/larepublica.json",
+    "requested_date": "2026-05-08",
+    "issue_date": "2026-05-08",
+    "publication_status": "available",
+    "discovery_type": "direct_image_url",
+    "front_page_url": "https://img.kiosko.net/2026/05/08/pe/pe_republica.750.jpg",
+    "discovered_pages_count": 1,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-08/2026-05-08-larepublica-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://img.kiosko.net/2026/05/08/pe/pe_republica.750.jpg",
+    "source_url": "https://img.kiosko.net/2026/05/08/pe/pe_republica.750.jpg",
+    "source_config": "automation/sources/diarios/larepublica.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://img.kiosko.net/2026/05/08/pe/pe_republica.750.jpg",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-larepublica-frontpage-001/input/front-page.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "selected_page_numbers": [
+      2,
+      3,
+      6,
+      12,
+      13,
+      17,
+      18
+    ],
+    "candidates": [
+      {
+        "headline": "Congreso consuma venganza contra Delia Espinoza",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.2,
+          "width": 0.72,
+          "height": 0.72
+        },
+        "page_number": 6,
+        "evidence_line": "→ 6",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "López Chau pide gabinete de unidad",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.53,
+          "width": 0.2,
+          "height": 0.14
+        },
+        "page_number": 2,
+        "evidence_line": "Especial → 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "López Chau pide gabinete de unidad",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.53,
+          "width": 0.2,
+          "height": 0.14
+        },
+        "page_number": 3,
+        "evidence_line": "Especial → 2-3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Chalecos antibalas comprados por Santiváñez están abandonados",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.68,
+          "width": 0.2,
+          "height": 0.13
+        },
+        "page_number": 12,
+        "evidence_line": "Política → 12-13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      },
+      {
+        "headline": "Chalecos antibalas comprados por Santiváñez están abandonados",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.68,
+          "width": 0.2,
+          "height": 0.13
+        },
+        "page_number": 13,
+        "evidence_line": "Política → 12-13",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.92
+      },
+      {
+        "headline": "León XIV cumple un año de papado",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.26,
+          "width": 0.2,
+          "height": 0.22
+        },
+        "page_number": 17,
+        "evidence_line": "Mundo → 17",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "La U cayó ante Coquimbo",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.01,
+          "width": 0.42,
+          "height": 0.1
+        },
+        "page_number": 18,
+        "evidence_line": "Deportes → 18",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      }
+    ],
+    "stories": [
+      {
+        "headline": "López Chau pide gabinete de unidad",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.53,
+          "width": 0.2,
+          "height": 0.14
+        },
+        "page_numbers": [
+          2,
+          3
+        ],
+        "evidence": "Especial → 2-3",
+        "evidence_lines": [
+          "Especial → 2-3"
+        ],
+        "confidence": 0.93
+      },
+      {
+        "headline": "Congreso consuma venganza contra Delia Espinoza",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.2,
+          "width": 0.72,
+          "height": 0.72
+        },
+        "page_numbers": [
+          6
+        ],
+        "evidence": "→ 6",
+        "evidence_lines": [
+          "→ 6"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Chalecos antibalas comprados por Santiváñez están abandonados",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.68,
+          "width": 0.2,
+          "height": 0.13
+        },
+        "page_numbers": [
+          12,
+          13
+        ],
+        "evidence": "Política → 12-13",
+        "evidence_lines": [
+          "Política → 12-13"
+        ],
+        "confidence": 0.92,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "León XIV cumple un año de papado",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.26,
+          "width": 0.2,
+          "height": 0.22
+        },
+        "page_numbers": [
+          17
+        ],
+        "evidence": "Mundo → 17",
+        "evidence_lines": [
+          "Mundo → 17"
+        ],
+        "confidence": 0.93,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U cayó ante Coquimbo",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.01,
+          "width": 0.42,
+          "height": 0.1
+        },
+        "page_numbers": [
+          18
+        ],
+        "evidence": "Deportes → 18",
+        "evidence_lines": [
+          "Deportes → 18"
+        ],
+        "confidence": 0.9,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Congreso consuma venganza contra Delia Espinoza",
+        "story_type": "politica",
+        "summary": "El Congreso no da tregua. La venganza contra Delia Espinoza se consolida con nuevas maniobras legislativas, mientras la exdecana sigue denunciando irregularidades detrás de esta presión.",
+        "speech": "El Congreso no da tregua. La venganza contra Delia Espinoza se consolida con nuevas maniobras legislativas, mientras la exdecana sigue denunciando irregularidades detrás de esta presión.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "crítico",
+          "incisivo",
+          "directo"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "cover_region": {
+          "x": 0.04,
+          "y": 0.2,
+          "width": 0.72,
+          "height": 0.72
+        },
+        "key_facts": [
+          "presión política sobre Delia Espinoza",
+          "venganza institucional",
+          "denuncias de irregularidades"
+        ],
+        "key_facts_used": [
+          "presión política sobre Delia Espinoza",
+          "venganza institucional",
+          "denuncias de irregularidades"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como una disputa política sin asumir delitos no probados.",
+        "notes": "Se presenta como una disputa política sin asumir delitos no probados.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Chalecos antibalas comprados por Santiváñez están abandonados",
+        "story_type": "politica",
+        "summary": "Otro escándalo más sobre la gestión de Santiváñez. Los chalecos antibalas comprados con dinero público están guardados en almacenes, sin ser distribuidos ni utilizados por las fuerzas del orden.",
+        "speech": "Otro escándalo más sobre la gestión de Santiváñez. Los chalecos antibalas comprados con dinero público están guardados en almacenes, sin ser distribuidos ni utilizados por las fuerzas del orden.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "directo",
+          "acusador",
+          "reflexivo"
+        ],
+        "page_numbers": [
+          12,
+          13
+        ],
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.68,
+          "width": 0.2,
+          "height": 0.13
+        },
+        "key_facts": [
+          "chalecos antibalas comprados",
+          "productos abandonados",
+          "dinero público desperdiciado"
+        ],
+        "key_facts_used": [
+          "chalecos antibalas comprados",
+          "productos abandonados",
+          "dinero público desperdiciado"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se presenta como un hecho de negligencia sin imputar responsabilidades legales.",
+        "notes": "Se presenta como un hecho de negligencia sin imputar responsabilidades legales.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "León XIV cumple un año de papado",
+        "story_type": "mundo",
+        "summary": "Un año del papado de León XIV, marcando una época de cambios dentro de la iglesia. Mientras el Papa reafirma su compromiso con la paz, el mundo observa su camino hacia el futuro de la religión.",
+        "speech": "Un año del papado de León XIV, marcando una época de cambios dentro de la iglesia. Mientras el Papa reafirma su compromiso con la paz, el mundo observa su camino hacia el futuro de la religión.",
+        "narrator_profile_id": "narrador_dbz",
+        "narrator_role": "corresponsal_internacional",
+        "tone_notes": [
+          "serio",
+          "global",
+          "elevado"
+        ],
+        "page_numbers": [
+          17
+        ],
+        "cover_region": {
+          "x": 0.78,
+          "y": 0.26,
+          "width": 0.2,
+          "height": 0.22
+        },
+        "key_facts": [
+          "aniversario del papado de León XIV",
+          "mensaje de paz y reconciliación",
+          "nueva etapa para la iglesia"
+        ],
+        "key_facts_used": [
+          "aniversario del papado de León XIV",
+          "mensaje de paz y reconciliación",
+          "nueva etapa para la iglesia"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se menciona el aniversario sin atribuirle efectos concretos o controversiales.",
+        "notes": "Se menciona el aniversario sin atribuirle efectos concretos o controversiales.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "La U cayó ante Coquimbo",
+        "story_type": "deportes",
+        "summary": "Universitario sufrió otra derrota en la Copa. Después de un buen inicio, Coquimbo le dio vuelta el marcador, dejando a los cremas con pocas opciones de clasificación.",
+        "speech": "Universitario sufrió otra derrota en la Copa. Después de un buen inicio, Coquimbo le dio vuelta el marcador, dejando a los cremas con pocas opciones de clasificación.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "frontal",
+          "directo"
+        ],
+        "page_numbers": [
+          18
+        ],
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.01,
+          "width": 0.42,
+          "height": 0.1
+        },
+        "key_facts": [
+          "Universitario perdió ante Coquimbo",
+          "giro inesperado en el marcador",
+          "dificultad para la clasificación"
+        ],
+        "key_facts_used": [
+          "Universitario perdió ante Coquimbo",
+          "giro inesperado en el marcador",
+          "dificultad para la clasificación"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se refleja el marcador y contexto del partido sin agregar elementos no confirmados.",
+        "notes": "Se refleja el marcador y contexto del partido sin agregar elementos no confirmados.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-08/2026-05-08-larepublica-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "El Congreso no da tregua. La venganza contra Delia Espinoza se consolida con nuevas maniobras legislativas, mientras la exdecana sigue denunciando irregularidades detrás de esta presión.\n\nOtro escándalo más sobre la gestión de Santiváñez. Los chalecos antibalas comprados con dinero público están guardados en almacenes, sin ser distribuidos ni utilizados por las fuerzas del orden.\n\nUn año del papado de León XIV, marcando una época de cambios dentro de la iglesia. Mientras el Papa reafirma su compromiso con la paz, el mundo observa su camino hacia el futuro de la religión.\n\nUniversitario sufrió otra derrota en la Copa. Después de un buen inicio, Coquimbo le dio vuelta el marcador, dejando a los cremas con pocas opciones de clasificación.",
+    "approved_text": "El Congreso no da tregua. La venganza contra Delia Espinoza se consolida con nuevas maniobras legislativas, mientras la exdecana sigue denunciando irregularidades detrás de esta presión.\n\nOtro escándalo más sobre la gestión de Santiváñez. Los chalecos antibalas comprados con dinero público están guardados en almacenes, sin ser distribuidos ni utilizados por las fuerzas del orden.\n\nUn año del papado de León XIV, marcando una época de cambios dentro de la iglesia. Mientras el Papa reafirma su compromiso con la paz, el mundo observa su camino hacia el futuro de la religión.\n\nUniversitario sufrió otra derrota en la Copa. Después de un buen inicio, Coquimbo le dio vuelta el marcador, dejando a los cremas con pocas opciones de clasificación.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-08T19:33:54",
+    "updated_at": "2026-05-08T19:44:53",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:33:54",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:33:55",
+        "details": "Fuente analizada desde HTML; portada descubierta y 0 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Se importaron 7 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:13",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:42:19",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:01",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:01",
+        "details": "Seguimiento de portada actualizado para historia 2: Congreso consuma venganza contra Delia Espinoza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:01",
+        "details": "Seguimiento de portada actualizado para historia 3: Chalecos antibalas comprados por Santiváñez están abandonados -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:01",
+        "details": "Seguimiento de portada actualizado para historia 4: León XIV cumple un año de papado -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:01",
+        "details": "Seguimiento de portada actualizado para historia 5: La U cayó ante Coquimbo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:07",
+        "details": "Revision de portada marcada como completa."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:07",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:07",
+        "details": "Seguimiento de portada actualizado para historia 2: Congreso consuma venganza contra Delia Espinoza -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:07",
+        "details": "Seguimiento de portada actualizado para historia 3: Chalecos antibalas comprados por Santiváñez están abandonados -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:07",
+        "details": "Seguimiento de portada actualizado para historia 4: León XIV cumple un año de papado -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:43:07",
+        "details": "Seguimiento de portada actualizado para historia 5: La U cayó ante Coquimbo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:44:36",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:44:53",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 8 de mayo, abrimos el recorrido por portadas en una fecha ligada al Día Mundial de la Cruz Roja y la Media Luna Roja: humanidad ante la crisis. Política, economía, seguridad y fútbol marcan la agenda.",
+    "date_reference": "Día Mundial de la Cruz Roja y de la Media Luna Roja, 8 de mayo",
+    "source_scope": "world",
+    "why_it_fits": "Conecta una referencia humanitaria mundial con una jornada de portadas marcada por conflictos, política, seguridad y deporte.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-08T19:37:25"
+  }
+}

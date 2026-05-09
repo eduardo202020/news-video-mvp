@@ -1,0 +1,553 @@
+{
+  "job_id": "2026-05-08-trome-frontpage-001",
+  "source_id": "trome",
+  "date": "2026-05-08",
+  "source": {
+    "source_id": "trome",
+    "source_config_path": "automation/sources/diarios/trome.json",
+    "requested_date": "2026-05-08",
+    "issue_date": "2026-05-08",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026050800000000001001&page=1&scale=300",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-08/2026-05-08-trome-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eag82026050800000000001001&page=1&scale=300",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/trome.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050800000000001001&page=1&scale=300",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-trome-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050800000000001001&page=4&scale=82",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-trome-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 9",
+        "page_number": 9,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050800000000001001&page=9&scale=82",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-trome-frontpage-001/input/pages/page-09.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 10",
+        "page_number": 10,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050800000000001001&page=10&scale=82",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-trome-frontpage-001/input/pages/page-10.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 11",
+        "page_number": 11,
+        "source_url": "https://t.prcdn.co/img?file=eag82026050800000000001001&page=11&scale=82",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-trome-frontpage-001/input/pages/page-11.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      4,
+      9,
+      10,
+      11
+    ],
+    "candidates": [
+      {
+        "headline": "Arde el Medio Oriente",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.15,
+          "width": 0.96,
+          "height": 0.62
+        },
+        "page_number": 9,
+        "evidence_line": "Página 9",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Loco Erick era terror de choferes",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.78,
+          "width": 0.37,
+          "height": 0.2
+        },
+        "page_number": 4,
+        "evidence_line": "Página 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Voltearon a la U en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.4,
+          "y": 0.79,
+          "width": 0.32,
+          "height": 0.19
+        },
+        "page_number": 11,
+        "evidence_line": "Página 11",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.94
+      },
+      {
+        "headline": "Pollito y chifa para mamitas",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.71,
+          "y": 0.78,
+          "width": 0.27,
+          "height": 0.2
+        },
+        "page_number": 10,
+        "evidence_line": "Página 10",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Loco Erick era terror de choferes",
+        "story_type": "policial",
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.78,
+          "width": 0.37,
+          "height": 0.2
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Página 4",
+        "evidence_lines": [
+          "Página 4"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Arde el Medio Oriente",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.15,
+          "width": 0.96,
+          "height": 0.62
+        },
+        "page_numbers": [
+          9
+        ],
+        "evidence": "Página 9",
+        "evidence_lines": [
+          "Página 9"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Pollito y chifa para mamitas",
+        "story_type": "actualidad",
+        "cover_region": {
+          "x": 0.71,
+          "y": 0.78,
+          "width": 0.27,
+          "height": 0.2
+        },
+        "page_numbers": [
+          10
+        ],
+        "evidence": "Página 10",
+        "evidence_lines": [
+          "Página 10"
+        ],
+        "confidence": 0.9,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Voltearon a la U en la Copa",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.4,
+          "y": 0.79,
+          "width": 0.32,
+          "height": 0.19
+        },
+        "page_numbers": [
+          11
+        ],
+        "evidence": "Página 11",
+        "evidence_lines": [
+          "Página 11"
+        ],
+        "confidence": 0.94,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      4,
+      9,
+      10,
+      11
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Loco Erick era terror de choferes",
+        "story_type": "policial",
+        "summary": "La alerta cae sobre el Callao. Según la investigación, alias “Loco Erick” habría estado detrás de ataques y extorsiones contra choferes, junto a una red que usaba menores para sembrar miedo.",
+        "speech": "La alerta cae sobre el Callao. Según la investigación, alias “Loco Erick” habría estado detrás de ataques y extorsiones contra choferes, junto a una red que usaba menores para sembrar miedo.",
+        "narrator_profile_id": "reportero_panorama",
+        "narrator_role": "reportero_policial",
+        "tone_notes": [
+          "directo",
+          "tenso",
+          "cauteloso"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.03,
+          "y": 0.78,
+          "width": 0.37,
+          "height": 0.2
+        },
+        "key_facts": [
+          "captura de alias Loco Erick",
+          "presunta red Los Mexicanos 3.0",
+          "ataques contra choferes"
+        ],
+        "key_facts_used": [
+          "captura de alias Loco Erick",
+          "presunta red Los Mexicanos 3.0",
+          "ataques contra choferes"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se usa lenguaje condicional porque la información corresponde a investigación policial.",
+        "notes": "Se usa lenguaje condicional porque la información corresponde a investigación policial.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Arde el Medio Oriente",
+        "story_type": "mundo",
+        "summary": "Sube otra vez la tensión en Medio Oriente. Estados Unidos e Irán cruzan ataques y acusaciones mientras el alto al fuego queda bajo presión, en una crisis que vuelve a encender las alarmas globales.",
+        "speech": "Sube otra vez la tensión en Medio Oriente. Estados Unidos e Irán cruzan ataques y acusaciones mientras el alto al fuego queda bajo presión, en una crisis que vuelve a encender las alarmas globales.",
+        "narrator_profile_id": "narrador_dbz",
+        "narrator_role": "corresponsal_internacional",
+        "tone_notes": [
+          "enfático",
+          "internacional",
+          "alerta"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "cover_region": {
+          "x": 0.02,
+          "y": 0.15,
+          "width": 0.96,
+          "height": 0.62
+        },
+        "key_facts": [
+          "cruce de ataques entre Estados Unidos e Irán",
+          "acusaciones por violar el alto al fuego",
+          "tensión en Medio Oriente"
+        ],
+        "key_facts_used": [
+          "cruce de ataques entre Estados Unidos e Irán",
+          "acusaciones por violar el alto al fuego",
+          "tensión en Medio Oriente"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se resume el conflicto sin atribuir responsabilidades fuera de lo señalado por la página.",
+        "notes": "Se resume el conflicto sin atribuir responsabilidades fuera de lo señalado por la página.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Pollito a la brasa y chaufita para mamitas",
+        "story_type": "actualidad",
+        "summary": "El Día de la Madre ya mueve la mesa peruana. Pollerías, chifas y restaurantes se preparan para una fuerte demanda, porque este domingo el homenaje también se sirve caliente.",
+        "speech": "El Día de la Madre ya mueve la mesa peruana. Pollerías, chifas y restaurantes se preparan para una fuerte demanda, porque este domingo el homenaje también se sirve caliente.",
+        "narrator_profile_id": "thanos",
+        "narrator_role": "reportero_general",
+        "tone_notes": [
+          "ligero",
+          "cotidiano",
+          "ágil"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "cover_region": {
+          "x": 0.71,
+          "y": 0.78,
+          "width": 0.27,
+          "height": 0.2
+        },
+        "key_facts": [
+          "aumento de consumo por Día de la Madre",
+          "pollerías y chifas entre las opciones favoritas",
+          "restaurantes preparan alta demanda"
+        ],
+        "key_facts_used": [
+          "aumento de consumo por Día de la Madre",
+          "pollerías y chifas entre las opciones favoritas",
+          "restaurantes preparan alta demanda"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Nota de consumo resumida con datos visibles en la página.",
+        "notes": "Nota de consumo resumida con datos visibles en la página.",
+        "support_visual": null
+      },
+      {
+        "headline": "Voltearon a la U en la Copa",
+        "story_type": "deportes",
+        "summary": "Golpe duro para Universitario. La U arrancó ganando, pero Coquimbo le dio vuelta el partido 2-1 y dejó a los cremas con una caída que pesa fuerte en la Copa Libertadores.",
+        "speech": "Golpe duro para Universitario. La U arrancó ganando, pero Coquimbo le dio vuelta el partido 2-1 y dejó a los cremas con una caída que pesa fuerte en la Copa Libertadores.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "directo",
+          "popular"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "cover_region": {
+          "x": 0.4,
+          "y": 0.79,
+          "width": 0.32,
+          "height": 0.19
+        },
+        "key_facts": [
+          "Universitario perdió 2-1",
+          "Coquimbo Unido remontó el partido",
+          "partido por Copa Libertadores"
+        ],
+        "key_facts_used": [
+          "Universitario perdió 2-1",
+          "Coquimbo Unido remontó el partido",
+          "partido por Copa Libertadores"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se mantiene el análisis en el resultado deportivo.",
+        "notes": "Se mantiene el análisis en el resultado deportivo.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-08/2026-05-08-trome-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "La alerta cae sobre el Callao. Según la investigación, alias “Loco Erick” habría estado detrás de ataques y extorsiones contra choferes, junto a una red que usaba menores para sembrar miedo.\n\nSube otra vez la tensión en Medio Oriente. Estados Unidos e Irán cruzan ataques y acusaciones mientras el alto al fuego queda bajo presión, en una crisis que vuelve a encender las alarmas globales.\n\nEl Día de la Madre ya mueve la mesa peruana. Pollerías, chifas y restaurantes se preparan para una fuerte demanda, porque este domingo el homenaje también se sirve caliente.\n\nGolpe duro para Universitario. La U arrancó ganando, pero Coquimbo le dio vuelta el partido 2-1 y dejó a los cremas con una caída que pesa fuerte en la Copa Libertadores.",
+    "approved_text": "La alerta cae sobre el Callao. Según la investigación, alias “Loco Erick” habría estado detrás de ataques y extorsiones contra choferes, junto a una red que usaba menores para sembrar miedo.\n\nSube otra vez la tensión en Medio Oriente. Estados Unidos e Irán cruzan ataques y acusaciones mientras el alto al fuego queda bajo presión, en una crisis que vuelve a encender las alarmas globales.\n\nEl Día de la Madre ya mueve la mesa peruana. Pollerías, chifas y restaurantes se preparan para una fuerte demanda, porque este domingo el homenaje también se sirve caliente.\n\nGolpe duro para Universitario. La U arrancó ganando, pero Coquimbo le dio vuelta el partido 2-1 y dejó a los cremas con una caída que pesa fuerte en la Copa Libertadores.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 4
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": null,
+    "output_path": null
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-08T19:34:24",
+    "updated_at": "2026-05-08T19:41:31",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:34:24",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:34:48",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:34:49",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Se importaron 4 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:51",
+        "details": "Se descargaron 4 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:40:57",
+        "details": "Se importaron 4 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:40:58",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:40:58",
+        "details": "Seguimiento de portada actualizado para historia 1: Loco Erick era terror de choferes -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:40:59",
+        "details": "Seguimiento de portada actualizado para historia 2: Arde el Medio Oriente -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:40:59",
+        "details": "Seguimiento de portada actualizado para historia 3: Pollito y chifa para mamitas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:40:59",
+        "details": "Seguimiento de portada actualizado para historia 4: Voltearon a la U en la Copa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:05",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:05",
+        "details": "Seguimiento de portada actualizado para historia 1: Loco Erick era terror de choferes -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:05",
+        "details": "Seguimiento de portada actualizado para historia 2: Arde el Medio Oriente -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:06",
+        "details": "Seguimiento de portada actualizado para historia 3: Pollito y chifa para mamitas -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:06",
+        "details": "Seguimiento de portada actualizado para historia 4: Voltearon a la U en la Copa -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:41:31",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 8 de mayo, abrimos el recorrido por portadas en una fecha ligada al Día Mundial de la Cruz Roja y la Media Luna Roja: humanidad ante la crisis. Política, economía, seguridad y fútbol marcan la agenda.",
+    "date_reference": "Día Mundial de la Cruz Roja y de la Media Luna Roja, 8 de mayo",
+    "source_scope": "world",
+    "why_it_fits": "Conecta una referencia humanitaria mundial con una jornada de portadas marcada por conflictos, política, seguridad y deporte.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-08T19:37:25"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-08-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "source_name": "El Comercio",
+  "date": "2026-05-08",
+  "front_page_image": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Sánchez no firmará hoja de ruta",
+      "story_type": "politica",
+      "summary": "La postura de Sánchez se mantiene firme: rechaza firmar la hoja de ruta, mientras sigue enfrentando presiones políticas que marcarán el rumbo de su partido.",
+      "speech": "La postura de Sánchez se mantiene firme: rechaza firmar la hoja de ruta, mientras sigue enfrentando presiones políticas que marcarán el rumbo de su partido.",
+      "page_numbers": [
+        3
+      ],
+      "cover_region": {
+        "x": 0.06,
+        "y": 0.28,
+        "width": 0.75,
+        "height": 0.43
+      },
+      "key_facts": [
+        "Sánchez no firma hoja de ruta",
+        "rechazo a la hoja de ruta",
+        "presiones políticas hacia Sánchez"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "político",
+        "incisivo"
+      ],
+      "safety_notes": "Se evita afirmar que su rechazo tiene consecuencias sin confirmar.",
+      "notes": "Se evita afirmar que su rechazo tiene consecuencias sin confirmar.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 2,
+      "segment_type": "story",
+      "headline": "JNE en fase final para proclamar candidatos",
+      "story_type": "politica",
+      "summary": "El Jurado Nacional de Elecciones está a punto de proclamar los resultados de la primera vuelta. La incertidumbre persiste mientras los peruanos esperan un pronunciamiento definitivo.",
+      "speech": "El Jurado Nacional de Elecciones está a punto de proclamar los resultados de la primera vuelta. La incertidumbre persiste mientras los peruanos esperan un pronunciamiento definitivo.",
+      "page_numbers": [
+        4
+      ],
+      "cover_region": {
+        "x": 0.77,
+        "y": 0.66,
+        "width": 0.22,
+        "height": 0.14
+      },
+      "key_facts": [
+        "fase final del JNE",
+        "proclamación pendiente",
+        "incertidumbre electoral"
+      ],
+      "tone_notes": [
+        "crítico",
+        "serio",
+        "preciso"
+      ],
+      "safety_notes": "Se maneja con precaución el detalle de los resultados, ya que aún están en proceso.",
+      "notes": "Se maneja con precaución el detalle de los resultados, ya que aún están en proceso.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 3,
+      "segment_type": "story",
+      "headline": "Papa peruano cumple su primer año en el Vaticano",
+      "story_type": "mundo",
+      "summary": "El primer año de León XIV como Papa ha sido marcado por esfuerzos para consolidar la paz. Su liderazgo sigue siendo clave en la orientación moral de la Iglesia.",
+      "speech": "El primer año de León XIV como Papa ha sido marcado por esfuerzos para consolidar la paz. Su liderazgo sigue siendo clave en la orientación moral de la Iglesia.",
+      "page_numbers": [
+        10
+      ],
+      "cover_region": {
+        "x": 0.05,
+        "y": 0.66,
+        "width": 0.72,
+        "height": 0.23
+      },
+      "key_facts": [
+        "primer año del Papa León XIV",
+        "líderazgo del Papa en la paz",
+        "papado de León XIV"
+      ],
+      "tone_notes": [
+        "serio",
+        "global",
+        "elevado"
+      ],
+      "safety_notes": "El discurso sobre el papado se presenta sin emitir juicios sin base.",
+      "notes": "El discurso sobre el papado se presenta sin emitir juicios sin base.",
+      "support_visual": null,
+      "narrator_profile_id": "narrador_dbz",
+      "narrator_role": "corresponsal_internacional",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "narrador_dbz",
+      "narrator_name": "Narrador DBZ",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 4,
+      "segment_type": "story",
+      "headline": "Alcalde de Arequipa es vacado",
+      "story_type": "politica",
+      "summary": "El alcalde de Arequipa ha sido vacado por el uso indebido de recursos públicos para fines personales, incluyendo el uso de seguridad para pasear a su perro.",
+      "speech": "El alcalde de Arequipa ha sido vacado por el uso indebido de recursos públicos para fines personales, incluyendo el uso de seguridad para pasear a su perro.",
+      "page_numbers": [
+        12
+      ],
+      "cover_region": {
+        "x": 0.79,
+        "y": 0.81,
+        "width": 0.2,
+        "height": 0.11
+      },
+      "key_facts": [
+        "vacancia del alcalde de Arequipa",
+        "uso indebido de recursos públicos",
+        "paseo con seguridad"
+      ],
+      "tone_notes": [
+        "serio",
+        "acusatorio",
+        "político"
+      ],
+      "safety_notes": "Se evita difundir detalles no verificados, manteniendo la cautela sobre los hechos aún bajo investigación.",
+      "notes": "Se evita difundir detalles no verificados, manteniendo la cautela sobre los hechos aún bajo investigación.",
+      "support_visual": null,
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "segment_audio_file": null
+    },
+    {
+      "story_index": 5,
+      "segment_type": "story",
+      "headline": "Universitario cae ante Coquimbo",
+      "story_type": "deportes",
+      "summary": "Universitario no logró mantener su ventaja y terminó perdiendo ante Coquimbo, 2-1, en un partido decisivo que complica su futuro en la Copa Libertadores.",
+      "speech": "Universitario no logró mantener su ventaja y terminó perdiendo ante Coquimbo, 2-1, en un partido decisivo que complica su futuro en la Copa Libertadores.",
+      "page_numbers": [
+        16
+      ],
+      "cover_region": {
+        "x": 0.43,
+        "y": 0.18,
+        "width": 0.25,
+        "height": 0.08
+      },
+      "key_facts": [
+        "Universitario perdió 2-1",
+        "Coquimbo remontó el marcador",
+        "futuro complicado para Universitario"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "competitivo",
+        "directo"
+      ],
+      "safety_notes": "El resultado se basa en la información visible en la portada.",
+      "notes": "El resultado se basa en la información visible en la portada.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

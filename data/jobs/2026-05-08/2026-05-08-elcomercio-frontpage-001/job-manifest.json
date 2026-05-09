@@ -1,0 +1,1366 @@
+{
+  "job_id": "2026-05-08-elcomercio-frontpage-001",
+  "source_id": "elcomercio",
+  "date": "2026-05-08",
+  "source": {
+    "source_id": "elcomercio",
+    "source_config_path": "automation/sources/diarios/elcomercio.json",
+    "requested_date": "2026-05-08",
+    "issue_date": "2026-05-08",
+    "publication_status": "available",
+    "discovery_type": "prcdn_image_sequence",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026050800000000001001&page=1&scale=207",
+    "discovered_pages_count": 4,
+    "archive_summary_path": null,
+    "page_count_probe_path": null
+  },
+  "approval_mode": "semi_auto",
+  "status": "scripted",
+  "input_assets": {
+    "front_page_image": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/input/front-page.jpg",
+    "front_page_url": "https://t.prcdn.co/img?file=eaaj2026050800000000001001&page=1&scale=207",
+    "source_url": "https://t.prcdn.co/img",
+    "source_config": "automation/sources/diarios/elcomercio.json",
+    "pages": [
+      {
+        "role": "front_page",
+        "label": "Portada",
+        "page_number": 1,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050800000000001001&page=1&scale=207",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/input/front-page.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 3",
+        "page_number": 3,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050800000000001001&page=3&scale=55",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/input/pages/page-03.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 4",
+        "page_number": 4,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050800000000001001&page=4&scale=55",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/input/pages/page-04.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 10",
+        "page_number": 10,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050800000000001001&page=10&scale=55",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/input/pages/page-10.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 12",
+        "page_number": 12,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050800000000001001&page=12&scale=55",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/input/pages/page-12.jpg"
+      },
+      {
+        "role": "supporting_page",
+        "label": "Pagina 16",
+        "page_number": 16,
+        "source_url": "https://t.prcdn.co/img?file=eaaj2026050800000000001001&page=16&scale=55",
+        "local_path": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/input/pages/page-16.jpg"
+      }
+    ]
+  },
+  "extraction": {
+    "ocr_blocks": [],
+    "headline_candidates": [],
+    "ad_blocks": [],
+    "confidence": 0.0
+  },
+  "classification": {
+    "is_news": null,
+    "priority": null,
+    "reason": null
+  },
+  "page_selection": {
+    "strategy": "cover_first",
+    "provider": "chatgpt_plus_manual",
+    "status": "downloaded",
+    "selected_page_numbers": [
+      3,
+      4,
+      10,
+      12,
+      16
+    ],
+    "candidates": [
+      {
+        "headline": "Sánchez no firmará hoja de ruta",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.32,
+          "width": 0.75,
+          "height": 0.43
+        },
+        "page_number": 3,
+        "evidence_line": "Página 3",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.96
+      },
+      {
+        "headline": "Papa peruano cumple su primer año en el Vaticano",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.68,
+          "width": 0.72,
+          "height": 0.23
+        },
+        "page_number": 10,
+        "evidence_line": "Página 10",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "JNE en fase final para proclamar candidatos",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.79,
+          "y": 0.66,
+          "width": 0.18,
+          "height": 0.14
+        },
+        "page_number": 4,
+        "evidence_line": "Página 4",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.95
+      },
+      {
+        "headline": "Alcalde de Arequipa es vacado",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.79,
+          "y": 0.81,
+          "width": 0.18,
+          "height": 0.11
+        },
+        "page_number": 12,
+        "evidence_line": "Página 12",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.93
+      },
+      {
+        "headline": "Universitario cae ante Coquimbo",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.43,
+          "y": 0.1,
+          "width": 0.25,
+          "height": 0.08
+        },
+        "page_number": 16,
+        "evidence_line": "Página 16",
+        "line_index": null,
+        "method": "manual_import",
+        "confidence": 0.9
+      }
+    ],
+    "stories": [
+      {
+        "headline": "Sánchez no firmará hoja de ruta",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.28,
+          "width": 0.75,
+          "height": 0.43
+        },
+        "page_numbers": [
+          3
+        ],
+        "evidence": "Página 3",
+        "evidence_lines": [
+          "Página 3"
+        ],
+        "confidence": 0.96,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "JNE en fase final para proclamar candidatos",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.66,
+          "width": 0.22,
+          "height": 0.14
+        },
+        "page_numbers": [
+          4
+        ],
+        "evidence": "Página 4",
+        "evidence_lines": [
+          "Página 4"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Papa peruano cumple su primer año en el Vaticano",
+        "story_type": "mundo",
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.66,
+          "width": 0.72,
+          "height": 0.23
+        },
+        "page_numbers": [
+          10
+        ],
+        "evidence": "Página 10",
+        "evidence_lines": [
+          "Página 10"
+        ],
+        "confidence": 0.95,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Alcalde de Arequipa es vacado",
+        "story_type": "politica",
+        "cover_region": {
+          "x": 0.79,
+          "y": 0.81,
+          "width": 0.2,
+          "height": 0.11
+        },
+        "page_numbers": [
+          12
+        ],
+        "evidence": "Página 12",
+        "evidence_lines": [
+          "Página 12"
+        ],
+        "confidence": 0.93,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Universitario cae ante Coquimbo",
+        "story_type": "deportes",
+        "cover_region": {
+          "x": 0.43,
+          "y": 0.18,
+          "width": 0.25,
+          "height": 0.08
+        },
+        "page_numbers": [
+          16
+        ],
+        "evidence": "Página 16",
+        "evidence_lines": [
+          "Página 16"
+        ],
+        "confidence": 0.9,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Paginas detectadas visualmente desde la portada.",
+    "downloaded_page_numbers": [
+      3,
+      4,
+      10,
+      12,
+      16
+    ],
+    "focus_review_completed": true
+  },
+  "story_narrative": {
+    "provider": "chatgpt_plus_manual",
+    "status": "approved_manual",
+    "source": "supporting_pages_manual",
+    "stories": [
+      {
+        "headline": "Sánchez no firmará hoja de ruta",
+        "story_type": "politica",
+        "summary": "La postura de Sánchez se mantiene firme: rechaza firmar la hoja de ruta, mientras sigue enfrentando presiones políticas que marcarán el rumbo de su partido.",
+        "speech": "La postura de Sánchez se mantiene firme: rechaza firmar la hoja de ruta, mientras sigue enfrentando presiones políticas que marcarán el rumbo de su partido.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "confrontacional",
+          "político",
+          "incisivo"
+        ],
+        "page_numbers": [
+          3
+        ],
+        "cover_region": {
+          "x": 0.06,
+          "y": 0.28,
+          "width": 0.75,
+          "height": 0.43
+        },
+        "key_facts": [
+          "Sánchez no firma hoja de ruta",
+          "rechazo a la hoja de ruta",
+          "presiones políticas hacia Sánchez"
+        ],
+        "key_facts_used": [
+          "Sánchez no firma hoja de ruta",
+          "rechazo a la hoja de ruta",
+          "presiones políticas hacia Sánchez"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita afirmar que su rechazo tiene consecuencias sin confirmar.",
+        "notes": "Se evita afirmar que su rechazo tiene consecuencias sin confirmar.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "JNE en fase final para proclamar candidatos",
+        "story_type": "politica",
+        "summary": "El Jurado Nacional de Elecciones está a punto de proclamar los resultados de la primera vuelta. La incertidumbre persiste mientras los peruanos esperan un pronunciamiento definitivo.",
+        "speech": "El Jurado Nacional de Elecciones está a punto de proclamar los resultados de la primera vuelta. La incertidumbre persiste mientras los peruanos esperan un pronunciamiento definitivo.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "crítico",
+          "serio",
+          "preciso"
+        ],
+        "page_numbers": [
+          4
+        ],
+        "cover_region": {
+          "x": 0.77,
+          "y": 0.66,
+          "width": 0.22,
+          "height": 0.14
+        },
+        "key_facts": [
+          "fase final del JNE",
+          "proclamación pendiente",
+          "incertidumbre electoral"
+        ],
+        "key_facts_used": [
+          "fase final del JNE",
+          "proclamación pendiente",
+          "incertidumbre electoral"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se maneja con precaución el detalle de los resultados, ya que aún están en proceso.",
+        "notes": "Se maneja con precaución el detalle de los resultados, ya que aún están en proceso.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Papa peruano cumple su primer año en el Vaticano",
+        "story_type": "mundo",
+        "summary": "El primer año de León XIV como Papa ha sido marcado por esfuerzos para consolidar la paz. Su liderazgo sigue siendo clave en la orientación moral de la Iglesia.",
+        "speech": "El primer año de León XIV como Papa ha sido marcado por esfuerzos para consolidar la paz. Su liderazgo sigue siendo clave en la orientación moral de la Iglesia.",
+        "narrator_profile_id": "narrador_dbz",
+        "narrator_role": "corresponsal_internacional",
+        "tone_notes": [
+          "serio",
+          "global",
+          "elevado"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "cover_region": {
+          "x": 0.05,
+          "y": 0.66,
+          "width": 0.72,
+          "height": 0.23
+        },
+        "key_facts": [
+          "primer año del Papa León XIV",
+          "líderazgo del Papa en la paz",
+          "papado de León XIV"
+        ],
+        "key_facts_used": [
+          "primer año del Papa León XIV",
+          "líderazgo del Papa en la paz",
+          "papado de León XIV"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El discurso sobre el papado se presenta sin emitir juicios sin base.",
+        "notes": "El discurso sobre el papado se presenta sin emitir juicios sin base.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Alcalde de Arequipa es vacado",
+        "story_type": "politica",
+        "summary": "El alcalde de Arequipa ha sido vacado por el uso indebido de recursos públicos para fines personales, incluyendo el uso de seguridad para pasear a su perro.",
+        "speech": "El alcalde de Arequipa ha sido vacado por el uso indebido de recursos públicos para fines personales, incluyendo el uso de seguridad para pasear a su perro.",
+        "narrator_profile_id": "beto_ortiz",
+        "narrator_role": "analista_politica",
+        "tone_notes": [
+          "serio",
+          "acusatorio",
+          "político"
+        ],
+        "page_numbers": [
+          12
+        ],
+        "cover_region": {
+          "x": 0.79,
+          "y": 0.81,
+          "width": 0.2,
+          "height": 0.11
+        },
+        "key_facts": [
+          "vacancia del alcalde de Arequipa",
+          "uso indebido de recursos públicos",
+          "paseo con seguridad"
+        ],
+        "key_facts_used": [
+          "vacancia del alcalde de Arequipa",
+          "uso indebido de recursos públicos",
+          "paseo con seguridad"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "Se evita difundir detalles no verificados, manteniendo la cautela sobre los hechos aún bajo investigación.",
+        "notes": "Se evita difundir detalles no verificados, manteniendo la cautela sobre los hechos aún bajo investigación.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      },
+      {
+        "headline": "Universitario cae ante Coquimbo",
+        "story_type": "deportes",
+        "summary": "Universitario no logró mantener su ventaja y terminó perdiendo ante Coquimbo, 2-1, en un partido decisivo que complica su futuro en la Copa Libertadores.",
+        "speech": "Universitario no logró mantener su ventaja y terminó perdiendo ante Coquimbo, 2-1, en un partido decisivo que complica su futuro en la Copa Libertadores.",
+        "narrator_profile_id": "mr_peet",
+        "narrator_role": "reportero_deportivo",
+        "tone_notes": [
+          "deportivo",
+          "competitivo",
+          "directo"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "cover_region": {
+          "x": 0.43,
+          "y": 0.18,
+          "width": 0.25,
+          "height": 0.08
+        },
+        "key_facts": [
+          "Universitario perdió 2-1",
+          "Coquimbo remontó el marcador",
+          "futuro complicado para Universitario"
+        ],
+        "key_facts_used": [
+          "Universitario perdió 2-1",
+          "Coquimbo remontó el marcador",
+          "futuro complicado para Universitario"
+        ],
+        "narrator_map_id": "default-story-type-narrators",
+        "safety_notes": "El resultado se basa en la información visible en la portada.",
+        "notes": "El resultado se basa en la información visible en la portada.",
+        "support_visual": null,
+        "follow_up_enabled": true
+      }
+    ],
+    "notes": "Speeches editoriales importados manualmente.",
+    "manifest_path": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/review/story-narrative-manifest.json"
+  },
+  "script": {
+    "template_id": "default-anchor",
+    "provider": "manual_or_external_ai",
+    "model": null,
+    "draft": "La postura de Sánchez se mantiene firme: rechaza firmar la hoja de ruta, mientras sigue enfrentando presiones políticas que marcarán el rumbo de su partido.\n\nEl Jurado Nacional de Elecciones está a punto de proclamar los resultados de la primera vuelta. La incertidumbre persiste mientras los peruanos esperan un pronunciamiento definitivo.\n\nEl primer año de León XIV como Papa ha sido marcado por esfuerzos para consolidar la paz. Su liderazgo sigue siendo clave en la orientación moral de la Iglesia.\n\nEl alcalde de Arequipa ha sido vacado por el uso indebido de recursos públicos para fines personales, incluyendo el uso de seguridad para pasear a su perro.\n\nUniversitario no logró mantener su ventaja y terminó perdiendo ante Coquimbo, 2-1, en un partido decisivo que complica su futuro en la Copa Libertadores.",
+    "approved_text": "La postura de Sánchez se mantiene firme: rechaza firmar la hoja de ruta, mientras sigue enfrentando presiones políticas que marcarán el rumbo de su partido.\n\nEl Jurado Nacional de Elecciones está a punto de proclamar los resultados de la primera vuelta. La incertidumbre persiste mientras los peruanos esperan un pronunciamiento definitivo.\n\nEl primer año de León XIV como Papa ha sido marcado por esfuerzos para consolidar la paz. Su liderazgo sigue siendo clave en la orientación moral de la Iglesia.\n\nEl alcalde de Arequipa ha sido vacado por el uso indebido de recursos públicos para fines personales, incluyendo el uso de seguridad para pasear a su perro.\n\nUniversitario no logró mantener su ventaja y terminó perdiendo ante Coquimbo, 2-1, en un partido decisivo que complica su futuro en la Copa Libertadores.",
+    "review_notes": "Speeches importados desde ChatGPT y aprobados para voz/subtitulos.",
+    "inputs": {
+      "story_narrative_source": "story_narrative.stories",
+      "story_count": 5
+    }
+  },
+  "voice": {
+    "profile_id": "thanos",
+    "provider": "voicebox_local",
+    "tts_voice": "5d525705-3e57-4eb9-a5f5-82eebc6b6a8a",
+    "external_provider": null,
+    "audio_path": null,
+    "timestamps_path": null
+  },
+  "subtitles": {
+    "policy_id": "default-2-lines",
+    "segments_path": null
+  },
+  "transcription": {
+    "provider": null,
+    "text": "",
+    "duration_seconds": null,
+    "source_audio_path": null,
+    "output_path": null
+  },
+  "video": {
+    "template_id": "vertical-news",
+    "story_manifest_path": "data/jobs/2026-05-08/2026-05-08-elcomercio-frontpage-001/story-manifest.json",
+    "output_path": "output/2026-05-08-elcomercio-frontpage-001.mp4"
+  },
+  "publication": {
+    "profile_id": "tiktok",
+    "status": "not_started",
+    "post_url": null,
+    "platform_post_id": null
+  },
+  "audit": {
+    "created_at": "2026-05-08T19:33:08",
+    "updated_at": "2026-05-08T19:49:12",
+    "events": [
+      {
+        "stage": "discover",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:33:08",
+        "details": "Job creado desde source config declarativo."
+      },
+      {
+        "stage": "scrape_source",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:33:28",
+        "details": "Fuente analizada desde HTML; portada descubierta y 3 paginas de apoyo detectadas."
+      },
+      {
+        "stage": "scrape_pages",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:33:29",
+        "details": "Se registraron 3 paginas de apoyo en el job."
+      },
+      {
+        "stage": "cover_page_selection_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Se importaron 5 pagina(s) desde seleccion manual."
+      },
+      {
+        "stage": "rundown_intro_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:37:25",
+        "details": "Intro dinamica importada desde el prompt de portadas."
+      },
+      {
+        "stage": "scrape_selected_pages",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:39:04",
+        "details": "Se descargaron 5 pagina(s) seleccionadas desde la portada."
+      },
+      {
+        "stage": "story_narrative_import",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:44:05",
+        "details": "Se importaron 5 speech(es) editoriales."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:23",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:23",
+        "details": "Seguimiento de portada actualizado para historia 1: Sánchez no firmará hoja de ruta -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:23",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE en fase final para proclamar candidatos -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:23",
+        "details": "Seguimiento de portada actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:23",
+        "details": "Seguimiento de portada actualizado para historia 4: Alcalde de Arequipa es vacado -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:23",
+        "details": "Seguimiento de portada actualizado para historia 5: Universitario cae ante Coquimbo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:35",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:47:35",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:35",
+        "details": "Revision de portada marcada como pendiente."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:36",
+        "details": "Seguimiento de portada actualizado para historia 1: Sánchez no firmará hoja de ruta -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:36",
+        "details": "Seguimiento de portada actualizado para historia 2: JNE en fase final para proclamar candidatos -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:36",
+        "details": "Seguimiento de portada actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:36",
+        "details": "Seguimiento de portada actualizado para historia 4: Alcalde de Arequipa es vacado -> seguir."
+      },
+      {
+        "stage": "cover_selection_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:36",
+        "details": "Seguimiento de portada actualizado para historia 5: Universitario cae ante Coquimbo -> seguir."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:43",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:47:43",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:44",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:47:44",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:47:46",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:47:46",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:11",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:11",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:20",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:20",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:21",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:22",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:22",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:22",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:22",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:24",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:24",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:32",
+        "details": "Enfoque manual actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:32",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:41",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:41",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:47",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:47",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:55",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:55",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Enfoque manual actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:56",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:57",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:58",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:58",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:58",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:48:59",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:48:59",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Enfoque manual actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:00",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:02",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:02",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:03",
+        "details": "Enfoque manual actualizado para historia 1: Sánchez no firmará hoja de ruta."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:03",
+        "details": "Enfoque manual actualizado para historia 2: JNE en fase final para proclamar candidatos."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:03",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:03",
+        "details": "Enfoque manual actualizado para historia 3: Papa peruano cumple su primer año en el Vaticano."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:04",
+        "details": "Enfoque manual actualizado para historia 4: Alcalde de Arequipa es vacado."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:04",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:04",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:06",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:06",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:08",
+        "details": "Enfoque manual actualizado para historia 5: Universitario cae ante Coquimbo."
+      },
+      {
+        "stage": "compose",
+        "status": "completed",
+        "timestamp": "2026-05-08T19:49:08",
+        "details": "Story manifest generado desde job manifest."
+      },
+      {
+        "stage": "focus_review_ui",
+        "status": "edited",
+        "timestamp": "2026-05-08T19:49:12",
+        "details": "Revision de portada marcada como completa."
+      }
+    ]
+  },
+  "rundown_intro": {
+    "speech": "Hola. Hoy, 8 de mayo, abrimos el recorrido por portadas en una fecha ligada al Día Mundial de la Cruz Roja y la Media Luna Roja: humanidad ante la crisis. Política, economía, seguridad y fútbol marcan la agenda.",
+    "date_reference": "Día Mundial de la Cruz Roja y de la Media Luna Roja, 8 de mayo",
+    "source_scope": "world",
+    "why_it_fits": "Conecta una referencia humanitaria mundial con una jornada de portadas marcada por conflictos, política, seguridad y deporte.",
+    "provider": "chatgpt_plus_manual",
+    "source": "cover_batch_prompt",
+    "imported_at": "2026-05-08T19:37:25"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "manifest_type": "story_narrative_manifest",
+  "manifest_version": 1,
+  "job_id": "2026-05-08-libero-frontpage-001",
+  "source_id": "libero",
+  "source_name": "Líbero",
+  "date": "2026-05-08",
+  "front_page_image": "data/jobs/2026-05-08/2026-05-08-libero-frontpage-001/input/front-page.jpg",
+  "story_type_map_path": "automation/templates/narrators/story-type-map.json",
+  "story_type_map_id": "default-story-type-narrators",
+  "stories": [
+    {
+      "story_index": 1,
+      "segment_type": "story",
+      "headline": "Universitario sufre ante Coquimbo",
+      "story_type": "deportes",
+      "summary": "Otra caída dolorosa para Universitario. Después de ponerse en ventaja, los cremas no pudieron mantener el marcador y cayeron 2-1 ante Coquimbo, complicando su paso en la Copa Libertadores.",
+      "speech": "Otra caída dolorosa para Universitario. Después de ponerse en ventaja, los cremas no pudieron mantener el marcador y cayeron 2-1 ante Coquimbo, complicando su paso en la Copa Libertadores.",
+      "page_numbers": [
+        4,
+        5
+      ],
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.02,
+        "width": 0.69,
+        "height": 0.86
+      },
+      "key_facts": [
+        "Universitario perdió 2-1",
+        "Coquimbo remontó el partido",
+        "complicación para la clasificación"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "directo",
+        "competitivo"
+      ],
+      "safety_notes": "Basado en el resultado visible en la portada, sin agregar detalles no confirmados.",
+      "notes": "Basado en el resultado visible en la portada, sin agregar detalles no confirmados.",
+      "support_visual": null,
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "narrator_map_id": "default-story-type-narrators",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "segment_audio_file": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "story_id": "2026-05-08-libero-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-08-libero-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-08/2026-05-08-libero-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Líbero",
+      "cover": "data/jobs/2026-05-08/2026-05-08-libero-frontpage-001/input/front-page.jpg",
+      "headline": "Universitario sufre ante Coquimbo",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
+      "text": "Otra caída dolorosa para Universitario. Después de ponerse en ventaja, los cremas no pudieron mantener el marcador y cayeron 2-1 ante Coquimbo, complicando su paso en la Copa Libertadores.",
+      "page_numbers": [
+        4,
+        5
+      ],
+      "key_facts": [
+        "Universitario perdió 2-1",
+        "Coquimbo remontó el partido",
+        "complicación para la clasificación"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "directo",
+        "competitivo"
+      ],
+      "safety_notes": "Basado en el resultado visible en la portada, sin agregar detalles no confirmados.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.02,
+        "width": 0.69,
+        "height": 0.86
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}

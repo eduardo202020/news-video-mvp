@@ -1,0 +1,222 @@
+{
+  "story_id": "2026-05-08-correo-frontpage-001",
+  "video_template": "vertical-news",
+  "background": "remotion-app/public/assets/backgrounds/calle.jpg",
+  "music": {
+    "src": "assets/fondo-musical/noticiero.mpeg",
+    "volume": 0.06
+  },
+  "subtitle_policy": "default-2-lines",
+  "render_output": "output/2026-05-08-correo-frontpage-001.mp4",
+  "story_narrative_manifest_path": "data/jobs/2026-05-08/2026-05-08-correo-frontpage-001/review/story-narrative-manifest.json",
+  "segments": [
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Caminos opuestos en campaña electoral",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "Keiko Fujimori sigue el camino del diálogo, mientras que Roberto Sánchez apuesta por el castillismo, enfrentando posturas opuestas en su campaña hacia la segunda vuelta.",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "key_facts": [
+        "Keiko sigue el camino del diálogo",
+        "Sánchez apuesta por el castillismo",
+        "campañas en la segunda vuelta"
+      ],
+      "tone_notes": [
+        "confrontacional",
+        "político",
+        "filoso"
+      ],
+      "safety_notes": "Se evita asumir intenciones no confirmadas de los candidatos.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.3,
+        "width": 0.96,
+        "height": 0.62
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-correo-frontpage-001/input/front-page.jpg",
+      "headline": "MLM presenta medida cautelar ante el TC",
+      "story_type": "politica",
+      "segment_type": "story",
+      "narrator_profile_id": "beto_ortiz",
+      "narrator_role": "analista_politica",
+      "voice_profile_id": "beto_ortiz",
+      "narrator_name": "Beto Ortiz",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/beto_ortiz",
+      "text": "El municipio de Lima presenta una medida cautelar ante el Tribunal Constitucional para suspender los resultados de la ONPE, mientras sigue la disputa por las elecciones complementarias.",
+      "page_numbers": [
+        4
+      ],
+      "key_facts": [
+        "medida cautelar presentada",
+        "tribunal constitucional",
+        "suspensión de resultados"
+      ],
+      "tone_notes": [
+        "informativo",
+        "analítico",
+        "político"
+      ],
+      "safety_notes": "Se presenta la información sin asumir efectos inmediatos sobre la medida cautelar.",
+      "cover_region": {
+        "x": 0.35,
+        "y": 0.04,
+        "width": 0.35,
+        "height": 0.22
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Dramáticas cifras de pobreza en Lima",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/thanos",
+      "text": "Lima enfrenta cifras alarmantes de pobreza, con más de 2.1 millones de personas atrapadas en condiciones precarias. La capital sigue luchando contra la desigualdad y la falta de empleo.",
+      "page_numbers": [
+        5
+      ],
+      "key_facts": [
+        "2.1 millones de personas en pobreza",
+        "desigualdad y falta de empleo",
+        "cifras dramáticas de pobreza"
+      ],
+      "tone_notes": [
+        "grave",
+        "urgente",
+        "social"
+      ],
+      "safety_notes": "Se resume la situación sin entrar en causas profundas de la pobreza.",
+      "cover_region": {
+        "x": 0.02,
+        "y": 0.93,
+        "width": 0.94,
+        "height": 0.06
+      },
+      "support_visual": {
+        "type": "numeric_chart",
+        "chart_type": "bar",
+        "title": "Pobreza en Lima Metropolitana",
+        "points": [
+          {
+            "label": "2015",
+            "value": 11.0
+          },
+          {
+            "label": "2020",
+            "value": 27.5
+          },
+          {
+            "label": "2025",
+            "value": 27.3
+          }
+        ],
+        "subtitle": "Evolución de la pobreza en los últimos 5 años",
+        "unit": "%",
+        "highlight_label": "Aumento de la pobreza",
+        "data_source_note": "Datos obtenidos de la encuesta de pobreza reciente."
+      },
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Minsa descarta hantavirus en el Perú",
+      "story_type": "actualidad",
+      "segment_type": "story",
+      "narrator_profile_id": "thanos",
+      "narrator_role": "reportero_general",
+      "voice_profile_id": "thanos",
+      "narrator_name": "Thanos",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/thanos",
+      "text": "El Ministerio de Salud descarta la presencia de hantavirus en el Perú, pero mantiene una vigilancia activa en puertos y aeropuertos para prevenir cualquier riesgo.",
+      "page_numbers": [
+        6
+      ],
+      "key_facts": [
+        "Minsa descarta hantavirus en el Perú",
+        "vigilancia activa en puertos y aeropuertos",
+        "riesgo descartado"
+      ],
+      "tone_notes": [
+        "informativo",
+        "calmado",
+        "rigurosos"
+      ],
+      "safety_notes": "El mensaje se presenta en un tono calmado, sin generar alarma innecesaria.",
+      "cover_region": {
+        "x": 0.72,
+        "y": 0.0,
+        "width": 0.26,
+        "height": 0.16
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    },
+    {
+      "newspaper_name": "Correo",
+      "cover": "data/jobs/2026-05-08/2026-05-08-correo-frontpage-001/input/front-page.jpg",
+      "headline": "Coquimbo le gana a la U",
+      "story_type": "deportes",
+      "segment_type": "story",
+      "narrator_profile_id": "mr_peet",
+      "narrator_role": "reportero_deportivo",
+      "voice_profile_id": "mr_peet",
+      "narrator_name": "MrPeet",
+      "gestures_dir": "remotion-app/public/assets/gestures/cuy/mr_peet",
+      "text": "Coquimbo dio vuelta el marcador y venció a Universitario 2-1, complicando las aspiraciones de los cremas en la Copa Libertadores.",
+      "page_numbers": [
+        16
+      ],
+      "key_facts": [
+        "Universitario perdió 2-1",
+        "Coquimbo remontó",
+        "futuro incierto para Universitario"
+      ],
+      "tone_notes": [
+        "deportivo",
+        "directo",
+        "frontal"
+      ],
+      "safety_notes": "Se mantiene la información sobre el marcador sin suposiciones adicionales.",
+      "cover_region": {
+        "x": 0.71,
+        "y": 0.22,
+        "width": 0.27,
+        "height": 0.12
+      },
+      "support_visual": null,
+      "segment_audio_file": null,
+      "audio_file": null,
+      "subtitle_segments_file": null
+    }
+  ]
+}
