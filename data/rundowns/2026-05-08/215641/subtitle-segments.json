@@ -1,0 +1,313 @@
+{
+  "policy_id": "default-2-lines",
+  "text_source": "daily_rundown",
+  "text": "Hola. Hoy, 8 de mayo, abrimos el recorrido por portadas en una fecha ligada al Día Mundial de la Cruz Roja y la Media Luna Roja: humanidad ante la crisis. Política, economía, seguridad y fútbol marcan la agenda.\n\nAhora entramos a Correo. Primero miramos la portada completa y despues vamos con sus 5 historias mas fuertes.\n\nKeiko Fujimori sigue el camino del diálogo, mientras que Roberto Sánchez apuesta por el castillismo, enfrentando posturas opuestas en su campaña hacia la segunda vuelta.\n\nEl municipio de Lima presenta una medida cautelar ante el Tribunal Constitucional para suspender los resultados de la ONPE, mientras sigue la disputa por las elecciones complementarias.\n\nLima enfrenta cifras alarmantes de pobreza, con más de 2.1 millones de personas atrapadas en condiciones precarias. La capital sigue luchando contra la desigualdad y la falta de empleo.\n\nEl Ministerio de Salud descarta la presencia de hantavirus en el Perú, pero mantiene una vigilancia activa en puertos y aeropuertos para prevenir cualquier riesgo.\n\nCoquimbo dio vuelta el marcador y venció a Universitario 2-1, complicando las aspiraciones de los cremas en la Copa Libertadores.\n\nAhora entramos a El Comercio. Primero miramos la portada completa y despues vamos con sus 5 historias mas fuertes.\n\nLa postura de Sánchez se mantiene firme: rechaza firmar la hoja de ruta, mientras sigue enfrentando presiones políticas que marcarán el rumbo de su partido.\n\nEl Jurado Nacional de Elecciones está a punto de proclamar los resultados de la primera vuelta. La incertidumbre persiste mientras los peruanos esperan un pronunciamiento definitivo.\n\nEl primer año de León XIV como Papa ha sido marcado por esfuerzos para consolidar la paz. Su liderazgo sigue siendo clave en la orientación moral de la Iglesia.\n\nEl alcalde de Arequipa ha sido vacado por el uso indebido de recursos públicos para fines personales, incluyendo el uso de seguridad para pasear a su perro.\n\nUniversitario no logró mantener su ventaja y terminó perdiendo ante Coquimbo, 2-1, en un partido decisivo que complica su futuro en la Copa Libertadores.\n\nHasta aqui el programa de hoy, 8 de mayo de 2026. Revisamos 2 portadas y 10 temas que marcaron la agenda. Gracias por acompanarnos. Nos vemos en la siguiente edicion con mas contexto y sin rodeos.",
+  "audio_duration_seconds": 157.84,
+  "segments": [
+    {
+      "text": "Hola.\nHoy, 8 de mayo, abrimos",
+      "start": 0.0,
+      "end": 1.791
+    },
+    {
+      "text": "el recorrido por\nportadas en una fecha",
+      "start": 1.791,
+      "end": 4.137
+    },
+    {
+      "text": "ligada al Día Mundial de\nla Cruz Roja y la Media",
+      "start": 4.137,
+      "end": 7.101
+    },
+    {
+      "text": "Luna Roja: humanidad\nante la crisis.",
+      "start": 7.101,
+      "end": 9.324
+    },
+    {
+      "text": "Política, economía,\nseguridad y fútbol",
+      "start": 9.324,
+      "end": 11.67
+    },
+    {
+      "text": "marcan la agenda.",
+      "start": 11.67,
+      "end": 12.72
+    },
+    {
+      "text": "Ahora entramos a Correo.\nPrimero miramos la",
+      "start": 12.72,
+      "end": 15.903
+    },
+    {
+      "text": "portada completa y\ndespues vamos con sus 5",
+      "start": 15.903,
+      "end": 19.012
+    },
+    {
+      "text": "historias mas fuertes.",
+      "start": 19.012,
+      "end": 20.64
+    },
+    {
+      "text": "Keiko Fujimori sigue el\ncamino del diálogo,",
+      "start": 21.64,
+      "end": 24.272
+    },
+    {
+      "text": "mientras que Roberto\nSánchez apuesta por el",
+      "start": 24.272,
+      "end": 26.904
+    },
+    {
+      "text": "castillismo, enfrentando\nposturas opuestas en su",
+      "start": 26.904,
+      "end": 29.841
+    },
+    {
+      "text": "campaña hacia la segunda\nvuelta.",
+      "start": 29.841,
+      "end": 31.8
+    },
+    {
+      "text": "El municipio de Lima\npresenta una medida",
+      "start": 32.8,
+      "end": 35.275
+    },
+    {
+      "text": "cautelar ante el\nTribunal Constitucional",
+      "start": 35.275,
+      "end": 37.75
+    },
+    {
+      "text": "para suspender los\nresultados de la ONPE,",
+      "start": 37.75,
+      "end": 40.287
+    },
+    {
+      "text": "mientras sigue la\ndisputa por las",
+      "start": 40.287,
+      "end": 42.329
+    },
+    {
+      "text": "elecciones\ncomplementarias.",
+      "start": 42.329,
+      "end": 44.0
+    },
+    {
+      "text": "Lima enfrenta cifras\nalarmantes de pobreza,",
+      "start": 45.0,
+      "end": 47.93
+    },
+    {
+      "text": "con más de 2.\n1 millones de personas",
+      "start": 47.93,
+      "end": 50.382
+    },
+    {
+      "text": "atrapadas en condiciones\nprecarias.",
+      "start": 50.382,
+      "end": 52.767
+    },
+    {
+      "text": "La capital sigue\nluchando contra la",
+      "start": 52.767,
+      "end": 55.152
+    },
+    {
+      "text": "desigualdad y la falta\nde empleo.",
+      "start": 55.152,
+      "end": 57.4
+    },
+    {
+      "text": "El Ministerio de Salud\ndescarta la presencia de",
+      "start": 58.4,
+      "end": 61.291
+    },
+    {
+      "text": "hantavirus en el Perú,\npero mantiene una",
+      "start": 61.291,
+      "end": 63.751
+    },
+    {
+      "text": "vigilancia activa en\npuertos y aeropuertos",
+      "start": 63.751,
+      "end": 66.334
+    },
+    {
+      "text": "para prevenir cualquier\nriesgo.",
+      "start": 66.334,
+      "end": 68.24
+    },
+    {
+      "text": "Coquimbo dio vuelta el\nmarcador y venció a",
+      "start": 69.24,
+      "end": 71.987
+    },
+    {
+      "text": "Universitario 2-1,\ncomplicando las",
+      "start": 71.987,
+      "end": 74.21
+    },
+    {
+      "text": "aspiraciones de los\ncremas en la Copa",
+      "start": 74.21,
+      "end": 76.63
+    },
+    {
+      "text": "Libertadores.",
+      "start": 76.63,
+      "end": 77.48
+    },
+    {
+      "text": "Ahora entramos a El\nComercio.",
+      "start": 78.48,
+      "end": 80.427
+    },
+    {
+      "text": "Primero miramos la\nportada completa y",
+      "start": 80.427,
+      "end": 82.911
+    },
+    {
+      "text": "despues vamos con sus 5\nhistorias mas fuertes.",
+      "start": 82.911,
+      "end": 86.0
+    },
+    {
+      "text": "La postura de Sánchez se\nmantiene firme: rechaza",
+      "start": 87.0,
+      "end": 90.539
+    },
+    {
+      "text": "firmar la hoja de ruta,\nmientras sigue",
+      "start": 90.539,
+      "end": 93.34
+    },
+    {
+      "text": "enfrentando presiones\npolíticas que marcarán",
+      "start": 93.34,
+      "end": 96.584
+    },
+    {
+      "text": "el rumbo de su partido.",
+      "start": 96.584,
+      "end": 98.28
+    },
+    {
+      "text": "El Jurado Nacional de\nElecciones está a punto",
+      "start": 99.28,
+      "end": 102.415
+    },
+    {
+      "text": "de proclamar los\nresultados de la primera",
+      "start": 102.415,
+      "end": 105.271
+    },
+    {
+      "text": "vuelta.\nLa incertidumbre",
+      "start": 105.271,
+      "end": 106.943
+    },
+    {
+      "text": "persiste mientras los\nperuanos esperan un",
+      "start": 106.943,
+      "end": 109.799
+    },
+    {
+      "text": "pronunciamiento\ndefinitivo.",
+      "start": 109.799,
+      "end": 111.68
+    },
+    {
+      "text": "El primer año de León\nXIV como Papa ha sido",
+      "start": 112.68,
+      "end": 115.813
+    },
+    {
+      "text": "marcado por esfuerzos\npara consolidar la paz.",
+      "start": 115.813,
+      "end": 119.092
+    },
+    {
+      "text": "Su liderazgo sigue\nsiendo clave en la",
+      "start": 119.092,
+      "end": 121.788
+    },
+    {
+      "text": "orientación moral de la\nIglesia.",
+      "start": 121.788,
+      "end": 124.12
+    },
+    {
+      "text": "El alcalde de Arequipa\nha sido vacado por el",
+      "start": 125.12,
+      "end": 127.743
+    },
+    {
+      "text": "uso indebido de recursos\npúblicos para fines",
+      "start": 127.743,
+      "end": 130.365
+    },
+    {
+      "text": "personales, incluyendo\nel uso de seguridad para",
+      "start": 130.365,
+      "end": 133.167
+    },
+    {
+      "text": "pasear a su perro.",
+      "start": 133.167,
+      "end": 134.24
+    },
+    {
+      "text": "Universitario no logró\nmantener su ventaja y",
+      "start": 135.24,
+      "end": 138.267
+    },
+    {
+      "text": "terminó perdiendo ante\nCoquimbo, 2-1, en un",
+      "start": 138.267,
+      "end": 141.226
+    },
+    {
+      "text": "partido decisivo que\ncomplica su futuro en la",
+      "start": 141.226,
+      "end": 144.322
+    },
+    {
+      "text": "Copa Libertadores.",
+      "start": 144.322,
+      "end": 145.56
+    },
+    {
+      "text": "Hasta aqui el programa\nde hoy, 8 de mayo de",
+      "start": 146.56,
+      "end": 149.099
+    },
+    {
+      "text": "2026.\nRevisamos 2 portadas y",
+      "start": 149.099,
+      "end": 150.753
+    },
+    {
+      "text": "10 temas que marcaron la\nagenda.",
+      "start": 150.753,
+      "end": 152.643
+    },
+    {
+      "text": "Gracias por\nacompanarnos.",
+      "start": 152.643,
+      "end": 154.119
+    },
+    {
+      "text": "Nos vemos en la\nsiguiente edicion con",
+      "start": 154.119,
+      "end": 156.305
+    },
+    {
+      "text": "mas contexto y sin\nrodeos.",
+      "start": 156.305,
+      "end": 157.84
+    }
+  ]
+}

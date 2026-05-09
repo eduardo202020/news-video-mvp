@@ -52,6 +52,114 @@ const buildCoverFocusTransform = (coverRegion, focusProgress) => {
   return makeTransform([translateX(translateFocusX), translateY(translateFocusY), scale(zoomScale)]);
 };
 
+const renderCoverStackStage = ({
+  newspaperCoverStack,
+  currentSegment,
+  assetVersion,
+  segmentFrame,
+  segmentDuration,
+  stageTransform
+}) => {
+  const visibleStack = newspaperCoverStack.slice(0, 6);
+  const stackScale =
+    visibleStack.length >= 5 ? 0.96 : visibleStack.length === 4 ? 1.05 : visibleStack.length === 3 ? 1.14 : visibleStack.length === 2 ? 1.26 : 1.38;
+  const stackOffsetX =
+    visibleStack.length >= 5 ? 156 : visibleStack.length === 4 ? 198 : visibleStack.length === 3 ? 238 : visibleStack.length === 2 ? 304 : 0;
+  const stackWidth = CARD_WIDTH * stackScale + stackOffsetX * Math.max(0, visibleStack.length - 1);
+  const stackHeight = COVER_HEIGHT * stackScale;
+  const revealFrames = Math.max(18, Math.floor(segmentDuration / Math.max(1, visibleStack.length + 1)));
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: -26,
+        left: "50%",
+        width: stackWidth,
+        height: stackHeight,
+        marginLeft: -(stackWidth / 2),
+        transform: stageTransform
+      }}
+    >
+      {currentSegment.headline ? (
+        <div
+          style={{
+            position: "absolute",
+            top: -72,
+            left: 0,
+            zIndex: 20,
+            padding: "14px 22px",
+            borderRadius: 999,
+            background: "rgba(10,10,14,0.78)",
+            border: "1px solid rgba(255,255,255,0.1)",
+            boxShadow: "0 18px 48px rgba(0,0,0,0.2)",
+            color: "#f8cf52",
+            fontSize: 34,
+            fontWeight: 700,
+            letterSpacing: 1.1,
+            textTransform: "uppercase"
+          }}
+        >
+          {currentSegment.headline}
+        </div>
+      ) : null}
+      {visibleStack
+        .slice()
+        .reverse()
+        .map((item, reverseIndex) => {
+          const index = visibleStack.length - 1 - reverseIndex;
+          const revealStart = index * revealFrames;
+          const revealProgress = interpolate(
+            segmentFrame,
+            [revealStart, revealStart + Math.min(18, revealFrames)],
+            [0, 1],
+            {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp"
+            }
+          );
+          const introTranslateX = interpolate(revealProgress, [0, 1], [72, 0]);
+          const introTranslateY = interpolate(revealProgress, [0, 1], [12, 0]);
+          const introOpacity = interpolate(revealProgress, [0, 1], [0, 1]);
+
+          return (
+            <div
+              key={`${item.newspaperName}-${index}`}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: index * stackOffsetX,
+                zIndex: index + 1,
+                width: CARD_WIDTH,
+                height: COVER_HEIGHT,
+                opacity: introOpacity,
+                transform: makeTransform([
+                  translateX(introTranslateX),
+                  translateY(introTranslateY),
+                  scale(stackScale)
+                ]),
+                transformOrigin: "top left",
+                overflow: "hidden",
+                border: "1px solid rgba(255,255,255,0.08)",
+                backgroundColor: "rgba(255,255,255,0.02)"
+              }}
+            >
+              <Img
+                src={staticFile(withAssetVersion(item.coverSrc, assetVersion))}
+                style={{
+                  width: CARD_WIDTH,
+                  height: COVER_HEIGHT,
+                  objectFit: "contain",
+                  display: "block"
+                }}
+              />
+            </div>
+          );
+        })}
+    </div>
+  );
+};
+
 export const CoverStage = ({
   newspaperCoverStack,
   currentSegment,
@@ -87,105 +195,19 @@ export const CoverStage = ({
   const currentCoverTransform = makeTransform([translateX(currentTranslateX)]);
   const nextCoverTransform = makeTransform([translateX(nextTranslateX)]);
 
-  if (currentSegment.segmentType === "intro" && Array.isArray(newspaperCoverStack) && newspaperCoverStack.length > 0) {
-    const introStack = newspaperCoverStack.slice(0, 6);
-    const stackScale =
-      introStack.length >= 5 ? 0.96 : introStack.length === 4 ? 1.05 : introStack.length === 3 ? 1.14 : introStack.length === 2 ? 1.26 : 1.38;
-    const stackOffsetX =
-      introStack.length >= 5 ? 156 : introStack.length === 4 ? 198 : introStack.length === 3 ? 238 : introStack.length === 2 ? 304 : 0;
-    const stackWidth = CARD_WIDTH * stackScale + stackOffsetX * Math.max(0, introStack.length - 1);
-    const stackHeight = COVER_HEIGHT * stackScale;
-    const introRevealFrames = Math.max(18, Math.floor(segmentDuration / Math.max(1, introStack.length + 1)));
-    return (
-      <div
-        style={{
-          position: "absolute",
-          top: -26,
-          left: "50%",
-          width: stackWidth,
-          height: stackHeight,
-          marginLeft: -(stackWidth / 2),
-          transform: stageTransform
-        }}
-      >
-        {currentSegment.headline ? (
-          <div
-            style={{
-              position: "absolute",
-              top: -72,
-              left: 0,
-              zIndex: 20,
-              padding: "14px 22px",
-              borderRadius: 999,
-              background: "rgba(10,10,14,0.78)",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 18px 48px rgba(0,0,0,0.2)",
-              color: "#f8cf52",
-              fontSize: 34,
-              fontWeight: 700,
-              letterSpacing: 1.1,
-              textTransform: "uppercase"
-            }}
-          >
-            {currentSegment.headline}
-          </div>
-        ) : null}
-        {introStack
-          .slice()
-          .reverse()
-          .map((item, reverseIndex) => {
-            const index = introStack.length - 1 - reverseIndex;
-            const offsetX = index * stackOffsetX;
-            const offsetY = 0;
-            const revealStart = index * introRevealFrames;
-            const revealProgress = interpolate(
-              segmentFrame,
-              [revealStart, revealStart + Math.min(18, introRevealFrames)],
-              [0, 1],
-              {
-                extrapolateLeft: "clamp",
-                extrapolateRight: "clamp"
-              }
-            );
-            const introTranslateX = interpolate(revealProgress, [0, 1], [72, 0]);
-            const introTranslateY = interpolate(revealProgress, [0, 1], [12, 0]);
-            const introOpacity = interpolate(revealProgress, [0, 1], [0, 1]);
-            return (
-              <div
-                key={`${item.newspaperName}-${index}`}
-                style={{
-                  position: "absolute",
-                  top: offsetY,
-                  left: offsetX,
-                  zIndex: index + 1,
-                  width: CARD_WIDTH,
-                  height: COVER_HEIGHT,
-                  opacity: introOpacity,
-                  transform: makeTransform([
-                    translateX(introTranslateX),
-                    translateY(introTranslateY),
-                    scale(stackScale)
-                  ]),
-                  transformOrigin: "top left",
-                  overflow: "hidden",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  backgroundColor: "rgba(255,255,255,0.02)"
-                }}
-              >
-                <Img
-                  src={staticFile(withAssetVersion(item.coverSrc, assetVersion))}
-                  style={{
-                    width: CARD_WIDTH,
-                    height: COVER_HEIGHT,
-                    objectFit: "contain",
-                    display: "block"
-                  }}
-                />
-              </div>
-            );
-          })}
-      </div>
-    );
+  if (
+    ["intro", "outro"].includes(currentSegment.segmentType) &&
+    Array.isArray(newspaperCoverStack) &&
+    newspaperCoverStack.length > 0
+  ) {
+    return renderCoverStackStage({
+      newspaperCoverStack,
+      currentSegment,
+      assetVersion,
+      segmentFrame,
+      segmentDuration,
+      stageTransform
+    });
   }
 
   return (
